@@ -1,0 +1,65 @@
+baseURL = 'https://rockyflux.github.com/ai-guide/'
+defaultContentLanguage = 'zh'
+defaultContentLanguageInSubdir = false
+theme = 'hugo-book'
+
+[languages]
+  [languages.zh]
+    languageName = '中文'
+    languageCode = 'zh-CN'
+    weight = 1
+    title = 'AI 编程指南'
+    contentDir = 'content.zh'
+    [languages.zh.params]
+      BookRepo = 'https://github.com/rockyflux/ai-guide'
+      BookEditPage = true
+      BookSearch = true
+      BookSection = '*'
+      BookMenuBundle = '/menu'
+      BookToC = true
+      BookComments = false
+      BookPortableLinks = true
+      BookServiceWorker = true
+      BookCollapseSection = true
+      BookMenuCollapse = true
+      BookSectionCollapse = true
+      BookMenuFold = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# 菜单配置
+# menu.before: 显示在文件树菜单之前
+# menu.after: 显示在文件树菜单之后
+[menu]
+  [[menu.before]]
+     name = '语雀文档'
+     url = 'https://www.yuque.com/rocky2171/ai'
+     weight = 1
+
+  [[menu.after]]
+    name = 'GitHub'
+    url = 'https://github.com/rockyflux/ai-guide'
+    weight = 20
+
+   [[menu.after]]
+     name = '萧风导航'
+     url = 'https://getxf.cn'
+     weight = 18
+
+[params]
+  BookRepo = 'https://github.com/rockyflux/ai-guide'
+  BookCommitPath = 'commit'
+  BookEditPath = 'edit/main'
+  BookEditPage = true
+  BookSearch = true
+  BookSection = '*'
+  BookMenuBundle = '/menu'
+  BookToC = true
+  BookServiceWorker = true
+  BookCollapseSection = true
+  BookMenuCollapse = true
+  BookSectionCollapse = true
+  BookMenuFold = true
