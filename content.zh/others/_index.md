@@ -2,6 +2,7 @@
 title: 其它
 weight: 8
 bookCollapseSection: false
+bookFlatSection: true
 ---
 
 ## 其它

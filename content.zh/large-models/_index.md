@@ -2,6 +2,7 @@
 title: 大模型
 weight: 1
 bookCollapseSection: false
+bookFlatSection: true
 ---
 
 ## 大模型

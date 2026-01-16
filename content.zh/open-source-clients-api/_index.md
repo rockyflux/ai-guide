@@ -2,6 +2,7 @@
 title: 开源客户端和API
 weight: 6
 bookCollapseSection: false
+bookFlatSection: true
 ---
 
 ## 开源客户端和API

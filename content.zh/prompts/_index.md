@@ -2,6 +2,7 @@
 title: 提示词
 weight: 4
 bookCollapseSection: false
+bookFlatSection: true
 ---
 
 ## 提示词

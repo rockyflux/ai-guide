@@ -2,6 +2,7 @@
 title: 实践案例
 weight: 7
 bookCollapseSection: false
+bookFlatSection: true
 ---
 
 ## 实践案例
