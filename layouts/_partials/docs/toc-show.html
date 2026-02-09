@@ -1,0 +1,8 @@
+{{- $pageToc := default .Params.bookToC .Params.bookToc -}}
+{{- $siteToc := default .Site.Params.BookToC .Site.Params.BookToc -}}
+{{- return and
+  (not (eq $pageToc false))
+  (not (eq $siteToc false))
+  (not (eq .TableOfContents "<nav id=\"TableOfContents\"></nav>"))
+  (not .Params.noTocArea)
+-}}
