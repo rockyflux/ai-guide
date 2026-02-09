@@ -1,6 +1,8 @@
 ---
 title: CodingAgent协作实践
 weight: 20
+bookToc: false
+noTocArea: true
 ---
 
 #  Awesome CCG Workflow：多 Coding Agent 协作实践 & 开源资源导航

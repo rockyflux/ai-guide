@@ -1,6 +1,6 @@
 ---
 title: AI 编程工具汇总
-weight: 11
+weight: 1
 ---
 
 ### 前言

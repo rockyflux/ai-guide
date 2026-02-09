@@ -1,6 +1,8 @@
 ---
 title: AI 编程省钱之道
 weight: 14
+bookToc: false
+noTocArea: true
 ---
 
 

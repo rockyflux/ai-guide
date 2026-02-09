@@ -2,6 +2,8 @@
 title: AI 编程指南
 type: docs
 translationKey: homepage
+bookToc: false
+noTocArea: true
 ---
 
 欢迎来到 **AI 编程指南**。这一页是全站总览：从上到下读完，你就能知道每个栏目讲什么、该从哪里开始，以及每个主题的关键文章入口。

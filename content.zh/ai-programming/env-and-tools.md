@@ -1,6 +1,8 @@
 ---
 title: AI 编程环境配置与增强工具集
 weight: 13
+bookToc: false
+noTocArea: true
 ---
 
 ## AI 编程环境配置与增强工具集

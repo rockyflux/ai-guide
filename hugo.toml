@@ -34,10 +34,10 @@ theme = 'hugo-book'
 # menu.before: 显示在文件树菜单之前
 # menu.after: 显示在文件树菜单之后
 [menu]
-  [[menu.before]]
+  [[menu.after]]
      name = '语雀文档'
      url = 'https://www.yuque.com/rocky2171/ai'
-     weight = 1
+     weight = 10
 
   [[menu.after]]
     name = 'GitHub'
