@@ -1,0 +1,35 @@
+{{- if (default true .Site.Params.BookBackToTop) -}}
+{{- $threshold := default 300 .Site.Params.BookBackToTopThreshold -}}
+<button id="book-back-to-top" class="book-back-to-top" type="button" aria-label="回到顶部" data-threshold="{{ $threshold }}">
+  <span aria-hidden="true">↑</span>
+</button>
+
+<script>
+(function () {
+  var btn = document.getElementById('book-back-to-top');
+  if (!btn) return;
+
+  var thresholdAttr = btn.getAttribute('data-threshold');
+  var threshold = parseInt(thresholdAttr || '300', 10);
+  if (!isFinite(threshold)) threshold = 300;
+
+  function update() {
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (y > threshold) btn.classList.add('is-visible');
+    else btn.classList.remove('is-visible');
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    try {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (_) {
+      window.scrollTo(0, 0);
+    }
+  });
+
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+})();
+</script>
+{{- end -}}

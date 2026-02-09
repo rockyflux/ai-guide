@@ -1,6 +1,8 @@
 ---
-title: 六大AI CLI工具横评
+title: AI CLI工具横评
 weight: 10
+bookToc: false
+noTocArea: true
 ---
 
 ### 一、核心定位：生态赋能与技术专攻的双重博弈

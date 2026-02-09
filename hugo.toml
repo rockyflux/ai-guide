@@ -8,7 +8,7 @@ theme = 'hugo-book'
     languageName = '中文'
     languageCode = 'zh-CN'
     weight = 1
-    title = 'AI 编程指南'
+    title = 'AI应用实践教程'
     contentDir = 'content.zh'
     [languages.zh.params]
       BookRepo = 'https://github.com/rockyflux/ai-guide'
@@ -44,12 +44,17 @@ theme = 'hugo-book'
     url = 'https://github.com/rockyflux/ai-guide'
     weight = 20
 
-   [[menu.after]]
-     name = '萧风导航'
-     url = 'https://getxf.cn'
-     weight = 18
+  [[menu.after]]
+    name = '萧风导航'
+    url = 'https://getxf.cn'
+    weight = 18
 
 [params]
+  BookTheme = 'auto'  # light / dark / auto
+  BookFooter = '<div style="opacity:.75;font-size:1em;padding-top:3em;">© 2026 AI应用实践教程 · <a href="https://github.com/rockyflux/ai-guide" target="_blank" rel="noopener">GitHub</a></div>'
+  BookBackToTop = true
+  BookBackToTopThreshold = 300
+  SiteSlogan = '用工程化方法把 AI 变成你的第二大脑'
   BookRepo = 'https://github.com/rockyflux/ai-guide'
   BookCommitPath = 'commit'
   BookEditPath = 'edit/main'

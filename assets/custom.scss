@@ -1,0 +1,398 @@
+/* ============================================
+   AI 编程指南 - Hugo Book 主题样式优化
+   使用 .book-article.markdown 提高优先级，确保覆盖主题
+   ============================================ */
+
+/* ---------- 色彩与主题微调 ---------- */
+:root {
+  --font-size: 16px;
+  --body-font-weight: 400;
+  --border-radius: 0.375rem;
+  --color-link: #2563eb;
+  --color-visited-link: #5b21b6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-link: #60a5fa;
+    --color-visited-link: #a78bfa;
+  }
+}
+
+.container{
+    max-width: 85rem;
+}
+
+.book-page{
+  padding-top: 0rem!important;
+}
+
+.book-page .book-article.markdown h3, .book-article.markdown h3{
+  margin-top:1em!important;
+}
+
+.book-page .book-article.markdown h2, .book-article.markdown h2{
+  margin-top:1em!important;
+}
+
+body.no-toc-area .container {
+  max-width: 85rem!important;
+}
+
+/* ---------- 正文容器：提高优先级覆盖主题 ---------- */
+.book-page .book-article.markdown,
+.book-article.markdown {
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+.book-page .book-article.markdown h1,
+.book-page .book-article.markdown h2,
+.book-page .book-article.markdown h3,
+.book-article.markdown h1,
+.book-article.markdown h2,
+.book-article.markdown h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.book-page .book-article.markdown h2,
+.book-article.markdown h2 {
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2em;
+}
+
+.book-page .book-article.markdown h3,
+.book-article.markdown h3 {
+  margin-top: 1.6em;
+}
+
+.book-page .book-article.markdown p,
+.book-article.markdown p {
+  margin-bottom: 1em;
+}
+
+.book-page .book-article.markdown ul,
+.book-page .book-article.markdown ol,
+.book-article.markdown ul,
+.book-article.markdown ol {
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+.book-page .book-article.markdown li,
+.book-article.markdown li {
+  margin-bottom: 0.35em;
+}
+
+.book-page .book-article.markdown li > ul,
+.book-page .book-article.markdown li > ol,
+.book-article.markdown li > ul,
+.book-article.markdown li > ol {
+  margin-top: 0.35em;
+  margin-bottom: 0;
+}
+
+/* ---------- 代码块与行内代码 ---------- */
+.book-page .book-article.markdown code,
+.book-article.markdown code {
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+
+.book-page .book-article.markdown pre,
+.book-article.markdown pre {
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  line-height: 1.6;
+}
+
+.book-page .book-article.markdown pre code,
+.book-article.markdown pre code {
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 0.875rem;
+}
+
+/* ---------- 引用块 ---------- */
+.book-page .book-article.markdown blockquote,
+.book-article.markdown blockquote {
+  border-left-width: 4px;
+  border-radius: 0 0.25rem 0.25rem 0;
+  padding: 0.75rem 1rem;
+  margin: 1.25em 0;
+  background: var(--gray-100);
+}
+
+/* ---------- 表格 ---------- */
+.book-page .book-article.markdown table,
+.book-article.markdown table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.25em 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.book-page .book-article.markdown th,
+.book-page .book-article.markdown td,
+.book-article.markdown th,
+.book-article.markdown td {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--gray-200);
+}
+
+.book-page .book-article.markdown th,
+.book-article.markdown th {
+  background: var(--gray-100);
+  font-weight: 600;
+  text-align: left;
+}
+
+.book-page .book-article.markdown tr:nth-child(even),
+.book-article.markdown tr:nth-child(even) {
+  background: var(--gray-100);
+}
+
+.book-page .book-article.markdown tr:hover,
+.book-article.markdown tr:hover {
+  background: var(--body-background-tint, rgba(0, 0, 0, 0.02));
+}
+
+@media (prefers-color-scheme: dark) {
+  .book-page .book-article.markdown tr:hover,
+  .book-article.markdown tr:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+}
+
+/* ---------- 侧边栏菜单 ---------- */
+.book-menu {
+  border-right: 1px solid var(--gray-200);
+}
+
+.book-menu .book-menu-content {
+  padding-top: 1.25rem;
+}
+
+.book-menu a.active {
+  font-weight: 600;
+  border-radius: 0.25rem;
+}
+
+/* ---------- 目录 TOC ---------- */
+.book-toc {
+  border-left: 1px solid var(--gray-200);
+}
+
+.book-toc .book-toc-content {
+  padding-top: 1.25rem;
+}
+
+.book-toc a.active {
+  font-weight: 600;
+}
+
+body.no-toc-area .book-toc {
+  display: none !important;
+}
+
+body.no-toc-area .book-page {
+  max-width: none;
+  width: 100%;
+}
+
+/* ---------- 页面容器与头部 ---------- */
+.book-page {
+  padding: 1.5rem 2rem;
+  max-width: 52rem;
+}
+
+.book-header {
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+
+
+/* ---------- 搜索框 ---------- */
+.book-search input {
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.book-search input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-link);
+}
+
+/* ---------- 链接悬停 ---------- */
+.book-page .book-article.markdown a[href]:hover,
+.book-article.markdown a[href]:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- 提示框 ---------- */
+.book-hint {
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.25em 0;
+}
+
+/* ---------- 通用过渡 ---------- */
+a,
+button,
+.book-menu a,
+.book-toc a {
+  transition: color 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 48rem) {
+  .book-page {
+    padding: 1rem;
+  }
+
+  .book-page .book-article.markdown h2,
+  .book-article.markdown h2 {
+    font-size: 1.35rem;
+  }
+}
+
+/* ---------- 顶部固定 Header（桌面端） ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  height: 52px;
+  padding: 0 0.25rem;
+}
+
+.site-header-title a {
+  color: inherit;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.site-header-slogan {
+  font-size: 0.9em;
+  opacity: 0.72;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+  text-align: right;
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(24, 24, 27, 0.60);
+  }
+
+  .site-header-slogan {
+    opacity: 0.78;
+  }
+}
+
+/* 小屏使用主题自带的移动端 header，避免双 header */
+@media (max-width: 48rem) {
+  .site-header {
+    display: none;
+  }
+}
+
+/* ---------- 回到顶部（右下角悬浮） ---------- */
+.book-back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1000;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.book-back-to-top span {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-link);
+}
+
+.book-back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.book-back-to-top:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px) scale(1);
+}
+
+.book-back-to-top:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25), 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+@media (prefers-color-scheme: dark) {
+  .book-back-to-top {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(24, 24, 27, 0.88);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+  }
+
+  .book-back-to-top span {
+    color: var(--color-link);
+  }
+
+  .book-back-to-top:focus {
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.22), 0 12px 28px rgba(0, 0, 0, 0.55);
+  }
+}
+
+@media (max-width: 48rem) {
+  .book-back-to-top {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .book-header{
+    margin-top: 1.0rem;
+  }
+}

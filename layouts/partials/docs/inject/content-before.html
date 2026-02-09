@@ -1,0 +1,14 @@
+<div class="site-header" role="banner">
+  <div class="site-header-inner">
+    <div class="site-header-title">
+      <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
+    </div>
+    <div class="site-header-slogan">
+      {{- with .Site.Params.SiteSlogan -}}
+        {{- . -}}
+      {{- else -}}
+        {{- .Site.Params.Description -}}
+      {{- end -}}
+    </div>
+  </div>
+</div>

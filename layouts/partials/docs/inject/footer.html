@@ -1,0 +1,6 @@
+{{- $footer := .Site.Params.BookFooter -}}
+{{- with $footer -}}
+<div class="book-footer-extra">
+  {{- . | safeHTML -}}
+</div>
+{{- end -}}

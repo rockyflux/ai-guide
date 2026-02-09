@@ -1,0 +1,7 @@
+{{- /* 站点自定义样式，在主题 CSS 之后加载以覆盖主题 */ -}}
+{{- with resources.Get "custom.scss" -}}
+  {{- $custom := . | css.Sass | resources.Minify | resources.Fingerprint -}}
+  <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
+{{- end -}}
+<!-- 在 head 标签内添加 -->
+
