@@ -19,8 +19,27 @@
   }
 }
 
+
+.language-markdown {
+  display: block;
+  max-height: 400px; /* 设置最大高度 */
+  overflow-y: auto; /* 垂直滚动 */
+}
+
 .container{
     max-width: 95%!important;
+}
+
+.markdown table tr th, .markdown table tr td{
+  font-size: 13px!important;
+}
+
+.book-page .book-article.markdown p, .book-article.markdown p{
+  margin-bottom: 0em!important;
+}
+
+.book-page .book-article.markdown h2, .book-article.markdown h2{
+  padding-bottom: .6em!important;
 }
 
 .book-page{

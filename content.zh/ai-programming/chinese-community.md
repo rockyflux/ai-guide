@@ -11,12 +11,27 @@ date: 2026-02-09T15:43:00+08:00
 
 ![image.png](https://s2.loli.net/2026/02/09/AKHkgqiw5Wp7oEx.jpg)
 
+
+---
+
+## Claude 中文社区
+[claudecn - Claude AI 开发技术社区](https://claudecn.com/)
+
+[claude-cn - Claude 中文网](https://www.claude-cn.org/)
+
+![image.png](https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ0nlpiqg_GogXJBW67tIDP5nSBqNJCgACFhsAAplwWFRWnJ2mwE0uDzoE.png)
+
+
+---
+
 ## Cursor
 
 [学习 Cursor ，拥抱 AI 编程](https://cursor101.com/zh)
 
 ![image.png](https://s2.loli.net/2026/02/09/qXxwchBluoFv89e.jpg)
 
+
+---
 
 ## OpenCode
 
@@ -25,6 +40,7 @@ date: 2026-02-09T15:43:00+08:00
 ![image.png](https://s2.loli.net/2026/02/09/JIiBRhyA9jFlWz4.jpg)
 
 
+---
 
 ## OpenClaw
 
