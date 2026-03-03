@@ -1,176 +1,149 @@
 ---
 title: Agent Skills
-weight: 2
+weight: 1
 date: 2026-02-09T23:34:00+08:00
 ---
 
-## 为什么使用 Skills
 
-Skills 是可复用的、基于文件系统的资源，为 Claude 提供领域特定专业知识：工作流、上下文和最佳实践，将通用代理转变为专家。
+## Agent Skills
 
-关键优势：
 
-- 专业化 Claude：为特定领域任务定制能力
-- 减少重复：创建一次，自动使用
-- 组合能力：组合 Skills 构建复杂工作流
+### 一、Agent Skills 出现的背景
 
-## 使用 Skills
+{{% hint info %}}
+**一句话理解**  
+大模型智能体向专业化、高效化发展时，Agent Skills 作为一套规范、轻便的能力扩展方案，已成为解决工具调用混乱、上下文冗余等核心问题的关键——让智能体从「泛泛回应」升级为「精准帮忙」。
+{{% /hint %}}
 
-Anthropic 为常见文档任务（PowerPoint、Excel、Word、PDF）提供预构建的 Agent Skills，你也可以创建自己的自定义 Skills。两者工作方式相同，Claude 在相关时自动使用它们。
+**定义**：Agent Skills 是用于扩展智能体能力的规范方案，本质是可复用、可自由组合的**最小能力模块**。通过统一文件结构，智能体可按需加载、灵活调用，精准适配特定场景。
 
-## 什么是 agent 技能（Claude skills）
+**由来**：由开发 Claude 的 Anthropic 率先研发。2025 年 10 月以实验功能上线，同年 12 月成为跨平台开放标准并开源，随后被 Cursor、VS Code Copilot 等平台采用，逐步形成行业生态。
 
-技能可以理解为针对某类任务的 **SOP/检查清单/成功标准**：把“怎么做、做到什么程度算完成、何时必须停下来问人”写清楚，让 Agent 在相关任务出现时按需加载并遵循。
+**核心痛点**（传统工具调用常见问题）：
 
-写技能时通常有两条很重要的原则：
+- 上下文冗余、判断负担重
+- 工具无法复用、缺乏统一标准
 
-**1、描述是用来 "路由" 的，不是用来阅读的。**
+**核心特点**：
 
-描述需要简短、具体，并且包含任务实际会用到的关键词。如果你写得太抽象或太 "诗意"，Claude 很可能会直接略过它。
+| 特点 | 说明 |
+|------|------|
+| **原子化** | 每个技能是最小能力模块，可单独使用、自由组合 |
+| **规范化** | 所有技能遵循统一文件格式，保证兼容复用 |
+| **按需加载** | 仅在需要时加载技能完整信息，不浪费上下文——与传统工具调用的核心区别 |
 
-**2、正文是流程说明，而不是百科全书。**
 
-重点放在检查清单和成功标准上。如果你有很长的参考文档，最好放在单独的文件中，然后在技能中链接它们，让 Agent 只在必要时才去读。
+### 二、相比传统工具的优势
 
-## 技能如何帮助 agent
+与传统方式相比，Agent Skills 有两大优势：**节省 token 资源**、**减轻智能体判断负担**。
 
-技能的作用不是“让 Agent 更聪明”，而是**让信息更聚焦、更容易被正确使用**：把某类任务的关键约束与验收标准集中起来，减少反复解释与遗漏。
+{{% steps %}}
+1. ## 三层渐进式披露（节省 token）
+   Claude Code 官方明确的核心功能：将技能信息分为三层，按需逐步加载，既不遗漏关键步骤，也不浪费上下文。
+   - **第一层 · 元数据**：YAML 前置信息，仅技能名称、用途等摘要；智能体启动时只加载这部分，几乎不占资源。
+   - **第二层 · 技能主体**：完整 SKILL.md，仅在判断与当前任务相关时加载详细步骤和规则。
+   - **第三层 · 附加文件**：如 .py 工具、参考文档，仅在做复杂操作（如执行 SQL、处理数据）时才加载或运行。
+2. ## 减轻判断负担
+   传统方式中，智能体要面对功能杂乱、可能重复的工具集合，执行时还要费力筛选。Agent Skills 将能力拆成独立小技能，每个只负责单一功能，无重复冗余；执行时只需精准调用对应技能，上下文更清晰，任务更准、更快。
+{{% /steps %}}
 
-## 技能 vs. 规则：有意把规则写短
+**传统方式 vs Agent Skills**：
 
-技能并不是用来取代规则的。规则是不可妥协的底线。但一旦你开始使用技能，你写规则的方式就应该彻底改变.
+| 对比项 | 传统方式 | Agent Skills |
+|--------|----------|--------------|
+| 加载时机 | 无论是否有用，提前加载全部完整信息 | 按需分层加载（元数据 → 主体 → 附加） |
+| Token | 易浪费、拖慢响应 | 按需加载，减少重复与冗余 |
+| 工具形态 | 功能杂乱、可能重复 | 原子化小技能，单一职责 |
+| 判断负担 | 需费力筛选合适工具 | 精准调用对应技能，负担小 |
 
-一个很好的默认划分是：
+### 三、配置地狱
 
-- **规则（Rules）**：仓库级要求、安全约束、命名规范、以及如何运行测试
-- **技能（Skills）**：针对特定工作流、工具使用方式或代码评审规范的操作手册
+Anthropic 推出 Agent Skills 时，核心理念是“写一次，到处使用”，开发者编写一次技能配置，就能在不同 Agent 平台上复用。但现实是，各家平台的目录规范各不相同：
 
-如果你纠结某条内容该放在哪里，可以用这个判断标准：即使你完全没特意考虑的情况，你也希望这条指令始终生效吗？
+| 平台 | Skills 目录 |
+|------|-------------|
+| Codex | `.codex/skills` |
+| Claude | `.claude/skills` |
+| Gemini | `.gemini/skills` |
 
-- 是？那就是规则.
-- 否？那就是技能.
 
-下面是一些更具体的例子：
+这意味着开发者要在多个平台使用同一套 Skills，就得在不同目录间复制文件、创建符号链接，或者写同步工具。原本承诺的“写一次”，变成了维护多份配置、管理一堆软链接。GitHub Issue #15 里有人说得很直接：“我们在技术层面（工具、通信）实现了标准化，但在语义层面（指令、上下文）没做到。这是个问题。”
 
-- 永远不要提交 `.env` 文件 → 规则
-- 当你修改计费相关代码时，运行这三个集成测试 → 技能
-- 设计系统使用这些 token 名称 → 规则
-- 编写发布说明时，遵循这个格式和检查清单 → 技能
 
-一个非常实用的模式，是把规则和技能结合起来，让仓库里的规则主要承担 "路由" 的作用。例如：
+{{% hint success %}}
+**从倡议到落地，只用了一周**  
+2026 年 2 月 3 日，OpenAI 的 Alexander Embiricos 在推特上发起倡议：所有 Agent 统一读取 .agents/skills 目录，用户不用再为每个 Agent 管理独立文件夹。推文写道：“今天我们为 Codex 启用了 .agents/skills。目标是逐步废弃 .codex/skills。"主要平台的响应速度很快：Anomaly 的 dax 直接回复“done”，附上 OpenCode 的 PR 链接；微软 Copilot CLI 在 0.401 版本支持自动加载；谷歌 Gemini CLI 提交代码变更；Cursor 也表示在下个版本跟进。从提议到主流平台响应，不到一周。
+{{% /hint %}}
 
-- 当你修改 UI 组件时，加载 ui-change 技能.
-- 当你在调试生产环境错误时，加载 incident-triage 技能.
+#### 工具层的过渡方案
+Vercel 团队推出的 [skills.sh](http://skills.sh "skills.sh") 提供了一个过渡期的解决方案：
+```shell
+npx skills add vercel-labs/agent-skills
+```
+原理很直接：将 Skill 下载到 .agents/skills/，检测系统中的 AI 工具（Claude、Cursor、Windsurf 等），在各工具的 Skills 目录创建指向 .agents/skills/ 的软链接。开发者只需维护一份源文件，所有工具实时同步。这也是小编之前写过的《为什么我劝你使用 skills.sh 管理 skills》，对于它的使用可以转战这篇文章。随着平台原生支持 .agents/skills，软链接这种过渡方案会逐渐退出，但 skills.sh 的方案默认就是在 .agents 目录下，所以软链接方案会被淘汰，但 skills.sh 仍然好用。将来，你可以直接把 Skills 放在 .agents/skills 下，让所有平台自动识别，也可以继续使用 skills.sh。
 
-这样可以让始终生效的 prompt 保持很小，同时让 agent 变得更加灵活、可适配.
 
-## 如何写一个优秀的技能
 
-技能很容易走上和文档一模一样的老路：一开始目标清晰，最后却变成一堵谁都不想读的文字墙 —— 包括你的 AI agent.
+### 四、Agent Skills 规范说明
 
-下面是一些保持技能可控的方法：
+{{% hint info %}}
+**核心规范**：每个技能对应一个独立文件夹，文件夹内必须包含一个 `SKILL.md` 文件。该文件是技能的核心，包含 **YAML 前置信息（元数据）** 和 **Markdown 指令** 两部分，共同明确技能的功能、触发条件和执行步骤，二者缺一不可。这也是实现「三层渐进式披露」和按需加载的基础。
+{{% /hint %}}
 
-- 写一个真的能 "路由" 的描述。如果 agent 根据你的 prompt 都找不到这个技能，那里面写得再好也没用.
-- 保持技能定义文件极简。把它当成快速上手指南，而不是资料仓库.
-- 把重内容链接出去。使用渐进式暴露，把大模板和长参考文档放到单独的文件里，保持上下文窗口干净.
-- 清楚地定义 "完成" 的标准。技能的目标是减少歧义，而不是制造更多噪音.
-
-### 一个最小化的技能示例：UI 修改
-
-```go
---- name: ui-change description: Use this skill when you're changing UI components, styling, layout, or interaction behavior. ---
-
-This skill helps you to review and implement UI changes using the design system.
-
-## Constraints
-
-- Important: Use existing design tokens and components
-- Do not use magic numbers or raw pixel values
-- Keep accessibility intact: keyboard, labels, focus, contrast
-- Keep diffs small and avoid unrelated refactors
-
-## Tokens
-
-The repo's global tokens are in `variables.css`.
-
-### Spacing
-[info about when to use which spacing]
-
-### Color
-[info about using color tokens]
-
-### [etc.]
-
-## Components
-[]
-
-## Workflow
-
-1. Restate the change in one sentence.
-2. Identify the closest existing component patterns.
-3. Implement the smallest diff that matches the spec.
-4. Verify responsive behavior, focus states, and keyboard navigation.
-5. If anything is ambiguous, stop and ask for confirmation.
-6. Ensure your change meets the below success criteria.
-
-## Success Criteria
-
-- Your change does not use new tokens, magic numbers, raw pixel values, or new design components unless the user explicitly asked you for this.
-- Your change does not break on mobile, table, or desktop viewports.
-- Your change can be completely usable if the end user does not have a mouse or is using a screen reader.
-- You have told the user exactly what you changed and confirmed verbally with them the above three points.
+```
+skill/employees/
+├── SKILL.md  # 技能核心文件（包含元数据+详细指令）
+└── scripts/  # 附加脚本文件夹（三层结构的第三层）
+    ├── execute_sql.py  # SQL执行脚本（复杂操作时调用）
+    └── __pycache__/  # 脚本缓存（自动生成，无需手动创建）
 ```
 
-### 一个值得拥有的入门级技能库
 
-如果你真的在做生产级的 AI 编程配置，你迟早会反复造这些轮子.
 
-不如直接从下面这些基础技能开始：
 
-- **仓库定位**：入口在哪里？测试放在哪？约定是什么？
-- **UI 修改**：如何使用设计 token，如何检查可访问性？
-- **调试**：如何复现问题？哪些日志才重要？
-- **验证**：需要运行哪些命令才能证明修改是有效的？
-- **PR 规范**：如何写提交信息？如何更新变更日志？
-- **安全**：边界在哪里？（比如：请不要删除生产数据库。）
 
-这些技能不需要写成小说。关键不是字数，而是让 agent 停止猜测，开始遵循你的标准.
+### 配置截图
 
-### 一个 "好技能" 检查清单
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start;">
+  <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ105piyq05dQMLekrhQuQoE3V27hZnQACiyIAAplwYFSwAiyjwL9lzToE.png" alt="配置截图 1" style="max-width: 48%; flex: 1; min-width: 200px;" />
+  <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ11NpiysK-od2MFrUDLB446skM7Mt0gACkiIAAplwYFRTDh2do3GupDoE.png" alt="配置截图 2" style="max-width: 48%; flex: 1; min-width: 200px;" />
+</div>
 
-如果你想让技能保持小而有用，可以用下面这份清单来检查。每个技能都应该能回答这 6 个问题：
 
-- **1、触发条件（描述）**：agent 在什么情况下应该加载它？
-- **2、输入**：开始之前，它需要你或仓库提供哪些信息？
-- **3、步骤**：具体流程是什么？
-- **4、检查**：如何证明它真的成功了？
-- **5、停止条件**：什么时候应该停下来，向人类提问？
-- **6、恢复方式**：如果检查失败了，该怎么办？
 
-### 常见失败模式（技能的问题）
+### 参考链接与第三方网站
 
-这些错误人人都会犯，关键是能识别出来：
+- **文档与导航**
+  - [Claude 官方 Skills 文档](https://code.claude.com/docs/zh-CN/skills)：最权威的 Agent Skills 规范与功能说明。
+  - [Agent Skills（claudecn）](https://claudecn.com/docs/agent-skills/)：面向中文用户的解读与示例，更贴近国内使用场景。
+  - [Agent Skills（agentskills.io）](https://agentskills.io/home)：社区维护的 Skills 导航站，按场景浏览和搜索技能。
+  - [SkillsHunt](https://skillshunt.io/)：支持标签与热度筛选的技能发现与搜索平台。
+- **工具与仓库**
+  - [Skills.sh](https://skills.sh/)：命令行技能管理工具，一条命令即可安装 / 更新 Skills。
+  - [Vercel Skills](https://github.com/vercel-labs/skills)：Vercel 团队维护的示例技能仓库，偏 Web / 全栈场景。
+  - [baoyu-skills](https://github.com/jimliu/baoyu-skills)：本项目作者维护的实战技能合集，适合直接拿来用。
+  - [ClawHub Skills](https://clawhub.ai/skills)：ClawHub 平台的技能市场与发现页。
+  - [Skill Creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：Anthropic 官方提供的技能模板与创建向导。
+- **合集网站：快速使用**
+  - [agent-skills.md](https://agent-skills.md)：收录 6000+ 高频常用技能，强调开箱即用、上手快。
+  - [Skills Directory](https://www.skillsdirectory.com)：来自 Reddit 社区的技能推荐与整理，更像口碑榜单，适合对比评价后再决定安装。
+  - [SkillsMP](https://skillsmp.com/zh)：聚合 GitHub 上超过 11 万个开源技能，适合「全网搜技能」和溯源到原始仓库。
+  - [Agent Skills Me](https://agentskills.me)：人工精选的小而精技能集，适合不想自己筛选太久的用户。
+  - [SkillStore](https://skillstore.io/zh-hans)：中文友好，并强调做过安全审查，适合团队或合规敏感场景。
+  - [Skills.sh 热门技能页](https://skills.sh)：关注热门趋势技能，支持一键安装，适合快速尝鲜。
+- **源码仓库：工程实现**
+  - [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills)：精选的 Claude Skills 清单与资源索引，覆盖 Claude.ai / Claude Code / Claude API 场景。
+  - [Ultimate Agent Skills Collection](https://github.com/ZhanlinCui/Ultimate-Agent-Skills-Collection)：终极大杂烩，汇总大量不同来源的技能项目，更像一个「总目录」，适合深挖与扫货。
+  - [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)：前后端结合的示例仓库，适合参考如何在 Web / 全栈应用里集成 Skills。
+  - [Antfu Skills](https://github.com/antfu/skills)：由 Antfu 维护的实践仓库，代码风格统一、工程化好，适合学习高质量个人实践。
+  - [Anthropic Skills](https://github.com/anthropics/skills)：Anthropic 官方的技能实现仓库，适合参考「官方最佳实践」。
+  - [Awesome Agent Skills](https://github.com/JackyST0/awesome-agent-skills)：社区维护的优质技能索引库，「awesome 系」风格，可作为导航入口。
 
-- **百科全书型**：如果一个技能读起来像 wiki 页面，就把它拆开。拆成多个小文件，只在需要时加载.
-- **全都要型**：如果一个技能适用于所有任务，那它就不是技能，而是规则或仓库约定.
-- **暗号型**：如果 agent 从来不加载这个技能，说明你的描述太抽象。改成你日常真正会用的说法.
-- **脆弱型**：如果仓库一变技能就坏，说明你硬编码了太多细节。把具体内容移到被引用的文件中，让技能本身只保留流程逻辑.
 
-## 向前走，用好技能（Go forth and skill）
+{{% hint info %}}
+**延伸阅读 · Agent Skills 终极指南**  
+想要系统了解推荐技能、最新资讯和实战案例，可查看专题页：  
+《Agent Skills 终极指南：快速入门、推荐技能、最新资讯与实战案例 ｜ The Definitive Guide to Agent Skills: Quick Start, Recommended Skills, Latest News, and Practical Case Studies》
 
-技能并不是什么魔法。它们只是一种打包和加载指令的策略.
-
-把规则用于那些不变的约束，把指令用于明确、可控的工作流；把技能留给可选但具体的专业能力；而当你已经尝试用技能却仍然频频出问题时，再考虑使用 agent / 子 agent.
-
-如果你能坚持这样的划分，你就能在更少 "prompt 淤泥" 的情况下，交付更好的自动化成果。你的 agent 也会不再像一个脆弱的脚本，而是开始真正表现得像一个协作伙伴.
-
-## 参考链接
-
-- Agent Skills：<https://claudecn.com/docs/agent-skills/>
-- SkillsHunt：<https://skillshunt.io/>
-- baoyu-skills：<https://github.com/jimliu/baoyu-skills>
-- Agent Skills：<https://agentskills.io/home>
-- Skills.sh：<https://skills.sh/>
-- Vercel Skills：<https://github.com/vercel-labs/skills>
-- ClawHub Skills：<https://clawhub.ai/skills>
-- Skill Creator：https://github.com/anthropics/skills/tree/main/skills/skill-creator
+👉 [点击跳转到 Awesome Agent Skills]({{< ref "Agent/awesome-agent-skills" >}})
+{{% /hint %}}

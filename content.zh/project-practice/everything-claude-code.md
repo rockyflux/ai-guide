@@ -1,6 +1,6 @@
 ---
 title: Everything Claude Code
-weight: 19
+weight: 50
 bookToc: false
 noTocArea: true
 ---
@@ -14,6 +14,8 @@ noTocArea: true
 **来自 Anthropic 黑客马拉松获胜者的完整 Claude Code 配置集合。**
 
 生产级代理、技能、钩子、命令、规则和 MCP 配置，经过 10 多个月构建真实产品的密集日常使用而演化。
+
+[https://github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/blob/main/README.zh-CN.md)
 
 ---
 

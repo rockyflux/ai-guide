@@ -1,6 +1,6 @@
 ---
-title: AI编程
-weight: 2
+title: AI 编程阅读指南
+weight: 1
 bookToc: false
 noTocArea: true
 bookCollapseSection: false
@@ -14,11 +14,13 @@ bookFlatSection: true
 如果你是第一次配置，建议按 **1 → 4** 顺序阅读。
 
 ### 1. 选模型和工具
-- [AI 编程模型选型](/ai-programming/models/) — 能力、价格与适用场景
+- [AI 编程模型选型](/ai-programming/models/) — 🔥能力、价格与适用场景
+- [AI Code Plan 订阅选型](/ai-programming/code-plan/) — 国内/海外 Code Plan 与中转套餐对照
+- [AI 产品推荐](/large-models/ai-product/) — 桌面 Agent、API 客户端、翻译等实用产品
+- [AI 编程省钱之道](/ai-programming/ai-coding-save-money/) — 免费模型、Token 优化与多端复用
 - [AI 编程工具汇总](/ai-programming/vb-code-tool/) — IDE/插件/Agent 工具对比（Aider、Cursor、Codex 等）
 - [AI CLI 工具横评](/ai-programming/code-cli/) — OpenCode、Claude Code、Codex CLI、Gemini CLI 等主流 CLI 横评
-- [AI Code Plan 订阅选型](/ai-programming/code-plan/) — 国内/海外 Code Plan 与中转套餐对照
-- [AI 编程省钱之道](/ai-programming/ai-coding-save-money/) — 免费模型、Token 优化与多端复用
+
 
 ### 2. 准备环境并配置模型
 - [GitHub 周边工具速查](/tutorials/github-extensions/) — GitHub 周边工具、GitHub加速、Github仓库阅读等
@@ -39,4 +41,4 @@ bookFlatSection: true
 - [Vibe Coding 指南](/ai-programming/vibe-coding/) — 规划驱动、AI 结对编程方法论
 - [Everything Claude Code](/ai-programming/everything-claude-code/) — 生产级 Claude Code 配置集合
 - [AI 编程中文社区与课程](/ai-programming/chinese-community/) — Claude Code、Cursor、OpenCode 等中文学习资源
-
+- [上下文设计哲学](/large-models/context-scarcity-rag-memory-skills/) — 上下文稀缺性、RAG、Memory、Skills 的设计思路

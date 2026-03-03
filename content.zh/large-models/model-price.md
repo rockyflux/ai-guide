@@ -1,6 +1,7 @@
 ---
 title: 大模型价格
-weight: 3
+weight: 50
+bookHidden: true
 ---
 
 ## 大模型的价格供参考

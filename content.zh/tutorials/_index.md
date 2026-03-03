@@ -3,6 +3,7 @@ title: 学习教程
 weight: 9
 bookCollapseSection: false
 bookFlatSection: true
+bookHidden: true
 ---
 
 ## 学习教程

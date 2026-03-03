@@ -1,8 +1,9 @@
 ---
-title: 盘点2026主流大模型相关信息
-weight: 1
+title: 2026年主流大模型盘点
+weight: 20
 bookToc: false
 noTocArea: true
+bookHidden: true
 ---
 
 ## 盘点2026主流大模型相关信息

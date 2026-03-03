@@ -1,148 +1,160 @@
 ---
 title: MCP
-weight: 4
+weight: 2
 date: 2026-02-09T23:34:00+08:00
 ---
 
-## MCP 能做什么
+## MCP的工作原理
+在MCP的工作中，有四个核心角色：AI应用，MCP Client（客户端）,MCP Server（服务端），业务系统
 
-连接 MCP 服务器后，可以要求 Claude：
+- AI应用：面向用户的终端产品，如“AI旅行规划”，将用户输入的信息经过处理后，传递给内置“MCP Client”
 
-- 从 Issue 跟踪器实现功能："添加 JIRA issue ENG-4521 描述的功能并创建 GitHub PR"
-- 分析监控数据："检查 Sentry 和 Statsig 查看 ENG-4521 功能的使用情况"
-- 查询数据库："根据 PostgreSQL 数据库找出 10 个使用过 ENG-4521 功能的随机用户邮箱"
-- 集成设计稿："根据 Slack 中发布的新 Figma 设计更新标准邮件模板"
+- MCP Client：收到请求后，转换为MCP Server认识的标准请求，处理接口协议等
 
-## 安装 MCP 服务器
+- MCP Server：收到客户端传来的标准请求，转换为调用内部业务系统的“API”或工具
 
-MCP 服务器支持三种传输方式：
+- 业务系统：收到MCP Server的调用后，处理并返回业务数据
 
-### 远程 HTTP 服务器（推荐）
-
-云服务的推荐方式：
-
-```bash
-# 基本语法
-claude mcp add --transport http <name> <url>
-
-# 示例：连接 Notion
-claude mcp add --transport http docs https://your-mcp-server.example.com/mcp
-
-# 带认证头
-claude mcp add --transport http secure-api https://api.example.com/mcp \
-  --header "Authorization: Bearer your-token"
+### 以查询天气为例
+```
+用户-->AI应用：今天北京天气怎么样
+AI应用-->MCP Client：查询天气tool，北京，今天
+MCP Client-->MCP Server：标准查询请求[北京，今天]
+MCP Server-->天气系统：调用天气API查询北京今日
+天气系统-->MCP Server：返回天气数据[晴，5℃，北风3级]
+MCP Server-->MCP Client：格式化天气数据
+MCP Client-->AI应用：北京今日天气信息
+AI应用-->用户：北京今天晴天，5度，北风3级
 ```
 
-### 远程 SSE 服务器
+## MCP资源
 
-SSE（Server-Sent Events）传输已弃用，优先使用 HTTP。
+### 官方与规范
+- [https://code.claude.com/docs/zh-CN/mcp](https://code.claude.com/docs/zh-CN/mcp) - Claude Code官方文档
+- [MCP 官方文档（中文）](https://docs.modelcontextprotocol.vip/introduction) — 模型上下文协议简介、架构与快速入门
+- [MCP 中文文档](https://mcp-docs.cn/docs/getting-started/intro) — 什么是 MCP、架构、服务器与客户端开发
 
-```bash
-claude mcp add --transport sse server https://your-mcp-server.example.com/sse
-```
+### 客户端与工具
 
-### 本地 stdio 服务器
+- [Claude Code MCP 服务器](https://claudecn.com/docs/claude-code/advanced/mcp-servers/) — Claude 桌面/编码场景下的 MCP 配置说明
+- [Zapier MCP](https://actions.zapier.com/settings/mcp/) — 将 Zapier 动作暴露为 MCP 工具
+- [MCP Router](https://mcp-router.net/en) — 本地 MCP 控制平面：集中管理、工作区隔离、请求可见
 
-在本地运行的进程，适合需要系统访问的工具：
+### 服务器与市场
 
-## 什么是 MCP（Model Context Protocol）
+- [Awesome MCP Servers（中文）](https://github.com/punkpeye/awesome-mcp-servers/blob/main/README-zh.md) — 精选 MCP 服务器列表（按类别整理）
+- [GitHub MCP Registry](https://github.com/mcp) — 官方/社区 MCP 服务器与工具注册
+- [阿里云百炼 MCP 市场](https://bailian.console.aliyun.com/cn-beijing/?tab=mcp#/mcp-market) — 阿里云大模型平台 MCP 服务市场
+- [腾讯云 MCP 广场](https://cloud.tencent.com/developer/mcp) — 腾讯云 MCP 服务、教程与托管
+- [MCP World](https://www.mcpworld.com/mcp) — 海量 MCP 服务器导航
 
-MCP（Model Context Protocol）可以理解成**"实时外部能力接口"**：它不存储知识，而是把外部系统与工具以统一方式暴露给 Agent 调用，从而获得可追溯、可验证的结果。
+### 开发与集成
 
-## 一句话定位
+- [GitMCP](https://gitmcp.io/) — 将任意 GitHub 仓库转为远程 MCP 服务器，便于 AI 理解代码与文档
 
-`MCP` 负责回答：**我如何让 Agent 调用真实工具/真实数据源，而不是靠猜？**
-
-## 适用场景
-
-- **需要可靠数据源**：内部文档、工单系统、代码索引、数据库、日志平台。
-- **需要可控的外部能力**：鉴权、速率限制、审计、统一错误处理。
-- **希望减少幻觉**：用"工具返回的事实"替代"模型凭空猜测"。
-
-## 快速决策
-
-- 你缺的是**事实与实时数据**：用 MCP。
-- 你缺的是**怎么做的流程与标准**：用 skills。
-- 你缺的是**底线与边界**：用 rules。
-- 你缺的是**关键点自动守卫**：用 hooks。
-- 你缺的是**专职角色与长链路治理**：用 subagents。
-
-补充一个常见误区：
-
-- MCP 负责"接入能力/返回事实"，不负责"怎么一步步做"。流程与验收应该交给 `skills` / `subagents`。
-
-## 核心特点
-
-- **它本身不做事，只负责"连接"**
-- **定义可调用的工具列表**
-- **管理 AI 对外部系统的访问权限**
 
 ## 常用 MCP 示例
 
+以下 20 个示例选自本站 [Awesome MCP Servers]({{< ref "Agent/awesome-mcp-servers" >}}) 列表，覆盖文件、数据库、协作、搜索与开发等常见场景。
+
 | MCP 名称 | 功能 | 适用场景 |
 | --- | --- | --- |
-| filesystem | 读写本地文件 | 代码生成、文件操作 |
-| github | 操作 GitHub 仓库 | PR 管理、Issue 处理 |
-| postgres/mysql | 数据库操作 | 数据查询、表结构分析 |
-| browser | 浏览器自动化 | 前端测试、网页抓取 |
-| codegen-engine | 代码生成引擎 | 页面生成、模板匹配 |
-| sentry | 错误监控 | Bug 分析、日志查询 |
-| slack/飞书 | 消息通知 | 团队协作、通知推送 |
+| filesystem | 读写本地文件系统 | 代码生成、文件操作 |
+| GitHub | 仓库 / PR / Issue 管理 | 协作开发、代码评审 |
+| Git / GitLab | 本地仓库与 GitLab 项目管理 | 版本控制、CI/CD |
+| PostgreSQL | 数据库查询与模式检查 | 数据分析、运维 |
+| MySQL | 数据库访问与查询 | 业务数据、报表 |
+| SQLite | 轻量数据库与内部分析 | 本地数据、原型 |
+| MongoDB | 文档库查询与操作 | NoSQL、日志分析 |
+| Playwright / Puppeteer | 浏览器自动化与网页抓取 | 前端测试、爬虫 |
+| Slack | 频道与消息管理 | 团队协作、通知 |
+| 飞书 | 文档与协作（OAuth） | 企业协作、知识库 |
+| Sentry | 错误与性能监控 | Bug 分析、排障 |
+| fetch | 网页内容获取与处理 | 信息抽取、RAG |
+| Google Drive | 文件列表、阅读与搜索 | 文档检索、同步 |
+| Notion | 笔记与待办、API 交互 | 文档管理、知识库 |
+| Memory | 长期记忆与知识图谱 | 多轮对话、偏好记忆 |
+| Brave Search / Tavily | 网页搜索 | 实时信息、调研 |
+| Figma | 设计稿读取与实现 | 设计还原、协作 |
+| Docker | 容器管理与操作 | 开发环境、部署 |
+| LeetCode | 题目、题解与进度 | 刷题、面试 |
+| OpenAPI / Swagger | 将 REST API 转为 MCP 工具 | 接口调试、集成 |
+
+更多服务器（按类别整理的完整列表）见 [Awesome MCP Servers]({{< ref "Agent/awesome-mcp-servers" >}})。
 
 ## MCP 配置示例
 
 ```text
 {
-  "mcpServers": {
-    "codegen-engine": {
-      "command": "node",
-      "args": ["/path/to/codegen-engine/src/server.js"]
-    },
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/mcp-filesystem"]
+  "mcpServers": [
+    {
+      // 服务名称（自定义，用于 IDE 中识别）
+      "name": "Local MCP Server",
+      // 服务类型：process 表示本地进程
+      "type": "process",
+      // 可执行文件路径（必填，如 Python/Node 脚本、二进制文件）
+      "command": "/usr/bin/python3",
+      // 启动参数（数组形式，按实际需要填写）
+      "args": [
+        "/path/to/your/mcp/server.py",
+        "--port", "8888",
+        "--model", "your-model-name"
+      ],
+      // 工作目录（可选，默认为当前目录）
+      "cwd": "/path/to/working/directory",
+      // 环境变量（可选，按需添加）
+      "env": {
+        "PYTHONPATH": "/your/python/path",
+        "API_KEY": "your-secret-key"
+      },
+      // 日志级别（可选：debug/info/warn/error）
+      "logLevel": "info"
     }
-  }
+  ]
 }
 ```
 
-## 最小落地模板（工具规范清单）
+```text
+{
+  "mcpServers": [
+    {
+      // 服务名称（自定义）
+      "name": "Remote MCP Server",
+      // 服务类型：http 表示远程 HTTP 服务
+      "type": "http",
+      // MCP 服务的基础 URL（必填）
+      "url": "https://your-mcp-server.com:8080/mcp",
+      // 请求头（可选，如认证、Content-Type 等）
+      "headers": {
+        "Authorization": "Bearer your-token-here",
+        "Content-Type": "application/json"
+      },
+      // 超时时间（可选，单位毫秒，默认 30000）
+      "timeout": 60000,
+      // 是否启用 HTTPS 证书验证（可选，默认 true）
+      "rejectUnauthorized": true
+    }
+  ]
+}
+```
 
-每个工具建议至少回答清楚这些问题（越清晰，路由越稳定）：
+## 主流软件 MCP 配置路径一览表
+| 软件/IDE | 系统 | 配置文件路径 |
+| :--- | :--- | :--- |
+| Claude Desktop | macOS | ~/Library/Application Support/Claude/claude_desktop_config.json |
+| | Windows | %APPDATA%\Claude\claude_desktop_config.json |
+| | Linux | ~/.config/Claude/claude_desktop_config.json |
+| Cursor（全局） | macOS/Linux | ~/.cursor/mcp.json |
+| | Windows | %USERPROFILE%\.cursor\mcp.json |
+| Cursor（项目） | 全平台 | 项目根目录/.cursor/mcp.json |
+| VS Code | macOS | ~/Library/Application Support/Code/User/settings.json |
+| | Windows | %APPDATA%\Code\User\settings.json |
+| | Linux | ~/.config/Code/User/settings.json |
+| JetBrains 系列 | macOS | ~/Library/Application Support/JetBrains/<IDE>/options/mcp.xml |
+| | Windows | %APPDATA%\JetBrains\<IDE>\options\mcp.xml |
+| | Linux | ~/.config/JetBrains/<IDE>/options/mcp.xml |
+| OpenCode | macOS/Linux | ~/.opencode/mcp.json |
+| | Windows | %USERPROFILE%\.opencode\mcp.json |
+| Cherry Studio | 全平台 | 应用内「MCP 服务器管理」界面配置 |
 
-1. **能力说明（做什么，不做什么）**
-   - 解决什么问题
-   - 不支持哪些场景（避免被误用）
-2. **输入契约**
-   - 必填参数、可选参数、默认值
-   - 参数校验与范围限制
-3. **输出契约**
-   - 返回结构（字段含义、单位、排序/分页规则）
-   - 返回不确定性（是否可能缺失、是否最终一致）
-4. **失败语义（非常关键）**
-   - 常见错误类型（权限不足/限流/超时/参数错误）
-   - 失败时给 Agent/用户的可行动提示（下一步怎么做）
-5. **权限与审计**
-   - 最小权限原则
-   - 哪些调用要记录（参数、调用者、时间、结果摘要）
-   - 返回内容的脱敏策略
-6. **成本控制**
-   - 速率限制与配额
-   - 大结果的截断/分页策略
 
-## 常见坑（反模式）
-
-- **工具过多且同质**：会让路由困难、选错率上升。
-- **失败语义缺失**：一旦失败，Agent 会开始猜测，等同回到"幻觉模式"。
-- **权限边界不清**：轻则泄露信息，重则造成数据破坏。
-- **把流程塞进 MCP**：MCP 负责能力接入；流程应由 skills/subagents 承载。
-
-## 与其他模块的边界
-
-- **MCP vs skills**：MCP 提供"能力/数据"；skills 提供"方法/步骤/验收"。
-- **MCP vs rules / 系统提示词**：rules 规定调用边界与禁区（例如二次确认、敏感信息）。
-- **MCP vs hooks**：hooks 决定何时必须调用外部能力；MCP 提供能力本身.
-
-## 参考链接
-
-- [MCP 服务器](https://claudecn.com/docs/claude-code/advanced/mcp-servers/)

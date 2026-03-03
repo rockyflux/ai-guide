@@ -68,5 +68,5 @@ bookFlatSection: true
 - [Commands 指令系统](commands.md)
 - [Agent Skills](skills.md)
 - [Model Context Protocol (MCP)](mcp.md)
-- [Hook](hook.md)
+- [Hook](hooks.md)
 - [Subagents](subagents.md)

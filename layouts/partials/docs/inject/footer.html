@@ -4,3 +4,7 @@
   {{- . | safeHTML -}}
 </div>
 {{- end -}}
+
+{{/* Medium Zoom (no build deps, self-hosted) */}}
+<script defer src="{{ "js/medium-zoom.min.js" | relURL }}"></script>
+<script defer src="{{ "js/medium-zoom-init.js" | relURL }}"></script>

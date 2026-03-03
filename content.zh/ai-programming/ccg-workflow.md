@@ -1,6 +1,6 @@
 ---
-title: CodingAgent协作实践
-weight: 16
+title: AI 编程工作流等工具集
+weight: 20
 bookToc: false
 noTocArea: true
 ---
@@ -8,158 +8,59 @@ noTocArea: true
 #  Awesome CCG Workflow：多 Coding Agent 协作实践
 
 
+## 1\. 介绍说明
 
-## 1\. 这是什么 & 适合谁
+下面的项目列表围绕 Claude Code、Codex、Gemini CLI 等工具构建的多模型协作开发工具集。这些项目通过不同的架构设计和功能实现，探索了多 Agent 协作开发、工程闭环任务管理以及工具链编排等场景。
 
-**CCG Workflow**（这里暂指：多 Agent 分工协作的 Coding 工作流）常见场景：
+| 场景 | 说明 |
+| --- | --- |
+| 多 Agent 协作开发 | 需要借助 Coding Agent 实现项目开发，又避免单一 Agent 性能不足或成本消耗太高 |
+| 工程闭环任务 | 需要“架构 + 实现 + 审查 + 修复 + 文档”等闭环的工程任务 |
+| 工具链编排 | 需要对工具链进行编排：终端 CI、协作配置（MCP/Skills 等）、各 Agent 的 Prompt 与行为准则等 |
 
--   需要借助 Coding Agent 实现项目开发，又避免单一 Agent 性能不足或是成本消耗太高
--   需要 “架构 + 实现 + 审查 + 修复 + 文档” 等闭环的工程任务
--   需要对工具链进行编排：终端 CI、协作配置（MCP/Skills 等）、各 Agent 的 Prompt 及行为准则等
 
-**适合人群**
+## 2\. 案例介绍（CCG）
 
--   想从 “聊天写代码” 升级到 “可控的自动写代码”
--   想快速复用别人已配好的 Workflow
--   想综合评判对比不同 Workflow 、实现差异，取长补短
+更完整的原理与实践细节，可以参考专门页面：[CCG 多模型协作工作流详解](/ai-programming/ccg/)。
 
+```bash
+npx ccg-workflow
+```
+
+按照命令行提示执行后，脚本会自动在电脑的 `.claude` 目录下生成  `skills/` `commands/` `agents/` `workflows/` 等子目录中的配置文件。  
+配置完成后，Claude Code、Cursor 等 IDE 就可以直接识别并调用这些工作流与技能，无需手动拷贝或重复配置。
+
+
+## 3\. 案例介绍（Superpowers）
+
+>🚀开发者必看！Superpowers把专业工程团队方法论固化成Skills，让Claude Code告别越写越乱的困境：规格驱动+代码质量双重保障！AI编程新范式！头脑风暴+计划+执行一条龙自动化
+>
+>更完整的原理与实践细节，可以参考：[https://zread.ai/obra/superpowers](https://zread.ai/obra/superpowers);[B站视频](https://b23.tv/0ysOZuu)
+```bash
+/plugin marketplace add obra/superpowers-marketplace
+/plugin install superpowers@superpowers-marketplace
+```
 ---
 
-## 2\. 快速上手路线
 
-> 想快速入门的，可以按下面顺序看（从易到难 / 从通用到进阶）
+## 4\. 项目列表
 
-1.  **基础概念**：单 Agent vs 多 Agent、角色分工、上下文管理、工具调用边界
-2.  **最小可用工作流**：Planner → Implementer → Reviewer → Tester
-3.  **工程化**：仓库规则（AGENTS.md/CLAUDE.md/GEMINI.md）、CI、统一格式化与测试
-4.  **高级**：任务路由、自动回归、代码搜索 / 知识库、长任务拆解、成本与延迟优化
-
----
-
-## 3\. 汇总索引（总表）
-
-> 说明：以下统一收录「站内帖」与「开源链接」两项内容，便于检索与复用。  
-> 注意：收录顺序随机。
-
-
-### 1. CCB+droid 小孩子才做选择，好用的我全要！！！！
-
-+ **基本信息**:
-    - **类型**: Tool
-    - **作者**: @bfly123
-    - **GitHub 链接**: [GitHub - bfly123/claude_code_bridge](https://github.com/bfly123/claude_code_bridge)
-+ **描述**: Real-time multi-AI collaboration: Claude, Codex & Gemini with persistent context, minimal token overhead
-+ **论坛链接**: [[CCB+droid] 小孩子才做选择，好用的我全要！！！！](https://linux.do/t/topic/1497340)
-
-**Workflow**
-
-### 2. CCA 多模型角色控制和全自动工作流软件
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @bfly123
-    - **GitHub 链接**: [GitHub - bfly123/claude_code_autoflow](https://github.com/bfly123/claude_code_autoflow)
-+ **论坛链接**: [[CCA] 多模型角色控制和全自动工作流软件](https://linux.do/t/topic/1480678)
-
-### 3. 自己动手，丰衣足食 02】人生苦短，我全都要，一个 CLAUDE.md 实现的三位一体协同办公
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @DaiSun
-    - **GitHub 链接**: N/A
-+ **论坛链接**: [[自己动手，丰衣足食 02】人生苦短，我全都要，一个 CLAUDE.md 实现的三位一体协同办公](https://linux.do/t/topic/1231037)
-
-### 4. 自己动手，丰衣足食 04】一个更现代的 SKILLs 集合，一个更省时的并行化 workflow。好的 agent 怎能局限于线性 cc+codex+gemini？
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @DaiSun
-    - **GitHub 链接**: [GitHub - GuDaStudio/skills](https://github.com/GuDaStudio/skills)
-+ **描述**: Agent Skills 集合，Claude 与多模型/工具协作
-+ **论坛链接**: [[自己动手，丰衣足食 04】一个更现代的 SKILLs 集合，一个更省时的并行化 workflow。好的 agent 怎能局限于线性 cc+codex+gemini？](https://linux.do/t/topic/1325941)
-
-### 5. 自己动手，丰衣足食 05】大 vibe 时代，我们需要的是 "一镜到底" 的自动化，还是 "以人为本" 的 context management？
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @DaiSun
-    - **GitHub 链接**: [GitHub - GuDaStudio/commands](https://github.com/GuDaStudio/commands)
-+ **描述**: N/A
-+ **论坛链接**: [[自己动手，丰衣足食 05】大 vibe 时代，我们需要的是 "一镜到底" 的自动化，还是 "以人为本" 的 context management？](https://linux.do/t/topic/1504029)
-
-### 6. 开源自荐】Claude Team—— 让 Claude Code 同时用上 Opus、Gemini、Codex 的多模型协作 MCP
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @chinadoiphin
-    - **GitHub 链接**: [GitHub - 7836246/claude-team-mcp](https://github.com/7836246/claude-team-mcp)
-+ **描述**: Multi-Agent MCP，Claude Code / Windsurf / Cursor 编排 GPT、Claude、Gemini
-+ **论坛链接**: [[开源自荐】Claude Team—— 让 Claude Code 同时用上 Opus、Gemini、Codex 的多模型协作 MCP](https://linux.do/t/topic/1346203)
-
-### 7. 开源】CCG v1.7.39 : Claude Code 编排三 CLI 协作 | Codex + Gemini + Claude
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @feng_li
-    - **GitHub 链接**: [GitHub - fengshao1227/ccg-workflow](https://github.com/fengshao1227/ccg-workflow)
-+ **描述**: 多模型协作开发工具集，智能路由、代码审查、Git 工具等 17+ 命令
-+ **论坛链接**: [[开源】CCG v1.7.39 : Claude Code 编排三 CLI 协作 | Codex + Gemini + Claude](https://linux.do/t/topic/1405588)
-
-### 8. 开源】更新支持 OpenCode！Coder-Codex-Gemini（CCG），Skills + MCP 多模型编排降本提效方案！
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @FredericMN
-    - **GitHub 链接**: [GitHub - FredericMN/Coder-Codex-Gemini](https://github.com/FredericMN/Coder-Codex-Gemini)
-+ **描述**: CCG 多模型协作，支持 Claude Code & OpenCode 双环境
-+ **论坛链接**: [[开源】更新支持 OpenCode！Coder-Codex-Gemini（CCG），Skills + MCP 多模型编排降本提效方案！](https://linux.do/t/topic/1434220)
-
-### 9. oh-my-opencode
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: code-yeongyu (YeonGyu-Kim)
-    - **GitHub 链接**: [GitHub - code-yeongyu/oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode)
-+ **描述**: The Best Agent Harness，Sisyphus 电池包式 Agent
-+ **论坛链接**: N/A
-
-### 10. CCW 6.3.48（Claude-Code-Workflow）新手向！一键 "造火箭"！全自动软件开发工作流！
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @catlog22
-    - **GitHub 链接**: [GitHub - catlog22/Claude-Code-Workflow](https://github.com/catlog22/Claude-Code-Workflow)
-+ **描述**: JSON 驱动多 Agent 开发框架，智能 CLI 编排，Gemini/Qwen/Codex
-+ **论坛链接**: [[开源自荐】CCW 6.3.48（Claude-Code-Workflow）新手向！一键 "造火箭"！全自动软件开发工作流！](https://linux.do/t/topic/1508662)
-
-### 11. CCCC】一个轻量灵活的多 AGENT CLI 合作框架 - 第一弹
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @ikb
-    - **GitHub 链接**: [GitHub - ChesterRa/cccc](https://github.com/ChesterRa/cccc)
-+ **描述**: 双 AI 对等协作：规划、构建、评审、收敛，TUI 或 Telegram/Slack/Discord 控制
-+ **论坛链接**: [[CCCC】一个轻量灵活的多 AGENT CLI 合作框架 - 第一弹](https://linux.do/t/topic/1217360)
-
-### 12. 开源】Superpowers 增强版 + CCG（Claude + Codex + Gemini）
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @bryanhu
-    - **GitHub 链接**: [GitHub - BryanHoo/superpowers-ccg](https://github.com/BryanHoo/superpowers-ccg)
-+ **描述**: Claude Code superpowers 核心技能库
-+ **论坛链接**: [[开源】Superpowers 增强版 + CCG（Claude + Codex + Gemini）](https://linux.do/t/topic/1477266)
-
-### 13. 开源】多工作流融合 x10 倍效率提升：多模型 Agent 编排 + Hooks Loop
-
-+ **基本信息**:
-    - **类型**: Workflow
-    - **作者**: @benchen
-    - **GitHub 链接**: N/A
-+ **描述**: N/A
-+ **论坛链接**: [[开源】多工作流融合 x10 倍效率提升：多模型 Agent 编排 + Hooks Loop](https://linux.do/t/topic/1506286)
+|#|名称|项目链接|描述/关键词|仓库解读|
+|---|---|---|---|---|
+|1|[🔥ccg-workflow](/ai-programming/ccg)|[fengshao1227/ccg-workflow](https://github.com/fengshao1227/ccg-workflow)|多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17+ 个命令|[Zread](https://zread.ai/fengshao1227/ccg-workflow)|
+|2|[🔥claude-code-workflow](https://github.com/catlog22/Claude-Code-Workflow)|[catlog22/Claude-Code-Workflow](https://github.com/catlog22/Claude-Code-Workflow)|CCW 提供了基于 Team 架构 v2 和 Skill 工作流系统 的完整工作流体系，覆盖从快速原型到完整团队编排的软件开发全生命周期。|[Zread](https://zread.ai/catlog22/Claude-Code-Workflow)|
+|3|[Claude Code Bridge (ccb)](https://github.com/bfly123/claude_code_bridge)|[bfly123/claude_code_bridge](https://github.com/bfly123/claude_code_bridge)|终端分屏多模型协作工具 Claude · Codex · Gemini · OpenCode · Droid 轻量异步通讯，交互皆可见，模型皆可控|[Zread](https://zread.ai/bfly123/claude_code_bridge)|
+|4|[cca (Claude Code AutoFlow)](https://github.com/bfly123/claude_code_autoflow)|[bfly123/claude_code_autoflow](https://github.com/bfly123/claude_code_autoflow)|Claude Code AutoFlow (cca) 是一个专为 AI 辅助开发设计的结构化任务自动化工作流系统|[Zread](https://zread.ai/bfly123/claude_code_autoflow)|
+|5|CLAUDE.md|[链接](https://linux.do/t/topic/1231037)|利用单个 `CLAUDE.md` 配置实现规划 / 执行 / 知识三位一体协同办公工作流，作为轻量多角色模板非常适合上手|-|
+|6|[Agent Skills 集合](https://github.com/GuDaStudio/skills)|[GuDaStudio/skills](https://github.com/GuDaStudio/skills)|现代化 Agent Skills 能力库；支持 Claude 与多模型 / 多工具协作，并行化工作流编排，是 Claude Code 技能扩展包，一键集成多模型协作|[Zread](https://zread.ai/GuDaStudio/skills)|
+|7|[GudaStudio Commands](https://github.com/GuDaStudio/commands)|[GuDaStudio/commands](https://github.com/GuDaStudio/commands)|围绕“大 vibe”自动化与“以人为本”上下文管理的命令集合；探索不同自动化粒度下的工作流设计取舍|[Zread](https://zread.ai/GuDaStudio/commands)|
+|8|[oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode)|[code-yeongyu/oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode)|通过把写代码，甚至是任何可以 AI 操作的电脑任务拆解成几个部分：规划、查阅、执行，具体的 agent 带着 prompt、skills 等上下文各司其职，团队分工合作完成复杂任务，oh my opencode 3.0 也集成了 superpowers 。|[Zread](https://zread.ai/code-yeongyu/oh-my-opencode)|
+|9|[oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode)|[README.zh](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/README.zh.md) / [GitHub](https://github.com/Yeachan-Heo/oh-my-claudecode)|Claude Code 的多智能体编排系统，零学习曲线；提供 Team、omc-teams、ccg、autopilot、ralph 等多种执行模式，支持多模型协作、自动并行化与持久执行|[Zread](https://zread.ai/Yeachan-Heo/oh-my-claudecode)|
+|10|[CCCC](https://github.com/ChesterRa/cccc)|[ChesterRa/cccc](https://github.com/ChesterRa/cccc)|轻量级多 Agent CLI 框架；CCCC 是协作内核 — 它拥有协调层，与外部 CI/CD、编排器、部署工具保持可组合性。|[Zread](https://zread.ai/ChesterRa/cccc)|
+|11|[superpowers](https://github.com/obra/superpowers)|[obra/superpowers](https://github.com/obra/superpowers)|An agentic skills framework & software development methodology that works；为 Claude Code / Cursor 提供从需求澄清、设计、规划到 TDD 与代码审查的完整 Skills 工作流体系|[Zread](https://zread.ai/obra/superpowers)|
+|12|[Coder-Codex-Gemini（ccg）](https://github.com/FredericMN/Coder-Codex-Gemini)|[FredericMN/Coder-Codex-Gemini](https://github.com/FredericMN/Coder-Codex-Gemini)|Claude + Coder + Codex + Gemini，让 Claude/Sisyphus 作为架构师调度 Coder 执行代码任务、Codex 审核代码质量，Gemini 提供专家咨询，形成自动化的多方协作闭环|[Zread](https://zread.ai/FredericMN/Coder-Codex-Gemini)|
+|13|[claude-team-mcp](https://github.com/7836246/claude-team-mcp)|[7836246/claude-team-mcp](https://github.com/7836246/claude-team-mcp)|Claude + Codex + Gemini，多智能体 MCP 服务器|[Zread](https://zread.ai/7836246/claude-team-mcp)|
+|14|[myclaude](https://github.com/cexll/myclaude/tree/master)|[cexll/myclaude](https://github.com/cexll/myclaude/tree/master)|Claude + Codex + Gemini，双智能体架构与可插拔 AI 后端|[Zread](https://zread.ai/cexll/myclaude)|
+|15|[Trellis](https://github.com/mindfold-ai/Trellis)|[mindfold-ai/Trellis](https://github.com/mindfold-ai/Trellis)|一体化 AI 框架与工具包|[Zread](https://zread.ai/mindfold-ai/Trellis)|
 
 
----
-
-> 关于评测：由于评测本身存在主观性，并且上述有些项目的角色定制比较灵活、有些比较固定，所以可能在不同类别的开发项目上存在较大的可用性差异，很难去做一个客观的统一评测。但是欢迎各位佬友分享自己使用上述工具的经验与体会，这样收集起来也可供大家一同参考。

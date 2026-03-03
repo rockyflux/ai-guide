@@ -1,6 +1,7 @@
 ---
 title: 上下文设计哲学
-weight: 4
+weight: 60
+bookHidden: true
 ---
 
 ## 上下文是稀缺资源｜RAG、Memory、Skills 的设计哲学刍议
@@ -357,3 +358,5 @@ def suggest_deletion(self, node):
 _本文探索的 Anthropic Skills 仓库：_[_https://github.com/anthropics/skills_](https://github.com/anthropics/skills)
 
 _Agent Skills 规范：_[_https://agentskills.io_](https://agentskills.io/)
+
+本篇文章来源：[https://www.lapis.cafe/posts/ai-and-deep-learning/agi/context-scarcity-rag-memory-skills/](https://www.lapis.cafe/posts/ai-and-deep-learning/agi/context-scarcity-rag-memory-skills/)

@@ -1,13 +1,21 @@
 ---
-title: CC-Switch 可视化配置模型
-weight: 20
+title: CC-Switch 可视化配置
+weight: 17
 bookToc: false
 noTocArea: true
+bookHidden: true
 ---
 
-### Claude Code / Codex / Gemini CLI 全方位辅助工具
+### Claude Code / Codex / Gemini CLI / OpenCode / OpenClaw 全方位辅助工具
 
-> 可视化配置管理工具，支持 MCP、Skills、Prompts 等，下载软件解压即用。
+> 可视化配置管理工具，支持 MCP、Skills、Prompts 等，下载软件解压即用。只需要一个API Key就能切换Claude模型供应商。
+
+### 作者介绍
+
+2026 年 1 月，一个叫 CC Switch 的开源项目在 GitHub 上突破了 20,000 stars。这个数字背后，是一个大龄转行者用六个月时间写就的故事。
+项目作者 Jason 之前做进出口贸易，去年才开始自学编程。他花三个月学完了从 TypeScript 到 React、Node.js、Rust 的基础知识，然后做出了第一个正式项目。
+
+**🔗 延伸阅读** [CC Switch 背后的故事](https://waytoagi.feishu.cn/wiki/ZjsbwmPIVi8IM0k5jd9cTbK5n6b)
 
 ### 界面预览
 
@@ -158,4 +166,8 @@ flatpak run com.ccswitch.desktop
 > **注意**：首次启动会自动导入现有 Claude/Codex 配置作为默认供应商。
 
 
+### CC-Switch CLI
+本项目是原版 CC-Switch 的 CLI 分支。🔄 WebDAV 同步功能与上游项目完全兼容。
+
+[https://github.com/SaladDay/cc-switch-cli/](https://github.com/SaladDay/cc-switch-cli/) Claude Code、Codex 与 Gemini CLI 的命令行管理工具
 

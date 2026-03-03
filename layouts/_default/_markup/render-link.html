@@ -1,0 +1,24 @@
+{{ $url := .Destination | safeURL }}
+
+{{ $forceBlankList := slice
+    "ai-programming"
+    "vb-code-tool"
+    "external"
+}}
+
+{{ $blank := false }}
+
+{{ if strings.HasPrefix $url "http" }}
+  {{ $blank = true }}
+{{ end }}
+
+{{ range $forceBlankList }}
+  {{ if in $url . }}
+    {{ $blank = true }}
+  {{ end }}
+{{ end }}
+
+<a href="{{ $url }}"
+   {{ if $blank }}target="_blank" rel="noopener noreferrer"{{ end }}>
+    {{ .Text | safeHTML }}
+</a>

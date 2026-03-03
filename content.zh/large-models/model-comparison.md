@@ -1,8 +1,9 @@
 ---
 title: LiveBench AI 排行榜
-weight: 2
+weight: 30
 bookToc: false
 noTocArea: true
+bookHidden: true
 ---
 
 ### 大模型能力排行榜/测评时间2026-01-08

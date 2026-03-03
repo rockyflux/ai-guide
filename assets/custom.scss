@@ -81,11 +81,13 @@ body.no-toc-area .container {
   padding-bottom: 0.4em;
   border-bottom: 1px solid var(--gray-200);
   margin-top: 2em;
+  font-size: 1.25rem;
 }
 
 .book-page .book-article.markdown h3,
 .book-article.markdown h3 {
   margin-top: 1.6em;
+  font-size: 1.05rem!important;
 }
 
 .book-page .book-article.markdown p,
@@ -288,59 +290,10 @@ button,
   }
 }
 
-/* ---------- 顶部固定 Header（桌面端） ---------- */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 900;
 
-  margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(12px);
-}
-
-.site-header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  height: 52px;
-  padding: 0 0.5rem;
-}
-
-.site-header-title a {
-  color: inherit;
-  font-weight: 650;
-  letter-spacing: -0.01em;
-}
-
-.site-header-slogan {
-  font-size: 0.9em;
-  opacity: 0.72;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 60%;
-  text-align: right;
-}
-
-@media (prefers-color-scheme: dark) {
-  .site-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-    background: rgba(24, 24, 27, 0.60);
-  }
-
-  .site-header-slogan {
-    opacity: 0.78;
-  }
-}
-
-/* 小屏使用主题自带的移动端 header，避免双 header */
-@media (max-width: 48rem) {
-  .site-header {
-    display: none;
-  }
+.markdown h1{
+  margin-top: 0.5em!important;
+  font-size: 1.8em!important;
 }
 
 /* ---------- 回到顶部（右下角悬浮） ---------- */
@@ -416,4 +369,25 @@ button,
   .book-header{
     margin-top: 1.0rem;
   }
+}
+
+
+/* 所有菜单基础间距 */
+.book-menu a {
+  padding-right: 10px;
+}
+
+/* 一级 */
+.book-menu > ul > li > a {
+  padding-left: 10px;
+}
+
+/* 二级 */
+.book-menu ul ul > li > a {
+  padding-left: 10px;
+}
+
+/* 三级 */
+.book-menu ul ul ul > li > a {
+  padding-left: 10px;
 }

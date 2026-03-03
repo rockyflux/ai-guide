@@ -1,131 +1,136 @@
 ---
 title: Rules
-weight: 1
+weight: 5
 date: 2026-02-09T23:34:00+08:00
 noTocArea: true
 bookToc: false
 ---
 
-## Rules / System Prompt（全局约束层）
+## Rules（系统级指令 / 全局约束层）
+
+Rules 是写给 Agent 的“系统级指令”。它们会在提示词层面提供**持久、可复用**的上下文，并在每次对话/任务中被注入到模型上下文的前部，从而让 AI 在生成代码、理解编辑、执行工作流时保持一致的行为边界与偏好。
 
 在代理式 IDE（如 Cursor、Windsurf、Claude Code）中，AI 的行为通常由三层信息共同决定：
 
-- **Rules（平台级）**：始终生效、不可被单次任务覆盖的行为约束。
-- **`Claude.md`（项目级）**：提供当前仓库的事实、运行入口与关键约定。
-- **Prompt（会话级）**：表达本次具体任务。
+> **分工关系**：Rules 定义边界与默认偏好，项目说明文件（如 `AGENTS.md`、`CLAUDE.md`）提供语境，Prompt/任务描述触发具体执行。
 
-> **分工关系**：Rules 定义边界，`Claude.md` 提供语境，Prompt 触发执行。
-
-| 组件 | 目的 | 作用范围 | 何时使用 | 示例文件 |
-| --- | --- | --- | --- | --- |
-| **Rules** | 定义全局约束和底线 | 工具/平台级（取决于实现） | 安全、工程验证、变更控制等长期约束 | `.cursorrules`（Cursor 实现） |
-| **Claude.md** | 提供项目事实和运行入口 | 项目级（作为上下文被 Agent 读取） | 项目背景、运行方式、关键约定 | `CLAUDE.md` |
-| **Prompt** | 表达具体任务需求 | 会话级 / 任务级 | 描述本次要达成的目标 | 用户输入提示 |
-| **Skills.md** | 定义可复用操作流程（SOP） | 流程级 / 任务级 | 标准化任务执行方式 | `skills/*.md` |
-| **Agents.md** | 定义 AI 角色与分工 | 编排级（多步任务） | 专职角色或复杂长链路任务 | `AGENTS.md` |
-
+官方说明见：[Cursor Rules 文档](https://cursor.com/cn/docs/context/rules)。
 
 ---
 
-## 一句话定位
+## Cursor 里有哪些“规则”
 
-`rules` 用来回答：
+Cursor 支持多种规则来源（概念上优先级从高到低）：
 
-> **无论当前执行什么任务，哪些约束必须始终成立？**
+- **Team Rules（团队规则）**：在管理后台集中配置，适用于 Team/Enterprise；可强制所有成员启用。
+- **Project Rules（项目规则）**：存放在仓库内 `.cursor/rules/`，会进入版本控制；可按文件范围或智能相关性应用。
+- **User Rules（用户规则）**：在本机 Cursor 设置中全局生效，适用于你所有项目。
+- **`AGENTS.md`**：纯 Markdown 指令文件（无元数据），作为 `.cursor/rules` 的简洁替代方案；支持在子目录放置**嵌套 `AGENTS.md`**，就近覆盖/补充父级指令。
 
-这些约束优先级高于单次 Prompt，不依赖具体文件是否被提及。
-
----
-
-## 是否应该放入 Rules 的判断方法
-
-优先放入 `rules` 的内容通常同时满足：
-
-1. **与具体任务无关，但需要长期成立**
-2. **可以被检查、验证或自动化执行**
-3. **违反后会带来安全、稳定性或协作风险**
-
-如果不满足：
-
-- 仅在某类任务出现 → 放入 **skills（按需加载的 SOP）**
-- 需要人工触发流程 → 放入 **commands**
-- 属于项目背景或运行说明 → 放入 **`Claude.md`**
-
-目标是让 `rules` **保持短、硬、可执行**，把流程细节交给更合适的载体。
+> 备注：旧版 `.cursorrules` 仍受支持，但官方已明确**即将废弃**，建议迁移到 `.cursor/rules/` 或 `AGENTS.md`。
+>
+> 另：**User Rules 仅对 Agent（Chat）生效**，不会应用到 Inline Edit（Ctrl/Cmd+K）。
 
 ---
 
+## Project Rules（`.cursor/rules/`）怎么组织
 
-## AGENTS.md
+项目规则以 Markdown 文件形式存在于 `.cursor/rules/` 中（支持 `.md` / `.mdc`）。当你希望对规则的触发条件做精细控制时，推荐用带 frontmatter 的 `.mdc`：
 
-- **AGENTS.md 是一个开放的 Markdown 文档格式（open format）**，用来指导 AI 编码代理（coding agents）如何在你的项目中工作.
-- 它类似于 **为 AI 编写的 README**：比传统 README 更适合被各种 AI agent 读取和理解.
-- 主旨是统一项目内与 AI agent 相关的上下文和指令，**减少不同 AI 工具之间的配置碎片化**.
+- **`description`**：用一句话描述此规则解决什么问题（配合“智能应用”更有效）。
+- **`globs`**：规则只对匹配的文件路径生效（适合“按目录/模块约束”）。
+- **`alwaysApply`**：是否每次对话都应用（一般仅用于最核心、最短的硬约束）。
 
-过去 AI coding tools 各自使用不同的配置方式——例如：
+示例结构：
 
-- Claude 依赖 **CLAUDE.md**
-- Cursor 有自己的 **.cursorrules**
-- Copilot 有各自插件指令
-
-这种多头格式导致：
-
-- 重复维护多份规范
-- AI 运行时理解项目规则不一致
-AGENTS.md 出现的原因就是解决这个碎片化问题，让不同 agent 都能读同一份文件。
-
-更多案例和帮助文档请访问官方地址：[AGENTS.md](https://agents.md/)
-
-
-## 示例案例
-
-### Cursor Rules 示例
-
-以下是一个简单的 `.cursorrules` 文件示例：
-
-```text
-你是IDE的AI编程助手，遵循核心工作流（研究->构思->计划->执行->评审）用中文协助用户，面向专业程序员，交互应简洁专业，避免不必要解释。所有交互均使用MCP `heng`工具进行，不可擅自未使用`heng`工具而停止交流，只有当用户在heng工具对话时明确说了“结束对话”或“不使用`heng`交流时，当次交流停止使用`heng` MCP工具。
-
-[沟通守则]
-1. 必须用中文回复，必须使用 MCP `heng`工具，不可擅自未使用`heng`工具而停止交流。
-2. 响应以模式标签 `[模式：X]` 开始，初始为 `[模式：研究]`。
-3. 核心工作流严格按 `研究->构思->计划->执行->评审` 顺序流转，用户可指令跳转。
-4. 除非用户明确要求结束对话，否则所有步骤、交流都必须`重复`调用 MCP `heng`
-5. 当用户提出`结束对话`，则当次交流停止使用`heng` MCP工具，且无需用MCP工具进行结束对话/再见等交互，直接进行对话总结，然后结束对话。
+```bash
+.cursor/rules/
+  api-guidelines.md
+  react-patterns.mdc
+  frontend/
+    components.mdc
 ```
-详细内容请访问：[复制代码](https://codecopy.cn/post/ihx3qa)
 
-### Claude.md 示例
+示例规则（`.mdc`）：
 
-以下是一个简单的 `Claude.md` 文件示例：
+```md
+---
+description: "前端组件编写规范与约束"
+globs:
+  - "layouts/**/*.html"
+  - "static/js/**/*.js"
+alwaysApply: false
+---
+
+- 优先复用现有组件与局部模板，避免新增重复逻辑
+- 修改样式时同步检查暗色/浅色模式与移动端断点
+- 只在必要时引入新依赖，并说明原因与替代方案
+```
+
+---
+
+## 规则类型与触发方式（实用视角）
+
+从使用方式看，你可以把规则分成四类（对应 Cursor 的几种应用策略）：
+
+- **Always Apply（总是应用）**：每次对话都生效；务必保持短小、稳定、少变。
+- **Apply Intelligently（智能应用）**：由 Agent 根据 `description` 判断相关性，适合“按场景触发”的经验规则。
+- **Apply to Specific Files（按文件生效）**：通过 `globs` 精确限定范围，适合“某目录统一规范”。
+- **Apply Manually（手动应用）**：在对话中通过 `@规则名` 触发，适合模板类/检查清单类规则。
+
+---
+
+## 最佳实践（写出“可用的”规则）
+
+- **聚焦高频问题**：规则最好是你反复需要提醒 AI 的内容，而不是百科全书式整理。
+- **可执行、可验证**：用明确动作描述（例如“新增依赖要说明原因并给替代方案”），避免“写得更优雅”这类模糊表述。
+- **控制长度与颗粒度**：把大规则拆成多个可组合的小规则；单条规则尽量控制在几百行以内。
+- **引用文件而非复制代码**：需要示例时优先 `@` 引用仓库内的标准实现文件，避免规则与代码漂移。
+- **避免重复既有工具职责**：纯格式/风格类问题优先交给 formatter/linter；规则只补充项目特有约束。
+
+---
+
+### AI 编程工具规则配置路径
+
+| 工具                     | 全局 Rules 物理路径                                             | 项目级 Rules 物理路径                        |
+| ---------------------- | --------------------------------------------------------- | ------------------------------------- |
+| **Cursor**             | `C:\Users\用户名\.cursor\rules\`（内部存储，非单一md）                 | 项目根目录 `.cursorrules`                  |
+| **Windsurf (Codeium)** | `C:\Users\用户名\.codeium\windsurf\memories\global_rules.md` | 项目根目录 `.windsurfrules`                |
+| **Continue.dev**       | `C:\Users\用户名\.continue\config.json`                      | 项目 `.continue/config.json`            |
+| **Claude Code**        | ❌ 无真正全局 rules 文件                                          | 项目根目录 `CLAUDE.md`                     |
+| **Copilot**            | ❌ 无规则文件                                                   | 企业版 `.github/copilot-instructions.md` |
+
+
+
+## `AGENTS.md`：更轻量的项目指令
+
+`AGENTS.md` 是一个开放的 Markdown 指令格式，可以把“如何在这个项目里工作”的约定写成一份易读文档。它的目标是减少不同 AI 工具之间的配置碎片化，让“项目指令”更接近一份**为 AI 准备的 README**。
+
+Cursor 支持在子目录中放置嵌套 `AGENTS.md`：它会与父目录指令**合并**，并且**越具体的指令优先级越高**（更贴近当前目录的约束会覆盖更上层的宽泛约束）。
+
+更多信息见：[AGENTS.md 官方站点](https://agents.md/)。
+
+一个简洁示例：
 
 ```markdown
-# CLAUDE.md 开发准则
+# Project Instructions
 
-## 概览
-本文件用于指导在当前仓库内进行的全部开发与文档工作，确保输出遵循强制性标准并保持可审计性。
+## Language
+- 所有回答与文档输出使用简体中文（代码标识符遵循既有命名）
 
-**上下文信息要求**
-- 在编码前至少分析 3 个现有实现或模式，识别可复用的接口与约束。
-- 绘制依赖与集成点，确认输入输出协议、配置与环境需求。
-- 弄清现有测试框架、命名约定和格式化规则，确保输出与代码库保持一致。
-- **优先使用 context7 查询编程库文档**，避免过度依赖网页搜索或猜测。
-- **使用 github.search_code 搜索开源实现示例**，学习最佳实践。
-- **使用 desktop-commander 进行本地文件分析和数据处理**，绝对优先于bash命令。
+## Workflow
+- 修改前先定位现有实现与约束，再做最小改动
+- 涉及用户可见行为变更时，补充更新点与回滚方式
 
-**语言使用强制规范**
-- ⚠️ **绝对强制使用简体中文**：所有 AI 回复、文档、注释、日志、提交信息等一切可使用任意语言的内容，必须强制使用简体中文。
-- 唯一例外：代码标识符（变量名、函数名、类名等）遵循项目既有命名约定。
-- 违反此规范的任何输出必须立即重写为简体中文。
-
+## Docs
+- 文档结构优先保持一致：背景 → 结论 → 步骤 → 注意事项 → 参考
 ```
-详细内容请访问：[代码复制](https://codecopy.cn/post/m1wfwo)
-
 
 ---
 
-## 参考
+## 参考与扩展
 
-- https://cursor.directory/rules
-- https://dotcursorrules.com/
-- https://claudecn.com/docs/claude-code/advanced/rules-playbook/
+- [Cursor Rules 文档](https://cursor.com/cn/docs/context/rules)
+- `https://cursor.directory/rules`
+- `https://dotcursorrules.com/`
+- `https://claudecn.com/docs/claude-code/advanced/rules-playbook/`

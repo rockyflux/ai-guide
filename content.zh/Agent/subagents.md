@@ -1,10 +1,27 @@
 ---
 title: Subagents
-weight: 3
+weight: 20
 date: 2026-02-09T23:34:00+08:00
 ---
 
+
+## 子代理架构（Sub-Agent）
+
+>子代理是 Cursor/Claude Code 主代理可以将任务委派给的专业化 AI 助手。每个子代理都在自己的上下文窗口中运行，处理特定类型的工作，并将结果返回给父代理。使用子代理可以拆解复杂任务、并行开展工作，并在主对话中保留上下文。
+
+>Subagents 是处理特定类型任务的专门 AI 助手。每个 subagent 在自己的上下文窗口中运行，具有自定义系统提示、特定的工具访问权限和独立的权限。当 Claude 遇到与 subagent 描述相匹配的任务时，它会委托给该 subagent，该 subagent 独立工作并返回结果。
+
+>子代理架构则换了一个思路：既然一个模型的上下文有限，那就让多个模型分工合作，每个模型只需要关注自己负责的那部分上下文，即分而治之。[http://localhost:1313/large-models/context-scarcity-rag-memory-skills/#3子代理架构sub-agent通过分工实现上下文隔离](http://localhost:1313/large-models/context-scarcity-rag-memory-skills/#3子代理架构sub-agent通过分工实现上下文隔离)
+
 `subagents` 的价值是“**换脑子**”：把某类任务的角色、目标、输出格式与权限边界隔离出来，让它像专职同事一样稳定完成长链路工作。
+
+- [https://cursor.com/cn/docs/context/subagents](https://cursor.com/cn/docs/context/subagents)
+- [https://code.claude.com/docs/zh-CN/sub-agents](https://code.claude.com/docs/zh-CN/sub-agents)
+
+
+
+
+
 
 ## 为什么使用 Subagents
 
@@ -66,37 +83,16 @@ Claude 在需要搜索或理解代码库但不做修改时委托给 Explore。
 - 需要**权限隔离**：例如只读分析/禁止写入/外部请求需确认。
 - 主对话上下文容易被污染：需要把子任务拆出去并行探索。
 
-## 最小可用模板（输入/输出契约）
 
-你可以把 subagent 设计成一个有契约的“工单处理器”：
 
-1. **输入（必须提供/必须确认）**
-   - 目标：要解决什么问题
-   - 约束：不能做什么、必须满足什么
-   - 上下文：相关片段（日志、代码、接口、复现步骤等）
-2. **输出（必须产出）**
-   - 结论/建议（可执行）
-   - 变更清单（影响面）
-   - 风险点与回滚策略
-   - 验证步骤与验收标准
-3. **工作流（固定阶段）**
-   - 收集信息 -> 形成假设 -> 验证 -> 决策 -> 执行 -> 复盘
-4. **权限边界**
-   - 哪些动作需要二次确认（写入、执行、外部请求）
+### 配置截图
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start;">
+  <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ1-Fpi0tZOZ-8nWOeTfnnV3kqKIVURgACSyMAAplwYFRi2eSXcI-O_joE.png" alt="subagents-diagram-1" style="max-width: 48%; flex: 1; min-width: 200px;" />
+  <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ1_Vpi0zBlNh8e1ZYzTM_fiKstrg9twACYCMAAplwYFT1_Npmb9yXkjoE.png" alt="subagents-diagram-2" style="max-width: 48%; flex: 1; min-width: 200px;" />
+</div>
 
-## 常见坑（反模式）
-
-- **角色定义太泛**：等同“万能代理”，无法带来稳定性。
-- **没有契约**：只输出大段解释，没有验收与可执行项。
-- **把 subagent 当技能手册**：手册用 skills；需要治理过程与角色隔离时才用 subagent。
-
-## 与其他模块的边界
-
-- **subagents vs rules / 系统提示词**：rules 是底线，约束所有角色。
-- **subagents vs skills**：skills 给 SOP；subagent 负责按角色执行并对结果负责。
-- **subagents vs hooks**：hooks 是关键点自动化守卫；subagent 是完整任务的执行者。
-- **subagents vs MCP**：MCP 提供外部能力；subagent 决定何时用、怎么用以及如何验证。
 
 ## 参考链接
 
 - [Subagents 子代理](https://claudecn.com/docs/claude-code/advanced/subagents/)
+- [https://github.com/VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents)

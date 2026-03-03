@@ -1,10 +1,11 @@
 ---
-title: LLM 相关评测基准与榜单汇总
-weight: 999
+title: LLM 评测基准与榜单汇总
+weight: 40
 date: 2026-02-09T14:43:00+08:00
+bookHidden: true
 ---
 
-# LLM 相关评测基准与榜单汇总｜Leaderboard
+## LLM 相关评测基准与榜单汇总｜Leaderboard
 
 ## 1\. LiveBench
 

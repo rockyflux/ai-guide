@@ -1,51 +1,49 @@
 ---
-title: 扩展 GitHub 的功能与体验
+title: GitHub 周边工具速查
 weight: 2
+bookToc: false
+noTocArea: true
+bookHidden: true
 ---
 
-# 扩展 GitHub 的功能与体验
-### Github：全球代码的中心
-**Github** 作为全球最大、最活跃的代码托管平台，已经成为每个程序员、开发者、技术人员日常工作和学习的一部分。其强大的版本控制功能、开放的代码库和丰富的社区生态，吸引了成千上万的开发者在这里创建、分享和协作。可以说，**Github上的每一行代码都代表了全球技术创新的前沿**。
-
-### 为什么说世界上的99%的资源都在Github？
-+ **全球开发者贡献：** Github汇聚了全球范围内的开发者，任何人只要有需求或者想法，就可以通过提交代码或者提交issue来贡献自己的力量。这使得Github成为了一个超大规模的代码交换平台。
-+ **海量开源项目：** 从基础框架、开发工具、操作系统，到各类应用程序和插件，几乎所有开发领域的代码都可以在Github上找到。99%的开发者需求和技术问题都能在Github上找到解决方案。
-+ **代码即软件：** 在Github上，软件不仅是产品的最终呈现，它本身就是一个可以自由访问、修改、共享和重用的“代码”。开发者通过“Fork”操作，可以在别人已有的代码上进行二次开发，实现快速迭代与创新。
-
-### 开放平台与共享精神
-Github的成功不仅仅来自它的技术，还来自于其背后**开源精神**的推动。Github使得每个开发者都能够“站在巨人的肩膀上”进行创新和技术交流。它提供了一个平台，让开发者在上面分享自己的代码，同时也可以方便地获取别人的代码进行学习和借鉴。通过这种互帮互助的方式，开发者们不断提高自己的技术水平，并一起推动整个行业的发展。
-
-### 相关平台：扩展Github的功能与体验
-除了Github本身，还有一些极具特色的平台和工具，它们可以帮助开发者更好地利用Github上的资源，提升开发效率。
-
-### [HelloGithub](https://hellogithub.com/)
-HelloGithub是一个帮助用户发现Github上的精彩项目和最新趋势的平台。它不仅展示了最受欢迎的开源项目，还能帮助用户根据自己的兴趣领域，发现相关的优秀代码库。如果你是一个对开源社区感兴趣的新手，HelloGithub可以帮助你快速入门，并找到与你需求相关的代码项目。
-
-### [GhubStar](https://ghubstar.com/)
-GhubStar是一个聚焦Github明星项目的平台，它展示了Github上最受欢迎的开源项目排行榜。用户可以在这个平台上快速找到那些被开发者广泛推荐和点赞的项目。这是一个极好的工具，帮助开发者了解最新的技术趋势和业内热门的项目。
-
-### [gitmcp](https://gitmcp.io/)
-无论使用哪种工具,只需在配置文件中添加 MCPSERVER,并添加上 GitMCP 链接,即可让 AI “绑定” 特定代码库,实现“精准问诊”。
+# GitHub 周边工具速查
 
 
+| 你想做什么 | 工具 | 一句话用途 | 入口 / 打开方式 |
+| --- | --- | --- | --- |
+| 在线编辑仓库 | [GitHub.dev](https://github.dev/) | 浏览器里改文件、提交变更、提 PR | 仓库页按 `.`（英文句号），或把 `github.com/OWNER/REPO` 改成 `github.dev/OWNER/REPO` |
+| 在线阅读代码 | [GitHub1s](https://github1s.com/) | 像 VS Code 一样浏览/搜索/跳转 | 把 `github.com/OWNER/REPO` 改成 `github1s.com/OWNER/REPO` |
+| 提升 GitHub 下载速度 | [Github 增强 - 高速下载](https://greasyfork.org/zh-CN/scripts/412245-github-enhancement-high-speed-download) | 为 Clone / Release / Raw / Code(ZIP) 等入口添加多种加速源按钮 | 浏览器先安装 Tampermonkey，再打开脚本页面点击“安装脚本” |
+| GitHub / Docker Hub / NPM 加速 | [Watt Toolkit](https://steampp.net/) | 一键加速 GitHub 等开发常用站点访问与下载 | 微软商店搜索安装后，选择 GitHub 加速选项（也支持 Docker Hub、NPM 等） |
+| GitHub 界面中文化 | [github-chinese](https://github.com/maboloshi/github-chinese) | 将 GitHub 界面元素中文化（用户脚本） | 安装 Tampermonkey/Violentmonkey 后，按仓库 README 的安装指南启用 |
+| 让 AI “绑定”某个仓库问答 | [GitMCP](https://gitmcp.io/) | 把仓库映射成 MCP Server（更定向、更少跑题） | `https://gitmcp.io/OWNER/REPO` |
+| 看 GitHub 今日/本周/本月热门 | [GitHub Trending](https://github.com/trending) | 发现当下最火的开源项目与话题 | 打开页面后用 Language / Date range 筛选 |
+| 发现精选项目 | [HelloGitHub](https://hellogithub.com/) | 精选项目与趋势 | 直接浏览分类/期刊 |
+| 看热门 Star 榜单 | [GhubStar](https://ghubstar.com/) | 快速了解大家都在关注什么 | 打开榜单筛选语言/时间 |
+| 快速“读懂/总结”项目（中文） | [zread.ai](https://zread.ai) | 生成概览、模块说明、术语解释 | 输入仓库链接/项目名 |
 
-### [Github.dev](https://github.dev/)
-Github.dev是Github推出的在线IDE（集成开发环境），让开发者无需离开浏览器即可进行项目开发和编辑。通过Github.dev，开发者可以直接在浏览器中访问Github上的代码仓库，快速修改和提交代码。这大大降低了开发者的学习曲线，并加速了开发的速度。
 
-### [Github1s](https://github1s.com/)
-Github1s是一个轻量级的Github代码浏览工具，它能够将Github的仓库以更加简洁和直观的方式展现出来。通过Github1s，开发者可以更快速地浏览代码、理解项目结构，同时也提供了许多代码高亮和快速搜索的功能。对于快速浏览和分析代码库，Github1s是一个非常实用的工具。
+## GitMCP（Cursor）配置示例
 
-### [zread.ai](https://zread.ai)
-智谱 Z.ai 公司推出了一款名为 Zread.AI 的新工具，旨在为广大开发者提供更便捷的开源项目阅读和理解体验。该工具的功能与 Cognition 推出的 DeepWiki 相似，但最大的亮点在于它支持中文，这使得更多中文用户能够轻松获取所需的信息。
+```json
+{
+  "mcpServers": {
+    "REPO Docs": {
+      "url": "https://gitmcp.io/OWNER/REPO"
+    }
+  }
+}
+```
 
-### 如何充分利用Github的资源？
-1. **主动探索与学习：** Github不仅仅是一个代码托管平台，它本身也可以作为学习资源。你可以通过浏览别人的代码，学习新的开发技术、框架和工具。Github上的开源项目是每个开发者不断学习的宝贵财富。
-2. **参与开源项目：** 如果你希望提升自己的技术水平并积累经验，参与开源项目是一个很好的选择。在Github上有大量的开源项目等待开发者参与，你可以通过提交代码、bug修复或者文档更新，加入到这些项目的开发中。
-3. **分享你的知识与经验：** 在Github上，分享是互相学习的核心。你可以将自己的项目托管到Github，展示你的技术成果，也可以为别人提供帮助。通过发布开源代码，你不仅可以获得社区的支持与反馈，还能够与全球开发者建立联系。
-4. **借助工具提高效率：** 如Github.dev和Github1s这类工具可以帮助开发者提高代码阅读和编辑的效率。充分利用这些工具，能够让你的开发工作更加高效。
+## 注意事项
 
-### 结语
-Github不仅是开发者的天堂，也是全球技术进步的缩影。它汇聚了来自全球的资源和智慧，推动了开源精神的传播，并让每一位开发者都能够在这里找到属于自己的位置。无论你是初学者还是资深工程师，Github都能为你提供源源不断的技术支持和灵感，让你在这个开放的世界中找到无限的可能。
+| 提示 | 说明 |
+| --- | --- |
+| 别只看 Star | 更可靠的是最近提交、Issue/PR 响应速度、Release 频率 |
+| 在线编辑有边界 | 需要跑测试/装依赖/调试复杂环境的改动，建议本地 |
+| 权限与隐私 | 接入第三方工具前，先确认是否涉及私有仓库与合规要求 |
 
-Github的世界，已经没有“找不到”的资源，只有“不敢想”的创新。
+## 延伸阅读
+
+- [MCP 入门与资源]({{< ref "Agent/mcp" >}})
 

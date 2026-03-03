@@ -4,9 +4,37 @@ weight: 6
 date: 2026-02-09T23:34:00+08:00
 ---
 
-## 一句话定位
+### Claude Commands（斜杠命令）
+
+>Claude Commands（斜杠命令）是 Claude（尤其 Claude Code）的快捷指令，以 / 开头，输入对话框即可触发特定操作；自定义命令可通过在项目 .claude/commands/ 目录下创建 .md 文件实现，能接管交互意图并强制执行固定流程。
+
+>自定义命令允许你创建可复用的工作流，并在聊天输入框中通过简单的 / 前缀来触发。这些命令有助于在团队内标准化流程，并让常见任务执行得更加高效。
+
 
 `commands` 负责回答：**我想显式接管这次的意图，并强制走一个固定流程。**
+
+<div style="display:flex; gap:12px; flex-wrap:wrap; align-items:flex-start; margin: 12px 0;">
+  <img alt="commands-1" src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ1v1piyCsx2yBp1PfHfMhMgABFwpQpVQAAiMiAAKZcGBU8nSTufrY_Rg6BA.png" style="width:49%; height:auto;" />
+  <img alt="commands-2" src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ3UFpjCl0h9oya_wN4-l8hhylspD02gACpB0AAoLCYFRb1PvMcqt0ejoE.png" style="width:49%; height:auto;" />
+</div>
+
+<div style="display:flex; gap:12px; flex-wrap:wrap; align-items:flex-start; margin: 12px 0;">
+  <img alt="commands-3" src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ1wNpiyGLNchUsHAVb_0oZUNN0W14AQACKiIAAplwYFQTHrlKfoM65joE.png" style="width:49%; height:auto;" />
+  <img alt="commands-4" src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ1wppiyJGX5-rve3m8VolEnfG76LOsAACMyIAAplwYFThUngDB5xT4DoE.png" style="width:49%; height:auto;" />
+</div>
+
+
+### 命令的工作方式
+命令以普通 Markdown 文件的形式定义，可以存放在三个位置：
+
+- 项目命令：存放在你项目的 .cursor/commands(.claude/commands/) 目录中
+- 全局命令：存放在你主目录下的 ~/.cursor/commands 目录中
+- 团队命令：由团队管理员在 Cursor Dashboard 中创建，并会自动对所有团队成员可用
+- 当你在聊天输入框中键入 / 时，Cursor 会自动检测并显示来自所有位置的可用命令，让你在整个工作流中都能即时调用它们。
+
+详细文档请查看
+- [https://cursor.com/cn/docs/context/commands](https://cursor.com/cn/docs/context/commands)
+- [https://cursor.com/cn/docs/context/commands](https://cursor.com/cn/docs/context/commands)
 
 ## 何时用 commands
 
@@ -49,26 +77,6 @@ date: 2026-02-09T23:34:00+08:00
 
 指令本身保持简短，变化的部分保持显式，而技能依然负责最难的部分：定义、约定，以及 "什么才算完成".
 
-## 设计原则
-
-1. **命令表达意图，不堆偏好**
-   - 偏好与底线放 `rules` / `CLAUDE.md`；命令负责启动流程。
-2. **让输出包含可验收产物**
-   - 例如：变更列表、风险点、回滚方案、验证步骤。
-3. **保持幂等与可中断**
-   - 允许分步执行，避免"一键做完但不可控".
-
-## 最小示例（思路）
-
-- `/plan`：把当前需求输出为可执行计划（含文件/函数/验收项）。
-- `/review`：对当前改动做审查（关注安全、边界、可维护性）。
-- `/release-notes`：根据提交/变更生成发布说明。
-
-上面的命令无论叫什么，建议都包含一组稳定的输出字段：
-
-- **变更清单**（影响面）
-- **风险点**与**回滚方案**
-- **验证步骤**与**验收标准**
 
 ## 技能 vs. 指令：都可组合，但并不相同
 
@@ -90,11 +98,8 @@ date: 2026-02-09T23:34:00+08:00
 
 当你更新一个技能时，你是在改变行为本身，而不需要记住新的 "咒语"。当你更新一个指令时，你改变的则是咒语本身。
 
-## 常见坑
 
-- **把 rules / 系统提示词做成命令**：规则不该靠手动触发。
-- **命令过度细碎**：过多命令会增加记忆负担，优先做"高频入口".
-- **命令不包含验收标准**：会变成"看起来很忙"的输出.
+
 
 ## 与其他模块的边界
 

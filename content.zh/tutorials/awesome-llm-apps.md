@@ -1,6 +1,7 @@
 ---
 title: 精选 LLM 应用集
 weight: 1
+bookHidden: true
 ---
 
 
@@ -266,3 +267,5 @@ pip install -r requirements.txt
 ```
 
 **按照每个项目** `**README.md**` **中的说明** 进行应用配置和运行。
+
+项目来源：[https://www.zdoc.app/zh/Shubhamsaboo/awesome-llm-apps](https://www.zdoc.app/zh/Shubhamsaboo/awesome-llm-apps)

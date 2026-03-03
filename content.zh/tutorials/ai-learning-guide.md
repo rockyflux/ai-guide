@@ -2,6 +2,7 @@
 title: 🎓 系统学习 AI 知识资源指南
 weight: 2
 date: 2026-02-09T14:57:00+08:00
+bookHidden: true
 ---
 
 # 🎓 系统学习 AI 知识资源指南
@@ -126,6 +127,10 @@ date: 2026-02-09T14:57:00+08:00
 | --- | --- | --- | --- |
 | LLM 课程 | [LLM Course](https://github.com/mlabonne/llm-course) | 40k+ | 从入门到微调完整路线 |
 | AI 专家路线图 | [AI Expert Roadmap](https://github.com/AMAI-GmbH/AI-Expert-Roadmap) | 29k+ | 可视化学习路径 |
+| LLM / RL 原理图解 | [LLM-RL-Visualized](https://github.com/changyeyu/LLM-RL-Visualized) | 3.6k+ | 100+ 原创大模型 / 强化学习原理图与技术图谱 |
+| 大模型工程化实战 | [llm-action](https://github.com/liguodongiot/llm-action) | 23k+ | 大模型工程化、训练/推理/对齐/压缩等实战笔记与教程 |
+| 大模型基础教材 | [Foundations-of-LLMs](https://github.com/ZJU-LLMs/Foundations-of-LLMs) | 16k+ | 系统讲解 LLM 基础与前沿技术（教材/讲义 + Paper List） |
+| 开源大模型食用指南 | [self-llm](https://github.com/datawhalechina/self-llm) | 28k+ | 面向国内学习者：部署、微调与应用的实操教程（含多硬件平台） |
 | 动手学深度学习 | [d2l-ai](https://github.com/d2l-ai/d2l-zh) | 55k+ | 李沐团队，中文友好 |
 | 机器学习路线图 | [ML Roadmap](https://github.com/mrdbourke/machine-learning-roadmap) | 10k+ | 2024 学习指南 |
 | Prompt 工程指南 | [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide) | 50k+ | 最全 Prompt 教程 |
