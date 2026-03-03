@@ -11,9 +11,9 @@ noTocArea: true
 
 |序号|工具名称|类型/分类|定位|核心功能摘要|仓库解读|
 |---|---|---|---|---|---|
-|1|[🔥CC Switch](/ai-programming/cc-switch/)|桌面应用 · 环境配置|Claude Code / Codex / Gemini CLI 跨平台桌面辅助工具|一键切换 API 供应商配置；统一管理 MCP 服务器；Skills 扫描与 Prompts 预设；内置 API 测速；Tauri2+React+Rust|[Zread](https://zread.ai/farion1231/cc-switch) |
-|2|[🔥CLIProxyAPI (CPA)](/ai-programming/cpa/)|服务端网关 · 统一 API|将多种 CLI 封装为 OpenAI/Gemini/Claude/Codex 兼容 API 代理|本地/多账户 CLI 统一通过兼容客户端/SDK 调用；多账户轮询与故障转移；流式/非流式、多模态、函数调用支持|[Zread](https://zread.ai/router-for-me/CLIProxyAPI)|
-|3|[🔥ZCF (Zero Config)](/ai-programming/zcf/)|CLI 工具 · 环境配置|零配置一键搞定 Claude Code & Codex 环境|中英文双语配置；内置智能代理系统；个性化 AI 助手配置|[Zread](https://zread.ai/UfoMiao/zcf)|
+|1|[🔥CC Switch]({{< relref "ai-programming/cc-switch" >}})|桌面应用 · 环境配置|Claude Code / Codex / Gemini CLI 跨平台桌面辅助工具|一键切换 API 供应商配置；统一管理 MCP 服务器；Skills 扫描与 Prompts 预设；内置 API 测速；Tauri2+React+Rust|[Zread](https://zread.ai/farion1231/cc-switch) |
+|2|[🔥CLIProxyAPI (CPA)]({{< relref "ai-programming/cpa" >}})|服务端网关 · 统一 API|将多种 CLI 封装为 OpenAI/Gemini/Claude/Codex 兼容 API 代理|本地/多账户 CLI 统一通过兼容客户端/SDK 调用；多账户轮询与故障转移；流式/非流式、多模态、函数调用支持|[Zread](https://zread.ai/router-for-me/CLIProxyAPI)|
+|3|[🔥ZCF (Zero Config)]({{< relref "ai-programming/zcf" >}})|CLI 工具 · 环境配置|零配置一键搞定 Claude Code & Codex 环境|中英文双语配置；内置智能代理系统；个性化 AI 助手配置|[Zread](https://zread.ai/UfoMiao/zcf)|
 |4|[🔥Claude Code Router](https://github.com/musistudio/claude-code-router)|服务端网关 · 路由策略|自定义请求路径与模型分发的强大路由器|将 Claude Code 请求路由到不同模型；自定义任意请求逻辑；无需 Anthropic 账号；支持 DeepSeek/Gemini/Groq 等|[Zread](https://zread.ai/musistudio/claude-code-router) |
 |5|[Any Code](https://github.com/anyme123/Any-code)|桌面应用 · 编程助手|专业 AI 代码助手桌面应用，多引擎现代化 GUI 工具包|支持 Claude Code CLI / OpenAI Codex / Gemini CLI 一键切换；翻译、成本追踪、MCP 管理、Hooks、上下文压缩|[Zread](https://zread.ai/anyme123/Any-code) |
 |6|[ccNexus](https://github.com/lich0821/ccNexus)|服务端网关 · 流量转发|专为 Claude Code 设计的智能端点轮换代理|多端点管理；自动故障转移与无感切换；兼容 OpenAI 与 Gemini API 格式|[Zread](https://zread.ai/lich0821/ccNexus)|

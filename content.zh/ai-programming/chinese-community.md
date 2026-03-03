@@ -10,8 +10,8 @@ noTocArea: true
 
 **站内教程**
 
-- [系统学习 AI 知识资源指南](/tutorials/ai-learning-guide/) — 🔥精选各大 AI 公司和顶尖机构的官方学习资源，帮助你从入门到精通系统掌握 AI 知识。
-- [精选 LLM 应用集](/tutorials/awesome-llm-apps/) — LLM 开源应用生态应用集合
+- [系统学习 AI 知识资源指南]({{< relref "tutorials/ai-learning-guide" >}}) — 🔥精选各大 AI 公司和顶尖机构的官方学习资源，帮助你从入门到精通系统掌握 AI 知识。
+- [精选 LLM 应用集]({{< relref "tutorials/awesome-llm-apps" >}}) — LLM 开源应用生态应用集合
 
 **通用 / 开源社区**
 
@@ -29,7 +29,7 @@ noTocArea: true
 - [Claude 中文网](https://www.claude-cn.org/) — Claude 资讯与交流
 - [学习 Cursor，拥抱 AI 编程](https://cursor101.com/zh) — Cursor 中文教程
 - [OpenCode 中文实战课](https://learnopencode.com/) — OpenCode 实战课程
-- [awesome-openclaw](/open-source-community/awesome-openclaw) — OpenClaw 生态精选
+- [awesome-openclaw]({{< relref "open-source-community/awesome-openclaw" >}}) — OpenClaw 生态精选
 - [OpenClaw 真正能做事的 AI](https://clawd.org.cn/) — OpenClaw 社区站
 - [Book of Kiro 入门](https://kiro-community.github.io/book-of-kiro/kiro-intro/) — Kiro 入门指南
 - [n8n 中文](https://n8n.akashio.com/about) — 自动化工作流 n8n 相关

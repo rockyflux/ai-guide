@@ -24,7 +24,7 @@ CC 即 Claude Code，以下均简称 CC
 
 `npm list -g`
 
-![image](/images/practices-one/1.jpeg)
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/1.jpeg)
 
 
 列出的包里有以上两包名即表示安装成功，这两个包为基础
@@ -90,7 +90,7 @@ Oh My Claude Code 是一套构建在 Claude Code 之上的插件和智能体集�
 
 `/oh-my-claudecode:omc-setup`
 
-![image](/images/practices-one/2.png)
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/2.png)
 
 关于五大执行模式可以自行找相关资料
 
@@ -139,7 +139,7 @@ Oh My OpenCode 是 OpenCode 的**增强插件**（类似 Oh My Zsh 对于 Zsh �
 
 `opencode`
 
-![image](/images/practices-one/3.png)
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/3.png)
 
 
 ### 安装 [Oh My OpenCode](https://github.com/code-yeongyu/oh-my-opencode)
@@ -174,7 +174,7 @@ CliProxyAPI 简称 CPA
 
 下载放到本地后复制 config.example.yaml 重全名为 config.yaml 文件，修改配置以使 WEB 管理界面可使用，只改截图涉及的地方即可
 
-![image](/images/practices-one/4.png)
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/4.png)
 
 
 
@@ -192,16 +192,16 @@ CliProxyAPI 简称 CPA
 
 输入帐密即可管理各 AI 提供商
 
-![API密钥](/images/practices-one/5.png)
+![API密钥](https://rockyflux.github.io/ai-guide/images/practices-one/5.png)
 
 
-![AI提供商](/images/practices-one/6.png)
+![AI提供商](https://rockyflux.github.io/ai-guide/images/practices-one/6.png)
 
 
-![AI提供商认证文件](/images/practices-one/7.png)
+![AI提供商认证文件](https://rockyflux.github.io/ai-guide/images/practices-one/7.png)
 
 
-![可用模型列表](/images/practices-one/8.png)
+![可用模型列表](https://rockyflux.github.io/ai-guide/images/practices-one/8.png)
 
 
 由于 iFlow 并发限制 1，可以考虑开多个号，如上图 3 个号可实现 3 的并发
@@ -210,7 +210,7 @@ CliProxyAPI 简称 CPA
 
 向外提供 OpenAI 兼容的模型接口  
 输入 [http://localhost:8317](http://localhost:8317) 即可知接口格式，这儿即来到大家熟悉的接口区了  
-![image](/images/practices-one/9.png)  
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/9.png)  
 没错，在 CC-Switch、Claude Code Router 等软件中需要的三要素
 
 -   接口
@@ -233,11 +233,11 @@ CliProxyAPI 简称 CPA
 
 ## 软件截图
 
-![软件截图](/images/practices-one/10.png)]
+![软件截图](https://rockyflux.github.io/ai-guide/images/practices-one/10.png)]
  
 ## 为 Claude Code 提供 CPA 转接模型
  
-![image](/images/practices-one/11.png)]
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/11.png)]
 
 
 直接贴关键配置：
@@ -263,12 +263,12 @@ CliProxyAPI 简称 CPA
 
 如上配置即可将 iFlow 内的高级模型转给 Claude Code 命令行使用
 
-![image](/images/practices-one/17.png "image")
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/17.png "image")
 
 ## 干货之如何使 Claude Code 支持 AnyRouter
 
 其实上面的配置里已经写了，重点在两行，社区有很多大佬也讲过，这儿再截图贴出来下  
-![image](/images/practices-one/18.png)  
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/18.png)  
 AnyRouter 时的关键配置如下：
 
 ```
@@ -315,7 +315,7 @@ Claude Code Router 简称 CCR，是一个开源工具，是 Claude Code 的扩�
 
 在命令行终端输入 ccr --help 查看命令行文档
 
-![image](/images/practices-one/13.png)]
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/13.png)]
 
 命令行参数：
 
@@ -332,7 +332,7 @@ Claude Code Router 简称 CCR，是一个开源工具，是 Claude Code 的扩�
 使用 ccr ui 可用于启动网页版配置，启动后在浏览器  
 [http://127.0.0.1:3456](http://127.0.0.1:3456) 可行配置
 
-![image](/images/practices-one/12.png)]
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/12.png)]
 
 
 可以看到可以你中有我，我中有你，把 CLI 的代理也接入到这边来以实现非多模态模型下的图片识别
@@ -365,7 +365,7 @@ OpenCode 原生支持的官方大模型列表可以通过命令：
 
 查询，结果如下 \[仅截部分\]，查这个东西主要为下面的军团使用，有些官模是免费的：
 
-![image](/images/practices-one/14.png)]
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/14.png)]
 
 ## OpenCode 里的正规军白嫖
 
@@ -374,11 +374,11 @@ OpenCode 原生支持的官方大模型列表可以通过命令：
 
 `opencode auth login`
 
-![image](/images/practices-one/20.png)]
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/20.png)]
 
 
 
-![image](/images/practices-one/21.png)]
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/21.png)]
 
 
 以上实现 iFlow 的白嫖，当然官方白嫖拿不到 iFlow 官方命令行拥有的 glm4.7、minimax m2.1 等国内顶级模型，并发也有限制  
@@ -395,13 +395,13 @@ OpenCode 原生支持的官方大模型列表可以通过命令：
 
 `"plugin": [     "./opencode-anthropic-auth-proxy.mjs"   ]`
 
-![image](/images/practices-one/15.png)]
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/15.png)]
 
 ### 替换 AI 提供商 \[实际是替换官方 A 除的 URL\]
 
 `"provider": { "anthropic": {       "name": "nickname",       "options": {         "baseURL": "{中转站URL}/v1"       }     } }`
 
-![image](/images/practices-one/16.png)
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/16.png)
 
 确保已经在配置目录安装了以下依赖，进入～/.config/opencode 安装
 
@@ -411,7 +411,7 @@ OpenCode 原生支持的官方大模型列表可以通过命令：
 
 像上面贴 iFlow 等的官方 key 一样，如法炮制贴 Anthropic 的 KEY
 
-![image](/images/practices-one/19.png)
+![image](https://rockyflux.github.io/ai-guide/images/practices-one/19.png)
 
 经过上述处理后，基本能完成 AnyRouter 等三方 CC 平台的 OpenCode 接入
 

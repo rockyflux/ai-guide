@@ -21,7 +21,7 @@ noTocArea: true
 
 ## 2\. 案例介绍（CCG）
 
-更完整的原理与实践细节，可以参考专门页面：[CCG 多模型协作工作流详解](/ai-programming/ccg/)。
+更完整的原理与实践细节，可以参考专门页面：[CCG 多模型协作工作流详解]({{< relref "ai-programming/ccg" >}})。
 
 ```bash
 npx ccg-workflow
@@ -47,7 +47,7 @@ npx ccg-workflow
 
 |#|名称|项目链接|描述/关键词|仓库解读|
 |---|---|---|---|---|
-|1|[🔥ccg-workflow](/ai-programming/ccg)|[fengshao1227/ccg-workflow](https://github.com/fengshao1227/ccg-workflow)|多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17+ 个命令|[Zread](https://zread.ai/fengshao1227/ccg-workflow)|
+|1|[🔥ccg-workflow]({{< relref "ai-programming/ccg" >}})|[fengshao1227/ccg-workflow](https://github.com/fengshao1227/ccg-workflow)|多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17+ 个命令|[Zread](https://zread.ai/fengshao1227/ccg-workflow)|
 |2|[🔥claude-code-workflow](https://github.com/catlog22/Claude-Code-Workflow)|[catlog22/Claude-Code-Workflow](https://github.com/catlog22/Claude-Code-Workflow)|CCW 提供了基于 Team 架构 v2 和 Skill 工作流系统 的完整工作流体系，覆盖从快速原型到完整团队编排的软件开发全生命周期。|[Zread](https://zread.ai/catlog22/Claude-Code-Workflow)|
 |3|[Claude Code Bridge (ccb)](https://github.com/bfly123/claude_code_bridge)|[bfly123/claude_code_bridge](https://github.com/bfly123/claude_code_bridge)|终端分屏多模型协作工具 Claude · Codex · Gemini · OpenCode · Droid 轻量异步通讯，交互皆可见，模型皆可控|[Zread](https://zread.ai/bfly123/claude_code_bridge)|
 |4|[cca (Claude Code AutoFlow)](https://github.com/bfly123/claude_code_autoflow)|[bfly123/claude_code_autoflow](https://github.com/bfly123/claude_code_autoflow)|Claude Code AutoFlow (cca) 是一个专为 AI 辅助开发设计的结构化任务自动化工作流系统|[Zread](https://zread.ai/bfly123/claude_code_autoflow)|

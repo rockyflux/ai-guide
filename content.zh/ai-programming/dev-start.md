@@ -100,6 +100,6 @@ winget install --id Microsoft.Powershell --source winget
 
 环境就绪后，可继续：
 
-- [AI 编程环境配置与增强工具集](/ai-programming/env-and-tools/) — CC Switch、CPA、ZCF 等一站式配置
-- [ZCF 零配置 Claude Code](/ai-programming/zcf/) — 一键搞定 Claude Code & Codex 环境
-- [AI 编程工具汇总](/ai-programming/vb-code-tool/) — 各类 AI 编程工具对比与选型
+- [AI 编程环境配置与增强工具集]({{< relref "ai-programming/env-and-tools" >}}) — CC Switch、CPA、ZCF 等一站式配置
+- [ZCF 零配置 Claude Code]({{< relref "ai-programming/zcf" >}}) — 一键搞定 Claude Code & Codex 环境
+- [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}}) — 各类 AI 编程工具对比与选型
