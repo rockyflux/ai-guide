@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = "https://rockyflux.github.io/ai-guide/"
 defaultContentLanguage = 'zh'
 defaultContentLanguageInSubdir = false
 theme = 'hugo-book'
