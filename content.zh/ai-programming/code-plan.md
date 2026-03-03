@@ -6,7 +6,38 @@ noTocArea: true
 bookHidden: true
 ---
 
-### 国内主流大模型 Code Plan
+
+## Claude Code 中转站套餐
+
+> 官方账号的订阅费用较高，个人开发者通常难以长期承担；同时在部分地区访问存在网络与合规风险，账号也可能因使用方式不当被限制。
+>
+> 因此，一些用户会选择第三方 API 中转服务。此类服务通常按月收费，价格区间大约在 20–50 元/月，提供一定额度的请求量以及相对稳定的 API 访问能力，更适合个人开发者或小团队做测试与轻量开发使用。
+>
+> **Claude Code API 来源方式**：① 官方 API 账号直接接入；② 购买 Claude Max 订阅后由服务方聚合分发；③ 非官方接口（如逆向 IDE 内部 API 等）。
+
+### 中转站服务参考
+
+| 服务 / 渠道 | 特点 | 链接 |
+|---|---|---|
+| **foxcode** | 35块/1亿token额度 | https://foxcode.rjj.cc/ |
+| **YesCode** | 价格实惠，多种套餐选择，适合不同需求 | https://co.yes.vg/ |
+| **IKunCode** | 按量使用 | https://api.ikuncode.cc/ |
+| **rightCodes** | 价格实惠，多种套餐选择，适合不同需求 | https://www.right.codes/ |
+| **packyapi** | 稳定 API 访问，价格合理，适合个人开发者 | https://www.packyapi.com/ |
+| **AICodeMirror** | 低至¥259/月 | https://www.aicodemirror.com/ |
+| **AIGetCode** | 低至¥399/4周 | https://www.aigocode.com/ |
+| **APIs.you** | API 目录聚合，多服务可选 | https://apis.you/catalog |
+| **淘宝** | 搜索「claude code」可找到各类中转套餐 | [淘宝搜索](https://s.taobao.com/search?q=claude+code) |
+| **闲鱼** | 二手/代购 Claude Code 账号或中转服务 | [闲鱼搜索](https://www.goofish.com/search?q=claude+code) |
+
+{{% hint warning %}}
+中转服务依赖第三方实现，稳定性与合规性需自行评估；电商平台交易请谨慎核实卖家与套餐详情。
+{{% /hint %}}
+
+
+<br>
+
+## 国内主流大模型 Code Plan
 以下是国内主流大模型 Code Plan 完整列表，含价格、特点、官方链接（截至2026年2月28日）：
 
 ### 一、云厂商聚合型 Code Plan
@@ -35,32 +66,17 @@ bookHidden: true
 | **华为云码道** | 公测 | 免费 | 盘古模型，行业定制（电力/港口），AIGC代码占比高 | https://www.huaweicloud.com/product/codearts/ai.html |
 
 
-## Claude Code 中转站套餐
-
-> 官方账号的订阅费用较高，个人开发者通常难以长期承担；同时在部分地区访问存在网络与合规风险，账号也可能因使用方式不当被限制。
->
-> 因此，一些用户会选择第三方 API 中转服务。此类服务通常按月收费，价格区间大约在 20–50 元/月，提供一定额度的请求量以及相对稳定的 API 访问能力，更适合个人开发者或小团队做测试与轻量开发使用。
->
-> **Claude Code API 来源方式**：① 官方 API 账号直接接入；② 购买 Claude Max 订阅后由服务方聚合分发；③ 非官方接口（如逆向 IDE 内部 API 等）。
-
-### 中转站服务参考
-
-| 服务 / 渠道 | 特点 | 链接 |
-|---|---|---|
-| **foxcode** | 35块/1亿token额度 | https://foxcode.rjj.cc/ |
-| **rightCodes** | 价格实惠，多种套餐选择，适合不同需求 | https://www.right.codes/ |
-| **packyapi** | 稳定 API 访问，价格合理，适合个人开发者 | https://www.packyapi.com/ |
-| **AICodeMirror** | 低至¥259/月 | https://www.aicodemirror.com/ |
-| **AIGetCode** | 低至¥399/4周 | https://www.aigocode.com/ |
-| **APIs.you** | API 目录聚合，多服务可选 | https://apis.you/catalog |
-| **淘宝** | 搜索「claude code」可找到各类中转套餐 | [淘宝搜索](https://s.taobao.com/search?q=claude+code) |
-| **闲鱼** | 二手/代购 Claude Code 账号或中转服务 | [闲鱼搜索](https://www.goofish.com/search?q=claude+code) |
-
-{{% hint warning %}}
-中转服务依赖第三方实现，稳定性与合规性需自行评估；电商平台交易请谨慎核实卖家与套餐详情。
-{{% /hint %}}
+### 三、国内AI代码工具
+| 工具名称 | 开发商 | 个人版价格  | 官方链接 |
+|---|---|---|---|
+| **Trae** | 字节跳动 | Pro $15/人/月起 | https://www.trae.ai |
+| **Qoder** | 阿里云 | Pro $10/月起  | https://qoder.com |
+| **CodeBuddy** | 腾讯云 | 专业版58元/月  | https://www.codebuddy.cn |
+| **CodeArts 码道** | 华为云 | 公测免费 | https://www.huaweicloud.com/product/codearts/ai.html |
 
 
+
+<br>
 
 ## 国外主流AI编程订阅产品
 

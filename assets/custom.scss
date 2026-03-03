@@ -73,7 +73,9 @@ body.no-toc-area .container {
 .book-article.markdown h2,
 .book-article.markdown h3 {
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
+  padding: 0.4rem;
+
 }
 
 .book-page .book-article.markdown h2,
