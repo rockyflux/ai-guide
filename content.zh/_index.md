@@ -12,7 +12,7 @@ noTocArea: true
 ## ✅ 先从这里开始（3 条主线）
 
 - **[AI 编程（把代码写出来）](/ai-programming/)**：从选模型与工具、搭环境到建立协作工作流，目标是「稳定产出代码」。
-- **[AI 智能体（让 AI 真的能干活）](/Agent/)**：把 Prompt/Rules/Skills/MCP/Hooks/Subagents 串成可执行系统，让 AI 不止会聊。
+- **[AI 智能体（让 AI 真的能干活）](/agent/)**：把 Prompt/Rules/Skills/MCP/Hooks/Subagents 串成可执行系统，让 AI 不止会聊。
 - **[项目实践（跑通端到端闭环）](/project-practice/)**：给新手一条从 0 到 1 的项目路径，包含真实案例与可复用 SOP。
 
 ## 🧭 我现在要做什么？（按任务直达）
@@ -39,16 +39,16 @@ noTocArea: true
 - **把“对话”变成“可交付”（工作流与协作）**
   - [Coding Agent 协作实践](/ai-programming/ccg-workflow/)：多 Agent 分工协作，把任务闭环做出来。
   - [CCG 多模型协作开发](/ai-programming/ccg/)：同一项目里按任务类型切换不同模型。
-  - [Agent 工作流](/Agent/workflow/)：如何把规则、工具、子 Agent 编排成可执行流程。
+  - [Agent 工作流](/agent/workflow/)：如何把规则、工具、子 Agent 编排成可执行流程。
 
 - **理解智能体关键模块（Rules / Skills / MCP / Hooks / Subagents）**
-  - [Rules（底线与约束）](/Agent/rules/)：告诉 AI 什么永远要遵守、什么永远禁止。
-  - [Skills（SOP 与流程）](/Agent/skills/)：把“怎么做”固化成可复用流程。
-  - [MCP（让 AI 能读文件/跑命令/调接口）](/Agent/mcp/)：把 AI 接入现实工具能力。
-  - [Hooks（关键节点自动守卫）](/Agent/hooks/)：在提交、格式化等环节自动检查与兜底。
-  - [Subagents（角色与权限隔离）](/Agent/subagents/)：把不同角色分开，提高并行与安全性。
-  - [Commands（显式入口）](/Agent/commands/)：给常用动作一个固定“指令入口”。
-  - [Output styles（输出模板）](/Agent/output-styles/)：让输出更统一、可复用（报告/清单/规范等）。
+  - [Rules（底线与约束）](/agent/rules/)：告诉 AI 什么永远要遵守、什么永远禁止。
+  - [Skills（SOP 与流程）](/agent/skills/)：把“怎么做”固化成可复用流程。
+  - [MCP（让 AI 能读文件/跑命令/调接口）](/agent/mcp/)：把 AI 接入现实工具能力。
+  - [Hooks（关键节点自动守卫）](/agent/hooks/)：在提交、格式化等环节自动检查与兜底。
+  - [Subagents（角色与权限隔离）](/agent/subagents/)：把不同角色分开，提高并行与安全性。
+  - [Commands（显式入口）](/agent/commands/)：给常用动作一个固定“指令入口”。
+  - [Output styles（输出模板）](/agent/output-styles/)：让输出更统一、可复用（报告/清单/规范等）。
 
 - **新手端到端路径（按顺序跑通一次闭环）**
   - [新手端到端项目实战路径](/project-practice/newbie-end-to-end-project/)：从选型到做完第一个小项目，把整条链路串起来。
@@ -84,15 +84,15 @@ noTocArea: true
 - [LiveBench AI 排行榜](/large-models/model-comparison/)：能力维度对比。
 - [LLM 评测基准与榜单汇总](/large-models/leaderboard/)：榜单解读与参考方式。
 
-### 3) [AI 智能体（概念与机制）](/Agent/)
+### 3) [AI 智能体（概念与机制）](/agent/)
 
-- [Rules](/Agent/rules/)：底线与约束。
-- [Skills](/Agent/skills/)：SOP 与流程。
-- [MCP](/Agent/mcp/)：接入工具能力。
-- [Hooks](/Agent/hooks/)：关键点自动守卫。
-- [Subagents](/Agent/subagents/)：角色/权限隔离。
-- [Commands](/Agent/commands/)：显式入口。
-- [Output styles](/Agent/output-styles/)：输出模板。
+- [Rules](/agent/rules/)：底线与约束。
+- [Skills](/agent/skills/)：SOP 与流程。
+- [MCP](/agent/mcp/)：接入工具能力。
+- [Hooks](/agent/hooks/)：关键点自动守卫。
+- [Subagents](/agent/subagents/)：角色/权限隔离。
+- [Commands](/agent/commands/)：显式入口。
+- [Output styles](/agent/output-styles/)：输出模板。
 
 ### 4) [项目实践（端到端闭环）](/project-practice/)
 

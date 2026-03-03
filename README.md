@@ -13,7 +13,7 @@
 ### 3 条主线（建议从这里开始）
 
 - **[AI 编程（把代码写出来）](https://rockyflux.github.io/ai-guide/ai-programming/)**：选模型与工具、搭环境到建立协作工作流，目标是稳定产出代码。
-- **[AI 智能体（让 AI 真的能干活）](https://rockyflux.github.io/ai-guide/Agent/)**：把 Prompt / Rules / Skills / MCP / Hooks / Subagents 串成可执行系统。
+- **[AI 智能体（让 AI 真的能干活）](https://rockyflux.github.io/ai-guide/agent/)**：把 Prompt / Rules / Skills / MCP / Hooks / Subagents 串成可执行系统。
 - **[项目实践（跑通端到端闭环）](https://rockyflux.github.io/ai-guide/project-practice/)**：从 0 到 1 的项目路径，包含案例与可复用 SOP。
 
 ### 我现在要做什么？（按任务直达）
@@ -40,16 +40,16 @@
 - **把“对话”变成“可交付”（工作流与协作）**
   - [Coding Agent 协作实践](https://rockyflux.github.io/ai-guide/ai-programming/ccg-workflow/)
   - [CCG 多模型协作开发](https://rockyflux.github.io/ai-guide/ai-programming/ccg/)
-  - [Agent 工作流](https://rockyflux.github.io/ai-guide/Agent/workflow/)
+  - [Agent 工作流](https://rockyflux.github.io/ai-guide/agent/workflow/)
 
 - **理解智能体关键模块（Rules / Skills / MCP / Hooks / Subagents）**
-  - [Rules](https://rockyflux.github.io/ai-guide/Agent/rules/)
-  - [Skills](https://rockyflux.github.io/ai-guide/Agent/skills/)
-  - [MCP](https://rockyflux.github.io/ai-guide/Agent/mcp/)
-  - [Hooks](https://rockyflux.github.io/ai-guide/Agent/hooks/)
-  - [Subagents](https://rockyflux.github.io/ai-guide/Agent/subagents/)
-  - [Commands](https://rockyflux.github.io/ai-guide/Agent/commands/)
-  - [Output styles](https://rockyflux.github.io/ai-guide/Agent/output-styles/)
+  - [Rules](https://rockyflux.github.io/ai-guide/agent/rules/)
+  - [Skills](https://rockyflux.github.io/ai-guide/agent/skills/)
+  - [MCP](https://rockyflux.github.io/ai-guide/agent/mcp/)
+  - [Hooks](https://rockyflux.github.io/ai-guide/agent/hooks/)
+  - [Subagents](https://rockyflux.github.io/ai-guide/agent/subagents/)
+  - [Commands](https://rockyflux.github.io/ai-guide/agent/commands/)
+  - [Output styles](https://rockyflux.github.io/ai-guide/agent/output-styles/)
 
 - **新手端到端路径**
   - [新手端到端项目实战路径](https://rockyflux.github.io/ai-guide/project-practice/newbie-end-to-end-project/)
