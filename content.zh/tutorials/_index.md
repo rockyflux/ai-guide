@@ -1,5 +1,5 @@
 ---
-title: 学习教程
+title: 📚 系统学习
 weight: 9
 bookCollapseSection: false
 bookFlatSection: true

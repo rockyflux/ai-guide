@@ -1,5 +1,5 @@
 ---
-title: CC-Switch 可视化配置
+title: CC-Switch：可视化配置管理
 weight: 17
 bookToc: false
 noTocArea: true

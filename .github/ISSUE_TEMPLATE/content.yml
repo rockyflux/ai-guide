@@ -1,0 +1,31 @@
+name: 内容勘误 / 质量改进
+description: 错别字、表述不清、步骤缺失、链接失效等
+labels: [content]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 相关页面 URL
+      placeholder: https://rockyflux.github.io/ai-guide/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 哪里有问题？为什么会误导？
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议修改（可直接给出替换文案/步骤）
+
+  - type: checkbox
+    id: willing
+    attributes:
+      label: 你是否愿意提交 PR？
+      options:
+        - label: 我愿意提交 PR

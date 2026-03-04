@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions（提问/讨论）
+    url: https://github.com/rockyflux/ai-guide/discussions
+    about: 不确定是 bug 还是建议？或需要开放式讨论，优先发到 Discussions。

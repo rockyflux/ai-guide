@@ -1,0 +1,32 @@
+name: 新增主题 / 功能建议
+description: 新章节、结构优化、工具/模型补充建议等
+labels: [enhancement]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目标与场景
+      description: 你希望解决什么问题？适用什么读者/场景？
+    validations:
+      required: true
+
+  - type: textarea
+    id: outline
+    attributes:
+      label: 建议内容大纲
+      placeholder: |
+        - 章节 1：...
+        - 章节 2：...
+        - ...
+
+  - type: textarea
+    id: refs
+    attributes:
+      label: 参考资料/链接（可选）
+
+  - type: checkbox
+    id: willing
+    attributes:
+      label: 你是否愿意提交 PR？
+      options:
+        - label: 我愿意提交 PR

@@ -1,0 +1,55 @@
+name: Bug 报告（站点/构建/内容显示）
+description: 站点显示异常、构建失败、链接错误等问题
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！为了更快定位问题，请尽量提供可复现信息。
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 问题范围
+      options:
+        - 站点渲染/样式
+        - Hugo 构建/CI
+        - 链接/跳转
+        - 其它
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: 相关页面 URL（如有）
+      placeholder: https://rockyflux.github.io/ai-guide/...
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 现象描述
+      description: 发生了什么？期望是什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志/截图（如有）
+      description: 贴出报错日志、Actions 链接、控制台截图等
+
+  - type: input
+    id: env
+    attributes:
+      label: 环境信息
+      placeholder: OS / Hugo 版本 / 浏览器 等

@@ -1,5 +1,5 @@
 ---
-title: AI Code Plan
+title: AI Coding Plan
 weight: 10
 bookToc: false
 noTocArea: true
@@ -9,17 +9,19 @@ bookHidden: true
 
 ## Claude Code 中转站套餐
 
-> 官方账号的订阅费用较高，个人开发者通常难以长期承担；同时在部分地区访问存在网络与合规风险，账号也可能因使用方式不当被限制。
+> 官方账号的订阅费用较高，个人开发者通常难以长期承担；同时在部分地区访问存在网络与合规风险，账号也可能因使用方式不当被限制，Claude 最经典的就是封 ip，检测到节点不行就封，这公司本就不让中国人用的。
 >
-> 因此，一些用户会选择第三方 API 中转服务。此类服务通常按月收费，价格区间大约在 20–50 元/月，提供一定额度的请求量以及相对稳定的 API 访问能力，更适合个人开发者或小团队做测试与轻量开发使用。
+> 因此，一些用户会选择第三方 API 中转服务。此类服务通常按月收费，价格区间大约在 20–200 元/月，提供一定额度的请求量以及相对稳定的 API 访问能力，更适合个人开发者或小团队做测试与轻量开发使用。
 >
 > **Claude Code API 来源方式**：① 官方 API 账号直接接入；② 购买 Claude Max 订阅后由服务方聚合分发；③ 非官方接口（如逆向 IDE 内部 API 等）。
+
 
 ### 中转站服务参考
 
 | 服务 / 渠道 | 特点 | 链接 |
 |---|---|---|
 | **foxcode** | 35块/1亿token额度 | https://foxcode.rjj.cc/ |
+| **88code** | 价格实惠，多种套餐选择，适合不同需求 | https://www.88code.ai/ |
 | **YesCode** | 价格实惠，多种套餐选择，适合不同需求 | https://co.yes.vg/ |
 | **IKunCode** | 按量使用 | https://api.ikuncode.cc/ |
 | **rightCodes** | 价格实惠，多种套餐选择，适合不同需求 | https://www.right.codes/ |
@@ -35,12 +37,17 @@ bookHidden: true
 {{% /hint %}}
 
 
+## 国内企业集中采购策略
+-  cursor 或者 copilot 的团队版
+-  Claude Code Max/OpenRouter API分发Key
+
+
 <br>
 
-## 国内主流大模型 Code Plan
-以下是国内主流大模型 Code Plan 完整列表，含价格、特点、官方链接（截至2026年2月28日）：
+## 国内主流大模型 Coding Plan
+以下是国内主流大模型 Coding Plan 完整列表，含价格、特点、官方链接（截至2026年2月28日）：
 
-### 一、云厂商聚合型 Code Plan
+### 一、云厂商聚合型 Coding Plan
 | 平台 | 套餐 | 价格（首月/续费） | 核心特点 | 官方链接 |
 |---|---|---|---|---|
 | **阿里云百炼** | Lite | 7.9元/40元/月 | 多模型聚合（Qwen3.5/GLM-5/Kimi/MiniMax），兼容OpenAI/Anthropic协议，月18,000次请求 | https://www.aliyun.com/benefit/ai/aistar |
@@ -53,7 +60,7 @@ bookHidden: true
 | | Pro | 49.9元/月 | 月60,000次请求，团队协作友好 | https://docs.infini-ai.com/gen-studio/coding-plan/ |
 
 
-### 二、大模型厂商原厂 Code Plan
+### 二、大模型厂商原厂 Coding Plan
 | 平台 | 套餐 | 价格（月/包季） | 核心特点 | 官方链接 |
 |---|---|---|---|---|
 | **智谱AI** | Lite | 49元/44元 | GLM-5/4.7，MCP/联网/视觉，SWE-Bench领先 | https://www.bigmodel.cn/glm-coding |

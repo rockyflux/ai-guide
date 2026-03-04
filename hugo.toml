@@ -8,7 +8,7 @@ theme = 'hugo-book'
     languageName = '中文'
     languageCode = 'zh-CN'
     weight = 1
-    title = 'AI编程实践教程'
+    title = 'AI 编程全链路指南'
     contentDir = 'content.zh'
     [languages.zh.params]
       BookRepo = 'https://github.com/rockyflux/ai-guide'

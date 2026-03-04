@@ -1,5 +1,5 @@
 ---
-title: AI 编程工作流等工具集
+title: 多Agent协作：工作流实践
 weight: 20
 bookToc: false
 noTocArea: true

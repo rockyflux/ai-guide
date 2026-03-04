@@ -27,7 +27,7 @@ noTocArea: true
 - **选工具与订阅（IDE/CLI/套餐对照）**
   - [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}})：IDE/插件/Agent 工具怎么选（Cursor、Aider、Codex 等）。
   - [AI CLI 工具横评]({{< relref "ai-programming/code-cli" >}})：命令行流派（Claude Code / Codex CLI / Gemini CLI 等）适用场景对比。
-  - [AI Code Plan 订阅选型]({{< relref "ai-programming/code-plan" >}})：套餐怎么选更划算、怎么买更省心。
+  - [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}})：套餐怎么选更划算、怎么买更省心。
 
 - **搭环境 & 接模型（尽量一次配置到位）**
   - [开发环境准备]({{< relref "ai-programming/dev-start" >}})：PowerShell 7、VS Code、Node/Python/Git 等一站式准备。
@@ -51,7 +51,7 @@ noTocArea: true
   - [Output styles（输出模板）]({{< relref "agent/output-styles" >}})：让输出更统一、可复用（报告/清单/规范等）。
 
 - **新手端到端路径（按顺序跑通一次闭环）**
-  - [新手端到端项目实战路径]({{< relref "project-practice/newbie-end-to-end-project" >}})：从选型到做完第一个小项目，把整条链路串起来。
+  - [新手端到端项目实战路径]({{< relref "project-practice/practices-two" >}})：从选型到做完第一个小项目，把整条链路串起来。
 
 - **项目级最佳实践 / 可复用 SOP**
   - [Claude Code 最佳实践]({{< relref "project-practice/best-practices" >}})：Plan Mode、验证标准、上下文管理等项目级打法。
@@ -96,7 +96,7 @@ noTocArea: true
 
 ### 4) [项目实践（端到端闭环）]({{< relref "project-practice/_index" >}})
 
-- [新手端到端项目实战路径]({{< relref "project-practice/newbie-end-to-end-project" >}})：跑通第一次闭环。
+- [新手端到端项目实战路径]({{< relref "project-practice/practices-two" >}})：跑通第一次闭环。
 - [从一个具体案例开始]({{< relref "project-practice/practices-one" >}})：用小项目练拆解与协作。
 - [Claude Code 最佳实践]({{< relref "project-practice/best-practices" >}})：项目级打法。
 - [Everything Claude Code 总览]({{< relref "project-practice/everything-claude-code" >}})：生产级配置集合。

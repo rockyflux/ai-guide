@@ -1,5 +1,5 @@
 ---
-title: AI编程
+title: 🧰 AI 编程实战
 weight: 2
 bookToc: false
 noTocArea: true
@@ -15,7 +15,7 @@ bookFlatSection: true
 
 ### 1. 选模型和工具
 - [AI 编程模型选型]({{< relref "ai-programming/models" >}}) — 🔥能力、价格与适用场景
-- [AI Code Plan 订阅选型]({{< relref "ai-programming/code-plan" >}}) — 国内/海外 Code Plan 与中转套餐对照
+- [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) — 国内/海外 Coding Plan 与中转套餐对照
 - [AI 产品推荐]({{< relref "large-models/ai-product" >}}) — 桌面 Agent、API 客户端、翻译等实用产品
 - [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}}) — 免费模型、Token 优化与多端复用
 - [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}}) — IDE/插件/Agent 工具对比（Aider、Cursor、Codex 等）
@@ -40,5 +40,5 @@ bookFlatSection: true
 ### 4. 进阶学习与参考资料
 - [Vibe Coding 指南]({{< relref "ai-programming/vibe-coding" >}}) — 规划驱动、AI 结对编程方法论
 - [Everything Claude Code]({{< relref "project-practice/everything-claude-code" >}}) — 生产级 Claude Code 配置集合
-- [AI 编程中文社区与课程]({{< relref "ai-programming/chinese-community" >}}) — Claude Code、Cursor、OpenCode 等中文学习资源
+- [AI 编程中文社区与课程]({{< relref "ai-programming/ai-resources-guide" >}}) — Claude Code、Cursor、OpenCode 等中文学习资源
 - [上下文设计哲学]({{< relref "large-models/context-scarcity-rag-memory-skills" >}}) — 上下文稀缺性、RAG、Memory、Skills 的设计思路

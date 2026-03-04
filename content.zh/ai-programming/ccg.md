@@ -8,7 +8,7 @@ bookHidden: true
 
 ## CCG - Claude + Codex + Gemini Multi-Model Collaboration
 
-Claude Code 编排 Codex + Gemini 的多模型协作开发系统。前端任务路由至 Gemini，后端任务路由至 Codex，Claude 负责编排决策和代码审核。
+多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17+ 个命令 [Github](https://github.com/fengshao1227/ccg-workflow)
 
 ![images.png](https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ1vFpixuFLRyfnPOzt0N3w0GJXQrXmgACDyIAAplwYFRsqFcVrVXFKjoE.png)
 

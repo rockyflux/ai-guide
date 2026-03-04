@@ -1,5 +1,5 @@
 ---
-title: 大模型选型
+title: 🧠 选模型
 weight: 1
 bookCollapseSection: false
 bookFlatSection: true

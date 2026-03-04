@@ -1,5 +1,5 @@
 ---
-title: 开源和社区
+title: 🌱 参与开源
 weight: 3
 bookCollapseSection: false
 bookFlatSection: true

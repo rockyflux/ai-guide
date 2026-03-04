@@ -1,12 +1,12 @@
 ---
-title: AI CLI 工具横评
+title: AI CLI 工具：对比与选型
 weight: 11
 bookToc: false
 noTocArea: true
 bookHidden: true
 ---
 
-## AI CLI 工具横评
+## 	⚡ AI CLI 工具：对比与选型
 
 这 6 款 AI CLI 大致分三条路：**开源自由**（OpenCode / Snow CLI）、**商业协作**（Claude Code）、**生态绑定**（Codex CLI / Gemini CLI）；想“零成本随便用”则看 **iFlow CLI**。
 

@@ -1,5 +1,5 @@
 ---
-title: AI 智能体（Agent）
+title: 🤖 智能体实战（Agent）
 weight: 3
 bookCollapseSection: false
 bookFlatSection: true

@@ -1,12 +1,12 @@
 ---
-title: AI 编程社区和资讯
+title: AI 资源与工具指南
 weight: 31
 date: 2026-02-09T15:43:00+08:00
 bookToc: false
 noTocArea: true
 ---
 
-## AI 相关知识资源
+## AI 资源与工具指南
 
 **站内教程**
 
@@ -14,7 +14,7 @@ noTocArea: true
 - [精选 LLM 应用集]({{< relref "tutorials/awesome-llm-apps" >}}) — LLM 开源应用生态应用集合
 
 **通用 / 开源社区**
-
+- [天池AI学习空间](https://tianchi.aliyun.com/course) 阿里云官方-天池AI学习空间
 - [Datawhale](https://www.datawhale.cn/) — 开源学习社区
 - [从零开始构建智能体](https://datawhalechina.github.io/hello-agents/) — 智能体入门与实战
 - [检索增强生成 (RAG) 技术全栈指南](https://datawhalechina.github.io/all-in-rag) — RAG 全栈学习路径

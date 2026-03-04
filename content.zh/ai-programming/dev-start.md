@@ -1,5 +1,5 @@
 ---
-title: 开发环境准备
+title: 开发环境：一站式准备
 weight: 14
 bookToc: true
 bookHidden: true
@@ -64,7 +64,7 @@ winget install --id Microsoft.Powershell --source winget
 
 ### 7. 网络与代理
 
-使用Google或Chatgpt等需要科学上网工具。
+使用Google或ChatGPT等需要科学上网工具。
 - [客户端：Clash Verge](https://www.clashverge.dev/install.html)
 - [客户端 FlClash：适用于 Clash 的多功能图形用户界面。](https://flclash.cc/download.html) 
 - [最优的科学上网方案](https://github.com/githubvpn007/v2rayNvpn)

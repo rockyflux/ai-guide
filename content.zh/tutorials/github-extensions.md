@@ -23,27 +23,3 @@ bookHidden: true
 | 快速“读懂/总结”项目（中文） | [zread.ai](https://zread.ai) | 生成概览、模块说明、术语解释 | 输入仓库链接/项目名 |
 
 
-## GitMCP（Cursor）配置示例
-
-```json
-{
-  "mcpServers": {
-    "REPO Docs": {
-      "url": "https://gitmcp.io/OWNER/REPO"
-    }
-  }
-}
-```
-
-## 注意事项
-
-| 提示 | 说明 |
-| --- | --- |
-| 别只看 Star | 更可靠的是最近提交、Issue/PR 响应速度、Release 频率 |
-| 在线编辑有边界 | 需要跑测试/装依赖/调试复杂环境的改动，建议本地 |
-| 权限与隐私 | 接入第三方工具前，先确认是否涉及私有仓库与合规要求 |
-
-## 延伸阅读
-
-- [MCP 入门与资源]({{< ref "Agent/mcp" >}})
-

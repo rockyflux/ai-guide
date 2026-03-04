@@ -7,7 +7,7 @@ bookHidden: true
 ---
 
 ### ZCF - Zero-Config Code Flow
-> 零配置,一键搞定 Claude Code & Codex 环境设置 - 支持中英文双语配置、智能代理系统和个性化 AI 助手
+> ZCF（Zero-Config Code Flow）是一个面向专业开发者的 CLI 工具，目标是在几分钟内完成 Claude Code 与 Codex 的端到端环境初始化。通过 npx zcf 可以一站式完成配置目录创建、API/代理接入、MCP 服务接入、工作流导入、输出风格与记忆配置，以及常用工具安装
 
 ![images.png](https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ1mBpiwABzWxuj6V3Q2VYiSiabQY7occAAkAgAAKZcFhUyC3eiq_vtxA6BA.png)
 

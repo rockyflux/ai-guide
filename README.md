@@ -1,14 +1,21 @@
-# AI 编程指南（AI 编程实践教程）
+# AI 编程实践指南：从模型选型到项目闭环
 
-> 一个使用 Hugo + Hugo Book 主题构建的中文文档站，内容以「任务导向」组织：选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用项目实践跑通闭环。
+> 面向「有一定经验的开发者」的任务导向中文文档：选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用项目实践跑通闭环，让 AI 编程从“能用”变成“稳定产出”。
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-在线访问-blue)](https://rockyflux.github.io/ai-guide/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Hugo](https://img.shields.io/badge/Hugo-0.148.0-ff4088)](https://gohugo.io/)
+[![Deploy](https://github.com/rockyflux/ai-guide/actions/workflows/hugo.yml/badge.svg)](https://github.com/rockyflux/ai-guide/actions/workflows/hugo.yml)
 
-### 在线阅读
+![AI Guide](static/images/index/feed.png)
 
-- **站点入口**：[`https://rockyflux.github.io/ai-guide/`](https://rockyflux.github.io/ai-guide/)
+**在线阅读**：[`https://rockyflux.github.io/ai-guide/`](https://rockyflux.github.io/ai-guide/)
+
+**从这里开始**：
+
+- **想快速上手 AI 编程**：从 [AI 编程（把代码写出来）](https://rockyflux.github.io/ai-guide/ai-programming/) 开始
+- **想把 Agent 做成可执行系统**：从 [AI 智能体（让 AI 真的能干活）](https://rockyflux.github.io/ai-guide/agent/) 开始
+- **想跑通端到端闭环**：从 [项目实践（跑通端到端闭环）](https://rockyflux.github.io/ai-guide/project-practice/) 开始
 
 ### 3 条主线（建议从这里开始）
 
@@ -28,7 +35,7 @@
 - **选工具与订阅（IDE/CLI/套餐对照）**
   - [AI 编程工具汇总](https://rockyflux.github.io/ai-guide/ai-programming/vb-code-tool/)
   - [AI CLI 工具横评](https://rockyflux.github.io/ai-guide/ai-programming/code-cli/)
-  - [AI Code Plan 订阅选型](https://rockyflux.github.io/ai-guide/ai-programming/code-plan/)
+  - [AI Coding Plan 订阅选型](https://rockyflux.github.io/ai-guide/ai-programming/coding-plan/)
 
 - **搭环境 & 接模型（尽量一次配置到位）**
   - [开发环境准备](https://rockyflux.github.io/ai-guide/ai-programming/dev-start/)
@@ -93,6 +100,8 @@ hugo server
 - **建议流程**：Fork → 新分支 → 修改 → 提交 → PR。
 - **问题反馈**：用 GitHub Issues 提交问题与建议：[`https://github.com/rockyflux/ai-guide/issues`](https://github.com/rockyflux/ai-guide/issues)
 - **参与讨论**：GitHub Discussions：[`https://github.com/rockyflux/ai-guide/discussions`](https://github.com/rockyflux/ai-guide/discussions)
+
+更详细的贡献说明见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ### 许可证
 

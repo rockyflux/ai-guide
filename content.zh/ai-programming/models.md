@@ -1,5 +1,5 @@
 ---
-title: AI 模型选型
+title: AI 模型：选型指南
 weight: 2
 bookToc: false
 noTocArea: true
@@ -25,8 +25,8 @@ noTocArea: true
 ### 4. 成本评估
 
 - [大模型价格]({{< relref "large-models/model-price" >}}) — 国内外模型 API 价格参考（元/1M Tokens）
-- [AI Code Plan 订阅选型]({{< relref "ai-programming/code-plan" >}}) — 国内云厂商/原厂 Code Plan、Claude Code 中转站、国外编程订阅产品价格对照
+- [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) — 国内云厂商/原厂 Coding Plan、Claude Code 中转站、国外编程订阅产品价格对照
 - [Roo Code Evals](https://roocode.com/evals) — 通过对最前沿大模型执行数百项多语言任务评测，给出每个模型在性能与成本之间的权衡指标
 
 
-> 实践经验参考：有预算可优先考虑 Claude Opus / Codex，预算有限可优先评估国产 Code Plan，零预算可以从 CPA 方案入手。
+> 实践经验参考：有预算可优先考虑 Claude Opus / Codex，预算有限可优先评估国产 Coding Plan，零预算可以从 CPA 方案入手。

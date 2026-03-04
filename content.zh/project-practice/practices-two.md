@@ -23,7 +23,7 @@ bookFlatSection: true
 在真正开始做项目之前，先解决一个前置问题：「我用什么模型 / 工具栈」：
 
 - [AI 编程模型选型]({{< relref "ai-programming/models" >}}) — 不同模型（Claude、Gemini、GPT、国产模型等）的能力、价格与适用场景。
-- [AI Code Plan 订阅选型]({{< relref "ai-programming/code-plan" >}}) — 国内 / 海外 Code Plan 与中转套餐对照，帮你决定怎么买最划算。
+- [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) — 国内 / 海外 Coding Plan 与中转套餐对照，帮你决定怎么买最划算。
 - [AI 产品推荐]({{< relref "large-models/ai-product" >}}) — 桌面 Agent、API 客户端、翻译与辅助工具选型。
 - [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}}) — 最大化免费额度、控制 Token、合理分配「重模型 / 轻模型」。
 - [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}}) — IDE / 插件 / Agent 工具横向对比（Cursor、Claude Code、OpenCode 等）。
@@ -74,7 +74,7 @@ bookFlatSection: true
 
 - [Vibe Coding 指南]({{< relref "ai-programming/vibe-coding" >}}) — 以「规划驱动 + AI 结对编程」为核心的方法论，帮你形成稳定的项目节奏。
 - [Everything Claude Code（进阶视角）]({{< relref "project-practice/everything-claude-code" >}}) — 从项目实战回头看这套配置仓库，挑真正适合自己团队 / 个人习惯的部分落地。
-- [AI 编程中文社区与课程]({{< relref "ai-programming/chinese-community" >}}) — 找到同路人，了解 Claude Code、Cursor、OpenCode 等相关中文资源与课程。
+- [AI 编程中文社区与课程]({{< relref "ai-programming/ai-resources-guide" >}}) — 找到同路人，了解 Claude Code、Cursor、OpenCode 等相关中文资源与课程。
 - [上下文设计哲学]({{< relref "large-models/context-scarcity-rag-memory-skills" >}}) — 从更高一层理解「上下文稀缺性、RAG、Memory、Skills」这些设计理念，指导你下一步做更复杂的系统（Agent、知识库、自动化工作流等）。
 
 最终目标是：从「能在 AI 帮助下完成一个小项目」，升级为「有一套自己的项目方法论和工具栈，能稳定复用在多个项目上」。
