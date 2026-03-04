@@ -22,7 +22,7 @@ noTocArea: true
 
 ### 2. 配置 Rules、Skills、Subagents、MCP、Commands
 
-![Cursor 配置](/images/index/cursor-config.png)
+![Cursor 配置](https://rockyflux.github.io/ai-guide/images/index/cursor-config.png)
 
 - **Rules**：规则库，新建`User Rule` 复制下方的`Cursor简洁版`保存。
 
@@ -75,7 +75,7 @@ npx zcf
 
 接下来会根据项目上下文自动创建 `CLAUDE.md`。
 
-![初始化](/images/index/project-init.png)
+![初始化](https://rockyflux.github.io/ai-guide/images/index/project-init.png)
 
 ### 5. 常用指令
 
