@@ -1,4 +1,4 @@
-baseURL = "https://rockyflux.github.io/ai-guide/"
+baseURL = "https://github.com/rockyflux/ai-guide/"
 defaultContentLanguage = 'zh'
 defaultContentLanguageInSubdir = false
 theme = 'hugo-book'
@@ -8,7 +8,7 @@ theme = 'hugo-book'
     languageName = '中文'
     languageCode = 'zh-CN'
     weight = 1
-    title = 'AI 编程全链路指南'
+    title = 'AI 编程实践指南'
     contentDir = 'content.zh'
     [languages.zh.params]
       BookRepo = 'https://github.com/rockyflux/ai-guide'
@@ -54,3 +54,9 @@ theme = 'hugo-book'
   BookMenuCollapse = true
   BookSectionCollapse = true
   BookMenuFold = true
+
+[menu]
+  [[menu.after]]
+    name = '🔗 GitHub 仓库'
+    url = 'https://github.com/rockyflux/ai-guide'
+    weight = 10
