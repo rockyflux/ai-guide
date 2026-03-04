@@ -32,14 +32,15 @@ noTocArea: true
 
 - **MCP**：请导入到mcp.json
 
-| 工具 | 核心职能 | 使用场景 |
-|------|----------|----------|
-| **Context7** | 上下文感知与代码库分析 | R1 阶段分析代码结构、跨文件依赖 |
-| **Sequential Thinking** | 深度逻辑推理与决策链 | I 阶段方案推演、复杂 Bug 根因分析 |
-| **Time Server** | 精确时间基准 | **强制**：所有日志必须使用，禁止猜测 |
-| **DeepWiki** | 外部知识检索 | 查询最新文档、补充知识缺口 |
-| **Browser Control** | Web 前端交互与调试 | UI 开发、实时调试、E2E 测试、截图录屏 |
-| **Memory** | 持久化知识图谱 | R1 recall 历史经验，R2 commit 新经验 |
+| 工具                        | 核心职能 | 使用场景 |
+|---------------------------|----------|----------|
+| **Context7**          | 上下文感知与代码库分析 | R1 阶段分析代码结构、跨文件依赖 |
+| **[mcp-feedback-enhanced](https://github.com/Minidoracat/mcp-feedback-enhanced)** | 反馈增强工具 | 本地定制化的反馈增强工具，支持长时间等待反馈、图片上传和断网重连功能。 |
+| **Sequential Thinking**   | 深度逻辑推理与决策链 | I 阶段方案推演、复杂 Bug 根因分析 |
+| **Time Server**           | 精确时间基准 | **强制**：所有日志必须使用，禁止猜测 |
+| **DeepWiki**              | 外部知识检索 | 查询最新文档、补充知识缺口 |
+| **Browser Control**       | Web 前端交互与调试 | UI 开发、实时调试、E2E 测试、截图录屏 |
+| **Memory**                | 持久化知识图谱 | R1 recall 历史经验，R2 commit 新经验 |
 
 - **其他**
 
