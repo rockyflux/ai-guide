@@ -7,7 +7,7 @@
 [![Hugo](https://img.shields.io/badge/Hugo-0.148.0-ff4088)](https://gohugo.io/)
 [![Deploy](https://github.com/rockyflux/ai-guide/actions/workflows/hugo.yml/badge.svg)](https://github.com/rockyflux/ai-guide/actions/workflows/hugo.yml)
 
-![AI Guide](static/images/index/feed.png)
+![AI Guide](static/images/index/flow.png)
 
 **在线阅读**：[`https://rockyflux.github.io/ai-guide/`](https://rockyflux.github.io/ai-guide/)
 
@@ -23,57 +23,45 @@
 - **[AI 智能体（让 AI 真的能干活）](https://rockyflux.github.io/ai-guide/agent/)**：把 Prompt / Rules / Skills / MCP / Hooks / Subagents 串成可执行系统。
 - **[项目实践（跑通端到端闭环）](https://rockyflux.github.io/ai-guide/project-practice/)**：从 0 到 1 的项目路径，包含案例与可复用 SOP。
 
-### 我现在要做什么？（按任务直达）
+### 我现在要做什么？（超精简版）
 
-- **选模型 / 选引擎（能力、榜单与价格）**
+- **快速入门（先跑通一遍）**
+  - [AI 编程学习路径](https://rockyflux.github.io/ai-guide/ai-programming/guide/)
+  - [Cursor 实战上手指南](https://rockyflux.github.io/ai-guide/project-practice/cursor/)
+  - [新手端到端项目路径](https://rockyflux.github.io/ai-guide/project-practice/practices-two/)
+
+- **选模型和花多少钱**
   - [AI 编程模型选型](https://rockyflux.github.io/ai-guide/ai-programming/models/)
   - [2026 年主流大模型盘点](https://rockyflux.github.io/ai-guide/large-models/models-2026/)
-  - [LiveBench AI 排行榜](https://rockyflux.github.io/ai-guide/large-models/model-comparison/)
-  - [LLM 评测基准与榜单汇总](https://rockyflux.github.io/ai-guide/large-models/leaderboard/)
-  - [大模型价格](https://rockyflux.github.io/ai-guide/large-models/model-price/)
+  - [LLM 排行榜与评测基准](https://rockyflux.github.io/ai-guide/large-models/Leaderboard/)
+  - [大模型价格与成本对比](https://rockyflux.github.io/ai-guide/large-models/model-price/)
+  - [AI 产品推荐](https://rockyflux.github.io/ai-guide/large-models/ai-product/)
+  - [AI 编程省钱之道](https://rockyflux.github.io/ai-guide/ai-programming/ai-coding-save-money/)
 
-- **选工具与订阅（IDE/CLI/套餐对照）**
+- **配环境和选工具**
+  - [开发环境准备](https://rockyflux.github.io/ai-guide/ai-programming/dev-start/)
+  - [环境配置与增强工具集](https://rockyflux.github.io/ai-guide/ai-programming/env-and-tools/)
+  - [ZCF 零配置 Claude Code](https://rockyflux.github.io/ai-guide/ai-programming/zcf/)
+  - [CC-Switch 可视化配置](https://rockyflux.github.io/ai-guide/ai-programming/cc-switch/)
+  - [CLI 代理 API（CPA）](https://rockyflux.github.io/ai-guide/ai-programming/cpa/)
   - [AI 编程工具汇总](https://rockyflux.github.io/ai-guide/ai-programming/vb-code-tool/)
   - [AI CLI 工具横评](https://rockyflux.github.io/ai-guide/ai-programming/code-cli/)
   - [AI Coding Plan 订阅选型](https://rockyflux.github.io/ai-guide/ai-programming/coding-plan/)
 
-- **搭环境 & 接模型（尽量一次配置到位）**
-  - [开发环境准备](https://rockyflux.github.io/ai-guide/ai-programming/dev-start/)
-  - [AI 编程环境配置与增强工具集](https://rockyflux.github.io/ai-guide/ai-programming/env-and-tools/)
-  - [ZCF 零配置 Claude Code](https://rockyflux.github.io/ai-guide/ai-programming/zcf/)
-  - [CC-Switch 可视化配置](https://rockyflux.github.io/ai-guide/ai-programming/cc-switch/)
-  - [CLI 代理 API（CPA）](https://rockyflux.github.io/ai-guide/ai-programming/cpa/)
-
-- **把“对话”变成“可交付”（工作流与协作）**
+- **建工作流 / 做智能体**
   - [Coding Agent 协作实践](https://rockyflux.github.io/ai-guide/ai-programming/ccg-workflow/)
   - [CCG 多模型协作开发](https://rockyflux.github.io/ai-guide/ai-programming/ccg/)
   - [Agent 工作流](https://rockyflux.github.io/ai-guide/agent/workflow/)
-
-- **理解智能体关键模块（Rules / Skills / MCP / Hooks / Subagents）**
-  - [Rules](https://rockyflux.github.io/ai-guide/agent/rules/)
-  - [Skills](https://rockyflux.github.io/ai-guide/agent/skills/)
-  - [MCP](https://rockyflux.github.io/ai-guide/agent/mcp/)
-  - [Hooks](https://rockyflux.github.io/ai-guide/agent/hooks/)
-  - [Subagents](https://rockyflux.github.io/ai-guide/agent/subagents/)
-  - [Commands](https://rockyflux.github.io/ai-guide/agent/commands/)
-  - [Output styles](https://rockyflux.github.io/ai-guide/agent/output-styles/)
-
-- **新手端到端路径**
-  - [新手端到端项目实战路径](https://rockyflux.github.io/ai-guide/project-practice/newbie-end-to-end-project/)
-
-- **项目级最佳实践 / 可复用 SOP**
+  - [Rules / Skills / MCP / Hooks / Subagents / Commands / Output styles](https://rockyflux.github.io/ai-guide/agent/)
   - [Claude Code 最佳实践](https://rockyflux.github.io/ai-guide/project-practice/best-practices/)
   - [Everything Claude Code 总览](https://rockyflux.github.io/ai-guide/project-practice/everything-claude-code/)
 
-- **控成本（少花钱也能稳定产出）**
-  - [AI 编程省钱之道](https://rockyflux.github.io/ai-guide/ai-programming/ai-coding-save-money/)
-
-- **补基础教程与资源**
+- **进阶学习与资源**
+  - [Vibe Coding 指南](https://rockyflux.github.io/ai-guide/ai-programming/vibe-coding/)
+  - [AI 编程中文社区与课程](https://rockyflux.github.io/ai-guide/ai-programming/ai-resources-guide/)
   - [AI 学习路线与资料](https://rockyflux.github.io/ai-guide/tutorials/ai-learning-guide/)
   - [GitHub 周边工具速查](https://rockyflux.github.io/ai-guide/tutorials/github-extensions/)
   - [Awesome LLM Apps](https://rockyflux.github.io/ai-guide/tutorials/awesome-llm-apps/)
-
-- **开源与社区资源**
   - [Awesome OpenClaw](https://rockyflux.github.io/ai-guide/open-source-community/awesome-openclaw/)
 
 ### 本地开发
@@ -100,8 +88,6 @@ hugo server
 - **建议流程**：Fork → 新分支 → 修改 → 提交 → PR。
 - **问题反馈**：用 GitHub Issues 提交问题与建议：[`https://github.com/rockyflux/ai-guide/issues`](https://github.com/rockyflux/ai-guide/issues)
 - **参与讨论**：GitHub Discussions：[`https://github.com/rockyflux/ai-guide/discussions`](https://github.com/rockyflux/ai-guide/discussions)
-
-更详细的贡献说明见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ### 许可证
 
