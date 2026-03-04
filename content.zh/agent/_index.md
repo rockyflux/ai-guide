@@ -63,10 +63,19 @@ bookFlatSection: true
 
 ## 入口页
 
-- [Prompt](Prompt.md)
-- [Rules](rules.md)
-- [Commands 指令系统](commands.md)
-- [Agent Skills](skills.md)
-- [Model Context Protocol (MCP)](mcp.md)
-- [Hook](hooks.md)
-- [Subagents](subagents.md)
+### 主线导航
+
+- [Agent 工作流总览]({{< relref "agent/workflow" >}})
+- [Rules 规则体系]({{< relref "agent/rules" >}})
+- [Commands 指令系统]({{< relref "agent/commands" >}})
+- [Agent Skills 能力模块]({{< relref "agent/skills" >}})
+- [Model Context Protocol (MCP)]({{< relref "agent/mcp" >}})
+- [Hooks 钩子与守卫]({{< relref "agent/hooks" >}})
+- [Subagents 子 Agent 分工]({{< relref "agent/subagents" >}})
+- [输出风格与格式]({{< relref "agent/output-styles" >}})
+
+### 补充入口
+
+- [Prompt 模板与示例]({{< relref "agent/Prompt" >}})
+- [精选 Agent Skills 列表]({{< relref "agent/awesome-agent-skills" >}})
+- [精选 MCP Servers 列表]({{< relref "agent/awesome-mcp-servers" >}})
