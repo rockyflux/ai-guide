@@ -29,7 +29,7 @@ noTocArea: true
 - [Claude 中文网](https://www.claude-cn.org/) — Claude 资讯与交流
 - [学习 Cursor，拥抱 AI 编程](https://cursor101.com/zh) — Cursor 中文教程
 - [OpenCode 中文实战课](https://learnopencode.com/) — OpenCode 实战课程
-- [awesome-openclaw]({{< relref "open-source-community/awesome-openclaw" >}}) — OpenClaw 生态精选
+- [🔥awesome-openclaw]({{< relref "open-source-community/awesome-openclaw" >}}) — OpenClaw 生态精选
 - [OpenClaw 真正能做事的 AI](https://clawd.org.cn/) — OpenClaw 社区站
 - [Book of Kiro 入门](https://kiro-community.github.io/book-of-kiro/kiro-intro/) — Kiro 入门指南
 - [n8n 中文](https://n8n.akashio.com/about) — 自动化工作流 n8n 相关

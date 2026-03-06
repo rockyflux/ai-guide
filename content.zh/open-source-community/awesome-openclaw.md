@@ -2,102 +2,45 @@
 title: Awesome OpenClaw 使用案例
 weight: 40
 date: 2026-02-09T14:43:00+08:00
+bookToc: false
+noTocArea: true
 bookHidden: true
 ---
+## OpenClaw 生态分支（选型速览）
 
-<div align="center">
+| 项目 | 实现 | 核心卖点 / 定位 | 资源占用 / 部署体验 | 已知问题 / 注意点 | 仓库 |
+| --- | --- | --- | --- | --- | --- |
+| OpenClaw（原版） | Node.js | 功能最全；Gateway 面板很强 | 跑起来内存 \(> 1GB\)；多挂 Agent 风扇起飞 | 体量臃肿（几十万行），对机器/环境要求高 | https://github.com/openclaw/openclaw |
+| Nanobot | Python | 清爽版；港大团队；适合学源码/看架构 | 核心代码几千行；不需要 Node 环境；可 Zeabur 一键部署 | 相比原版功能取舍更多（偏学习/精简） | https://github.com/HKUDS/nanobot |
+| ZeroClaw | Rust | 极省资源、很稳；适合软路由/旧 VPS 常驻 | 实测内存 ~5MB；无 GC 卡顿；启动快 | 生态/功能面可能不如原版“满血” | https://github.com/zeroclaw-labs/zeroclaw |
+| PicoClaw | Go | 单文件二进制；上手省事；可在 Termux 跑 | 免 Docker；直接丢进去就能跑 | 偶发死锁，跑久了可能静默卡死，需要手动重启 | https://github.com/sipeed/picoclaw |
+| NanoClaw | TypeScript（Node.js） | 多 Agent/多渠道；以“容器隔离”做安全；支持 Agent Swarms | `claude` 里跑 `/setup` 一键装；默认 Docker（macOS 可选 Apple Container）；依赖 Node.js 20+ | **平台限制**：README 标注 macOS/Linux；容器运行时是硬依赖（Windows 需 WSL2 才好用） | https://github.com/qwibitai/nanoclaw |
+| IronClaw | Rust（WASM 沙箱） | 主打隐私与安全；WASM capability sandbox + prompt injection 防护；支持 MCP | 需要 PostgreSQL 15+ + pgvector；提供 Windows MSI/脚本、brew、shell installer；本地数据库持久化 | **依赖偏重**：要装并维护 Postgres/pgvector；首次 onboarding 需要完成 DB/认证初始化 | https://github.com/nearai/ironclaw |
+| TinyClaw | Node.js（TS + Shell） | 多 Agent/多团队/多渠道；带 Web Portal（TinyOffice）+ TUI 可视化 | one-line install/Release 包/源码安装；依赖 Node 18+、tmux、jq、bash；可跑 TinyOffice（Next.js） | **环境要求**：偏类 Unix；Windows 通常走 WSL2；多渠道/多 Provider 时 token/权限配置工作量不小 | https://github.com/TinyAGI/tinyclaw |
+| Claw-Empire | TypeScript（Node.js） | 像素风“虚拟公司”编排器；多 Provider（CLI/OAuth/API）统一看板；Agent 在隔离 git worktree 协作 | 本地优先：SQLite 持久化；对接 Claude Code/Codex/Gemini 等需要各自 CLI 或凭证 | **注意**：会创建/管理多个 worktree；多 Provider 场景下 OAuth/token 配置与权限边界要自己把控 | https://github.com/GreenSheep01201/claw-empire |
+| awesome-openclaw-skills | Markdown（列表仓库） | OpenClaw Skills “精选目录”（从 ClawHub 注册表过滤分类，方便找技能） | 无运行时；技能安装走 `npx clawhub@latest install <skill-slug>` 或手动复制到 `~/.openclaw/skills/` | **安全提示**：仓库“筛选但不审计”，技能来源可能随时变更；安装前建议自行审查源码/风险 | https://github.com/VoltAgent/awesome-openclaw-skills |
+| Agent-Browser | Rust CLI + Node.js | 给 AI 用的浏览器自动化 CLI；`snapshot` 输出可引用的无障碍树（refs）以降 token | npm 全局装 `agent-browser`（推荐）并下载 Chromium；Linux 可用 `--with-deps` 安装系统依赖 | **注意**：`npx` 走 Node 转发会明显变慢；首次需要下载 Chromium；Linux 需补齐浏览器依赖 | https://github.com/vercel-labs/agent-browser |
+| OpenFang | Rust（单二进制） | Agent OS；内置“Hands”做 24/7 定时自主工作；带 Dashboard | 安装脚本（macOS/Linux `curl … \| sh`；Windows `irm … \| iex`）；`openfang init` / `openfang start`；Dashboard 默认 `http://localhost:4200` | **版本迭代快**：官方声明首个公开版本、可能有不稳定/破坏性变更；生产建议 pin commit | https://github.com/RightNow-AI/openfang |
+| NullClaw | Zig（静态小二进制） | 极小/极低内存；多 Provider + 多渠道；支持 MCP；强调可移植与沙箱 | 可 brew 安装；源码构建要求 Zig 0.15.2（版本锁得很死）；提供 Windows PowerShell 配置 PATH 的示例 | **生态与兼容性**：仍在快速演进期；构建/升级对 Zig 版本敏感；部分能力依赖宿主环境（如 openssl 等） | https://github.com/nullclaw/nullclaw |
+| CoPaw | Python + TypeScript（AgentScope） | 协作个人智能体工作站；多渠道（钉钉/飞书/QQ/Discord/iMessage）；支持本地模型（llama.cpp/MLX） | 支持 `pip` / `curl` / Docker 部署；Web 控制台默认 `http://127.0.0.1:8088/` | **偏“工作站”定位**：部署形态多但依赖也多（Python 3.10+ 等）；多渠道接入需要分别配置 bot/token | https://copaw.bot/zh/ |
+| AionUi | TypeScript + Electron | 本地开源 24/7 Cowork 桌面端；内置 Agent（零配置）+ 多 CLI Agent 统一管理（含 OpenClaw/Claude Code/Codex 等） | 跨平台；支持 WebUI 远程访问、Telegram/Lark/钉钉通道；支持 Cron 定时自动化 | **注意**：多 Agent/多通道能力强但配置面会变大；远程访问建议做好权限与网络边界 | https://github.com/iOfficeAI/AionUi |
+| LobsterAI（有道） | Electron + React + TypeScript（含 Python） | 7×24 全场景 AI Agent；强调“一句话→自动规划→交付多模态结果”；本地与安全（目录边界授权、工具审批、可追溯） | 提供下载；支持长时记忆、定时任务、技能；支持 Telegram/Discord 等 IM 远程控制 | **注意**：支持本地/沙箱执行与权限审批；Windows 包含内置 Python 运行时（按需安装依赖） | https://github.com/netease-youdao/LobsterAI |
 
-<strong>探索人们如何真正在日常生活中使用 OpenClaw（前身为 ClawdBot、MoltBot）。</strong>
-<br />
+## 一句话建议
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Use Cases](https://img.shields.io/badge/usecases-29-blue?style=flat-square)
-![Last Update](https://img.shields.io/github/last-commit/hesamsheikh/awesome-openclaw-usecases?label=Last%20Update&style=flat-square)
-</div>
+- **想体验“满血完整功能”**：优先上 **原版 OpenClaw**。
+- **机器配置差/想软路由或旧 VPS 常驻**：优先 **ZeroClaw**；想要“单文件随便丢就跑”可选 **PicoClaw**（注意死锁坑）。
+- **想研究 Agent 架构底层源码**：优先看 **Nanobot**（更轻、更好读）。
 
-# Awesome OpenClaw 使用案例
+## 相关链接
 
-> **⚠️ 翻译版本声明**  
-> 本文档为社区翻译的中文版本，可能存在滞后。如发现内容过时，请查阅[原始英文 README](README.md) 获取最新信息。
-
----
-
-解决 OpenClaw 普及的瓶颈：不是 ~~技能~~，而是找到 **它能改善你生活的方式**。这是 [OpenClaw](https://github.com/openclaw/openclaw) 的社区真实使用案例合集。
-
-> **警告：** 此处引用的 OpenClaw 技能和第三方依赖可能存在严重的安全漏洞。许多用例链接到社区构建的技能、插件和外部仓库，这些**未经本列表维护者审核**。请始终审查技能源代码，检查请求的权限，并避免硬编码 API 密钥或凭证。您对自己的安全负全部责任。
-
-## 社交媒体
-
-| 名称 | 描述 |
-|------|-------------|
-| [每日 Reddit 摘要](usecases/daily-reddit-digest.md) | 根据你的偏好，总结你喜爱的 subreddit 的精选摘要。 |
-| [每日 YouTube 摘要](usecases/daily-youtube-digest.md) | 获取你关注频道的每日新视频摘要 —— 不错过你关注创作者的任何内容。 |
-| [X 账号分析](usecases/x-account-analysis.md) | 获取你的 X 账号的定性分析。|
-| [多源科技新闻摘要](usecases/multi-source-tech-news-digest.md) | 自动聚合和分发来自 109+ 来源（RSS、Twitter/X、GitHub、网页搜索）的质量评分科技新闻。 |
-
-## 创意与构建
-
-| 名称 | 描述 |
-|------|-------------|
-| [目标驱动的自主任务](usecases/overnight-mini-app-builder.md) | 倾泻你的目标，让智能体自主生成、安排并完成每日任务 —— 包括在一夜之间构建惊喜的迷你应用。 |
-| [YouTube 内容流水线](usecases/youtube-content-pipeline.md) | 为 YouTube 频道自动化视频创意发掘、研究和追踪。 |
-| [多智能体内容工厂](usecases/content-factory.md) | 在 Discord 中运行多智能体内容流水线 —— 研究、写作和缩略图智能体在专用频道中协同工作。 |
-
-## 基础设施与 DevOps
-
-| 名称 | 描述 |
-|------|-------------|
-| [n8n 工作流编排](usecases/n8n-workflow-orchestration.md) | 通过 webhook 将 API 调用委托给 n8n 工作流 —— 智能体从不接触凭证，每个集成都是可视化的且可锁定。 |
-| [自愈家庭服务器](usecases/self-healing-home-server.md) | 运行一个始终在线的基础设施智能体，具有 SSH 访问权限、自动化 cron 作业，以及跨家庭网络的自愈能力。 |
-
-## 生产力
-
-| 名称 | 描述 |
-|------|-------------|
-| [自主项目管理](usecases/autonomous-project-management.md) | 使用 STATE.yaml 模式协调多智能体项目 —— 子智能体并行工作，无需编排器开销。 |
-| [多渠道 AI 客户服务](usecases/multi-channel-customer-service.md) | 将 WhatsApp、Instagram、电子邮件和 Google 评价统一到一个 AI 驱动的收件箱中，实现 24/7 自动回复。 |
-| [基于电话的个人助理](usecases/phone-based-personal-assistant.md) | 通过电话访问你的 AI 智能体，为任何手机提供免提语音助手。 |
-| [收件箱整理](usecases/inbox-declutter.md) | 总结新闻通讯并以电子邮件形式发送给你摘要。 |
-| [个人 CRM](usecases/personal-crm.md) | 自动从电子邮件和日历中发现并追踪联系人，支持自然语言查询。 |
-| [健康与症状追踪器](usecases/health-symptom-tracker.md) | 追踪食物摄入和症状以识别诱因，带有定期签到提醒。 |
-| [多渠道个人助理](usecases/multi-channel-assistant.md) | 从单个 AI 助理路由任务到 Telegram、Slack、电子邮件和日历。 |
-| [项目状态管理](usecases/project-state-management.md) | 事件驱动的项目追踪，自动捕获上下文，取代静态看板。 |
-| [动态仪表板](usecases/dynamic-dashboard.md) | 实时仪表板，并行从 API、数据库和社交媒体获取数据。 |
-| [Todoist 任务管理器](usecases/todoist-task-manager.md) | 通过将推理和进度日志同步到 Todoist，最大化智能体的透明度。 |
-| [基于电话的个人助理](usecases/phone-based-personal-assistant.md) | 通过语音通话或短信从任何手机访问 OpenClaw。免提获取日历更新、Jira 工单和网页搜索结果。 |
-| [家庭日历与家务助理](usecases/family-calendar-household-assistant.md) | 将所有家庭日历聚合到早间简报中，监控消息以获取预约，并管理家庭库存。 |
-| [多智能体专业团队](usecases/multi-agent-team.md) | 通过单个 Telegram 聊天，将多个专业智能体（战略、开发、营销、业务）作为协调团队运行。 |
-| [定制早间简报](usecases/custom-morning-brief.md) | 获取完全定制的每日简报 —— 新闻、任务、内容草稿和 AI 推荐的操作 —— 每天早上通过短信发送给你。 |
-| [第二大脑](usecases/second-brain.md) | 向机器人发送任何内容来记住它，然后在自定义的 Next.js 仪表板中搜索你的所有记忆。 |
-| [活动嘉宾确认](usecases/event-guest-confirmation.md) | 逐一呼叫活动嘉宾名单以确认出席、收集备注并编译摘要 —— 通过 AI 语音通话完全自动化。 |
-
-## 研究与学习
-
-| 名称 | 描述 |
-|------|-------------|
-| [AI 财报追踪器](usecases/earnings-tracker.md) | 追踪科技/AI 财报，带有自动化预览、警报和详细摘要。 |
-| [个人知识库 (RAG)](usecases/knowledge-base-rag.md) | 通过将 URL、推文和文章拖入聊天来构建可搜索的知识库。 |
-| [市场研究与产品工厂](usecases/market-research-product-factory.md) | 使用 Last 30 Days 技能从 Reddit 和 X 挖掘真实痛点，然后让 OpenClaw 构建解决它们的 MVP。 |
-| [语义记忆搜索](usecases/semantic-memory-search.md) | 使用混合检索和自动同步，为你的 OpenClaw markdown 记忆文件添加向量驱动的语义搜索。 |
-
-## 金融与交易
-
-| 名称 | 描述 |
-|------|-------------|
-| [Polymarket 自动驾驶](usecases/polymarket-autopilot.md) | 在预测市场上进行自动化模拟交易，带有回测、策略分析和每日绩效报告。 |
-
-## 🤝 贡献
-
-我们欢迎贡献！请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 了解指南。
-
-- 添加新的使用案例
-- 改进现有案例
-
-> 请只提交你已经使用过并验证有效的使用案例（至少使用一天）。我们重视真正让我们的生活变得更好的真实想法，而不是更糟！
->
-> **注意：** 我们不接受与加密货币相关的使用案例。
-
----
-
-**原文链接**: [README.md](README.md)  
-**最后同步**: 2026-02-18
+- [awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases)：社区维护的 OpenClaw 用例/场景集合（awesome list）
+- [Claw（Qt 站点）](https://claw.qt.cool/)：ClawPanel 产品介绍页（演示/下载/部署指南聚合）
+- [ClawPanel](https://github.com/qingchencloud/clawpanel)：OpenClaw 可视化管理面板（桌面端 Tauri v2；含内置 AI 助手、诊断与一键部署）
+- [Clawd](https://clawd.org.cn/)：OpenClaw 中文社区分支站点（提供一键安装脚本、渠道接入文档与 Docker 部署）
+- [Open Claw（.me）](https://open-claw.me/zh)：第三方“OpenClaw 资源中心/教程”站（条款声明与官方无关联；整理安装配置与 FAQ）
+- [Open Claw（.online）](https://open-claw.online/zh)：第三方生产级教程门户（按学习路径组织：本地安装、Docker/VPS 部署、渠道接入与排错）
+- [Open Claw（.org）](https://open-claw.org/zh)：第三方宣传/落地页（强调“本地运行/主动性/订阅”等卖点，非官方域名）
+- [OpenClaw Agent](https://openclawagent.net/zh)：OpenClaw 导航与快速上手页（聚合官方文档、GitHub 组织、速查表与技能入口）
+- [OpenClaw China](https://openclawchina.com/)：第三方中文部署指南站（面向国内渠道：飞书/钉钉/企微等，提供快速开始与部署教程）
+- [OpenClaw Skills](https://openclawskills.io/zh/skills)：第三方技能目录站（分类浏览技能列表与安装命令；含站点条款免责声明）
