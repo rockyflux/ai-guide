@@ -28,9 +28,10 @@ bookHidden: true
 | **packyapi** | 稳定 API 访问，价格合理，适合个人开发者 | https://www.packyapi.com/ |
 | **AICodeMirror** | 低至¥259/月 | https://www.aicodemirror.com/ |
 | **AIGetCode** | 低至¥399/4周 | https://www.aigocode.com/ |
+| **UniAPI** | 支持市面上绝大部分模型，按量付费 | https://uniapi.ai/ |
 | **APIs.you** | API 目录聚合，多服务可选 | https://apis.you/catalog |
 | **淘宝** | 搜索「claude code」可找到各类中转套餐 | [淘宝搜索](https://s.taobao.com/search?q=claude+code) |
-| **闲鱼** | 二手/代购 Claude Code 账号或中转服务 | [闲鱼搜索](https://www.goofish.com/search?q=claude+code) |
+| **闲鱼** | 二手/代购 Claude Code 账号或中转服务 | [闲鱼搜索](https://www.goofish.com/search?q=claude+code) 、 [team拼接](https://www.goofish.com/search?q=team拼车) |
 
 {{% hint warning %}}
 中转服务依赖第三方实现，稳定性与合规性需自行评估；电商平台交易请谨慎核实卖家与套餐详情。
@@ -40,6 +41,7 @@ bookHidden: true
 ## 国内企业集中采购策略
 -  cursor 或者 copilot 的团队版
 -  Claude Code Max/OpenRouter API分发Key
+-  [AI 大模型 API 聚合平台]({{< relref "ai-programming/api-aggregation-platforms" >}}) — OpenRouter、小马算力、DMXAPI 等 13 个第三方代理平台对比
 
 
 <br>

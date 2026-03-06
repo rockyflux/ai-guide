@@ -5,6 +5,7 @@ bookToc: false
 noTocArea: true
 bookCollapseSection: false
 bookFlatSection: true
+bookHidden: true
 ---
 
 ## 新手端到端项目实战路径

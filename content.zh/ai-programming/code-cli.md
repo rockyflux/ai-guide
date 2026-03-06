@@ -18,7 +18,7 @@ bookHidden: true
 | Claude Code | 企业级编码协作 | 团队协作与流程更重的组织 | 协作/权限/安全等企业能力更完整 | [https://claude.com/product/claude-code](https://claude.com/product/claude-code) |
 | Snow CLI | 可定制终端助手 | 喜欢折腾配置、有自定义工作流的人 | 配置项多、中文友好、轻量 | [https://github.com/MayDay-wpf/snow-cli](https://github.com/MayDay-wpf/snow-cli) |
 | iFlow CLI | 低门槛多模型 | 预算敏感、想快速上手的人 | 免费/门槛低、多模型整合 | [https://cli.iflow.cn/](https://cli.iflow.cn/) |
-| Codex CLI | OpenAI 生态编码工具 | 主要需求是“高质量写代码/补全”的人 | 更偏编码专精、对 OpenAI 生态友好 | - |
+| Codex CLI | OpenAI 生态编码工具 | 主要需求是“高质量写代码/补全”的人 | 更偏编码专精、对 OpenAI 生态友好 | [Codex Windows下载](https://apps.microsoft.com/detail/9plm9xgg6vks?hl=zh-cn&gl=CN&ocid=pdpshare) |
 | Gemini CLI | Google 生态多模态工具 | 深度使用 Google Cloud/Colab 的人 | 多模态与 Google 生态联动更强 | - |
 
 ## 关键差异

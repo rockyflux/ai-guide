@@ -26,6 +26,7 @@ bookFlatSection: true
 - [GitHub 周边工具速查]({{< relref "tutorials/github-extensions" >}}) — GitHub 周边工具、GitHub加速、Github仓库阅读等
 - [开发环境准备]({{< relref "ai-programming/dev-start" >}}) — PowerShell 7、VS Code、Node.js、Python、Git 及可选工具（代理、临时邮箱等）
 - [AI 编程环境配置与增强工具集]({{< relref "ai-programming/env-and-tools" >}}) — 环境变量、供应商切换与常用增强工具（Any Code、CC Switch 等）
+- [AI 大模型 API 聚合平台]({{< relref "ai-programming/api-aggregation-platforms" >}}) — OpenRouter、小马算力、DMXAPI 等 13 个第三方代理平台对比
 - [ZCF 零配置 Claude Code]({{< relref "ai-programming/zcf" >}}) — 零配置上手 Claude Code / Codex
 - [CC-Switch 可视化配置]({{< relref "ai-programming/cc-switch" >}}) — 可视化管理 MCP、Skills、Prompts
 - [CLI 代理 API（CPA）]({{< relref "ai-programming/cpa" >}}) — 订阅即 API，多端复用（Cursor / Cline / OpenCode 等）
