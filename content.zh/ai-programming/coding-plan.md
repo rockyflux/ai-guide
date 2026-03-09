@@ -54,6 +54,8 @@ bookHidden: true
 |---|---|---|---|---|
 | **阿里云百炼** | Lite | 7.9元/40元/月 | 多模型聚合（Qwen3.5/GLM-5/Kimi/MiniMax），兼容OpenAI/Anthropic协议，月18,000次请求 | https://www.aliyun.com/benefit/ai/aistar |
 | | Pro | 39.9元/200元/月 | 月90,000次请求，适合高频开发 | https://bailian.console.aliyun.com/cn-beijing/?tab=model#/efm/coding_plan |
+| **腾讯云 Coding Plan** | Lite | 7.9元/20元/月（限时5折） | 聚合 Tencent HY 2.0 Instruct、GLM-5、Kimi-K2.5、MiniMax-M2.5，多模型一键切换，兼容 CodeBuddy/OpenClaw/Claude Code/Cursor 等主流编程工具 | https://cloud.tencent.com/act/pro/codingplan |
+| | Pro | 39.9元/100元/月（限时5折） | 额度为 Lite 套餐约 5 倍，面向复杂项目与高频开发场景，适合个人开发者和小团队长期使用 | https://cloud.tencent.com/act/pro/codingplan |
 | **火山引擎方舟** | Lite | 9.9元/40元/月 | 字节自研Doubao-Seed-Code+第三方模型，Auto路由，256K上下文 | https://www.volcengine.com/activity/codingplan |
 | | Pro | 49.9元/200元/月 | 额度为Lite 5倍，适合复杂项目 | https://www.volcengine.com/product/ark |
 | **百度千帆** | Lite | 9.9元/40元/月 | 集成GLM-4.7/DeepSeek-V3.2，控制台一键切换模型，兼容主流工具 | https://cloud.baidu.com/product/codingplan.html |

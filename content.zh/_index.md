@@ -54,6 +54,8 @@ noTocArea: true
   - [从一个具体案例开始]({{< relref "project-practice/practices-one" >}})：用小项目练拆解、验证与协作闭环。
   - [Claude Code 最佳实践]({{< relref "project-practice/best-practices" >}})：Plan Mode、验证标准、上下文管理等项目级打法。
   - [Everything Claude Code 总览]({{< relref "project-practice/everything-claude-code" >}})：生产级配置集合，适合长期打项目。
+  - [从需求到设计原型]({{< relref "project-practice/requirements-to-design-prototype" >}})：从模糊构思到高保真原型与可执行代码的闭环实践。
+  - [豆包 AI 绘图闭环小练习]({{< relref "project-practice/ai-drawing-practice" >}})：从提示词到无水印成品图的一次性练习。
 
 - **7) 资源与控成本（补短板 + 少花钱也能稳定产出）**
   - [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}})：免费额度、Token 优化与多端复用策略。

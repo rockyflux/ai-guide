@@ -40,5 +40,7 @@ bookFlatSection: true
 ### 4. 进阶学习与参考资料
 - [Vibe Coding 指南]({{< relref "ai-programming/vibe-coding" >}}) — 规划驱动、AI 结对编程方法论
 - [Everything Claude Code]({{< relref "project-practice/everything-claude-code" >}}) — 生产级 Claude Code 配置集合
+- [从需求到设计原型]({{< relref "project-practice/requirements-to-design-prototype" >}}) — 从模糊想法到高保真原型与代码闭环
+- [豆包 AI 绘图闭环小练习]({{< relref "project-practice/ai-drawing-practice" >}}) — 练习 AI 绘图与无水印下载流程
 - [AI 编程中文社区与课程]({{< relref "ai-programming/ai-resources-guide" >}}) — Claude Code、Cursor、OpenCode 等中文学习资源
 - [上下文设计哲学]({{< relref "large-models/context-scarcity-rag-memory-skills" >}}) — 上下文稀缺性、RAG、Memory、Skills 的设计思路

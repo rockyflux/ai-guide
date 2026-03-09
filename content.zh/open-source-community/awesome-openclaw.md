@@ -25,6 +25,7 @@ bookHidden: true
 | CoPaw | Python + TypeScript（AgentScope） | 协作个人智能体工作站；多渠道（钉钉/飞书/QQ/Discord/iMessage）；支持本地模型（llama.cpp/MLX） | 支持 `pip` / `curl` / Docker 部署；Web 控制台默认 `http://127.0.0.1:8088/` | **偏“工作站”定位**：部署形态多但依赖也多（Python 3.10+ 等）；多渠道接入需要分别配置 bot/token | https://copaw.bot/zh/ |
 | AionUi | TypeScript + Electron | 本地开源 24/7 Cowork 桌面端；内置 Agent（零配置）+ 多 CLI Agent 统一管理（含 OpenClaw/Claude Code/Codex 等） | 跨平台；支持 WebUI 远程访问、Telegram/Lark/钉钉通道；支持 Cron 定时自动化 | **注意**：多 Agent/多通道能力强但配置面会变大；远程访问建议做好权限与网络边界 | https://github.com/iOfficeAI/AionUi |
 | LobsterAI（有道） | Electron + React + TypeScript（含 Python） | 7×24 全场景 AI Agent；强调“一句话→自动规划→交付多模态结果”；本地与安全（目录边界授权、工具审批、可追溯） | 提供下载；支持长时记忆、定时任务、技能；支持 Telegram/Discord 等 IM 远程控制 | **注意**：支持本地/沙箱执行与权限审批；Windows 包含内置 Python 运行时（按需安装依赖） | https://github.com/netease-youdao/LobsterAI |
+| ClawX | Node.js（基于 OpenClaw） | 24/7 自主数据监控；金融研究场景；多源聚合 + AI 分析；20+ 通道推送（WhatsApp/Telegram/飞书等）；55+ Skills 开箱即用 | 可视化界面；跨平台 macOS/Windows/Linux；支持 CLI + GUI；本地优先、数据不出设备 | **注意**：需本地常驻；自备 AI Provider 与 API Key；偏金融/研究场景 | https://claw-x.com/ |
 
 ## 一句话建议
 

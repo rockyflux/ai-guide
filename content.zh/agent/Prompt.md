@@ -53,9 +53,11 @@ Prompt 通常只描述**本次对话**要达成的目标与约束，不适合承
 | 描述 | 链接 |
 | --- | --- |
 | Prompts.chat - 新建提示词 | [https://prompts.chat/prompts/new](https://prompts.chat/prompts/new) |
+| AI Gist - 本地优先提示词管理 | [https://getaigist.com/](https://getaigist.com/) |
+| 提示词优化器（评估与优化） | [https://n8n.keyi.ma/webhook/better-prompt](https://n8n.keyi.ma/webhook/better-prompt) |
 | GPTS 提示词集合 | [https://github.com/B3o/GPTS-Prompt-Collection](https://github.com/B3o/GPTS-Prompt-Collection) |
 | 精选提示词库 | [https://prmbr.com/](https://prmbr.com/) |
-| 提示词优化器 | [https://n8n.keyi.ma/webhook/better-prompt](https://n8n.keyi.ma/webhook/better-prompt) |
 | LangGPT - 提示词专家框架 | [https://github.com/langgptai/LangGPT](https://github.com/langgptai/LangGPT) |
 | Awesome ChatGPT Prompts 中文版 | [https://github.com/PlexPt/awesome-chatgpt-prompts-zh/](https://github.com/PlexPt/awesome-chatgpt-prompts-zh/) |
 | ChatGPT 引导语 | [https://prompts.fresns.cn/](https://prompts.fresns.cn/) |
+| AI 绘图提示词模板大全 | [https://ai.codefather.cn/painting](https://ai.codefather.cn/painting) |

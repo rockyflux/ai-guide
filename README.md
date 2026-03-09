@@ -29,6 +29,8 @@
   - [AI 编程学习路径](https://rockyflux.github.io/ai-guide/ai-programming/guide/)
   - [Cursor 实战上手指南](https://rockyflux.github.io/ai-guide/project-practice/cursor/)
   - [新手端到端项目路径](https://rockyflux.github.io/ai-guide/project-practice/practices-two/)
+  - [从需求到设计原型](https://rockyflux.github.io/ai-guide/project-practice/requirements-to-design-prototype/)
+  - [豆包 AI 绘图闭环小练习](https://rockyflux.github.io/ai-guide/project-practice/ai-drawing-practice/)
 
 - **选模型和花多少钱**
   - [AI 编程模型选型](https://rockyflux.github.io/ai-guide/ai-programming/models/)

@@ -99,9 +99,6 @@ skill/employees/
 ```
 
 
-
-
-
 ### 配置截图
 
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start;">
@@ -130,6 +127,7 @@ skill/employees/
   - [SkillsMP](https://skillsmp.com/zh)：聚合 GitHub 上超过 11 万个开源技能，适合「全网搜技能」和溯源到原始仓库。
   - [Agent Skills Me](https://agentskills.me)：人工精选的小而精技能集，适合不想自己筛选太久的用户。
   - [SkillStore](https://skillstore.io/zh-hans)：中文友好，并强调做过安全审查，适合团队或合规敏感场景。
+  - [SkillHub（腾讯）](https://skillhub.tencent.com/)：腾讯推出的技能市场与导航平台，支持按模型、场景筛选，并与自家工具生态深度集成。
   - [Skills.sh 热门技能页](https://skills.sh)：关注热门趋势技能，支持一键安装，适合快速尝鲜。
 - **源码仓库：工程实现**
   - [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills)：精选的 Claude Skills 清单与资源索引，覆盖 Claude.ai / Claude Code / Claude API 场景。
@@ -138,6 +136,7 @@ skill/employees/
   - [Antfu Skills](https://github.com/antfu/skills)：由 Antfu 维护的实践仓库，代码风格统一、工程化好，适合学习高质量个人实践。
   - [Anthropic Skills](https://github.com/anthropics/skills)：Anthropic 官方的技能实现仓库，适合参考「官方最佳实践」。
   - [Awesome Agent Skills](https://github.com/JackyST0/awesome-agent-skills)：社区维护的优质技能索引库，「awesome 系」风格，可作为导航入口。
+  一个完整的 Agent Skills 实战案例是股票尽调系统仓库 **Claude Code Stock Deep Research Agent**（GitHub：[`liangdabiao/Claude-Code-Stock-Deep-Research-Agent`](https://github.com/liangdabiao/Claude-Code-Stock-Deep-Research-Agent)）。
 
 
 {{% hint info %}}

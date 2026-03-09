@@ -36,4 +36,8 @@ noTocArea: true
 
 - [项目实践：从一个具体案例开始]({{< relref "project-practice/practices-one" >}})  
   选一个规模可控的小项目，练习：需求拆解、任务分发、联调与验证闭环。
+- [从需求到设计原型：一篇实战流程]({{< relref "project-practice/requirements-to-design-prototype" >}})  
+  聚焦产品视角，从模糊想法到可交付的界面原型，把后续开发所需信息讲清楚。
+- [AI 绘图实战：从文案到成品图]({{< relref "project-practice/ai-drawing-practice" >}})  
+  聚焦视觉产出，用 AI 完成一整套场景配图，并把过程沉淀成可复用的绘图 SOP。
 
