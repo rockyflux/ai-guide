@@ -174,3 +174,23 @@ bookHidden: true
 **主办**：llm-stats 团队
 
 **备注**：综合性AI模型评测平台，覆盖LLM、图像生成、代码、语音等多模态评测，提供性能、价格、上下文窗口、速度等多维度对比。包含LLM排行榜、开源LLM排行榜、代码竞技场、图像竞技场等子榜单，同时追踪最新发布的AI模型。详情可访问官网（[https://llm-stats.com/](https://llm-stats.com/)）。
+
+## 18\. PinchBench（OpenClaw Agent Benchmark）
+
+**链接**：[https://pinchbench.com](https://pinchbench.com/)
+
+**保持更新**：✅
+
+**主办**：Kilo Code 等
+
+**备注**：专注于 OpenClaw 体系下的智能体（Agent）能力评测，以**任务成功率**为核心指标，同时提供速度、成本、价值等维度对比。所有任务与打分标准开源，采用自动检查 + LLM 评判的混合方式完成评分，适合对比不同模型在 OpenClaw 场景中的实战表现。官网声明该榜单“主要用于娱乐，不应用于关键决策”，使用时需结合其他更严肃的评测基准综合参考（数据示例可见官网页面的模型成功率排名表）。
+
+## 19\. LLM Benchmark Dashboard（llm2014）
+
+**链接**：[https://llm2014.github.io/llm_benchmark/](https://llm2014.github.io/llm_benchmark/)
+
+**保持更新**：✅
+
+**主办**：llm2014（个人长期跟踪项目）
+
+**备注**：基于个人私有题目的大模型长期跟踪测评看板，支持按数据集/数据类别/模型模式筛选，提供测试成本、平均耗时等维度的可视化对比，适合作为日常“体感 + 性价比”变化的参考补充。

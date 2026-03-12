@@ -40,4 +40,6 @@ noTocArea: true
   聚焦产品视角，从模糊想法到可交付的界面原型，把后续开发所需信息讲清楚。
 - [AI 绘图实战：从文案到成品图]({{< relref "project-practice/ai-drawing-practice" >}})  
   聚焦视觉产出，用 AI 完成一整套场景配图，并把过程沉淀成可复用的绘图 SOP。
+- [Kiro 实战：旧项目改 bug / 新项目新需求]({{< relref "project-practice/kiro-practice" >}})  
+  聚焦 Kiro 这类 Spec‑Driven Agent IDE，分别给出“旧项目改 bug / 新项目新需求”两套可直接照做的流程。
 

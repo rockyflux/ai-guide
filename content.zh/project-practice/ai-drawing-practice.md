@@ -13,7 +13,7 @@ bookFlatSection: true
 
 会用到这些工具：
 
-- **提示词生成器**：[ai.codefather.cn/painting](https://ai.codefather.cn/painting) 或 [Banana Prompt Quicker](https://glidea.github.io/banana-prompt-quicker)
+- **提示词生成器**：[ai.codefather.cn/painting](https://ai.codefather.cn/painting) 或 [Banana Prompt Quicker](https://glidea.github.io/banana-prompt-quicker) 或 [Promptoy 模板库](https://promptoy.com/app/templates)
 - **绘图平台**：豆包 AI（[doubao.com/chat/create-image](https://www.doubao.com/chat/create-image)）
 - **无水印下载脚本/扩展**：豆包下载器脚本/扩展
 
@@ -51,9 +51,11 @@ bookFlatSection: true
 
 1. 打开提示词工具之一：
    - [ai.codefather.cn/painting](https://ai.codefather.cn/painting)
+   - [Promptoy（提示词模板库）](https://promptoy.com/app/templates)
    - [nano-kit](https://github.com/liujuntao123/nano-kit)
    - [gemini-3-pro-image-preview](https://tansuo2021.github.io/gemini-3-pro-image-preview/)
    - [Banana Prompt Quicker](https://glidea.github.io/banana-prompt-quicker/)
+   - [baoyu-skills（GitHub 仓库）](https://github.com/JimLiu/baoyu-skills) ，或通过 [skills.sh 市场页面](https://skills.sh/jimliu/baoyu-skills) 安装相关技能
 2. 选一个接近目标风格的模板（插画、二次元、写实等）。
 3. 填写画面描述：主体、场景、构图、光影、风格等关键信息。
 4. 按需调整尺寸、细节等参数。
@@ -84,5 +86,6 @@ bookFlatSection: true
 可以简单对比豆包和 Gemini 的出图风格/质量，为后续选型和调参提供直观参考。
 
 ## 五、实战案例参考
+
 - 实战案例（豆包）：[白板手绘风格的前端开发流程](https://www.doubao.com/thread/w9e5eb8e975fb1fdb) , [吉伊卡哇风格科普插画](https://www.doubao.com/thread/wff08465288bcc53d)
 - 实战案例（Gemini）：[Nano Banana 2 吉伊卡哇风格科普插画](https://gemini.google.com/share/7f284e2b5718)

@@ -6,7 +6,7 @@ bookToc: false
 noTocArea: true
 ---
 
-<br>
+&nbsp;
 欢迎来到《AI 编程指南》。这里按「任务」组织内容：选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用项目实践跑通闭环。
 
 ## 先从这里开始（3 条主线）
@@ -28,6 +28,7 @@ noTocArea: true
   - [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}})：IDE/插件/Agent 工具怎么选（Cursor、Aider、Codex 等）。
   - [AI CLI 工具横评]({{< relref "ai-programming/code-cli" >}})：Claude Code / Codex CLI / Gemini CLI 等适用场景对比。
   - [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}})：套餐怎么选更划算、怎么买更省心。
+
 
 - **3) 搭环境 & 接模型（尽量一次配置到位）**
   - [开发环境准备]({{< relref "ai-programming/dev-start" >}})：PowerShell 7、VS Code、Node/Python/Git 等一站式准备。
@@ -63,7 +64,7 @@ noTocArea: true
   - [AI 学习路线与资料]({{< relref "tutorials/ai-learning-guide" >}})：系统学习与补基础的入口。
   - [GitHub 周边工具速查]({{< relref "tutorials/github-extensions" >}})：加速、仓库阅读与效率工具。
   - [Awesome LLM Apps]({{< relref "tutorials/awesome-llm-apps" >}})：优秀应用与灵感库，找现成轮子。
-  - [Awesome OpenClaw]({{< relref "open-source-community/awesome-openclaw" >}})：开源与社区资源索引。
+  - [Awesome OpenClaw 使用案例]({{< relref "open-source-community/awesome-openclaw" >}})：OpenClaw 生态分支速览与资源入口。
 
 ## 支持我们
 

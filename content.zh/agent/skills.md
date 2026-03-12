@@ -99,7 +99,7 @@ skill/employees/
 ```
 
 
-### 配置截图
+### 五、配置截图
 
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start;">
   <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ105piyq05dQMLekrhQuQoE3V27hZnQACiyIAAplwYFSwAiyjwL9lzToE.png" alt="配置截图 1" style="max-width: 48%; flex: 1; min-width: 200px;" />
@@ -107,8 +107,38 @@ skill/employees/
 </div>
 
 
+### 六、初始化导入推荐Skills
+```
+# 技能搜索/发现：从大量 Skills 中快速找到需要的（find-skills）
+npx skills add https://github.com/vercel-labs/skills --skill find-skills
+# 创建/封装自己的 Skill：把你的流程沉淀成可复用能力（skill-creator）
+npx skills add https://github.com/anthropics/skills --skill skill-creator
+# Agent 工具集：给智能体配一套常用小工具（agent-tools）
+npx skills add https://github.com/toolshell/skills --skill agent-tools
+# 超能力使用指南：教你如何发挥技能与工具的最大价值（using-superpowers）
+npx skills add https://github.com/obra/superpowers --skill using-superpowers
+# MCP 构建器：快速搭建 MCP 服务，让 AI 连外部工具/数据（mcp-builder）
+npx skills add https://github.com/anthropics/skills --skill mcp-builder
+# 头脑风暴：创意/需求澄清优先，避免直接上手跑偏（brainstorming）
+npx skills add https://github.com/obra/superpowers --skill brainstorming
+```
 
-### 参考链接与第三方网站
+```
+# 前端和设计skills
+npx skills add pbakaus/impeccable
+npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines
+npx skills add https://github.com/anthropics/skills --skill frontend-design
+npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
+```
+
+更多可以查看开发提示词：[https://skillsmp.com/zh/categories/development](https://skillsmp.com/zh/categories/development)
+
+### 七、OpenClaw：养虾 + Skills（案例）
+
+- [OpenClaw 养虾 + Skills（微信文章）](https://mp.weixin.qq.com/s/DVhQ_mWNtn9P39ydlmtyUg)
+- [龙虾指南（InStreet）](https://instreet.coze.site/skill.md)：也可以去 [InStreet](https://instreet.coze.site/) 逛逛、发帖交流。
+
+### 八、参考链接与第三方网站
 
 - **文档与导航**
   - [Claude 官方 Skills 文档](https://code.claude.com/docs/zh-CN/skills)：最权威的 Agent Skills 规范与功能说明。
@@ -117,8 +147,9 @@ skill/employees/
   - [SkillsHunt](https://skillshunt.io/)：支持标签与热度筛选的技能发现与搜索平台。
 - **工具与仓库**
   - [Skills.sh](https://skills.sh/)：命令行技能管理工具，一条命令即可安装 / 更新 Skills。
+  - [Impeccable](https://impeccable.style/)：对 `frontend-design` 的增强版与设计指令集（含 /polish、/audit、/distill 等），并提供一键安装方式。
   - [Vercel Skills](https://github.com/vercel-labs/skills)：Vercel 团队维护的示例技能仓库，偏 Web / 全栈场景。
-  - [baoyu-skills](https://github.com/jimliu/baoyu-skills)：本项目作者维护的实战技能合集，适合直接拿来用。
+  - [baoyu-skills](https://github.com/jimliu/baoyu-skills)：根据文本内容自动生成高质量配图。
   - [ClawHub Skills](https://clawhub.ai/skills)：ClawHub 平台的技能市场与发现页。
   - [Skill Creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：Anthropic 官方提供的技能模板与创建向导。
 - **合集网站：快速使用**

@@ -14,6 +14,7 @@ bookFlatSection: true
 如果你是第一次配置，建议按 **1 → 4** 顺序阅读。
 
 ### 1. 选模型和工具
+
 - [AI 编程模型选型]({{< relref "ai-programming/models" >}}) — 🔥能力、价格与适用场景
 - [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) — 国内/海外 Coding Plan 与中转套餐对照
 - [AI 产品推荐]({{< relref "large-models/ai-product" >}}) — 桌面 Agent、API 客户端、翻译等实用产品
@@ -21,8 +22,8 @@ bookFlatSection: true
 - [AI 编程工具：汇总与对比]({{< relref "ai-programming/vb-code-tool" >}}) — IDE/插件/Agent 工具详细对比（Zed、Cursor、Claude Code等）
 - [AI CLI 工具：对比与选型]({{< relref "ai-programming/code-cli" >}}) — OpenCode、Claude Code、Codex CLI、Gemini CLI 等命令行工具对比
 
-
 ### 2. 准备环境并配置模型
+
 - [GitHub 周边工具速查]({{< relref "tutorials/github-extensions" >}}) — GitHub 周边工具、GitHub加速、Github仓库阅读等
 - [开发环境准备]({{< relref "ai-programming/dev-start" >}}) — PowerShell 7、VS Code、Node.js、Python、Git 及可选工具（代理、临时邮箱等）
 - [AI 编程环境配置与增强工具集]({{< relref "ai-programming/env-and-tools" >}}) — 环境变量、供应商切换与常用增强工具（CCR、CC Switch 等）
@@ -35,12 +36,12 @@ bookFlatSection: true
 - [Coding Agent 协作实践]({{< relref "ai-programming/ccg-workflow" >}}) — 多 Agent 分工协作、任务闭环
 - [CCG 多模型协作开发]({{< relref "ai-programming/ccg" >}}) — Claude + Codex + Gemini 编排
 
-
-
 ### 4. 进阶学习与参考资料
+
 - [Vibe Coding 指南]({{< relref "ai-programming/vibe-coding" >}}) — 规划驱动、AI 结对编程方法论
 - [Everything Claude Code]({{< relref "project-practice/everything-claude-code" >}}) — 生产级 Claude Code 配置集合
 - [从需求到设计原型]({{< relref "project-practice/requirements-to-design-prototype" >}}) — 从模糊想法到高保真原型与代码闭环
 - [豆包 AI 绘图闭环小练习]({{< relref "project-practice/ai-drawing-practice" >}}) — 练习 AI 绘图与无水印下载流程
 - [AI 编程中文社区与课程]({{< relref "ai-programming/ai-resources-guide" >}}) — Claude Code、Cursor、OpenCode 等中文学习资源
 - [上下文设计哲学]({{< relref "large-models/context-scarcity-rag-memory-skills" >}}) — 上下文稀缺性、RAG、Memory、Skills 的设计思路
+- [Awesome OpenClaw 使用案例]({{< relref "open-source-community/awesome-openclaw" >}}) — OpenClaw 生态分支速览与资源入口

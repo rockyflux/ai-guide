@@ -16,6 +16,7 @@ noTocArea: true
 **通用 / 开源社区**
 - [天池AI学习空间](https://tianchi.aliyun.com/course) 阿里云官方-天池AI学习空间
 - [Datawhale](https://www.datawhale.cn/) — 开源学习社区
+- [AI System 全栈课程](https://infrasys-ai.github.io/aisystem-docs/) — 围绕英伟达 / 昇腾等芯片，从硬件体系、编译器、推理引擎到大模型与智能体的 AI 系统全栈课程大纲
 - [从零开始构建智能体](https://datawhalechina.github.io/hello-agents/) — 智能体入门与实战
 - [检索增强生成 (RAG) 技术全栈指南](https://datawhalechina.github.io/all-in-rag) — RAG 全栈学习路径
 

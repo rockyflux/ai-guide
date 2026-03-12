@@ -35,3 +35,4 @@ noTocArea: true
 |22|[octopus](https://github.com/bestruirui/octopus)|服务端网关 · API 聚合|个人向 LLM API 聚合与负载均衡服务：提供统一的 API 聚合、路由与负载均衡管理能力，适合多模型多渠道接入|[Zread](https://zread.ai/bestruirui/octopus)|
 |23|[quotio](https://github.com/nguyenphutrong/quotio)|桌面应用 · 配额管理|macOS 菜单栏多账号 AI 配额管理工具：在 macOS 菜单栏统一管理多个 AI 账户并实时追踪配额与使用情况|[Zread](https://zread.ai/nguyenphutrong/quotio)|
 |24|[🔥Cockpit Tools](https://github.com/jlcodes99/cockpit-tools)|桌面应用 · 账号管理|通用 AI IDE 账号管理工具：支持 Antigravity/Codex/GitHub Copilot/Windsurf/Kiro 多账号切换、配额监控、自动唤醒与多开实例管理|[Zread](https://zread.ai/jlcodes99/cockpit-tools)|
+|25|[AI Toolbox](https://github.com/coulsontl/ai-toolbox)|桌面应用 · 配置管理|个人 AI 工具箱：一站式管理 AI 编程助手配置，覆盖 OpenCode / Claude Code / Codex 供应商与模型配置切换；集中管理 MCP 服务器；Skills 安装管理；支持 Windows/macOS/Linux，并提供 WSL 同步与备份能力|—|
