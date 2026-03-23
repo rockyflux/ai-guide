@@ -33,6 +33,8 @@ bookFlatSection: true
   聚焦 Claude + Codex + Gemini 的组合协作，适合对“多模型分工”最感兴趣的读者。
 - [oh-my-claudecode(OMC)]({{< relref "workflow/oh-my-claudecode" >}})  
   聚焦 Claude Code 生态下的多智能体协作与流程封装。
+- [Claude Code Agent Teams（蜂群）]({{< relref "workflow/agent-teams" >}})  
+  聚焦 Claude Code 原生“多队友并行协作”的实验性团队能力。
 - [Trellis]({{< relref "workflow/trellis" >}})  
   聚焦跨客户端、跨工具链的一致规范，适合希望统一接入方式的人。
 
@@ -57,6 +59,8 @@ bookFlatSection: true
   基于 Skills 的完整开发流，强调把“经验”沉淀成可复用能力单元。
 - [oh-my-claudecode(OMC)]({{< relref "workflow/oh-my-claudecode" >}})  
   面向 Claude Code 的工程化工作流与多 Agent 协作实践。
+- [Claude Code Agent Teams（蜂群）]({{< relref "workflow/agent-teams" >}})  
+  聚焦 Claude Code 原生“多队友并行协作”的实验性团队能力。
 - [Trellis]({{< relref "workflow/trellis" >}})  
   统一规范、统一接入、统一生成式能力编排，适合多客户端协同场景。
 

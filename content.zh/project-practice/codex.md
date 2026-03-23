@@ -45,6 +45,7 @@ brew install --cask codex
 - **ChatGPT 账号**：Plus / Pro / Team / Edu / Enterprise 等计划是否包含 Codex、额度如何计算，以 [OpenAI 官方定价与产品页](https://openai.com/) 为准。
 - **API Key**：部分场景可用 API 方式接入（适合已有 OpenAI API 预算、要做自动化或网关的团队）。
 - 海鲜市场：[https://www.goofish.com/search?q=codex](https://www.goofish.com/search?q=codex)
+- yy.cool：[https://yy.cool/](https://yy.cool/)（Codex 中转站供应商）
 
 如果你使用的是 **OpenAI 官方账号 / 官方 API**，而本机访问 OpenAI 需要代理出网，那么通常要先开启代理的 **TUN 模式**；否则即使本地能科学上网，Codex 也可能出现网络不通、登录失败或 API 无法调用的问题。
 
