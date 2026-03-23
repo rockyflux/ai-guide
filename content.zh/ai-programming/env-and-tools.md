@@ -32,7 +32,10 @@ noTocArea: true
 |19|[hapi](https://github.com/tiann/hapi)|服务端 · 远程控制台|支持 Web/Telegram 的远程 AI 编程控制台：通过 Web 与 Telegram 远程控制 AI 编程会话，实现跨端远程开发与协作|[Zread](https://zread.ai/tiann/hapi)|
 |20|[happy](https://github.com/slopus/happy)|客户端 · 跨平台终端|面向 Claude Code / Codex 的端到端加密 AI 编程助手：为 Claude Code 和 Codex 打造的端到端加密跨平台客户端，覆盖移动端与 Web 端|[Zread](https://zread.ai/slopus/happy)|
 |21|[metapi](https://github.com/cita-777/metapi)|服务端网关 · 元聚合|多中转站聚合与智能路由网关：将 New API / One API / OneHub / DoneHub / Veloera / AnyRouter / Sub2API 等站点统一为单一入口与密钥|[Zread](https://zread.ai/cita-777/metapi)|
-|22|[octopus](https://github.com/bestruirui/octopus)|服务端网关 · API 聚合|个人向 LLM API 聚合与负载均衡服务：提供统一的 API 聚合、路由与负载均衡管理能力，适合多模型多渠道接入|[Zread](https://zread.ai/bestruirui/octopus)|
+|22|[octopus](https://github.com/bestruirui/octopus)|服务端网关 · API 聚合|个人向 LLM API 聚合与负载均衡服务：支持多通道聚合、多 Key 管理、智能路由与负载均衡，并可在 OpenAI Chat/Responses 与 Anthropic 协议间转换，适合多模型多渠道统一接入|[Zread](https://zread.ai/bestruirui/octopus)|
 |23|[quotio](https://github.com/nguyenphutrong/quotio)|桌面应用 · 配额管理|macOS 菜单栏多账号 AI 配额管理工具：在 macOS 菜单栏统一管理多个 AI 账户并实时追踪配额与使用情况|[Zread](https://zread.ai/nguyenphutrong/quotio)|
 |24|[🔥Cockpit Tools](https://github.com/jlcodes99/cockpit-tools)|桌面应用 · 账号管理|通用 AI IDE 账号管理工具：支持 Antigravity/Codex/GitHub Copilot/Windsurf/Kiro 多账号切换、配额监控、自动唤醒与多开实例管理|[Zread](https://zread.ai/jlcodes99/cockpit-tools)|
 |25|[AI Toolbox](https://github.com/coulsontl/ai-toolbox)|桌面应用 · 配置管理|个人 AI 工具箱：一站式管理 AI 编程助手配置，覆盖 OpenCode / Claude Code / Codex 供应商与模型配置切换；集中管理 MCP 服务器；Skills 安装管理；支持 Windows/macOS/Linux，并提供 WSL 同步与备份能力|—|
+|26|[IDEA Claude Code GUI Plugin](https://github.com/zhukunpenglinyutong/idea-claude-code-gui)|IDE 插件 · 可视化 GUI|IntelliJ IDEA 插件：为 Claude Code 与 OpenAI Codex 提供可视化界面；支持 @file 引用、会话回溯、对比 DIFF、MCP/Skills、权限与安全控制等，提高 IDE 内 AI 编程体验|—|
+|27|[Sub2API](https://github.com/Wei-Shaw/sub2api)|服务端网关 · 订阅配额与 API 网关|开源 AI API 网关：将 Claude / OpenAI / Gemini / Antigravity 等订阅统一接入为兼容 API；多账户与 API Key 分发、Token 级计费、智能调度与会话粘性、并发与限流，支持拼车共享与原生 CLI/工具|[Zread](https://zread.ai/Wei-Shaw/sub2api)|
+|28|[Claude HUD](https://github.com/jarrodwatts/claude-hud)|Claude Code 插件 · 状态栏|Claude Code 插件：安装后通过 `/claude-hud:setup` 配置 statusline，在输入区下方常驻 HUD；展示上下文占用、工具/Agent/Todo、可选 Git 与订阅用量等；基于 transcript 与 Claude Code 原生 token 数据|[Zread](https://zread.ai/jarrodwatts/claude-hud)|

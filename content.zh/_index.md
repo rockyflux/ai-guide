@@ -6,12 +6,13 @@ bookToc: false
 noTocArea: true
 ---
 
-&nbsp;
-欢迎来到《AI 编程指南》。这里按「任务」组织内容：选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用项目实践跑通闭环。
+<br>
+欢迎来到《AI 编程指南》。这里按「任务」组织内容：选模型与工具 → 搭环境接模型 → 协作工作流（多工具编排） → 智能体工程化 → 用项目实践跑通闭环。
 
-## 先从这里开始（3 条主线）
+## 先从这里开始（4 条主线）
 
-- **[AI 编程（工具与工作方式）]({{< relref "ai-programming/_index" >}})**：从选型、环境到协作实践，目标是「稳定产出代码」。
+- **[AI 编程（工具与工作方式）]({{< relref "ai-programming/_index" >}})**：从选型、环境到方法论，目标是「稳定产出代码」。
+- **[协作与工作流]({{< relref "workflow/_index" >}})**：CCG、GSD、Superpowers、Trellis、oh-my-claudecode 等多模型 / 多 Agent 编排与工程闭环工具集。
 - **[AI 智能体（机制与工程化）]({{< relref "agent/_index" >}})**：把 Rules / Skills / MCP / Hooks / Subagents 串成可执行系统，让 AI 能在项目里持续干活。
 - **[项目实践（端到端闭环）]({{< relref "project-practice/_index" >}})**：用真实案例与可复用 SOP，把“会用工具”升级为“能交付成果”。
 
@@ -37,10 +38,15 @@ noTocArea: true
   - [CC-Switch 可视化配置]({{< relref "ai-programming/cc-switch" >}})：用 UI 管理 MCP/Skills/Prompts 与多供应商配置。
   - [CLI 代理 API（CPA）]({{< relref "ai-programming/cpa" >}})：把订阅统一为 API，多端复用（IDE/CLI）。
 
-- **4) 把“对话”变成“可交付”（工作流与协作）**
-  - [Coding Agent 协作实践]({{< relref "ai-programming/ccg-workflow" >}})：多 Agent 分工协作，把任务闭环做出来。
-  - [CCG 多模型协作开发]({{< relref "ai-programming/ccg" >}})：同一项目里按任务类型切换不同模型。
-  - [Agent 工作流]({{< relref "agent/workflow" >}})：把规则、工具、子 Agent 编排成可执行流程。
+- **4) 把“对话”变成“可交付”（协作工作流 + Agent 编排）**
+  - [协作与工作流（栏目入口）]({{< relref "workflow/_index" >}})：多模型协作、规格驱动与工具链编排的一站式索引。
+  - [工作流项目集]({{< relref "workflow/ccg-workflow" >}})：围绕 Claude Code / Codex / Gemini CLI 等构建的协作类项目列表与选型提示。
+  - [CCG 多模型协作开发]({{< relref "workflow/ccg" >}})：Claude + Codex + Gemini 路由与命令集。
+  - [GSD（Get Shit Done）]({{< relref "workflow/gsd" >}})：元提示、上下文工程与规格驱动，缓解长对话中的上下文腐烂。
+  - [Superpowers]({{< relref "workflow/superpowers" >}})：基于可组合 Skills 的完整软件开发工作流。
+  - [oh-my-claudecode（OMC）]({{< relref "workflow/oh-my-claudecode" >}})：面向 Claude Code 的多智能体编排与预设工作流。
+  - [Trellis]({{< relref "workflow/trellis" >}})：跨 Claude Code、Cursor、Codex、Kiro 等客户端的统一规范与生成式接入。
+  - [Agent 工作流]({{< relref "agent/workflow" >}})：把规则、工具、子 Agent 在项目内编排成可执行流程。
 
 - **5) 智能体工程化（把能力模块化、可复用、可守卫）**
   - [Rules]({{< relref "agent/rules" >}})：底线与约束（什么必须遵守 / 什么永远禁止）。
@@ -49,14 +55,19 @@ noTocArea: true
   - [Hooks]({{< relref "agent/hooks" >}})：在提交、格式化等关键节点自动守卫与兜底。
   - [Subagents]({{< relref "agent/subagents" >}})：角色与权限隔离，提高并行与安全性。
   - [Commands]({{< relref "agent/commands" >}})：给常用动作一个固定入口。
-  - [Output styles]({{< relref "agent/output-styles" >}})：让输出结构化、统一、可复用。
 
 - **6) 项目级最佳实践 / 可复用 SOP**
+  - [新手端到端项目实战路径]({{< relref "project-practice/practices-two" >}})：把站内内容按端到端顺序串成路线图。
+  - [Cursor 实战上手指南（10 分钟）]({{< relref "project-practice/cursor" >}})：快速跑通配置、订阅与日常用法。
+  - [Codex 实战上手指南]({{< relref "project-practice/codex" >}})：CLI / 扩展 / Web 与 Skills、MCP 衔接。
   - [从一个具体案例开始]({{< relref "project-practice/practices-one" >}})：用小项目练拆解、验证与协作闭环。
   - [Claude Code 最佳实践]({{< relref "project-practice/best-practices" >}})：Plan Mode、验证标准、上下文管理等项目级打法。
   - [Everything Claude Code 总览]({{< relref "project-practice/everything-claude-code" >}})：生产级配置集合，适合长期打项目。
   - [从需求到设计原型]({{< relref "project-practice/requirements-to-design-prototype" >}})：从模糊构思到高保真原型与可执行代码的闭环实践。
+  - [Google Stitch × Figma × MCP 实践]({{< relref "project-practice/google-stitch-figma-mcp" >}})：设计稿、原型与 MCP 工具链联动。
+  - [其他平台实践速览]({{< relref "project-practice/other-platform-practices" >}})：除主线工具外的补充平台与用法入口。
   - [豆包 AI 绘图闭环小练习]({{< relref "project-practice/ai-drawing-practice" >}})：从提示词到无水印成品图的一次性练习。
+  - [Kiro 实战：旧项目改 bug / 新项目新需求]({{< relref "project-practice/kiro-practice" >}})：Spec-Driven Agent IDE 两套可照做流程。
 
 - **7) 资源与控成本（补短板 + 少花钱也能稳定产出）**
   - [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}})：免费额度、Token 优化与多端复用策略。

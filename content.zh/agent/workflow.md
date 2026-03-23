@@ -121,7 +121,7 @@ ClaudeCode workflow 可以理解为一种 **可组合、可复用、带流程控
 
 更进一步的多模型协作与工程化实践，可以参考站内汇总：
 
-- [Coding Agent 协作实践]({{< relref "ai-programming/ccg-workflow" >}})
+- [Coding Agent 协作实践]({{< relref "workflow/ccg-workflow" >}})
 
 ---
 

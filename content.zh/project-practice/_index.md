@@ -24,6 +24,8 @@ noTocArea: true
   这是“路线图”：把站内相关内容按端到端顺序串起来，适合先通读一遍建立地图。
 - [Cursor 实战上手指南（10分钟）]({{< relref "project-practice/cursor" >}})  
   先把工具跑起来，避免第一天就卡在配置/订阅/环境上。
+- [Codex 实战上手指南]({{< relref "project-practice/codex" >}})  
+  OpenAI Codex（CLI / 扩展 / Web）安装、登录、Skills、MCP 与和本站其他栏目的衔接。
 
 ### 2) 我已经能写代码，但想把 AI 用到更稳（更少返工）
 

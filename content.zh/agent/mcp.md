@@ -38,7 +38,8 @@ AI应用-->用户：北京今天晴天，5度，北风3级
 
 - [Claude Code MCP 服务器](https://claudecn.com/docs/claude-code/advanced/mcp-servers/) — Claude 桌面/编码场景下的 MCP 配置说明
 - [Zapier MCP](https://actions.zapier.com/settings/mcp/) — 将 Zapier 动作暴露为 MCP 工具
-- [MCP Router](https://mcp-router.net/en) — 本地 MCP 控制平面：集中管理、工作区隔离、请求可见
+- [MCP Router](https://mcp-router.net/en) · [GitHub](https://github.com/mcp-router/mcp-router) — 本地 MCP 控制平面：集中管理、工作区隔离、请求可见
+- [mcp2cli](https://github.com/knowsuchagency/mcp2cli)（[PyPI](https://pypi.org/project/mcp2cli/)）— 将 MCP / OpenAPI / GraphQL 动态转为命令行；支持「懒发现」与缓存，减少每轮注入完整工具 schema 的 token 开销（官方 README 称约 96–99%）。详见下文专题。
 
 ### 服务器与市场
 
@@ -52,6 +53,12 @@ AI应用-->用户：北京今天晴天，5度，北风3级
 
 - [GitMCP](https://gitmcp.io/) — 将任意 GitHub 仓库转为远程 MCP 服务器，便于 AI 理解代码与文档
 
+### mcp2cli：把 MCP / OpenAPI / GraphQL 变成 CLI
+
+[mcp2cli](https://github.com/knowsuchagency/mcp2cli) 是 GitHub 上较受关注的 Python 项目（MIT）：**在运行时**把 **MCP 服务**、**OpenAPI 规范**或 **GraphQL 端点**接成统一命令行界面，**不做代码生成**；子命令与参数随 spec / 工具列表动态生成。安装可用 `uvx mcp2cli --help` 或 `uv tool install mcp2cli`。项目还提供可安装的 Agent Skill（`npx skills add knowsuchagency/mcp2cli --skill mcp2cli`），便于在 Claude Code、Cursor、Codex 等环境里被模型调用。
+
+
+---
 
 ## 常用 MCP 示例
 

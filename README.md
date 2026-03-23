@@ -1,11 +1,10 @@
 <div align="center">
 
-# AI 编程实践指南
+# AI 编程指南
 
-**从模型选型到项目闭环的完整路径**
+**面向有经验开发者的任务导向中文指南**
 
 [![在线阅读](https://img.shields.io/badge/📖_在线阅读-rockyflux.github.io/ai--guide-blue?style=for-the-badge)](https://rockyflux.github.io/ai-guide/)
-
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Hugo](https://img.shields.io/badge/Hugo-0.148.0-ff4088)](https://gohugo.io/)
 [![Deploy](https://github.com/rockyflux/ai-guide/actions/workflows/hugo.yml/badge.svg)](https://github.com/rockyflux/ai-guide/actions/workflows/hugo.yml)
@@ -15,156 +14,136 @@
 
 ---
 
-## 💡 这是什么？
+## 这是什么
 
-面向**有一定经验的开发者**的任务导向中文文档，帮你把 AI 编程从"能用"变成"稳定产出"。
+这是一个按“任务”组织的 AI 编程中文指南，核心路径是：
 
+```text
+选模型与工具 -> 搭环境接模型 -> 协作工作流 -> 智能体工程化 -> 用项目实践跑通闭环
 ```
-选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用项目实践跑通闭环
-```
+
+适合已经有开发经验、希望把 AI 从“偶尔能用”变成“稳定交付”的人。
 
 ![AI Guide](static/images/index/flow.png)
 
-## 🚀 快速开始
+## 从哪里开始
 
-根据你的需求，选择对应的学习路径：
+当前仓库内容已经从原来的“三条主线”扩展为更清晰的“四条主线”：
 
-| 我想... | 从这里开始 |
-|--------|-----------|
-| 🚀 快速上手 AI 编程 | [AI 编程（把代码写出来）](https://rockyflux.github.io/ai-guide/ai-programming/) |
-| 🤖 构建可执行的 Agent 系统 | [AI 智能体（让 AI 真的能干活）](https://rockyflux.github.io/ai-guide/agent/) |
-| 🎯 跑通完整项目闭环 | [项目实践（端到端闭环）](https://rockyflux.github.io/ai-guide/project-practice/) |
+| 主线 | 适合你现在要解决的问题 |
+| --- | --- |
+| [AI 编程](https://rockyflux.github.io/ai-guide/ai-programming/) | 选模型、选工具、搭环境、补方法论 |
+| [协作与工作流](https://rockyflux.github.io/ai-guide/workflow/) | 多模型协作、多 Agent 编排、规格驱动闭环 |
+| [AI 智能体](https://rockyflux.github.io/ai-guide/agent/) | Rules、Skills、MCP、Hooks、Subagents 等工程化机制 |
+| [项目实践](https://rockyflux.github.io/ai-guide/project-practice/) | 从案例到 SOP，把 AI 真正用进项目交付 |
 
-## 📚 三条主线
+## 按任务直达
 
-### 1️⃣ [AI 编程（把代码写出来）](https://rockyflux.github.io/ai-guide/ai-programming/)
-选模型与工具、搭环境到建立协作工作流，目标是稳定产出代码。
-
-### 2️⃣ [AI 智能体（让 AI 真的能干活）](https://rockyflux.github.io/ai-guide/agent/)
-把 Prompt / Rules / Skills / MCP / Hooks / Subagents 串成可执行系统。
-
-### 3️⃣ [项目实践（跑通端到端闭环）](https://rockyflux.github.io/ai-guide/project-practice/)
-从 0 到 1 的项目路径，包含案例与可复用 SOP。
-
-## 🎯 我现在要做什么？
-
-<details>
-<summary><b>🌟 快速入门（先跑通一遍）</b></summary>
-
-- [AI 编程学习路径](https://rockyflux.github.io/ai-guide/ai-programming/guide/)
-- [Cursor 实战上手指南](https://rockyflux.github.io/ai-guide/project-practice/cursor/)
-- [新手端到端项目路径](https://rockyflux.github.io/ai-guide/project-practice/practices-two/)
-- [从需求到设计原型](https://rockyflux.github.io/ai-guide/project-practice/requirements-to-design-prototype/)
-- [豆包 AI 绘图闭环小练习](https://rockyflux.github.io/ai-guide/project-practice/ai-drawing-practice/)
-
-</details>
-
-<details>
-<summary><b>🤖 选模型和花多少钱</b></summary>
+### 1. 我想先选模型、选工具、算成本
 
 - [AI 编程模型选型](https://rockyflux.github.io/ai-guide/ai-programming/models/)
+- [AI Coding Plan 订阅选型](https://rockyflux.github.io/ai-guide/ai-programming/coding-plan/)
+- [AI 编程工具汇总](https://rockyflux.github.io/ai-guide/ai-programming/vb-code-tool/)
+- [AI CLI 工具横评](https://rockyflux.github.io/ai-guide/ai-programming/code-cli/)
 - [2026 年主流大模型盘点](https://rockyflux.github.io/ai-guide/large-models/models-2026/)
-- [LLM 排行榜与评测基准](https://rockyflux.github.io/ai-guide/large-models/Leaderboard/)
 - [大模型价格与成本对比](https://rockyflux.github.io/ai-guide/large-models/model-price/)
-- [AI 产品推荐](https://rockyflux.github.io/ai-guide/large-models/ai-product/)
-- [AI 编程省钱之道](https://rockyflux.github.io/ai-guide/ai-programming/ai-coding-save-money/)
 
-</details>
-
-<details>
-<summary><b>🛠️ 配环境和选工具</b></summary>
+### 2. 我想把环境和模型接口一次配好
 
 - [开发环境准备](https://rockyflux.github.io/ai-guide/ai-programming/dev-start/)
-- [环境配置与增强工具集](https://rockyflux.github.io/ai-guide/ai-programming/env-and-tools/)
+- [AI 编程环境配置与增强工具集](https://rockyflux.github.io/ai-guide/ai-programming/env-and-tools/)
 - [ZCF 零配置 Claude Code](https://rockyflux.github.io/ai-guide/ai-programming/zcf/)
 - [CC-Switch 可视化配置](https://rockyflux.github.io/ai-guide/ai-programming/cc-switch/)
 - [CLI 代理 API（CPA）](https://rockyflux.github.io/ai-guide/ai-programming/cpa/)
-- [AI 编程工具汇总](https://rockyflux.github.io/ai-guide/ai-programming/vb-code-tool/)
-- [AI CLI 工具横评](https://rockyflux.github.io/ai-guide/ai-programming/code-cli/)
-- [AI Coding Plan 订阅选型](https://rockyflux.github.io/ai-guide/ai-programming/coding-plan/)
 
-</details>
+### 3. 我想把“对话”升级成“可交付工作流”
 
-<details>
-<summary><b>⚙️ 建工作流 / 做智能体</b></summary>
+- [协作与工作流栏目入口](https://rockyflux.github.io/ai-guide/workflow/)
+- [工作流项目集](https://rockyflux.github.io/ai-guide/workflow/ccg-workflow/)
+- [CCG 多模型协作开发](https://rockyflux.github.io/ai-guide/workflow/ccg/)
+- [GSD（Get Shit Done）](https://rockyflux.github.io/ai-guide/workflow/gsd/)
+- [Superpowers](https://rockyflux.github.io/ai-guide/workflow/superpowers/)
+- [oh-my-claudecode（OMC）](https://rockyflux.github.io/ai-guide/workflow/oh-my-claudecode/)
+- [Trellis](https://rockyflux.github.io/ai-guide/workflow/trellis/)
 
-- [Coding Agent 协作实践](https://rockyflux.github.io/ai-guide/ai-programming/ccg-workflow/)
-- [CCG 多模型协作开发](https://rockyflux.github.io/ai-guide/ai-programming/ccg/)
+### 4. 我想搭一个能长期复用的 Agent 体系
+
 - [Agent 工作流](https://rockyflux.github.io/ai-guide/agent/workflow/)
-- [Rules / Skills / MCP / Hooks / Subagents / Commands / Output styles](https://rockyflux.github.io/ai-guide/agent/)
-- [Claude Code 最佳实践](https://rockyflux.github.io/ai-guide/project-practice/best-practices/)
-- [Everything Claude Code 总览](https://rockyflux.github.io/ai-guide/project-practice/everything-claude-code/)
+- [Rules](https://rockyflux.github.io/ai-guide/agent/rules/)
+- [Skills](https://rockyflux.github.io/ai-guide/agent/skills/)
+- [MCP](https://rockyflux.github.io/ai-guide/agent/mcp/)
+- [Hooks](https://rockyflux.github.io/ai-guide/agent/hooks/)
+- [Subagents](https://rockyflux.github.io/ai-guide/agent/subagents/)
+- [Commands](https://rockyflux.github.io/ai-guide/agent/commands/)
+- [Output styles](https://rockyflux.github.io/ai-guide/agent/output-styles/)
 
-</details>
+### 5. 我想照着案例先跑通一个完整项目
 
-<details>
-<summary><b>📖 进阶学习与资源</b></summary>
+- [新手端到端项目实战路径](https://rockyflux.github.io/ai-guide/project-practice/practices-two/)
+- [Cursor 实战上手指南](https://rockyflux.github.io/ai-guide/project-practice/cursor/)
+- [Codex 实战上手指南](https://rockyflux.github.io/ai-guide/project-practice/codex/)
+- [项目实践：从一个具体案例开始](https://rockyflux.github.io/ai-guide/project-practice/practices-one/)
+- [从需求到设计原型](https://rockyflux.github.io/ai-guide/project-practice/requirements-to-design-prototype/)
+- [Google Stitch × Figma × MCP 实践](https://rockyflux.github.io/ai-guide/project-practice/google-stitch-figma-mcp/)
+- [其他平台实践速览](https://rockyflux.github.io/ai-guide/project-practice/other-platform-practices/)
+- [豆包 AI 绘图闭环小练习](https://rockyflux.github.io/ai-guide/project-practice/ai-drawing-practice/)
 
-- [Vibe Coding 指南](https://rockyflux.github.io/ai-guide/ai-programming/vibe-coding/)
-- [AI 编程中文社区与课程](https://rockyflux.github.io/ai-guide/ai-programming/ai-resources-guide/)
-- [AI 学习路线与资料](https://rockyflux.github.io/ai-guide/tutorials/ai-learning-guide/)
-- [GitHub 周边工具速查](https://rockyflux.github.io/ai-guide/tutorials/github-extensions/)
-- [Awesome LLM Apps](https://rockyflux.github.io/ai-guide/tutorials/awesome-llm-apps/)
-- [Awesome OpenClaw](https://rockyflux.github.io/ai-guide/open-source-community/awesome-openclaw/)
+## 仓库结构
 
-</details>
+```text
+ai-guide/
+├── README.md
+├── hugo.toml
+├── content.zh/
+│   ├── _index.md
+│   ├── ai-programming/
+│   ├── workflow/
+│   ├── agent/
+│   ├── project-practice/
+│   ├── large-models/
+│   ├── tutorials/
+│   └── open-source-community/
+├── layouts/
+├── assets/
+├── static/
+├── .github/
+└── issues/
+```
 
-## 💻 本地开发
+## 本地开发
 
-### 前置要求
+前置要求：
 
-- **Hugo Extended** 0.148.0+ （需要 Extended 版本支持 Dart Sass）
-- **Git** 2.0+
+- Hugo Extended 0.148.0+
+- Git
 
-### 快速启动
+启动方式：
 
 ```bash
-# 克隆仓库
-git clone https://github.com/rockyflux/ai-guide.git
-cd ai-guide
-
-# 初始化子模块
 git submodule update --init --recursive
-
-# 启动本地服务器
 hugo server
 ```
 
-然后访问 `http://localhost:1313` 即可预览。
+默认访问：`http://localhost:1313`
 
-## 🤝 参与贡献
+## 参与贡献
 
-我们欢迎所有形式的贡献！
+- 仓库入口：[README.md](README.md)
+- 贡献说明：[CONTRIBUTING.md](CONTRIBUTING.md)
+- 安全策略：[SECURITY.md](SECURITY.md)
+- 问题反馈：[GitHub Issues](https://github.com/rockyflux/ai-guide/issues)
+- 交流讨论：[GitHub Discussions](https://github.com/rockyflux/ai-guide/discussions)
 
-### 贡献流程
+主要内容位于 `content.zh/`，Hugo 主题配置见 `hugo.toml`，局部覆盖在 `layouts/`。
 
-1. **Fork** 本仓库
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的修改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启一个 **Pull Request**
+## 许可证
 
-### 内容结构
-
-- 📝 主要内容位于 `content.zh/` 目录（Markdown 格式）
-- 🎨 样式文件在 `assets/` 目录
-- 🖼️ 图片资源在 `static/images/` 目录
-
-### 反馈与讨论
-
-- 💬 [GitHub Discussions](https://github.com/rockyflux/ai-guide/discussions) - 参与讨论
-- 🐛 [GitHub Issues](https://github.com/rockyflux/ai-guide/issues) - 提交问题与建议
-
-## 📄 许可证
-
-本项目采用 [MIT 许可证](LICENSE) 开源。
+本项目采用 [MIT](LICENSE) 许可证。
 
 ---
 
 <div align="center">
 
-**如果这个项目对你有帮助，请给个 ⭐️ Star 支持一下！**
-
-Made with ❤️ by [rockyflux](https://github.com/rockyflux)
+**如果这个仓库对你有帮助，欢迎点个 Star。**
 
 </div>

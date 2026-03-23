@@ -97,4 +97,3 @@ hooks:
 
 - [Hooks 配方：把经验变成自动化护栏](https://claudecn.com/docs/claude-code/advanced/hooks-recipes/)
 - [https://code.claude.com/docs/zh-CN/hooks-guide](https://code.claude.com/docs/zh-CN/hooks-guide)
-- [https://code.claude.com/docs/zh-CN/hooks-guide](https://code.claude.com/docs/zh-CN/hooks-guide)

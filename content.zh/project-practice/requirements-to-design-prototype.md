@@ -6,6 +6,8 @@ bookToc: true
 ---
 ## 从需求到设计原型：AI 辅助开发全链路指南
 
+> 如果你已经走通了「PRD → 原型 → 技术栈转换」，可以继续看进阶篇：**[Google Stitch + Figma + MCP：从设计到代码，AI 统统搞定]({{< relref "project-practice/google-stitch-figma-mcp" >}})**。
+
 本指南记录了一套利用 AI 工具链实现从“模糊构思”到“高保真原型”再到“可执行代码”的极速开发闭环。
 
 ---
@@ -66,7 +68,7 @@ bookToc: true
 
 ### 第三步：技术栈转换（Stitch -> 技术栈）
 
-**操作：** Stitch 导出 HTML 后，我们需要将其“翻译”为开发用的组件（如 React + Tailwind）。
+Stitch 导出 HTML 后，我们需要将其“翻译”为开发用的组件（如 React + Tailwind）。
 
 **发给 AI 的转换提示词：**
 
@@ -76,6 +78,13 @@ bookToc: true
 2. 要求：将页面拆分为 Header, TaskCard, StatsSection 等独立组件。
 3. 逻辑：保持原有的 CSS 视觉效果，但使用 Tailwind 类名重写所有样式。
 4. 交互：使用 Vue 组件状态管理简单的页面切换（如组合式 API 或 `<script setup>` 写法）。”
+```
+
+Stitch导出Figma，
+安装：[Framelink_Figma_MCP](https://www.framelink.ai/docs/quickstart)
+```
+Figma UI设计稿：@https://www.figma.com/design/xx
+你是一个大厂资深前端研发工程师，根据我提供的Figma UI设计稿，调用MCP，结合项目已有的技术实现前端页面
 ```
 
 ### 第四步：代码工程化（Cursor / Claude Code）

@@ -131,6 +131,32 @@ npx skills add https://github.com/anthropics/skills --skill frontend-design
 npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
 ```
 
+#### 推荐 Top10：面向前端 / 产品 / UI 的 Agent Skills
+
+这 10 个 Skills 按**设计落地频率**、对**视觉与交互质量**的直接提升、以及在 **Codex / Claude Code** 等环境中的**高复用性**来选，适合前端、产品与 UI 协作场景。
+
+| # | Skill | 来源 | 说明 | 仓库 |
+|---|--------|------|------|------|
+| 1 | `frontend-skill` | OpenAI | landing / 品牌 / demo；视觉论点、内容节奏、首屏 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/frontend-skill) |
+| 2 | `frontend-design` | Anthropic | 高完成度、强风格；页面更有辨识度 | [源码](https://github.com/anthropics/skills/tree/main/skills/frontend-design) |
+| 3 | `figma-implement-design` | OpenAI | 设计稿到代码；产设研协作常用 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/figma-implement-design) |
+| 4 | `web-design-guidelines` | Vercel | UI 审查：a11y、表单、动效、排版、交互补漏 | [源码](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines) |
+| 5 | `react-best-practices` | Vercel | React / Next.js 实现与性能质量 | [源码](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices) |
+| 6 | `playwright` | OpenAI | 真实浏览器验证；UI 调试与回归执行层 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/playwright) |
+| 7 | `webapp-testing` | Anthropic | 本地应用验证；行为、截图、日志、交互回归 | [源码](https://github.com/anthropics/skills/tree/main/skills/webapp-testing) |
+| 8 | `canvas-design` | Anthropic | 画布式视觉探索、展示页、概念设计 | [源码](https://github.com/anthropics/skills/tree/main/skills/canvas-design) |
+| 9 | `brand-guidelines` | Anthropic | 官网 / 营销 / 设计系统 / 品牌一致性 | [源码](https://github.com/anthropics/skills/tree/main/skills/brand-guidelines) |
+| 10 | `vercel-deploy-claimable` | Vercel | 非设计类；快速部署预览、缩短反馈闭环 | [源码](https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-deploy-claimable) |
+
+**怎么选？**
+
+| 场景 | 推荐 Skills |
+|------|-------------|
+| 偏品牌官网 / 营销页 | `frontend-skill`、`frontend-design`、`brand-guidelines` |
+| 偏产品 UI / 设计稿还原 | `figma-implement-design`、`react-best-practices`、`web-design-guidelines` |
+| 偏交互验证 / 可用性 | `playwright`、`webapp-testing` |
+| 偏创意探索 | `canvas-design` |
+
 更多可以查看开发提示词：[https://skillsmp.com/zh/categories/development](https://skillsmp.com/zh/categories/development)
 
 ### 七、OpenClaw：养虾 + Skills（案例）
@@ -147,8 +173,10 @@ npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
   - [SkillsHunt](https://skillshunt.io/)：支持标签与热度筛选的技能发现与搜索平台。
 - **工具与仓库**
   - [Skills.sh](https://skills.sh/)：命令行技能管理工具，一条命令即可安装 / 更新 Skills。
+  https://mcpmarket.com/zh/tools/skills/leaderboard
   - [Impeccable](https://impeccable.style/)：对 `frontend-design` 的增强版与设计指令集（含 /polish、/audit、/distill 等），并提供一键安装方式。
   - [Vercel Skills](https://github.com/vercel-labs/skills)：Vercel 团队维护的示例技能仓库，偏 Web / 全栈场景。
+  - [MiniMax Skills](https://github.com/MiniMax-AI/skills)：MiniMax 官方维护的开发技能库（Beta），面向 Claude Code、Cursor、Codex、OpenCode 等工具。
   - [baoyu-skills](https://github.com/jimliu/baoyu-skills)：根据文本内容自动生成高质量配图。
   - [ClawHub Skills](https://clawhub.ai/skills)：ClawHub 平台的技能市场与发现页。
   - [Skill Creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：Anthropic 官方提供的技能模板与创建向导。

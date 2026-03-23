@@ -38,7 +38,7 @@ bookHidden: true
 ### 路线 C｜准备长期用（进阶）
 
 - **多模型/多 Agent 协作（把任务拆批次、角色化）**  
-  - [Coding Agent 协作实践]({{< relref "ai-programming/ccg-workflow" >}})
+  - [Coding Agent 协作实践]({{< relref "workflow/ccg-workflow" >}})
 - **把配置与方法论体系化（适合长期维护）**  
   - [Everything Claude Code 总览]({{< relref "project-practice/everything-claude-code" >}})
 

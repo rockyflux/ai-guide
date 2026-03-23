@@ -13,6 +13,7 @@
   - `content.zh/ai-programming/_index.md`：AI 编程（工具与工作方式）
   - `content.zh/agent/_index.md`：AI 智能体（Rules/Skills/MCP/Hooks/Subagents）
   - `content.zh/project-practice/_index.md`：项目实践（端到端闭环）
+  - `content.zh/workflow/_index.md`：协作工作流（CCG、GSD 等）
 
 ## 本地开发（Hugo）
 
@@ -31,6 +32,7 @@ ai-guide/
 ├── content.zh/                  # 中文内容（Markdown）
 │   ├── _index.md                # 站点首页/总导航
 │   ├── ai-programming/          # 主线：AI 编程实战
+│   ├── workflow/                # 协作工作流（CCG / 多 Agent 等）
 │   ├── agent/                   # 主线：Agent 体系
 │   ├── project-practice/        # 主线：项目闭环实践
 │   ├── large-models/            # 支线：模型认知/对比/价格
@@ -51,7 +53,8 @@ ai-guide/
 ```mermaid
 flowchart TB
   Root[content.zh/_index.md<br/>总导航（任务导向）]
-  Root --> AP[ai-programming<br/>选型/环境/工作流]
+  Root --> AP[ai-programming<br/>选型/环境/工具]
+  Root --> WF[workflow<br/>CCG/多模型协作等]
   Root --> AG[agent<br/>Rules/Skills/MCP/Hooks/Subagents]
   Root --> PP[project-practice<br/>端到端闭环实践]
   Root --> LM[large-models<br/>市场/对比/成本]
@@ -61,7 +64,8 @@ flowchart TB
   AP --> AP1[models.md<br/>编程模型选型]
   AP --> AP2[dev-start.md<br/>开发环境准备]
   AP --> AP3[env-and-tools.md<br/>配置增强工具集]
-  AP --> AP4[ccg.md / ccg-workflow.md<br/>多模型/多Agent协作]
+
+  WF --> WF1[ccg.md / ccg-workflow.md<br/>多模型/多Agent协作]
 
   AG --> AG1[workflow.md<br/>阶段/产物/门禁/状态]
   AG --> AG2[mcp.md<br/>工具接入协议/生态]
@@ -78,7 +82,10 @@ flowchart TB
 
 - **AI 编程（`content.zh/ai-programming/`）**
   - **入口**：`content.zh/ai-programming/_index.md`
-  - **代表页面**：`models.md`、`dev-start.md`、`env-and-tools.md`、`ccg-workflow.md`、`ccg.md`
+  - **代表页面**：`models.md`、`dev-start.md`、`env-and-tools.md`
+- **协作工作流（`content.zh/workflow/`）**
+  - **入口**：`content.zh/workflow/_index.md`
+  - **代表页面**：`ccg-workflow.md`、`ccg.md`
 - **智能体（`content.zh/agent/`）**
   - **入口**：`content.zh/agent/_index.md`
   - **代表页面**：`workflow.md`、`skills.md`、`mcp.md`（以及 `rules.md/hooks.md/subagents.md/commands.md/output-styles.md`）

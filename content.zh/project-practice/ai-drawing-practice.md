@@ -56,6 +56,7 @@ bookFlatSection: true
    - [gemini-3-pro-image-preview](https://tansuo2021.github.io/gemini-3-pro-image-preview/)
    - [Banana Prompt Quicker](https://glidea.github.io/banana-prompt-quicker/)
    - [baoyu-skills（GitHub 仓库）](https://github.com/JimLiu/baoyu-skills) ，或通过 [skills.sh 市场页面](https://skills.sh/jimliu/baoyu-skills) 安装相关技能
+   - [Gemini 提示词示例 001–050](https://docs.2sj.ai/gemini/prompt/001-050)
 2. 选一个接近目标风格的模板（插画、二次元、写实等）。
 3. 填写画面描述：主体、场景、构图、光影、风格等关键信息。
 4. 按需调整尺寸、细节等参数。

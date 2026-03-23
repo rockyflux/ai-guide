@@ -11,7 +11,7 @@ date: 2026-02-09T23:34:00+08:00
 
 >Subagents 是处理特定类型任务的专门 AI 助手。每个 subagent 在自己的上下文窗口中运行，具有自定义系统提示、特定的工具访问权限和独立的权限。当 Claude 遇到与 subagent 描述相匹配的任务时，它会委托给该 subagent，该 subagent 独立工作并返回结果。
 
->子代理架构则换了一个思路：既然一个模型的上下文有限，那就让多个模型分工合作，每个模型只需要关注自己负责的那部分上下文，即分而治之。[http://localhost:1313/large-models/context-scarcity-rag-memory-skills/#3子代理架构sub-agent通过分工实现上下文隔离](http://localhost:1313/large-models/context-scarcity-rag-memory-skills/#3子代理架构sub-agent通过分工实现上下文隔离)
+>子代理架构则换了一个思路：既然一个模型的上下文有限，那就让多个模型分工合作，每个模型只需要关注自己负责的那部分上下文，即分而治之。详见 [《上下文设计哲学》· 子代理架构（Sub-Agent）]({{< relref "large-models/context-scarcity-rag-memory-skills.md#3子代理架构sub-agent通过分工实现上下文隔离" >}})。
 
 `subagents` 的价值是“**换脑子**”：把某类任务的角色、目标、输出格式与权限边界隔离出来，让它像专职同事一样稳定完成长链路工作。
 

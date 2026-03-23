@@ -1,11 +1,9 @@
 ---
-title: 多Agent协作：工作流实践
+title: 工作流项目集
 weight: 20
 bookToc: false
 noTocArea: true
 ---
-
-#  Awesome CCG Workflow：多 Coding Agent 协作实践
 
 
 ## 1\. 介绍说明
@@ -19,35 +17,11 @@ noTocArea: true
 | 工具链编排 | 需要对工具链进行编排：终端 CI、协作配置（MCP/Skills 等）、各 Agent 的 Prompt 与行为准则等 |
 
 
-## 2\. 案例介绍（CCG）
-
-更完整的原理与实践细节，可以参考专门页面：[CCG 多模型协作工作流详解]({{< relref "ai-programming/ccg" >}})。
-
-```bash
-npx ccg-workflow
-```
-
-按照命令行提示执行后，脚本会自动在电脑的 `.claude` 目录下生成  `skills/` `commands/` `agents/` `workflows/` 等子目录中的配置文件。  
-配置完成后，Claude Code、Cursor 等 IDE 就可以直接识别并调用这些工作流与技能，无需手动拷贝或重复配置。
-
-
-## 3\. 案例介绍（Superpowers）
-
->🚀开发者必看！Superpowers把专业工程团队方法论固化成Skills，让Claude Code告别越写越乱的困境：规格驱动+代码质量双重保障！AI编程新范式！头脑风暴+计划+执行一条龙自动化
->
->更完整的原理与实践细节，可以参考：[https://zread.ai/obra/superpowers](https://zread.ai/obra/superpowers);[B站视频](https://b23.tv/0ysOZuu)
-```bash
-/plugin marketplace add obra/superpowers-marketplace
-/plugin install superpowers@superpowers-marketplace
-```
----
-
-
-## 4\. 项目列表
+## 2\. 项目列表
 
 |#|名称|项目链接|描述/关键词|仓库解读|
 |---|---|---|---|---|
-|1|[🔥ccg-workflow]({{< relref "ai-programming/ccg" >}})|[fengshao1227/ccg-workflow](https://github.com/fengshao1227/ccg-workflow)|多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17+ 个命令|[Zread](https://zread.ai/fengshao1227/ccg-workflow)|
+|1|[🔥ccg-workflow]({{< relref "workflow/ccg" >}})|[fengshao1227/ccg-workflow](https://github.com/fengshao1227/ccg-workflow)|多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17+ 个命令|[Zread](https://zread.ai/fengshao1227/ccg-workflow)|
 |2|[🔥claude-code-workflow](https://github.com/catlog22/Claude-Code-Workflow)|[catlog22/Claude-Code-Workflow](https://github.com/catlog22/Claude-Code-Workflow)|CCW 提供了基于 Team 架构 v2 和 Skill 工作流系统 的完整工作流体系，覆盖从快速原型到完整团队编排的软件开发全生命周期。|[Zread](https://zread.ai/catlog22/Claude-Code-Workflow)|
 |3|[Claude Code Bridge (ccb)](https://github.com/bfly123/claude_code_bridge)|[bfly123/claude_code_bridge](https://github.com/bfly123/claude_code_bridge)|终端分屏多模型协作工具 Claude · Codex · Gemini · OpenCode · Droid 轻量异步通讯，交互皆可见，模型皆可控|[Zread](https://zread.ai/bfly123/claude_code_bridge)|
 |4|[cca (Claude Code AutoFlow)](https://github.com/bfly123/claude_code_autoflow)|[bfly123/claude_code_autoflow](https://github.com/bfly123/claude_code_autoflow)|Claude Code AutoFlow (cca) 是一个专为 AI 辅助开发设计的结构化任务自动化工作流系统|[Zread](https://zread.ai/bfly123/claude_code_autoflow)|
@@ -62,5 +36,7 @@ npx ccg-workflow
 |13|[claude-team-mcp](https://github.com/7836246/claude-team-mcp)|[7836246/claude-team-mcp](https://github.com/7836246/claude-team-mcp)|Claude + Codex + Gemini，多智能体 MCP 服务器|[Zread](https://zread.ai/7836246/claude-team-mcp)|
 |14|[myclaude](https://github.com/cexll/myclaude/tree/master)|[cexll/myclaude](https://github.com/cexll/myclaude/tree/master)|Claude + Codex + Gemini，双智能体架构与可插拔 AI 后端|[Zread](https://zread.ai/cexll/myclaude)|
 |15|[Trellis](https://github.com/mindfold-ai/Trellis)|[mindfold-ai/Trellis](https://github.com/mindfold-ai/Trellis)|一体化 AI 框架与工具包|[Zread](https://zread.ai/mindfold-ai/Trellis)|
-
-
+|16|[🔥get-shit-done](https://github.com/gsd-build/get-shit-done)|[gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done)|A collaborative productivity/resource for multi-model AI coding workflows; 提供多模型协作、任务编排、以及实用工具示例|[Zread](https://zread.ai/gsd-build/get-shit-done)|
+|17|[spec-workflow-mcp](https://github.com/Pimzino/spec-workflow-mcp)|[Pimzino/spec-workflow-mcp](https://github.com/Pimzino/spec-workflow-mcp)|基于 MCP 的规格驱动开发：按「需求 → 设计 → 任务」顺序产出；配套实时 Web 仪表盘、VSCode 扩展、审批流与任务进度/实现日志|[Zread](https://zread.ai/Pimzino/spec-workflow-mcp)|
+|18|[Spec Kit](https://github.com/github/spec-kit)|[github/spec-kit](https://github.com/github/spec-kit)|GitHub 官方 SDD 工具包：Specify CLI 初始化 + `/speckit.*` 规格→计划→任务→实现；支持 Cursor / Claude / Codex 等多 Agent，extensions 与 presets 可定制|[文档站](https://github.github.com/spec-kit/)|
+|19|[OpenSpec](https://openspec.dev/)|[Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec)|轻量规格驱动框架：规格与代码同仓（`openspec/specs/` 等）；变更产出 proposal、design、tasks 与 spec delta，便于评审与跨会话对齐；Claude Code / Cursor / Codex 等多工具原生斜杠命令|[官网](https://openspec.dev/)|

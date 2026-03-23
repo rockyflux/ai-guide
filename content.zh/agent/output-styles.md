@@ -2,6 +2,7 @@
 title: output-style
 weight: 3
 date: 2026-02-09T23:34:00+08:00
+bookHidden: true
 ---
 
 # 输出样式

@@ -33,8 +33,8 @@ bookFlatSection: true
 
 ### 3. 工作流与实战（从能用到好用）
 
-- [Coding Agent 协作实践]({{< relref "ai-programming/ccg-workflow" >}}) — 多 Agent 分工协作、任务闭环
-- [CCG 多模型协作开发]({{< relref "ai-programming/ccg" >}}) — Claude + Codex + Gemini 编排
+- [Coding Agent 协作实践]({{< relref "workflow/ccg-workflow" >}}) — 多 Agent 分工协作、任务闭环
+- [CCG 多模型协作开发]({{< relref "workflow/ccg" >}}) — Claude + Codex + Gemini 编排
 
 ### 4. 进阶学习与参考资料
 
