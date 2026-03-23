@@ -1,8 +1,6 @@
 ---
-title: Claude Code Agent Teams（蜂群）使用指南
-weight: 23
-bookToc: false
-noTocArea: true
+title: Claude Code Agent Teams
+weight: 26
 ---
 
 # Claude Code Agent Teams 使用指南
