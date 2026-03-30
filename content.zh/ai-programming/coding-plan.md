@@ -64,35 +64,35 @@ noTocArea: true
 ## 国内主流 Coding Plan
 以下信息用于快速横向比较，价格与套餐说明以各平台页面为准。
 
-### 1. 云厂商聚合型
-适合需要兼容多模型、重视稳定接入、希望统一管理成本的人。
+## 一、云厂商聚合型（多模型统一接入，适合需要灵活切换、统一管理的开发者）
+| 平台 | 套餐 | 价格（首月 / 次月 / 续费） | 适合人群 | 核心亮点 | 官方链接 |
+|---|---|---|---|---|---|
+| **阿里云百炼** | Lite | 7.9 元 / 20 元 / 40 元/月 | 低成本试水、多模型切换、预算有限的个人开发者 | 通义千问全家桶+GLM+Kimi+MiniMax多模型聚合，单次请求成本低 | https://www.aliyun.com/benefit/ai/aistar |
+|  | Pro | 39.9 元 / 100 元 / 200 元/月 | 高频开发、复杂项目、团队协作 | 高额度请求、企业级支持，兼容主流IDE | https://bailian.console.aliyun.com/cn-beijing/?tab=model#/efm/coding_plan |
+| **腾讯云 Coding Plan** | Lite | 7.9 元 / 20 元 / 40 元/月（限时至2026.04.19） | 混元模型用户、需要兼容主流工具的开发者 | 混元2.0自研+GLM+Kimi+MiniMax多模型，工具生态完善 | https://cloud.tencent.com/act/pro/codingplan |
+|  | Pro | 39.9 元 / 100 元 / 200 元/月（限时至2026.04.19） | 复杂项目、团队协作、高频使用 | 高配额、企业级服务，腾讯云生态联动 | https://cloud.tencent.com/act/pro/codingplan |
+| **火山引擎方舟** | Lite | 9.9 元 / 20 元 / 40 元/月 | 希望自动路由、多模型接入、豆包模型用户 | 豆包大模型+DeepSeek+Kimi+GLM等6款模型，自动路由优化体验 | https://www.volcengine.com/activity/codingplan |
+|  | Pro | 49.9 元 / 100 元 / 200 元/月 | 高配额使用场景、企业级开发 | 高额度、字节内部技术打磨，稳定性强 | https://www.volcengine.com/product/ark |
+| **百度千帆** | Lite | 9.9 元 / 20 元 / 40 元/月 | 需要控制台切换模型、文心一言用户 | 文心一言+多模型支持，控制台操作便捷，无需改代码切换 | https://cloud.baidu.com/product/codingplan.html |
+|  | Pro | 49.9 元 / 100 元 / 200 元/月 | 高频开发、企业支持、百度生态用户 | 企业级服务、高额度，百度云生态联动 | https://cloud.baidu.com/product/qianfan |
+| **无问芯穹** | Lite | 19.9 元/月（无首月优惠） | 预算有限、需要IDE/CLI接入的开发者 | 轻量多模型支持，IDE/CLI全适配，适合小团队 | https://cloud.infini-ai.com/genstudio/code |
+|  | Pro | 49.9 元/月（无首月优惠） | 小团队长期协作、稳定开发 | 团队协作功能完善，长期使用性价比高 | https://docs.infini-ai.com/gen-studio/coding-plan/ |
+| **华为云码道** | 公测版 | 免费（无收费计划） | 想体验行业化方案、华为生态用户 | 华为自研模型，行业化编码方案，公测全功能免费 | https://www.huaweicloud.com/product/codearts/ai.html |
 
-| 平台 | 套餐 | 价格（首月 / 续费） | 适合谁 | 官方链接 |
-|---|---|---|---|---|
-| **阿里云百炼** | Lite | 7.9 元 / 40 元/月 | 低成本试水，多模型切换 | https://www.aliyun.com/benefit/ai/aistar |
-|  | Pro | 39.9 元 / 200 元/月 | 高频使用者 | https://bailian.console.aliyun.com/cn-beijing/?tab=model#/efm/coding_plan |
-| **腾讯云 Coding Plan** | Lite | 7.9 元 / 20 元/月（限时） | 需要兼容主流工具的人 | https://cloud.tencent.com/act/pro/codingplan |
-|  | Pro | 39.9 元 / 100 元/月（限时） | 复杂项目或团队协作 | https://cloud.tencent.com/act/pro/codingplan |
-| **火山引擎方舟** | Lite | 9.9 元 / 40 元/月 | 希望自动路由、多模型接入 | https://www.volcengine.com/activity/codingplan |
-|  | Pro | 49.9 元 / 200 元/月 | 高配额使用场景 | https://www.volcengine.com/product/ark |
-| **百度千帆** | Lite | 9.9 元 / 40 元/月 | 需要控制台切换模型 | https://cloud.baidu.com/product/codingplan.html |
-|  | Pro | 49.9 元 / 200 元/月 | 高频开发与企业支持 | https://cloud.baidu.com/product/qianfan |
-| **无问芯穹** | Lite | 19.9 元/月 | 预算有限但要接 IDE / CLI | https://cloud.infini-ai.com/genstudio/code |
-|  | Pro | 49.9 元/月 | 小团队长期协作 | https://docs.infini-ai.com/gen-studio/coding-plan/ |
+---
 
-### 2. 大模型厂商原厂计划
-适合已经明确偏好某家模型，或者要用该厂商原生能力的人。
+## 二、大模型厂商原厂计划（原生模型能力，适合明确偏好某家模型的开发者）
+| 平台 | 套餐 | 价格（月付 / 包季优惠） | 适合人群 | 核心亮点 | 官方链接 |
+|---|---|---|---|---|---|
+| **智谱 AI（GLM）** | Lite | 49 元 / 44 元（约9折） | 直接使用GLM Coding能力、普通个人开发者 | GLM-5原生模型，20+款IDE/工具适配，自带MCP工具链 | https://www.bigmodel.cn/glm-coding |
+|  | Pro | 149 元 / 134 元（约9折） | 高额度需求、专业开发者、小团队 | 更高请求额度、优先级调度，复杂项目支持 | https://docs.bigmodel.cn/cn/coding-plan/overview |
+|  | Max | 469 元 / 422 元（约9折） | 高频、长时段使用、企业级开发 | 超高额度、专属服务，企业级稳定性 | 同上 |
+| **MiniMax（国内）** | Starter | 29 元/月（无包季） | 偏重推理能力、低成本试用的轻量开发者 | M2.5模型推理能力强，轻量开发友好 | https://platform.minimaxi.com/subscribe/coding-plan |
+|  | Plus | 49 元/月（无包季） | 中频开发者、日常编码需求 | 平衡额度与价格，适合日常开发 | 同上 |
+|  | Max | 119 元/月（无包季） | 高频使用、复杂项目、专业开发者 | 高额度、优先调度，复杂编码场景适配 | 同上 |
+| **月之暗面（Kimi）** | Code | 49 元/月（无包季） | 长上下文、文档转代码、Kimi模型用户 | Kimi长上下文原生能力，文档转代码、大文件分析优势明显 | https://kimi.com/code |
 
-| 平台 | 套餐 | 价格（月 / 包季） | 适合谁 | 官方链接 |
-|---|---|---|---|---|
-| **智谱 AI** | Lite | 49 元 / 44 元 | 想直接使用 GLM Coding 能力 | https://www.bigmodel.cn/glm-coding |
-|  | Pro | 149 元 / 134 元 | 需要更高额度和优先级 | https://docs.bigmodel.cn/cn/coding-plan/overview |
-|  | Max | 469 元 / 422 元 | 高频、长时段使用 | 同上 |
-| **MiniMax** | Starter | 29 元/月 | 偏重推理能力，先低成本试用 | https://platform.minimaxi.com/subscribe/coding-plan |
-|  | Plus | 49 元/月 | 中频开发者 | 同上 |
-|  | Max | 119 元/月 | 高频使用 | 同上 |
-| **月之暗面（Kimi）** | Code | 49 元/月 | 长上下文、文档转代码场景 | https://kimi.com/code |
-| **华为云码道** | 公测 | 免费 | 想先体验行业化方案 | https://www.huaweicloud.com/product/codearts/ai.html |
+
 
 ### 3. 国内 AI 代码工具订阅
 适合主要在 IDE 内完成编码，希望少折腾 API 和接入细节的人。

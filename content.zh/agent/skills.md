@@ -131,7 +131,7 @@ npx skills add https://github.com/anthropics/skills --skill frontend-design
 npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
 ```
 
-#### 推荐 Top10：面向前端 / 产品 / UI 的 Agent Skills
+### 推荐 Top10：面向前端 / 产品 / UI 的 Agent Skills
 
 这 10 个 Skills 按**设计落地频率**、对**视觉与交互质量**的直接提升、以及在 **Codex / Claude Code** 等环境中的**高复用性**来选，适合前端、产品与 UI 协作场景。
 
@@ -147,6 +147,30 @@ npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
 | 8 | `canvas-design` | Anthropic | 画布式视觉探索、展示页、概念设计 | [源码](https://github.com/anthropics/skills/tree/main/skills/canvas-design) |
 | 9 | `brand-guidelines` | Anthropic | 官网 / 营销 / 设计系统 / 品牌一致性 | [源码](https://github.com/anthropics/skills/tree/main/skills/brand-guidelines) |
 | 10 | `vercel-deploy-claimable` | Vercel | 非设计类；快速部署预览、缩短反馈闭环 | [源码](https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-deploy-claimable) |
+
+### 推荐 Top10：面向通用办公场景的 Agent Skills
+这 10 个精选认证 Skills（Anthropic + OpenAI）覆盖了办公高频链路：Office 四件套、PDF 处理、会议转录、协作写作、知识沉淀、截图留痕与演示美化。
+
+**什么时候用什么？**
+
+- 基础四件套：`pptx`、`pdf`、`docx`、`xlsx`
+- 会议与知识沉淀：`transcribe`、`notion-knowledge-capture`
+- 组织沟通与写作：`internal-comms`、`doc-coauthoring`
+- 辅助交付与美化：`screenshot`、`theme-factory`
+
+| # | Skill | 来源 | 典型用途 | 仓库 |
+|---|-------|------|----------|------|
+| 1 | `pptx` | Anthropic | 做汇报、改汇报、读 PPT、按模板生成 deck | [源码](https://github.com/anthropics/skills/tree/main/skills/pptx) |
+| 2 | `pdf` | Anthropic | 提取、合并、OCR、表单处理、拆分 PDF | [源码](https://github.com/anthropics/skills/tree/main/skills/pdf) |
+| 3 | `docx` | Anthropic | 正式报告、方案、备忘录、函件、模板文档 | [源码](https://github.com/anthropics/skills/tree/main/skills/docx) |
+| 4 | `xlsx` | Anthropic | Excel 表格处理、公式、格式化、图表、交付工作簿 | [源码](https://github.com/anthropics/skills/tree/main/skills/xlsx) |
+| 5 | `transcribe` | OpenAI | 会议录音、访谈、音频转文字 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/transcribe) |
+| 6 | `internal-comms` | Anthropic | 周报、项目更新、公告、内部沟通稿 | [源码](https://github.com/anthropics/skills/tree/main/skills/internal-comms) |
+| 7 | `doc-coauthoring` | Anthropic | 协作写作，把零散想法整理成正式文档 | [源码](https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring) |
+| 8 | `notion-knowledge-capture` | OpenAI | 把会议、讨论、决策沉淀进 Notion 知识库 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/notion-knowledge-capture) |
+| 9 | `screenshot` | OpenAI | 截图留痕、问题反馈、操作说明、培训材料 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/screenshot) |
+| 10 | `theme-factory` | Anthropic | 统一文档/演示的视觉主题和正式感 | [源码](https://github.com/anthropics/skills/tree/main/skills/theme-factory) |
+
 
 **怎么选？**
 
@@ -171,9 +195,10 @@ npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
   - [Agent Skills（claudecn）](https://claudecn.com/docs/agent-skills/)：面向中文用户的解读与示例，更贴近国内使用场景。
   - [Agent Skills（agentskills.io）](https://agentskills.io/home)：社区维护的 Skills 导航站，按场景浏览和搜索技能。
   - [SkillsHunt](https://skillshunt.io/)：支持标签与热度筛选的技能发现与搜索平台。
+  - [YouMind Skills](https://youmind.com/zh-CN/skills)：面向学习与创作场景的技能导航与技能包推荐。
 - **工具与仓库**
   - [Skills.sh](https://skills.sh/)：命令行技能管理工具，一条命令即可安装 / 更新 Skills。
-  https://mcpmarket.com/zh/tools/skills/leaderboard
+  - [MCPMarket Skills Leaderboard](https://mcpmarket.com/zh/tools/skills/leaderboard)：技能榜单与工具导航（第三方）。
   - [Impeccable](https://impeccable.style/)：对 `frontend-design` 的增强版与设计指令集（含 /polish、/audit、/distill 等），并提供一键安装方式。
   - [Vercel Skills](https://github.com/vercel-labs/skills)：Vercel 团队维护的示例技能仓库，偏 Web / 全栈场景。
   - [MiniMax Skills](https://github.com/MiniMax-AI/skills)：MiniMax 官方维护的开发技能库（Beta），面向 Claude Code、Cursor、Codex、OpenCode 等工具。

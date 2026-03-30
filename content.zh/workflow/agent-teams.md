@@ -48,7 +48,7 @@ export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
 
 > "创建一个 agent team，一个队友负责前端开发，一个负责后端 API，一个负责编写测试。"
 
-```sql
+```text
 Create a team with 4 teammates to refactor these modules in parallel.
 Use Sonnet for each teammate.
 ```
@@ -79,7 +79,7 @@ Split panes 模式需要在 `settings.json` 中配置：
 
 ### 3.4 常用指令
 
-```mipsasm
+```bash
 # 让特定队友停止工作
 Ask the researcher teammate to shut down
 
@@ -191,7 +191,7 @@ Clean up the team
 
 当开发一个全新的业务模块时（如"商品调拨"、"盘点管理"、"退货管理"），推荐按分层架构分配队友：
 
-```diff
+```text
 创建一个 agent team 来开发「商品盘点」功能：
 
 - 队友A（数据层）：负责 OSModel 实体类/请求模型/枚举 + OSDAL 数据访问层
@@ -214,7 +214,7 @@ Clean up the team
 
 **提示词示例：**
 
-```diff
+```text
 创建一个 agent team 来开发商品盘点功能，参考项目的分层架构（OSAPI/OSBLL/OSDAL/OSInterface/OSModel）。
 请先阅读 CLAUDE.md 了解项目规范，再阅读 doc/进销存设计文档/非油品盘点/ 下的设计文档。
 
@@ -232,7 +232,7 @@ Use Sonnet for each teammate.
 
 当需要进行横切关注点修改（如"统一错误码"、"给所有 DAL 加操作日志"、"统一状态字段规范"）时，按业务关联度分组：
 
-```x86asm
+```bash
 创建一个 agent team 来给所有 DAL 层添加操作日志记录：
 
 - 队友A：负责 商品管理 + 分类 + SKU拆装 模块
@@ -256,7 +256,7 @@ Use Sonnet for each teammate.
 
 当遇到复杂的数据不一致问题（如"库存扣减不准确"、"负库存回填异常"）时，用竞争性假设并行排查：
 
-```x86asm
+```bash
 创建一个 agent team 来调查库存扣减不准确的问题：
 
 - 队友A（入口追踪）：从 Controller → BLL → DAL 追踪请求处理流程
@@ -291,7 +291,7 @@ Use Sonnet for each teammate.
 
 ### 10.6 场景五：发版前全面质量验证（推荐 3 个队友）
 
-```diff
+```text
 创建一个 agent team 来进行发版前质量检查：
 
 - 队友A（单元测试）：运行 Tests/UnitTests/ 下所有测试，修复失败用例，关注 BLL/DAL 逻辑正确性
@@ -360,7 +360,7 @@ Skills 的工作模式是**单人串行**，一个 Skill 完成后才能启动�
 
 Agent Teams 的工作模式是**多人并行**，所有队友同时工作：
 
-```css
+```text
 Team Lead（你） ──┬── 队友A（独立实例）──→ 并行干活
                   ├── 队友B（独立实例）──→ 并行干活
                   ├── 队友C（独立实例）──→ 并行干活
@@ -398,14 +398,14 @@ Team Lead（你） ──┬── 队友A（独立实例）──→ 并行干�
 
 Skills 流水线是严格串行的：
 
-```scss
+```text
 PRD(20分钟) → 技术文档(15分钟) → 任务拆解(15分钟) → 代码生成(30分钟)
 总耗时：约 80 分钟
 ```
 
 但实际上，原型设计和技术分析之间没有依赖关系，完全可以并行：
 
-```css
+```text
 Agent Teams 方式：
 队友A：PRD ──→ 技术文档 ──┐
 队友B：原型设计 ──────────┤──→ 队友C：任务拆解 → 代码生成
@@ -416,7 +416,7 @@ Agent Teams 方式：
 
 用 Skills 流水线开发一个复杂模块时，一个对话窗口要装下：
 
-```diff
+```text
 PRD 文档（5000+ 字）
 + 技术分析文档（5000+ 字）
 + 任务拆解文档（3000+ 字）
@@ -484,7 +484,7 @@ Team Lead 创建团队：
 
 ### 11.5 选择决策指南
 
-```markdown
+```text
 你的任务是什么？
 │
 ├── 标准化流水线任务（PRD → 技术文档 → 代码）

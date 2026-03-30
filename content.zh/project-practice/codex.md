@@ -43,6 +43,7 @@ brew install --cask codex
 ### 2. 登录、计费与 API
 
 - **ChatGPT 账号**：Plus / Pro / Team / Edu / Enterprise 等计划是否包含 Codex、额度如何计算，以 [OpenAI 官方定价与产品页](https://openai.com/) 为准。
+- **用量查询**：在 [Codex Usage](https://chatgpt.com/codex/settings/usage) 查看当前周期的使用情况与消耗进度。
 - **API Key**：部分场景可用 API 方式接入（适合已有 OpenAI API 预算、要做自动化或网关的团队）。
 - 海鲜市场：[https://www.goofish.com/search?q=codex](https://www.goofish.com/search?q=codex)
 - yy.cool：[https://yy.cool/](https://yy.cool/)（Codex 中转站供应商）

@@ -54,6 +54,7 @@ bookFlatSection: true
    - [Promptoy（提示词模板库）](https://promptoy.com/app/templates)
    - [nano-kit](https://github.com/liujuntao123/nano-kit)
    - [gemini-3-pro-image-preview](https://tansuo2021.github.io/gemini-3-pro-image-preview/)
+   - [slides（多风格 Slides/PPT 提示词库）](https://github.com/AAAAAAAJ/slides)
    - [Banana Prompt Quicker](https://glidea.github.io/banana-prompt-quicker/)
    - [baoyu-skills（GitHub 仓库）](https://github.com/JimLiu/baoyu-skills) ，或通过 [skills.sh 市场页面](https://skills.sh/jimliu/baoyu-skills) 安装相关技能
    - [Gemini 提示词示例 001–050](https://docs.2sj.ai/gemini/prompt/001-050)

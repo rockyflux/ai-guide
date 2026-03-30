@@ -61,3 +61,18 @@ Prompt 通常只描述**本次对话**要达成的目标与约束，不适合承
 | Awesome ChatGPT Prompts 中文版 | [https://github.com/PlexPt/awesome-chatgpt-prompts-zh/](https://github.com/PlexPt/awesome-chatgpt-prompts-zh/) |
 | ChatGPT 引导语 | [https://prompts.fresns.cn/](https://prompts.fresns.cn/) |
 | AI 绘图提示词模板大全 | [https://ai.codefather.cn/painting](https://ai.codefather.cn/painting) |
+
+### UI Prompt 灵感库（复制即用）
+
+| 描述 | 链接 |
+| --- | --- |
+| UI Prompt Explorer：生成UI主题与提示词 | [https://uiprompt.art/](https://uiprompt.art/) |
+| UI Style Prompt：70+现代UI风格，输出AI提示词 | [https://www.uiprompt.site/zh/home](https://www.uiprompt.site/zh/home) |
+| HuggingPT：UI 风格提示词（230+） | [https://huggingpt.com/ui-prompts](https://huggingpt.com/ui-prompts) |
+| Design Prompts：31+设计风格渲染与AI可用提示词 | [https://www.designprompts.dev/](https://www.designprompts.dev/) |
+| StyleKit：120+视觉样式 + 设计令牌/组件配方 + AI提示词 | [https://www.stylekit.top/zh](https://www.stylekit.top/zh) |
+| MotionSites：Hero动效/灵感提示词集合 | [https://motionsites.ai/](https://motionsites.ai/) |
+| Lexica：UI风格搜索结果（用于找参考） | [https://lexica.art/?q=UI](https://lexica.art/?q=UI) |
+| Aura：AI着陆页生成器，可导出HTML与Figma | [https://www.aura.build/](https://www.aura.build/) |
+| UI UX Pro Max Skill：57种UI风格/配色与UX指南（面向AI助手） | [https://ui-ux-pro-max-skill.com/#styles](https://ui-ux-pro-max-skill.com/#styles) / [https://github.com/nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
+| UI Inspiration（Notion）：UI灵感集合/工作区 | [https://uxchi.notion.site/UI-Inspiration-881b4c0179a74935a3f607ad3521cdb5](https://uxchi.notion.site/UI-Inspiration-881b4c0179a74935a3f607ad3521cdb5) |
