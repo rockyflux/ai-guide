@@ -67,6 +67,7 @@ noTocArea: true
 ## 延伸阅读
 
 - **仓库**：[obra/superpowers](https://github.com/obra/superpowers)  
+- **中文镜像 / 翻译**：[jnMetaCode/superpowers-zh](https://github.com/jnMetaCode/superpowers-zh)  
 - **市场**：[superpowers-marketplace](https://github.com/obra/superpowers-marketplace)  
 - **文章**：[Superpowers for Claude Code](https://blog.fsck.com/2025/10/09/superpowers/)  
 - **社区**：[Discord](https://discord.gg/Jd8Vphy9jq)  

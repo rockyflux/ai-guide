@@ -7,7 +7,6 @@ noTocArea: true
 
 ## Codex 实战上手指南（10～15 分钟）
 
-
 OpenAI **Codex** 是面向「读仓库、改代码、跑命令」的编码代理：有 **CLI（终端）**、**IDE 扩展**（VS Code / Cursor / Windsurf 等）、**桌面端** 与 **网页版**（[chatgpt.com/codex](https://chatgpt.com/codex)）多种形式，底层能力与开源仓库 [openai/codex](https://github.com/openai/codex) 一脉相承。
 
 ---
@@ -76,18 +75,44 @@ NO_PROXY="localhost,127.0.0.1"
 
 ---
 
-### 3. 第一次进项目：建议做的事
+### 3. SSH 远程连接（remote_connections）
+
+如果你希望在本地 Codex App 里连远程机器开发，关键是三步：**满足前提、打开开关、重启生效**。
+
+**前提条件**：
+
+- **本地**：Codex App 升到最新版（需支持远程连接）。
+- **远程服务器**：安装 Codex CLI `>= 0.121.0`，并完成 `codex login`。
+- **连接方式**：本地到远程可通过 SSH 直连，优先密钥免密，减少反复输密码。
+
+**开启配置**：
+
+1. 编辑配置文件  
+   - macOS / Linux：`~/.codex/config.toml`  
+   - Windows：`%USERPROFILE%\.codex\config.toml`
+2. 添加功能开关：
+
+```toml
+[features]
+remote_connections = true
+```
+
+保存后**完全退出并重启 Codex App**，设置中会出现 `Connections / 连接`。
+
+---
+
+### 4. 第一次进项目：建议做的事
 
 1. 在**仓库根目录**打开终端（或 IDE 内置终端），执行 `codex` 进入交互（具体子命令以 `codex --help` 为准）。
 2. 让 Codex **扫一遍项目结构**，生成或补全面向代理的说明文件（常见名称是 **`AGENTS.md`**，也可能配合仓库内 `.codex/` 下的约定；以你本机 Codex 版本提示为准）。
 3. 把 **如何构建、如何测试、分支约定、禁止自动执行的操作** 写清楚——和用 Cursor / Claude Code 一样，**边界写清楚 = 少翻车**。
-4. Agents.md https://www.codecopy.cn/embed/w7wlhs
+4. `AGENTS.md` 示例参考：[codecopy.cn/embed/w7wlhs](https://www.codecopy.cn/embed/w7wlhs)
 
 多模型协作（例如用别的工具做规划、用 Codex 做实现/评审）可参考：[CCG 使用指南]({{< relref "workflow/ccg" >}})。
 
 ---
 
-### 4. Skills：放哪、怎么用
+### 5. Skills：放哪、怎么用
 
 Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理按需加载）。路径约定与生态在演进中：
 
@@ -98,7 +123,7 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 
 ---
 
-### 5. MCP 与其他集成
+### 6. MCP 与其他集成
 
 在 Codex 侧配置 **MCP 服务器** 后，代理可以调用外部工具（浏览器、文档、数据库等）。配置入口通常在用户级 **`~/.codex/config.toml`**（含 `[mcp_servers]` 等段落）；与认证相关的文件勿提交到 Git。
 
@@ -107,16 +132,14 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 
 ---
 
-### 6. 平台差异与安全习惯
+### 7. 平台差异与安全习惯
 
 - **Linux**：与 macOS/Windows 相比，沙箱与安全策略可能有差异；以 [openai/codex](https://github.com/openai/codex) 发行说明为准。数据目录默认多在 **`~/.codex`**，可通过环境变量 **`CODEX_HOME`** 调整（便于备份与多账号隔离）。
 - **高危标志**：社区与站内 Vibe Coding 类文章会提到类似 **`codex --yolo`** 的「跳过确认」开关——**会显著放大误删文件、乱执行命令的风险**，仅建议在隔离环境或完全清楚后果时使用。
 
 ---
 
-
-### 7. 官方与参考链接
+### 8. 官方与参考链接
 
 - 开源仓库：[github.com/openai/codex](https://github.com/openai/codex)
 - Skills 文档：[developers.openai.com/codex/skills](https://developers.openai.com/codex/skills)
-

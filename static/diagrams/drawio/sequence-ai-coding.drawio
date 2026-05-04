@@ -1,0 +1,82 @@
+<mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <mxCell id="p1" value="开发者" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="80" y="50" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="p2" value="Cursor/IDE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="320" y="50" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="p3" value="模型" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="570" y="50" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="p4" value="仓库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="800" y="50" width="140" height="50" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="l1" value="" style="dashed=1;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="150" y="110" width="1" height="650" as="geometry"/>
+    </mxCell>
+    <mxCell id="l2" value="" style="dashed=1;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="400" y="110" width="1" height="650" as="geometry"/>
+    </mxCell>
+    <mxCell id="l3" value="" style="dashed=1;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="640" y="110" width="1" height="650" as="geometry"/>
+    </mxCell>
+    <mxCell id="l4" value="" style="dashed=1;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="870" y="110" width="1" height="650" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="m1" value="描述任务 + 引用文件/目录" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="l1" target="l2">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="150" y="170" as="sourcePoint"/>
+        <mxPoint x="400" y="170" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m2" value="提供上下文 + 约束" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="l2" target="l3">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="400" y="240" as="sourcePoint"/>
+        <mxPoint x="640" y="240" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m3" value="方案 + 变更（diff/文件）" style="endArrow=block;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="l3" target="l2">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="640" y="310" as="sourcePoint"/>
+        <mxPoint x="400" y="310" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m4" value="写入/更新文件" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="l2" target="l4">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="400" y="380" as="sourcePoint"/>
+        <mxPoint x="870" y="380" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m5" value="验证结果反馈（通过/失败日志）" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="l1" target="l2">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="150" y="470" as="sourcePoint"/>
+        <mxPoint x="400" y="470" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m6" value="迭代修复" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="l2" target="l3">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="400" y="540" as="sourcePoint"/>
+        <mxPoint x="640" y="540" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m7" value="修复后的变更" style="endArrow=block;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="l3" target="l2">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="640" y="610" as="sourcePoint"/>
+        <mxPoint x="400" y="610" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m8" value="更新并准备提交" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="l2" target="l4">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="400" y="680" as="sourcePoint"/>
+        <mxPoint x="870" y="680" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>
+

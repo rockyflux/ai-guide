@@ -65,13 +65,13 @@ winget install --id Microsoft.Powershell --source winget
 ### 7. 网络与代理
 
 使用Google或ChatGPT等需要科学上网工具。
+
 - [客户端：Clash Verge](https://www.clashverge.dev/install.html)
 - [客户端：Clash Party](https://clashparty.org/)
-- [客户端 FlClash：适用于 Clash 的多功能图形用户界面。](https://flclash.cc/download.html) 
+- [客户端 FlClash：适用于 Clash 的多功能图形用户界面。](https://flclash.cc/download.html)
 - [🚁🚀 2026低价机场推荐](https://github.com/DiningFactory/panda-vpn-pro)
 - [2026年便宜好用的翻墙机场推荐评测(科学上网长期更新)](https://www.ermao.net/posts/vpn/)
 - [最优的科学上网方案](https://github.com/githubvpn007/v2rayNvpn)
-
 
 ### 8. Cherry-AI
 
@@ -79,21 +79,35 @@ winget install --id Microsoft.Powershell --source winget
 
 - 官网：[cherry-ai.com](https://cherry-ai.com/)
 
-### 9. 其他
+### 9. Google 邮箱（账号）
 
-**临时邮箱**
+目前个人想注册 Google 账号非常复杂甚至不可能（时区、定位、语言、IP、手机验证码等限制），如果你只是为了完成开发环境准备（例如登录某些开发者工具、同步浏览器配置、使用部分 AI 平台），可考虑通过第三方购买现成账号。
+
+- 购买入口 1：[pay.ldxp.cn/shop/OL3A53K5](https://pay.ldxp.cn/shop/OL3A53K5)
+- 购买入口 2：[ai666.dnxb.cc/cat/3](https://ai666.dnxb.cc/cat/3)
+- 购买入口 3：[https://makerich.club/](https://makerich.club)
+
+注意：购买/使用第三方账号可能违反平台服务条款并存在安全与合规风险。拿到账号后建议第一时间**修改密码**、启用/重置 **2FA**、绑定自己的恢复邮箱/手机号，并避免用于任何违规用途。
+
+### 10. 其他
+
+#### 临时邮箱
+
 - [Temp Mail](https://temp-mail.org/zh/)
 - [TempInbox](https://tempmail.easya.work/zh-CN/)
 - [Cloudflare 临时邮件](https://mail.awsl.uk/)
 
-**指纹浏览器**
+#### 指纹浏览器
+
 - [ixBrowser](https://ixbrowser.com/zh)
 - [adspower](https://www.adspower.net/download/)
 
-**信用卡 / 支付**
+#### 信用卡 / 支付
+
 - Bybit、Fiat24、Roogoo 等
 
-**短信接收**
+#### 短信接收
+
 - [5SIM](https://5sim.net/zh)
 - [国内免费接码平台推荐](https://topstip.com/nice-patchwork-platform/)
 

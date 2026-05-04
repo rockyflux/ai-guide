@@ -193,7 +193,7 @@ npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
 - **文档与导航**
   - [Claude 官方 Skills 文档](https://code.claude.com/docs/zh-CN/skills)：最权威的 Agent Skills 规范与功能说明。
   - [Agent Skills（claudecn）](https://claudecn.com/docs/agent-skills/)：面向中文用户的解读与示例，更贴近国内使用场景。
-  - [Agent Skills（agentskills.io）](https://agentskills.io/home)：社区维护的 Skills 导航站，按场景浏览和搜索技能。
+  - [Agent Skills（agentskills.io）](https://agentskills.io/)：社区维护的 Skills 导航站，按场景浏览和搜索技能。
   - [SkillsHunt](https://skillshunt.io/)：支持标签与热度筛选的技能发现与搜索平台。
   - [YouMind Skills](https://youmind.com/zh-CN/skills)：面向学习与创作场景的技能导航与技能包推荐。
 - **工具与仓库**

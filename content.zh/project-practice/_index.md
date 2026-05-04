@@ -26,6 +26,8 @@ noTocArea: true
   先把工具跑起来，避免第一天就卡在配置/订阅/环境上。
 - [Codex 实战上手指南]({{< relref "project-practice/codex" >}})  
   OpenAI Codex（CLI / 扩展 / Web）安装、登录、Skills、MCP 与和本站其他栏目的衔接。
+- [WSL 开发环境：Claude Code 安装与使用]({{< relref "project-practice/wsl" >}})  
+  Windows 下用 WSL 搭建更顺手的 Linux 开发环境，并完成 Claude Code 的安装与启动。
 
 ### 2) 我已经能写代码，但想把 AI 用到更稳（更少返工）
 
@@ -38,10 +40,11 @@ noTocArea: true
 
 - [项目实践：从一个具体案例开始]({{< relref "project-practice/practices-one" >}})  
   选一个规模可控的小项目，练习：需求拆解、任务分发、联调与验证闭环。
+- [用 draw.io 跑通三类常用图（流程图 / 时序图 / 用例图）]({{< relref "project-practice/drawio-diagrams" >}})  
+  把图当“可维护资产”：文档内 Mermaid 可预览 + `.drawio` 可编辑源文件交付，适合 PR 评审与后续维护。
 - [从需求到设计原型：一篇实战流程]({{< relref "project-practice/requirements-to-design-prototype" >}})  
   聚焦产品视角，从模糊想法到可交付的界面原型，把后续开发所需信息讲清楚。
 - [AI 绘图实战：从文案到成品图]({{< relref "project-practice/ai-drawing-practice" >}})  
   聚焦视觉产出，用 AI 完成一整套场景配图，并把过程沉淀成可复用的绘图 SOP。
 - [Kiro 实战：旧项目改 bug / 新项目新需求]({{< relref "project-practice/kiro-practice" >}})  
   聚焦 Kiro 这类 Spec‑Driven Agent IDE，分别给出“旧项目改 bug / 新项目新需求”两套可直接照做的流程。
-
