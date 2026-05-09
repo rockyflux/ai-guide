@@ -152,3 +152,4 @@ noTocArea: true
 - [公益站导航](https://ldoh.105117.xyz/) — 第三方资源导航页
 - [LDOH 仓库](https://github.com/JoJoJotarou/LDOH) — 对应开源仓库
 - [all-api-hub](https://github.com/qixing-jk/all-api-hub) — 统一管理兼容中转站账号、余额、用量和密钥分发
+- [awesome-claude-api](https://github.com/peter123023/awesome-claude-api) — Claude API 相关资源与项目汇总

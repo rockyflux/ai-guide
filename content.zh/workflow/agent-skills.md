@@ -415,7 +415,9 @@ my-skill/
 | [ComposioHQ/skills](https://github.com/ComposioHQ/skills) | Composio MCP + Skills |
 | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | Vercel 官方 |
 | [antfu/skills](https://github.com/antfu/skills) | Antfu 的个人实践 |
+| [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | Codex Skills 资源索引 |
 | [ZhanlinCui/Agent-Skills-Hunter](https://github.com/ZhanlinCui/Agent-Skills-Hunter) | 大杂烩（400+ Skills） |
+| [foryourhealth111-pixel/Vibe-Skills](https://github.com/foryourhealth111-pixel/Vibe-Skills/) | Vibe Coding / Agent Skills 资源集合 |
 
 ## 来源
 

@@ -3,566 +3,802 @@ title: AI 编程工具：汇总与对比
 weight: 10
 ---
 
-### 1. Aider
+# 1\. Aider
 
-+ **基本信息**:
-    - **类型**: CLI
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [39,200+（截至 2025-12-28）](https://github.com/Aider-AI/aider)
-    - **用户 / 安装量**: [4,100,000+（截至 2025-12-28）](https://aider.chat/)
-+ **工具描述**: Aider 是 "把 ChatGPT/Claude 带进 git 终端" 的开源项目。它会扫描并映射整个代码库，与 LLM 对话后生成补丁，再自动 git commit。与 IDE 无耦合，适合在大型仓库、容器或远程 SSH 环境中工作，也能通过 VS Code 插件获取图形界面。
-+ [**定价详情**](https://aider.chat/):
-    - **完全免费**: BYOK
-
----
-
-### 2. Amazon Q Developer
-
-+ **基本信息**:
-    - **类型**: IDE 扩展 / CLI
-    - **LLM API 支持**: 不支持
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [1,900+（截至 2025-12-28）](https://github.com/aws/aws-toolkit-vscode)
-    - **用户 / 安装量**: [1,401,146（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.amazon-q-vscode)
-+ **工具描述**: Amazon Q Developer 是 AWS 面向开发者的 "代理式" 编码助手，可在 VS Code 等 IDE 中提供内联补全、Chat、Agentic coding，并支持通过 MCP 连接外部工具 / 上下文；同时也可在命令行（CLI）中使用，将 IDE 与 CLI 的交互统一计入同一套 "agentic requests" 用量体系。
-+ [**定价详情**](https://aws.amazon.com/q/developer/pricing/):
-    - **Free Tier**: $0；包含 IDE 插件与 CLI；每月 50 次 agentic requests；Java 升级转换能力每月 1,000 LOC / 用户
-    - **Pro Tier**: $ 19 / 用户・月；包含 Free Tier 全部能力并提升各项限额；Java 升级转换能力为 4,000 LOC / 月 / 用户（按账号汇总池化），超额  $0.003/LOC；支持 Identity Center 管理与控制台、IP indemnity 等
+-   **基本信息**:
+    
+    -   **类型**: CLI
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [44K+（截至 2026-04-24）](https://github.com/Aider-AI/aider)
+    -   **用户 / 安装量**: [6800K+（官网披露；截至 2026-04-24）](https://aider.chat/)
+-   **工具描述**:  
+    Aider 是运行在终端中的开源 AI 结对编程工具，可在新项目或既有代码库中与 LLM 协作。它会为整个代码库生成映射，将相关上下文提供给模型，并支持文件创建 / 编辑、自动 Git 提交、静态检查 / 测试与 IDE 监听模式。Aider 可连接云端与本地模型，也支持通过网页对话复制粘贴流程使用不提供 API 的模型。
+    
+-   [**定价详情**](https://aider.chat/):
+    
+    -   **免费**: BYOK
 
 ---
 
-### 3. Augment
+# 2\. Amazon Q Developer
 
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 不支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [668,057（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=augment.vscode-augment)
-+ **工具描述**: Augment Code 是面向大型生产级代码库的 AI 编程平台，内置 Context Engine 可实时索引 20 万 token 级项目；在 VS Code / JetBrains / Vim 中提供补全、Chat、Agent、Next Edit 等多模态能力，强调团队协作与 SOC 2 合规安全。
-+ [**定价详情**](https://www.augmentcode.com/pricing)（2025-10-20 起启用新的信用额度模式）:
-    - **Trial**: 免费，注册后一次性 30,000 Credits（需绑定信用卡）
-    - **Indie**: $20 / 月，含 40,000 Credits
-    - **Standard**: $60 / 月，含 130,000 Credits
-    - **Max**: $200 / 月，含 450,000 Credits
-    - **Enterprise**: 自定义额度与价格，并提供过渡赠送 Credits
-
----
-
-### 4. auto-coder
-
-+ **基本信息**:
-    - **类型**: CLI
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [1,200+（截至 2025-12-28）](https://github.com/allwefantasy/auto-coder)
-    - **用户 / 安装量**: N/A
-+ **工具描述**: auto-coder 是面向真实工程代码库的终端式 AI 编程工具 / 框架，支持在本地工作流中组织多步任务，并将能力沉淀到可复用的命令与规则体系中。提供交互式聊天模式、命令行单次运行模式、会话模式以及 RAG 增强检索生成模式。
-+ [**定价详情**](https://github.com/allwefantasy/auto-coder):
-    - **完全免费**: BYOK
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展 / CLI
+    -   **LLM API 支持**: 不支持
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [6（截至 2026-04-24）](https://github.com/aws/amazon-q-vscode)
+    -   **用户 / 安装量**: [1660K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.amazon-q-vscode)
+-   **工具描述**:  
+    Amazon Q Developer 是 AWS 面向开发者的生成式 AI 编码助手，覆盖 VS Code 等 IDE 与命令行工作流。它可基于原生工具与 MCP 服务器读取文件、生成代码差异、运行命令，并提供内联补全、对话、安全分析与 Java 应用升级等能力。其模型与账号体系由 AWS 托管，公开产品形态不提供通用 BYOK 配置。
+    
+-   [**定价详情**](https://aws.amazon.com/q/developer/pricing/):
+    
+    -   **免费档**: $0；每月 50 次代理请求，Java 升级 1,000 LOC / 用户・月
+    -   **专业版**: $19 / 用户・月；Java 升级 4,000 LOC / 用户・月，超额 $0.003/LOC
 
 ---
 
-### 5. 百度文心快码 (Baidu Comate)
+# 3\. Amp
 
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 有限支持 (仅 Baidu ERNIE / 文心)
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [324,548（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=BaiduComate.comate)
-+ **工具描述**: 基于文心大模型的编码助手，提供补全、对话与 "Zulu 智能体" 的端到端需求‑到‑代码生成，可在 IDE 内执行命令、预览页面并对多文件进行改写与采纳。面向个人与企业提供不同版本，并支持企业私有化。
-+ [**定价详情**](https://cloud.baidu.com/product/comate):
-    - **个人标准版 / 基础功能**: 免费
-    - **其它版本**: 人民币计费（个人专业版 ¥59 / 月起、¥168 / 季、¥669 / 年；企业版按人数与周期计费，详见定价页）
-
----
-
-### 6. Claude Code
-
-+ **基本信息**:
-    - **类型**: CLI
-    - **LLM API 支持**: 有限支持 (仅 Anthropic)
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [2,507,107（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)
-+ **工具描述**: Claude Code 建构在 Claude 4 系列模型之上，运行于本地终端，可对整座代码库进行索引理解，并通过自然语言指令执行 "生成 - 调试 - 重构 - 发布" 全链路任务；借助 MCP 工具协议，还能远程调用 CI/CD、Issue Tracker 等外部系统，充当真正的 "Agentic Coder"。
-+ [**定价详情**](https://www.anthropic.com/pricing):
-    - **Free**: $0 / 月
-    - **Pro**: $ 20 / 月（年付约  $17 / 月，按 token 用量计费）
-    - **Max 5×**: $100 / 月（约 Pro 5 倍用量配额）
-    - **Max 20×**: $200 / 月（约 Pro 20 倍用量配额）
-    - **API 按量计费**:
-        * Sonnet 4.5: 输入 $ 3/MTok，输出  $15/MTok
-        * Opus 4.5: 输入 $ 5/MTok，输出  $25/MTok
+-   **基本信息**:
+    
+    -   **类型**: CLI/IDE 集成
+    -   **LLM API 支持**: 有限支持 (平台代管模型)
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [106K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=sourcegraph.amp)
+-   **工具描述**:  
+    Amp 是 Sourcegraph 推出的终端优先编码代理，也可连接 VS Code、JetBrains、Neovim、Zed 等编辑器。它使用多模型调度，并提供 smart、rush、deep 等代理模式，用于在不同复杂度与成本目标之间切换。Amp 支持线程分享、代码审查面板、子代理与工具箱等协作能力。
+    
+-   [**定价详情**](https://ampcode.com/manual#pricing):
+    
+    -   **个人 / 非企业工作区**: 按实际模型和工具用量计费；最低充值 $5；模型成本零加价
+    -   **企业版**: 企业用量为个人 / 非企业工作区的 1.5 倍；首次 $1,000 起
 
 ---
 
-### 7. Cline
+# 4\. Augment
 
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [56,400+（截至 2025-12-28）](https://github.com/cline/cline)
-    - **用户 / 安装量**: [2,806,425（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev)
-+ **工具描述**: Cline 是一款本地运行的 "代理式" 编程助手，能先扫描整座代码库、生成执行计划，再在 IDE 与终端中自动完成多步修改、运行测试、修复报错，并通过 MCP 协议接入外部系统。其所有决策、文件变更与终端命令均需人工确认，可满足企业级安全合规需求。
-+ [**定价详情**](https://github.com/cline/cline):
-    - **完全免费**: BYOK
-
----
-
-### 8. CodeBuddy
-
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 有限支持 (仅腾讯混元 / DeepSeek)
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [343,985（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=Tencent-Cloud.coding-copilot)
-+ **工具描述**: 腾讯云 CodeBuddy 提供技术对话、智能补全、单元测试、代码评审等功能，并兼容 MCP 生态，覆盖 VS Code、JetBrains、Visual Studio 等主流 IDE。官方扩展页显示其可按需在腾讯混元与第三方 DeepSeek 等模型之间切换，以适配不同场景。
-+ [**定价详情**](https://staging-codebuddy.tencent.com/pricing):
-    - **Free**: 注册即自动开启 2 周 Pro 试用；一次性 500 credits；每日 50 credits（每日重置）
-    - **Pro（个人订阅）**: $9.95 / 月，含 1,000 credits / 月，另赠 100 credits / 天（每日重置）
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展 / CLI / 独立 IDE
+    -   **LLM API 支持**: 不支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [744K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=augment.vscode-augment)
+-   **工具描述**:  
+    Augment Code 是面向大型、复杂代码库的 AI 编程平台，核心能力包括上下文引擎、智能体、补全、对话与下一步编辑。它可通过 VS Code、JetBrains、Intent 与 CLI 使用，并支持 MCP 与原生工具集成。产品重点在于让代理理解整个代码库的结构、依赖与历史上下文，再生成可审阅的修改。
+    
+-   [**定价详情**](https://www.augmentcode.com/pricing):
+    
+    -   **独立开发者版**: $20 / 月；40,000 点数
+    -   **标准版**: $60 / 开发者・月；130,000 点数
+    -   **最高档**: $200 / 开发者・月；450,000 点数
+    -   **加购包**: $15/24,000 点数
 
 ---
 
-### 9. Codebuff
+# 5\. auto-coder
 
-+ **基本信息**:
-    - **类型**: CLI
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [2,700+（截至 2025-12-28）](https://github.com/CodebuffAI/codebuff)
-    - **用户 / 安装量**: N/A
-+ **工具描述**: Codebuff 是开源终端 AI 编程助手，按自然语言指令对代码库进行理解与编辑，并通过多智能体协作（File Explorer、Planner、Editor、Reviewer 等专业 Agent）来完成更精确的变更。支持自定义 Agent 和 SDK 集成。
-+ [**定价详情**](https://www.codebuff.com/pricing):
-    - **起步价**: $49 / 月起
-
----
-
-### 10. CodeGPT
-
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [2,208,564（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=DanielSanMedium.dscodegpt)
-+ **工具描述**: VS Code/JetBrains 内的多模型 AI 助手，支持对话、自动补全、基于代码图谱的全仓库理解，以及 "Agent 市场"。可直接使用各家官方 API Key（BYOK），也可订阅其 Plus/Teams 套餐。
-+ [**定价详情**](https://codegpt.co/pricing):
-    - **Free**: $0 / 用户・月；含 30 次聊天 / Agent 交互与 200 次补全；支持 BYOK
-    - **BYOK**: $ 8 / 用户・月（ $7.2 / 用户・月，按年付）
-    - **Teams**: $ 40 / 用户・月（ $30 / 用户・月，按年付）；含每用户每月最多 500 次聊天 / Agent 交互与最高 $30 代币成本额度
+-   **基本信息**:
+    
+    -   **类型**: CLI
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [1K+（截至 2026-04-24）](https://github.com/allwefantasy/auto-coder)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    auto-coder 是面向真实工程代码库的终端式 AI 编程工具 / 框架，可通过 pip 安装并在本地项目中运行。它提供交互式聊天、命令行单次运行、会话恢复、服务器模式与 RAG 模式等工作方式。用户可通过环境变量或配置文件接入 OpenAI、Anthropic 等模型 API。
+    
+-   [**定价详情**](https://github.com/allwefantasy/auto-coder):
+    
+    -   **免费**: BYOK
 
 ---
 
-### 11. Codex
+# 6\. 百度文心快码 (Baidu Comate)
 
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 有限支持 (仅 OpenAI)
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [54,800+（截至 2025-12-28）](https://github.com/openai/codex)
-    - **用户 / 安装量**: [50,010（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=CodexBuild.codex-build)
-+ **工具描述**: OpenAI 推出的 Codex IDE 扩展把 "编码代理" 嵌入 VS Code（以及 Cursor、Windsurf 等 VS Code 分支），支持侧边栏对话、在本地读取 / 修改 / 运行代码，或把大任务委派到云端再回收结果。官方文档注明 macOS、Linux 支持稳定，Windows 处于实验阶段，建议在 WSL 下使用；该扩展 "围绕开源的 Codex CLI 构建"。
-+ [**定价详情**](https://openai.com/chatgpt):
-    - **完全免费**: BYOK
-    - **Codex IDE 扩展 / Web 版**: $20 / 月起 (随 ChatGPT Plus / Pro / Business / Edu / Enterprise 订阅提供)
-
----
-
-### 12. Continue
-
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [30,500+（截至 2025-12-28）](https://github.com/continuedev/continue)
-    - **用户 / 安装量**: [1,906,265（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=Continue.continue)
-+ **工具描述**: Continue 是一款可自定义的 AI 代码助手框架，开发者可以在其开源扩展上组合模型、规则与 Prompt Block，构建适合团队技术栈的专属 Agent。它支持行内补全、侧栏聊天、批量编辑以及 "Agent" 全仓库改动流程，对每一步生成的补丁都要求人工确认，从而兼顾效率与合规。
-+ [**定价详情**](https://www.continue.dev/pricing):
-    - **Solo**: $0 / 月（BYOK）
-    - **Team**: $10 / 用户・月
-    - **Models Add-on**: +$20 / 用户・月（一键接入 GPT-4o、Claude 4 等）
-    - **Enterprise**: 定制报价（SSO、私有部署）
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展
+    -   **LLM API 支持**: 有限支持 (仅 Baidu ERNIE / 文心)
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [364K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=BaiduComate.comate)
+-   **工具描述**:  
+    百度文心快码（Baidu Comate）是百度基于文心大模型研发的 IDE 编码助手，提供代码补全、对话、代码解释、测试生成与注释生成等能力。插件侧栏包含 Zulu 智能体入口，可用自然语言完成从需求到代码的端到端生成，并支持代码库问答与开发环境启动。产品面向个人开发者与企业用户提供不同版本，并支持企业私有化方案。
+    
+-   [**定价详情**](https://comate.baidu.com/zh/pricing):
+    
+    -   **个人标准版 / 基础功能**: 免费
+    -   **个人专业版**: ¥59 / 月、¥168 / 季、¥599 / 年
+    -   **企业版 / 私有化版本**: N/A；联系官方报价
 
 ---
 
-### 13. Crush
+# 7\. Claude Code
 
-+ **基本信息**:
-    - **类型**: CLI
-    - **LLM API 支持**: 支持
-    - **开源许可证**: FSL-1.1-MIT
-    - **GitHub 星标**: [16,400+（截至 2025-12-28）](https://github.com/charmbracelet/crush)
-    - **用户 / 安装量**: N/A
-+ **工具描述**: Crush 是 Charmbracelet 推出的终端 AI 编程助手，强调多模型与会话管理，并通过 LSP 获取项目上下文；也可通过 MCP 扩展外部能力。支持 Anthropic、OpenAI、Groq、OpenRouter、Google Gemini、Amazon Bedrock 等多家模型提供方，跨平台支持 macOS、Linux、Windows、FreeBSD 等。
-+ [**定价详情**](https://github.com/charmbracelet/crush):
-    - **完全免费**: BYOK
-
----
-
-### 14. Cursor
-
-+ **基本信息**:
-    - **类型**: 独立 IDE
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Proprietary (VS Code fork)
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [1,000,000+（截至 2025-04，TapTwice Digital）](https://cursor.com/)
-+ **工具描述**: Cursor 由 Anysphere 打造，主张 "Chat-Driven Development"。编辑器会索引整个代码库，允许用户在 Chat、Agent、Composer 等模式下生成或修改多文件补丁，并自动运行测试、提交 git。其 Bugbot 还能持续扫描 PR 及 CI 日志，提前捕获逻辑或安全缺陷。
-+ [**定价详情**](https://cursor.com/pricing):
-    - **免费版**: $0 / 月（有限使用量）
-    - **Pro**: $20 / 月（按 credits 用量计费，具体额度以官网为准）
-    - **Pro+**: $60 / 月（更高使用限额，部分地区 / 新用户可能不再提供）
-    - **Ultra**: $200 / 月（最高使用限额）
-    - **Teams**: $40 / 活跃用户・月（含约 500 条 / 月代理请求）
-    - **Enterprise**: 定制报价（SAML/OIDC 认证、SCIM 用户管理）
+-   **基本信息**:
+    
+    -   **类型**: CLI/IDE 扩展 / 桌面端 / Web
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [11513K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)
+-   **工具描述**:  
+    Claude Code 是 Anthropic 的代理式编码工具，可读取代码库、编辑文件、运行命令，并与开发工具集成。它可在终端、VS Code、JetBrains、桌面端与浏览器中使用，支持 MCP、子代理、自定义斜杠命令、钩子、CI/CD 代码审查与 Slack 等协作入口。终端 CLI 与 VS Code 形态还支持第三方提供商接入。
+    
+-   [**定价详情**](https://claude.com/pricing):
+    
+    -   **免费版**: $0 / 月；基础额度
+    -   **专业版**: $20 / 月（月付）或 $17 / 月（年付）；包含 Claude Code
+    -   **最高档**: $100 / 月起；专业版 5 倍或 20 倍用量
+    -   **API 按量**: Sonnet 输入 $3/MTok、输出 $15/MTok；Opus 输入 $5/MTok、输出 $25/MTok
 
 ---
 
-### 15. Gemini CLI
+# 8\. Cline
 
-+ **基本信息**:
-    - **类型**: CLI
-    - **LLM API 支持**: 有限支持 (仅 Google)
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [88,800+（截至 2025-12-28）](https://github.com/google-gemini/gemini-cli)
-    - **用户 / 安装量**: N/A
-+ **工具描述**: Gemini CLI 是 Google 面向开发者的 AI 终端代理，可在 shell 中理解与编辑百万 token 级代码库、生成应用、自动重构，并通过 Model Context Protocol 连接 Imagen、Veo 等外部工具；支持使用 Google 账号登录、Gemini API Key 或 Vertex AI 等多种鉴权方式，并可与 IDE 侧的 Gemini Code Assist 共用项目与配额。
-+ [**定价详情**](https://ai.google.dev/gemini-api/docs/pricing):
-    - **完全免费**: 个人账号登录 60 次 / 分钟、1,000 次 / 天；API Key 另有 100 次 / 天免费额度，更多用量按 Gemini/Vertex AI 计费
-
----
-
-### 16. Gemini Code Assist
-
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 有限支持 (仅 Google)
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [2,535,898（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist)
-+ **工具描述**: Gemini Code Assist 基于 Gemini 2.5，为 IDE 提供行内补全、对话式重构与 Agent 多步执行，支持 1M token 本地上下文，并能在 GitHub PR 中自动审阅代码；亦可与 Firebase、BigQuery、Cloud Run 等 Google Cloud 服务协同，通过与 Gemini CLI 共享项目和权限实现统一的开发工作流。
-+ [**定价详情**](https://cloud.google.com/products/gemini/code-assist):
-    - **个人版**: 免费（约 6,000 次 / 天代码请求额度与数百次聊天 / 分析请求 / 天，具体配额以官方文档为准）
-    - **Standard**: $19 / 用户・月（年付折扣价）
-    - **Enterprise**: $45 / 用户・月（年付折扣价，私有代码定制）
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展 / CLI
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [61K+（截至 2026-04-24）](https://github.com/cline/cline)
+    -   **用户 / 安装量**: [3715K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev)
+-   **工具描述**:  
+    Cline 是开源的 IDE 内代理式编程助手，可在人工确认下创建 / 编辑文件、执行终端命令、使用浏览器并调用 MCP 工具。它会先读取文件结构、AST、搜索结果与相关文件，再逐步完成多文件修改、测试运行与错误修复。Cline 支持 OpenRouter、Anthropic、OpenAI、Google Gemini、AWS Bedrock、Azure、GCP Vertex、Cerebras、Groq、OpenAI-compatible API 以及 LM Studio/Ollama 本地模型。
+    
+-   [**定价详情**](https://github.com/cline/cline):
+    
+    -   **免费**: BYOK
+    -   **企业版**: N/A
 
 ---
 
-### 17. Google Antigravity
+# 9\. CodeBuddy
 
-+ **基本信息**:
-    - **类型**: 独立 IDE
-    - **LLM API 支持**: 不支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: N/A
-+ **工具描述**: Google Antigravity 是 Google 推出的 "Agent-First" 开发平台 / IDE，提供 Mission Control/Agent Manager 来并行管理自主智能体；智能体可在编辑器、终端与受控浏览器中执行任务，并通过 Artifacts（任务清单、实现计划、截图、浏览器录屏等）把过程与结果可审计化，降低 "信任缺口"。内置 Gemini 3 Pro、Claude Sonnet 4.5、GPT-OSS 120B 等模型可供切换。
-+ [**定价详情**](https://antigravityai.org/pricing):
-    - **公测期**: 免费（所有功能对开发者免费开放）
-    - **Developer（Google One）**: 随 Google AI Pro/Ultra 订阅提供更高限额
-    - **Google AI Pro**: $19.99 / 月
-    - **Google AI Ultra**: $249.99 / 月
-    - **Team/Enterprise**: Coming soon
-
----
-
-### 18. GitHub Copilot
-
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [65,373,018（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
-+ **工具描述**: Copilot 嵌入 IDE 后可在光标位置生成整行或整段代码，并以 Chat / Agent 模式完成多文件重构、测试修复、PR 描述撰写等任务。MCP 让 Copilot 能触达 Issue、CI、数据库等上下文，逐步朝 "自治代码代理" 演进；新版本区分标准请求与 "高级请求"（如更大模型、Agent 模式），并提供统一的用量管理。
-+ [**定价详情**](https://github.com/features/copilot/plans):
-    - **Copilot Free**: 免费（每月 50 条聊天 / Agent 等高级请求 + 若干千行级代码补全配额）
-    - **Copilot Pro**: $ 10 / 月（或  $100 / 年），无限制补全与更多高级请求配额
-    - **Copilot Pro+**: $ 39 / 月（或  $390 / 年），显著更多的高级请求额度
-    - **Business**: $19 / 用户・月
-    - **Enterprise**: $39 / 用户・月
-    - **超额费用**: 高级请求超额统一 $0.04 / 次
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展 / CLI
+    -   **LLM API 支持**: 有限支持 (腾讯混元 / DeepSeek/GLM 等平台模型)
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [449K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=Tencent-Cloud.coding-copilot)
+-   **工具描述**:  
+    腾讯云 CodeBuddy 是腾讯云自研的 AI 编码助手，覆盖 VS Code、JetBrains IDE、Visual Studio、CloudStudio、微信开发者工具、Xcode 等开发环境。它基于腾讯混元、DeepSeek、GLM 等模型，提供 AI 技术问答、Craft 编码智能体、智能补全、单元测试、代码评审、代码修复与规则管理。CodeBuddy 兼容 MCP 开放生态，并支持团队知识库、自定义智能体、多模型接入与企业账号集成。
+    
+-   [**定价详情**](https://www.codebuddy.ai/docs/ide/Account/pricing):
+    
+    -   **免费版**: 免费；250 点数 / 2 周
+    -   **专业版**: $9.95 / 月；1,000 点数 / 月
+    -   **团队版**: $40 / 人・月；1,000 点数 / 席・月，团队池化
+    -   **加购包**: 专业版加购 1,000 点数为 $9.95 / 月
 
 ---
 
-### 19. Graphite
+# 10\. Codebuff
 
-+ **基本信息**:
-    - **类型**: CLI
-    - **LLM API 支持**: 不支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: N/A
-+ **工具描述**: 以 "堆叠 PR / 评审自动化" 为核心的代码评审与发布平台，配套 CLI 与 Web 界面，与 GitHub 深度集成。企业版提供 AI 评审、自动修复建议、队列合并与团队洞察等能力；并通过 Graphite Agent 与 MCP 支持，将 AI 助手嵌入到评审和合并流程中。
-+ [**定价详情**](https://graphite.dev/pricing):
-    - **Hobby**: 免费（面向个人与爱好项目，含 CLI、VS Code 插件与有限 AI 评审 / Agent 配额）
-    - **Starter**: $20 / 用户・月（按年付）
-    - **Team**: $40 / 用户・月（按年付），含 "无限 AI 评审"、Graphite Agent 等高级功能
-    - **Enterprise**: 自定义价格（联系销售，提供 SAML、审计日志、GHES 支持等）
-
----
-
-### 20. Junie
-
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: N/A
-+ **工具描述**: Junie 是 JetBrains 推出的 "代理式" 编码助手，可在 IntelliJ IDEA、PyCharm、WebStorm 等 IDE 内接收自然语言任务，自动分析代码库、生成修改计划、执行测试并提交补丁；也能在 GitHub Pull Request 上离 IDE 工作，实现异步协作。JetBrains 已将 Junie 与 AI Assistant 统一到 JetBrains AI 订阅下。
-+ [**定价详情**](https://www.jetbrains.com/ai/):
-    - **AI Free**: 随 IDE 附赠（不限本地补全，含少量云端 AI Credits；首启一般附带 30 天 AI Pro 试用）
-    - **AI Pro**: $10 / 用户・月（亦可随 All Products Pack /dotUltimate 打包提供）
-    - **AI Ultimate**: $30 / 用户・月（面向重度使用者，额度与价格 1:1 对应）
+-   **基本信息**:
+    
+    -   **类型**: CLI/SDK
+    -   **LLM API 支持**: 有限支持 (平台代管 / OpenRouter 模型)
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [5K+（截至 2026-04-24）](https://github.com/CodebuffAI/codebuff)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Codebuff 是开源终端 AI 编程助手，可通过自然语言指令理解并编辑代码库。它采用多智能体协作方式，由文件选择、规划、编辑、审阅等专门智能体共同完成任务，并支持自定义智能体与 SDK 集成。其免费版为广告支持版本，不需要订阅、点数或额外配置。
+    
+-   [**定价详情**](https://www.codebuff.com/pricing):
+    
+    -   **免费版**: 免费；广告支持
+    -   **按量计费**: 每月 500 点数免费；超额 $0.01 / 点数
+    -   **高强度套餐**: $100 / 月、$200 / 月、$500 / 月；分别约 1 倍、2.5 倍、7 倍用量
 
 ---
 
-### 21. Kilo Code
+# 11\. CodeGPT
 
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [13,500+（截至 2025-12-28）](https://github.com/kilocode/kilo)
-    - **用户 / 安装量**: [587,278（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code)
-+ **工具描述**: Kilo Code 由社区驱动，整合了 Cline 与 Roo 的特性，定位为 "多模式 AI 代理"。插件会索引整个代码库，支持 Architect（规划）、Coder（实现）、Debugger（调试）等模式；所有补丁、终端命令和浏览器自动化步骤都需开发者确认，以保持透明与可控，同时通过开源后端支持自托管与多模型配置。
-+ [**定价详情**](https://kilocode.ai/pricing):
-    - **完全免费**: BYOK / 首次充值赠送约 $20 的模型额度
-    - **Teams**: $29 / 用户・月（集中管理、仪表板等高级功能）
-    - **Enterprise**: $299 / 用户・月（SSO、审计日志等企业特性）
-
----
-
-### 22. Kiro
-
-+ **基本信息**:
-    - **类型**: 独立 IDE
-    - **LLM API 支持**: 有限支持 (仅 Anthropic)
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: N/A
-+ **工具描述**: Kiro 是一款 "代理式（agentic）"AI IDE，提供 Specs（规格驱动开发）、Hooks（事件触发自动化）、Steering（行为约束）与对话式编码等能力，面向 "从原型到生产" 的完整开发流程。官方文档与仓库指出其可连接 MCP 服务器，并在模型侧提供 Auto 与 Claude Sonnet 4.x 的选择，当前不支持自带模型密钥（BYOK）。
-+ [**定价详情**](https://kiro.dev/pricing/):
-    - **Kiro Free**: $0 / 月，含 50 credits / 月；新用户一次性赠送 500 credits（30 天有效）
-    - **Kiro Pro**: $20 / 月，含 1,000 credits / 月
-    - **Kiro Pro+**: $40 / 月，含 2,000 credits / 月
-    - **Kiro Power**: $200 / 月，含 10,000 credits / 月
-    - **按量计费**: $0.04/credit（所有套餐超额均按此价）
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [2360K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=DanielSanMedium.dscodegpt)
+-   **工具描述**:  
+    CodeGPT 是面向 VS Code 与 JetBrains 的多模型 AI 编程助手，提供对话、自动补全、智能体模式与智能差异。它可连接 OpenAI、Anthropic、Google、Mistral、Groq、DeepSeek、Azure、Bedrock 等 20+ 提供方，也支持 Ollama、LM Studio 等本地模型。智能体可在项目中创建、编辑和读取文件，并在应用更改前通过差异视图让开发者审阅。
+    
+-   [**定价详情**](https://www.codegpt.co/pricing):
+    
+    -   **免费**: BYOK；$0 / 月
+    -   **自动补全加购包**: $8 / 席・月（月付）或 $6.67 / 席・月（年付）
+    -   **AI 优先服务**: N/A
 
 ---
 
-### 23. OpenCode
+# 12\. Codex
 
-+ **基本信息**:
-    - **类型**: CLI
-    - **LLM API 支持**: 支持
-    - **开源许可证**: MIT
-    - **GitHub 星标**: [43,000+（截至 2025-12-28）](https://github.com/sst/opencode)
-    - **用户 / 安装量**: [400,000+（月活开发者，官网披露）](https://opencode.ai/)
-+ **工具描述**: OpenCode 是开源 AI coding agent，可在终端 / 桌面应用 / IDE 扩展中使用；支持连接多家模型提供方（Claude、OpenAI、Google 或本地模型），也支持登录复用 Claude Pro/Max 账号；强调隐私（不存储代码与上下文数据）。内置 build（全权限开发）与 plan（只读分析）两种代理模式。
-+ [**定价详情**](https://opencode.ai/):
-    - **OpenCode**: 免费（可连接任意模型 / 提供方）
-    - **Zen**: 充值制（Pay as you go，页面示例 $20 起充）
-    - **Enterprise**: N/A（联系官方）
-
----
-
-### 24. PearAI
-
-+ **基本信息**:
-    - **类型**: 独立 IDE
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [704（截至 2025-12-28）](https://github.com/trypear/pearai-master)
-    - **用户 / 安装量**: N/A
-+ **工具描述**: PearAI 是开源 AI 代码编辑器，主打 "开箱即用 + 可自带 Key（BYOK）"，并提供 PearAI Router/Hosted Servers 等托管能力来简化多模型接入与用量管理。基于 VS Code fork，整合 Continue fork 的 AI 聊天功能。
-+ [**定价详情**](https://www.trypear.ai/pricing):
-    - **免费**: 可下载使用（支持 BYOK）
-    - **订阅**: $15 / 月
+-   **基本信息**:
+    
+    -   **类型**: CLI/IDE 扩展 / 桌面端 / 托管平台
+    -   **LLM API 支持**: 有限支持 (仅 OpenAI)
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [77K+（截至 2026-04-24）](https://github.com/openai/codex)
+    -   **用户 / 安装量**: [7659K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt)
+-   **工具描述**:  
+    Codex 是 OpenAI 的编码代理，覆盖本地 CLI、VS Code / 兼容编辑器扩展、桌面端与云端任务。CLI 可在本机终端读取、修改和运行仓库代码；IDE 扩展可在编辑器中对话、编辑、预览更改，并把长任务委托到 Codex Cloud。它可使用 ChatGPT 账号额度，也可在 CLI、SDK 或 IDE 扩展场景下使用 OpenAI API Key 按 API 用量计费。
+    
+-   [**定价详情**](https://developers.openai.com/codex/pricing):
+    
+    -   **免费版**: $0 / 月；基础使用额度
+    -   **Go**: $8 / 月
+    -   **Plus 版**: $20 / 月；包含 Web、CLI、IDE 扩展与 iOS Codex
+    -   **专业版**: $100 / 月起；更高 Codex 使用限额
 
 ---
 
-### 25. Qoder
+# 13\. Continue
 
-+ **基本信息**:
-    - **类型**: 独立 IDE
-    - **LLM API 支持**: 不支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: N/A
-+ **工具描述**: 自称 "Agentic Coding Platform" 的桌面式 IDE / 平台，聚合多家模型并提供从需求到多文件改写与运行验证的代理式开发流程，面向个人与团队使用场景。官方强调以 "Credits" 计量用量。
-+ [**定价详情**](https://docs.qoder.com/zh/account/pricing):
-    - **Free**: 免费（含 14 天 Pro 试用；赠送 300 Credits）
-    - **Pro**: $ 10 / 月（限时优惠；原价  $20 / 月），2,000 Credits / 月
-    - **Pro+**: $ 30 / 月（限时优惠；原价  $60 / 月），6,000 Credits / 月
-    - **Ultra**: $ 100 / 月（限时优惠；原价  $200 / 月），20,000 Credits / 月
-    - **Teams**: Coming soon
-
----
-
-### 26. Replit
-
-+ **基本信息**:
-    - **类型**: 独立 IDE
-    - **LLM API 支持**: 不支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: N/A
-+ **工具描述**: 基于云端的浏览器 IDE，集成项目托管、包管理、运行 / 部署与 "Agents" 等 AI 能力，支持多人协作与一键托管。适合入门学习、黑客松与轻量后端原型搭建，也提供团队空间与配额管理。其 AI 侧以平台内置模型与 "集成" 能力为主。
-+ [**定价详情**](https://replit.com/pricing):
-    - **Starter**: $0 / 月（含基础功能）
-    - **Core**: $ 20 / 月（按年付），含每月  $25 平台 Credits
-    - **Teams**: $ 35 / 用户・月（按年付），含每用户每月  $40 平台 Credits
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展 / CLI
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [33K+（截至 2026-04-24）](https://github.com/continuedev/continue)
+    -   **用户 / 安装量**: [2731K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=Continue.continue)
+-   **工具描述**:  
+    Continue 是开源 AI 编码代理，提供 VS Code 扩展与 Continue CLI。IDE 侧包含智能体、对话、编辑与自动补全；CLI 侧可把 Markdown 编写的智能体作为 GitHub PR 状态检查运行，并在检查失败时给出建议差异。它适合把团队编码规范、安全检查和自动修复流程纳入版本库管理。
+    
+-   [**定价详情**](https://www.continue.dev/pricing):
+    
+    -   **入门版**: 输入 $3/MTok，输出 $3/MTok；按量计费
+    -   **团队版**: $20 / 席・月；含 $10 点数 / 席
+    -   **公司版**: N/A
 
 ---
 
-### 27. Roo Code
+# 14\. Crush
 
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Apache-2.0
-    - **GitHub 星标**: [21,500+（截至 2025-12-28）](https://github.com/RooCodeInc/Roo-Code)
-    - **用户 / 安装量**: [1,108,232（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline)
-+ **工具描述**: Roo Code（前 Roo Cline）主张 "整支 AI 开发团队住进编辑器"。插件会索引整仓代码，生成差异补丁并在执行每一步前询问确认；借 MCP 协议可自动运行终端命令、调用浏览器或外部 API，实现从规划、编码到发布的多角色代理协作。
-+ [**定价详情**](https://github.com/RooCodeInc/Roo-Code):
-    - **完全免费**: BYOK
-
----
-
-### 28. RovoDev
-
-+ **基本信息**:
-    - **类型**: CLI
-    - **LLM API 支持**: 不支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: N/A
-+ **工具描述**: Rovo Dev 是 Atlassian "Rovo Software Agents" 套件中的编码代理。它在终端分析大型仓库、生成技术方案、自动编写与提交补丁，并与 Jira、Confluence、Bitbucket 等云服务无缝联动，为企业提供可审计、可控的端到端 AI 开发流水线。
-+ [**定价详情**](https://www.atlassian.com/software/rovo):
-    - **Beta 阶段**: 限量免费（封闭测试期间的 Agent 功能不计入额度）
-    - **正式版**: 随 Jira/Confluence/JSM 的 Premium/Enterprise 版订阅启用
+-   **基本信息**:
+    
+    -   **类型**: CLI
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: FSL-1.1-MIT
+    -   **GitHub 星标**: [23K+（截至 2026-04-24）](https://github.com/charmbracelet/crush)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Crush 是 Charmbracelet 推出的终端 AI 编程助手，强调在终端中连接开发者已有工具、代码与工作流。它支持多模型会话，可通过 OpenAI-compatible 或 Anthropic-compatible API 接入自有模型，并能在会话中切换模型。Crush 还结合 LSP 获取项目上下文，通过 MCP 扩展外部能力，支持 macOS、Linux、Windows、Android、FreeBSD、OpenBSD 与 NetBSD。
+    
+-   [**定价详情**](https://github.com/charmbracelet/crush):
+    
+    -   **免费**: BYOK
 
 ---
 
-### 29. Sourcegraph Cody
+# 15\. Cursor
 
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: [10,200（仓库已归档）](https://github.com/sourcegraph/sourcegraph-public-snapshot)
-    - **用户 / 安装量**: [777,587（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai)
-+ **工具描述**: 通过 VS Code/JetBrains 插件将 "Cody" 接入到现有工作流，结合代码搜索 / 索引，为聊天、补全与命令提供跨仓库上下文。企业侧可在多家 LLM 之间选择（如 Claude、Gemini、Mixtral 等）。
-+ [**定价详情**](https://sourcegraph.com/pricing):
-    - **Cody（企业）**: N/A（联系销售；Marketplace 明示 "非企业用户不再提供"）
-    - **Code Search（相关）**: Starter $ 19 / 用户・月；Enterprise  $49 / 用户・月（与 Cody 分计费）
-
----
-
-### 30. Tabnine
-
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 不支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [9,432,615（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)
-+ **工具描述**: 主打私有化与合规的 AI 补全 / 聊天，覆盖 VS Code、JetBrains、Eclipse、Visual Studio 等主流 IDE。企业可选自托管 / 专有实例，官方也提供在产品内切换多家第三方模型的能力。
-+ [**定价详情**](https://www.tabnine.com/pricing):
-    - **Dev**: $9 / 月（个人 / 专业开发者）
-    - **Enterprise**: $39 / 用户・月（含 SSO、企业支持等）
+-   **基本信息**:
+    
+    -   **类型**: 独立 IDE/CLI/ 托管平台
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary (VS Code fork)
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Cursor 是 Anysphere 打造的 VS Code 分支独立 IDE，围绕智能体、Tab 补全、对话、云端代理与 CLI 组织开发流程。它可索引代码库、执行多文件编辑、运行命令与测试，并支持 MCP、技能、钩子、共享规则与团队级用量管理。Bugbot 可对 PR 进行代码审查，面向团队提供分析报表、隐私模式、RBAC 与 SAML/OIDC SSO。
+    
+-   [**定价详情**](https://cursor.com/pricing):
+    
+    -   **爱好者版**: $0 / 月；有限代理请求与 Tab 补全次数
+    -   **专业版**: $20 / 月；扩展代理限额
+    -   **专业增强版**: $60 / 月；更高模型用量
+    -   **旗舰版**: $200 / 月；最高个人模型用量
+    -   **BYOK 参考**: [ccursor.cometix.dev](https://ccursor.cometix.dev/)
 
 ---
 
-### 31. 通义灵码 (Tongyi Lingma)
+# 16\. Factory Droid
 
-+ **基本信息**:
-    - **类型**: IDE 扩展
-    - **LLM API 支持**: 有限支持 (仅阿里云)
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [1,590,000+（截至 2025-12）](https://tongyi.aliyun.com/lingma)
-+ **工具描述**: 通义灵码是阿里云推出的企业级 AI 编码助手，提供代码补全、智能问答、多文件编辑与编程智能体。企业版可接入私域知识库，并支持专属部署与 VPC 网络隔离，满足金融、电商等行业合规需求。
-+ [**定价详情**](https://tongyi.aliyun.com/lingma/pricing):
-    - **个人基础版**: 永久免费
-    - **个人专业版**: 限时免费
-    - **企业标准版**: ¥59 / 用户・月（年付 8 折，10 席起购）
-    - **企业专属版**: ¥159 / 用户・月（或 $32 / 用户・月，100 席起购，私有 VPC 部署）
-
----
-
-### 32. Trae
-
-+ **基本信息**:
-    - **类型**: 独立 IDE
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Partial (CLI: MIT, IDE: Proprietary)
-    - **GitHub 星标**: [10,400+（截至 2025-12-28）](https://github.com/bytedance/trae-agent)
-    - **用户 / 安装量**: [1,070,000+（截至 2025-12）](https://www.trae.ai/)
-+ **工具描述**: Trae 由字节跳动推出，定位为 "多角色 AI 开发团队" 集成 IDE + CLI。它可索引整座仓库，生成执行计划后批量修改文件、运行测试并提交补丁；所有步骤在界面中可审阅回滚，兼顾效率与合规。桌面版 UI 基于 VS Code fork，兼容原生扩展，同时支持 MCP（Model Context Protocol）调用终端、浏览器及外部 API；开源的 Trae Agent CLI 采用 MIT 许可证，支持 OpenAI、Anthropic、Doubao、Azure、OpenRouter、Ollama、Google Gemini 等多家 LLM 提供方。
-+ [**定价详情**](https://www.trae.ai/pricing):
-    - **Free**: 免费（基础模型每日限额）
-    - **Pro**: $ 10 / 月（或  $90 / 年，首月 $3，AI 请求配额翻倍）
-    - **Enterprise**: 定制方案（面向团队与企业部署）
+-   **基本信息**:
+    
+    -   **类型**: CLI / 桌面端 / Web
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Factory Droid 是 Factory.ai 的软件开发代理，覆盖 Desktop、Web 与 CLI，并支持云端和本地后台代理。它可执行重构、测试、代码审查、自动化 QA、仓库分析与任务编排等软件工程工作流。CLI 支持 BYOK，可接入自有 OpenAI/Anthropic API Key、开源模型提供方或本地模型；自定义模型仅在 CLI 中可用。
+    
+-   [**定价详情**](https://docs.factory.ai/pricing):
+    
+    -   **专业版**: $20 / 月；最多 2 名团队成员，额外席位 $5 / 席
+    -   **最高档**: $200 / 月；约专业版 10 倍用量，最多 5 席，额外席位 $5 / 席
+    -   **企业版**: N/A
 
 ---
 
-### 33. Warp
+# 17\. Gemini CLI
 
-+ **基本信息**:
-    - **类型**: 终端模拟器
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Proprietary
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [500,000+（截至 2025-12）](https://www.warp.dev/)
-+ **工具描述**: Warp 2.0 将终端、代码编辑、Agent 管理和 Warp Drive（知识仓）整合至统一输入框，支持并行多 Agent 协作。GPU 渲染带来流畅 UI；MCP 让 Agent 能调用 CLI、CI/CD、云资源。所有变更以可审核 Patch 形式呈现，适合个人与团队端到端自动化开发。
-+ [**定价详情**](https://www.warp.dev/pricing):
-    - **Free**: 免费（150 次 / 月高级 AI 请求）
-    - **Pro**: $15 / 月（年付，AI 请求额度提升）
-    - **Turbo**: $40 / 月（年付，AI 配额最高）
-    - **Enterprise**: 定制报价（BYO LLM 支持）
-
----
-
-### 34. Windsurf
-
-+ **基本信息**:
-    - **类型**: 独立 IDE
-    - **LLM API 支持**: 支持
-    - **开源许可证**: Proprietary (VS Code fork)
-    - **GitHub 星标**: N/A
-    - **用户 / 安装量**: [3,337,398（截至 2025-12-28）](https://marketplace.visualstudio.com/items?itemName=Codeium.codeium)
-+ **工具描述**: Windsurf 将终端、编辑器与多代理协作整合为一体，核心代理 Cascade 能对整仓库生成 "计划 - 执行 - 回滚" 闭环，并通过 MCP 接入终端命令、浏览器、外部 API，帮助个人或团队完成从需求到部署的全链路开发。
-+ [**定价详情**](https://windsurf.com/pricing):
-    - **Free**: 免费（25 条 Prompt 请求 / 月）
-    - **Pro**: $15 / 月（500 条 Prompt 请求 / 月）
-    - **额外包**: $10/250 条 Prompt 请求
-    - **Teams/Enterprise**: 定制报价（私有部署、SSO、BYO-LLM）
+-   **基本信息**:
+    
+    -   **类型**: CLI
+    -   **LLM API 支持**: 有限支持 (仅 Google)
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [102K+（截至 2026-04-24）](https://github.com/google-gemini/gemini-cli)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Gemini CLI 是 Google 开源的终端 AI 代理，把 Gemini 直接带入命令行。它提供 Gemini 3 模型、1M 词元上下文、Google Search 增强、文件操作、终端命令、网页抓取与 MCP 扩展，并可用于代码理解、应用生成、调试、重构和自动化脚本。用户可通过 Google 账号、Gemini API 密钥、Vertex AI 或 Google Workspace/Code Assist 相关订阅鉴权。
+    
+-   [**定价详情**](https://github.com/google-gemini/gemini-cli/blob/main/docs/resources/quota-and-pricing.md):
+    
+    -   **Google 账号 / Gemini Code Assist 个人版**: 免费；1,000 次模型请求 / 用户・天
+    -   **Gemini API Key 免费层**: 免费；250 次模型请求 / 用户・天，仅 Flash 模型
+    -   **Google AI Pro**: $19.99 / 月；1,500 次模型请求 / 用户・天
+    -   **Google AI Ultra**: $249.99 / 月；2,000 次模型请求 / 用户・天
 
 ---
 
-### 35. Zed
+# 18\. Gemini Code Assist
 
-+ **基本信息**:
-    - **类型**: 独立 IDE
-    - **LLM API 支持**: 支持
-    - **开源许可证**: GPL-3.0
-    - **GitHub 星标**: [72,200+（截至 2025-12-28）](https://github.com/zed-industries/zed)
-    - **用户 / 安装量**: N/A
-+ **工具描述**: Rust 编写的高性能多人协作代码编辑器，内置 AI"编辑预测"（Edit Predictions）、对话与多文件改写，并通过 Agent Client Protocol 与外部 Agent 集成。支持 macOS/Linux，Windows 版本持续推进中，其仓库中也增加了与 Gemini/Cursor 等工具协作的规则文件。
-+ [**定价详情**](https://zed.dev/pro):
-    - **Personal**: $0 / 永远；含每月 2,000 次接受的编辑预测，且可无限使用自带 API Key 或外部 Agent
-    - **Pro**: $ 10 / 月；无限编辑预测，含  $5 代币额度，超出按量计费
-    - **Enterprise**: N/A（联系销售）
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展
+    -   **LLM API 支持**: 有限支持 (仅 Google)
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [3894K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist)
+-   **工具描述**:  
+    Gemini Code Assist 是 Google 面向 IDE 与 Google Cloud 工作流的 Gemini 编程助手。它支持代码补全、代码生成、聊天、调试、单元测试生成、源引用、GitHub 自动代码审查，以及 Firebase、Android Studio、IntelliJ、BigQuery、Apigee 等环境中的开发辅助。企业方案提供标准版与企业版，并将 Gemini CLI、智能体模式、本地代码库感知和 Google Cloud 相关功能纳入统一配额与管理。
+    
+-   [**定价详情**](https://codeassist.google/products/business):
+    
+    -   **个人版**: 免费
+    -   **标准版**: $22.80 / 用户・月（月付）或 $19 / 用户・月（年付）
+    -   **企业版**: $54 / 用户・月（月付）或 $45 / 用户・月（年付）
+    -   **Google 开发者计划高级版**: $299 / 年
 
+---
+
+# 19\. GitHub Copilot
+
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展 / CLI / 托管平台
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [73121K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+-   **工具描述**:  
+    GitHub Copilot 是 GitHub 的 AI 编程助手，覆盖 VS Code、Visual Studio、JetBrains、Eclipse、Xcode、[GitHub.com](http://GitHub.com)、GitHub Mobile 与 CLI。IDE 中包含内联建议、下一步编辑建议、对话、编辑与智能体模式，可进行多文件修改、自动处理编译 /lint/ 测试反馈并迭代完成任务。Copilot 还支持 MCP、自定义指令、云端代理、代码审查、第三方编程代理（专业增强版公开预览）与多模型选择。
+    
+-   [**定价详情**](https://github.com/features/copilot/plans):
+    
+    -   **Copilot 免费版**: $0 / 月；50 次高级请求 / 月，2,000 次补全 / 月
+    -   **Copilot 专业版**: $10 / 月；300 次高级请求 / 月，无限补全
+    -   **Copilot 专业增强版**: $39 / 月；1,500 次高级请求 / 月
+    -   **商业版 / 企业版**: $19 / 席・月 或 $39 / 席・月；300 或 1,000 次高级请求 / 用户・月
+
+---
+
+# 20\. Google Antigravity
+
+-   **基本信息**:
+    
+    -   **类型**: 独立 IDE / 桌面端
+    -   **LLM API 支持**: 不支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Google Antigravity 是 Google 的智能体开发平台，提供编辑器视图与管理界面来并行管理自主智能体。智能体可在编辑器、终端与浏览器中规划、执行和验证任务，并通过任务清单、实现计划、截图、浏览器录屏等产物让过程可审阅。平台内置模型访问包括 Gemini 3.1 Pro、Gemini 3 Flash、Claude Sonnet/Opus 4.6 与 gpt-oss-120b 等，但未披露 BYOK 或自定义 LLM API 接入能力。
+    
+-   [**定价详情**](https://antigravity.google/pricing):
+    
+    -   **个人版**: $0 / 月；个人功能额度
+    -   **Google AI Pro**: $19.99 / 月；更高智能体模型速率限制
+    -   **Google AI Ultra**: $249.99 / 月；最高智能体模型速率限制
+    -   **组织方案**: N/A
+
+---
+
+# 21\. goose
+
+-   **基本信息**:
+    
+    -   **类型**: CLI / 桌面端 / API
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [43K+（截至 2026-04-24）](https://github.com/aaif-goose/goose)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    goose 是 AAIF/Linux Foundation 体系下的开源本地 AI 代理，提供桌面端、CLI 和 API，可用于代码、研究、自动化和数据分析等工作流。它支持 15+ 模型提供商、API 密钥、现有 Claude/ChatGPT/Gemini 订阅和 MCP 扩展，并可通过 ACP 连接其它代理客户端。
+    
+-   [**定价详情**](https://goose-docs.ai/):
+    
+    -   **免费**: BYOK
+
+---
+
+# 22\. Graphite
+
+-   **基本信息**:
+    
+    -   **类型**: 托管平台 / CLI/IDE 扩展
+    -   **LLM API 支持**: 不支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [53K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=Graphite.gti-vscode)
+-   **工具描述**:  
+    Graphite 是以堆叠 PR、评审自动化和合并队列为核心的 AI 代码评审平台，配套 Web、CLI 与 VS Code 扩展。它与 GitHub 深度集成，提供 Graphite 对话、AI 评审、建议修复、CI 摘要、团队洞察和企业治理能力。
+    
+-   [**定价详情**](https://graphite.com/pricing):
+    
+    -   **爱好者版**: 免费；有限 Graphite 对话与 AI 评审
+    -   **入门版**: $20 / 用户・月（年付）
+    -   **团队版**: $40 / 用户・月（年付）；无限 Graphite 对话与 AI 评审
+    -   **企业版**: N/A
+
+---
+
+# 23\. Jules
+
+-   **基本信息**:
+    
+    -   **类型**: 托管平台 / CLI/API
+    -   **LLM API 支持**: 不支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Jules 是 Google 的异步云端编码代理，可选择 GitHub 仓库和分支并提交任务提示词。代理会在云端环境中克隆仓库、制定计划、生成差异，并可创建 PR；官方同时提供 Jules Tools CLI 与 REST API，便于从终端或自动化流程调用。
+    
+-   [**定价详情**](https://jules.google/docs/usage-limits/):
+    
+    -   **Jules 免费版**: 免费；15 个任务 / 天，3 个并发任务
+    -   **Pro 版内含 Jules**: 随 Google AI Pro（$19.99 / 月）；100 个任务 / 天，15 个并发任务
+    -   **Ultra 版内含 Jules**: 随 Google AI Ultra（$249.99 / 月）；300 个任务 / 天，60 个并发任务
+
+---
+
+# 24\. Junie
+
+-   **基本信息**:
+    
+    -   **类型**: CLI/IDE 集成 / CI/CD 集成
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: [183（截至 2026-04-24）](https://github.com/JetBrains/junie)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Junie 是 JetBrains 的模型无关编码代理，可在终端、JetBrains IDE、GitLab CI/CD、GitHub Action、Air 与 Zed 等环境中运行。它支持自然语言任务、规划、子代理、技能、MCP、人类确认控制和 BYOK，可用 OpenAI、Anthropic、Gemini、xAI、OpenRouter 等模型密钥。
+    
+-   [**定价详情**](https://junie.jetbrains.com/):
+    
+    -   **免费**: BYOK
+    -   **AI 专业版**: $10 / 用户・月；10 个 AI 点数 / 30 天
+    -   **AI 旗舰版**: $30 / 用户・月；35 个 AI 点数 / 30 天
+    -   **AI 企业版**: $60 / 用户・月；官方标注即将推出
+
+---
+
+# 25\. Kilo Code
+
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展 / CLI / 云端代理
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: MIT
+    -   **GitHub 星标**: [18K+（截至 2026-04-24）](https://github.com/Kilo-Org/kilocode)
+    -   **用户 / 安装量**: [1014K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code)
+-   **工具描述**:  
+    Kilo Code 是面向 VS Code、JetBrains 与 CLI 的开源代理式编码助手，提供代码生成、补全、终端命令、浏览器自动化、重构和多模式工作流。它支持 500+ 模型、Kilo Gateway、BYOK、共享团队密钥、云端代理和代码评审，补丁与命令执行可由开发者确认。
+    
+-   [**定价详情**](https://kilo.ai/pricing):
+    
+    -   **免费**: BYOK
+    -   **Kilo Pass 入门版**: $19 / 月；最高 $26.60 / 月点数
+    -   **Kilo Pass 专业版**: $49 / 月；最高 $68.60 / 月点数
+    -   **Kilo Pass 专家版**: $199 / 月；最高 $278.60 / 月点数
+
+---
+
+# 26\. Kiro
+
+-   **基本信息**:
+    
+    -   **类型**: 独立 IDE/CLI
+    -   **LLM API 支持**: 不支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Kiro 是一款代理式 AI IDE 与 CLI，围绕规格驱动开发、引导规则、智能体钩子、Powers 与多模态对话组织从原型到生产的开发流程。其模型侧默认使用自动路由，也可选择官方托管的 Claude、MiniMax、GLM、DeepSeek 等模型；当前未披露可自带第三方模型 API 密钥的通用 BYOK 能力。
+    
+-   [**定价详情**](https://kiro.dev/pricing/):
+    
+    -   **Kiro 免费版**: $0 / 月；50 点数 / 月，新用户可获 500 赠送点数（30 天）
+    -   **Kiro 专业版**: $20 / 月；1,000 点数 / 月
+    -   **Kiro 专业增强版**: $40 / 月；2,000 点数 / 月
+    -   **Kiro 高能版**: $200 / 月；10,000 点数 / 月
+
+---
+
+# 27\. OpenCode
+
+-   **基本信息**:
+    
+    -   **类型**: CLI / 桌面端 / IDE 扩展
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: MIT
+    -   **GitHub 星标**: [148K+（截至 2026-04-24）](https://github.com/anomalyco/opencode)
+    -   **用户 / 安装量**: [6500K+（月活开发者，官网披露；截至 2026-04-24）](https://opencode.ai/)
+-   **工具描述**:  
+    OpenCode 是开源 AI 编码代理，可在终端、桌面应用与 IDE 扩展中使用，并通过客户端 / 服务器架构支持多种前端。它不绑定单一模型提供商，可使用内置免费模型、OpenCode Zen/Go、Claude、OpenAI、Google 或本地模型，并内置构建、规划与通用等代理模式。
+    
+-   [**定价详情**](https://opencode.ai/):
+    
+    -   **免费**: BYOK
+    -   **OpenCode Go**: $5 首月，之后 $10 / 月
+    -   **OpenCode Zen**: $20 余额起充；按请求计费，零加价
+    -   **企业版**: N/A
+
+---
+
+# 28\. OpenHands
+
+-   **基本信息**:
+    
+    -   **类型**: 托管平台 / CLI/SDK
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Partial (MIT; enterprise/ source-available)
+    -   **GitHub 星标**: [72K+（截至 2026-04-24）](https://github.com/OpenHands/OpenHands)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    OpenHands 是模型无关的端到端工程代理平台，提供 SDK、CLI、本地 GUI、云端 SaaS 与企业自托管 / VPC 方案。它支持本地或云端运行代理、Git 集成、沙箱执行、API 自动化，以及 Slack/Jira/Linear 等企业协作能力；核心代码 MIT，enterprise/ 目录为 source-available。
+    
+-   [**定价详情**](https://openhands.dev/pricing):
+    
+    -   **开源版**: 免费；本地运行
+    -   **个人云端版**: 免费；BYOK 或按成本使用 OpenHands 模型提供商
+    -   **企业版**: N/A
+
+---
+
+# 29\. Qoder
+
+-   **基本信息**:
+    
+    -   **类型**: 独立 IDE/IDE 扩展 / CLI
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Qoder 是面向真实软件开发的代理式编码平台，包含独立 IDE、JetBrains 插件和 CLI。它通过上下文工程、仓库 Wiki、任务模式、智能体对话、下一步编辑建议和自动化 PR/Issue 工作流来理解代码库并执行多文件任务；支持自带 API Key 接入自定义模型，方便按自己的模型与预算使用。
+    
+-   [**定价详情**](https://docs.qoder.com/account/pricing):
+    
+    -   **免费版**: 免费；300 点数，含 2 周专业版试用
+    -   **专业版**: $10 / 月（常规 $20 / 月）；2,000 点数 / 月
+    -   **专业增强版**: $30 / 月（常规 $60 / 月）；6,000 点数 / 月
+    -   **旗舰版**: $100 / 月（常规 $200 / 月）；20,000 点数 / 月
+
+---
+
+# 30\. Qwen Code
+
+-   **基本信息**:
+    
+    -   **类型**: CLI/IDE 集成 / SDK
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Apache-2.0
+    -   **GitHub 星标**: [24K+（截至 2026-04-24）](https://github.com/QwenLM/qwen-code)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Qwen Code 是 QwenLM 的开源终端 AI 编程代理，面向命令行开发者，支持大型代码库理解、自动化任务、技能 / 子智能体、多协议模型提供方和 IDE 集成。官方仓库说明 2026-04-15 起 Qwen OAuth 免费层已停止，需切换阿里云 Coding Plan、OpenRouter、Fireworks AI 或自带 API 密钥。
+    
+-   [**定价详情**](https://www.alibabacloud.com/help/en/model-studio/coding-plan):
+    
+    -   **免费**: BYOK
+    -   **阿里云 Coding Plan 专业版**: $50 / 月；6,000 次请求 / 5 小时、45,000 次请求 / 周、90,000 次请求 / 月
+    -   **精简版**: 不再接受新订阅
+    -   **其它模型 / API**: 按对应提供商计费
+
+---
+
+# 31\. Replit
+
+-   **基本信息**:
+    
+    -   **类型**: 托管平台 / 独立 IDE
+    -   **LLM API 支持**: 不支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [50000K+（官方博客披露；截至 2026-04-24）](https://blog.replit.com/google-cloud-partner-award-winner)
+-   **工具描述**:  
+    Replit 是基于云端的浏览器 IDE 与 AI 应用构建平台，集成项目托管、运行环境、数据库、部署、团队协作与 Replit 智能体。第 4 代智能体可通过自然语言生成应用、网站、幻灯片、移动端原型与动画，并配合设计画布、可视化编辑器、连接器、规划模式与多智能体并行工作，帮助个人、团队和企业完成从需求到上线的全流程开发。
+    
+-   [**定价详情**](https://replit.com/pricing):
+    
+    -   **入门版**: $0 / 月；含每日智能体点数，可发布 1 个应用
+    -   **Replit Core 版**: $20 / 月（年付）或 $25 / 月（月付）；含 $25 / 月平台点数
+    -   **Replit 专业版**: $95 / 月（年付）或 $100 / 月（月付）；含 $100 / 月点数
+    -   **企业版**: N/A
+
+---
+
+# 32\. RovoDev
+
+-   **基本信息**:
+    
+    -   **类型**: CLI/IDE 扩展 / 托管平台
+    -   **LLM API 支持**: 不支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Rovo Dev 是 Atlassian 面向软件团队的代理式 AI 编码工具，基于团队协作图谱与前沿模型，把 Jira、Bitbucket、GitHub、VS Code 和命令行中的工程上下文连接起来。它可用于代码规划、代码生成、PR / 代码评审、构建部署与重复研发任务自动化，也支持自定义子代理、MCP 与图片 / PDF 等多模态输入。
+    
+-   [**定价详情**](https://www.atlassian.com/software/rovo-dev/pricing):
+    
+    -   **Rovo Dev 标准版**: $20 / 开发者・月；2,000 Rovo Dev 点数 / 开发者・月
+    -   **额外用量**: $0.01 / 点数
+    -   **试用 / 免费额度**: 30 天免费试用；部分站点可获 350 点数 / 用户・月
+
+---
+
+# 33\. Superset
+
+-   **基本信息**:
+    
+    -   **类型**: 独立 IDE / 桌面端
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Elastic-2.0
+    -   **GitHub 星标**: [10K+（截至 2026-04-24）](https://github.com/superset-sh/superset)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Superset 是面向 AI 代理时代的桌面代码编辑器，用于在本机编排 Claude Code、OpenCode、Codex、Gemini CLI、Cursor 代理等 CLI 编程代理。它通过 Git 工作树为每个任务隔离工作区，支持同时运行 100+ 个代理、查看差异、审阅结果，并可一键转交到 VS Code、Cursor、Xcode 或 JetBrains 等外部 IDE；模型和代理密钥通常由外部代理或用户自备。
+    
+-   [**定价详情**](https://superset.sh/pricing):
+    
+    -   **免费版**: $0 / 月；本地工作区与基础代理编排
+    -   **专业版**: $15 / 用户・月（年付）或 $20 / 用户・月（月付）
+    -   **企业版**: N/A
+    -   **额外费用**: 外部 CLI 代理、模型 API 或订阅另计
+
+---
+
+# 34\. Tabnine
+
+-   **基本信息**:
+    
+    -   **类型**: IDE 扩展 / CLI
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [9539K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)
+-   **工具描述**:  
+    Tabnine 是主打企业隐私、部署灵活性与治理能力的 AI 编码平台，覆盖 VS Code、JetBrains、Eclipse、Visual Studio 等主流 IDE；VS Marketplace 安装量沿用其旧版 VS Code 扩展口径。代码助手提供补全、聊天与上下文感知问答，可使用 Anthropic、OpenAI、Google、Meta、Mistral 等模型，也可连接企业自有 LLM 端点；智能体平台进一步提供 CLI、MCP、自治智能体工作流与企业上下文引擎，支持 SaaS、VPC、本地部署与隔离网络等部署形态。
+    
+-   [**定价详情**](https://www.tabnine.com/pricing/):
+    
+    -   **代码助手**: $39 / 用户・月（年付）
+    -   **智能体平台**: $59 / 用户・月（年付）
+    -   **托管模型用量**: 模型供应商价格 + 5% 手续费
+
+---
+
+# 35\. 通义灵码 (Tongyi Lingma)
+
+-   **基本信息**:
+    
+    -   **类型**: 独立 IDE/IDE 扩展
+    -   **LLM API 支持**: 有限支持 (仅阿里云 / 通义)
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [2419K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=Alibaba-Cloud.tongyi-lingma)
+-   **工具描述**:  
+    通义灵码是阿里云推出的智能编码助手，提供 Lingma IDE 以及 VS Code、Visual Studio、JetBrains IDEs 插件形态，支持代码补全、智能问答、多文件修改、编程智能体、MCP 工具使用与终端命令执行。企业版提供私域知识增强、企业知识库问答、审计日志、统计报表、自定义扩展管理、专用推理服务，以及专属 VPC、IP 白名单和专有网络访问等能力。
+    
+-   [**定价详情**](https://lingma.aliyun.com/pricing):
+    
+    -   **个人基础版**: 免费
+    -   **个人专业版**: 限时免费；原价 ¥59 / 月
+    -   **企业标准版**: ¥79 / 人 / 月；10 人起购
+    -   **企业专属版**: ¥159 / 人 / 月；100 人起购
+
+---
+
+# 36\. Trae
+
+-   **基本信息**:
+    
+    -   **类型**: 独立 IDE/CLI
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Partial (CLI: MIT, IDE: Proprietary)
+    -   **GitHub 星标**: [11K+（截至 2026-04-24）](https://github.com/bytedance/trae-agent)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Trae 是字节跳动推出的 AI 开发环境，包含桌面 IDE 与开源 Trae Agent CLI。IDE 支持 SOLO/Builder 等代理式开发工作流、仓库上下文理解、多文件编辑、终端命令、测试执行与 MCP；开源 CLI 面向通用软件工程任务，也支持自带 API Key 接入 OpenAI、Anthropic、Doubao、Azure、OpenRouter、Ollama、Google Gemini 等多家 LLM 提供方，适合将代理式编码流程接入终端与自动化脚本。
+    
+-   [**定价详情**](https://www.trae.ai/pricing):
+    
+    -   **免费版**: $0 / 月
+    -   **轻量版**: $3 / 月
+    -   **专业版**: $10 / 月；新用户可 7 天免费试用
+    -   **专业增强版 / 旗舰版**: $30 / 月 或 $100 / 月
+
+---
+
+# 37\. Warp
+
+-   **基本信息**:
+    
+    -   **类型**: 终端模拟器 / 智能体开发环境
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [700K+（官网披露；截至 2026-04-24）](https://www.warp.dev/)
+-   **工具描述**:  
+    Warp 已从现代终端扩展为智能体开发环境，把终端、代码编辑、云端代理编排、Warp Drive 知识库与团队协作整合在一起。它支持 Warp 代理、Claude Code、Codex、Gemini CLI、OpenCode 等代理 / CLI 工具，能够集中运行多个代理、跟踪变更并介入审阅；构建版与商业版支持 BYOK，可连接 OpenAI、Anthropic 和 Google 模型。
+    
+-   [**定价详情**](https://www.warp.dev/pricing):
+    
+    -   **免费版**: $0 / 月；有限 AI 点数、模型访问、云代理与代码库索引
+    -   **构建版**: $18 / 月（年付）或 $20 / 月（月付）；1,500 点数 / 月
+    -   **最高档**: $180 / 月（年付）或 $200 / 月（月付）；12 倍点数 / 月
+    -   **商业版**: $45 / 用户・月（年付）或 $50 / 用户・月（月付）
+
+---
+
+# 38\. Windsurf
+
+-   **基本信息**:
+    
+    -   **类型**: 独立 IDE/IDE 扩展
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: Proprietary (VS Code fork)
+    -   **GitHub 星标**: N/A
+    -   **用户 / 安装量**: [3672K（截至 2026-04-24）](https://marketplace.visualstudio.com/items?itemName=Codeium.codeium)
+-   **工具描述**:  
+    Windsurf 是 Cognition 旗下的 AI 原生开发环境，提供独立 Windsurf 编辑器与 VS Code 插件。核心能力包括 Cascade 代理、Tab 补全、快速上下文、浏览器预览、部署、Devin Cloud 后台开发会话，以及 SWE-1.6/SWE-1.5 等面向软件工程的模型；个人用户可对部分模型使用 BYOK，团队与企业方案提供集中计费、管理后台、知识库、SSO、RBAC、混合部署与客户管理能力。
+    
+-   [**定价详情**](https://windsurf.com/pricing):
+    
+    -   **免费版**: $0 / 月；轻量使用额度
+    -   **专业版**: $20 / 月；标准使用额度
+    -   **最高档**: $200 / 月；重度使用额度
+    -   **团队版**: $40 / 用户・月；标准使用额度
+
+---
+
+# 39\. Zed
+
+-   **基本信息**:
+    
+    -   **类型**: 独立 IDE
+    -   **LLM API 支持**: 支持
+    -   **开源许可证**: GPL-3.0-only OR AGPL-3.0-only OR Apache-2.0
+    -   **GitHub 星标**: [80K+（截至 2026-04-24）](https://github.com/zed-industries/zed)
+    -   **用户 / 安装量**: N/A
+-   **工具描述**:  
+    Zed 是用 Rust 编写的高性能多人协作代码编辑器，主打低延迟编辑、实时协作与每周发布。AI 能力包括编辑预测、智能体面板、对话、多文件改写、代理客户端协议与外部代理集成；用户可使用 Zed 托管模型，也可自备 API 密钥，支持 Amazon Bedrock、Anthropic、GitHub Copilot、Deepseek、Google AI、LM Studio、Mistral、Ollama、OpenAI、OpenRouter、Vercel 等模型提供方。
+    
+-   [**定价详情**](https://zed.dev/pricing):
+    
+    -   **个人版**: $0 / 永久；每月 2,000 次已接受编辑预测
+    -   **专业版**: $10 / 月；无限编辑预测，含 $5 词元额度
+    -   **专业版试用**: 14 天；含 $20 词元额度
+    -   **企业版**: N/A
+
+---
 
 > 以上是 30+ 个 AI 编程工具的对比汇总，涵盖了从 IDE 插件到独立平台、从开源到商业、从单模型到多模型支持的丰富生态。每款工具都有其独特的定位与优势，开发者可以根据自己的需求、技术栈和预算选择最合适的 AI 助手来提升生产力。[在线AI编程工具汇总对比](https://rysonai.com/)。数据来源感谢作者@RyanVan
+
+> BYOK 是 **Bring Your Own Key** 的缩写，意思是“自带密钥”。在 AI 编程工具里，通常表示你可以使用自己申请的模型 API Key 来接入工具，而不是只依赖工具官方提供的账号、额度或内置模型。这样更适合已经有 OpenAI、Anthropic、Google 等平台账号的用户，也方便按自己的预算和模型选择来使用。
+
 
 

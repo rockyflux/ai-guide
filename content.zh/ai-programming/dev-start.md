@@ -105,6 +105,7 @@ winget install --id Microsoft.Powershell --source winget
 #### 信用卡 / 支付
 
 - Bybit、Fiat24、Roogoo 等
+- [虚拟信用卡](https://988.chat/)
 
 #### 短信接收
 

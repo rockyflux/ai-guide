@@ -10,12 +10,12 @@ bookHidden: true
 
 罗列部分大模型的价格供参考
 
-## [](#p-13619368-h-1)国内大模型
+## 国内大模型
 
 **更新时间：2026-02-08**  
 **(单位统一为元 / 1M Tokens)**
 
-### [](#p-13619368-baidu-2)百度 (Baidu)
+### 百度 (Baidu)
 
 > 数据来源：[百度智能云千帆大模型平台](https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya)
 
@@ -41,7 +41,7 @@ _(128K Preview/Latest)_ | 0.8 | 3.2 | 输入缓存命中: 0.2
 | **ERNIE 4.5 Turbo**  
 _(32K)_ | 0.8 | 3.2 | 输入缓存命中: 0.2 |
 
-### [](#p-13619368-aliyun-3)阿里云 (Aliyun)
+### 阿里云 (Aliyun)
 
 > 数据来源：[阿里云百炼模型价格](https://help.aliyun.com/zh/model-studio/model-pricing) | [上下文缓存说明](https://help.aliyun.com/zh/model-studio/context-cache)
 
@@ -65,7 +65,7 @@ _(qwen-plus-latest)_ | 0.8 (≤128k)
 48 (≤1M) | Batch 调用半价  
 输入缓存命中: 20%(隐式)/10%(显式) |
 
-### [](#p-13619368-ai-zhipuai-4)智谱 AI (ZhipuAI)
+### 智谱 AI (ZhipuAI)
 
 > 数据来源：[智谱 AI 开放平台](https://bigmodel.cn/pricing)
 
@@ -91,7 +91,7 @@ _(qwen-plus-latest)_ | 0.8 (≤128k)
 | **GLM-4.7-FlashX** | 0.5 | 3 | 输入缓存命中: 0.1 |
 | **GLM-4.7-Flash** | 免费 | 免费 | 输入缓存命中：免费 |
 
-### [](#p-13619368-deepseek-5)DeepSeek
+### DeepSeek
 
 > 数据来源：[DeepSeek API Docs](https://api-docs.deepseek.com/zh-cn/quick_start/pricing)
 
@@ -100,7 +100,7 @@ _(qwen-plus-latest)_ | 0.8 (≤128k)
 | **DeepSeek-V3.2**  
 _(deepseek-chat/deepseek-reasoner)_ | 2 | 3 | 输入缓存命中: 0.2 |
 
-### [](#p-13619368-volcengine-6)火山引擎 (Volcengine)
+### 火山引擎 (Volcengine)
 
 > 数据来源：[火山方舟大模型服务平台](https://www.volcengine.com/docs/82379/1544106)
 
@@ -158,7 +158,7 @@ _(deepseek-chat/deepseek-reasoner)_ | 2 | 3 | 输入缓存命中: 0.2 |
 24 (128k-256k\] | 缓存命中: 0.16  
 缓存存储: 0.017 元 / 1M / 小时 |
 
-### [](#p-13619368-minimax-7)MiniMax
+### MiniMax
 
 > 数据来源：[MiniMax 开放平台](https://platform.minimaxi.com/docs/guides/pricing-paygo)
 
@@ -172,7 +172,7 @@ _(deepseek-chat/deepseek-reasoner)_ | 2 | 3 | 输入缓存命中: 0.2 |
 缓存写入: 2.625 |
 | **M2-her** | 2.1 | 8.4 |  |
 
-### [](#p-13619368-moonshot-ai-8)月之暗面 (Moonshot AI)
+### 月之暗面 (Moonshot AI)
 
 > 数据来源：[Moonshot AI 开放平台](https://platform.moonshot.cn/docs/pricing/chat)
 
@@ -187,12 +187,12 @@ _(turbo/thinking-turbo)_ | 8 | 58 | 缓存命中: 1 |
 | **moonshot-v1-32k** | 5 | 20 |  |
 | **moonshot-v1-128k** | 10 | 30 |  |
 
-## [](#p-13619368-h-9)国外大模型
+## 国外大模型
 
 **更新时间：2026-02-08**  
 **(单位统一为美元 / 1M Tokens)**
 
-### [](#p-13619368-openai-10)OpenAI
+### OpenAI
 
 > 数据来源：[OpenAI Pricing (Standard)](https://platform.openai.com/docs/pricing?latest-pricing=standard)
 
@@ -207,7 +207,7 @@ _(turbo/thinking-turbo)_ | 8 | 58 | 缓存命中: 1 |
 | **gpt-5-chat-latest** | 1.25 | 10.00 | 缓存命中: 0.125 |
 | **gpt-4o** | 2.50 | 10.00 | 缓存命中: 1.25 |
 
-### [](#p-13619368-anthropic-claude-11)Anthropic (Claude)
+### Anthropic (Claude)
 
 > 数据来源：[Claude Pricing](https://platform.claude.com/docs/zh-CN/about-claude/pricing)
 
@@ -220,7 +220,7 @@ _(turbo/thinking-turbo)_ | 8 | 58 | 缓存命中: 1 |
 | **Claude Haiku 4.5** | 1.00 | 5.00 | 缓存写入: 1.25 (5m) / 2.00 (1h)  
 输入缓存命中: 0.10 |
 
-### [](#p-13619368-google-gemini-12)Google (Gemini)
+### Google (Gemini)
 
 > 数据来源：[Gemini API Pricing](https://ai.google.dev/gemini-api/docs/pricing?hl=zh-cn)
 

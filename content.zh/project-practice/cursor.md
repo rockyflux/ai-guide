@@ -14,7 +14,9 @@ noTocArea: true
    [AI 订阅套餐]({{< relref "ai-programming/coding-plan" >}})。
 
 - **第三方渠道**：可在 [闲鱼搜索](https://www.goofish.com/search?q=cursor) 购买月卡/额度卡（自行甄别风险与售后）。
-   [月卡](https://www.goofish.com/item?id=1019865131158&categoryId=201453616) | 
+   [月卡1](https://pay.ldxp.cn/shop/W6IZFM8B) 
+   [月卡2](https://www.goofish.com/item?id=1019865131158&categoryId=201453616) 
+   [月卡3](https://pay.ldxp.cn/shop/xxdlzs)  
    [额度卡](https://www.goofish.com/item?&id=1015413302415&categoryId=201449620)   
 - **官方订阅**：$20/月（Cursor Pro 的用量通常是“额度池”，大致等价于 $20 的模型调用价值，而不是固定请求次数）。
 - **试用/共享账号**：市面上也有“按月售卖的试用账号/共享账号”等形式（同样注意稳定性与合规风险）。

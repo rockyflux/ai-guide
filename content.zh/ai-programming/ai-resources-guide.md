@@ -27,6 +27,7 @@ noTocArea: true
 - [学习 Claude Code，拥抱 AI 编程](https://claudecode.tangshuang.net/) — Claude Code 学习站
 - [learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) — 从 0 到 1 构建 nano Claude Code-like agent 的开源教程
 - [claudecn 开发技术社区](https://claudecn.com/) — Claude 中文技术社区
+- [claude-howto](https://github.com/luongnv89/claude-howto/tree/main/zh) - 用一个周末掌握 Claude Code
 - [Claude 中文网](https://www.claude-cn.org/) — Claude 资讯与交流
 - [学习 Cursor，拥抱 AI 编程](https://cursor101.com/zh) — Cursor 中文教程
 - [OpenCode 中文实战课](https://learnopencode.com/) — OpenCode 实战课程

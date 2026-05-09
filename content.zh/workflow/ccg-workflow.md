@@ -58,7 +58,8 @@ noTocArea: true
 | 36 | GuDaStudio/skills | [GitHub](https://github.com/GuDaStudio/skills) | 2.0k | 现代化 Agent Skills 能力库；支持 Claude 与多模型 / 多工具协作，并行化工作流编排。 |
 | 37 | catlog22/Claude-Code-Workflow | [GitHub](https://github.com/catlog22/Claude-Code-Workflow) | 2.0k | JSON 驱动的多智能体开发框架，具备智能 CLI 编排、上下文优先架构和自动化工作流执行。 |
 | 38 | feiskyer/claude-code-settings | [GitHub](https://github.com/feiskyer/claude-code-settings) | 1.5k | 面向氛围编程（vibe coding）的 Claude Code 设置、命令与 agents。 |
-| 39 | jasoneri/ccg-workflow | [GitHub](https://github.com/jasoneri/ccg-workflow) | 0 | 多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17+ 个命令。 |
+| 39 | thedotmack/claude-mem | [GitHub](https://github.com/thedotmack/claude-mem) | 0 | Claude 的记忆增强项目，帮助在多次会话中保留和检索上下文。 |
+| 40 | jasoneri/ccg-workflow | [GitHub](https://github.com/jasoneri/ccg-workflow) | 0 | 多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17+ 个命令。 |
 | 40 | Ido-Levi/Hephaestus | [GitHub](https://github.com/Ido-Levi/Hephaestus) | 1.1k | 半结构化智能体框架：工作流会随着智能体发现需求而自我构建，而不是完全依赖预先预测。 |
 | 41 | bfly123/claude_code_autoflow | [GitHub](https://github.com/bfly123/claude_code_autoflow) | 110 | Claude Code AutoFlow (cca) 是一个专为 AI 辅助开发设计的结构化任务自动化工作流系统。 |
 | 42 | GuDaStudio/commands | [GitHub](https://github.com/GuDaStudio/commands) | 887 | 围绕“大 vibe”自动化与“以人为本”上下文管理的命令集合。 |
