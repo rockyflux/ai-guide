@@ -37,6 +37,84 @@ brew install --cask codex
 
 环境准备（Node、Git、终端基础）可参考：[开发环境：一站式准备]({{< relref "ai-programming/dev-start" >}})。
 
+#### 前置：`ripgrep`（`rg`）——CLI 强依赖，建议先装
+
+[Codex 开源仓库与 CLI 说明](https://github.com/openai/codex) 表明：**Codex CLI 默认把 `rg` 当作已在 PATH 中的系统能力**，用于文件发现、关键词搜索、大仓库扫描与上下文收集（类似把 ripgrep 当作「快速读仓库 / 缩小上下文」的默认后端）。**Codex 并不是内置一套独立文件搜索引擎**，而是 **LLM + 终端工具编排**；其中 **`rg` 承担大量「找文件、搜代码」路径**。
+
+若系统找不到 `rg`，常见直接报错：
+
+```text
+Error: spawn rg ENOENT
+```
+
+社区已在官方仓库讨论过该依赖与安装预期，例如：[Issue #43](https://github.com/openai/codex/issues/43)、[Issue #1205](https://github.com/openai/codex/issues/1205)。许多实践也会写「**优先用 `rg` / `rg --files`，少用慢速的 `grep` / `ls -R`**」——对 Agent 来说，瓶颈往往在**快速定位相关代码**，而不是生成代码本身。
+
+| 工具 | 速度 | 大仓库 | 尊重 `.gitignore` 等 |
+| --- | --- | --- | --- |
+| `grep` | 较慢 | 一般 | 差 |
+| `find` / 递归列目录 | 很慢 | 差 | 无 |
+| **`rg`（ripgrep）** | 很快 | 适合 | 原生支持 |
+
+除 Codex 外，不少 AI 编程类工具（如 [Aider](https://github.com/Aider-AI/aider)、[Claude Code](https://www.anthropic.com/claude-code)、[Cline](https://github.com/cline/cline)、[Cursor](https://www.cursor.com/) 等）的实现或提示也普遍偏向 **`rg`**（甚至会出现 *Prefer rg over grep* 一类表述）。
+
+**Windows 建议主动安装**（安装后**新开一个终端**，再跑 `codex`，避免 PATH 未刷新）：
+
+```powershell
+winget install BurntSushi.ripgrep.MSVC
+```
+
+若使用 [Scoop](https://scoop.sh/)：
+
+```powershell
+scoop install ripgrep
+```
+
+验证：
+
+```bash
+rg --version
+```
+
+**macOS / Linux**：若已装 Homebrew，常用 `brew install ripgrep`；各发行版软件源里包名多为 `ripgrep`。
+
+未装 `rg` 时，除 `ENOENT` 外，还可能表现为：扫仓库失败、上下文不完整、长时间卡在目录遍历等。**Windows** 上若再叠加 Codex 仍在演进中的平台差异，体感可能更明显；官方起步说明见：[OpenAI Help：Codex CLI getting started](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)。
+
+#### Codex++：桌面端外部增强（可选）
+
+若你主要用 **Codex 桌面端（Codex App）**，且遇到「API Key 模式下插件入口不可用」「会话只能归档、无法真正删除」「切换 model provider 后历史会话消失」等痛点，可尝试社区项目 **[Codex++（CodexPlusPlus）](https://github.com/BigPizzaV3/CodexPlusPlus)**。
+
+它是**外部启动器**：不修改 Codex 安装目录里的 `app.asar`，通过 **Chromium DevTools Protocol（CDP）** 注入增强脚本，并附带本地 helper 服务处理删除、导出、移动等操作。
+
+| 能力 | 说明 |
+| --- | --- |
+| **插件入口解锁** | API Key 登录时，解除「需要 ChatGPT 登录」导致的插件不可用 |
+| **会话删除** | 列表悬停显示删除按钮，支持确认与撤销 |
+| **Markdown 导出** | 按本地 rollout 导出带时间戳的会话 |
+| **会话项目移动** | 将会话移到其他本地项目 |
+| **对话 Timeline** | 右侧用户提问时间线，悬停摘要、点击跳转 |
+| **Provider 同步** | 切换供应商前同步 metadata，减少历史会话「看不见」 |
+
+**安装与启动**（需本机 Python 3）：
+
+```bash
+git clone https://github.com/BigPizzaV3/CodexPlusPlus.git
+cd CodexPlusPlus
+python -m pip install -e .
+python -m codex_session_delete setup    # 生成快捷方式 / macOS .app
+python -m codex_session_delete launch   # 启动（勿直接点原版 Codex）
+```
+
+**Windows** 也可双击项目根目录 `setup.bat`，选 `[1] Install Codex++`，之后用桌面 **`Codex++.lnk`** 启动。
+
+**使用注意**：
+
+- 必须从 **Codex++** 快捷方式启动，顶部才会出现 `Codex++` 菜单；原版 Codex 不会加载注入。
+- 启动时会为 Codex 附加 `--remote-debugging-port=9229`；若端口被占用，查看 `%USERPROFILE%\.codex-session-delete\launcher.log`（Windows）或 `~/.codex-session-delete/launcher.log`。
+- **Provider 同步**需在 Codex++ 设置里开启后重启；只修复会话可见性 metadata，不改写消息正文。
+- 技能推荐若 `git fetch failed`，可像官方 Codex 一样在环境里设置 `HTTP_PROXY` / `HTTPS_PROXY`（项目也会尝试探测常见本地代理端口）。
+
+更完整的命令（更新、卸载、Windows watcher 自动接管等）见仓库 [README](https://github.com/BigPizzaV3/CodexPlusPlus#readme)。
+
 ---
 
 ### 2. 登录、计费与 API
@@ -103,10 +181,11 @@ remote_connections = true
 
 ### 4. 第一次进项目：建议做的事
 
-1. 在**仓库根目录**打开终端（或 IDE 内置终端），执行 `codex` 进入交互（具体子命令以 `codex --help` 为准）。
-2. 让 Codex **扫一遍项目结构**，生成或补全面向代理的说明文件（常见名称是 **`AGENTS.md`**，也可能配合仓库内 `.codex/` 下的约定；以你本机 Codex 版本提示为准）。
-3. 把 **如何构建、如何测试、分支约定、禁止自动执行的操作** 写清楚——和用 Cursor / Claude Code 一样，**边界写清楚 = 少翻车**。
-4. `AGENTS.md` 示例参考：[codecopy.cn/embed/w7wlhs](https://www.codecopy.cn/embed/w7wlhs)
+1. 确认本机已安装 **`ripgrep`（`rg`）** 且 `rg --version` 正常（见上文「安装」中的前置说明）；否则 CLI 可能无法可靠扫描仓库。
+2. 在**仓库根目录**打开终端（或 IDE 内置终端），执行 `codex` 进入交互（具体子命令以 `codex --help` 为准）。
+3. 让 Codex **扫一遍项目结构**，生成或补全面向代理的说明文件（常见名称是 **`AGENTS.md`**，也可能配合仓库内 `.codex/` 下的约定；以你本机 Codex 版本提示为准）。
+4. 把 **如何构建、如何测试、分支约定、禁止自动执行的操作** 写清楚——和用 Cursor / Claude Code 一样，**边界写清楚 = 少翻车**。
+5. `AGENTS.md` 示例参考：[codecopy.cn/embed/w7wlhs](https://www.codecopy.cn/embed/w7wlhs)
 
 多模型协作（例如用别的工具做规划、用 Codex 做实现/评审）可参考：[CCG 使用指南]({{< relref "workflow/ccg" >}})。
 
@@ -142,4 +221,7 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 ### 8. 官方与参考链接
 
 - 开源仓库：[github.com/openai/codex](https://github.com/openai/codex)
+- 桌面端增强（社区）：[github.com/BigPizzaV3/CodexPlusPlus](https://github.com/BigPizzaV3/CodexPlusPlus)（Codex++）
 - Skills 文档：[developers.openai.com/codex/skills](https://developers.openai.com/codex/skills)
+- ripgrep（`rg`）：[github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+- Codex CLI 起步（Help Center）：[OpenAI Codex CLI – Getting Started](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)

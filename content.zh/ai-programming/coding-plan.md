@@ -17,24 +17,29 @@ noTocArea: true
 推荐先按「使用场景」做第一层筛选，再比较价格。同价位产品的真实差异，通常不在模型名字，而在稳定性、额度策略、上下文长度、工具兼容性和封控风险。
 {{% /hint %}}
 
-## 第三方中转站套餐
-这类服务的核心价值不是“更强”，而是降低接入门槛。
+## 第三方中转与采购渠道
+这类渠道的核心价值不是“更强”，而是降低接入门槛或绕过官方订阅不便。
 
 适用场景：
 - 官方账号购买和支付不方便。
 - 需要用 API 方式接入 Claude Code、Cursor、OpenCode、Cline 一类工具。
-- 预算有限，只想做轻量试用或临时项目。
+- 需要 IDE 工具额度、共享账号或代充，预算有限，只想轻量试用或临时项目。
 
 主要风险：
 - 稳定性、额度口径、风控策略都由第三方决定。
 - 某些服务的上游来源并不透明，套餐规则也可能频繁调整。
+- 私有渠道可能违反平台服务条款，存在封号、额度缩水、跑路等风险。
 - 电商平台购买尤其要核实售后、退款、封号与更换策略。
 
-常见来源方式：1. 官方 API 账号直接接入。2. 购买订阅后由服务方聚合分发。3. 非官方接口或兼容层转发。
+常见来源方式：1. 官方 API 账号直接接入。2. 购买订阅后由服务方聚合分发。3. 非官方接口或兼容层转发。4. 非官方店铺、分发页获取 IDE 额度或代充。
 
-### 中转站服务参考
+### 服务与渠道参考
+
+选购或接入前，可用 [禾维 AI](https://hvoy.ai/) 做 API 连通性测试、真假鉴定与价格对比；支持按模型查看在线率、延迟、掺水率等指标，降低踩坑风险。
+
 | 服务 / 渠道 | 简述 | 链接 |
 |---|---|---|
+| **禾维 AI** | 中转站真假检测、价格对比与站点推荐 | https://hvoy.ai/ |
 | **foxcode** | 低门槛套餐，适合先试用 | https://foxcode.rjj.cc/ |
 | **XCode** | 套餐较多，适合按预算选择 | https://xcode.best/ |
 | **88code** | 套餐较多，适合对比价格 | https://www.88code.ai/ |
@@ -44,13 +49,27 @@ noTocArea: true
 | **packyapi** | 偏向个人开发者 API 使用 | https://www.packyapi.com/ |
 | **AICodeMirror** | 月付型套餐 | https://www.aicodemirror.com/ |
 | **AIGetCode** | 周期订阅型套餐 | https://www.aigocode.com/ |
+| **OpenCode Go** | OpenCode 官方低成本订阅，支持任意代理，首月 $5、后续 $10/月，可按需充值 | https://opencode.ai/zh/go |
+| **CodeRefill** | 一套 License 覆盖 Cursor、Windsurf、Kiro、Codex，IDE 高级模型配额补能 | https://zy.harsidol.cn/codeRefill/ |
+| **B.AI** | Credits + 订阅制聚合平台，支持全系列模型访问，Pro 为 $200/月、Max 为 $2000/月，偏高频用户 | https://b.ai/ |
 | **UniAPI** | 多模型聚合，按量付费 | https://uniapi.ai/ |
 | **APIs.you** | API 目录聚合入口 | https://apis.you/catalog |
 | **淘宝** | 可搜索不同卖家套餐 | [淘宝搜索](https://s.taobao.com/search?q=claude+code) |
 | **闲鱼** | 常见于拼车、代购、转售 | [闲鱼搜索](https://www.goofish.com/search?q=claude+code) / [team 拼车](https://www.goofish.com/search?q=team拼车) |
+| **蓝奏云分发** | 资源分发页，常见于 IDE 工具额度或安装包 | https://wwaoo.lanzoue.com/b00od5g23a |
+| **ldxp 小店（xxdlzs）** | 非官方店铺，IDE 额度、代充 | https://pay.ldxp.cn/shop/xxdlzs |
+| **ldxp 小店（xcursor）** | 非官方店铺，偏 Cursor | https://pay.ldxp.cn/shop/xcursor |
+| **ldxp 小店（AEUQ8PP3）** | 非官方店铺 | https://pay.ldxp.cn/shop/AEUQ8PP3 |
+| **ooeao 商店** | 非官方店铺 | https://www.ooeao.com/shop/ithte |
+| **wafase** | 非官方店铺 | https://wafase.com/ |
+| **AI 创富俱乐部（makerich）** | 非官方店铺 | https://makerich.club/ |
+
+### 配套工具
+
+已有 ChatGPT Web session 时，可用 [GPTSession2CPAandSub2API](https://github.com/gtxx3600/GPTSession2CPAandSub2API) 在浏览器本地转为 CPA / sub2api 等可导入 JSON（面向 Plus，与上表中转套餐无关）。
 
 {{% hint warning %}}
-中转服务更适合“补接入能力”，不适合承载高敏感、强稳定性或长期不可中断的生产流程。
+上表服务与渠道更适合「补接入能力」或短期试用，不适合承载高敏感、强稳定性或长期不可中断的生产流程。部分私有渠道可能违反平台服务条款，存在账号封禁、额度缩水、跑路等风险；链接仅供信息参考，不构成推荐或担保。重要项目请优先走官方订阅或企业采购路径。
 {{% /hint %}}
 
 ## 国内企业常见采购路径
@@ -120,11 +139,6 @@ noTocArea: true
 | **Windsurf** | Free | $0 | 适合先试用 Agent 能力 | https://windsurf.dev/ |
 |  | Pro | $20 | 多文件编辑和更高请求量 | 同上 |
 
-第三方续杯工具：
-- https://wwaoo.lanzoue.com/b00od5g23a
-- https://pay.ldxp.cn/shop/xxdlzs
-- https://pay.ldxp.cn/shop/xcursor
-
 ### 2. 大模型原厂编程订阅
 | 产品 | 套餐 | 价格 | 特点 | 官方链接 |
 |---|---|---|---|---|
@@ -149,6 +163,7 @@ noTocArea: true
 - 想兼顾成本、模型切换和多工具复用：优先聚合型。
 
 ## 其他参考
+- [禾维 AI](https://hvoy.ai/) — 中转站真假检测、价格对比与站点推荐
 - [公益站导航](https://ldoh.105117.xyz/) — 第三方资源导航页
 - [LDOH 仓库](https://github.com/JoJoJotarou/LDOH) — 对应开源仓库
 - [all-api-hub](https://github.com/qixing-jk/all-api-hub) — 统一管理兼容中转站账号、余额、用量和密钥分发

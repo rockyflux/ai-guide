@@ -14,11 +14,13 @@ noTocArea: true
 - [精选 LLM 应用集]({{< relref "tutorials/awesome-llm-apps" >}}) — LLM 开源应用生态应用集合
 
 **通用 / 开源社区**
+- [HelloGitHub](https://hellogithub.com/) — 发现和分享有趣、入门级开源项目的社区，提供月刊、榜单与精选项目推荐
 - [天池AI学习空间](https://tianchi.aliyun.com/course) 阿里云官方-天池AI学习空间
 - [Datawhale](https://www.datawhale.cn/) — 开源学习社区
 - [AI System 全栈课程](https://infrasys-ai.github.io/aisystem-docs/) — 围绕英伟达 / 昇腾等芯片，从硬件体系、编译器、推理引擎到大模型与智能体的 AI 系统全栈课程大纲
 - [从零开始构建智能体](https://datawhalechina.github.io/hello-agents/) — 智能体入门与实战
 - [检索增强生成 (RAG) 技术全栈指南](https://datawhalechina.github.io/all-in-rag) — RAG 全栈学习路径
+- [大模型应用开发：上下文工程与运行空间实践指南](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering) — 上下文工程（与 RAG、提示词工程的关系）、Harness Engineering（Agent 运行空间）；[在线阅读](https://wakeup-jin.github.io/Practical-Guide-to-Context-Engineering/)
 
 ---
 
@@ -30,6 +32,7 @@ noTocArea: true
 - [claude-howto](https://github.com/luongnv89/claude-howto/tree/main/zh) - 用一个周末掌握 Claude Code
 - [Claude 中文网](https://www.claude-cn.org/) — Claude 资讯与交流
 - [学习 Cursor，拥抱 AI 编程](https://cursor101.com/zh) — Cursor 中文教程
+- [easy-vibe](https://datawhalechina.github.io/easy-vibe/zh-cn/) — Datawhale 出品的编程软件 / Vibe Coding 学习资源
 - [OpenCode 中文实战课](https://learnopencode.com/) — OpenCode 实战课程
 - [🔥awesome-openclaw]({{< relref "open-source-community/awesome-openclaw" >}}) — OpenClaw 生态精选
 - [OpenClaw 真正能做事的 AI](https://clawd.org.cn/) — OpenClaw 社区站
@@ -40,7 +43,7 @@ noTocArea: true
 
 ## AI 资讯
 
-- [AI Hub Today](https://ai.hubtoday.app/) — AI 资讯聚合
+- [AI Hub Today](https://hex2077.dev/docs/) — AI 资讯聚合
 - [今日热榜 - AI](https://tophub.today/c/ai) — 热门 AI 话题
 - [Best Blogs Dev](https://www.bestblogs.dev/articles) — 开发者博客精选
 - [TrendRadar](https://github.com/sansan0/TrendRadar) — 开源趋势与资讯

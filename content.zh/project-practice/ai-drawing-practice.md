@@ -9,12 +9,12 @@ bookFlatSection: true
 
 ## 豆包 AI 绘图闭环小练习
 
-目标：**从 0 到拿到一张「无水印」AI 图**，按「生成提示词 → 出图 → 无水印下载」走一遍流程。
+目标：**从 0 到拿到一张「无水印」AI 图**，按「生成提示词 → 出图 → 无水印下载」走一遍流程。本文以豆包为主线；跑通后若要体验中文排版更强、分辨率更高的 **GPT-Image-2**，可看进阶篇 **[GPT-Image2.0]({{< relref "project-practice/gpt-image" >}})**（可用站点、提示词库与费用对比已汇总）。
 
 会用到这些工具：
 
-- **提示词生成器**：[ai.codefather.cn/painting](https://ai.codefather.cn/painting) 或 [Banana Prompt Quicker](https://glidea.github.io/banana-prompt-quicker) 或 [Promptoy 模板库](https://promptoy.com/app/templates)
-- **绘图平台**：豆包 AI（[doubao.com/chat/create-image](https://www.doubao.com/chat/create-image)）
+- **提示词生成器 / 提示词库**：[ai.codefather.cn/painting](https://ai.codefather.cn/painting) 或 [Banana Prompt Quicker](https://glidea.github.io/banana-prompt-quicker) 或 [Promptoy 模板库](https://promptoy.com/app/templates)；按模型浏览成品提示词时可看 [YouMind 图像提示词库](https://youmind.com/zh-CN/prompts/image)（覆盖 GPT Image、Nano Banana Pro、Seedream 等，支持站内 AI 搜索与排序）；专用于 GPT-Image-2 的库见 [awesome-gpt-image-2](https://github.com/YouMind-OpenLab/awesome-gpt-image-2) 与 [YouMind GPT-Image-2 提示词](https://youmind.com/zh-CN/gpt-image-2-prompts)
+- **绘图平台**：豆包 AI（[doubao.com/chat/create-image](https://www.doubao.com/chat/create-image)）；进阶可选 GPT-Image-2（站点与费用见 [GPT-Image2.0]({{< relref "project-practice/gpt-image" >}})）
 - **无水印下载脚本/扩展**：豆包下载器脚本/扩展
 
 ---
@@ -51,6 +51,7 @@ bookFlatSection: true
 
 1. 打开提示词工具之一：
    - [ai.codefather.cn/painting](https://ai.codefather.cn/painting)
+   - [YouMind 图像提示词库](https://youmind.com/zh-CN/prompts/image)：按模型（如 GPT Image 2、Nano Banana Pro、Seedream 4.5 等）浏览精选英文提示词，可配合站内 AI 搜索按关键词、时间、互动量筛选；把合适条目改写或翻译后也可用于豆包
    - [Promptoy（提示词模板库）](https://promptoy.com/app/templates)
    - [nano-kit](https://github.com/liujuntao123/nano-kit)
    - [gemini-3-pro-image-preview](https://tansuo2021.github.io/gemini-3-pro-image-preview/)
@@ -87,7 +88,17 @@ bookFlatSection: true
 
 可以简单对比豆包和 Gemini 的出图风格/质量，为后续选型和调参提供直观参考。
 
-## 五、实战案例参考
+---
+
+## 五、可选：体验 GPT-Image-2（中文排版 / 4K 出图）
+
+需要**海报、长图文、带中文排版的插画**时，豆包和 Gemini 往往不如 **GPT-Image-2** 稳。该模型在中文文字渲染（99%+ 准确率）、4096×4096 分辨率、角色一致性等方面有明显优势，适合把第二节生成的提示词直接用于「可交付」视觉稿。
+
+
+---
+
+## 六、实战案例参考
 
 - 实战案例（豆包）：[白板手绘风格的前端开发流程](https://www.doubao.com/thread/w9e5eb8e975fb1fdb) , [吉伊卡哇风格科普插画](https://www.doubao.com/thread/wff08465288bcc53d)
 - 实战案例（Gemini）：[Nano Banana 2 吉伊卡哇风格科普插画](https://gemini.google.com/share/7f284e2b5718)
+- 实战案例（GPT-Image-2）：见 [GPT-Image2.0]({{< relref "project-practice/gpt-image" >}}) 中的「实际案例教程」

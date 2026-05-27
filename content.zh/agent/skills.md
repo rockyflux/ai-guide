@@ -121,6 +121,8 @@ npx skills add https://github.com/obra/superpowers --skill using-superpowers
 npx skills add https://github.com/anthropics/skills --skill mcp-builder
 # 头脑风暴：创意/需求澄清优先，避免直接上手跑偏（brainstorming）
 npx skills add https://github.com/obra/superpowers --skill brainstorming
+# 工程型工作流技能集：需求澄清、TDD、诊断、PRD/Issue 拆分（Matt Pocock）
+npx skills add mattpocock/skills
 ```
 
 ```
@@ -183,12 +185,60 @@ npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
 
 更多可以查看开发提示词：[https://skillsmp.com/zh/categories/development](https://skillsmp.com/zh/categories/development)
 
-### 七、OpenClaw：养虾 + Skills（案例）
+### 七、值得关注：Matt Pocock 的 Skills for Real Engineers
+
+如果你想找一套**更偏真实工程交付**、而不是“演示型 vibe coding”的 Skills，`mattpocock/skills` 很值得单独关注。
+
+{{% hint info %}}
+**为什么它这波很火？**  
+截至 **2026-05-13**，[`mattpocock/skills`](https://github.com/mattpocock/skills) 在 GitHub 上约 **76.5k stars**。仓库 README 的定位也很直接：这是 Matt Pocock 日常真实开发中使用的技能集合，强调 small、composable、easy to adapt，目标是把工程基本功重新装回 AI coding workflow。
+{{% /hint %}}
+
+**作者背景**：Matt Pocock 是社区里非常知名的 TypeScript 教育者；他本人也公开写过自己曾在 **Vercel** 做过 developer advocate，现在专注于 TypeScript 与 AI engineering 教学。
+
+**这套 Skills 的核心价值，不在“花样多”，而在“工程动作标准化”**：
+
+- **先对齐再开工**：`grill-me`、`grill-with-docs` 先逼着你把需求、边界、术语和约束讲清楚
+- **把方案沉淀为产物**：`to-prd`、`to-issues` 把对话上下文转成 PRD 与可执行 issue
+- **把实现拉回工程纪律**：`tdd`、`diagnose` 分别对应测试驱动开发与系统化排障
+- **避免代码库越做越乱**：`zoom-out`、`improve-codebase-architecture` 强调系统视角与架构持续治理
+- **先做一次仓库级初始化**：`setup-matt-pocock-skills` 会给仓库补齐 Agent 配置块、issue tracker 约定、文档落点等基础设施
+
+**当前规模**：仓库 README 目前公开列出 **18 个技能**，大致分成三类：
+
+- **Engineering**：如 `tdd`、`diagnose`、`to-prd`、`to-issues`、`improve-codebase-architecture`
+- **Productivity**：如 `grill-me`、`handoff`、`write-a-skill`
+- **Misc**：如 `setup-pre-commit`、`git-guardrails-claude-code`
+
+**它特别适合谁？**
+
+- 已经在用 Codex / Claude Code / Cursor，但觉得 AI 写代码“能跑但不稳”
+- 团队开始让 AI 参与真实项目，希望形成一套可重复的协作动作
+- 想把“需求澄清 -> 任务拆分 -> 实现 -> 调试 -> 架构治理”串成闭环，而不是只收集零散 prompt
+
+**快速开始**：
+
+```bash
+npx skills@latest add mattpocock/skills
+```
+
+安装后，优先试这几个最有代表性的技能：
+
+- `/setup-matt-pocock-skills`
+- `/grill-with-docs`
+- `/tdd`
+- `/diagnose`
+- `/to-prd`
+- `/to-issues`
+
+如果用一句话总结：**Anthropic / OpenAI / Vercel 的官方 Skills 更像“能力底座”，Matt Pocock 这套则更像“工程工作方式模板”**。前者偏能力扩展，后者偏把真实软件工程流程压缩成 AI 可复用动作。
+
+### 八、OpenClaw：养虾 + Skills（案例）
 
 - [OpenClaw 养虾 + Skills（微信文章）](https://mp.weixin.qq.com/s/DVhQ_mWNtn9P39ydlmtyUg)
 - [龙虾指南（InStreet）](https://instreet.coze.site/skill.md)：也可以去 [InStreet](https://instreet.coze.site/) 逛逛、发帖交流。
 
-### 八、参考链接与第三方网站
+### 九、参考链接与第三方网站
 
 - **文档与导航**
   - [Claude 官方 Skills 文档](https://code.claude.com/docs/zh-CN/skills)：最权威的 Agent Skills 规范与功能说明。
@@ -201,6 +251,7 @@ npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
   - [MCPMarket Skills Leaderboard](https://mcpmarket.com/zh/tools/skills/leaderboard)：技能榜单与工具导航（第三方）。
   - [Impeccable](https://impeccable.style/)：对 `frontend-design` 的增强版与设计指令集（含 /polish、/audit、/distill 等），并提供一键安装方式。
   - [Vercel Skills](https://github.com/vercel-labs/skills)：Vercel 团队维护的示例技能仓库，偏 Web / 全栈场景。
+  - [Matt Pocock Skills](https://github.com/mattpocock/skills)：面向真实工程交付的技能集合，强调需求澄清、TDD、诊断、Issue 拆分与架构治理。
   - [MiniMax Skills](https://github.com/MiniMax-AI/skills)：MiniMax 官方维护的开发技能库（Beta），面向 Claude Code、Cursor、Codex、OpenCode 等工具。
   - [baoyu-skills](https://github.com/jimliu/baoyu-skills)：根据文本内容自动生成高质量配图。
   - [ClawHub Skills](https://clawhub.ai/skills)：ClawHub 平台的技能市场与发现页。
@@ -219,6 +270,7 @@ npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
   - [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)：前后端结合的示例仓库，适合参考如何在 Web / 全栈应用里集成 Skills。
   - [Antfu Skills](https://github.com/antfu/skills)：由 Antfu 维护的实践仓库，代码风格统一、工程化好，适合学习高质量个人实践。
   - [Anthropic Skills](https://github.com/anthropics/skills)：Anthropic 官方的技能实现仓库，适合参考「官方最佳实践」。
+  - [Matt Pocock / skills](https://github.com/mattpocock/skills)：当前最受关注的工程流派 Skills 仓库之一，适合学习如何把软件工程流程拆成可组合的 Agent 技能。
   - [Awesome Agent Skills](https://github.com/JackyST0/awesome-agent-skills)：社区维护的优质技能索引库，「awesome 系」风格，可作为导航入口。
   一个完整的 Agent Skills 实战案例是股票尽调系统仓库 **Claude Code Stock Deep Research Agent**（GitHub：[`liangdabiao/Claude-Code-Stock-Deep-Research-Agent`](https://github.com/liangdabiao/Claude-Code-Stock-Deep-Research-Agent)）。
 

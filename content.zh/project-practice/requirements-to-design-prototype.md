@@ -18,7 +18,7 @@ bookToc: true
 **AI 时代的实战流是：**
 
 1. **需求定义** (ChatGPT/Gemini/豆包)：输出结构化 PRD。
-2. **视觉建模** (Stitch)：通过 PRD 生成高保真 UI 原型并导出 HTML。
+2. **视觉建模** (Stitch / [huashu-design](https://github.com/alchaincyf/huashu-design))：通过 PRD 生成高保真 UI 原型（HTML）；或在 Agent 内用 Skill 直接交付可点击原型、幻灯片、动画。
 3. **技术重构** (Stitch to Tech)：将 HTML 原型转化为目标技术栈（React/Vue/Tailwind）。
 4. **工程落地** (Cursor/Claude Code)：由 AI Agent 完成生产环境代码编写。
 
@@ -35,7 +35,25 @@ bookToc: true
 ### 2. UI 生成与原型 (UI Generation)
 
 * **[Stitch (Google)](https://stitch.withgoogle.com/)**：**核心原型工具**。交互感极强，支持导出 HTML，适合快速搭建应用框架。
+* **[DESIGN.md（Stitch Docs）](https://stitch.withgoogle.com/docs/design-md/overview)**：Stitch 推出的“设计系统 Markdown 规范”。可以把配色、字体、圆角、间距、组件规则等写成一个 AI 可直接理解的 `DESIGN.md`，让原型生成更稳定，而不是每次都靠 prompt 临场发挥。
+* **[awesome-design-md](https://github.com/VoltAgent/awesome-design-md)**：一个现成的 `DESIGN.md` 风格库，收集了大量产品 / 品牌风格模板。适合在没有专职设计师、但又想快速借鉴成熟设计语言时直接取样。
 * **v0.dev / 秒多**：前端组件级生成工具。
+* **[banana-slides](https://github.com/Anionex/banana-slides)**：更偏“AI 原生演示稿 / Slides 生成”。适合把想法、大纲、页面描述快速变成可导出的 PPT/PDF；如果你的目标是汇报稿、课程讲义、提案 deck，而不是 Web/App 界面原型，它会更顺手。
+* **[huashu-design](https://github.com/alchaincyf/huashu-design)**（花叔设计 · MIT）：**Agent 原生的 HTML 设计 Skill**。安装在 Claude Code / Cursor / Codex 等环境后，用对话即可交付可点击 App/Web 原型、浏览器演示稿 + **可编辑 PPTX**（保留文本框）、产品动画（MP4/GIF）、信息图等。内置 20 套设计哲学与 5 维专家评审，带品牌任务时会走 **Core Asset Protocol**（logo / 产品图 / UI 截图 / 色板 / 字体，禁止凭记忆猜品牌色）。适合「不想开 Figma / Stitch 网页，希望在 IDE 里一句话出稿」的场景。
+
+  ```bash
+  npx skills add alchaincyf/huashu-design
+  ```
+
+  | 能力 | 典型产出 | 大致耗时 |
+  | --- | --- | --- |
+  | 交互原型（App / Web） | 单文件 HTML · iPhone 边框 · 可点击 · Playwright 校验 | 10–15 分钟 |
+  | 幻灯片 | HTML 演示 + 可编辑 PPTX | 15–25 分钟 |
+  | 动效 / 发布片 | MP4 / GIF / 配乐 | 8–12 分钟 |
+  | 方向顾问（需求模糊时） | 5 学派 × 20 哲学中选 3 套方向并并行出 demo | ~5 分钟 |
+  | 5 维设计评审 | 雷达图 + Keep/Fix/Quick Wins | ~3 分钟 |
+
+  与 Stitch 的取舍：**Stitch** 偏图形化产品、可导出 Figma；**huashu-design** 偏终端对话、并行 Agent 不受订阅配额束缚，复杂时间轴动画更强。二者输出的 HTML 原型都可进入下文「第三步：技术栈转换」。
 
 ### 3. IDE 与代码实现 (Coding Agent)
 
@@ -60,15 +78,49 @@ bookToc: true
 
 **操作：** 将上一步得到的 PRD 核心内容喂给 Stitch。
 
+如果你不希望页面风格完全依赖一段自然语言提示，可以在这一步加入 `DESIGN.md`：
+
+- **官方思路**：根据 [Stitch 的 DESIGN.md 文档](https://stitch.withgoogle.com/docs/design-md/overview)，`DESIGN.md` 本质上是一个给 AI 读的设计系统文件，用来持续描述“这个项目应该长什么样”。
+- **实战用法**：把它放在项目根目录后，你就可以同时给 AI 两类信息：
+  - `PRD / 页面需求`：告诉它做什么页面、满足什么业务目标
+  - `DESIGN.md / 视觉规则`：告诉它这个页面应该呈现什么气质、层级和组件语言
+- **省力办法**：如果你暂时没有自己的设计系统，可以先从 [awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 里挑一个接近目标产品气质的模板，复制为项目内的 `DESIGN.md`，再按你的品牌色、字体和组件习惯做小改。
+
+一个很实用的认知是：**PRD 负责“做什么”，DESIGN.md 负责“看起来像什么”**。前者解决功能与信息架构，后者解决视觉一致性与设计约束。两者配合，通常比只写一长段 prompt 更稳。
+
 **发给 Stitch 的提示词策略：**
 
 ```
 “根据以下需求文档，请为我设计一个高保真的移动端 Web 原型。风格要求：极简治愈系，莫兰迪配色，大圆角设计，深色模式友好,请确保交互流畅.”
 ```
 
-### 第三步：技术栈转换（Stitch -> 技术栈）
+如果你已经准备了 `DESIGN.md`，提示可以改成：
 
-Stitch 导出 HTML 后，我们需要将其“翻译”为开发用的组件（如 React + Tailwind）。
+```text
+“请基于以下 PRD，为我生成一个高保真的移动端 Web 原型。视觉风格请严格参考项目中的 DESIGN.md；如果需求与视觉规则冲突，优先保持信息层级清晰与核心任务路径顺畅。”
+```
+
+#### 第二步备选：Agent 内原型（huashu-design）
+
+若你已在 Cursor / Claude Code 中安装 [huashu-design](https://github.com/alchaincyf/huashu-design)，可把 PRD 直接交给 Agent，由 Skill 走「初级设计师」流程：先批量澄清需求 → 用占位块快速出稿给你确认 → 再填真实内容与变体，交付前用 Playwright 点测关键路径。
+
+**示例提示词：**
+
+```text
+根据以下 PRD，用 huashu-design 做一个可点击的 iOS 风格番茄钟 App 原型，4 个主屏，极简治愈系、莫兰迪配色。若有品牌 logo / 主色请按 Core Asset Protocol 先收集再写 brand-spec.md。
+```
+
+需求仍模糊时，可先说：
+
+```text
+我要做一份 AI 心理学主题的 keynote，先给我 3 种差异化视觉方向并各出一张 demo 让我选。
+```
+
+产出为项目内 HTML（及可选 MP4 / PPTX）后，与 Stitch 路径一样进入第三步做技术栈转换。
+
+### 第三步：技术栈转换（HTML 原型 -> 技术栈）
+
+无论来自 Stitch 还是 huashu-design，得到 HTML 后都需要将其“翻译”为开发用的组件（如 React + Tailwind）。
 
 **发给 AI 的转换提示词：**
 
@@ -141,7 +193,9 @@ Codex   Gemini
 ### 2. UI 原型与视觉设计 (UI Generation)
 
 * **[Stitch (Google)](https://stitch.withgoogle.com/)**：**首选原型工具**。交互感极强，支持导出 HTML 和 Figma，适合快速搭建应用框架。
+* **[huashu-design](https://github.com/alchaincyf/huashu-design)**：花叔开源的 HTML 原生设计 Skill（MIT）。在 Claude Code / Cursor 等环境中 `npx skills add alchaincyf/huashu-design` 后，可对话生成可点击原型、可编辑 PPTX、MP4/GIF 动效与信息图；含 20 设计哲学、5 维评审与品牌资产协议。适合「PRD 已在手、希望在 IDE 内闭环到 HTML/视频/幻灯片」的团队。
 * **[v0.dev (Vercel)](https://v0.dev/)**：前端组件级生成工具，可直接产出基于 Tailwind / Radix 的前端代码。
+* **[banana-slides](https://github.com/Anionex/banana-slides)**：一个基于 nano banana pro 的 AI-native Slides / PPT 生成应用，支持从一句话、大纲、页面描述生成演示稿，也支持素材上传、局部口头修改以及导出 PPTX / PDF / 讲解视频。适合“需求梳理完后，先把汇报结构和视觉表达跑通”的场景。
 * **[秒多 (MiaoDuo)](https://miaoduo.com/)**：国产精选。无需科学上网，响应极快，适合中文语境下的快速原型产出。
 * **[即时设计 · 即时 AI](https://js.design/ai)**：国内 Figma 替代 + AI 设计助手，支持从文案到高保真设计的一站式生成。
 * **[Pixso AI 生成器](https://pixso.cn/pixso-ai-generator/)**：支持用自然语言生成 UI 组件与页面结构，并与 Pixso 设计协同。
@@ -162,4 +216,3 @@ Codex   Gemini
 * **[Coze (扣子)](https://code.coze.cn/)**：适合搭建具备业务逻辑的 AI 后端工作流与多角色 Agent 系统。
 
 ---
-

@@ -61,6 +61,9 @@ Prompt 通常只描述**本次对话**要达成的目标与约束，不适合承
 | Awesome ChatGPT Prompts 中文版 | [https://github.com/PlexPt/awesome-chatgpt-prompts-zh/](https://github.com/PlexPt/awesome-chatgpt-prompts-zh/) |
 | ChatGPT 引导语 | [https://prompts.fresns.cn/](https://prompts.fresns.cn/) |
 | AI 绘图提示词模板大全 | [https://ai.codefather.cn/painting](https://ai.codefather.cn/painting) |
+| YouMind（大规模免费提示词库：图像 / 视频 / 网页，按模型与媒介分类，支持站内 AI 搜索与排序） | [https://youmind.com/zh-CN/prompts](https://youmind.com/zh-CN/prompts) |
+| AI 工具系统提示词与模型清单（英文原仓库） | [https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) |
+| AI 工具系统提示词与模型清单（中文整理版） | [https://github.com/IsHexx/system-prompts-and-models-of-ai-tools-chinese](https://github.com/IsHexx/system-prompts-and-models-of-ai-tools-chinese) |
 
 ### UI Prompt 灵感库（复制即用）
 

@@ -107,6 +107,7 @@ bookHidden: true
 ### 资源与模板
 + [**提示词库 (在线表格)**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=2093180351#gid=2093180351&range=A1): 一个包含大量可直接复制使用的各类提示词的在线表格。
 + [**第三方系统提示词学习库**](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools): 用于学习和参考其他 AI 工具的系统提示词。
++ [**第三方系统提示词学习库（中文整理版）**](https://github.com/IsHexx/system-prompts-and-models-of-ai-tools-chinese): 适合直接阅读中文整理内容，快速了解各类 AI 工具的 system prompt 与模型信息。
 + [**Skills 制作器**](https://github.com/yusufkaraaslan/Skill_Seekers): 可根据需求生成定制化 Skills 的工具。
 + [**元提示词**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=1770874220#gid=1770874220): 用于生成提示词的高级提示词。
 + [**通用项目架构模板**](./i18n/zh/documents/Templates%20and%20Resources/通用项目架构模板.md): 可用于快速搭建标准化的项目目录结构。
