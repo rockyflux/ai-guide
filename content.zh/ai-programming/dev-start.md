@@ -166,6 +166,16 @@ winget install jesseduffield.lazygit
 
 - 官网：[code.visualstudio.com](https://code.visualstudio.com/)
 - 可选：JetBrains IDE、Vim/Neovim、[Zed](https://zed.dev/) 等
+- **Zed 汉化版（ZedG）**：社区维护的 Zed 多语言构建，界面已翻译为简体中文（亦支持繁中/日语/韩语），并附带 Agent 环境变量透传等补丁。适合想用 Zed 但偏好中文界面的用户。
+  - 项目：[x6nux/zed-globalization](https://github.com/x6nux/zed-globalization)
+  - Windows 安装（Scoop）：
+
+    ```powershell
+    scoop bucket add zedg https://github.com/x6nux/scoop-zedg
+    scoop install zedg
+    ```
+
+  - 也可从 [Releases](https://github.com/x6nux/zed-globalization/releases) 下载预编译包手动解压运行
 
 ### 2. Obsidian
 

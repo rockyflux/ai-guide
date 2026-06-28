@@ -32,6 +32,8 @@ bookToc: true
 
 ## 提示词库
 
+- [awesome-gpt-image-2-API-and-Prompts（EvoLinkAI）](https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts)：GPT-Image-2 API 说明与海量提示词案例（含多语言 README）
+- [Banana Prompt Quicker](https://github.com/glidea/banana-prompt-quicker)：Chrome 扩展 + 在线画廊，一键插入 Gemini / AI Studio 等场景的提示词
 - <https://github.com/YouMind-OpenLab/awesome-gpt-image-2>
 - <https://youmind.com/zh-CN/gpt-image-2-prompts>
 
@@ -72,7 +74,7 @@ bookToc: true
 
 ### toapis
 
-- <hhttps://toapis.com/>
+- <https://toapis.com/>
 - `gpt-image-2` 接口，折算 0.1 一张，很稳定
 
 ### foxcode
