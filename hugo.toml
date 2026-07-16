@@ -1,4 +1,4 @@
-baseURL = "https://ai-guide.getxf.cn/"
+baseURL = "https://ai-guide.180813.xyz/"
 defaultContentLanguage = 'zh'
 defaultContentLanguageInSubdir = false
 theme = 'hugo-book'
