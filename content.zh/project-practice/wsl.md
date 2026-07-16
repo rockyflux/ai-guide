@@ -56,8 +56,48 @@ wsl -l -v
    - 支持通过组策略统一管理权限、资源与发行版
    - 审计与合规能力更完善
 
-### 当前已推送版本（2026.4）
+### WSL Containers（WSLC）：原生 Linux 容器（2.9.3 最大亮点）
 
+微软于 **2026 年 6 月底** 发布 **WSL 2.9.3（Pre-release）** 公测版，这是架构级大版本更新，核心新增 **WSL Containers（WSLC）**——在 Windows 上原生构建、运行、管理 Linux 容器，**无需安装 Docker Desktop**。
+
+**核心能力：**
+
+- 内置 **`wslc.exe`** 命令行，语法与 Docker CLI **完全兼容**（`build` / `run` / `pull` / `push` 等），现有容器工作流可直接迁移
+- 同时提供别名 **`container.exe`**（等价于 `wslc.exe`），两个命令任选其一
+- 容器生命周期、镜像管理、网络与 GPU 透传、VHD 卷与 VirtioFS 文件共享等能力开箱即用
+- Windows 应用可通过 **WSL container API**（NuGet 包 `Microsoft.WSL.Containers`）以 C# / C++ 程序化操作容器
+- VS Code Dev Containers 已支持（`0.462.0-pre-release` 起）：将 **Docker Path** 设为 `wslc` 即可
+
+**获取预发布版：**
+
+```powershell
+wsl --update --pre-release
+wsl --version
+```
+
+也可从 [WSL Releases](https://github.com/microsoft/WSL/releases) 手动下载安装。验证容器 CLI：
+
+```powershell
+wslc --version
+# 或
+container --version
+```
+
+`wslc.exe` 在 Windows 侧 PATH 上，用法与 Docker 一致，例如：
+
+```powershell
+wslc pull ubuntu
+wslc run -it ubuntu bash
+```
+
+> 当前为 **Public Preview**，正式 GA 预计 **2026 年秋季**。问题与反馈可提交至 [microsoft/WSL Issues](https://github.com/microsoft/WSL/issues)。官方文档：[WSL container | Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/wsl-container)。
+
+### 当前已推送版本
+
+- **WSL 2.9.3（Pre-Release，2026.6 末）**
+  - 架构级更新：内置 WSL Containers（WSLC）原生 Linux 容器与 `wslc.exe`
+  - 容器默认文件系统切换为 VirtioFS（性能最高约 2 倍提升）
+  - 网络与内存回收优化
 - **WSL 2.7.1（Pre-Release，2026.3.28）**
   - 修复高危漏洞 `CVE-2026-26127`（.NET 10）
   - 支持按目录挂载（不再仅限整盘）

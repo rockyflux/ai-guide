@@ -133,6 +133,12 @@ npx skills add https://github.com/anthropics/skills --skill frontend-design
 npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
 ```
 
+```
+# 公众号 / 内容创作 skills
+# 把 Markdown 排成可直接粘贴进公众号编辑器的 HTML（6 套主题 + 主题生成器 + 双关卡校验）
+npx skills add https://github.com/isjiamu/gzh-design-skill
+```
+
 ### 推荐 Top10：面向前端 / 产品 / UI 的 Agent Skills
 
 这 10 个 Skills 按**设计落地频率**、对**视觉与交互质量**的直接提升、以及在 **Codex / Claude Code** 等环境中的**高复用性**来选，适合前端、产品与 UI 协作场景。
@@ -182,6 +188,7 @@ npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
 | 偏产品 UI / 设计稿还原 | `figma-implement-design`、`react-best-practices`、`web-design-guidelines` |
 | 偏交互验证 / 可用性 | `playwright`、`webapp-testing` |
 | 偏创意探索 | `canvas-design` |
+| 公众号排版 / 微信长文 | `gzh-design`（[gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)） |
 
 更多可以查看开发提示词：[https://skillsmp.com/zh/categories/development](https://skillsmp.com/zh/categories/development)
 
@@ -254,6 +261,7 @@ npx skills@latest add mattpocock/skills
   - [Matt Pocock Skills](https://github.com/mattpocock/skills)：面向真实工程交付的技能集合，强调需求澄清、TDD、诊断、Issue 拆分与架构治理。
   - [MiniMax Skills](https://github.com/MiniMax-AI/skills)：MiniMax 官方维护的开发技能库（Beta），面向 Claude Code、Cursor、Codex、OpenCode 等工具。
   - [baoyu-skills](https://github.com/jimliu/baoyu-skills)：根据文本内容自动生成高质量配图。
+  - [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)：把 Markdown 一键排成可直接粘贴进公众号编辑器的 HTML；6 套精选主题（摸鱼绿、红白、石墨极简等）+ 主题生成器 + 双关卡质量校验。
   - [ClawHub Skills](https://clawhub.ai/skills)：ClawHub 平台的技能市场与发现页。
   - [Skill Creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：Anthropic 官方提供的技能模板与创建向导。
 - **合集网站：快速使用**
@@ -263,6 +271,8 @@ npx skills@latest add mattpocock/skills
   - [Agent Skills Me](https://agentskills.me)：人工精选的小而精技能集，适合不想自己筛选太久的用户。
   - [SkillStore](https://skillstore.io/zh-hans)：中文友好，并强调做过安全审查，适合团队或合规敏感场景。
   - [SkillHub（腾讯）](https://skillhub.tencent.com/)：腾讯推出的技能市场与导航平台，支持按模型、场景筛选，并与自家工具生态深度集成。
+  - [Linux.do Awesome Skills](https://github.com/jochne/linuxdo-awesome-skills)：Linux.do 社区用户发布的 Skills 导航，按「能做什么、前置要求、分类标签、项目地址、Star 数、论坛来源」整理；[在线浏览](https://linuxdo-awesome-skills.tencents.ltd/) 可快速发现社区热门技能（如 PPT、图片转代码、深度调研等）。
+  - [CocoLoop Skill 商店](https://hub.cocoloop.cn/)：更快更安全的 AI Agent Skills 商店，聚合 12,000+ Skills、支持 50+ 平台，提供 CLS 安全认证与国内镜像下载加速，含 OpenClaw 专题与精选 Top 50 榜单。
   - [Skills.sh 热门技能页](https://skills.sh)：关注热门趋势技能，支持一键安装，适合快速尝鲜。
 - **源码仓库：工程实现**
   - [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills)：精选的 Claude Skills 清单与资源索引，覆盖 Claude.ai / Claude Code / Claude API 场景。

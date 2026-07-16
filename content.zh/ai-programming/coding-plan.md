@@ -53,16 +53,16 @@ noTocArea: true
 | **CodeRefill** | 一套 License 覆盖 Cursor、Windsurf、Kiro、Codex，IDE 高级模型配额补能 | https://zy.harsidol.cn/codeRefill/ |
 | **B.AI** | Credits + 订阅制聚合平台，支持全系列模型访问，Pro 为 $200/月、Max 为 $2000/月，偏高频用户 | https://b.ai/ |
 | **UniAPI** | 多模型聚合，按量付费 | https://uniapi.ai/ |
+| **ToAPIs** | OpenAI 兼容 API 网关，文本/图像/视频多模型统一接入 | https://toapis.com/ |
+| **CodexAPIs** | API 中转，CDK 充值兑换，可查模型价格 | https://codexapis.com/ |
 | **APIs.you** | API 目录聚合入口 | https://apis.you/catalog |
 | **淘宝** | 可搜索不同卖家套餐 | [淘宝搜索](https://s.taobao.com/search?q=claude+code) |
 | **闲鱼** | 常见于拼车、代购、转售 | [闲鱼搜索](https://www.goofish.com/search?q=claude+code) / [team 拼车](https://www.goofish.com/search?q=team拼车) |
-| **蓝奏云分发** | 资源分发页，常见于 IDE 工具额度或安装包 | https://wwaoo.lanzoue.com/b00od5g23a |
 | **ldxp 小店（xxdlzs）** | 非官方店铺，IDE 额度、代充 | https://pay.ldxp.cn/shop/xxdlzs |
 | **ldxp 小店（xcursor）** | 非官方店铺，偏 Cursor | https://pay.ldxp.cn/shop/xcursor |
 | **ldxp 小店（AEUQ8PP3）** | 非官方店铺 | https://pay.ldxp.cn/shop/AEUQ8PP3 |
-| **ooeao 商店** | 非官方店铺 | https://www.ooeao.com/shop/ithte |
 | **wafase** | 非官方店铺 | https://wafase.com/ |
-| **AI 创富俱乐部（makerich）** | 非官方店铺 | https://makerich.club/ |
+| **Acc-OTAOR** | 非官方店铺，账号采购（Google / ChatGPT 等） | https://acc.otaor.com/ |
 
 ### 配套工具
 

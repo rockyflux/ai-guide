@@ -15,17 +15,31 @@ bookFlatSection: true
 
 - **提示词生成器 / 提示词库**：[ai.codefather.cn/painting](https://ai.codefather.cn/painting) 或 [Banana Prompt Quicker](https://glidea.github.io/banana-prompt-quicker) 或 [Promptoy 模板库](https://promptoy.com/app/templates)；按模型浏览成品提示词时可看 [YouMind 图像提示词库](https://youmind.com/zh-CN/prompts/image)（覆盖 GPT Image、Nano Banana Pro、Seedream 等，支持站内 AI 搜索与排序）；专用于 GPT-Image-2 的库见 [awesome-gpt-image-2](https://github.com/YouMind-OpenLab/awesome-gpt-image-2) 与 [YouMind GPT-Image-2 提示词](https://youmind.com/zh-CN/gpt-image-2-prompts)
 - **绘图平台**：豆包 AI（[doubao.com/chat/create-image](https://www.doubao.com/chat/create-image)）；进阶可选 GPT-Image-2（站点与费用见 [GPT-Image2.0]({{< relref "project-practice/gpt-image" >}})）
-- **无水印下载脚本/扩展**：豆包下载器脚本/扩展
+- **无水印下载脚本/扩展**：[无印豆包（doubao-nomark）](https://github.com/ihmily/doubao-nomark)（油猴脚本 / Edge 扩展 / 本地 API，支持图片与视频）；备选 [豆包下载器](https://github.com/LauZzL/doubao-downloader) 油猴脚本
 
 ---
 
 ## 一、豆包 AI 无水印下载脚本
 
-把豆包生成的图片，**一键下载成无水印原图**。
+把豆包生成的图片（及视频），**一键下载成无水印原图**。
 
-油猴脚本下载地址：  [doubao-downloader.user.js](https://gh.h233.eu.org/https://github.com/LauZzL/doubao-downloader/releases/download/v1.2.6/doubao-downloader.user.js)
+### 1. 无印豆包（推荐）
 
-### 1. 油猴脚本用法（推荐）
+项目地址：[ihmily/doubao-nomark](https://github.com/ihmily/doubao-nomark)（无印豆包）
+
+支持三种使用方式，任选其一即可：
+
+- **油猴脚本**：在 [Greasy Fork](https://greasyfork.org/) 搜索「无印豆包」安装，或按项目 README 说明安装
+- **Edge 扩展**：[微软 Edge 商店 - 无印豆包](https://microsoftedge.microsoft.com/addons/detail/hjlplfcnpgglfdjafekcgahffdengaij)
+- **本地 API**：`uvicorn app:app --host 0.0.0.0 --port 8000`，访问 `http://localhost:8000/docs` 调用解析接口
+
+在豆包对话页会自动识别图片/视频，也可从分享链接提取无水印资源。
+
+### 2. 豆包下载器油猴脚本（备选）
+
+油猴脚本下载地址：[doubao-downloader.user.js](https://gh.h233.eu.org/https://github.com/LauZzL/doubao-downloader/releases/download/v1.2.6/doubao-downloader.user.js)
+
+#### 油猴脚本用法
 
 前提：浏览器已装 Tampermonkey / Violentmonkey 等油猴扩展。
 
@@ -35,15 +49,9 @@ bookFlatSection: true
 
 装完之后，访问豆包绘图页：[doubao.com/chat/create-image](https://www.doubao.com/chat/create-image)。
 
-### 2. 浏览器扩展用法（可选）
+#### 浏览器扩展用法（可选）
 
-不想用油猴时，可以装打包好的扩展：
-
-1. 从项目页下载 `.zip` 包。
-2. 打开浏览器扩展管理，开启「开发者模式」。
-3. 选择「加载已解压的扩展程序」，指向解压目录，或按项目文档说明安装。
-
-`.crx` 在部分浏览器里装起来有限制，也可能异常，不推荐优先选择。
+不想用油猴时，可从 [豆包下载器项目页](https://github.com/LauZzL/doubao-downloader) 下载 `.zip` 包，在扩展管理里开启「开发者模式」后加载已解压的扩展。`.crx` 在部分浏览器里装起来有限制，也可能异常，不推荐优先选择。
 
 ---
 

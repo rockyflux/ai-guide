@@ -217,8 +217,8 @@ winget install jesseduffield.lazygit
 
 目前个人想注册 Google 账号非常复杂甚至不可能（时区、定位、语言、IP、手机验证码等限制），如果你只是为了完成开发环境准备（例如登录某些开发者工具、同步浏览器配置、使用部分 AI 平台），可考虑通过第三方购买现成账号。
 
-- 购买入口 2：[ai666.dnxb.cc/cat/3](https://ai666.dnxb.cc/cat/3)
-- 购买入口 3：[AI 创富俱乐部（makerich）](https://makerich.club/)
+- 购买入口 1：[Acc-OTAOR](https://acc.otaor.com/)
+- 购买入口 2：[https://pay.ldxp.cn/shop/AEUQ8PP3](https://pay.ldxp.cn/shop/AEUQ8PP3)
 
 注意：购买/使用第三方账号可能违反平台服务条款并存在安全与合规风险。拿到账号后建议第一时间**修改密码**、启用/重置 **2FA**、绑定自己的恢复邮箱/手机号，并避免用于任何违规用途。
 
@@ -229,6 +229,7 @@ winget install jesseduffield.lazygit
 - 购买入口 1：[pay.ldxp.cn/shop/xcursor](https://pay.ldxp.cn/shop/xcursor)
 - 购买入口 2：[wafase.com](https://wafase.com/)
 - 购买入口 3：[AI 创富俱乐部（makerich）](https://makerich.club/)
+- 购买入口 4：[Acc-OTAOR](https://acc.otaor.com/)
 
 注意：风险与合规事项同上文「Google 邮箱」— 第三方账号可能违反平台条款；到手后尽快改密、检查绑定与恢复方式，并仅用于合法用途。
 
