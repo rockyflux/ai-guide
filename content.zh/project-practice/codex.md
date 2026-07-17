@@ -41,130 +41,17 @@ brew install --cask codex
 
 #### 前置：`ripgrep`（`rg`）——CLI 强依赖，建议先装
 
-[Codex 开源仓库与 CLI 说明](https://github.com/openai/codex) 表明：**Codex CLI 默认把 `rg` 当作已在 PATH 中的系统能力**，用于文件发现、关键词搜索、大仓库扫描与上下文收集（类似把 ripgrep 当作「快速读仓库 / 缩小上下文」的默认后端）。**Codex 并不是内置一套独立文件搜索引擎**，而是 **LLM + 终端工具编排**；其中 `**rg` 承担大量「找文件、搜代码」路径**。
-
-若系统找不到 `rg`，常见直接报错：
-
-```text
-Error: spawn rg ENOENT
-```
-
-社区已在官方仓库讨论过该依赖与安装预期，例如：[Issue #43](https://github.com/openai/codex/issues/43)、[Issue #1205](https://github.com/openai/codex/issues/1205)。许多实践也会写「**优先用 `rg` / `rg --files`，少用慢速的 `grep` / `ls -R`**」——对 Agent 来说，瓶颈往往在**快速定位相关代码**，而不是生成代码本身。
-
-
-| 工具                | 速度  | 大仓库 | 尊重 `.gitignore` 等 |
-| ----------------- | --- | --- | ----------------- |
-| `grep`            | 较慢  | 一般  | 差                 |
-| `find` / 递归列目录    | 很慢  | 差   | 无                 |
-| `**rg`（ripgrep）** | 很快  | 适合  | 原生支持              |
-
-
-除 Codex 外，不少 AI 编程类工具（如 [Aider](https://github.com/Aider-AI/aider)、[Claude Code](https://www.anthropic.com/claude-code)、[Cline](https://github.com/cline/cline)、[Cursor](https://www.cursor.com/) 等）的实现或提示也普遍偏向 `**rg`**（甚至会出现 *Prefer rg over grep* 一类表述）。
-
-**Windows 建议主动安装**（安装后**新开一个终端**，再跑 `codex`，避免 PATH 未刷新）：
-
-```powershell
-winget install BurntSushi.ripgrep.MSVC
-```
-
-若使用 [Scoop](https://scoop.sh/)：
-
-```powershell
-scoop install ripgrep
-```
-
-验证：
-
-```bash
-rg --version
-```
-
-**macOS / Linux**：若已装 Homebrew，常用 `brew install ripgrep`；各发行版软件源里包名多为 `ripgrep`。
-
-未装 `rg` 时，除 `ENOENT` 外，还可能表现为：扫仓库失败、上下文不完整、长时间卡在目录遍历等。**Windows** 上若再叠加 Codex 仍在演进中的平台差异，体感可能更明显；官方起步说明见：[OpenAI Help：Codex CLI getting started](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)。
+Codex CLI 依赖系统 PATH 里的 [`rg`](https://github.com/BurntSushi/ripgrep) 搜仓库（缺则常见 `Error: spawn rg ENOENT`）。Windows：`winget install BurntSushi.ripgrep.MSVC`（装完新开终端）；macOS/Linux：`brew install ripgrep`。装好后用 `rg --version` 验证。
 
 #### Codex++：桌面端外部增强（可选）
 
-若你主要用 **Codex 桌面端（Codex App）**，且遇到「API Key 模式下插件入口不可用」「会话只能归档、无法真正删除」「切换 model provider 后历史会话消失」等痛点，可尝试社区项目 **[Codex++（CodexPlusPlus）](https://github.com/BigPizzaV3/CodexPlusPlus)**。
+桌面端想补会话删除/导出、插件入口、Provider 同步等：社区 **[Codex++](https://github.com/BigPizzaV3/CodexPlusPlus)**（CDP 注入外部启动器，不改 `app.asar`）。
 
-它是**外部启动器**：不修改 Codex 安装目录里的 `app.asar`，通过 **Chromium DevTools Protocol（CDP）** 注入增强脚本，并附带本地 helper 服务处理删除、导出、移动等操作。
-
-
-| 能力              | 说明                                    |
-| --------------- | ------------------------------------- |
-| **插件入口解锁**      | API Key 登录时，解除「需要 ChatGPT 登录」导致的插件不可用 |
-| **会话删除**        | 列表悬停显示删除按钮，支持确认与撤销                    |
-| **Markdown 导出** | 按本地 rollout 导出带时间戳的会话                 |
-| **会话项目移动**      | 将会话移到其他本地项目                           |
-| **对话 Timeline** | 右侧用户提问时间线，悬停摘要、点击跳转                   |
-| **Provider 同步** | 切换供应商前同步 metadata，减少历史会话「看不见」         |
-
-
-**安装与启动**（需本机 Python 3）：
-
-```bash
-git clone https://github.com/BigPizzaV3/CodexPlusPlus.git
-cd CodexPlusPlus
-python -m pip install -e .
-python -m codex_session_delete setup    # 生成快捷方式 / macOS .app
-python -m codex_session_delete launch   # 启动（勿直接点原版 Codex）
-```
-
-**Windows** 也可双击项目根目录 `setup.bat`，选 `[1] Install Codex++`，之后用桌面 `**Codex++.lnk`** 启动。
-
-**使用注意**：
-
-- 必须从 **Codex++** 快捷方式启动，顶部才会出现 `Codex++` 菜单；原版 Codex 不会加载注入。
-- 启动时会为 Codex 附加 `--remote-debugging-port=9229`；若端口被占用，查看 `%USERPROFILE%\.codex-session-delete\launcher.log`（Windows）或 `~/.codex-session-delete/launcher.log`。
-- **Provider 同步**需在 Codex++ 设置里开启后重启；只修复会话可见性 metadata，不改写消息正文。
-- 技能推荐若 `git fetch failed`，可像官方 Codex 一样在环境里设置 `HTTP_PROXY` / `HTTPS_PROXY`（项目也会尝试探测常见本地代理端口）。
-
-更完整的命令（更新、卸载、Windows watcher 自动接管等）见仓库 [README](https://github.com/BigPizzaV3/CodexPlusPlus#readme)。
+想给 Codex 桌面端换背景皮肤：社区 **[Codex Dream Skin](https://github.com/Fei-Away/Codex-Dream-Skin)**（本机 CDP 注入，不改官方安装包）。
 
 #### Windows 桌面端补丁恢复（codex-windows-fast-patch Skill）
 
-若你通过 **Microsoft Store 安装 Codex 桌面端**，升级后常会遇到一类「功能还在、但被本地门控关掉」的问题：Fast Mode 不见或请求不带 `service_tier=priority`、界面语言重启回英文、插件市场/manifest 报错、Chrome / browser_use / Computer Use 灰掉、`Any App` 不可用、**连接**页只剩 SSH 卡片等。社区 Skill **[codex-windows-fast-patch-skill](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill)** 把这类 Windows MSIX / ASAR 补丁与 `config.toml` 修复流程写成可复用工作流，供 Codex 内 Agent 按需执行。
-
-
-| 能力                         | 说明                                                                           |
-| -------------------------- | ---------------------------------------------------------------------------- |
-| **Fast Mode**              | 修复请求路径与设置页 UI，并验证 `/v1/responses` 是否带上 `service_tier=priority`               |
-| **locale / i18n**          | 保持包内 `enable_i18n` 开启，避免重启后界面语言回到英文                                          |
-| **插件市场**                   | 注册/修复本地 marketplace 与 `.agents\plugins\marketplace.json` 目录结构                |
-| **Browser / Computer Use** | 解除 Store 版 feature / Statsig 门控；刷新 Computer Use helper；修复 Chrome native-host |
-| **远程连接**                   | 写入 `features.remote_connections = true`，并打开连接页第二层远程控制 section gate           |
-| **配置安全**                   | 覆盖 `config.toml` 前自动时间戳备份；附带 skills / MCP / marketplaces 备份脚本                |
-
-
-**平台**：仅 **Windows**（依赖 MSIX、`Get-AppxPackage`、`makeappx.exe`、`signtool.exe` 等）。macOS 需另走 `.app` / ASAR 流程，不要直接套用。
-
-**安装**（克隆仓库后，在仓库根目录 PowerShell 执行）：
-
-```powershell
-$source = (Get-Location).ProviderPath
-$dest = Join-Path $env:USERPROFILE '.codex\skills\codex-windows-fast-patch'
-New-Item -ItemType Directory -Force -Path $dest | Out-Null
-Copy-Item -Force -LiteralPath (Join-Path $source 'SKILL.md') -Destination $dest
-Copy-Item -Recurse -Force -LiteralPath (Join-Path $source 'agents') -Destination $dest
-Copy-Item -Recurse -Force -LiteralPath (Join-Path $source 'scripts') -Destination $dest
-Copy-Item -Recurse -Force -LiteralPath (Join-Path $source 'references') -Destination $dest
-Copy-Item -Recurse -Force -LiteralPath (Join-Path $source 'assets') -Destination $dest
-```
-
-安装后**重启 Codex**，让 Skill 元数据重新加载。Skill 每次使用前会**尽力从 GitHub 自更新**；网络失败则跳过，继续用本地版本。
-
-**典型用法**：在 Codex Desktop 里对 Agent 说——
-
-> 使用 codex-windows-fast-patch 这个 skill，检查并修复这台 Windows 机器上的 Codex Desktop Fast Mode、语言/locale、Chrome browser_use、插件市场和 Computer Use 可用性问题。
-
-**分场景注意**：
-
-- **可在当前 Desktop 会话内修**：Computer Use helper 缺失、插件市场 manifest、仅注册 marketplace（`-RegisterMarketplaceOnly`）等，用 skill 内 `install-computer-use-local.ps1` 或 `repatch-codex-windows.ps1` 对应参数即可。
-- **建议外部 PowerShell / 其它 Agent 跑完整 repatch**：Fast Mode UI、MSIX/ASAR 本体、Browser 门控、连接页第二层 gate 等——避免当前 Desktop 在补丁过程中停止或重装自己导致会话中断。
-- **新版入口文案**：远程控制入口可能是 `**设置 → 编码 → 连接`**，进入后再找「远程控制 / Control other devices」，不一定是旧版独立的「Codex Mobile / 手机控制」名称。
-- **上游为 CPA 时**：本地改 `service_tier=priority` 不够，还需在 CPA 覆盖规则里对承接 Codex 的模型强制 `service_tier = priority`（字符串）。详见 [CLI 代理 API（CPA）]({{< relref "ai-programming/cpa" >}}) 与 skill 仓库 [CPA 上游说明](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill#cpa-上游配置)。
-
-可选：用户明确要求时，可安装 skill 自带的 `model_instructions_file` 提示词（`install-model-instructions-file.ps1`）；默认 repatch **不会**自动执行这一步。完整脚本说明、备份管理与诊断案例见仓库 [README](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill#readme)。
+Microsoft Store 版 Codex 升级后若 Fast Mode、中文界面、插件市场、Browser / Computer Use、远程连接等被门控关掉，可用社区 Skill **[codex-windows-fast-patch-skill](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill)**（Windows MSIX / ASAR 补丁与 `config.toml` 修复；走 CPA 时还需上游强制 `service_tier = priority`，见 [CPA]({{< relref "ai-programming/cpa" >}})）。
 
 ---
 
@@ -177,7 +64,7 @@ Copy-Item -Recurse -Force -LiteralPath (Join-Path $source 'assets') -Destination
 
 如果你使用的是 **OpenAI 官方账号 / 官方 API**，而本机访问 OpenAI 需要代理出网，那么通常要先开启代理的 **TUN 模式**；否则即使本地能科学上网，Codex 也可能出现网络不通、登录失败或 API 无法调用的问题。
 
-一种简单做法是创建文件 `**.codex/.env`** 写入代理环境变量，例如 Windows 下可放在 `**C:\Users\用户名\.codex**`：
+一种简单做法是创建文件 `.codex/.env` 写入代理环境变量，例如 Windows 下可放在 `C:\Users\用户名\.codex`：
 
 ```bash
 HTTP_PROXY="http://127.0.0.1:7897"
@@ -185,7 +72,7 @@ HTTPS_PROXY="http://127.0.0.1:7897"
 NO_PROXY="localhost,127.0.0.1"
 ```
 
-其中 `**7897**` 替换为你自己的代理端口即可。等价写法就是：
+其中 `7897` 替换为你自己的代理端口即可。等价写法就是：
 
 ```bash
 HTTP_PROXY="http://127.0.0.1:<代理端口>"
@@ -195,9 +82,8 @@ NO_PROXY="localhost,127.0.0.1"
 
 这组变量的含义很直接：
 
-- `**HTTP_PROXY` / `HTTPS_PROXY**`：让 Codex 相关请求走本地代理。
-- `**NO_PROXY**`：让本机回环地址直连，避免代理把本地服务也接管走。
-
+- `HTTP_PROXY` / `HTTPS_PROXY`：让 Codex 相关请求走本地代理。
+- `NO_PROXY`：让本机回环地址直连，避免代理把本地服务也接管走。
 需要把 **Claude Code 与 Codex** 一起做「供应商 / 代理 / MCP」初始化时，可用站内介绍的零配置工具：[ZCF 零配置 Claude Code]({{< relref "ai-programming/zcf" >}})。  
 更通用的 **Claude / Codex / Gemini CLI** 配置桌面端管理，见：[CC Switch]({{< relref "ai-programming/cc-switch" >}})。
 
@@ -233,9 +119,9 @@ remote_connections = true
 
 ### 4. 第一次进项目：建议做的事
 
-1. 确认本机已安装 `**ripgrep`（`rg`）** 且 `rg --version` 正常（见上文「安装」中的前置说明）；否则 CLI 可能无法可靠扫描仓库。
+1. 确认本机已安装 **ripgrep（`rg`）** 且 `rg --version` 正常（见上文「安装」中的前置说明）；否则 CLI 可能无法可靠扫描仓库。
 2. 在**仓库根目录**打开终端（或 IDE 内置终端），执行 `codex` 进入交互（具体子命令以 `codex --help` 为准）。
-3. 让 Codex **扫一遍项目结构**，生成或补全面向代理的说明文件（常见名称是 `**AGENTS.md`**，也可能配合仓库内 `.codex/` 下的约定；以你本机 Codex 版本提示为准）。
+3. 让 Codex **扫一遍项目结构**，生成或补全面向代理的说明文件（常见名称是 `AGENTS.md`，也可能配合仓库内 `.codex/` 下的约定；以你本机 Codex 版本提示为准）。
 4. 把 **如何构建、如何测试、分支约定、禁止自动执行的操作** 写清楚——和用 Cursor / Claude Code 一样，**边界写清楚 = 少翻车**。
 5. `AGENTS.md` 示例参考：[codecopy.cn/embed/w7wlhs](https://www.codecopy.cn/embed/w7wlhs)
 
@@ -247,8 +133,8 @@ remote_connections = true
 
 Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理按需加载）。路径约定与生态在演进中：
 
-- 常见位置包括项目内 `**.codex/skills/`** 与用户级目录（如 `**~/.codex/skills/**`）。
-- 业界在推 `**~/.agents/skills**` 等统一目录，减少「每个工具一套文件夹」；细节见站内：[AI 智能体 · Skills]({{< relref "agent/skills" >}}) 与 [Awesome Agent Skills]({{< relref "agent/awesome-agent-skills" >}})。
+- 常见位置包括项目内 `.codex/skills/` 与用户级目录（如 `~/.codex/skills/`）。
+- 业界在推 `~/.agents/skills` 等统一目录，减少「每个工具一套文件夹」；细节见站内：[AI 智能体 · Skills]({{< relref "agent/skills" >}}) 与 [Awesome Agent Skills]({{< relref "agent/awesome-agent-skills" >}})。
 
 **实操建议**：以官方 [Codex Skills](https://developers.openai.com/codex/skills) 为准；同一套 Skill 文档若可被多个工具读取，优先放在团队约定的**单一目录**并做好同步。
 
@@ -256,7 +142,7 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 
 ### 6. MCP 与其他集成
 
-在 Codex 侧配置 **MCP 服务器** 后，代理可以调用外部工具（浏览器、文档、数据库等）。配置入口通常在用户级 `**~/.codex/config.toml`**（含 `[mcp_servers]` 等段落）；与认证相关的文件勿提交到 Git。
+在 Codex 侧配置 **MCP 服务器** 后，代理可以调用外部工具（浏览器、文档、数据库等）。配置入口通常在用户级 `~/.codex/config.toml`（含 `[mcp_servers]` 等段落）；与认证相关的文件勿提交到 Git。
 
 - 概念与选型思路：[AI 智能体 · MCP]({{< relref "agent/mcp" >}})。
 - 和 Claude Code 统一的增强工具列表：[环境增强工具集]({{< relref "ai-programming/env-and-tools" >}})。
@@ -265,8 +151,8 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 
 ### 7. 平台差异与安全习惯
 
-- **Linux**：与 macOS/Windows 相比，沙箱与安全策略可能有差异；以 [openai/codex](https://github.com/openai/codex) 发行说明为准。数据目录默认多在 `**~/.codex`**，可通过环境变量 `**CODEX_HOME**` 调整（便于备份与多账号隔离）。
-- **高危标志**：社区与站内 Vibe Coding 类文章会提到类似 `**codex --yolo`** 的「跳过确认」开关——**会显著放大误删文件、乱执行命令的风险**，仅建议在隔离环境或完全清楚后果时使用。
+- **Linux**：与 macOS/Windows 相比，沙箱与安全策略可能有差异；以 [openai/codex](https://github.com/openai/codex) 发行说明为准。数据目录默认多在 `~/.codex`，可通过环境变量 `CODEX_HOME` 调整（便于备份与多账号隔离）。
+- **高危标志**：社区与站内 Vibe Coding 类文章会提到类似 `codex --yolo` 的「跳过确认」开关——**会显著放大误删文件、乱执行命令的风险**，仅建议在隔离环境或完全清楚后果时使用。
 
 ---
 
@@ -274,6 +160,7 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 
 - 开源仓库：[github.com/openai/codex](https://github.com/openai/codex)
 - 桌面端增强（社区）：[github.com/BigPizzaV3/CodexPlusPlus](https://github.com/BigPizzaV3/CodexPlusPlus)（Codex++）
+- 桌面端换肤（社区）：[github.com/Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin)（Codex Dream Skin）
 - Windows 桌面端补丁恢复 Skill（社区）：[github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill)
 - Skills 文档：[developers.openai.com/codex/skills](https://developers.openai.com/codex/skills)
 - ripgrep（`rg`）：[github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)

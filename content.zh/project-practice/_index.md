@@ -40,8 +40,10 @@ noTocArea: true
 
 - [项目实践：从一个具体案例开始]({{< relref "project-practice/practices-one" >}})  
   选一个规模可控的小项目，练习：需求拆解、任务分发、联调与验证闭环。
-- [用 draw.io 跑通三类常用图（流程图 / 时序图 / 用例图）]({{< relref "project-practice/drawio-diagrams" >}})  
-  把图当“可维护资产”：文档内 Mermaid 可预览 + `.drawio` 可编辑源文件交付，适合 PR 评审与后续维护。
+- [用 draw.io 快速画流程图 / 时序图 / 用例图]({{< relref "project-practice/drawio-diagrams" >}})  
+  AI 出第一版 → draw.io 微调 → 保存 `.drawio` 进仓库。
+- [AI 周边软件：数据库 + SSH 工作台]({{< relref "project-practice/ai-software" >}})  
+  DBX / Xterminal / OrcaTerm / Netcatty：把 AI 嵌进连库与登服务器。
 - [从需求到设计原型：一篇实战流程]({{< relref "project-practice/requirements-to-design-prototype" >}})  
   聚焦产品视角，从模糊想法到可交付的界面原型，把后续开发所需信息讲清楚。
 - [AI 绘图实战：从文案到成品图]({{< relref "project-practice/ai-drawing-practice" >}})  
