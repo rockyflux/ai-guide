@@ -228,7 +228,6 @@ winget install jesseduffield.lazygit
 
 - 购买入口 1：[pay.ldxp.cn/shop/xcursor](https://pay.ldxp.cn/shop/xcursor)
 - 购买入口 2：[wafase.com](https://wafase.com/)
-- 购买入口 3：[AI 创富俱乐部（makerich）](https://makerich.club/)
 - 购买入口 4：[Acc-OTAOR](https://acc.otaor.com/)
 
 注意：风险与合规事项同上文「Google 邮箱」— 第三方账号可能违反平台条款；到手后尽快改密、检查绑定与恢复方式，并仅用于合法用途。
@@ -249,7 +248,6 @@ winget install jesseduffield.lazygit
 #### 信用卡 / 支付
 
 - Bybit、Fiat24、Roogoo 等
-- [虚拟卡1](https://988.chat/)  [虚拟卡2](https://pay.ldxp.cn/shop/ERANHDWI) [虚拟卡3](https://www.779.chat/)
 
 #### 短信接收
 
@@ -262,4 +260,3 @@ winget install jesseduffield.lazygit
 - [国内免费接码平台推荐](https://topstip.com/nice-patchwork-platform/) — 汇总类参考
 
 注意：接码平台号码多为共享/一次性资源，存在被平台风控、账号关联封禁等风险；仅用于合法注册与测试，勿用于违规批量注册。第三方渠道请自行甄别可信度。
-

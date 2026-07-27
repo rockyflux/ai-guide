@@ -71,6 +71,10 @@ bookToc: true
 - <https://arena.ai/>
 - 免费，选择 `Direct`、`gpt-image-2`
 
+### canvas.best
+
+- <https://canvas.best/>
+- GPT-Image 在线生成与画布式编辑项目，可作为产品形态参考
 
 ### toapis
 
