@@ -1,8 +1,9 @@
 ---
 title: Superpowers
-weight: 23
+weight: 12
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## Superpowers 是什么？

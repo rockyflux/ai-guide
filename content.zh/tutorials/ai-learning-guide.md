@@ -1,8 +1,8 @@
 ---
-title: 🎓 系统学习 AI 知识资源指南
-weight: 2
+title: AI 学习资源指南
+weight: 1
 date: 2026-02-09T14:57:00+08:00
-bookHidden: true
+bookHidden: false
 ---
 
 # 🎓 系统学习 AI 知识资源指南
@@ -125,6 +125,7 @@ bookHidden: true
 
 | 中文名 | 原名 & 链接 | Stars | 说明 |
 | --- | --- | --- | --- |
+| 深入理解 AI Agent | [ai-agent-book](https://github.com/bojieli/ai-agent-book) | 40k+ | 李博杰著：Agent 原理到工程实战（10 章 + 103 实验，含 PDF/多语言） |
 | LLM 课程 | [LLM Course](https://github.com/mlabonne/llm-course) | 40k+ | 从入门到微调完整路线 |
 | AI 专家路线图 | [AI Expert Roadmap](https://github.com/AMAI-GmbH/AI-Expert-Roadmap) | 29k+ | 可视化学习路径 |
 | LLM / RL 原理图解 | [LLM-RL-Visualized](https://github.com/changyeyu/LLM-RL-Visualized) | 3.6k+ | 100+ 原创大模型 / 强化学习原理图与技术图谱 |
@@ -140,6 +141,7 @@ bookHidden: true
 
 | 中文名 | 链接 | 说明 |
 | --- | --- | --- |
+| 深入理解 AI Agent（开源书） | [ai-agent-book](https://github.com/bojieli/ai-agent-book) | 李博杰：上下文工程 / MCP / Coding Agent / 评估与后训练，正文+实验全开源 |
 | 动手学深度学习（中文版） | [zh.d2l.ai](https://zh.d2l.ai/) | 李沐团队官方中文版 |
 | 南瓜书 | [PumpkinBook](https://datawhalechina.github.io/pumpkin-book/) | 西瓜书公式推导 |
 | AI 学习笔记 | [AI-For-Beginners 中文](https://microsoft.github.io/AI-For-Beginners/zh/) | 微软课程中文版 |
@@ -174,7 +176,8 @@ bookHidden: true
 1. [OpenAI] Cookbook + API 文档
 2. [DeepLearning.AI] LangChain 短课程
 3. [DeepLearning.AI] RAG 检索增强
-4. [GitHub] 选择一个开源项目贡献
+4. [GitHub] ai-agent-book — Agent 原理到工程（选章跑实验）
+5. [GitHub] 选择一个开源项目贡献
 ```
 
 ---
@@ -185,6 +188,7 @@ bookHidden: true
 | --- | --- |
 | AI 入门小白 | 微软 Generative AI for Beginners → 吴恩达 ML 课程 |
 | 快速上手 LLM 开发 | OpenAI Cookbook → LangChain 短课程 |
+| 系统学 AI Agent | [ai-agent-book](https://github.com/bojieli/ai-agent-book)（原理 + 103 实验）→ DeepLearning.AI Agent 短课 |
 | 深入理解原理 | d2l.ai → CS229 → CS224n |
 | 企业级部署 | Azure OpenAI → AWS Bedrock |
 | Prompt 高手 | Anthropic 教程 → DAIR Prompt 指南 |

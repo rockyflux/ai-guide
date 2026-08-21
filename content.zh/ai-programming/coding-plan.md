@@ -1,8 +1,9 @@
 ---
 title: AI Coding Plan
-weight: 10
+weight: 22
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## AI Coding Plan 怎么选

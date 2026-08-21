@@ -1,8 +1,11 @@
 ---
+aliases:
+  - /ai-programming/env-and-tools/
 title:  环境配置：工具与增强
-weight: 15
+weight: 20
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## 🛠️ AI 编程环境配置与增强工具集
@@ -11,9 +14,9 @@ noTocArea: true
 
 |序号|工具名称|star 数|类型/分类|项目介绍|解读|
 |---|---|---|---|---|---|
-|1|[🔥CC Switch]({{< relref "ai-programming/cc-switch" >}})|109.8k|桌面应用 · 环境配置|Claude Code / Codex / Gemini CLI 跨平台桌面辅助工具：一键切换 API 供应商配置；统一管理 MCP 服务器；Skills 扫描与 Prompts 预设；内置 API 测速；Tauri2+React+Rust|[Zread](https://zread.ai/farion1231/cc-switch) |
-|2|[🔥CLIProxyAPI (CPA)]({{< relref "ai-programming/cpa" >}})|38.6k|服务端网关 · 统一 API|将多种 CLI 封装为 OpenAI/Gemini/Claude/Codex 兼容 API 代理：本地/多账户 CLI 统一通过兼容客户端/SDK 调用；多账户轮询与故障转移；流式/非流式、多模态、函数调用支持|[Zread](https://zread.ai/router-for-me/CLIProxyAPI)|
-|3|[🔥ZCF (Zero Config)]({{< relref "ai-programming/zcf" >}})|6.1k|CLI 工具 · 环境配置|零配置一键搞定 Claude Code & Codex 环境：中英文双语配置；内置智能代理系统；个性化 AI 助手配置|[Zread](https://zread.ai/UfoMiao/zcf)|
+|1|[🔥CC Switch]({{< relref "setup/cc-switch" >}})|109.8k|桌面应用 · 环境配置|Claude Code / Codex / Gemini CLI 跨平台桌面辅助工具：一键切换 API 供应商配置；统一管理 MCP 服务器；Skills 扫描与 Prompts 预设；内置 API 测速；Tauri2+React+Rust|[Zread](https://zread.ai/farion1231/cc-switch) |
+|2|[🔥CLIProxyAPI (CPA)]({{< relref "setup/cpa" >}})|38.6k|服务端网关 · 统一 API|将多种 CLI 封装为 OpenAI/Gemini/Claude/Codex 兼容 API 代理：本地/多账户 CLI 统一通过兼容客户端/SDK 调用；多账户轮询与故障转移；流式/非流式、多模态、函数调用支持|[Zread](https://zread.ai/router-for-me/CLIProxyAPI)|
+|3|[🔥ZCF (Zero Config)]({{< relref "setup/zcf" >}})|6.1k|CLI 工具 · 环境配置|零配置一键搞定 Claude Code & Codex 环境：中英文双语配置；内置智能代理系统；个性化 AI 助手配置|[Zread](https://zread.ai/UfoMiao/zcf)|
 |4|[🔥Claude Code Router](https://github.com/musistudio/claude-code-router)|35.4k|服务端网关 · 路由策略|自定义请求路径与模型分发的强大路由器：将 Claude Code 请求路由到不同模型；自定义任意请求逻辑；无需 Anthropic 账号；支持 DeepSeek/Gemini/Groq 等|[Zread](https://zread.ai/musistudio/claude-code-router) |
 |5|[Warp](https://github.com/warpdotdev/warp)|62.5k|终端工具 · AI 原生终端|现代化 AI 原生终端：提供命令补全、命令块、工作流自动化、团队协作与内置 AI 辅助，适合提升日常开发与 AI 编程终端体验|[Zread](https://zread.ai/warpdotdev/warp)|
 |5|[Any Code](https://github.com/anyme123/Any-code)|1.3k|桌面应用 · 编程助手|专业 AI 代码助手桌面应用，多引擎现代化 GUI 工具包：支持 Claude Code CLI / OpenAI Codex / Gemini CLI 一键切换；翻译、成本追踪、MCP 管理、Hooks、上下文压缩|[Zread](https://zread.ai/anyme123/Any-code) |
@@ -39,7 +42,7 @@ noTocArea: true
 |24|[🔥Cockpit Tools](https://github.com/jlcodes99/cockpit-tools)|12.2k|桌面应用 · 账号管理|通用 AI IDE 账号管理工具：支持 Antigravity/Codex/GitHub Copilot/Windsurf/Kiro 多账号切换、配额监控、自动唤醒与多开实例管理|[Zread](https://zread.ai/jlcodes99/cockpit-tools)|
 |25|[claude-code-hub](https://github.com/ding113/claude-code-hub)|3.2k|桌面/CLI 管理 · 统一入口|面向 Claude Code 的统一管理入口：帮助集中管理 Claude Code 相关配置、会话与常用工具，适合想把 Claude Code 工作流收拢到一个地方的用户|[Zread](https://zread.ai/ding113/claude-code-hub)|
 |26|[paseo.sh](https://github.com/getpaseo/paseo)|9.4k|Web 服务 · Claude Code 生态|面向 Claude Code 的辅助服务与工具站点：提供与 Claude Code 工作流相关的在线能力与资源入口，适合用来快速了解或接入相关工具生态|[Zread](https://zread.ai/getpaseo/paseo)|
-|27|[pi-mono](https://github.com/badlogic/pi-mono)|66.1k|CLI/开发工具 · 单文件二进制构建|面向多平台的单文件可执行程序构建工具：帮助把工程打包成便于分发与运行的单文件二进制，适合纳入 AI 编程环境与工具链的补充参考|—
+|27|[🔥Pi](https://github.com/earendil-works/pi)|94.1k|CLI/Agent · Coding Agent Harness|可自扩展的极简终端 Coding Agent：统一多厂商 LLM API（OpenAI/Anthropic/Google 等）；Agent 运行时（工具调用与状态管理）；交互式 coding agent CLI（read/write/edit/bash）；差分渲染 TUI；用 Extensions/Skills/Themes/Packages 适配工作流，而非 fork 内核（原 pi-mono，现 earendil-works/pi）|[Zread](https://zread.ai/earendil-works/pi)|
 |28|[jcode](https://github.com/1jehuang/jcode)|7.8k|CLI/编程工具 · 开发辅助|轻量开发辅助工具：偏向命令行工作流与日常编码效率提升，可作为 Claude Code 周边补充工具，适合需要更轻量操作方式的场景|[Zread](https://zread.ai/1jehuang/jcode)|
 |28|[AI Toolbox](https://github.com/coulsontl/ai-toolbox)|939|桌面应用 · 配置管理|个人 AI 工具箱：一站式管理 AI 编程助手配置，覆盖 OpenCode / Claude Code / Codex 供应商与模型配置切换；集中管理 MCP 服务器；Skills 安装管理；支持 Windows/macOS/Linux，并提供 WSL 同步与备份能力|[Zread](https://zread.ai/coulsontl/ai-toolbox)|
 |29|[IDEA Claude Code GUI Plugin](https://github.com/zhukunpenglinyutong/idea-claude-code-gui)|4.1k|IDE 插件 · 可视化 GUI|IntelliJ IDEA 插件：为 Claude Code 与 OpenAI Codex 提供可视化界面；支持 @file 引用、会话回溯、对比 DIFF、MCP/Skills、权限与安全控制等，提高 IDE 内 AI 编程体验|[Zread](https://zread.ai/zhukunpenglinyutong/idea-claude-code-gui)|
@@ -55,3 +58,4 @@ noTocArea: true
 |39|[Nezha](https://github.com/hanshuaikang/nezha)|1.7k|桌面应用 · VibeCoding 平台|面向 AI Agent 时代的 Agent-First 桌面 IDE：在同一界面并行运行多个 Claude Code / Codex Agent；多项目工作区一键切换；内置终端、会话自动发现与回放；轻量代码/Markdown 编辑器；原生 Git 集成与 AI 提交信息；Token 用量统计；Tauri2+React+Rust，安装包约 7MB|[Zread](https://zread.ai/hanshuaikang/nezha)|
 |40|[Terax](https://github.com/crynta/terax-ai)|7.5k|桌面应用 · AI 原生工作区|轻量级（约 7MB）Terminal-first AI 原生开发工作区：Tauri2+Rust+React 构建；原生 PTY 与 WebGL 多标签终端；Agent 侧栏（BYOK 或本地 Ollama/LM Studio/MLX）；内置 CodeMirror 编辑器、文件管理、Git 图谱与 Web 预览；无遥测、无账号|[Zread](https://zread.ai/crynta/terax-ai)|
 |41|[Otty](https://otty.sh/)|—|终端工具 · AI 原生终端|原生 GPU 加速终端：介于传统终端与完整 Agent IDE 之间；为 Claude Code / Codex / OpenCode 等 CLI Agent 提供并行任务监控、Prompt 队列、会话分叉与 Web 预览；标签/分屏/会话恢复、命令面板与内联补全；免费无需账号，当前 macOS Apple Silicon 可用|—
+|42|[cmux](https://cmux.com/zh-CN)|26.3k|终端工具 · 多 Agent 终端|基于 libghostty 的免费开源原生 macOS 终端：垂直标签页（git 分支/工作目录/端口）、agent 需关注时的通知环、标签内分屏、内置可编程浏览器与 CLI/socket API；支持 Claude Code / Codex / OpenCode 等任意 CLI Agent，以及 SSH/远程 tmux|[GitHub](https://github.com/manaflow-ai/cmux)|

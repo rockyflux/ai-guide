@@ -2,6 +2,7 @@
 title: 其他AI编程实践文章
 weight: 999
 date: 2026-03-14T00:00:00+08:00
+bookHidden: true
 ---
 
 # 其他平台的 AI 编程实践

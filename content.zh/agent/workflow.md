@@ -1,6 +1,7 @@
 ---
 title: Workflow
-weight: 5
+weight: 8
+bookHidden: false
 ---
 
 ## 一句话定位

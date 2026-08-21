@@ -1,9 +1,10 @@
 ---
 title: Prompt
-weight: 7
+weight: 1
 date: 2026-02-09T23:34:00+08:00
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## 一、通过烹饪类比快速掌握五大概念

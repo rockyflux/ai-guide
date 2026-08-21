@@ -1,6 +1,8 @@
 ---
+aliases:
+  - /large-models/Leaderboard/
 title: LLM 评测基准与榜单汇总
-weight: 40
+weight: 13
 date: 2026-02-09T14:43:00+08:00
 bookHidden: true
 ---

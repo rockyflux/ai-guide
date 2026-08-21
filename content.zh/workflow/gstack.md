@@ -1,8 +1,9 @@
 ---
 title: gstack(YC)
-weight: 24
+weight: 16
 bookToc: false
 noTocArea: true
+bookHidden: true
 ---
 
 ## 一句话介绍

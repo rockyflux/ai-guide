@@ -1,6 +1,8 @@
 ---
+aliases:
+  - /large-models/model-comparison/
 title: LiveBench AI 排行榜
-weight: 30
+weight: 12
 bookToc: false
 noTocArea: true
 bookHidden: true

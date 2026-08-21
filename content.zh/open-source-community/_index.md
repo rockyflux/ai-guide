@@ -8,4 +8,4 @@ bookHidden: true
 
 ## 开源和社区
 
-开源项目和社区资源。
+开源相关入口已并入 **[学习与资源]({{< relref "tutorials/_index" >}})**（如 [Awesome OpenClaw]({{< relref "tutorials/awesome-openclaw" >}})）。

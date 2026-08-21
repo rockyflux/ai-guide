@@ -1,8 +1,9 @@
 ---
-title: Get Shit Done(GSD)
-weight: 22
+title: GSD
+weight: 11
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## GSD 是什么？

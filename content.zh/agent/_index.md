@@ -1,9 +1,11 @@
 ---
-title: 🤖 智能体实战（Agent）
-weight: 3
+title: 🤖 Agent 工程
+weight: 40
 bookCollapseSection: false
 bookFlatSection: true
 ---
+
+> **和「协作工作流」的区别**：本栏是积木（Rules / Skills / MCP 等机制）；那边是成品编排（CCG / GSD / Superpowers 等产品化工作流）。先懂积木，再选编排；或先跟工作流跑起来，再回这里补机制。
 
 ## 省流版
 

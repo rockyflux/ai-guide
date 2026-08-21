@@ -1,9 +1,11 @@
 ---
+aliases:
+  - /ai-programming/zcf/
 title: ZCF 零配置 Claude Code
-weight: 16
+weight: 22
 bookToc: false
 noTocArea: true
-bookHidden: true
+bookHidden: false
 ---
 
 ### ZCF - Zero-Config Code Flow

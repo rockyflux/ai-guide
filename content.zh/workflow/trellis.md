@@ -1,8 +1,9 @@
 ---
 title: Trellis
-weight: 25
+weight: 14
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## Trellis 是什么？

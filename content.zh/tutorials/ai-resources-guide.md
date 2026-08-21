@@ -1,9 +1,12 @@
 ---
+aliases:
+  - /ai-programming/ai-resources-guide/
 title: AI 资源与工具指南
-weight: 31
+weight: 2
 date: 2026-02-09T15:43:00+08:00
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## AI 资源与工具指南
@@ -34,7 +37,7 @@ noTocArea: true
 - [学习 Cursor，拥抱 AI 编程](https://cursor101.com/zh) — Cursor 中文教程
 - [easy-vibe](https://datawhalechina.github.io/easy-vibe/zh-cn/) — Datawhale 出品的编程软件 / Vibe Coding 学习资源
 - [OpenCode 中文实战课](https://learnopencode.com/) — OpenCode 实战课程
-- [🔥awesome-openclaw]({{< relref "open-source-community/awesome-openclaw" >}}) — OpenClaw 生态精选
+- [🔥awesome-openclaw]({{< relref "tutorials/awesome-openclaw" >}}) — OpenClaw 生态精选
 - [OpenClaw 真正能做事的 AI](https://clawd.org.cn/) — OpenClaw 社区站
 - [Book of Kiro 入门](https://kiro-community.github.io/book-of-kiro/kiro-intro/) — Kiro 入门指南
 - [n8n 中文](https://n8n.akashio.com/about) — 自动化工作流 n8n 相关

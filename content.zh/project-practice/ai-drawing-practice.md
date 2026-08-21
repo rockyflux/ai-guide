@@ -5,6 +5,7 @@ bookToc: false
 noTocArea: true
 bookCollapseSection: false
 bookFlatSection: true
+bookHidden: true
 ---
 
 ## 豆包 AI 绘图闭环小练习

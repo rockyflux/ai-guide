@@ -1,8 +1,11 @@
 ---
+aliases:
+  - /project-practice/wsl/
 title: WSL 开发环境
-weight: 16
+weight: 11
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## WSL 开发环境：Claude Code 安装与使用

@@ -1,7 +1,8 @@
 ---
 title: MCP
-weight: 2
+weight: 4
 date: 2026-02-09T23:34:00+08:00
+bookHidden: false
 ---
 
 ## MCP的工作原理

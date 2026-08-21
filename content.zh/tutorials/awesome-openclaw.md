@@ -1,10 +1,12 @@
 ---
+aliases:
+  - /open-source-community/awesome-openclaw/
 title: Awesome OpenClaw 使用案例
-weight: 40
+weight: 4
 date: 2026-02-09T14:43:00+08:00
 bookToc: false
 noTocArea: true
-bookHidden: true
+bookHidden: false
 ---
 ## OpenClaw 生态分支（选型速览）
 

@@ -1,6 +1,8 @@
 ---
+aliases:
+  - /ai-programming/dev-start/
 title: 开发环境：一站式准备
-weight: 14
+weight: 10
 bookToc: true
 bookHidden: false
 ---

@@ -1,9 +1,11 @@
 ---
+aliases:
+  - /ai-programming/cc-switch/
 title: CC-Switch：可视化配置管理
-weight: 17
+weight: 23
 bookToc: false
 noTocArea: true
-bookHidden: true
+bookHidden: false
 ---
 
 ### Claude Code / Codex / Gemini CLI / OpenCode / OpenClaw 全方位辅助工具

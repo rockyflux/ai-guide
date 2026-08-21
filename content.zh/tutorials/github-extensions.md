@@ -1,9 +1,11 @@
 ---
+aliases:
+  - /setup/github-extensions/
 title: GitHub 周边工具速查
-weight: 2
+weight: 5
 bookToc: false
 noTocArea: true
-bookHidden: true
+bookHidden: false
 ---
 
 # GitHub 周边工具速查

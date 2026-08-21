@@ -1,7 +1,9 @@
 ---
+aliases:
+  - /large-models/model-price/
 title: 大模型价格
-weight: 50
-bookHidden: true
+weight: 14
+bookHidden: false
 ---
 
 ## 大模型的价格供参考

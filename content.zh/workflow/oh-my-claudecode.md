@@ -1,8 +1,9 @@
 ---
-title: oh-my-claudecode(OMC)
-weight: 24
+title: oh-my-claudecode
+weight: 13
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## oh-my-claudecode 是什么？

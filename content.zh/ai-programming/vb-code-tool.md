@@ -1,6 +1,7 @@
 ---
 title: AI 编程工具：汇总与对比
-weight: 10
+weight: 20
+bookHidden: false
 ---
 
 # 1 Aider

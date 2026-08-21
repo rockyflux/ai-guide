@@ -1,6 +1,7 @@
 ---
-title: Claude Code Agent Teams
-weight: 26
+title: Agent Teams
+weight: 15
+bookHidden: false
 ---
 
 # Claude Code Agent Teams 使用指南

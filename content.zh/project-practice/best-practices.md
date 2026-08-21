@@ -1,7 +1,8 @@
 ---
 title: Claude Code 最佳实践
-weight: 30
+weight: 40
 date: 2026-02-09T23:34:00+08:00
+bookHidden: false
 ---
 
 # Claude Code 最佳实践

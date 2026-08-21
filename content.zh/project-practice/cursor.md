@@ -3,6 +3,7 @@ title: Cursor 实战上手指南
 weight: 1
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## Cursor 实战上手指南（10分钟）
@@ -65,11 +66,11 @@ npx ccg-workflow
 
 选择安装 Claude Code（如未安装），然后初始化 CCG 配置。
 
-**注意**：运行前请确保已安装 Node.js 与 npm/npx（环境准备可参考：[开发环境：一站式准备]({{< relref "ai-programming/dev-start" >}})）。
+**注意**：运行前请确保已安装 Node.js 与 npm/npx（环境准备可参考：[开发环境：一站式准备]({{< relref "setup/dev-start" >}})）。
 
 #### 3.2 ZCF 工作流
 
-教程：[ZCF 使用指南]({{< relref "ai-programming/zcf" >}})
+教程：[ZCF 使用指南]({{< relref "setup/zcf" >}})
 
 ```bash
 npx zcf

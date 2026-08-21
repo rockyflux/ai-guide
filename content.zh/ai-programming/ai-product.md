@@ -1,6 +1,8 @@
 ---
+aliases:
+  - /large-models/ai-product/
 title: AI 产品推荐
-weight: 70
+weight: 15
 bookToc: false
 noTocArea: true
 bookHidden: true

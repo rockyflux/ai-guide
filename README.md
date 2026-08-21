@@ -4,7 +4,7 @@
 
 **面向有经验开发者的任务导向中文指南**
 
-选模型与工具 → 搭环境接模型 → 协作工作流 → 智能体工程化 → 项目实践闭环
+选模型与工具 → 搭环境接模型 → 协作工作流 → Agent 工程 → 项目实践闭环
 
 [![在线阅读](https://img.shields.io/badge/在线阅读-ai--guide.180813.xyz-blue?style=for-the-badge)](https://ai-guide.180813.xyz/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -24,18 +24,16 @@
 
 ![AI Guide](static/images/index/flow.png)
 
-## 四条主线
+## 六条主线
 
 | 主线 | 解决什么问题 |
 | --- | --- |
-| [AI 编程](https://ai-guide.180813.xyz/ai-programming/) | 选模型、选工具、搭环境、补方法论 |
-| [协作与工作流](https://ai-guide.180813.xyz/workflow/) | 多模型协作、多 Agent 编排、规格驱动闭环 |
-| [AI 智能体](https://ai-guide.180813.xyz/agent/) | Rules / Skills / MCP / Hooks / Subagents |
+| [入门与选型](https://ai-guide.180813.xyz/ai-programming/) | 上手、选模型、选工具 / 套餐、控成本 |
+| [环境与工具](https://ai-guide.180813.xyz/setup/) | 开发环境、WSL、供应商切换与增强工具 |
+| [协作工作流](https://ai-guide.180813.xyz/workflow/) | 多模型协作、多 Agent 编排、规格驱动闭环 |
+| [Agent 工程](https://ai-guide.180813.xyz/agent/) | Rules / Skills / MCP / Hooks / Subagents |
 | [项目实践](https://ai-guide.180813.xyz/project-practice/) | 从案例到 SOP，把 AI 用进真实交付 |
-
-支线：[大模型](https://ai-guide.180813.xyz/large-models/) · [教程与资源](https://ai-guide.180813.xyz/tutorials/) · [开源与社区](https://ai-guide.180813.xyz/open-source-community/)
-
-## 按任务直达
+| [学习与资源](https://ai-guide.180813.xyz/tutorials/) | 系统学习、社区资源与 Awesome 合集 |
 
 ### 1. 选模型、选工具、控成本
 
@@ -44,18 +42,18 @@
 - [AI 编程工具汇总](https://ai-guide.180813.xyz/ai-programming/vb-code-tool/) — IDE / 插件 / Agent 工具对比
 - [AI CLI 工具横评](https://ai-guide.180813.xyz/ai-programming/code-cli/) — Claude Code / Codex / Gemini CLI 等
 - [AI 编程省钱之道](https://ai-guide.180813.xyz/ai-programming/ai-coding-save-money/) — 免费额度、Token 与多端复用
-- [2026 年主流大模型盘点](https://ai-guide.180813.xyz/large-models/models-2026/) · [价格对比](https://ai-guide.180813.xyz/large-models/model-price/)
+- [2026 年主流大模型盘点](https://ai-guide.180813.xyz/ai-programming/models-2026/) · [价格对比](https://ai-guide.180813.xyz/ai-programming/model-price/)
 
 ### 2. 一次把环境与模型接口配好
 
-- [开发环境准备](https://ai-guide.180813.xyz/ai-programming/dev-start/) — 基础工具链一站式准备
-- [WSL + Claude Code](https://ai-guide.180813.xyz/project-practice/wsl/) — Windows 下更顺手的 Linux 开发环境
-- [环境配置与增强工具集](https://ai-guide.180813.xyz/ai-programming/env-and-tools/) — 环境变量、供应商切换、常用增强
-- [ZCF](https://ai-guide.180813.xyz/ai-programming/zcf/) · [CC-Switch](https://ai-guide.180813.xyz/ai-programming/cc-switch/) · [CPA](https://ai-guide.180813.xyz/ai-programming/cpa/)
+- [开发环境准备](https://ai-guide.180813.xyz/setup/dev-start/) — 基础工具链一站式准备
+- [WSL + Claude Code](https://ai-guide.180813.xyz/setup/wsl/) — Windows 下更顺手的 Linux 开发环境
+- [环境配置与增强工具集](https://ai-guide.180813.xyz/setup/env-and-tools/) — 环境变量、供应商切换、常用增强
+- [ZCF](https://ai-guide.180813.xyz/setup/zcf/) · [CC-Switch](https://ai-guide.180813.xyz/setup/cc-switch/) · [CPA](https://ai-guide.180813.xyz/setup/cpa/)
 
 ### 3. 把「对话」升级成可交付工作流
 
-- [协作与工作流入口](https://ai-guide.180813.xyz/workflow/) — 编排与闭环工具总索引
+- [协作工作流入口](https://ai-guide.180813.xyz/workflow/) — 编排与闭环工具总索引
 - [工作流项目集](https://ai-guide.180813.xyz/workflow/ccg-workflow/) — 协作类项目列表与选型
 - [CCG](https://ai-guide.180813.xyz/workflow/ccg/) · [GSD](https://ai-guide.180813.xyz/workflow/gsd/) · [Superpowers](https://ai-guide.180813.xyz/workflow/superpowers/)
 - [oh-my-claudecode](https://ai-guide.180813.xyz/workflow/oh-my-claudecode/) · [Trellis](https://ai-guide.180813.xyz/workflow/trellis/)
@@ -81,13 +79,14 @@
 ```text
 ai-guide/
 ├── content.zh/          # 中文内容（Markdown）
-│   ├── ai-programming/  # 选型 / 环境 / 工具
-│   ├── workflow/        # 多模型 / 多 Agent 协作
-│   ├── agent/           # Rules / Skills / MCP 等
-│   ├── project-practice/# 端到端闭环实践
-│   ├── large-models/    # 模型认知 / 对比 / 价格
-│   ├── tutorials/       # 教程与周边资源
-│   └── open-source-community/
+│   ├── ai-programming/  # 入门与选型（含选模型）
+│   ├── setup/           # 环境与工具
+│   ├── workflow/        # 协作工作流
+│   ├── agent/           # Agent 工程
+│   ├── project-practice/# 项目实践
+│   ├── tutorials/       # 学习与资源
+│   ├── large-models/    # 归档（侧栏隐藏）
+│   └── open-source-community/  # 归档（侧栏隐藏）
 ├── layouts/             # 主题局部覆盖
 ├── assets/ · static/    # 样式与静态资源
 └── .github/             # CI 与 Issue / PR 模板

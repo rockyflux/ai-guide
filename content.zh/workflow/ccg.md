@@ -1,8 +1,9 @@
 ---
-title: ccg-workflow(CCG)
-weight: 21
+title: CCG
+weight: 10
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## CCG - Claude + Codex + Gemini Multi-Model Collaboration

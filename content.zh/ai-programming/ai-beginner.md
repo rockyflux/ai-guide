@@ -1,7 +1,8 @@
 ---
 title: 新手如何快速上手 AI
-weight: 0
+weight: 1
 bookToc: true
+bookHidden: false
 ---
 
 # 新手如何快速上手 AI：从会聊天，到真正用 AI 提升效率
@@ -98,8 +99,8 @@ AI 已经不只是一个聊天工具，而正在成为一个可以帮助我们�
 站内延伸：
 
 - [AI 编程模型选型]({{< relref "ai-programming/models" >}})
-- [大模型价格]({{< relref "large-models/model-price" >}})
-- [LLM 评测基准与榜单汇总]({{< relref "large-models/Leaderboard" >}})
+- [大模型价格]({{< relref "ai-programming/model-price" >}})
+- [LLM 评测基准与榜单汇总]({{< relref "ai-programming/Leaderboard" >}})
 
 ---
 
@@ -163,7 +164,7 @@ AI 已经不只是一个聊天工具，而正在成为一个可以帮助我们�
 
 > 可以执行任务的数字员工。
 
-站内延伸：[Awesome OpenClaw 使用案例]({{< relref "open-source-community/awesome-openclaw" >}})
+站内延伸：[Awesome OpenClaw 使用案例]({{< relref "tutorials/awesome-openclaw" >}})
 
 ---
 
@@ -231,4 +232,4 @@ AI 使用能力的提升，本质上就是：从「问问题」，到「描述�
 
 这套完整能力。
 
-走完这一圈，再进入本栏目的 [选模型与工具]({{< relref "ai-programming/models" >}})、[开发环境准备]({{< relref "ai-programming/dev-start" >}}) 会轻松很多——你已经知道自己在配什么、为什么配。
+走完这一圈，再进入本栏目的 [选模型与工具]({{< relref "ai-programming/models" >}})、[开发环境准备]({{< relref "setup/dev-start" >}}) 会轻松很多——你已经知道自己在配什么、为什么配。

@@ -3,6 +3,7 @@ title: AI 周边软件
 weight: 40
 bookToc: false
 noTocArea: true
+bookHidden: true
 ---
 
 ## AI 周边软件：数据库 + SSH 工作台

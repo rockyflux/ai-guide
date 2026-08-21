@@ -3,6 +3,7 @@ title: GPT-Image2.0
 date: 2026-05-13
 weight: 85
 bookToc: true
+bookHidden: true
 ---
 
 ## GPT-Image2.0

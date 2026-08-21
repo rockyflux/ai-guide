@@ -1,7 +1,8 @@
 ---
 title: Hooks
-weight: 5
+weight: 6
 date: 2026-02-09T23:34:00+08:00
+bookHidden: false
 ---
 
 ## Claude Code 钩子入门

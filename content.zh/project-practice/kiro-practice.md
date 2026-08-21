@@ -1,7 +1,8 @@
 ---
 title: Kiro 10 分钟项目实战
-weight: 2
+weight: 3
 bookToc: true
+bookHidden: false
 ---
 
 ## 10 分钟跑通一个真实项目

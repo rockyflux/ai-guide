@@ -1,8 +1,9 @@
 ---
 title: Everything Claude Code
-weight: 50
+weight: 41
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 # Everything Claude Code

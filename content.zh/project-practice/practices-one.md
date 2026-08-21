@@ -1,6 +1,7 @@
 ---
-title: 全套插件打造免费AI编程
-weight: 10
+title: 案例练手：免费 AI 编程闭环
+weight: 20
+bookHidden: false
 ---
 
 # CC-Switch+CPA+CCR+CC+OpenCode打造免费AI编程军团

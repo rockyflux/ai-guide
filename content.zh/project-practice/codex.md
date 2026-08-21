@@ -3,6 +3,7 @@ title: Codex 实战上手指南
 weight: 2
 bookToc: false
 noTocArea: true
+bookHidden: false
 ---
 
 ## Codex 实战上手指南（10～15 分钟）
@@ -37,7 +38,7 @@ brew install --cask codex
 
 如果你主要在 **VS Code** 里使用，推荐直接安装官方扩展：[ChatGPT - OpenAI](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt)。
 
-环境准备（Node、Git、终端基础）可参考：[开发环境：一站式准备]({{< relref "ai-programming/dev-start" >}})。
+环境准备（Node、Git、终端基础）可参考：[开发环境：一站式准备]({{< relref "setup/dev-start" >}})。
 
 #### 前置：`ripgrep`（`rg`）——CLI 强依赖，建议先装
 
@@ -51,7 +52,7 @@ Codex CLI 依赖系统 PATH 里的 [`rg`](https://github.com/BurntSushi/ripgrep)
 
 #### Windows 桌面端补丁恢复（codex-windows-fast-patch Skill）
 
-Microsoft Store 版 Codex 升级后若 Fast Mode、中文界面、插件市场、Browser / Computer Use、远程连接等被门控关掉，可用社区 Skill **[codex-windows-fast-patch-skill](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill)**（Windows MSIX / ASAR 补丁与 `config.toml` 修复；走 CPA 时还需上游强制 `service_tier = priority`，见 [CPA]({{< relref "ai-programming/cpa" >}})）。
+Microsoft Store 版 Codex 升级后若 Fast Mode、中文界面、插件市场、Browser / Computer Use、远程连接等被门控关掉，可用社区 Skill **[codex-windows-fast-patch-skill](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill)**（Windows MSIX / ASAR 补丁与 `config.toml` 修复；走 CPA 时还需上游强制 `service_tier = priority`，见 [CPA]({{< relref "setup/cpa" >}})）。
 
 ---
 
@@ -84,8 +85,8 @@ NO_PROXY="localhost,127.0.0.1"
 
 - `HTTP_PROXY` / `HTTPS_PROXY`：让 Codex 相关请求走本地代理。
 - `NO_PROXY`：让本机回环地址直连，避免代理把本地服务也接管走。
-需要把 **Claude Code 与 Codex** 一起做「供应商 / 代理 / MCP」初始化时，可用站内介绍的零配置工具：[ZCF 零配置 Claude Code]({{< relref "ai-programming/zcf" >}})。  
-更通用的 **Claude / Codex / Gemini CLI** 配置桌面端管理，见：[CC Switch]({{< relref "ai-programming/cc-switch" >}})。
+需要把 **Claude Code 与 Codex** 一起做「供应商 / 代理 / MCP」初始化时，可用站内介绍的零配置工具：[ZCF 零配置 Claude Code]({{< relref "setup/zcf" >}})。  
+更通用的 **Claude / Codex / Gemini CLI** 配置桌面端管理，见：[CC Switch]({{< relref "setup/cc-switch" >}})。
 
 ---
 
@@ -145,7 +146,7 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 在 Codex 侧配置 **MCP 服务器** 后，代理可以调用外部工具（浏览器、文档、数据库等）。配置入口通常在用户级 `~/.codex/config.toml`（含 `[mcp_servers]` 等段落）；与认证相关的文件勿提交到 Git。
 
 - 概念与选型思路：[AI 智能体 · MCP]({{< relref "agent/mcp" >}})。
-- 和 Claude Code 统一的增强工具列表：[环境增强工具集]({{< relref "ai-programming/env-and-tools" >}})。
+- 和 Claude Code 统一的增强工具列表：[环境增强工具集]({{< relref "setup/env-and-tools" >}})。
 
 ---
 

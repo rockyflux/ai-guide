@@ -1,7 +1,8 @@
 ---
-title: Agent Skills
-weight: 1
+title: Skills
+weight: 3
 date: 2026-02-09T23:34:00+08:00
+bookHidden: false
 ---
 
 
@@ -131,12 +132,34 @@ npx skills add pbakaus/impeccable
 npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines
 npx skills add https://github.com/anthropics/skills --skill frontend-design
 npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
+# Anti-slop 前端审美：版式/字体/动效/间距；默认 design-taste-frontend（v2）
+npx skills add https://github.com/Leonxlnx/taste-skill
+# 单装示例：npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"
 ```
 
 ```
 # 公众号 / 内容创作 skills
 # 把 Markdown 排成可直接粘贴进公众号编辑器的 HTML（6 套主题 + 主题生成器 + 双关卡校验）
 npx skills add https://github.com/isjiamu/gzh-design-skill
+# 中文口播稿 + SRT → 可录屏的 16:9 自动播放信息动画 HTML（非 PPT、不直接出 MP4）
+npx skills add https://github.com/Jackywxsz/jacky-motion
+```
+
+```
+# PPT / 演示文稿 skills
+# 浏览器可编辑网页 PPT → 导出 HTML / PDF / 可编辑 PPTX（12 套主题、1020 版式）
+# 环境：Node.js 20+；导出 PPTX/PDF 需本机 Chrome / Chromium / Edge
+npx dashi-ppt-skill@latest
+# 国内镜像：
+# npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest
+```
+
+```
+# 视频制作系统（非单条 Skill：整仓 pipeline + 700+ 技能/知识文件）
+# 开源 agentic 视频制片：调研/脚本/素材/剪辑/合成；12 条流水线、100+ 工具
+# 环境：Python 3.10+、FFmpeg、Node.js 18+；用 Claude Code / Cursor / Codex 等打开仓库后自然语言下单
+git clone https://github.com/calesthio/OpenMontage.git
+cd OpenMontage && make setup
 ```
 
 ### 推荐 Top10：面向前端 / 产品 / UI 的 Agent Skills
@@ -155,6 +178,11 @@ npx skills add https://github.com/isjiamu/gzh-design-skill
 | 8 | `canvas-design` | Anthropic | 画布式视觉探索、展示页、概念设计 | [源码](https://github.com/anthropics/skills/tree/main/skills/canvas-design) |
 | 9 | `brand-guidelines` | Anthropic | 官网 / 营销 / 设计系统 / 品牌一致性 | [源码](https://github.com/anthropics/skills/tree/main/skills/brand-guidelines) |
 | 10 | `vercel-deploy-claimable` | Vercel | 非设计类；快速部署预览、缩短反馈闭环 | [源码](https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-deploy-claimable) |
+
+{{% hint info %}}
+**社区增强 · 前端审美**  
+官方 `frontend-design` / `frontend-skill` 偏「做出好看的页面」；若更要压住 AI 通用 slop（千篇一律的紫渐变、卡片堆砌），可看高星社区包 [taste-skill](https://github.com/Leonxlnx/taste-skill)（约 78.7k stars）：默认 `design-taste-frontend`（v2），另有 redesign / soft / minimalist / brutalist、图生参考板与 image-to-code 等变体（`npx skills add https://github.com/Leonxlnx/taste-skill`）。
+{{% /hint %}}
 
 ### 推荐 Top10：面向通用办公场景的 Agent Skills
 这 10 个精选认证 Skills（Anthropic + OpenAI）覆盖了办公高频链路：Office 四件套、PDF 处理、会议转录、协作写作、知识沉淀、截图留痕与演示美化。
@@ -179,16 +207,25 @@ npx skills add https://github.com/isjiamu/gzh-design-skill
 | 9 | `screenshot` | OpenAI | 截图留痕、问题反馈、操作说明、培训材料 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/screenshot) |
 | 10 | `theme-factory` | Anthropic | 统一文档/演示的视觉主题和正式感 | [源码](https://github.com/anthropics/skills/tree/main/skills/theme-factory) |
 
+{{% hint info %}}
+**社区增强 · PPT**  
+官方 `pptx` 偏「按模板读写/精修」；若更需要「先快速出完整 deck，再在浏览器里改字换图调版式，最后导出可编辑 PPTX」，可看社区热门的 [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)（12 主题 / 1020 版式，`npx dashi-ppt-skill@latest`）。
+{{% /hint %}}
+
 
 **怎么选？**
 
 | 场景 | 推荐 Skills |
 |------|-------------|
-| 偏品牌官网 / 营销页 | `frontend-skill`、`frontend-design`、`brand-guidelines` |
-| 偏产品 UI / 设计稿还原 | `figma-implement-design`、`react-best-practices`、`web-design-guidelines` |
+| 偏品牌官网 / 营销页 | `frontend-skill`、`frontend-design`、`brand-guidelines`；要压 slop 加 `design-taste-frontend`（[taste-skill](https://github.com/Leonxlnx/taste-skill)） |
+| 偏产品 UI / 设计稿还原 | `figma-implement-design`、`react-best-practices`、`web-design-guidelines`；存量改版用 `redesign-existing-projects`（taste-skill） |
 | 偏交互验证 / 可用性 | `playwright`、`webapp-testing` |
 | 偏创意探索 | `canvas-design` |
+| 反 slop / 高端视觉方向 | `design-taste-frontend`、`high-end-visual-design`、`minimalist-ui`、`industrial-brutalist-ui`（均来自 [taste-skill](https://github.com/Leonxlnx/taste-skill)） |
 | 公众号排版 / 微信长文 | `gzh-design`（[gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)） |
+| 职场 PPT / 汇报路演 | `dashi-ppt`（[dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)）：浏览器里改字换图调版式，再导出可编辑 PPTX；官方 `pptx` 更适合按模板精修 |
+| 口播信息动画 / 短视频录屏 | `jacky-motion`（[jacky-motion](https://github.com/Jackywxsz/jacky-motion)）：口播 + SRT 驱动 16:9 自动播放 HTML，带 B-roll 录屏窗；需先有校对过的 SRT |
+| Agent 全流程出片 / 纪录片蒙太奇 | [OpenMontage](https://github.com/calesthio/OpenMontage)：把编码助手变成制片工作室（约 49k stars）；真实素材剪辑或 AI 成片，非「几张静图 Ken Burns」；`git clone` + `make setup` |
 
 更多可以查看开发提示词：[https://skillsmp.com/zh/categories/development](https://skillsmp.com/zh/categories/development)
 
@@ -257,11 +294,15 @@ npx skills@latest add mattpocock/skills
   - [Skills.sh](https://skills.sh/)：命令行技能管理工具，一条命令即可安装 / 更新 Skills。
   - [MCPMarket Skills Leaderboard](https://mcpmarket.com/zh/tools/skills/leaderboard)：技能榜单与工具导航（第三方）。
   - [Impeccable](https://impeccable.style/)：对 `frontend-design` 的增强版与设计指令集（含 /polish、/audit、/distill 等），并提供一键安装方式。
+  - [taste-skill](https://github.com/Leonxlnx/taste-skill)：Anti-slop 前端 Agent Skills（约 78.7k stars）；默认 `design-taste-frontend`（v2）调版式/字体/动效/密度，另含 redesign、soft/minimalist/brutalist、图生参考板与 image-to-code；框架无关，适配 Codex / Cursor / Claude Code（`npx skills add https://github.com/Leonxlnx/taste-skill`）。
   - [Vercel Skills](https://github.com/vercel-labs/skills)：Vercel 团队维护的示例技能仓库，偏 Web / 全栈场景。
   - [Matt Pocock Skills](https://github.com/mattpocock/skills)：面向真实工程交付的技能集合，强调需求澄清、TDD、诊断、Issue 拆分与架构治理。
   - [MiniMax Skills](https://github.com/MiniMax-AI/skills)：MiniMax 官方维护的开发技能库（Beta），面向 Claude Code、Cursor、Codex、OpenCode 等工具。
   - [baoyu-skills](https://github.com/jimliu/baoyu-skills)：根据文本内容自动生成高质量配图。
   - [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)：把 Markdown 一键排成可直接粘贴进公众号编辑器的 HTML；6 套精选主题（摸鱼绿、红白、石墨极简等）+ 主题生成器 + 双关卡质量校验。
+  - [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)：面向职场演示的 PPT Skill（约 5.7k stars）；12 套主题、1020 版式，生成带控制台的网页 PPT，可在浏览器里改字/换图/调布局，一键导出 HTML / PDF / 可编辑 PPTX；支持 Claude Code、Codex、Cursor 等本地 Agent（`npx dashi-ppt-skill@latest`）。
+  - [jacky-motion](https://github.com/Jackywxsz/jacky-motion)：中文口播 + SRT → 可直接录屏的 16:9 自动播放信息动画 HTML（约 221 stars）；6 套重点视觉风格、SRT 主时钟与 B-roll 区间，含审稿/分镜/锁风格/时间轴确认门；输出单文件 HTML，不直接出 MP4、不做 TTS（`npx skills add https://github.com/Jackywxsz/jacky-motion`）。
+  - [OpenMontage](https://github.com/calesthio/OpenMontage)：开源 agentic 视频制片系统（约 49k stars）；12 条流水线、100+ 工具、700+ Agent 技能/制片知识文件；支持免费真实素材蒙太奇与云端生成成片，含 Backlot 实况分镜与质量门禁；`git clone` + `make setup` 后用 Claude Code / Cursor / Codex 等自然语言驱动（AGPL-3.0）。
   - [ClawHub Skills](https://clawhub.ai/skills)：ClawHub 平台的技能市场与发现页。
   - [Skill Creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：Anthropic 官方提供的技能模板与创建向导。
 - **合集网站：快速使用**

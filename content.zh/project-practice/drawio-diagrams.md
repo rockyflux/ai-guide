@@ -3,6 +3,7 @@ title: draw.io 快速画流程图
 weight: 35
 bookToc: false
 noTocArea: true
+bookHidden: true
 ---
 
 ## 用 draw.io 快速画三类常用图

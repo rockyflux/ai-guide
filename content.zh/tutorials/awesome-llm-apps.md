@@ -1,7 +1,7 @@
 ---
 title: 精选 LLM 应用集
-weight: 1
-bookHidden: true
+weight: 3
+bookHidden: false
 ---
 
 

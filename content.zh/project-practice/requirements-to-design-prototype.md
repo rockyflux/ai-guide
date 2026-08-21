@@ -1,8 +1,9 @@
 ---
 title: 从需求到设计原型
 date: 2026-03-08
-weight: 70
+weight: 30
 bookToc: true
+bookHidden: false
 ---
 ## 从需求到设计原型：AI 辅助开发全链路指南
 

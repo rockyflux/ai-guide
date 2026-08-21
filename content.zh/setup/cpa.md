@@ -1,9 +1,11 @@
 ---
+aliases:
+  - /ai-programming/cpa/
 title: CLI 代理 API（CPA）
-weight: 18
+weight: 24
 bookToc: true
 noTocArea: false
-bookHidden: true
+bookHidden: false
 ---
 
 ## 简介

@@ -1,9 +1,11 @@
 ---
+aliases:
+  - /large-models/models-2026/
 title: 2026年主流大模型盘点
-weight: 20
+weight: 11
 bookToc: false
 noTocArea: true
-bookHidden: true
+bookHidden: false
 ---
 
 ## 盘点2026主流大模型相关信息

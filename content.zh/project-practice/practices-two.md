@@ -1,11 +1,9 @@
 ---
 title: 新手端到端项目实战路径
-weight: 20
+weight: 10
 bookToc: false
 noTocArea: true
-bookCollapseSection: false
-bookFlatSection: true
-bookHidden: true
+bookHidden: false
 ---
 
 ## 新手端到端项目实战路径
@@ -21,7 +19,7 @@ bookHidden: true
 ### 路线 A｜今天就要开工
 
 - **先把环境跑起来**：只看这篇  
-  - [开发环境准备]({{< relref "ai-programming/dev-start" >}})
+  - [开发环境准备]({{< relref "setup/dev-start" >}})
 - **然后做一次小练手（需求 → 任务 → 开发）**  
   - [项目实践：从一个具体案例开始]({{< relref "project-practice/practices-one" >}})
 
@@ -48,9 +46,9 @@ bookHidden: true
   - [AI 编程模型选型]({{< relref "ai-programming/models" >}})
   - [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}})
 - **环境增强/接入更多端**：你已经能跑通，但想更省事、更统一时再看  
-  - [AI 编程环境配置与增强工具集]({{< relref "ai-programming/env-and-tools" >}})
-  - [CC-Switch 可视化配置]({{< relref "ai-programming/cc-switch" >}})
-  - [CLI 代理 API（CPA）]({{< relref "ai-programming/cpa" >}})
+  - [AI 编程环境配置与增强工具集]({{< relref "setup/env-and-tools" >}})
+  - [CC-Switch 可视化配置]({{< relref "setup/cc-switch" >}})
+  - [CLI 代理 API（CPA）]({{< relref "setup/cpa" >}})
 
 最终目标很简单：**先完成一次“从想法到交付”的闭环**，再谈体系化与进阶。
 
