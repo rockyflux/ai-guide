@@ -20,7 +20,7 @@ bookHidden: true
 ### 1. 选模型和工具
 - [AI 编程模型选型]({{< relref "ai-programming/models" >}}) — 🔥能力、价格与适用场景
 - [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) — 国内/海外 Coding Plan 与中转套餐对照
-- [AI 产品推荐]({{< relref "ai-programming/ai-product" >}}) — 桌面 Agent、API 客户端、翻译等实用产品
+- [AI 产品推荐]({{< relref "ai-products/ai-product" >}}) — 桌面 Agent、API 客户端、翻译等实用产品
 - [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}}) — 免费模型、Token 优化与多端复用
 - [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}}) — IDE/插件/Agent 工具对比（Aider、Cursor、Codex 等）
 - [AI CLI 工具横评]({{< relref "ai-programming/code-cli" >}}) — OpenCode、Claude Code、Codex CLI、Gemini CLI 等主流 CLI 横评
@@ -54,4 +54,4 @@ bookHidden: true
 - [Kiro 实战]({{< relref "project-practice/kiro-practice" >}})
 - [学习与资源]({{< relref "tutorials/_index" >}}) — 系统学习、社区与 Awesome 合集
 - [上下文设计哲学]({{< relref "large-models/context-scarcity-rag-memory-skills" >}})
-- [Awesome OpenClaw 使用案例]({{< relref "tutorials/awesome-openclaw" >}})
+- [Awesome OpenClaw 使用案例]({{< relref "ai-products/awesome-openclaw" >}})

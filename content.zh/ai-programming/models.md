@@ -33,7 +33,7 @@ bookHidden: false
 
 ### 5. 产品与客户端
 
-- [AI 产品推荐]({{< relref "ai-programming/ai-product" >}}) — 桌面 Agent、API 客户端、翻译等实用产品
+- [AI 产品推荐]({{< relref "ai-products/ai-product" >}}) — 桌面 Agent、API 客户端、翻译等实用产品
 
 
 > 实践经验参考：有预算可优先考虑 Claude Opus / Codex，预算有限可优先评估国产 Coding Plan，零预算可以从 CPA 方案入手。

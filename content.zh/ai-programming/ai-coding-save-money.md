@@ -9,7 +9,9 @@ bookHidden: false
 
 ## 一、**AI 编程省钱之道**
 
-AI编程省钱之道的核心在于**最大化利用免费或低成本的AI模型和工具，并优化AI交互方式，以节省令牌消耗和提高效率**。
+> **2026 年更新**：主流工具已从「固定请求次数」转向「订阅 + 用量/积分」混合计费；免费托管推理额度普遍收紧。订阅选型见 [AI Coding Plan]({{< relref "ai-programming/coding-plan" >}})；中转与 API 渠道见 [什么是 API 中转站]({{< relref "ai-programming/api-relay-station" >}})。
+
+AI 编程省钱之道的核心在于**最大化利用免费或低成本的 AI 模型和工具，并优化 AI 交互方式，以节省令牌消耗和提高效率**。
 
 ### 1、免费 AI 模型自助餐 —— 网页AI聊天界面
 
@@ -17,37 +19,35 @@ AI编程省钱之道的核心在于**最大化利用免费或低成本的AI模�
 
 首先，打开浏览器，加载多个标签页，分别指向强大AI模型的免费版本，以便获得多种视角和能力。常用的免费AI模型和平台包括：
 
-• **[z.ai](https://chat.z.ai/) **：网页版免费使用**GLM 4.5**，性能堪比Claude 4，主打编程和智能化。
+• **[z.ai](https://chat.z.ai/)**：网页版可免费使用 **GLM-5 / GLM-4.7**，编程与 Agent 能力突出，适合规划与代码讨论。
 
-• **[Kimi.com](https://kimi.com/)** ：**Kimi K2**，类似Claude或Opus的模型，网页版免费使用。和GLM4.5方向类似。
+• **[Kimi.com](https://kimi.com/)**：**Kimi K2.5** 长上下文与文档理解强，网页版有免费额度，适合需求梳理与大文件分析。
 
-• **[chat.qwen.ai](https://chat.qwen.ai/) 上的 Qwen3 Coder** 及其他新模型。
+• **[chat.qwen.ai](https://chat.qwen.ai/)**：**Qwen3.5 Coder / Qwen3 Coder** 等编码向模型，网页免费使用，适合代码生成与调试。
 
-• **[OpenAI Playground](https://platform.openai.com/chat/edit?models=o3)**：通过设置账户数据共享（允许OpenAI使用数据进行模型训练），可获得大量免费令牌。
+• **[Google AI Studio](https://aistudio.google.com/)**：**Gemini 3 / 2.5 Pro / Flash** 通常有较高免费额度，适合规划、调试与多模态任务；[Build apps with Gemini](https://aistudio.google.com/apps) 适合 React/TypeScript 项目原型。
 
-• **[Google AI Studio](https://ai.dev)**：Gemini 2.5 Pro/Flash通常免费且不限使用。Gemini 2.5 Pro在调试、规划和解决多种问题方面表现出色。里面有个 [Build apps with Gemini](https://aistudio.google.com/apps) 主要使用LLM擅长的React和TypeScript，用来进行项目初始化挺不错。
+• **[OpenAI Playground](https://platform.openai.com/playground)**：**GPT-5.2 / GPT-5 mini** 等，部分额度与数据共享政策相关，适合快速验证 Prompt。
 
-• **Poe.com**：提供高级模型如Claude 4或GPT-5的免费每日积分。
+• **Poe.com**：每日免费积分，可试用 Claude Opus 4.6、GPT-5.2 等高级模型。
 
-• **OpenRouter**：提供一些免费模型，也支持付费使用。
+• **OpenRouter**：提供部分免费模型（如 DeepSeek、Llama 等），也支持按量付费接入多家模型。
 
-• **ChatGPT**：免费版本少量GPT-5可用。
+• **ChatGPT**：免费档可用 **GPT-5 mini** 等轻量模型，高级模型有额度限制。
 
-• **Microsoft Copilot** ：免费的GPT-5模型。
+• **Microsoft Copilot**：集成 **GPT-5** 系列，免费网页版适合日常问答与轻量编程。
 
-• **GitHub Copilot** ：免费的GPT-4.1、4o模型，少量额度高级模型如GPT-5、Claude 3.7/4。
+• **GitHub Copilot Free**：每月 **2,000 次补全** + 有限 Chat/Agent 用量，模型含 **Haiku 4.5、GPT-5 mini** 等（[官方套餐](https://github.com/features/copilot/plans)）。
 
-• **Perplexity AI**：特别擅长研究密集型问题。
+• **Perplexity AI**：研究型问答，适合技术调研与资料检索。
 
-• **Deepseek**：v3和r1版本在其网页界面免费，但需注意上下文限制。Deepseek R1 0528是具有增强推理能力的超智能模型。
+• **DeepSeek**：网页端可免费使用 **DeepSeek V3.5 / R1**，推理能力强，需注意上下文与速率限制。
 
-• **Grok.com**：少量免费grok4且通常无审查限制，适合通用使用、深度研究和图像编辑。
+• **Grok.com**：少量免费 **Grok 4** 额度，适合实时信息与通用对话。
 
-• **Phind**：免费，尝试展示流程图/图表可视化。
+• **lmarena.ai**：LLM 竞技场，可免费对比 **GPT-5.2、Claude Opus 4.6、Sonnet 4.6** 等模型输出。
 
-• **lmarena.ai**：LLM竞技场，提供免费访问GPT-5、Claude Opus 4、Sonnet 4等。
-
-• **Claude.ai**：免费但有时使用受限。
+• **Claude.ai**：免费档可用 Haiku 等模型，高级模型与 Claude Code 需 Pro（$20/月）及以上。
 
 
 
@@ -61,23 +61,24 @@ AI编程省钱之道的核心在于**最大化利用免费或低成本的AI模�
 
 ---
 
-* **超长上下文AI模型** (2025年8月)：
+* **超长上下文 AI 模型**（2026 年 3 月）：
 
-| 模型 (Model)       | 开发者 (Developer)     | 最大上下文窗口 (Max Context Window)  | 特点（Features）                                   |
-| ------------------ | ---------------------- | ------------------------------------ | -------------------------------------------------- |
-| **Gemini 2.5 Pro** | Google                 | 100万 (1M) Tokens                    | 上下文窗口最大，擅长复杂调试和架构规划，综合能力强 |
-| **Qwen3**         | Alibaba (阿里云)       | 25.6万 (原生 256k) / 100万 (扩展 1M) | 强大、可靠且成本效益高，编码能力出色               |
-| **GPT-5**          | OpenAI                 | 40万 (400k) Tokens                   | OAI最新模型，综合能力强，性价比高                  |
-| **Claude 4**       | Anthropic              | 20万 (200k) Tokens                   | 编程和智能化能力最强，价格贵                       |
-| **Kimi k2**        | Moonshot AI (月之暗面) | 20万 (200k) Tokens                   | 最接近Claude，编码能力强                           |
+| 模型 (Model)              | 开发者 (Developer)     | 最大上下文窗口 (Max Context Window)  | 特点（Features）                                   |
+| ------------------------- | ---------------------- | ------------------------------------ | -------------------------------------------------- |
+| **Gemini 3 Pro**          | Google                 | 100 万 (1M) Tokens                   | 上下文最大，多模态与架构规划能力强，AI Studio 有免费额度 |
+| **Qwen3.5 / Qwen3**       | Alibaba (阿里云)       | 25.6 万 (256k) / 100 万 (扩展 1M)    | 编码性价比高，国内 Coding Plan 接入成本低          |
+| **GPT-5.2**               | OpenAI                 | 40 万 (400k) Tokens                  | 综合能力强，Codex 生态集成好                       |
+| **Claude Opus/Sonnet 4.6** | Anthropic              | 20 万 (200k) Tokens                  | Agent 与代码推理顶尖，订阅/API 价格偏高            |
+| **Kimi K2.5**             | Moonshot AI (月之暗面) | 20 万+ (200k+) Tokens                | 长文档与 Agent 任务表现好，国内访问稳定            |
+| **GLM-5**                 | Zhipu AI (智谱)        | 约 20 万 (200k) Tokens                 | 国产开源标杆，GLM Coding Plan 月费 49 元起        |
 
-* **AI编程代理工具**：
+* **AI 编程代理工具**：
 
-​	IDE: Cursor、Trae、Windsurf、Zed、Kiro  
+​	IDE：Cursor、Trae、Windsurf、Zed、Kiro  
 
-​	插件: Cline( Roo Code, Kilo Code )、Augment、Copilot 
+​	插件：Cline（Roo Code、Kilo Code）、Augment、GitHub Copilot  
 
-​	CLI: Claude Code、Gemini CLI、Qwen Code
+​	CLI：Claude Code、Codex CLI、Gemini CLI、Qwen Code、OpenCode
 
 基于GUI的IDE（如VSCode），即使是AI原生的，在自动化和可脚本化方面也存在固有限制。而命令行是自动化、脚本编写和复杂工具链的原生环境。通过创建CLI代理，拥有最大的可脚本化性和与基于shell的工作流的集成，AI公司为开发者提供了一个可以被直接集成到这些自动化工作流中的“强大工具”。这些工具的核心功能围绕着代理式推理、工具使用和复杂的多文件编辑。这些工具的架构通常也为其他产品奠定了基础。
 
@@ -85,17 +86,19 @@ AI编程省钱之道的核心在于**最大化利用免费或低成本的AI模�
 
 | 类别 (Category)             | 工具名称 (Tool)               | 主要特点                                                     |
 | --------------------------- | ----------------------------- | ------------------------------------------------------------ |
-| **AI 原生 IDE**             | `Cursor`                      | AI优先的VS Code分支，可以帮助代码生成、编辑和调试。深度集成AI，擅长代码库问答、自动重构和“从零生成”代码块。 |
+| **AI 原生 IDE**             | `Cursor`                      | AI 优先的 VS Code 分支；Pro $20/月含一定用量，Auto 模式按量计费；Pro+ $60、Ultra $200。 |
 |                             | `Zed`                         | 由 `Atom` 联合创始人打造的高性能、多玩家协作的开源代码编辑器，用Rust编写，内置了AI功能，性能优秀、界面整洁。在macOS/Linux系统推出，Windows可自己编译。 |
 |                             | `Kiro`                        | AWS出品的一款文档优先的AI代理IDE，基于“规范驱动开发”（Spec-Driven Development, SDD），AI根据需求文档自动规划并执行编码任务，适合需要前期设计的复杂项目。 |
 |                             | `Windsurf`                    | Windsurf是一个“代理式IDE”，旨在通过在人类和其AI代理“Cascade”之间创建无缝的协作体验，让开发者保持在“心流状态” 。 |
-|                             | `Trae`                        | SOLO模式将AI定位为一个自主的“上下文工程师”，能够“直接交付”生产就绪的代码。 |
-| **IDE 插件**(Agent Plugins) | `GitHub Copilot`              | 由GitHub和OpenAI开发，提供强大的代码自动补全、函数生成和解释功能。集成Agent模式和各种工具调用功能。 |
+|                             | `Trae`                        | 字节跳动出品，免费档可访问高级模型；Pro 约 $10/月，适合国内开发者低成本试用。 |
+| **IDE 插件**(Agent Plugins) | `GitHub Copilot`              | 2026 年改为 **订阅 + GitHub AI Credits** 按量计费；Pro $10/月含 $15 积分，补全无限，Agent/Chat 消耗积分。 |
 |                             | `Augment`                     | 专注于代码搜索和上下文感知的AI插件，提供超强的仓库检索，能根据你的代码库提供精准提示和自动化编码。 |
 |                             | `Kilo Code( Cline、Roo Code )` | 拥有Cline的易用性和Roo先进的上下文处理能力 ，通过简单界面来提供多模式功能（架构师、编码员、调试员），可自定义代理模式。编程任务高度自动化，支持多种模型自定义和MCP工具。内置提示词将一个命令拆分为具体小任务，高效进行编码。 |
-| **命令行工具**(CLI)         | `Gemini CLI`                  | Google官方提供的开源AI编码命令行工具，允许开发者直接与Gemini模型交互，内置各种工具，通过高级代码理解、自动化任务和智能辅助来增强您的开发工作流。 |
-|                             | `Claude Code`                 | Anthropic的Claude模型CLI工具，能够深度理解代码，高度智能化，可以直接编辑文件、运行命令和创建提交。通过简单的自然语言请求高度自动化地处理重复或复杂的任务。支持子代理并行，可以专注于单一任务，提高效率。 |
-|                             | `Qwen Code`                   | 阿里巴巴通义千问系列模型的AI编码命令行工具，为开发者提供强大的代码生成能力。改编自 Gemini CLI，并针对 Qwen3-Coder 模型进行了专门优化。可添加自定义OpenAI格式的模型API。 |
+| **命令行工具**(CLI)         | `Codex CLI`                   | OpenAI 官方终端 Agent，与 ChatGPT Plus/Pro 订阅共享额度，适合 OpenAI 生态重度用户。 |
+|                             | `Gemini CLI`                  | Google 开源 CLI，OAuth 登录有免费额度（约 1,000 次/天、60 次/分钟，以官方为准）。 |
+|                             | `Claude Code`                 | Anthropic 终端 Agent，包含在 Claude Pro（$20/月）及以上；Max $100/$200 适合高频编码。 |
+|                             | `Qwen Code`                   | 开源 CLI，针对 Qwen3-Coder 优化；托管 OAuth 免费推理已于 2026 年 4 月结束，需自备 API Key 或国内 Coding Plan。 |
+|                             | `OpenCode`                    | 开源多模型 CLI，官方 [OpenCode Go](https://opencode.ai/zh/go) 首月 $5、后续 $10/月，支持任意代理接入。 |
 
 
 
@@ -155,21 +158,21 @@ AI 的能力上限受限于你提问的水平。模糊的指令导致猜测，�
 
 1、**规划确定开发需求和文档**
 
-* 利用智能/免费的网页模型进行**规划和头脑风暴**（如 Gemini 2.5, GPT-5, Claude 3.7/4 ），确定方法、规划步骤、识别库等。
+* 利用智能/免费的网页模型进行**规划和头脑风暴**（如 Gemini 3、GPT-5.2、Claude Opus 4.6），确定方法、规划步骤、识别库等。
 
-* 生成详细的**代理提示词**，让智能模型为 AI 编程代理（如 Cline）编写任务列表，并通过其他 AI 进一步优化。
+* 生成详细的**代理提示词**，让智能模型为 AI 编程代理（如 Cline、Cursor）编写任务列表，并通过其他 AI 进一步优化。
 
-* 使用便宜稳定的主力模型（如 GLM-4.5、Kimi k2、qwen3-coder、GPT-5等等）在代理工具中执行实际的代码编写和文件编辑。
+* 使用性价比高的主力模型（如 **GLM-5、Kimi K2.5、Qwen3.5 Coder、GPT-5 mini**）在代理工具中执行实际的代码编写和文件编辑。
 
-> Claude 4 是现在Coding和Agentic能力最优秀的模型，搭配上CC让效果变得最好，但是模型消耗大价格贵。Gemini 2.5 Pro的各项综合能力最强，也可用于Vibe Coding，而且有免费的API额度，但是token消耗大。GPT-5 模型整体表现不错，编码和智能体能力加强，价格也不高，上下文窗口大。
+> **Claude Opus/Sonnet 4.6** 仍是 Agent 与代码推理的顶尖选择，搭配 Claude Code 体验最好，但订阅与 Token 成本最高。**Gemini 3 Pro** 综合能力均衡，AI Studio 有免费额度，适合规划与调试。**GPT-5.2** 编码与 Agent 能力均衡，Codex 生态集成好。**国内 Coding Plan**（阿里云百炼、腾讯云等 Lite 档 7.9 元/月起）是多模型低成本接入的首选路径。
 
-**2、问题解决与调试**：使用GPT-5、GLM-4.5 (类似Claude 4)、Claude 4 (每日免费额度)、Gemini 2.5 Pro。
+**2、问题解决与调试**：GPT-5.2、GLM-5、Claude Sonnet 4.6（Copilot/网页免费额度）、Gemini 3 Pro。
 
-**3、实际编码执行**：使用Claude Sonnet 4，备选Gemini 2.5 Pro 、Claude 3.7，或Qwen3 Coder、GLM 4.5、Kimi K2。
+**3、实际编码执行**：Claude Sonnet 4.6（预算充足）、Gemini 3 Flash、Qwen3.5 Coder、GLM-5、Kimi K2.5。
 
-**4、测试分析修复代码：**使用分析和执行能力较强的GPT-5系列模型。
+**4、测试分析修复代码**：GPT-5.2、Gemini 3 Pro、GLM-5。
 
-**5、代码审查和发布**：GitHub Copilot 是GitHub官方的AI code review工具提供免费的使用额度，[CodeRabbit](https://www.coderabbit.ai/) 免费版每天有少量审核次数。
+**5、代码审查和发布**：GitHub Copilot 提供 Agent 代码审查（消耗 AI Credits）；[CodeRabbit](https://www.coderabbit.ai/) 免费版每天有少量审核次数。
 
 
 
@@ -194,7 +197,7 @@ npm run install:bmad
 
 这里贴一下用户文档指南，这是一个标准的全新项目流程：**[BMAd Code 用户指南](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/user-guide.md)**，如果您打算在现有项目（一个已经存在的项目）中使用 BMad 方法，请查阅 **[在现有项目中工作](./working-in-the-brownfield.md)**。
 
-**全新项目规划最好先在Gemini 网页中进行（免费）不会在IDE中消耗大量token。**
+**全新项目规划最好先在 Gemini 网页或 AI Studio 中进行（免费），不会在 IDE 中消耗大量 Token。**
 
 这里讲一下全新项目规划的流程：
 
@@ -203,7 +206,7 @@ npm run install:bmad
 **a.在AI的Web界面生成开发需求文档和技术文档**
 
 ```markdown
-如果您想在 Web 上使用 Claude (Sonnet 4 或 Opus)、Gemini Gem (2.5 Pro) 或自定义 GPT 进行规划：
+如果您想在 Web 上使用 Claude（Sonnet 4.6 或 Opus 4.6）、Gemini Gem（Gemini 3 Pro）或自定义 GPT 进行规划：
 
 1.  导航至 `dist/teams/`
 2.  复制 `team-fullstack.txt` 
@@ -283,27 +286,31 @@ npm run install:bmad
 
 ---
 
-***AI编程的成本节省技巧：***
+***AI 编程的成本节省技巧（2026）：***
 
-**Gemini CLI** ：每天免费额度，每分钟 60 次请求和每天 1,000 次请求。
+**国内 Coding Plan**：阿里云百炼、腾讯云、火山引擎等 **Lite 档 7.9–9.9 元/月**，多模型聚合、IDE 兼容好，是个人开发者最低成本路径之一。详见 [AI Coding Plan]({{< relref "ai-programming/coding-plan" >}})。
 
-**Qwen Code**：每天可获得 2,000 次免费的 Qwen Code 运行次数。
+**Gemini CLI**：OAuth 登录仍有免费额度（约 1,000 次/天、60 次/分钟，以 [官方文档](https://github.com/google-gemini/gemini-cli) 为准）。
 
-**[Claude Code Router](https://github.com/musistudio/claude-code-router)**：自定义模型来使用 Claude Code 的功能。
+**Qwen Code**：CLI 本身开源免费，但托管 OAuth 免费推理已于 **2026 年 4 月**结束；可接国内 Coding Plan 或自备 API Key。
 
-**OpenAI Playground** 和 **Google AI Studio**：免费的高级模型额度。
+**[Claude Code Router](https://github.com/musistudio/claude-code-router)**：将 Claude Code 路由到 GLM-5、Kimi K2.5 等更便宜的 OpenAI 兼容 API。
 
-**GitHub Copilot订阅**：每月10美元的GitHub Copilot订阅，获得Claude模型的限速访问权限，性价比极高。**[GitHub Education](https://github.com/education)学生权限免费获得订阅**。
+**Google AI Studio**：Gemini 3 / 2.5 系列仍有较高免费 API 额度，适合规划与非生产验证。
 
-**Cursor Pro**：Cursor学生用户可免费领取一年[Cursor Pro](https://cursor.com/students)权益。
+**GitHub Copilot**：Pro **$10/月**含 **$15 AI Credits** + 无限补全，性价比仍高；Pro+ $39（$70 积分）、Max $100（$200 积分）适合重度 Agent 用户。[GitHub Education](https://github.com/education) 学生可免费获得 Copilot Pro。
 
-**Trae.ai** ：免费的VS Code兼容IDE，提供免费AI使用，包括Claude 4、Claude 3.7、Claude 3.5和GPT 4.1，无需订阅。但有时因用户过多可能较慢。
+**Cursor**：Pro **$20/月**含一定模型用量；**Auto 模式已不再普遍无限**，超额按量计费。Pro+ $60、Ultra $200。学生可领 [一年 Cursor Pro](https://cursor.com/students)。
 
-**OpenRouter**：有免费的模型API，提供按需付费使用各大模型的API。
+**Trae**：仍有免费档（含高级模型试用），Pro 约 **$10/月**，Lite **$3/月**，适合预算有限的国内开发者。
 
-各种API转发站，第三方站：免费的开源大模型API调用。
+**Claude Code**：包含在 Claude Pro（**$20/月**）；重度编码建议 Max 5x（$100）或 Max 20x（$200）。
 
-各种AI Agent的新用户免费free trial 7/14天。
+**OpenCode Go**：官方低成本订阅，首月 **$5**、后续 **$10/月**，支持任意代理。
+
+**OpenRouter / 中转 API**：部分模型有免费档；国内中转站见 [coding-plan 第三方渠道]({{< relref "ai-programming/coding-plan" >}}) 与 [API 中转站]({{< relref "ai-programming/api-relay-station" >}})。
+
+**新用户试用**：各工具常有 7/14 天 Pro 试用，可轮换体验后选定主力工具。
 
 
 
@@ -349,7 +356,9 @@ npm run install:bmad
 
 ## 二、独立开发服务部署及低成本的“穷鬼方案”
 
-本方案主要面向**盈利或准备盈利的Web端全栈开发项目**，目标是控制成本，快速迭代和验证产品。
+> **2026 年更新**：Vercel Pro 改为「$20 席位 + 用量积分」混合计费；Supabase 按组织计费且 Pro 含 $10 计算积分；Neon 免费档为 100 CU-hours/项目；Clerk 免费档升至 **50,000 MRU/应用**。以下额度以各平台官方页面为准，部署前请再次核对。
+
+本方案主要面向**盈利或准备盈利的 Web 端全栈开发项目**，目标是控制成本，快速迭代和验证产品。
 
 ### 1、最新技术栈选择
 
@@ -420,77 +429,77 @@ Next.js 在独立开发中被推荐为首选的全栈开发框架，主要基于
 
    
 
-2. **更简单的小型盈利组合（小型商业项目）**：
+2. **小型盈利组合（小型商业项目）**：
 
-   部署：Vercel  Pro  (**$20/月**)
+   部署：Vercel Pro（**$20/月**席位 + 用量积分）
 
-   认证：Supabase Pro  (**$25/月**)
-
-   数据库：Supabase Pro
+   数据库 + 认证：Supabase Pro（**$25/月**，含 $10 计算积分，覆盖一个 Micro 实例）
 
    存储：Cloudflare R2
 
    邮件：Resend
 
-   支付：Lemon Squeezy （ **5%** + **$0.50** / 笔）
+   支付：Lemon Squeezy（**5%** + **$0.50**/笔）
 
-   **预估月成本:** **$45 (固定) + 支付费用**
+   **预估月成本：$45（固定）+ 支付费用 + 超额用量**
 
-   
+3. **稳定运营组合（小型商业项目）**
 
-3. **稳定运营组合（小型商业项目）** 
+   部署：Vercel Pro（**$20/月**）
 
-   部署：Vercel Pro (**$20/月**)
+   数据库：Neon Launch（按量付费，无月最低消费）或 Supabase Pro
 
-   数据库：Neon  
-
-   认证：Clerk Pro (**$25/月**)
+   认证：Clerk Pro（**$25/月**，年付 **$20/月**）
 
    存储：Cloudflare R2
 
-   邮件：Resend Pro (**$20/月**)
+   邮件：Resend Pro（**$20/月**，50,000 封）
 
-   支付：Stripe（**4.4% + $0.30**/笔 ）或 Creem （**3.9% + $0.40**/笔）
+   支付：Stripe（**2.9% + $0.30**/笔，美国标准费率）或 Creem（**3.9% + $0.40**/笔）
 
-   **预估月成本：$65-150 +  支付费用**  
+   **预估月成本：$65–150 + 支付费用 + 超额用量**
 
-具体平台免费额度示例：
+具体平台免费额度（2026 年 3 月，以官方为准）：
 
-* **Vercel (部署)**：100GB带宽/月，4 CPU-hrs/月等，但**免费额度不支持商业项目**。
+* **Vercel Hobby（部署）**：100 GB 带宽/月、100 万次函数调用、4 CPU-hrs 活跃计算；**仅限非商业项目**，商业用途需 Pro。
 
-* **Railway (部署)**：每月$5信用额度（试用期），按资源使用付费，无永久免费计划。
+* **Vercel Pro**：**$20/月**席位 + **$20 用量积分**（可用于超额带宽、函数等）；含 1 TB 带宽等更高配额，超出按量计费（[官方定价](https://vercel.com/pricing)）。
 
-* **Fly.io (部署)**：月账单低于$5免收费用（非官方承诺）。
+* **Railway（部署）**：新用户 **30 天试用 $5 积分**（无需信用卡）；之后 Free 档约 **$1/月**积分，Hobby **$5/月**含 $5 用量，按 vCPU/RAM 计费。
 
-* **Supabase (数据库)**：500MB存储，5GB带宽，最多2个项目。
+* **Fly.io（部署）**：无永久免费计划，按资源计费；小规模月账单可能较低，但无官方免费承诺。
 
-* **Neon (数据库)**：0.5 GiB存储，10个项目，190小时计算时间/月。
+* **Supabase Free（数据库 + Auth + Storage）**：500 MB 数据库、**50,000 MAU**、5 GB 出口流量、1 GB 文件存储；最多 **2 个活跃项目**；**闲置 1 周自动暂停**（[官方定价](https://supabase.com/pricing)）。
 
-*  **Upstash (缓存)**：10,000请求/天，256MB内存。
+* **Supabase Pro**：**$25/月**（组织级），含 **$10 计算积分**（覆盖一个 Micro 实例）；8 GB 磁盘、250 GB 出口、100 GB 存储、100K MAU。
 
-* **Clerk (身份认证)**：10,000月活跃用户，所有认证方式，基础用户管理功能。
+* **Neon Free（数据库）**：每项目 **100 CU-hours**、0.5 GB 存储、5 GB 出口、10 个分支；**5 分钟无活动自动休眠**（scale-to-zero）；Launch/Scale 按量付费、无月最低消费（[官方定价](https://neon.tech/pricing)）。
 
-* **Cloudflare R2 (对象存储)**：10GB存储/月，大量读写操作免费，**无带宽流量费用**。
+* **Upstash（缓存/队列）**：Redis 免费档约 **500,000 命令/月**；Kafka 等有独立免费额度（以控制台为准）。
 
-* **Resend (邮件服务)**：3,000邮件/月，每日100封邮件限制。
+* **Clerk Hobby（身份认证）**：**50,000 MRU/应用**（月留存用户，非简单 MAU）、无限应用数；免费档会话固定 **7 天**有效期；Pro **$25/月**（年付 $20/月，[官方定价](https://clerk.com/pricing)）。
 
-#### 方案二：完全利用Cloudflare平台
+* **Cloudflare R2（对象存储）**：10 GB 存储/月，**无出口流量费**；读写操作有免费配额（[R2 定价](https://developers.cloudflare.com/r2/pricing/)）。
 
-  **优点**：免费CDN，各种计算、存储、日志服务便宜量大。每月仅需**$5**即可获得强大服务，几乎无需担心流量和成本上升。
+* **Resend（邮件）**：**3,000 封/月**免费，每日上限 100 封；Pro **$20/月**含 50,000 封（[官方定价](https://resend.com/pricing)）。
 
-  **缺点**：需每月$5支出，免费额度健壮性有限。社区支持相对较少，可能有较多“坑”需探索。
+#### 方案二：完全利用 Cloudflare 平台
 
-**Cloudflare $5套餐内包含的服务**：
+  **优点**：免费 CDN，计算、存储、数据库服务单价低。Workers Paid **$5/月**起即可获得大量配额，R2 无出口流量费，适合高流量场景。
 
-+ **Workers (计算)**：每月1000万请求，3000万CPU毫秒。
+  **缺点**：需至少 $5/月支出；Next.js 全栈部署需借助 OpenNext 等方案，社区案例相对 Vercel 少，调试成本更高。
 
-+ **D1 (数据库)**：5GB存储/月，大量读写操作。基于SQLite，适合读多写少场景。
+**Cloudflare Workers Paid（$5/月起）主要配额**：
 
-+ **KV (存储)**：大量读写操作，1GB存储/月，适合小项目。
++ **Workers（计算）**：含 **1,000 万请求/月**，超出约 $0.30/百万次；CPU 时间单独计费。
 
-+ **R2 (对象存储)**：与方案一相同，10GB存储/月，无流量费用。
++ **D1（数据库）**：按行读写计费，免费档有每日限额；基于 SQLite，适合读多写少、轻量数据场景。
 
-**适用场景**：有技术基础，愿意折腾；高流量无收入项目；希望最大化性价比的用户。结合OpenNext Cloudflare项目，可无缝集成Cloudflare服务。
++ **KV（键值存储）**：按读写次数计费，免费档约 100,000 读/天、1,000 写/天。
+
++ **R2（对象存储）**：10 GB 存储/月免费，**无出口流量费**。
+
+**适用场景**：有技术基础、愿意折腾；高流量但收入尚低的项目；希望最大化性价比的用户。结合 [OpenNext Cloudflare](https://opennext.js.org/cloudflare) 可部署 Next.js 全栈应用。
 
 #### 方案三：自托管部署
 
@@ -518,9 +527,9 @@ Next.js 在独立开发中被推荐为首选的全栈开发框架，主要基于
 
 **域名**：
 
-​	**购买平台**：推荐直接在**Cloudflare Domains**购买，价格稳定，解析速度快，方便结合Cloudflare CDN/Cache使用，`.com`后缀约**10美元/年**。也可选择Spaceship、regery、namesilo等更便宜的平台购买然后托管到Cloudflare。
+​	**购买平台**：推荐在 **Cloudflare Domains** 直接购买，价格稳定、解析快，便于搭配 CDN/Cache；`.com` 约 **$10–12/年**。也可在 Spaceship、NameSilo 等低价注册商购买后托管到 Cloudflare。
 
-​	**工具**：Tldx (域名搜索工具) 帮助寻找合适域名。
+​	**工具**：[Tldx](https://tldx.bio/) 等域名搜索工具帮助寻找合适域名。
 
 **邮件服务**：
 
@@ -574,3 +583,21 @@ AGI 也许还在路上，但“语言即接口，思维即算力”的时代已�
 [How I Code with AI on a budget/free](https://wuu73.org/blog/aiguide1.html)
 
 [独立开发穷鬼套餐(Web实践篇)](https://guangzhengli.com/blog/zh/indie-hacker-poor-stack)
+
+[GitHub Copilot Plans & Pricing](https://github.com/features/copilot/plans)
+
+[Cursor Pricing](https://cursor.com/pricing)
+
+[Anthropic Pricing](https://www.anthropic.com/pricing)
+
+[Vercel Plans & Limits](https://vercel.com/docs/plans)
+
+[Supabase Pricing](https://supabase.com/pricing)
+
+[Neon Pricing](https://neon.tech/pricing)
+
+[Clerk Pricing](https://clerk.com/pricing)
+
+[Cloudflare Workers Pricing](https://developers.cloudflare.com/workers/platform/pricing/)
+
+[Resend Pricing](https://resend.com/pricing)

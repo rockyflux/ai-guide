@@ -100,231 +100,117 @@ skill/employees/
 ```
 
 
-### 五、配置截图
+### 五、按用途推荐 Skills
 
-<div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start;">
-  <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ105piyq05dQMLekrhQuQoE3V27hZnQACiyIAAplwYFSwAiyjwL9lzToE.png" alt="配置截图 1" style="max-width: 48%; flex: 1; min-width: 200px;" />
-  <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ11NpiysK-od2MFrUDLB446skM7Mt0gACkiIAAplwYFRTDh2do3GupDoE.png" alt="配置截图 2" style="max-width: 48%; flex: 1; min-width: 200px;" />
-</div>
+本节按任务场景归类推荐。先定用途，再选对应 Skill 或仓库；安装统一用 `npx skills add <仓库> [--skill <名称>]`，跨类别资源见第六节。
 
+#### 底座 / 工程工作流
 
-### 六、初始化导入推荐Skills
-```
-# 技能搜索/发现：从大量 Skills 中快速找到需要的（find-skills）
-npx skills add https://github.com/vercel-labs/skills --skill find-skills
-# 创建/封装自己的 Skill：把你的流程沉淀成可复用能力（skill-creator）
-npx skills add https://github.com/anthropics/skills --skill skill-creator
-# Agent 工具集：给智能体配一套常用小工具（agent-tools）
-npx skills add https://github.com/toolshell/skills --skill agent-tools
-# 超能力使用指南：教你如何发挥技能与工具的最大价值（using-superpowers）
-npx skills add https://github.com/obra/superpowers --skill using-superpowers
-# MCP 构建器：快速搭建 MCP 服务，让 AI 连外部工具/数据（mcp-builder）
-npx skills add https://github.com/anthropics/skills --skill mcp-builder
-# 头脑风暴：创意/需求澄清优先，避免直接上手跑偏（brainstorming）
-npx skills add https://github.com/obra/superpowers --skill brainstorming
-# 工程型工作流技能集：需求澄清、TDD、诊断、PRD/Issue 拆分（Matt Pocock）
-npx skills add mattpocock/skills
-```
+- [`find-skills`](https://github.com/vercel-labs/skills)：技能搜索与发现；`npx skills add https://github.com/vercel-labs/skills --skill find-skills`
+- [`skill-creator`](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：封装自己的 Skill；`npx skills add https://github.com/anthropics/skills --skill skill-creator`
+- [`agent-tools`](https://github.com/toolshell/skills)：Agent 常用小工具；`npx skills add https://github.com/toolshell/skills --skill agent-tools`
+- [`using-superpowers`](https://github.com/obra/superpowers) / [`brainstorming`](https://github.com/obra/superpowers)：工作流元能力与需求澄清；`npx skills add https://github.com/obra/superpowers --skill using-superpowers`
+- [`mcp-builder`](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)：连接外部工具的 MCP 构建器
+- [Matt Pocock / skills](https://github.com/mattpocock/skills)：工程交付工作流（`grill-with-docs`、`to-prd`、`to-issues`、`tdd`、`diagnose`）；`npx skills add mattpocock/skills`
+- [Anthropic Skills](https://github.com/anthropics/skills)：官方技能实现与 `skill-creator` / `mcp-builder`
+- [Vercel Skills](https://github.com/vercel-labs/skills)：含 `find-skills` 等示例
+- [MiniMax Skills](https://github.com/MiniMax-AI/skills)：官方开发技能库（Beta）
+- [Antfu Skills](https://github.com/antfu/skills)：高质量个人工程实践
+- [Claude Code Stock Deep Research Agent](https://github.com/liangdabiao/Claude-Code-Stock-Deep-Research-Agent)：实战案例
 
-```
-# 前端和设计skills
-npx skills add pbakaus/impeccable
-npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines
-npx skills add https://github.com/anthropics/skills --skill frontend-design
-npx skills add https://github.com/wshobson/agents --skill tailwind-design-system
-# Anti-slop 前端审美：版式/字体/动效/间距；默认 design-taste-frontend（v2）
-npx skills add https://github.com/Leonxlnx/taste-skill
-# 单装示例：npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"
-```
+#### 前端 / 设计
 
-```
-# 公众号 / 内容创作 skills
-# 把 Markdown 排成可直接粘贴进公众号编辑器的 HTML（6 套主题 + 主题生成器 + 双关卡校验）
-npx skills add https://github.com/isjiamu/gzh-design-skill
-# 中文口播稿 + SRT → 可录屏的 16:9 自动播放信息动画 HTML（非 PPT、不直接出 MP4）
-npx skills add https://github.com/Jackywxsz/jacky-motion
-```
-
-```
-# PPT / 演示文稿 skills
-# 浏览器可编辑网页 PPT → 导出 HTML / PDF / 可编辑 PPTX（12 套主题、1020 版式）
-# 环境：Node.js 20+；导出 PPTX/PDF 需本机 Chrome / Chromium / Edge
-npx dashi-ppt-skill@latest
-# 国内镜像：
-# npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest
-```
-
-```
-# 视频制作系统（非单条 Skill：整仓 pipeline + 700+ 技能/知识文件）
-# 开源 agentic 视频制片：调研/脚本/素材/剪辑/合成；12 条流水线、100+ 工具
-# 环境：Python 3.10+、FFmpeg、Node.js 18+；用 Claude Code / Cursor / Codex 等打开仓库后自然语言下单
-git clone https://github.com/calesthio/OpenMontage.git
-cd OpenMontage && make setup
-```
-
-### 推荐 Top10：面向前端 / 产品 / UI 的 Agent Skills
-
-这 10 个 Skills 按**设计落地频率**、对**视觉与交互质量**的直接提升、以及在 **Codex / Claude Code** 等环境中的**高复用性**来选，适合前端、产品与 UI 协作场景。
-
-| # | Skill | 来源 | 说明 | 仓库 |
-|---|--------|------|------|------|
-| 1 | `frontend-skill` | OpenAI | landing / 品牌 / demo；视觉论点、内容节奏、首屏 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/frontend-skill) |
-| 2 | `frontend-design` | Anthropic | 高完成度、强风格；页面更有辨识度 | [源码](https://github.com/anthropics/skills/tree/main/skills/frontend-design) |
-| 3 | `figma-implement-design` | OpenAI | 设计稿到代码；产设研协作常用 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/figma-implement-design) |
-| 4 | `web-design-guidelines` | Vercel | UI 审查：a11y、表单、动效、排版、交互补漏 | [源码](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines) |
-| 5 | `react-best-practices` | Vercel | React / Next.js 实现与性能质量 | [源码](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices) |
-| 6 | `playwright` | OpenAI | 真实浏览器验证；UI 调试与回归执行层 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/playwright) |
-| 7 | `webapp-testing` | Anthropic | 本地应用验证；行为、截图、日志、交互回归 | [源码](https://github.com/anthropics/skills/tree/main/skills/webapp-testing) |
-| 8 | `canvas-design` | Anthropic | 画布式视觉探索、展示页、概念设计 | [源码](https://github.com/anthropics/skills/tree/main/skills/canvas-design) |
-| 9 | `brand-guidelines` | Anthropic | 官网 / 营销 / 设计系统 / 品牌一致性 | [源码](https://github.com/anthropics/skills/tree/main/skills/brand-guidelines) |
-| 10 | `vercel-deploy-claimable` | Vercel | 非设计类；快速部署预览、缩短反馈闭环 | [源码](https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-deploy-claimable) |
+- [`frontend-skill`](https://github.com/openai/skills/tree/main/skills/.curated/frontend-skill)（OpenAI）：landing / 品牌 / demo；视觉论点、内容节奏、首屏
+- [`frontend-design`](https://github.com/anthropics/skills/tree/main/skills/frontend-design)（Anthropic）：高完成度、强风格；页面更有辨识度
+- [`figma-implement-design`](https://github.com/openai/skills/tree/main/skills/.curated/figma-implement-design)（OpenAI）：设计稿到代码；产设研协作常用
+- [`web-design-guidelines`](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines)（Vercel）：UI 审查（a11y、表单、动效、排版、交互补漏）
+- [`react-best-practices`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices)（Vercel）：React / Next.js 实现与性能质量
+- [`playwright`](https://github.com/openai/skills/tree/main/skills/.curated/playwright)（OpenAI）：真实浏览器验证；UI 调试与回归
+- [`webapp-testing`](https://github.com/anthropics/skills/tree/main/skills/webapp-testing)（Anthropic）：本地应用验证；行为、截图、日志、交互回归
+- [`canvas-design`](https://github.com/anthropics/skills/tree/main/skills/canvas-design)（Anthropic）：画布式视觉探索、展示页、概念设计
+- [`brand-guidelines`](https://github.com/anthropics/skills/tree/main/skills/brand-guidelines)（Anthropic）：官网 / 营销 / 设计系统 / 品牌一致性
+- [`vercel-deploy-claimable`](https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-deploy-claimable)（Vercel）：快速部署预览、缩短反馈闭环
+- [taste-skill](https://github.com/Leonxlnx/taste-skill)：Anti-slop 前端审美；默认 `design-taste-frontend`（v2）；`npx skills add https://github.com/Leonxlnx/taste-skill`
+- [Impeccable](https://impeccable.style/)：`frontend-design` 增强（/polish、/audit、/distill）；`npx skills add pbakaus/impeccable`
+- [OpenAI Skills](https://github.com/openai/skills)：策展含 `frontend-skill`、`playwright`、`figma-implement-design` 等
+- [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)：`web-design-guidelines`、`react-best-practices` 等
 
 {{% hint info %}}
 **社区增强 · 前端审美**  
-官方 `frontend-design` / `frontend-skill` 偏「做出好看的页面」；若更要压住 AI 通用 slop（千篇一律的紫渐变、卡片堆砌），可看高星社区包 [taste-skill](https://github.com/Leonxlnx/taste-skill)（约 78.7k stars）：默认 `design-taste-frontend`（v2），另有 redesign / soft / minimalist / brutalist、图生参考板与 image-to-code 等变体（`npx skills add https://github.com/Leonxlnx/taste-skill`）。
+官方偏「做出好看的页面」；要压住 AI 通用 slop（紫渐变、卡片堆砌），优先用 [taste-skill](https://github.com/Leonxlnx/taste-skill) 或 [Impeccable](https://impeccable.style/)。
 {{% /hint %}}
 
-### 推荐 Top10：面向通用办公场景的 Agent Skills
-这 10 个精选认证 Skills（Anthropic + OpenAI）覆盖了办公高频链路：Office 四件套、PDF 处理、会议转录、协作写作、知识沉淀、截图留痕与演示美化。
+#### 通用办公
 
-**什么时候用什么？**
-
-- 基础四件套：`pptx`、`pdf`、`docx`、`xlsx`
-- 会议与知识沉淀：`transcribe`、`notion-knowledge-capture`
-- 组织沟通与写作：`internal-comms`、`doc-coauthoring`
-- 辅助交付与美化：`screenshot`、`theme-factory`
-
-| # | Skill | 来源 | 典型用途 | 仓库 |
-|---|-------|------|----------|------|
-| 1 | `pptx` | Anthropic | 做汇报、改汇报、读 PPT、按模板生成 deck | [源码](https://github.com/anthropics/skills/tree/main/skills/pptx) |
-| 2 | `pdf` | Anthropic | 提取、合并、OCR、表单处理、拆分 PDF | [源码](https://github.com/anthropics/skills/tree/main/skills/pdf) |
-| 3 | `docx` | Anthropic | 正式报告、方案、备忘录、函件、模板文档 | [源码](https://github.com/anthropics/skills/tree/main/skills/docx) |
-| 4 | `xlsx` | Anthropic | Excel 表格处理、公式、格式化、图表、交付工作簿 | [源码](https://github.com/anthropics/skills/tree/main/skills/xlsx) |
-| 5 | `transcribe` | OpenAI | 会议录音、访谈、音频转文字 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/transcribe) |
-| 6 | `internal-comms` | Anthropic | 周报、项目更新、公告、内部沟通稿 | [源码](https://github.com/anthropics/skills/tree/main/skills/internal-comms) |
-| 7 | `doc-coauthoring` | Anthropic | 协作写作，把零散想法整理成正式文档 | [源码](https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring) |
-| 8 | `notion-knowledge-capture` | OpenAI | 把会议、讨论、决策沉淀进 Notion 知识库 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/notion-knowledge-capture) |
-| 9 | `screenshot` | OpenAI | 截图留痕、问题反馈、操作说明、培训材料 | [源码](https://github.com/openai/skills/tree/main/skills/.curated/screenshot) |
-| 10 | `theme-factory` | Anthropic | 统一文档/演示的视觉主题和正式感 | [源码](https://github.com/anthropics/skills/tree/main/skills/theme-factory) |
+- [`pptx`](https://github.com/anthropics/skills/tree/main/skills/pptx)（Anthropic）：做汇报、改汇报、读 PPT、按模板生成 deck
+- [`pdf`](https://github.com/anthropics/skills/tree/main/skills/pdf)（Anthropic）：提取、合并、OCR、表单处理、拆分 PDF
+- [`docx`](https://github.com/anthropics/skills/tree/main/skills/docx)（Anthropic）：正式报告、方案、备忘录、函件
+- [`xlsx`](https://github.com/anthropics/skills/tree/main/skills/xlsx)（Anthropic）：表格、公式、格式化、图表
+- [`transcribe`](https://github.com/openai/skills/tree/main/skills/.curated/transcribe)（OpenAI）：会议录音、访谈转文字
+- [`internal-comms`](https://github.com/anthropics/skills/tree/main/skills/internal-comms)（Anthropic）：周报、项目更新、公告
+- [`doc-coauthoring`](https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring)（Anthropic）：协作写作，整理成正式文档
+- [`notion-knowledge-capture`](https://github.com/openai/skills/tree/main/skills/.curated/notion-knowledge-capture)（OpenAI）：会议与决策沉淀进 Notion
+- [`screenshot`](https://github.com/openai/skills/tree/main/skills/.curated/screenshot)（OpenAI）：截图留痕、操作说明
+- [`theme-factory`](https://github.com/anthropics/skills/tree/main/skills/theme-factory)（Anthropic）：统一文档 / 演示视觉主题
 
 {{% hint info %}}
-**社区增强 · PPT**  
-官方 `pptx` 偏「按模板读写/精修」；若更需要「先快速出完整 deck，再在浏览器里改字换图调版式，最后导出可编辑 PPTX」，可看社区热门的 [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)（12 主题 / 1020 版式，`npx dashi-ppt-skill@latest`）。
+**边界说明**  
+官方 `pptx` 属于「办公文档读写」。若要「浏览器里快速出完整 deck、改字换图再导出 PPTX」，请看 [**PPT / 演示文稿**](#ppt--演示文稿)（[dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)），不要和通用办公混选。
 {{% /hint %}}
 
+#### 公众号 / 内容创作
 
-**怎么选？**
+- [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)：Markdown → 可粘贴进公众号编辑器的 HTML（6 套主题 + 主题生成器）；`npx skills add https://github.com/isjiamu/gzh-design-skill`
+- [baoyu-skills](https://github.com/jimliu/baoyu-skills)：文配图 / 插画生成
 
-| 场景 | 推荐 Skills |
-|------|-------------|
-| 偏品牌官网 / 营销页 | `frontend-skill`、`frontend-design`、`brand-guidelines`；要压 slop 加 `design-taste-frontend`（[taste-skill](https://github.com/Leonxlnx/taste-skill)） |
-| 偏产品 UI / 设计稿还原 | `figma-implement-design`、`react-best-practices`、`web-design-guidelines`；存量改版用 `redesign-existing-projects`（taste-skill） |
-| 偏交互验证 / 可用性 | `playwright`、`webapp-testing` |
-| 偏创意探索 | `canvas-design` |
-| 反 slop / 高端视觉方向 | `design-taste-frontend`、`high-end-visual-design`、`minimalist-ui`、`industrial-brutalist-ui`（均来自 [taste-skill](https://github.com/Leonxlnx/taste-skill)） |
-| 公众号排版 / 微信长文 | `gzh-design`（[gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)） |
-| 职场 PPT / 汇报路演 | `dashi-ppt`（[dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)）：浏览器里改字换图调版式，再导出可编辑 PPTX；官方 `pptx` 更适合按模板精修 |
-| 口播信息动画 / 短视频录屏 | `jacky-motion`（[jacky-motion](https://github.com/Jackywxsz/jacky-motion)）：口播 + SRT 驱动 16:9 自动播放 HTML，带 B-roll 录屏窗；需先有校对过的 SRT |
-| Agent 全流程出片 / 纪录片蒙太奇 | [OpenMontage](https://github.com/calesthio/OpenMontage)：把编码助手变成制片工作室（约 49k stars）；真实素材剪辑或 AI 成片，非「几张静图 Ken Burns」；`git clone` + `make setup` |
+#### PPT / 演示文稿
 
-更多可以查看开发提示词：[https://skillsmp.com/zh/categories/development](https://skillsmp.com/zh/categories/development)
+- [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)：网页可编辑 PPT → 导出 HTML / PDF / 可编辑 PPTX（12 主题、1020 版式）；`npx dashi-ppt-skill@latest`（需 Node.js 20+，导出 PPTX/PDF 需本机 Chrome / Chromium / Edge）
+- [`pptx`](https://github.com/anthropics/skills/tree/main/skills/pptx)（Anthropic）：按模板读写 / 精修现有 PPT
+- [`theme-factory`](https://github.com/anthropics/skills/tree/main/skills/theme-factory)（Anthropic）：统一演示视觉主题
 
-### 七、值得关注：Matt Pocock 的 Skills for Real Engineers
+#### 视频制作
 
-如果你想找一套**更偏真实工程交付**、而不是“演示型 vibe coding”的 Skills，`mattpocock/skills` 很值得单独关注。
+- [jacky-motion](https://github.com/Jackywxsz/jacky-motion)：口播稿 + SRT → 可录屏的 16:9 自动播放 HTML（不直接出 MP4）；`npx skills add https://github.com/Jackywxsz/jacky-motion`
+- [OpenMontage](https://github.com/calesthio/OpenMontage)：Agent 全流程视频制片（pipeline + 700+ 技能/知识文件）；`git clone` + `make setup`（需 Python 3.10+、FFmpeg、Node.js 18+）
 
-{{% hint info %}}
-**为什么它这波很火？**  
-截至 **2026-05-13**，[`mattpocock/skills`](https://github.com/mattpocock/skills) 在 GitHub 上约 **76.5k stars**。仓库 README 的定位也很直接：这是 Matt Pocock 日常真实开发中使用的技能集合，强调 small、composable、easy to adapt，目标是把工程基本功重新装回 AI coding workflow。
-{{% /hint %}}
+更多未覆盖场景可浏览：[SkillsMP · development](https://skillsmp.com/zh/categories/development)
 
-**作者背景**：Matt Pocock 是社区里非常知名的 TypeScript 教育者；他本人也公开写过自己曾在 **Vercel** 做过 developer advocate，现在专注于 TypeScript 与 AI engineering 教学。
+### 六、参考链接与第三方网站
 
-**这套 Skills 的核心价值，不在“花样多”，而在“工程动作标准化”**：
+本节只放**跨类别**资源（文档、安装工具、市场、Awesome）。按用途的推荐已写在第五节，此处不再重复。
 
-- **先对齐再开工**：`grill-me`、`grill-with-docs` 先逼着你把需求、边界、术语和约束讲清楚
-- **把方案沉淀为产物**：`to-prd`、`to-issues` 把对话上下文转成 PRD 与可执行 issue
-- **把实现拉回工程纪律**：`tdd`、`diagnose` 分别对应测试驱动开发与系统化排障
-- **避免代码库越做越乱**：`zoom-out`、`improve-codebase-architecture` 强调系统视角与架构持续治理
-- **先做一次仓库级初始化**：`setup-matt-pocock-skills` 会给仓库补齐 Agent 配置块、issue tracker 约定、文档落点等基础设施
+#### 文档与规范
 
-**当前规模**：仓库 README 目前公开列出 **18 个技能**，大致分成三类：
+- [Claude 官方 Skills 文档](https://code.claude.com/docs/zh-CN/skills)：最权威的 Agent Skills 规范与功能说明。
+- [Agent Skills（claudecn）](https://claudecn.com/docs/agent-skills/)：面向中文用户的解读与示例。
+- [Agent Skills（agentskills.io）](https://agentskills.io/)：社区导航站，按场景浏览和搜索技能。
+- [SkillsHunt](https://skillshunt.io/)：标签与热度筛选的技能发现平台。
+- [YouMind Skills](https://youmind.com/zh-CN/skills)：学习与创作向技能导航。
 
-- **Engineering**：如 `tdd`、`diagnose`、`to-prd`、`to-issues`、`improve-codebase-architecture`
-- **Productivity**：如 `grill-me`、`handoff`、`write-a-skill`
-- **Misc**：如 `setup-pre-commit`、`git-guardrails-claude-code`
+#### 安装与管理工具
 
-**它特别适合谁？**
+- [Skills.sh](https://skills.sh/)：CLI 安装 / 更新 Skills；[热门技能页](https://skills.sh) 可看趋势。
+- [Skill Creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：Anthropic 官方技能模板与创建向导。
+- [MCPMarket Skills Leaderboard](https://mcpmarket.com/zh/tools/skills/leaderboard)：第三方技能榜单与工具导航。
+- [ClawHub Skills](https://clawhub.ai/skills)：ClawHub 平台技能市场。
 
-- 已经在用 Codex / Claude Code / Cursor，但觉得 AI 写代码“能跑但不稳”
-- 团队开始让 AI 参与真实项目，希望形成一套可重复的协作动作
-- 想把“需求澄清 -> 任务拆分 -> 实现 -> 调试 -> 架构治理”串成闭环，而不是只收集零散 prompt
+#### 市场与合集网站
 
-**快速开始**：
+- [agent-skills.md](https://agent-skills.md)：6000+ 高频技能，开箱即用。
+- [Skills Directory](https://www.skillsdirectory.com)：Reddit 社区口碑向整理。
+- [SkillsMP](https://skillsmp.com/zh)：聚合 GitHub 上大量开源技能，适合全网搜与溯源。
+- [Agent Skills Me](https://agentskills.me)：人工精选的小而精集合。
+- [SkillStore](https://skillstore.io/zh-hans)：中文友好，强调安全审查。
+- [SkillHub（腾讯）](https://skillhub.tencent.com/)：按模型 / 场景筛选，与自家工具生态集成。
+- [Linux.do Awesome Skills](https://github.com/jochne/linuxdo-awesome-skills)：社区导航（能做什么、前置、标签、Star）；[在线浏览](https://linuxdo-awesome-skills.tencents.ltd/)。
+- [CocoLoop Skill 商店](https://hub.cocoloop.cn/)：聚合大量 Skills、多平台、国内镜像加速，含 OpenClaw 专题。
 
-```bash
-npx skills@latest add mattpocock/skills
-```
+#### Awesome / 索引清单
 
-安装后，优先试这几个最有代表性的技能：
-
-- `/setup-matt-pocock-skills`
-- `/grill-with-docs`
-- `/tdd`
-- `/diagnose`
-- `/to-prd`
-- `/to-issues`
-
-如果用一句话总结：**Anthropic / OpenAI / Vercel 的官方 Skills 更像“能力底座”，Matt Pocock 这套则更像“工程工作方式模板”**。前者偏能力扩展，后者偏把真实软件工程流程压缩成 AI 可复用动作。
-
-### 八、OpenClaw：养虾 + Skills（案例）
-
-- [OpenClaw 养虾 + Skills（微信文章）](https://mp.weixin.qq.com/s/DVhQ_mWNtn9P39ydlmtyUg)
-- [龙虾指南（InStreet）](https://instreet.coze.site/skill.md)：也可以去 [InStreet](https://instreet.coze.site/) 逛逛、发帖交流。
-
-### 九、参考链接与第三方网站
-
-- **文档与导航**
-  - [Claude 官方 Skills 文档](https://code.claude.com/docs/zh-CN/skills)：最权威的 Agent Skills 规范与功能说明。
-  - [Agent Skills（claudecn）](https://claudecn.com/docs/agent-skills/)：面向中文用户的解读与示例，更贴近国内使用场景。
-  - [Agent Skills（agentskills.io）](https://agentskills.io/)：社区维护的 Skills 导航站，按场景浏览和搜索技能。
-  - [SkillsHunt](https://skillshunt.io/)：支持标签与热度筛选的技能发现与搜索平台。
-  - [YouMind Skills](https://youmind.com/zh-CN/skills)：面向学习与创作场景的技能导航与技能包推荐。
-- **工具与仓库**
-  - [Skills.sh](https://skills.sh/)：命令行技能管理工具，一条命令即可安装 / 更新 Skills。
-  - [MCPMarket Skills Leaderboard](https://mcpmarket.com/zh/tools/skills/leaderboard)：技能榜单与工具导航（第三方）。
-  - [Impeccable](https://impeccable.style/)：对 `frontend-design` 的增强版与设计指令集（含 /polish、/audit、/distill 等），并提供一键安装方式。
-  - [taste-skill](https://github.com/Leonxlnx/taste-skill)：Anti-slop 前端 Agent Skills（约 78.7k stars）；默认 `design-taste-frontend`（v2）调版式/字体/动效/密度，另含 redesign、soft/minimalist/brutalist、图生参考板与 image-to-code；框架无关，适配 Codex / Cursor / Claude Code（`npx skills add https://github.com/Leonxlnx/taste-skill`）。
-  - [Vercel Skills](https://github.com/vercel-labs/skills)：Vercel 团队维护的示例技能仓库，偏 Web / 全栈场景。
-  - [Matt Pocock Skills](https://github.com/mattpocock/skills)：面向真实工程交付的技能集合，强调需求澄清、TDD、诊断、Issue 拆分与架构治理。
-  - [MiniMax Skills](https://github.com/MiniMax-AI/skills)：MiniMax 官方维护的开发技能库（Beta），面向 Claude Code、Cursor、Codex、OpenCode 等工具。
-  - [baoyu-skills](https://github.com/jimliu/baoyu-skills)：根据文本内容自动生成高质量配图。
-  - [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)：把 Markdown 一键排成可直接粘贴进公众号编辑器的 HTML；6 套精选主题（摸鱼绿、红白、石墨极简等）+ 主题生成器 + 双关卡质量校验。
-  - [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)：面向职场演示的 PPT Skill（约 5.7k stars）；12 套主题、1020 版式，生成带控制台的网页 PPT，可在浏览器里改字/换图/调布局，一键导出 HTML / PDF / 可编辑 PPTX；支持 Claude Code、Codex、Cursor 等本地 Agent（`npx dashi-ppt-skill@latest`）。
-  - [jacky-motion](https://github.com/Jackywxsz/jacky-motion)：中文口播 + SRT → 可直接录屏的 16:9 自动播放信息动画 HTML（约 221 stars）；6 套重点视觉风格、SRT 主时钟与 B-roll 区间，含审稿/分镜/锁风格/时间轴确认门；输出单文件 HTML，不直接出 MP4、不做 TTS（`npx skills add https://github.com/Jackywxsz/jacky-motion`）。
-  - [OpenMontage](https://github.com/calesthio/OpenMontage)：开源 agentic 视频制片系统（约 49k stars）；12 条流水线、100+ 工具、700+ Agent 技能/制片知识文件；支持免费真实素材蒙太奇与云端生成成片，含 Backlot 实况分镜与质量门禁；`git clone` + `make setup` 后用 Claude Code / Cursor / Codex 等自然语言驱动（AGPL-3.0）。
-  - [ClawHub Skills](https://clawhub.ai/skills)：ClawHub 平台的技能市场与发现页。
-  - [Skill Creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：Anthropic 官方提供的技能模板与创建向导。
-- **合集网站：快速使用**
-  - [agent-skills.md](https://agent-skills.md)：收录 6000+ 高频常用技能，强调开箱即用、上手快。
-  - [Skills Directory](https://www.skillsdirectory.com)：来自 Reddit 社区的技能推荐与整理，更像口碑榜单，适合对比评价后再决定安装。
-  - [SkillsMP](https://skillsmp.com/zh)：聚合 GitHub 上超过 11 万个开源技能，适合「全网搜技能」和溯源到原始仓库。
-  - [Agent Skills Me](https://agentskills.me)：人工精选的小而精技能集，适合不想自己筛选太久的用户。
-  - [SkillStore](https://skillstore.io/zh-hans)：中文友好，并强调做过安全审查，适合团队或合规敏感场景。
-  - [SkillHub（腾讯）](https://skillhub.tencent.com/)：腾讯推出的技能市场与导航平台，支持按模型、场景筛选，并与自家工具生态深度集成。
-  - [Linux.do Awesome Skills](https://github.com/jochne/linuxdo-awesome-skills)：Linux.do 社区用户发布的 Skills 导航，按「能做什么、前置要求、分类标签、项目地址、Star 数、论坛来源」整理；[在线浏览](https://linuxdo-awesome-skills.tencents.ltd/) 可快速发现社区热门技能（如 PPT、图片转代码、深度调研等）。
-  - [CocoLoop Skill 商店](https://hub.cocoloop.cn/)：更快更安全的 AI Agent Skills 商店，聚合 12,000+ Skills、支持 50+ 平台，提供 CLS 安全认证与国内镜像下载加速，含 OpenClaw 专题与精选 Top 50 榜单。
-  - [Skills.sh 热门技能页](https://skills.sh)：关注热门趋势技能，支持一键安装，适合快速尝鲜。
-- **源码仓库：工程实现**
-  - [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills)：精选的 Claude Skills 清单与资源索引，覆盖 Claude.ai / Claude Code / Claude API 场景。
-  - [Ultimate Agent Skills Collection](https://github.com/ZhanlinCui/Ultimate-Agent-Skills-Collection)：终极大杂烩，汇总大量不同来源的技能项目，更像一个「总目录」，适合深挖与扫货。
-  - [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)：前后端结合的示例仓库，适合参考如何在 Web / 全栈应用里集成 Skills。
-  - [Antfu Skills](https://github.com/antfu/skills)：由 Antfu 维护的实践仓库，代码风格统一、工程化好，适合学习高质量个人实践。
-  - [Anthropic Skills](https://github.com/anthropics/skills)：Anthropic 官方的技能实现仓库，适合参考「官方最佳实践」。
-  - [Matt Pocock / skills](https://github.com/mattpocock/skills)：当前最受关注的工程流派 Skills 仓库之一，适合学习如何把软件工程流程拆成可组合的 Agent 技能。
-  - [Awesome Agent Skills](https://github.com/JackyST0/awesome-agent-skills)：社区维护的优质技能索引库，「awesome 系」风格，可作为导航入口。
-  一个完整的 Agent Skills 实战案例是股票尽调系统仓库 **Claude Code Stock Deep Research Agent**（GitHub：[`liangdabiao/Claude-Code-Stock-Deep-Research-Agent`](https://github.com/liangdabiao/Claude-Code-Stock-Deep-Research-Agent)）。
-
+- [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills)：Claude.ai / Claude Code / API 场景索引。
+- [Awesome Agent Skills](https://github.com/JackyST0/awesome-agent-skills)：社区优质技能索引。
+- [Ultimate Agent Skills Collection](https://github.com/ZhanlinCui/Ultimate-Agent-Skills-Collection)：多来源总目录，适合深挖扫货。
 
 {{% hint info %}}
 **延伸阅读 · Agent Skills 终极指南**  

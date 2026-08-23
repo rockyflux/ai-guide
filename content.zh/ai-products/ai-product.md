@@ -1,11 +1,12 @@
 ---
 aliases:
   - /large-models/ai-product/
-title: AI 产品推荐
-weight: 15
+  - /ai-programming/ai-product/
+title: AI 产品导航
+weight: 40
 bookToc: false
 noTocArea: true
-bookHidden: true
+bookHidden: false
 ---
 
 ## AI 产品导航与榜单

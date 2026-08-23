@@ -30,8 +30,11 @@ bookFlatSection: true
 - [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}}) — IDE / 插件 / Agent 工具
 - [AI CLI 工具横评]({{< relref "ai-programming/code-cli" >}}) — Claude Code / Codex / Gemini CLI 等
 - [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) — 套餐怎么选更划算
+- [什么是 API 中转站]({{< relref "ai-programming/api-relay-station" >}}) — 程序结构、成本倍率、渠道风险
 - [AI 大模型 API 聚合平台]({{< relref "ai-programming/api-aggregation-platforms" >}}) — OpenRouter、小马算力、DMXAPI 等
 - [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}}) — 免费额度与 Token 优化
+
+> 非编程办公场景（WorkBuddy、DuMate、千问办公等）见 **[AI 产品]({{< relref "ai-products/_index" >}})**。
 
 ### 选完工具 → 10 分钟跑通（开工包）
 

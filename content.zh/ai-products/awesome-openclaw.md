@@ -1,8 +1,9 @@
 ---
 aliases:
   - /open-source-community/awesome-openclaw/
-title: Awesome OpenClaw 使用案例
-weight: 4
+  - /tutorials/awesome-openclaw/
+title: Claw 生态
+weight: 20
 date: 2026-02-09T14:43:00+08:00
 bookToc: false
 noTocArea: true

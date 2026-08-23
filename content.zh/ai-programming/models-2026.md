@@ -10,21 +10,51 @@ bookHidden: false
 
 ## 盘点2026主流大模型相关信息
 
+**数据更新时间：2026-08-23**  
+数据来源：[AI Release Tracker](https://aireleasetracker.com/)、[Models.dev](https://models.dev/)、各厂商官方公告
+
+### 2026 年前沿模型概览
+
+2026 年 frontier 模型发布节奏明显加快——2 月五大实验室集中更新（Claude Opus 4.6、GPT-5.3-Codex、Gemini 3.1 Pro 同月发布），此后几乎每月都有旗舰级迭代，「单一最佳模型」格局被打破，按场景选型成为常态。
+
+| 厂商 | 当前旗舰（截至 2026-08） | 发布时间 | 定位 |
+| --- | --- | --- | --- |
+| Anthropic | Claude Opus 5 | 2026-07 | 综合推理旗舰 |
+| OpenAI | GPT-5.6 Sol / GPT-5.6-Cyber | 2026-06 / 2026-08 | 编码 / 安全专项 |
+| Google | Gemini 3.7 Flash | 2026-08 | 高效多模态 |
+| DeepSeek | DeepSeek V4-Pro-0813 | 2026-08 | 开源 MoE 旗舰 |
+| Moonshot | Kimi K3 | 2026-07 | 超长上下文开源 |
+| Z.ai | GLM-5.3 | 2026-08 | 开源编码 |
+| Qwen | Qwen3.8-27B | 2026-08 | 开源轻量高效 |
+
 ### 🇺🇸 美国科技巨头
 
 #### OpenAI 系列
 
 |公司名称|所属国家|模型名称|所属类型|模型功能|模型参数|模型缺点|可及性|官网|
 |---|---|---|---|---|---|---|---|---|
-|OpenAI|美国|GPT-5|多模态、文本生成|高级推理、代码生成、多模态输入处理|未公开|计算成本高，易幻觉|API、聊天机器人|https://openai.com/|
+|OpenAI|美国|GPT-5.6 Sol|编码、推理|SWE-bench Verified 领先（96.2%）|未公开|编码场景专用|API、Codex|https://openai.com/|
+||美国|GPT-5.6 Terra|多模态|通用旗舰变体|未公开|细分场景|API|https://openai.com/|
+||美国|GPT-5.6 Luna|文本生成|轻量高效变体|未公开|能力折衷|API|https://openai.com/|
+||美国|GPT-5.6-Cyber|安全、编码|网络安全专项|未公开|领域专用|API|https://openai.com/|
+||美国|GPT-5.5|编码、推理|2026 Q2 frontier 旗舰|未公开|成本高|API|https://openai.com/|
+||美国|GPT-5.5-Pro|推理|增强推理变体|未公开|成本高|API|https://openai.com/|
+||美国|GPT-5.5-Cyber|安全|网络安全|未公开|领域专用|API|https://openai.com/|
+||美国|GPT-5.4|多模态、推理|GPQA Diamond 94.4% 领先|未公开|被后续版本迭代|API|https://openai.com/|
+||美国|GPT-5.4-Pro|推理|增强推理|未公开|成本高|API|https://openai.com/|
+||美国|GPT-5.4 mini|多模态|高效日常任务|未公开|中等性能|API|https://openai.com/|
+||美国|GPT-5.4 nano|多模态|边缘轻量|未公开|能力有限|API|https://openai.com/|
+||美国|GPT-5.3-Codex|编码|Terminal-Bench 2.0 77.3%|未公开|编码专用|API、Codex CLI|https://openai.com/|
+||美国|GPT-5.3-Codex-Spark|编码|轻量快速编码|未公开|复杂任务弱|API|https://openai.com/|
+||美国|GPT-5|多模态、文本生成|高级推理、代码生成、多模态输入处理|未公开|计算成本高，易幻觉|API、聊天机器人|https://openai.com/|
 ||美国|GPT-5 Nano|多模态|边缘设备处理|未公开|资源限制|API|https://openai.com/|
-||美国|GPT-5.2|编码、推理|实时代码编写、复杂问题求解|未公开|API复杂，需设置努力水平|API、聊天机器人|https://openai.com/|
+||美国|GPT-5.2|编码、推理|实时代码编写、复杂问题求解|未公开|被后续版本取代|API、聊天机器人|https://openai.com/|
 ||美国|GPT-5.1 Instant|文本生成|日常任务处理|未公开|性能中等|API、聊天机器人|https://openai.com/|
 ||美国|GPT-5.1 Thinking|推理|复杂推理任务|未公开|响应较慢|API|https://openai.com/|
-||美国|GPT-4o|多模态|文本、图像、音频处理|>175亿|被GPT-5取代，中等性能|API、聊天机器人|https://openai.com/|
-||美国|o3 / o3-mini|推理|链式思考、难题求解|>175亿|即将弃用|API|https://openai.com/|
-||美国|GPT-OSS|混合专家|自定义任务、推理|120亿|限制恶意使用|开源|https://openai.com/|
-||美国|GPT-5.2 Codex|编码|代码自动化、调试|未公开|边缘案例错误|API|https://openai.com/|
+||美国|GPT-4o|多模态|文本、图像、音频处理|>1750亿|上一代，中等性能|API、聊天机器人|https://openai.com/|
+||美国|o3 / o3-mini|推理|链式思考、难题求解|>1750亿|已弃用|API|https://openai.com/|
+||美国|GPT-OSS|混合专家|自定义任务、推理|1200亿|限制恶意使用|开源|https://openai.com/|
+||美国|GPT-5.2 Codex|编码|代码自动化、调试|未公开|被 GPT-5.3-Codex 取代|API|https://openai.com/|
 ||美国|DALL-E 3|图像生成|文本到图像生成|未公开|偏见表示|API|https://openai.com/|
 ||美国|Sora|视频生成|动态视频合成|未公开|长序列不真实|API|https://openai.com/|
 ||美国|Sora 2|视频生成|故事视频|未公开|导演限|API|https://openai.com/sora|
@@ -34,7 +64,15 @@ bookHidden: false
 
 |公司名称|所属国家|模型名称|所属类型|模型功能|模型参数|模型缺点|可及性|官网|
 |---|---|---|---|---|---|---|---|---|
-|Google|美国|Gemini 3|多模态|文本、图像、音频集成、翻译|未公开|云访问依赖|API、集成Google服务|https://ai.google.dev/gemini-api/docs/models|
+|Google|美国|Gemini 3.7 Flash|多模态|最新 Flash 旗舰|未公开|持续迭代中|API|https://ai.google.dev/gemini-api/docs/models|
+||美国|Gemini 3.6 Flash|多模态|高效推理|未公开|能力折衷|API|https://ai.google.dev/gemini-api/docs/models|
+||美国|Gemini 3.5 Flash Cyber|安全、编码|网络安全专项|未公开|领域专用|API|https://ai.google.dev/gemini-api/docs/models|
+||美国|Gemini 3.5 Flash-Lite|多模态|轻量快速|未公开|能力有限|API|https://ai.google.dev/gemini-api/docs/models|
+||美国|Gemini 3.5 Flash|多模态|均衡性能|未公开|中等场景|API|https://ai.google.dev/gemini-api/docs/models|
+||美国|Gemma 4|开源、文本生成|开源轻量化|未公开|需部署专长|开源|https://ai.google.dev/gemini-api/docs/models|
+||美国|Gemini 3.1 Pro|多模态、推理|2 月 frontier 旗舰|未公开|被后续迭代|API|https://ai.google.dev/gemini-api/docs/models|
+||美国|Gemini 3.1 Flash-Lite|多模态|轻量快速|未公开|能力有限|API|https://ai.google.dev/gemini-api/docs/models|
+||美国|Gemini 3|多模态|文本、图像、音频集成、翻译|未公开|云访问依赖|API、集成Google服务|https://ai.google.dev/gemini-api/docs/models|
 ||美国|Gemini 3 Pro|多模态|内容总结、跨语言任务|未公开|数据隐私担忧|API|https://ai.google.dev/gemini-api/docs/models|
 ||美国|Gemini Diffusion|扩散|图像扩散|未公开|高能耗|API|https://deepmind.google/|
 ||美国|Gemini 3 Nano Banana Pro|图像生成|视觉编辑|未公开|编辑需求|API|https://ai.google.dev/gemini-api/docs/models|
@@ -52,7 +90,11 @@ bookHidden: false
 
 |公司名称|所属国家|模型名称|所属类型|模型功能|模型参数|模型缺点|可及性|官网|
 |---|---|---|---|---|---|---|---|---|
-|Meta|美国|Llama 4 Scout|开源、多模态|自定义应用、研究|17亿|需部署专长|开源|https://www.llama.com/|
+|Meta|美国|Muse Glimmer|多模态|创意生成|未公开|新兴产品线|API|https://ai.meta.com/|
+||美国|Muse Spark 1.2|多模态|创意生成迭代|未公开|新兴产品线|API|https://ai.meta.com/|
+||美国|Muse Spark 1.1|多模态|创意生成|未公开|新兴产品线|API|https://ai.meta.com/|
+||美国|Muse Spark|多模态|创意生成|未公开|新兴产品线|API|https://ai.meta.com/|
+||美国|Llama 4 Scout|开源、多模态|自定义应用、研究|170亿|需部署专长|开源|https://www.llama.com/|
 ||美国|Llama 4 Maverick|开源|团队工作流、写作|未公开|规模依赖|开源|https://www.llama.com/|
 ||美国|Llama 4 Behemoth|开源|大规模任务|未公开|高计算需求|开源|https://www.llama.com/|
 ||美国|Llama 3.3 70B|开源|微调、RAG|70亿|性能中等|开源|https://www.llama.com/|
@@ -78,20 +120,35 @@ bookHidden: false
 
 |公司名称|所属国家|模型名称|所属类型|模型功能|模型参数|模型缺点|可及性|官网|
 |---|---|---|---|---|---|---|---|---|
-|Anthropic|美国|Claude 4|推理、安全|医疗咨询、法律分析|未公开|安全限制创意|API|https://www.anthropic.com/|
-||美国|Claude 3.5 Sonnet|多模态|教育辅导、代码|未公开|成本较高|API|https://www.anthropic.com/|
-||美国|Claude Opus 4.5|推理|长问题求解|未公开|响应较慢|API|https://www.anthropic.com/|
+|Anthropic|美国|Claude Opus 5|推理、安全|2026 Q3 综合旗舰|未公开|成本高|API|https://www.anthropic.com/|
+||美国|Claude Sonnet 5|编码、推理|新一代 Sonnet|未公开|需验证|API|https://www.anthropic.com/|
+||美国|Claude Fable 5|编码|编码专项（SWE-bench 95.0%）|未公开|编码专用|API|https://www.anthropic.com/|
+||美国|Claude Mythos 5|推理|创意写作专项|未公开|领域专用|API|https://www.anthropic.com/|
+||美国|Claude Opus 4.8|推理|增强推理|未公开|被 Opus 5 取代|API|https://www.anthropic.com/|
+||美国|Claude Opus 4.7|推理|SWE-bench 87.6% 领先|未公开|被后续版本取代|API|https://www.anthropic.com/|
+||美国|Claude Opus 4.6|编码、推理|1M 上下文、Agent Teams|未公开|深度思考增加延迟|API|https://www.anthropic.com/|
+||美国|Claude Sonnet 4.6|编码、推理|均衡 frontier|未公开|中等场景|API|https://www.anthropic.com/|
+||美国|Claude 4|推理、安全|医疗咨询、法律分析|未公开|安全限制创意|API|https://www.anthropic.com/|
+||美国|Claude 3.5 Sonnet|多模态|教育辅导、代码|未公开|上一代|API|https://www.anthropic.com/|
+||美国|Claude Opus 4.5|推理|长问题求解|未公开|被后续版本取代|API|https://www.anthropic.com/|
 ||美国|Claude Haiku 4.5|编码|快速Q&A、编辑|未公开|上下文限|API|https://www.anthropic.com/|
-||美国|Claude Sonnet 4.5|编码|实际开发性能|未公开|需验证|API|https://www.anthropic.com/|
+||美国|Claude Sonnet 4.5|编码|实际开发性能|未公开|被 Sonnet 5 取代|API|https://www.anthropic.com/|
 ||美国|Claude 4 Haiku|编码|快速任务|未公开|上下文限|API|https://www.anthropic.com/|
 
 #### xAI 系列
 
 |公司名称|所属国家|模型名称|所属类型|模型功能|模型参数|模型缺点|可及性|官网|
 |---|---|---|---|---|---|---|---|---|
-|xAI|美国|Grok 4|多模态、推理|社交互动、实时数据|未公开|幽默影响可靠性|API、聊天机器人|https://x.ai/|
+|xAI|美国|Grok 4.6|多模态、推理|最新旗舰|未公开|实时依赖|API、聊天机器人|https://x.ai/|
+||美国|Grok 4.5|多模态|增强推理|未公开|被 4.6 取代|API|https://x.ai/|
+||美国|Composer 2.5|编码|代码生成|未公开|编码专用|API|https://x.ai/|
+||美国|Composer 2|编码|代码生成|未公开|被 2.5 取代|API|https://x.ai/|
+||美国|Grok 4.3 Beta|推理|逻辑推理|未公开|Beta 阶段|API|https://x.ai/|
+||美国|Composer 1.5|编码|代码生成|未公开|被后续版本取代|API|https://x.ai/|
+||美国|Grok 4.20 Beta|多模态|增强多模态|未公开|Beta 阶段|API|https://x.ai/|
+||美国|Grok 4|多模态、推理|社交互动、实时数据|未公开|幽默影响可靠性|API、聊天机器人|https://x.ai/|
 ||美国|Grok 4.1|编码|情感智能、创意写作|未公开|实时依赖|API|https://x.ai/|
-||美国|Grok 3|文本生成|领域特定聊天|未公开|幽默不适严肃任务|API|https://x.ai/|
+||美国|Grok 3|文本生成|领域特定聊天|未公开|上一代|API|https://x.ai/|
 ||美国|Grok 4 Thinking|推理|逻辑任务|未公开|实时依赖|API|https://x.ai/|
 
 #### 其他美国公司
@@ -120,12 +177,20 @@ bookHidden: false
 
 |公司名称|所属国家|模型名称|所属类型|模型功能|模型参数|模型缺点|可及性|官网|
 |---|---|---|---|---|---|---|---|---|
-|Alibaba|中国|Qwen 3|多语言、推理|多语言支持、客户服务|235亿|监管限制|开源、API|https://qwen.ai/|
-||中国|Qwen 3 Max Thinking|推理|基准测试领先|未公开||开源|https://qwen.ai/|
-||中国|Qwen 3 VL|多模态|图像处理|32亿|数据隐私|开源|https://qwen.ai/|
-||中国|Qwen 2.5 Pro|多模态|文本、图像生成|未公开|高能耗|开源、API|https://qwen.ai/|
-||中国|Qwen3|多模态|综合任务|未公开|竞争激烈|API|https://qwen.ai/|
-||中国|Qwen 3.5|多模态|高级图像|未公开|数据隐私|开源|https://qwen.ai/|
+|Alibaba|中国|Qwen3.8-27B|开源、编码|轻量高效开源|270亿|小型场景|开源|https://qwen.ai/|
+||中国|Qwen3.8-Max|多模态、推理|旗舰级闭源|未公开|成本高|API|https://qwen.ai/|
+||中国|Qwen3.7-Max|多模态、推理|旗舰级|未公开|被 3.8 迭代|API|https://qwen.ai/|
+||中国|Qwen3.7-Plus|多模态|增强 Plus|未公开|中等场景|API|https://qwen.ai/|
+||中国|Qwen3.6|多模态|综合任务|未公开|被后续迭代|开源、API|https://qwen.ai/|
+||中国|Qwen3.6-Plus|多模态|增强 Plus|未公开|中等场景|API|https://qwen.ai/|
+||中国|Qwen3.5|多模态|高级图像、多模态|未公开|被 3.6 迭代|开源|https://qwen.ai/|
+||中国|Qwen3.5-Plus|多模态|增强 Plus|未公开|中等场景|API|https://qwen.ai/|
+||中国|Qwen3-Coder-Next|编码|新一代编码模型|未公开|编码专用|开源|https://qwen.ai/|
+||中国|Qwen 3|多语言、推理|多语言支持、客户服务|2350亿|监管限制|开源、API|https://qwen.ai/|
+||中国|Qwen 3 Max Thinking|推理|基准测试领先|未公开|推理专用|开源|https://qwen.ai/|
+||中国|Qwen 3 VL|多模态|图像处理|320亿|数据隐私|开源|https://qwen.ai/|
+||中国|Qwen 2.5 Pro|多模态|文本、图像生成|未公开|上一代|开源、API|https://qwen.ai/|
+||中国|Qwen3|多模态|综合任务|未公开|早期版本|API|https://qwen.ai/|
 
 #### Baidu 系列
 
@@ -139,22 +204,32 @@ bookHidden: false
 
 |公司名称|所属国家|模型名称|所属类型|模型功能|模型参数|模型缺点|可及性|官网|
 |---|---|---|---|---|---|---|---|---|
-|DeepSeek|中国|DeepSeek V3|开源、推理|低延迟推理、Q&A|671亿|小型变体能力限|开源、API|https://www.deepseek.com/en|
-||中国|DeepSeek V3.2|编码|强推理、代码|671亿|即将弃用|开源|https://www.deepseek.com/en|
-||中国|DeepSeek R1|推理|高效训练|671亿|成本依赖|开源|https://www.deepseek.com/en|
-||中国|DeepSeek V3.5|开源|低延迟|未公开|小型限|开源|https://www.deepseek.com/en|
+|DeepSeek|中国|DeepSeek V4-Pro-0813|开源、推理|最新开源 MoE 旗舰|未公开|部署复杂|开源、API|https://www.deepseek.com/en|
+||中国|DeepSeek-V4-Flash-0731|开源、编码|经济型长上下文|未公开|复杂任务弱|开源、API|https://www.deepseek.com/en|
+||中国|DeepSeek V4-Pro|开源、推理|1M 上下文 MoE|6710亿|部署复杂|开源、API|https://www.deepseek.com/en|
+||中国|DeepSeek V4-Flash|开源、编码|经济型推理编码|未公开|复杂任务弱|开源、API|https://www.deepseek.com/en|
+||中国|DeepSeek V3|开源、推理|低延迟推理、Q&A|6710亿|被 V4 取代|开源、API|https://www.deepseek.com/en|
+||中国|DeepSeek V3.2|编码|强推理、代码|6710亿|已弃用|开源|https://www.deepseek.com/en|
+||中国|DeepSeek R1|推理|高效训练|6710亿|被 V4 取代|开源|https://www.deepseek.com/en|
+||中国|DeepSeek V3.5|开源|低延迟|未公开|被 V4 取代|开源|https://www.deepseek.com/en|
 
 #### 其他中国公司
 
 |公司名称|所属国家|模型名称|所属类型|模型功能|模型参数|模型缺点|可及性|官网|
 |---|---|---|---|---|---|---|---|---|
-|Moonshot AI|中国|Kimi K2.5|多模态、代理|视频生成、代理任务|1万亿|竞争激烈|开源、API|https://www.moonshot.ai/|
-||中国|Kimi K2|推理|代理AI|未公开|用户互动最小|开源|https://www.moonshot.ai/|
-||中国|Kimi K2.5 Thinking|代理|视频代理|未公开|竞争激烈|开源|https://www.moonshot.ai/|
-|Zhipu AI|中国|GLM-4.7|开源、推理|编码增强|358亿|部署需专长|开源、API|https://bigmodel.cn/|
-||中国|GLM-4.5V|多模态|文本、图像处理|未公开|计算资源需求|开源|https://bigmodel.cn/|
-||中国|GLM-5|代理|全面增强|未公开|即将发布|API|https://bigmodel.cn/|
-||中国|GLM-4.7 Thinking|开源|编码代理|未公开|部署需专长|开源|https://bigmodel.cn/|
+|Moonshot AI|中国|Kimi K3|开源、代理|2.8T MoE 开源旗舰|28000亿|部署复杂|开源、API|https://www.moonshot.ai/|
+||中国|Kimi K2.7 Code|编码|代码专项|未公开|编码专用|开源|https://www.moonshot.ai/|
+||中国|Kimi K2.6|开源、代理|增强代理能力|未公开|被 K3 取代|开源|https://www.moonshot.ai/|
+||中国|Kimi K2.5|多模态、代理|视频生成、代理任务|1万亿|被 K3 取代|开源、API|https://www.moonshot.ai/|
+||中国|Kimi K2|推理|代理AI|未公开|上一代|开源|https://www.moonshot.ai/|
+||中国|Kimi K2.5 Thinking|代理|视频代理|未公开|被 K3 取代|开源|https://www.moonshot.ai/|
+|Zhipu AI|中国|GLM-5.3|开源、编码|最新开源编码|未公开|部署需专长|开源、API|https://bigmodel.cn/|
+||中国|GLM-5.2|开源、编码|1M 上下文 MIT 许可|未公开|部署需专长|开源|https://bigmodel.cn/|
+||中国|GLM-5.1|开源|增强自定义|未公开|被 5.2 取代|开源|https://bigmodel.cn/|
+||中国|GLM-5|开源、代理|全面增强|未公开|被后续版本取代|开源、API|https://bigmodel.cn/|
+||中国|GLM-4.7|开源、推理|编码增强|3580亿|被 GLM-5 取代|开源、API|https://bigmodel.cn/|
+||中国|GLM-4.5V|多模态|文本、图像处理|未公开|上一代|开源|https://bigmodel.cn/|
+||中国|GLM-4.7 Thinking|开源|编码代理|未公开|被 GLM-5 取代|开源|https://bigmodel.cn/|
 |Tencent|中国|HunyuanWorld|多模态|全球应用|未公开|监管|API|https://www.tencent.com/|
 ||中国|Hunyuan 2|文本生成|多语言支持|未公开|监管|API|https://hunyuan.tencent.com/|
 ||中国|Mixtral Tencent|混合|企业总结|未公开|优化需求|API|https://www.tencent.com/|
@@ -179,7 +254,9 @@ bookHidden: false
 
 |公司名称|所属国家|模型名称|所属类型|模型功能|模型参数|模型缺点|可及性|官网|
 |---|---|---|---|---|---|---|---|---|
-|Mistral|法国|Mistral Large 2|开源、混合专家|企业总结、法律|未公开|预算限制|开源|https://mistral.ai/|
+|Mistral|法国|Mistral Medium 3.5|开源、混合专家|企业增强|未公开|预算限制|开源|https://mistral.ai/|
+||法国|Mistral Small 4|开源|高效小模型|未公开|能力有限|开源|https://mistral.ai/|
+||法国|Mistral Large 2|开源、混合专家|企业总结、法律|未公开|被后续版本取代|开源|https://mistral.ai/|
 ||法国|Mixtral 10x22B|开源|高效推理|未公开|优化需求|开源|https://mistral.ai/|
 ||法国|Mistral Nemo|开源|高效小模型|12亿|预算限制|开源|https://mistral.ai/|
 |Hugging Face|法国|Bloom|开源、文本生成|多语言文本生成、翻译|176亿|性能中等|开源|https://huggingface.co/bigscience-workshop/bloom|

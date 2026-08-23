@@ -1,7 +1,7 @@
 ---
 aliases:
   - /ai-programming/cc-switch/
-title: CC-Switch：可视化配置管理
+title: CC-Switch：可视化配置
 weight: 23
 bookToc: false
 noTocArea: true

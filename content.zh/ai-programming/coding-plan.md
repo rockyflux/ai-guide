@@ -19,6 +19,9 @@ bookHidden: false
 {{% /hint %}}
 
 ## 第三方中转与采购渠道
+
+深入理解中转站的程序结构、成本倍率与渠道风险，见 [什么是 API 中转站]({{< relref "ai-programming/api-relay-station" >}})。
+
 这类渠道的核心价值不是“更强”，而是降低接入门槛或绕过官方订阅不便。
 
 适用场景：
@@ -53,9 +56,16 @@ bookHidden: false
 | **OpenCode Go** | OpenCode 官方低成本订阅，支持任意代理，首月 $5、后续 $10/月，可按需充值 | https://opencode.ai/zh/go |
 | **CodeRefill** | 一套 License 覆盖 Cursor、Windsurf、Kiro、Codex，IDE 高级模型配额补能 | https://zy.harsidol.cn/codeRefill/ |
 | **B.AI** | Credits + 订阅制聚合平台，支持全系列模型访问，Pro 为 $200/月、Max 为 $2000/月，偏高频用户 | https://b.ai/ |
+| **快跑API** | 多模型聚合，OpenAI 兼容中转，500+ 模型按量计费 | https://kuaipao.ai/ |
+| **AtlasAPI** | 模型聚合网关，OpenAI 兼容，多供应商路由与故障切换 | https://aixoras.com/ |
 | **UniAPI** | 多模型聚合，按量付费 | https://uniapi.ai/ |
 | **ToAPIs** | OpenAI 兼容 API 网关，文本/图像/视频多模型统一接入 | https://toapis.com/ |
+| **APIKEY.FUN** | 多模型 API 网关，OpenAI 兼容，按量计费，适配 Claude Code / Codex | https://apikey.fun/ |
 | **CodexAPIs** | API 中转，CDK 充值兑换，可查模型价格 | https://codexapis.com/ |
+| **合租巴士** | 低倍率 API 中转，偏 Claude Code / Codex，支持开票 | https://hezubus.cc/ |
+| **ooioo** | Coding Agent 模型接入，OpenAI / Anthropic 兼容 | https://ooioo.work/ |
+| **嘀嘀嘀 AI** | New API 架构，OpenAI 兼容多模型网关 | https://dddai.dev/ |
+| **SHUAI API** | 统一 AI API 网关与管理面板 | https://api.shuaiapi.com/ |
 | **APIs.you** | API 目录聚合入口 | https://apis.you/catalog |
 | **淘宝** | 可搜索不同卖家套餐 | [淘宝搜索](https://s.taobao.com/search?q=claude+code) |
 | **闲鱼** | 常见于拼车、代购、转售 | [闲鱼搜索](https://www.goofish.com/search?q=claude+code) / [team 拼车](https://www.goofish.com/search?q=team拼车) |
@@ -164,6 +174,7 @@ bookHidden: false
 - 想兼顾成本、模型切换和多工具复用：优先聚合型。
 
 ## 其他参考
+- [什么是 API 中转站]({{< relref "ai-programming/api-relay-station" >}}) — 程序结构、成本倍率、渠道风险
 - [禾维 AI](https://hvoy.ai/) — 中转站真假检测、价格对比与站点推荐
 - [公益站导航](https://ldoh.105117.xyz/) — 第三方资源导航页
 - [LDOH 仓库](https://github.com/JoJoJotarou/LDOH) — 对应开源仓库

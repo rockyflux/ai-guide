@@ -1,12 +1,14 @@
 ---
-title: AI 周边软件
-weight: 40
+aliases:
+  - /project-practice/ai-software/
+title: AI 开发软件
+weight: 30
 bookToc: false
 noTocArea: true
-bookHidden: true
+bookHidden: false
 ---
 
-## AI 周边软件：数据库 + SSH 工作台
+## AI 开发软件
 
 编码 Agent（Cursor / Claude Code / Codex）解决「写代码」；日常还要连库、登服务器、查日志。下面四款把 **AI 嵌进数据库客户端 / SSH 终端**，可按场景直接选。
 

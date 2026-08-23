@@ -164,7 +164,7 @@ AI 已经不只是一个聊天工具，而正在成为一个可以帮助我们�
 
 > 可以执行任务的数字员工。
 
-站内延伸：[Awesome OpenClaw 使用案例]({{< relref "tutorials/awesome-openclaw" >}})
+站内延伸：[AI 超级智能体]({{< relref "ai-products/ai-super-agent" >}}) · [Awesome OpenClaw 使用案例]({{< relref "ai-products/awesome-openclaw" >}})
 
 ---
 

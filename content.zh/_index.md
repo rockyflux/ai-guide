@@ -9,9 +9,10 @@ noTocArea: true
 <br>
 欢迎来到《AI 编程指南》。这里按「任务」组织内容：选模型与工具 → 搭环境接模型 → 协作工作流 → Agent 工程化 → 用项目实践跑通闭环。
 
-## 先从这里开始（6 条主线）
+## 先从这里开始（7 条主线）
 
 - **[入门与选型]({{< relref "ai-programming/_index" >}})**：上手体感、选模型、选工具 / 套餐、控成本。
+- **[AI 产品]({{< relref "ai-products/_index" >}})**：办公桌面 Agent、对话聊天、超级智能体、绘图视频与开发周边选型。
 - **[环境与工具]({{< relref "setup/_index" >}})**：开发环境、WSL、供应商切换与增强工具，尽量一次配到位。
 - **[协作工作流]({{< relref "workflow/_index" >}})**：CCG、GSD、Superpowers、Trellis、oh-my-claudecode 等多模型 / 多 Agent 编排。
 - **[Agent 工程]({{< relref "agent/_index" >}})**：Rules / Skills / MCP / Hooks / Subagents，让 AI 能在项目里持续干活。
@@ -27,7 +28,12 @@ noTocArea: true
   - [LiveBench AI 排行榜]({{< relref "ai-programming/model-comparison" >}})：参考推理/编程/数学等维度的对比。
   - [LLM 评测基准与榜单汇总]({{< relref "ai-programming/Leaderboard" >}})：理解榜单来源与正确用法。
 
-- **2) 选工具与订阅（IDE / CLI / 套餐）**
+- **2) 选工具与订阅（IDE / CLI / 套餐 / 办公 Agent）**
+  - [AI 办公桌面端]({{< relref "ai-products/ai-office-desktop" >}})：WorkBuddy、DuMate、千问办公等对比。
+  - [AI 对话工具]({{< relref "ai-products/ai-chat-tools" >}})：ChatGPT、豆包、Kimi、DeepSeek 等。
+  - [AI 超级智能体]({{< relref "ai-products/ai-super-agent" >}})：Manus、AutoGLM、Genspark、天工等。
+  - [AI 绘图工具]({{< relref "ai-products/ai-image-tools" >}})：即梦、豆包、Midjourney、FLUX 等。
+  - [AI 视频工具]({{< relref "ai-products/ai-video-tools" >}})：可灵、即梦、海螺、Sora、Runway 等。
   - [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}})：IDE/插件/Agent 工具怎么选。
   - [AI CLI 工具横评]({{< relref "ai-programming/code-cli" >}})：Claude Code / Codex CLI / Gemini CLI 等适用场景对比。
   - [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}})：套餐怎么选更划算。
@@ -75,7 +81,7 @@ noTocArea: true
   - [AI 资源与工具指南]({{< relref "tutorials/ai-resources-guide" >}})：站内精选 + 常用社区/工具/资讯。
   - [GitHub 周边工具速查]({{< relref "tutorials/github-extensions" >}})：加速、仓库阅读与效率工具。
   - [Awesome LLM Apps]({{< relref "tutorials/awesome-llm-apps" >}})：优秀应用与灵感库。
-  - [Awesome OpenClaw 使用案例]({{< relref "tutorials/awesome-openclaw" >}})：OpenClaw 生态分支速览。
+  - [Awesome OpenClaw 使用案例]({{< relref "ai-products/awesome-openclaw" >}})：OpenClaw 生态分支速览（亦见 **[AI 产品]({{< relref "ai-products/_index" >}})**）。
 
 ## 支持我们
 

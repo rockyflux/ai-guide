@@ -3,7 +3,7 @@ title: GPT-Image2.0
 date: 2026-05-13
 weight: 85
 bookToc: true
-bookHidden: true
+bookHidden: false
 ---
 
 ## GPT-Image2.0
@@ -51,10 +51,6 @@ bookHidden: true
 - <https://image.oaichat.cc/>
 - 免费，每天 30 张
 
-### oaichat
-
-- <https://chat.oaichat.cc/>
-- 免费，但是有时候会不稳定，要多次尝试
 
 ### sharedchat
 
@@ -87,19 +83,10 @@ bookHidden: true
 - <https://foxcode.rjj.cc/model-square>
 - `gpt-image-2` 接口，折算 0.05 - 0.07 一张
 
-### gptimgtwo
-
-- <https://www.gptimgtwo.com/>
-- 4 毛钱一张
-
 ### pucoding
 - <https://draw.pucoding.com/>
 - 0.125 元 / 张
 
-### nbaa
-
-- <https://img.nbaa.cn/>
-- 免费公益站（临时使用）
 
 ### ChatGPT 官网
 
