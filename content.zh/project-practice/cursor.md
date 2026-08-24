@@ -100,6 +100,7 @@ npx zcf
 
 更多指令请查看：[CCG 完整指南]({{< relref "workflow/ccg" >}})
 
+---
 
-
+**下一步**：[Cursor Skills 实战]({{< relref "project-practice/cursor-skills-practice" >}}) — 用 Skills 把同一份内容交付为 PPT、公众号、动画、原型。
 

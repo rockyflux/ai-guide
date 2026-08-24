@@ -23,6 +23,7 @@ noTocArea: true
 ### 1) 开工包：先把工具跑起来
 
 - [Cursor 实战上手指南（10分钟）]({{< relref "project-practice/cursor" >}})
+- [Cursor Skills 实战]({{< relref "project-practice/cursor-skills-practice" >}}) — 用 Skills 交付 PPT / 公众号 / 动画 / 原型（持续更新）
 - [Codex 实战上手指南]({{< relref "project-practice/codex" >}})
 - [Kiro 实战：旧项目改 bug / 新项目新需求]({{< relref "project-practice/kiro-practice" >}})
 
