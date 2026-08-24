@@ -1,5 +1,5 @@
 ---
-title: oh-my-claudecode
+title: OMC 多 Agent
 weight: 13
 bookToc: false
 noTocArea: true

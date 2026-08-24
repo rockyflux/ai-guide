@@ -1,5 +1,5 @@
 ---
-title: 📦 AI 产品
+title: 📦 AI 应用
 weight: 15
 bookToc: false
 noTocArea: true
@@ -7,9 +7,9 @@ bookCollapseSection: false
 bookFlatSection: true
 ---
 
-## AI 产品：按场景选型
+## AI 应用：按场景选型
 
-面向**办公 Agent、对话聊天、超级智能体、绘图视频、OpenClaw 系、开发周边与站外导航**的产品速览。编程 IDE、CLI、Coding Plan 仍在 **[入门与选型]({{< relref "ai-programming/_index" >}})**。
+面向**办公 Agent、对话聊天、超级智能体、绘图视频、OpenClaw 系、开发周边与站外导航**的产品速览。编程 IDE、CLI、Coding Plan 仍在 **[选型与上手]({{< relref "ai-programming/_index" >}})**。
 
 ### 办公桌面端
 
@@ -37,8 +37,6 @@ bookFlatSection: true
 
 - [AI 产品推荐]({{< relref "ai-products/ai-product" >}}) — 导航站、榜单与分类产品入口
 
-### 编程工具（入门栏）
+### 编程工具
 
-- [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}}) — IDE / 插件 / Agent
-- [AI CLI 工具横评]({{< relref "ai-programming/code-cli" >}}) — Claude Code / Codex / Gemini CLI
-- [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) — 套餐怎么选
+编程 IDE、CLI 与 Coding Plan 统一放在 **[选型与上手]({{< relref "ai-programming/_index" >}})**，避免和本栏的通用 AI 应用重复。

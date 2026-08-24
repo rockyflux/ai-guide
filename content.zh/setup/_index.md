@@ -1,5 +1,5 @@
 ---
-title: 🔧 环境与工具
+title: 🔧 环境配置
 weight: 20
 bookToc: false
 noTocArea: true
@@ -7,11 +7,11 @@ bookCollapseSection: false
 bookFlatSection: true
 ---
 
-## 环境与工具：一次配好，少踩坑
+## 环境配置：一次配好，少踩坑
 
-上游承接 **[入门与选型]({{< relref "ai-programming/_index" >}})** 里的模型 / 工具 / 套餐判断；本栏只做「装什么、怎么配通」。
+上游承接 **[选型与上手]({{< relref "ai-programming/_index" >}})** 里的模型 / 工具 / 套餐判断；本栏只做「装什么、怎么配通」。
 
-> 套餐、API 聚合平台见入门栏；GitHub 加速等周边见 **[学习与资源]({{< relref "tutorials/_index" >}})**。
+> 套餐、API 聚合平台见选型栏；GitHub 加速等周边见 **[学习资源]({{< relref "tutorials/_index" >}})**。
 
 ### 基础环境
 

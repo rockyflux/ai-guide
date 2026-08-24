@@ -167,5 +167,5 @@ OpenAI 会给不同地区用户 **首月优惠**，只需提供支付方式即�
 
 - [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) — 第三方中转渠道与服务对照表
 - [CLI 代理 API（CPA）]({{< relref "setup/cpa" >}}) — 订阅转 API 的网关方案
-- [环境与工具 · 网关与聚合]({{< relref "setup/env-and-tools" >}}) — New API、Sub2API、metapi 等项目索引
+- [环境配置 · 网关与聚合]({{< relref "setup/env-and-tools" >}}) — New API、Sub2API、metapi 等项目索引
 - [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}}) — 免费额度与 Token 优化

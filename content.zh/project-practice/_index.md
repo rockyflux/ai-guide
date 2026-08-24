@@ -1,5 +1,5 @@
 ---
-title: 🚀 项目实践
+title: 🚀 项目实战
 weight: 50
 bookCollapseSection: false
 bookFlatSection: true
@@ -7,7 +7,7 @@ bookToc: false
 noTocArea: true
 ---
 
-## 项目实践：把“会用工具”变成“能交付成果”
+## 项目实战：把“会用工具”变成“能交付成果”
 
 面向有经验开发者的目标很简单：**用 AI 把一个项目从 0 跑到可交付**，并把过程沉淀成你自己的 SOP。
 
@@ -16,7 +16,7 @@ noTocArea: true
 - **开工包**：选定工具后，10 分钟级跑通 Cursor / Codex / Kiro  
 - **交付闭环**：路线图 → 案例练手 → 最佳实践 / 配置集 → 需求到原型  
 
-选型与套餐请回 **[入门与选型]({{< relref "ai-programming/_index" >}})**；环境卡壳回 **[环境与工具]({{< relref "setup/_index" >}})**。
+选型与套餐请回 **[选型与上手]({{< relref "ai-programming/_index" >}})**；环境卡壳回 **[环境配置]({{< relref "setup/_index" >}})**。
 
 ## 先从哪里开始？（按目标直达）
 

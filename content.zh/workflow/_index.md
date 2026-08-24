@@ -1,5 +1,5 @@
 ---
-title: 🤝 协作工作流
+title: 🤝 协作流程
 weight: 30
 bookToc: false
 noTocArea: true
@@ -7,15 +7,15 @@ bookCollapseSection: false
 bookFlatSection: true
 ---
 
-## 协作工作流：把“会用 AI”变成“能稳定协作交付”
+## 协作流程：把“会用 AI”变成“能稳定协作交付”
 
 当你已经会用模型、也配好了环境，下一步不是继续堆工具，而是把 **任务拆解、角色分工、上下文传递、验证闭环** 这套流程跑顺。  
 本栏目聚焦的就是这件事：如何把 Claude、Codex、Gemini 这类模型，以及 Rules、Skills、MCP、Specs 等机制，组织成可复用、可迭代、可交付的工作流。
 
 你可以把这里理解成站内的“编排层”：
 
-- 上游承接 **[入门与选型]({{< relref "ai-programming/_index" >}})** / **[环境与工具]({{< relref "setup/_index" >}})**
-- 下游连接 **[项目实践]({{< relref "project-practice/_index" >}})** 与 **[Agent 工程]({{< relref "agent/_index" >}})**
+- 上游承接 **[选型与上手]({{< relref "ai-programming/_index" >}})** / **[环境配置]({{< relref "setup/_index" >}})**
+- 下游连接 **[项目实战]({{< relref "project-practice/_index" >}})** 与 **[Agent 工程]({{< relref "agent/_index" >}})**
 - 中间解决的核心问题是：**多人/多 Agent 怎么协作，复杂任务怎么收敛，长期项目怎么降低返工**
 
 ## 先从哪里开始？（按目标直达）
@@ -24,7 +24,7 @@ bookFlatSection: true
 
 - [工作流项目集]({{< relref "workflow/ccg-workflow" >}})  
   这是本栏最适合先看的总入口：把常见工作流项目按定位串起来，便于先建立全景地图。
-- [入门与选型]({{< relref "ai-programming/_index" >}}) · [环境与工具]({{< relref "setup/_index" >}})  
+- [选型与上手]({{< relref "ai-programming/_index" >}}) · [环境配置]({{< relref "setup/_index" >}})
   若模型、环境、CLI 还没配顺，建议先回这两栏补齐底座。
 
 ### 2. 想直接上强度：把多模型 / 多 Agent 真正编排起来
@@ -44,8 +44,8 @@ bookFlatSection: true
   偏规格驱动和上下文工程，强调从任务拆解到执行验证的闭环治理。
 - [Superpowers]({{< relref "workflow/superpowers" >}})  
   偏 Skills 驱动的软件开发工作流，适合把 SOP、能力模块和工具调用结构化下来。
-- [项目实践]({{< relref "project-practice/_index" >}})  
-  如果你更关心“如何在真实项目里跑通”，可以再连到项目实践栏目。
+- [项目实战]({{< relref "project-practice/_index" >}})
+  如果你更关心“如何在真实项目里跑通”，可以再连到项目实战栏目。
 
 ## 工作流索引
 

@@ -1,5 +1,5 @@
 ---
-title: 案例练手：免费 AI 编程闭环
+title: AI 编程案例
 weight: 20
 bookHidden: true
 ---

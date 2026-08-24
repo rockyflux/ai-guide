@@ -21,16 +21,16 @@ bookHidden: false
 - **先把环境跑起来**：只看这篇  
   - [开发环境准备]({{< relref "setup/dev-start" >}})
 - **然后做一次小练手（需求 → 任务 → 开发）**  
-  - [项目实践：从一个具体案例开始]({{< relref "project-practice/practices-one" >}})
+  - [AI 编程案例]({{< relref "project-practice/practices-one" >}})
 
 ### 路线 B｜标准端到端（推荐新手默认走这条）
 
 - **读一篇总览（知道你在做什么）**  
-  - [项目实践栏目说明]({{< relref "project-practice/_index" >}})
+  - [项目实战栏目说明]({{< relref "project-practice/_index" >}})
 - **用一套可复用的协作习惯来做项目**  
   - [Claude Code 最佳实践]({{< relref "project-practice/best-practices" >}})
 - **按“练手 → 完整纪实”跑完第一次闭环**  
-  - [项目实践：从一个具体案例开始]({{< relref "project-practice/practices-one" >}})  
+  - [AI 编程案例]({{< relref "project-practice/practices-one" >}})
   - **本篇（后续补齐）：个人开发者用 AI 做完第一个小项目（完整纪实）**
 
 ### 路线 C｜准备长期用（进阶）
@@ -51,4 +51,3 @@ bookHidden: false
   - [CLI 代理 API（CPA）]({{< relref "setup/cpa" >}})
 
 最终目标很简单：**先完成一次“从想法到交付”的闭环**，再谈体系化与进阶。
-

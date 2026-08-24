@@ -4,7 +4,7 @@
 
 **面向有经验开发者的任务导向中文指南**
 
-选模型与工具 → 搭环境接模型 → 协作工作流 → Agent 工程 → 项目实践闭环
+选模型与工具 → 搭环境接模型 → 协作流程 → Agent 工程 → 项目实战闭环
 
 [![在线阅读](https://img.shields.io/badge/在线阅读-ai--guide.180813.xyz-blue?style=for-the-badge)](https://ai-guide.180813.xyz/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -24,16 +24,16 @@
 
 ![AI Guide](static/images/index/flow.png)
 
-## 六条主线
+## 七条主线
 
 | 主线 | 解决什么问题 |
 | --- | --- |
-| [入门与选型](https://ai-guide.180813.xyz/ai-programming/) | 上手、选模型、选工具 / 套餐、控成本 |
-| [环境与工具](https://ai-guide.180813.xyz/setup/) | 开发环境、WSL、供应商切换与增强工具 |
-| [协作工作流](https://ai-guide.180813.xyz/workflow/) | 多模型协作、多 Agent 编排、规格驱动闭环 |
+| [选型与上手](https://ai-guide.180813.xyz/ai-programming/) | 上手、选模型、选工具 / 套餐、控成本 |
+| [环境配置](https://ai-guide.180813.xyz/setup/) | 开发环境、WSL、供应商切换与增强工具 |
+| [协作流程](https://ai-guide.180813.xyz/workflow/) | 多模型协作、多 Agent 编排、规格驱动闭环 |
 | [Agent 工程](https://ai-guide.180813.xyz/agent/) | Rules / Skills / MCP / Hooks / Subagents |
-| [项目实践](https://ai-guide.180813.xyz/project-practice/) | 从案例到 SOP，把 AI 用进真实交付 |
-| [学习与资源](https://ai-guide.180813.xyz/tutorials/) | 系统学习、社区资源与 Awesome 合集 |
+| [项目实战](https://ai-guide.180813.xyz/project-practice/) | 从案例到 SOP，把 AI 用进真实交付 |
+| [学习资源](https://ai-guide.180813.xyz/tutorials/) | 系统学习、社区资源与 Awesome 合集 |
 
 ### 1. 选模型、选工具、控成本
 
@@ -53,7 +53,7 @@
 
 ### 3. 把「对话」升级成可交付工作流
 
-- [协作工作流入口](https://ai-guide.180813.xyz/workflow/) — 编排与闭环工具总索引
+- [协作流程入口](https://ai-guide.180813.xyz/workflow/) — 编排与闭环工具总索引
 - [工作流项目集](https://ai-guide.180813.xyz/workflow/ccg-workflow/) — 协作类项目列表与选型
 - [CCG](https://ai-guide.180813.xyz/workflow/ccg/) · [GSD](https://ai-guide.180813.xyz/workflow/gsd/) · [Superpowers](https://ai-guide.180813.xyz/workflow/superpowers/)
 - [oh-my-claudecode](https://ai-guide.180813.xyz/workflow/oh-my-claudecode/) · [Trellis](https://ai-guide.180813.xyz/workflow/trellis/)
@@ -79,12 +79,12 @@
 ```text
 ai-guide/
 ├── content.zh/          # 中文内容（Markdown）
-│   ├── ai-programming/  # 入门与选型（含选模型）
-│   ├── setup/           # 环境与工具
-│   ├── workflow/        # 协作工作流
+│   ├── ai-programming/  # 选型与上手（含选模型）
+│   ├── setup/           # 环境配置
+│   ├── workflow/        # 协作流程
 │   ├── agent/           # Agent 工程
-│   ├── project-practice/# 项目实践
-│   ├── tutorials/       # 学习与资源
+│   ├── project-practice/# 项目实战
+│   ├── tutorials/       # 学习资源
 │   ├── large-models/    # 归档（侧栏隐藏）
 │   └── open-source-community/  # 归档（侧栏隐藏）
 ├── layouts/             # 主题局部覆盖

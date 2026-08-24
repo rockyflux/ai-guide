@@ -7,17 +7,17 @@ noTocArea: true
 ---
 
 <br>
-欢迎来到《AI 编程指南》。这里按「任务」组织内容：选模型与工具 → 搭环境接模型 → 协作工作流 → Agent 工程化 → 用项目实践跑通闭环。
+欢迎来到《AI 编程指南》。这里按「任务」组织内容：选模型与工具 → 搭环境接模型 → 协作流程 → Agent 工程化 → 用项目实战跑通闭环。
 
 ## 先从这里开始（7 条主线）
 
-- **[入门与选型]({{< relref "ai-programming/_index" >}})**：上手体感、选模型、选工具 / 套餐、控成本。
-- **[AI 产品]({{< relref "ai-products/_index" >}})**：办公桌面 Agent、对话聊天、超级智能体、绘图视频与开发周边选型。
-- **[环境与工具]({{< relref "setup/_index" >}})**：开发环境、WSL、供应商切换与增强工具，尽量一次配到位。
-- **[协作工作流]({{< relref "workflow/_index" >}})**：CCG、GSD、Superpowers、Trellis、oh-my-claudecode 等多模型 / 多 Agent 编排。
+- **[选型与上手]({{< relref "ai-programming/_index" >}})**：上手体感、选模型、选工具 / 套餐、控成本。
+- **[AI 应用]({{< relref "ai-products/_index" >}})**：办公桌面 Agent、对话聊天、超级智能体、绘图视频与开发周边选型。
+- **[环境配置]({{< relref "setup/_index" >}})**：开发环境、WSL、供应商切换与增强工具，尽量一次配到位。
+- **[协作流程]({{< relref "workflow/_index" >}})**：CCG、GSD、Superpowers、Trellis、oh-my-claudecode 等多模型 / 多 Agent 编排。
 - **[Agent 工程]({{< relref "agent/_index" >}})**：Rules / Skills / MCP / Hooks / Subagents，让 AI 能在项目里持续干活。
-- **[项目实践]({{< relref "project-practice/_index" >}})**：用真实案例与可复用 SOP，把“会用工具”升级为“能交付成果”。
-- **[学习与资源]({{< relref "tutorials/_index" >}})**：系统学习路线、社区资源与 Awesome 合集。
+- **[项目实战]({{< relref "project-practice/_index" >}})**：用真实案例与可复用 SOP，把“会用工具”升级为“能交付成果”。
+- **[学习资源]({{< relref "tutorials/_index" >}})**：系统学习路线、社区资源与 Awesome 合集。
 
 ## 我现在要做什么？（按阶段直达）
 
@@ -48,8 +48,8 @@ noTocArea: true
   - [CC-Switch 可视化配置]({{< relref "setup/cc-switch" >}})：用 UI 管理 MCP/Skills/Prompts 与多供应商配置。
   - [CLI 代理 API（CPA）]({{< relref "setup/cpa" >}})：把订阅统一为 API，多端复用（IDE/CLI）。
 
-- **4) 把“对话”变成“可交付”（协作工作流 + Agent 编排）**
-  - [协作工作流（栏目入口）]({{< relref "workflow/_index" >}})：多模型协作、规格驱动与工具链编排的一站式索引。
+- **4) 把“对话”变成“可交付”（协作流程 + Agent 编排）**
+  - [协作流程（栏目入口）]({{< relref "workflow/_index" >}})：多模型协作、规格驱动与工具链编排的一站式索引。
   - [工作流项目集]({{< relref "workflow/ccg-workflow" >}})：围绕 Claude Code / Codex / Gemini CLI 等构建的协作类项目列表与选型提示。
   - [CCG 多模型协作开发]({{< relref "workflow/ccg" >}})：Claude + Codex + Gemini 路由与命令集。
   - [GSD（Get Shit Done）]({{< relref "workflow/gsd" >}})：元提示、上下文工程与规格驱动。
@@ -81,7 +81,7 @@ noTocArea: true
   - [AI 资源与工具指南]({{< relref "tutorials/ai-resources-guide" >}})：站内精选 + 常用社区/工具/资讯。
   - [GitHub 周边工具速查]({{< relref "tutorials/github-extensions" >}})：加速、仓库阅读与效率工具。
   - [Awesome LLM Apps]({{< relref "tutorials/awesome-llm-apps" >}})：优秀应用与灵感库。
-  - [Awesome OpenClaw 使用案例]({{< relref "ai-products/awesome-openclaw" >}})：OpenClaw 生态分支速览（亦见 **[AI 产品]({{< relref "ai-products/_index" >}})**）。
+  - [Awesome OpenClaw 使用案例]({{< relref "ai-products/awesome-openclaw" >}})：OpenClaw 生态分支速览（亦见 **[AI 应用]({{< relref "ai-products/_index" >}})**）。
 
 ## 支持我们
 

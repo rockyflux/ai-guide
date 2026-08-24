@@ -1,5 +1,5 @@
 ---
-title: CCG
+title: CCG 多模型协作
 weight: 10
 bookToc: false
 noTocArea: true
