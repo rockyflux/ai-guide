@@ -31,6 +31,7 @@ noTocArea: true
 - [新手端到端项目实战路径]({{< relref "project-practice/practices-two" >}}) — 站内内容按闭环顺序串起来的路线图
 - [案例练手：免费 AI 编程闭环]({{< relref "project-practice/practices-one" >}}) — 小项目练拆解、验证与协作
 - [从需求到设计原型]({{< relref "project-practice/requirements-to-design-prototype" >}}) — 产品视角到可交付界面原型
+- [AI 办公实战指南]({{< relref "project-practice/ai-office-practice" >}}) — 桌面 Agent + 企微 / 钉钉 / 飞书 CLI 打通办公全链路
 
 ### 3) 更稳：少返工的项目级打法
 
