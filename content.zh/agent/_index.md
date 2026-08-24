@@ -1,18 +1,18 @@
 ---
-title: 🤖 Agent 工程
+title: 🤖 Agent 构建
 weight: 40
 bookCollapseSection: false
 bookFlatSection: true
 ---
 
-> **和「协作流程」的区别**：本栏是积木（Rules / Skills / MCP 等机制）；那边是成品编排（CCG / GSD / Superpowers 等产品化工作流）。先懂积木，再选编排；或先跟工作流跑起来，再回这里补机制。
+> **和「工作流与编排」的区别**：本栏是积木（Rules / Skills / MCP 等机制）；那边是成品编排（CCG / GSD / Superpowers 等产品化工作流）。先懂积木，再选编排；或先跟工作流跑起来，再回这里补机制。
 
 ## 省流版
 
 - **Prompt**：「**每次都要说**」
 - **Rules**：「**永远生效**」
 - **Agent**：「**负责思考和行动，但会遵守你给的规矩**」
-- **Claude.md**：「**告诉它你是谁、你在什么环境下工作**」
+- **CLAUDE.md**：「**告诉它你是谁、你在什么环境下工作**」
 - **Skill**：「**告诉它这类事情要按什么流程来，不能乱来**」
 - **MCP**：「**让它真的能读文件、跑命令、调接口**」
 
@@ -22,17 +22,17 @@ bookFlatSection: true
 | 概念 | 类比 | 核心作用 |
 | --- | --- | --- |
 | Agent | 打工人 | 理解任务、分析问题、做决策 |
-| Claude.md | 企业文化 / 业务定位 | 给员工一个长期稳定的大方向 |
+| CLAUDE.md | 企业文化 / 业务定位 | 给员工一个长期稳定的大方向 |
 | Skill | SOP / 内部流程文档 | 规定某类事情必须 / 禁止怎么做 |
 | MCP | 电脑 / 手机 / 内部系统 | 生产工具，高效解决问题 |
 
 **一句话总结：**
 
-> **Agent 是 “人”，Claude.md 是 “环境”，Skill 是 “规矩”，MCP 是 “工具”。**
+> **Agent 是 “人”，CLAUDE.md 是 “环境”，Skill 是 “规矩”，MCP 是 “工具”。**
 
-## 如何判断 Skill / Claude.md / Prompt 的使用场景
+## 如何判断 Skill / CLAUDE.md / Prompt 的使用场景
 
-| 判断维度 | Claude.md | Skill | Prompt |
+| 判断维度 | CLAUDE.md | Skill | Prompt |
 | --- | --- | --- | --- |
 | 作用半径 | 全项目 / 全会话 | 某一类任务 | 当前一次对话 |
 | 是否长期稳定 | 是 | 通常是 | 否 |
@@ -50,12 +50,12 @@ bookFlatSection: true
 
 | 规则示例 | 正确位置 | 原因 |
 | --- | --- | --- |
-| 使用 Windows，命令用 PowerShell | Claude.md | 环境常量 |
-| 代码风格：可读性优先 | Claude.md | 长期风格约束 |
+| 使用 Windows，命令用 PowerShell | CLAUDE.md | 环境常量 |
+| 代码风格：可读性优先 | CLAUDE.md | 长期风格约束 |
 | 修改前声明 Allow / Deny 文件 | Skill | 执行边界控制 |
 | 多 Agent 协作避免修改同一文件 | Skill | 执行阶段约束 |
 | 输出前请自检逻辑 | Prompt | 成本高、非必需 |
-| 尽量简洁回答 | Prompt / Claude.md | 表达偏好 |
+| 尽量简洁回答 | Prompt / CLAUDE.md | 表达偏好 |
 | 本次只读代码不允许修改 | Prompt 或 Skill | 场景性限制 |
 
 ---

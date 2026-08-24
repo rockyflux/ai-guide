@@ -15,6 +15,7 @@ bookHidden: false
 
 - [系统学习 AI 知识资源指南]({{< relref "tutorials/ai-learning-guide" >}}) — 🔥精选各大 AI 公司和顶尖机构的官方学习资源，帮助你从入门到精通系统掌握 AI 知识。
 - [精选 LLM 应用集]({{< relref "tutorials/awesome-llm-apps" >}}) — LLM 开源应用生态应用集合
+- [菜鸟教程 AI / 智能开发]({{< relref "tutorials/runoob-online-tutorials" >}}) — RUNOOB 中文 AI 教程速查表
 
 **通用 / 开源社区**
 - [HelloGitHub](https://hellogithub.com/) — 发现和分享有趣、入门级开源项目的社区，提供月刊、榜单与精选项目推荐

@@ -10,12 +10,12 @@ bookHidden: true
 
 ## 豆包 AI 绘图闭环小练习
 
-目标：**从 0 到拿到一张「无水印」AI 图**，按「生成提示词 → 出图 → 无水印下载」走一遍流程。本文以豆包为主线；跑通后若要体验中文排版更强、分辨率更高的 **GPT-Image-2**，可看进阶篇 **[GPT-Image2.0]({{< relref "project-practice/gpt-image" >}})**（可用站点、提示词库与费用对比已汇总）。
+目标：**从 0 到拿到一张「无水印」AI 图**，按「生成提示词 → 出图 → 无水印下载」走一遍流程。本文以豆包为主线；跑通后若要体验中文排版更强、分辨率更高的 **GPT-Image-2**，可看进阶篇 **[GPT-Image-2]({{< relref "project-practice/gpt-image" >}})**（可用站点、提示词库与费用对比已汇总）。
 
 会用到这些工具：
 
 - **提示词生成器 / 提示词库**：[ai.codefather.cn/painting](https://ai.codefather.cn/painting) 或 [Banana Prompt Quicker](https://glidea.github.io/banana-prompt-quicker) 或 [Promptoy 模板库](https://promptoy.com/app/templates)；按模型浏览成品提示词时可看 [YouMind 图像提示词库](https://youmind.com/zh-CN/prompts/image)（覆盖 GPT Image、Nano Banana Pro、Seedream 等，支持站内 AI 搜索与排序）；专用于 GPT-Image-2 的库见 [awesome-gpt-image-2](https://github.com/YouMind-OpenLab/awesome-gpt-image-2) 与 [YouMind GPT-Image-2 提示词](https://youmind.com/zh-CN/gpt-image-2-prompts)
-- **绘图平台**：豆包 AI（[doubao.com/chat/create-image](https://www.doubao.com/chat/create-image)）；进阶可选 GPT-Image-2（站点与费用见 [GPT-Image2.0]({{< relref "project-practice/gpt-image" >}})）
+- **绘图平台**：豆包 AI（[doubao.com/chat/create-image](https://www.doubao.com/chat/create-image)）；进阶可选 GPT-Image-2（站点与费用见 [GPT-Image-2]({{< relref "project-practice/gpt-image" >}})）
 - **无水印下载脚本/扩展**：[无印豆包（doubao-nomark）](https://github.com/ihmily/doubao-nomark)（油猴脚本 / Edge 扩展 / 本地 API，支持图片与视频）；备选 [豆包下载器](https://github.com/LauZzL/doubao-downloader) 油猴脚本
 
 ---
@@ -110,4 +110,4 @@ bookHidden: true
 
 - 实战案例（豆包）：[白板手绘风格的前端开发流程](https://www.doubao.com/thread/w9e5eb8e975fb1fdb) , [吉伊卡哇风格科普插画](https://www.doubao.com/thread/wff08465288bcc53d)
 - 实战案例（Gemini）：[Nano Banana 2 吉伊卡哇风格科普插画](https://gemini.google.com/share/7f284e2b5718)
-- 实战案例（GPT-Image-2）：见 [GPT-Image2.0]({{< relref "project-practice/gpt-image" >}}) 中的「实际案例教程」
+- 实战案例（GPT-Image-2）：见 [GPT-Image-2]({{< relref "project-practice/gpt-image" >}}) 中的「实际案例教程」

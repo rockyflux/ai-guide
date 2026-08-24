@@ -26,7 +26,7 @@ bookHidden: false
 ### 路线 B｜标准端到端（推荐新手默认走这条）
 
 - **读一篇总览（知道你在做什么）**  
-  - [项目实战栏目说明]({{< relref "project-practice/_index" >}})
+  - [项目实践与案例栏目说明]({{< relref "project-practice/_index" >}})
 - **用一套可复用的协作习惯来做项目**  
   - [Claude Code 最佳实践]({{< relref "project-practice/best-practices" >}})
 - **按“练手 → 完整纪实”跑完第一次闭环**  

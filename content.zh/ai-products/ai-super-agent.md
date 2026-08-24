@@ -1,14 +1,14 @@
 ---
-title: AI 超级智能体
+title: AI 智能体平台
 weight: 13
 bookToc: false
 noTocArea: true
 bookHidden: false
 ---
 
-## AI 超级智能体：对比与选型
+## AI 智能体平台：对比与选型
 
-「超级智能体」指能**自主规划、调用工具、操作界面并交付成果**的 Agent 产品，而不止于聊天问答。与 [AI 办公桌面端]({{< relref "ai-products/ai-office-desktop" >}}) 有重叠，但侧重云端长任务、GUI 操控与多步交付。
+「AI 智能体平台」指能**自主规划、调用工具、操作界面并交付成果**的 Agent 产品，而不止于聊天问答。与 [AI 办公桌面端]({{< relref "ai-products/ai-office-desktop" >}}) 有重叠，但侧重云端长任务、GUI 操控与多步交付。
 
 ## 速览对比表
 

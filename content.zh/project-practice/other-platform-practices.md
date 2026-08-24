@@ -30,4 +30,4 @@ bookHidden: true
 
 - [开发者调用远程 MCP](https://open.feishu.cn/document/mcp_open_tools/developers-call-remote-mcp-server) — 官方远程 MCP、云文档等工具与接入说明。
 
-更多站内路径见 [项目实战]({{< relref "project-practice/_index" >}})。外站内容以原页面为准。
+更多站内路径见 [项目实践与案例]({{< relref "project-practice/_index" >}})。外站内容以原页面为准。

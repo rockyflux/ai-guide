@@ -1,5 +1,5 @@
 ---
-title: 🧰 选型与上手
+title: 🧰 模型与工具选型
 weight: 10
 bookToc: false
 noTocArea: true
@@ -7,9 +7,9 @@ bookCollapseSection: false
 bookFlatSection: true
 ---
 
-## 选型与上手：先搞清楚用什么
+## 模型与工具选型：先搞清楚用什么
 
-按 **上手体感 → 选模型 → 选工具 / 套餐 → 控成本** 组织。配环境请进入 **[环境配置]({{< relref "setup/_index" >}})**；多模型编排见 **[协作流程]({{< relref "workflow/_index" >}})**。
+按 **上手体感 → 选模型 → 选工具 / 套餐 → 控成本** 组织。配环境请进入 **[环境配置]({{< relref "setup/_index" >}})**；多模型编排见 **[工作流与编排]({{< relref "workflow/_index" >}})**。
 
 > 完整学习路径（与本页互补）：[AI 编程学习路径]({{< relref "ai-programming/guide" >}})
 
@@ -34,7 +34,7 @@ bookFlatSection: true
 - [AI 大模型 API 聚合平台]({{< relref "ai-programming/api-aggregation-platforms" >}}) — OpenRouter、小马算力、DMXAPI 等
 - [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}}) — 免费额度与 Token 优化
 
-> 非编程办公场景（WorkBuddy、DuMate、千问办公等）见 **[AI 应用]({{< relref "ai-products/_index" >}})**。
+> 非编程办公场景（WorkBuddy、DuMate、千问办公等）见 **[AI 应用选型]({{< relref "ai-products/_index" >}})**。
 
 ### 选完工具 → 10 分钟跑通（开工包）
 
@@ -42,10 +42,10 @@ bookFlatSection: true
 - [Codex 实战上手]({{< relref "project-practice/codex" >}})
 - [Kiro 实战]({{< relref "project-practice/kiro-practice" >}})
 
-正文仍在 **[项目实战]({{< relref "project-practice/_index" >}})**；这里只负责「选型后立刻上手」。
+正文仍在 **[项目实践与案例]({{< relref "project-practice/_index" >}})**；这里只负责「选型后立刻上手」。
 
 ### 下一步
 
 - [环境配置]({{< relref "setup/_index" >}}) — 把选型落成可复用配置（含 CPA 网关）
-- [协作流程]({{< relref "workflow/_index" >}}) — 多模型 / 多 Agent 编排
+- [工作流与编排]({{< relref "workflow/_index" >}}) — 多模型 / 多 Agent 编排
 - [学习资源]({{< relref "tutorials/_index" >}}) — 系统学习与站外资源

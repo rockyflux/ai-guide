@@ -9,10 +9,10 @@ bookHidden: true
 
 ## AI 编程学习路径
 
-本栏目按**从零上手到稳定产出**的顺序组织：先建立 AI 体感 → 选模型/工具 → **[环境配置]({{< relref "setup/_index" >}})** → **[协作流程]({{< relref "workflow/_index" >}})** → 进阶学习。
+本栏目按**从零上手到稳定产出**的顺序组织：先建立 AI 体感 → 选模型/工具 → **[环境配置]({{< relref "setup/_index" >}})** → **[工作流与编排]({{< relref "workflow/_index" >}})** → 进阶学习。
 如果你完全没概念，从 **0** 开始；第一次配环境建议按 **1 → 2** 顺序阅读后进入环境栏。
 
-> 与 **[选型与上手]({{< relref "ai-programming/_index" >}})** 栏目入口互补；本页作为学习路线入口收录在侧栏中。
+> 与 **[模型与工具选型]({{< relref "ai-programming/_index" >}})** 栏目入口互补；本页作为学习路线入口收录在侧栏中。
 
 ### 0. 先建立体感（非程序员也适用）
 - [新手如何快速上手 AI]({{< relref "ai-programming/ai-beginner" >}}) — 从会聊天到提效：体感 → 模型生态 → 客户端 → 智能体 → 如何描述问题
@@ -35,10 +35,10 @@ bookHidden: true
 - [API 聚合平台]({{< relref "ai-programming/api-aggregation-platforms" >}})
 - [ZCF]({{< relref "setup/zcf" >}}) · [CC-Switch]({{< relref "setup/cc-switch" >}}) · [CPA]({{< relref "setup/cpa" >}})
 
-### 3. 方法论与协作流程（从能用到好用）
+### 3. 方法论与工作流（从能用到好用）
 
 - [Vibe Coding 指南]({{< relref "ai-programming/vibe-coding" >}}) — 规划驱动、AI 结对编程方法论
-- [协作流程（栏目入口）]({{< relref "workflow/_index" >}}) — CCG、GSD、Superpowers、Trellis、OMC 等编排与闭环工具索引
+- [工作流与编排（栏目入口）]({{< relref "workflow/_index" >}}) — CCG、GSD、Superpowers、Trellis、OMC 等编排与闭环工具索引
 - [工作流项目集]({{< relref "workflow/ccg-workflow" >}}) — 多 Agent 分工协作、任务闭环与项目选型
 - [CCG 多模型协作开发]({{< relref "workflow/ccg" >}}) — Claude + Codex + Gemini 编排
 - [GSD（Get Shit Done）]({{< relref "workflow/gsd" >}}) — 元提示、上下文工程与规格驱动

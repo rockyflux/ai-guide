@@ -142,7 +142,7 @@ AI 已经不只是一个聊天工具，而正在成为一个可以帮助我们�
 
 ---
 
-## 4. 体验超级智能体：理解 AI 自动完成任务
+## 4. 体验 AI 智能体平台：理解 AI 自动完成任务
 
 当你理解大模型之后，可以进一步体验智能体。
 
@@ -164,7 +164,7 @@ AI 已经不只是一个聊天工具，而正在成为一个可以帮助我们�
 
 > 可以执行任务的数字员工。
 
-站内延伸：[AI 超级智能体]({{< relref "ai-products/ai-super-agent" >}}) · [Awesome OpenClaw 使用案例]({{< relref "ai-products/awesome-openclaw" >}})
+站内延伸：[AI 智能体平台]({{< relref "ai-products/ai-super-agent" >}}) · [Awesome OpenClaw 使用案例]({{< relref "ai-products/awesome-openclaw" >}})
 
 ---
 

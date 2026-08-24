@@ -1,12 +1,12 @@
 ---
-title: GPT-Image2.0
+title: GPT-Image-2
 date: 2026-05-13
 weight: 85
 bookToc: true
 bookHidden: false
 ---
 
-## GPT-Image2.0
+## GPT-Image-2
 
 > 2026 年 4 月 22 日，OpenAI 祭出一枚深水炸弹——ChatGPT Images 2.0（代號 gpt-image-2）正式上线，现在又进化了。这不仅是 DALL-E 3 的继任者，更是一次从根上重做的架构革命。一个“长了脑子”的图像模型，意味着设计师可以告别“AI 产物一看就是假货”的尴尬，也让开发者们迎来了视觉生产力全面爆发的拐点。
 
