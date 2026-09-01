@@ -36,6 +36,8 @@ bookHidden: false
 | DaVinci AI | DaVinci | 免费在线文生图 / 图生视频 | [davinci.best](https://www.davinci.best/?lang=zh) |
 | PixPix | PixPix | 电商一站式 AI 做图做视频工作台 | [pixpix.com](https://www.pixpix.com/zh-CN/workbench) |
 | 栖影 AI | 星链引擎 | 电商图视频、集成多模型图生视频 | [qiyinghub.com](https://qiyinghub.com/) |
+| Miora | Miora | Agent 化创意工作室、带记忆的多轮创作 | [miora.design](https://miora.design/) |
+| 椒图 AI | 枫潮科技 | 对话修图、电商套图、抠图扩图、虚拟试衣 | [jiaotu.ai](https://jiaotu.ai/) |
 
 ## 选型建议
 

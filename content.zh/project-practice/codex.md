@@ -50,6 +50,10 @@ Codex CLI 依赖系统 PATH 里的 [`rg`](https://github.com/BurntSushi/ripgrep)
 
 想给 Codex 桌面端换背景皮肤：社区 **[Codex Dream Skin](https://github.com/Fei-Away/Codex-Dream-Skin)**（本机 CDP 注入，不改官方安装包）。
 
+#### 配套工具：AiMaMi（Codex 伴侣）
+
+不想手改 `~/.codex` 下的 TOML/JSON 时，可用社区桌面伴侣 **[AiMaMi](https://github.com/borawong/AiMaMi)**：账号切换与配额、智能路由与中转、会话清理、MCP/Skills、插件与 `AGENTS.md` 自定义指令；支持 macOS / Windows（Linux 尽力支持）。更多同类增强见：[环境增强工具集]({{< relref "setup/env-and-tools" >}})。
+
 #### Windows 桌面端补丁恢复（codex-windows-fast-patch Skill）
 
 Microsoft Store 版 Codex 升级后若 Fast Mode、中文界面、插件市场、Browser / Computer Use、远程连接等被门控关掉，可用社区 Skill **[codex-windows-fast-patch-skill](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill)**（Windows MSIX / ASAR 补丁与 `config.toml` 修复；走 CPA 时还需上游强制 `service_tier = priority`，见 [CPA]({{< relref "setup/cpa" >}})）。
@@ -162,6 +166,7 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 - 开源仓库：[github.com/openai/codex](https://github.com/openai/codex)
 - 桌面端增强（社区）：[github.com/BigPizzaV3/CodexPlusPlus](https://github.com/BigPizzaV3/CodexPlusPlus)（Codex++）
 - 桌面端换肤（社区）：[github.com/Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin)（Codex Dream Skin）
+- Codex 伴侣（社区）：[github.com/borawong/AiMaMi](https://github.com/borawong/AiMaMi)（AiMaMi）
 - Windows 桌面端补丁恢复 Skill（社区）：[github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill)
 - Skills 文档：[developers.openai.com/codex/skills](https://developers.openai.com/codex/skills)
 - ripgrep（`rg`）：[github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)

@@ -19,6 +19,7 @@ bookHidden: false
 | WorkBuddy | 腾讯 | 全场景办公工作台，打通腾讯文档 / 企微 / 会议 | 1115 | [codebuddy.cn/work](https://www.codebuddy.cn/work/) |
 | 百度搭子 DuMate | 百度 | 检索、文档、数据分析、PPT 等复杂办公任务 | 674 | [dumate.cn](https://www.dumate.cn/) |
 | TraeWork | 字节 | 办公 + 代码 + 设计，多端协作 | 266 | [trae.cn/work](https://www.trae.cn/work) |
+| 豆包工作 | 字节 | 飞书生态 AI Agent，调研 / 文档 / PPT / 电脑与浏览器操作 | — | [doubao.com/work](https://www.doubao.com/work) |
 | 扣子 Coze | 字节 | 零代码搭建办公 Bot 与工作流 | 217 | [coze.cn](https://www.coze.cn) |
 | QoderWork | 阿里 | 钉钉企业办公，知识库与团队协作（已并入千问办公） | 189 | [qwenwork.cn](https://qwenwork.cn) |
 | QClaw | 腾讯 | 桌面自动化，模拟操作、微信远控 | 159 | [qclaw.qq.com](https://qclaw.qq.com) |
@@ -42,4 +43,5 @@ bookHidden: false
 1. **综合办公**：WorkBuddy、百度搭子 DuMate — 体量最大、场景覆盖广。
 2. **自定义工作流**：扣子、TraeWork — 适合个性化与创新型需求。
 3. **企业 / 钉钉生态**：QoderWork、千问办公（均已整合至 [qwenwork.cn](https://qwenwork.cn)）— 内部协作与文档交付。
-4. **桌面自动化**：QClaw、AutoClaw、EasyClaw 等 Claw 系 — 替代重复机械操作。
+4. **企业 / 飞书生态**：豆包工作 — 深度打通飞书消息 / 文档 / 知识库，可执行定时任务与电脑、浏览器操作。
+5. **桌面自动化**：QClaw、AutoClaw、EasyClaw 等 Claw 系 — 替代重复机械操作。

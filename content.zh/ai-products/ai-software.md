@@ -10,7 +10,7 @@ bookHidden: false
 
 ## AI 开发软件
 
-编码 Agent（Cursor / Claude Code / Codex）解决「写代码」；日常还要连库、登服务器、查日志。下面四款把 **AI 嵌进数据库客户端 / SSH 终端**，可按场景直接选。
+编码 Agent（Cursor / Claude Code / Codex）解决「写代码」；日常还要连库、登服务器、查日志。下面五款把 **AI 嵌进数据库客户端 / SSH 终端**，可按场景直接选。
 
 | 工具 | 一句话 | 官网 |
 |------|--------|------|
@@ -18,6 +18,7 @@ bookHidden: false
 | **Xterminal** | 国产桌面 SSH / 本地终端，AI 命令提示与解答 | [terminal.icu](https://www.terminal.icu/) |
 | **OrcaTerm** | 腾讯云网页 / 客户端终端，自然语言转命令、云上免密登录 | [orcaterm.cloud.tencent.com](https://orcaterm.cloud.tencent.com/terminal) |
 | **Netcatty** | 开源 AI SSH 工作空间，内置 Agent，可接 Claude Code / Codex | [netcatty.app/zh](https://netcatty.app/zh/) |
+| **NyaTerm** | 开源远程终端工作空间（Tauri），Ask / Agent 双模式 AI | [nyaterm.app](https://nyaterm.app) |
 
 ---
 
@@ -103,6 +104,25 @@ AI 相关能力（以官方文档为准）：
 
 ---
 
+### 5. NyaTerm：远程终端工作空间 + Ask / Agent
+
+[NyaTerm](https://nyaterm.app) 是开源（MIT）桌面远程终端工作空间（Tauri + React + Rust）：SSH / 本地终端 / Telnet / Serial / RDP / VNC、SFTP、隧道、OTP、加密同步，一套客户端管完。
+
+AI 助手（侧栏）：
+
+| 模式 | 说明 |
+|------|------|
+| **Ask** | 生成命令、解释选中输出、分析报错 |
+| **Agent** | 对当前会话做 observe → decide → run，多步终端工作流 |
+
+另有：结构化命令卡片（风险等级 + 审批执行）、`@` 引用其他会话进上下文、可配内置 / 自定义 OpenAI 兼容模型。适合要「全能终端工作空间 + 内置 AI」又不绑某一家云的人。
+
+下载覆盖 Windows / macOS / Linux；macOS 可用 `brew install nyakang/nyaterm/nyaterm`。
+
+仓库：[nyakang/nyaterm](https://github.com/nyakang/nyaterm) · 文档：[nyaterm.app/docs](https://nyaterm.app/en/docs/)
+
+---
+
 ### 怎么选？
 
 | 你的场景 | 优先 |
@@ -111,5 +131,6 @@ AI 相关能力（以官方文档为准）：
 | 本机 SSH 日常，要分组凭证 + 轻 AI | **Xterminal** |
 | 主要管腾讯云，要网页免密 / 协作 | **OrcaTerm** |
 | 多机运维，要内置 Agent 或接 Claude / Codex | **Netcatty** |
+| 要 SSH+SFTP+RDP/VNC 一体，自带 Ask/Agent | **NyaTerm** |
 
-可组合：用 **DBX MCP** 给 Cursor / Claude Code 喂库；用 **Netcatty / Xterminal / OrcaTerm** 管机器。Agent 概念与 MCP 配置见：[AI 智能体 · MCP]({{< relref "agent/mcp" >}})。
+可组合：用 **DBX MCP** 给 Cursor / Claude Code 喂库；用 **Netcatty / NyaTerm / Xterminal / OrcaTerm** 管机器。Agent 概念与 MCP 配置见：[AI 智能体 · MCP]({{< relref "agent/mcp" >}})。

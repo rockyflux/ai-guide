@@ -110,6 +110,7 @@ skill/employees/
 - [`skill-creator`](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：封装自己的 Skill；`npx skills add https://github.com/anthropics/skills --skill skill-creator`
 - [`agent-tools`](https://github.com/toolshell/skills)：Agent 常用小工具；`npx skills add https://github.com/toolshell/skills --skill agent-tools`
 - [`using-superpowers`](https://github.com/obra/superpowers) / [`brainstorming`](https://github.com/obra/superpowers)：工作流元能力与需求澄清；`npx skills add https://github.com/obra/superpowers --skill using-superpowers`
+- [Waza](https://github.com/tw93/Waza)：把常见工程习惯收成 8 个可链式调用的 Skill（`/think` 决策规划、`/ui` 前端审美、`/check` 合并前审查、`/hunt` 根因调试、`/write` 中英润色、`/learn` 调研写作、`/read` URL/PDF、`/health` Agent 健康审计）；比 Superpowers / gstack 更轻量；`npx skills add tw93/Waza -a claude-code codex cursor antigravity-cli -g -y`
 - [`mcp-builder`](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)：连接外部工具的 MCP 构建器
 - [Matt Pocock / skills](https://github.com/mattpocock/skills)：工程交付工作流（`grill-with-docs`、`to-prd`、`to-issues`、`tdd`、`diagnose`）；`npx skills add mattpocock/skills`
 - [Anthropic Skills](https://github.com/anthropics/skills)：官方技能实现与 `skill-creator` / `mcp-builder`

@@ -37,6 +37,7 @@ bookHidden: false
 - [Claude 中文网](https://www.claude-cn.org/) — Claude 资讯与交流
 - [学习 Cursor，拥抱 AI 编程](https://cursor101.com/zh) — Cursor 中文教程
 - [easy-vibe](https://datawhalechina.github.io/easy-vibe/zh-cn/) — Datawhale 出品的编程软件 / Vibe Coding 学习资源
+- [Vibe Vibe](https://www.vibevibe.cn/) — Vibe Coding / AI 创造教程：从零基础作品到全栈上线
 - [OpenCode 中文实战课](https://learnopencode.com/) — OpenCode 实战课程
 - [🔥awesome-openclaw]({{< relref "ai-products/awesome-openclaw" >}}) — OpenClaw 生态精选
 - [OpenClaw 真正能做事的 AI](https://clawd.org.cn/) — OpenClaw 社区站
@@ -54,4 +55,12 @@ bookHidden: false
 - [机器之心 AI 新闻](https://news.aibase.com/zh/news) — 中文 AI 新闻
 - [ReadHub - AI](https://readhub.cn/news/ai) — ReadHub AI 新闻
 - [AI 日报](https://ai-bot.cn/daily-ai-news/) — AI 工具集每日 AI 资讯
-- [rrorangeandfriends](https://rrorangeandfriends.de/) — 技术博客与分享
+
+---
+
+## 分享站
+
+- [A姐分享（ahhhhfs）](https://www.ahhhhfs.com/) — AI 工具、开源项目与效率软件评测 / 导航
+- [大橘和朋友们的周刊](https://rrorangeandfriends.de/) — 技术与 AI 相关周刊 / 分享
+- [通往 AGI 之路](https://waytoagi.feishu.cn/) — 飞书开源 AI 知识库与学习社区
+- [在 AI 时代，我是如何深入学习一个技术领域的](https://tw93.fun/2026-04-06/learn.html) — 用「收集 → 筛选 → 大纲 → 写作 → AI 收紧 → 自读发布」把输入变成输出

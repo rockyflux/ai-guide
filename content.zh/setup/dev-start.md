@@ -192,6 +192,7 @@ winget install jesseduffield.lazygit
 - [客户端：Clash Verge](https://www.clashverge.dev/install.html)
 - [客户端：Clash Party](https://clashparty.org/)
 - [客户端 FlClash：适用于 Clash 的多功能图形用户界面。](https://flclash.cc/download.html)
+- [NoMoreWalls](https://github.com/peasoft/NoMoreWalls) — 自动抓取合并互联网上的公开节点，提供 Clash Meta / Base64 等订阅（免费公开节点安全性无法保障，仅作学习交流；重要流量勿依赖）
 - [🚁🚀 2026低价机场推荐](https://github.com/DiningFactory/panda-vpn-pro)
 - [2026年便宜好用的翻墙机场推荐评测(科学上网长期更新)](https://www.ermao.net/posts/vpn/)
 - [最优的科学上网方案](https://github.com/githubvpn007/v2rayNvpn)
