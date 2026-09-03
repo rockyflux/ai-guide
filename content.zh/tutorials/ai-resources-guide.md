@@ -20,6 +20,7 @@ bookHidden: false
 **通用 / 开源社区**
 - [HelloGitHub](https://hellogithub.com/) — 发现和分享有趣、入门级开源项目的社区，提供月刊、榜单与精选项目推荐
 - [天池AI学习空间](https://tianchi.aliyun.com/course) 阿里云官方-天池AI学习空间
+- [学 AI 产品，从入门到精通](https://xueai.miyang.cn/slides/learn.html) — 小山学堂：AI 产品课程学习
 - [Datawhale](https://www.datawhale.cn/) — 开源学习社区
 - [AI System 全栈课程](https://infrasys-ai.github.io/aisystem-docs/) — 围绕英伟达 / 昇腾等芯片，从硬件体系、编译器、推理引擎到大模型与智能体的 AI 系统全栈课程大纲
 - [从零开始构建智能体](https://datawhalechina.github.io/hello-agents/) — 智能体入门与实战

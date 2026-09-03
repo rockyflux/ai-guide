@@ -37,16 +37,27 @@ bookHidden: false
 
 | 工具                        | 核心职能 | 使用场景 |
 |---------------------------|----------|----------|
+| **[Codegraph](https://github.com/colbymchenry/codegraph)** | 本地代码知识图谱（SQLite + tree-sitter），经 MCP 提供 explore/search/callers/callees/impact | 大仓导航、调用链与影响面分析；减少 Explore 的 grep/Read 扫描（100% 本地） |
 | **[universal-db-mcp](https://github.com/Anarkh-Lee/universal-db-mcp)** | 通用数据库 MCP：多库适配、schema 缓存、默认只读 | 在 Cursor 内用自然语言查表结构、执行只读 SQL、对接业务库（MySQL/PostgreSQL/达梦等） |
 | **[Context7](https://context7.com/)** | 为 LLM/代码编辑器注入「当前版本」的官方文档上下文（Upstash 项目） | 查某库最新 API/用法、降低过时示例与幻觉；写集成代码、对照文档改调用签名 |
 | **[mcp-feedback-enhanced](https://github.com/Minidoracat/mcp-feedback-enhanced)** | 反馈增强工具 | 本地定制化的反馈增强工具，支持长时间等待反馈、图片上传和断网重连功能。 |
 | **Sequential Thinking**   | 深度逻辑推理与决策链 | I 阶段方案推演、复杂 Bug 根因分析 |
 | **Time Server**           | 精确时间基准 | **强制**：所有日志必须使用，禁止猜测 |
+| **[tavily-remote-mcp](https://github.com/tavily-ai/tavily-mcp)** | Tavily 远程 MCP：search / extract / map / crawl / research | 实时网页检索、页面抽取、站点地图与多源调研（需 [Tavily API Key](https://www.tavily.com/)） |
+| **[anysearch](https://www.anysearch.com)** | 统一实时搜索 MCP：通用检索、垂直域、批量并行、URL 抽取 | 查新闻/文档、垂域（金融/CVE/学术等）、整页 Markdown 抽取；可匿名，有 Key 额度更高 |
 | **DeepWiki**              | 外部知识检索 | 查询最新文档、补充知识缺口 |
 | **Browser Control**       | Web 前端交互与调试 | UI 开发、实时调试、E2E 测试、截图录屏 |
 | **[spec-workflow-mcp](https://github.com/Pimzino/spec-workflow-mcp)** | 规格驱动开发（需求→设计→任务） | 与 `.spec-workflow` 等模板衔接；Web 仪表盘、审批流、任务进度与实现日志 |
 | **[Playwright MCP](https://github.com/microsoft/playwright-mcp)**（`@playwright/mcp`） | Playwright 浏览器自动化 | E2E、页面操作与结构化抓取、辅助生成/验证测试；与 Browser Control 可按栈二选一或并用 |
 | **Memory**                | 持久化知识图谱 | R1 recall 历史经验，R2 commit 新经验 |
+
+  Codegraph 一键接入 Cursor（写入 MCP 配置）：
+
+```bash
+codegraph install --target cursor --yes
+```
+
+  > 首次使用需先全局安装 CLI：`npm install -g @colbymchenry/codegraph`；各项目再执行 `codegraph init` 建图。安装后重启 Cursor。
 
 - **其他**
 
