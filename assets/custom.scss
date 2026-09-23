@@ -397,3 +397,132 @@ button,
 .book-menu ul ul ul > li > a {
   padding-left: 15px;
 }
+
+/* ---------- 首页：hero / 主线卡 / 流程图 ---------- */
+.markdown .book-hero.home-hero,
+.book-article.markdown .book-hero.home-hero,
+.home-hero {
+  min-height: 0 !important;
+  padding: 0.25rem 0 1rem;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.home-hero h1 {
+  font-size: clamp(1.75rem, 2.5vw, 2.35rem) !important;
+  margin: 0 0 0.55rem !important;
+  line-height: 1.25;
+}
+
+.home-hero > p {
+  margin: 0 0 1rem !important;
+  max-width: 40rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.home-path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none;
+}
+
+.home-path li {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.home-path li:not(:last-child)::after {
+  content: "→";
+  margin: 0 0.55rem;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.home-path a {
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.home-path a:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
+.home-flow {
+  margin: 1rem 0 1.75rem;
+}
+
+.home-flow img {
+  display: block;
+  width: 100%;
+  max-width: 56rem;
+  height: auto;
+  margin: 0;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-200, #e5e7eb);
+}
+
+.home-flow figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  line-height: 1.45;
+}
+
+.home-tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
+  gap: 0.75rem;
+  margin: 0.75rem 0 1.5rem;
+}
+
+a.home-track-card,
+a.home-track-card:visited {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--gray-200, #e5e7eb);
+  border-radius: var(--border-radius);
+  color: var(--body-font-color, inherit);
+  text-decoration: none !important;
+  background: transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+a.home-track-card:hover {
+  background: var(--gray-100, rgba(0, 0, 0, 0.04));
+  text-decoration: none !important;
+}
+
+.home-track-title {
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.35;
+}
+
+.home-track-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.88;
+}
+
+@media (max-width: 48rem) {
+  .home-hero {
+    padding-top: 0.25rem;
+  }
+
+  .home-flow {
+    margin: 1rem 0 1.25rem;
+  }
+}

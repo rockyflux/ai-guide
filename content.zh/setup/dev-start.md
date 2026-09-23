@@ -229,11 +229,20 @@ winget install jesseduffield.lazygit
 
 若需使用 ChatGPT、Codex，GPT-images2 等官方产品而暂无自有账号，部分用户会通过第三方渠道购买现成账号（与上节同理，请自行甄别渠道可信度）。
 
+#### 官方镜像（免费体验 / 共享入口）
+
+- [EasyChat 免费账号](https://easychat.top/chatgpt/free) — ChatGPT 官网镜像，点击卡片即可开始对话
+- [AI 镜像](https://go.github.cn.com) — 镜像入口
+- [车队列表](https://share.github.cn.com/list) — 共享车队列表，选择车队后进入使用
+- [GE Chat 地址发布页](https://home.gege.chat/) — ChatGPT / Claude 付费站与公益站入口汇总
+
+#### 购买入口
+
 - 购买入口 1：[pay.ldxp.cn/shop/xcursor](https://pay.ldxp.cn/shop/xcursor)
 - 购买入口 2：[wafase.com](https://wafase.com/)
 - 购买入口 4：[Acc-OTAOR](https://acc.otaor.com/)
 
-注意：风险与合规事项同上文「Google 邮箱」— 第三方账号可能违反平台条款；到手后尽快改密、检查绑定与恢复方式，并仅用于合法用途。
+注意：风险与合规事项同上文「Google 邮箱」— 第三方账号/镜像可能违反平台条款；到手后尽快改密、检查绑定与恢复方式，并仅用于合法用途。镜像与共享入口稳定性、可用性与合规性请自行甄别。
 
 ### 7. 其他
 

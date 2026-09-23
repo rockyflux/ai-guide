@@ -10,6 +10,10 @@ bookHidden: false
 
 > 2026 年 4 月 22 日，OpenAI 祭出一枚深水炸弹——ChatGPT Images 2.0（代號 gpt-image-2）正式上线，现在又进化了。这不仅是 DALL-E 3 的继任者，更是一次从根上重做的架构革命。一个“长了脑子”的图像模型，意味着设计师可以告别“AI 产物一看就是假货”的尴尬，也让开发者们迎来了视觉生产力全面爆发的拐点。
 
+## GPT-Image-2.5（2026-09-08）
+
+[ChatGPT Images 2.5](https://openai.com/index/introducing-chatgpt-images-2-5/) 已推送至 ChatGPT / Work / Codex；相对 Images 2，细节更锐、编辑更稳，延迟最高约降 50%。API 提供两档：`Flare`（更快）与 `Sunburst`（更高质量）。
+
 ## 为什么 GPT-Image-2 很强
 
 | 老大难问题 | 传统 AI 出图 | GPT-Image-2 |
@@ -73,15 +77,48 @@ bookHidden: false
 - <https://canvas.best/>
 - GPT-Image 在线生成与画布式编辑项目，可作为产品形态参考
 
-### toapis
+### kuaipao
 
-- <https://toapis.com/>
-- `gpt-image-2` 接口，折算 0.1 一张，很稳定
+- <https://kuaipao.ai/pricing>
+- image2 低至 0.05 元 / 次
 
 ### foxcode
 
 - <https://foxcode.rjj.cc/model-square>
 - `gpt-image-2` 接口，折算 0.05 - 0.07 一张
+
+### hezubus
+
+- <https://hezubus.cc/p/pricing>
+- image2 低至 0.06 元 / 次
+
+### rolldek
+
+- <https://rolldek.com/>
+- 多模型出图接口，按模型计价：
+
+| 模型 | 参数 | 价格 |
+| --- | --- | --- |
+| gpt-image-2 | 1-4k，low、medium 质量 | 0.05¥ / 张 |
+| gpt-image-2-high | 1-4k，high 质量 | 0.08¥ / 张 |
+| gpt-image-2-official | 官渠满血全参透明底 | 0.15¥ / 张 |
+| gemini-3.1-flash-image-preview | 1-4k | 0.06¥ / 张 |
+| gemini-3-pro-image-preview | 1-4k | 0.07¥ / 张 |
+
+### axis.yoga
+
+- <https://axis.yoga/>
+- image2 低至 0.08 元 / 次
+
+### toapis
+
+- <https://toapis.com/pricing>
+- 整体调用低至 0.1 元 / 次，含多款视频、图像模型计费方案
+
+### aixj
+
+- <https://aixj.vip/>
+- image2 低至 0.1 元 / 次
 
 ### pucoding
 - <https://draw.pucoding.com/>

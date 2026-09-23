@@ -210,8 +210,14 @@ bookHidden: false
 ### 选型与检测
 选购或接入中转前，可用下列工具做连通性、真假鉴定与目录检索。
 
+下面四个常搭配成一套：**先看延迟与可用率 → 再看真伪/可信度排行 → 最后用指纹或深度检测核「是不是报的那个模型」**。
+
 | 服务 | 价格口径 | 简述 | 链接 |
 |---|---|---|---|
+| **Kan LLM** | 免费监测 | 中转站首 Token 延迟、TPS、可用率与稳定性横向对比 | https://www.kanllm.com/ |
+| **真测 Ztest** | 免费排行 | 第三方探针测模型真实性、响应质量与可用性，给出可信度综合分（认证/付费不影响排名） | https://ztest.ai/ |
+| **PriceAI 中转检测** | 需登录；按检测强度消耗临时 Key | 提交 Base URL + 临时 Key，检测协议外观、能力指纹、来源线路与计费口径（主站不保存 Key） | https://priceai.cc/api-transit/detector |
+| **meow 模型检测** | 自费（走你的 API 账户）；报告可公开 | 模型指纹匹配：连接后按快速 / 标准 / 深入档位比对申报模型与实际线路 | https://meowllm.top/ |
 | **禾维 AI** | 免费检测 / 榜单 | 中转站实测排名、真假鉴定、价格与在线率对比（域名亦见 [hvoyai.com](https://www.hvoyai.com/)） | https://hvoy.ai/ |
 | **APIs.you** | 目录导航 | API / 中转目录聚合入口 | https://apis.you/catalog |
 
