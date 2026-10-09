@@ -1,11 +1,13 @@
 ---
 title: 🤖 Agent 构建
-weight: 40
+weight: 30
 bookCollapseSection: false
 bookFlatSection: true
 ---
 
-> **和「工作流与编排」的区别**：本栏是积木（Rules / Skills / MCP 等机制）；那边是成品编排（CCG / GSD / Superpowers 等产品化工作流）。先懂积木，再选编排；或先跟工作流跑起来，再回这里补机制。
+> **和工作流选型的区别**：本栏是积木（Rules / Skills / MCP 等机制）；成品编排选型见 **[协作工作流选型]({{< relref "ai-programming/ccg-workflow" >}})**（CCG / GSD / Superpowers 等）。先懂积木，再选编排；或先跟工作流跑起来，再回这里补机制。
+
+> 这些积木最终都进「每次会话的上下文」。想从选型一路看到上下文管理，先读 **[全流程总览]({{< relref "ai-programming/full-pipeline" >}})**。
 
 ## 省流版
 
@@ -67,7 +69,6 @@ bookFlatSection: true
 
 ### 主线导航
 
-- [Agent 工作流总览]({{< relref "agent/workflow" >}})
 - [Rules 规则体系]({{< relref "agent/rules" >}})
 - [Commands 指令系统]({{< relref "agent/commands" >}})
 - [Agent Skills 能力模块]({{< relref "agent/skills" >}})
@@ -80,4 +81,3 @@ bookFlatSection: true
 
 - [Prompt 模板与示例]({{< relref "agent/Prompt" >}})
 - [精选 Agent Skills 列表]({{< relref "agent/awesome-agent-skills" >}})
-- [精选 MCP Servers 列表]({{< relref "agent/awesome-mcp-servers" >}})

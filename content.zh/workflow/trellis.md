@@ -3,7 +3,7 @@ title: Trellis 协作框架
 weight: 14
 bookToc: false
 noTocArea: true
-bookHidden: false
+bookHidden: true
 ---
 
 ## Trellis 是什么？

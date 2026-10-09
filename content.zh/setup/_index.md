@@ -1,30 +1,20 @@
 ---
-title: 🔧 环境配置
+title: 🔧 环境配置（归档）
 weight: 20
 bookToc: false
 noTocArea: true
 bookCollapseSection: false
 bookFlatSection: true
+bookHidden: true
 ---
 
-## 环境配置：一次配好，少踩坑
+## 环境配置（归档）
 
-上游承接 **[模型与工具选型]({{< relref "ai-programming/_index" >}})** 里的模型 / 工具 / 套餐判断；本栏只做「装什么、怎么配通」。
+本栏侧栏已隐藏。相关内容已迁入其他栏目：
 
-> 套餐、API 聚合平台见选型栏；GitHub 加速等周边见 **[学习资源]({{< relref "tutorials/_index" >}})**。
+- [开发环境准备]({{< relref "ai-programming/dev-start" >}}) · [环境增强工具集]({{< relref "ai-programming/env-and-tools" >}}) · [卸载与清理]({{< relref "ai-programming/cleanup-uninstall" >}})
+- [WSL 开发环境]({{< relref "project-practice/wsl" >}})
 
-### 基础环境
+以下专页侧栏隐藏，可经增强工具集或直链访问：
 
-- [开发环境准备]({{< relref "setup/dev-start" >}}) — PowerShell 7、VS Code、Node/Python/Git 等
-- [WSL + Claude Code]({{< relref "setup/wsl" >}}) — Windows 下更顺手的 Linux 开发环境
-
-### 配置与增强
-
-- [环境配置与增强工具集]({{< relref "setup/env-and-tools" >}}) — 桌面 / 路由 / 终端 / 插件选型速查（按任务怎么选）
-- [ZCF 零配置]({{< relref "setup/zcf" >}}) — 少折腾上手 Claude Code / Codex
-- [CC-Switch]({{< relref "setup/cc-switch" >}}) — 可视化管理 MCP / Skills / Prompts
-- [CLI 代理 API（CPA）]({{< relref "setup/cpa" >}}) — 订阅统一为 API，多端复用（接入层网关）
-
-### 维护与清理
-
-- [卸载与磁盘清理]({{< relref "setup/cleanup-uninstall" >}}) — 系统存储/WizTree、npm/uv 缓存、Dev Janitor、Geek Uninstaller、FolderMove、Mole
+- [ZCF]({{< relref "setup/zcf" >}}) · [CC-Switch]({{< relref "setup/cc-switch" >}}) · [CPA]({{< relref "setup/cpa" >}})

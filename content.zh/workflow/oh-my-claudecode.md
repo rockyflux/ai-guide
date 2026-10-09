@@ -3,7 +3,7 @@ title: OMC 多 Agent
 weight: 13
 bookToc: false
 noTocArea: true
-bookHidden: false
+bookHidden: true
 ---
 
 ## oh-my-claudecode 是什么？

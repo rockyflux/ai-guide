@@ -5,7 +5,7 @@ title: CC-Switch：可视化配置
 weight: 23
 bookToc: false
 noTocArea: true
-bookHidden: false
+bookHidden: true
 ---
 
 ### Claude Code / Codex / Gemini CLI / OpenCode / OpenClaw 全方位辅助工具

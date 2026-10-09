@@ -5,7 +5,7 @@ title: ZCF 零配置 Claude Code
 weight: 22
 bookToc: false
 noTocArea: true
-bookHidden: false
+bookHidden: true
 ---
 
 ### ZCF - Zero-Config Code Flow

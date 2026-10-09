@@ -1,14 +1,14 @@
 ---
-title: AI 编程省钱之道
-weight: 24
+title: 省钱与 Token 治理
+weight: 32
 bookToc: true
 noTocArea: false
 bookHidden: false
 ---
 
-## AI 编程省钱之道：预算内把活干完
+## 省钱与 Token 治理：预算内把活干完
 
-> **买油**看 [模型 Token 套餐]({{< relref "ai-programming/coding-plan" >}})；**少踩油门、按预算跑完全程**看本文。工具清单见 [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}})。
+> **买油**看 [Coding Plan 与渠道]({{< relref "ai-programming/coding-plan" >}})；**少踩油门、按预算跑完全程**看本文。工具清单见 [编程工具对比]({{< relref "ai-programming/vb-code-tool" >}})。
 
 ### 真正难的不是「会用 AI」，是预算内做完
 
@@ -201,7 +201,7 @@ Agent 陷入重复失败时：**打断**，说明已失败证据，换思路或�
 | 架构决策、诡异 bug、多次失败 | 前沿强模型 |
 | 纯头脑风暴、写 PRD / 计划 | 免费网页或强模型网页，少在 IDE Agent 里空转 |
 
-强模型规划 → 便宜模型执行 → 必要时强模型复盘，是常见的「混合油耗」套路。细节选型与价格口径见 [模型 Token 套餐]({{< relref "ai-programming/coding-plan" >}}) 与 [大模型价格]({{< relref "ai-programming/model-price" >}})。
+强模型规划 → 便宜模型执行 → 必要时强模型复盘，是常见的「混合油耗」套路。细节选型与价格口径见 [Coding Plan 与渠道]({{< relref "ai-programming/coding-plan" >}}) 与 [大模型价格]({{< relref "ai-programming/model-price" >}})。
 
 模型会越来越强，也可能越来越贵；**按任务选档、按预算控节奏**不会过时。未来若顶档模型单价更高，这套分流只会更重要，而不是更次要。
 
@@ -237,10 +237,10 @@ Agent 陷入重复失败时：**打断**，说明已失败证据，换思路或�
 
 | 你想解决的问题 | 去哪 |
 |----------------|------|
-| 套餐怎么买更划算 | [模型 Token 套餐]({{< relref "ai-programming/coding-plan" >}}) |
+| 套餐怎么买更划算 | [Coding Plan 与渠道]({{< relref "ai-programming/coding-plan" >}}) |
 | 单价与计费口径 | [大模型价格]({{< relref "ai-programming/model-price" >}}) |
-| 用哪个 IDE / CLI | [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}}) / [AI CLI 横评]({{< relref "ai-programming/code-cli" >}}) |
-| 中转倍率与风险 | [什么是 API 中转站]({{< relref "ai-programming/api-relay-station" >}}) |
+| 用哪个 IDE / CLI | [编程工具对比]({{< relref "ai-programming/vb-code-tool" >}}) / [编程 Agent 横评]({{< relref "ai-programming/code-cli" >}}) |
+| 中转倍率与风险 | [API 中转站]({{< relref "ai-programming/api-relay-station" >}}) |
 | Rules / Skills / MCP 工程化 | [Agent 工程]({{< relref "agent/_index" >}}) |
 
 ---

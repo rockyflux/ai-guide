@@ -1,8 +1,8 @@
 ---
 aliases:
-  - /ai-programming/dev-start/
-title: 开发环境：一站式准备
-weight: 10
+  - /setup/dev-start/
+title: 开发环境准备
+weight: 40
 bookToc: true
 bookHidden: false
 ---
@@ -175,7 +175,8 @@ winget install JesseDuffield.lazygit
 
 个人知识库与笔记工具，适合整理 AI 编程笔记、提示词和项目文档。
 
-- [Obsidian](https://obsidian.md/)、[Markpad](https://markpad.sftwr.dev/)、[Moraya](https://moraya.app/zh/)、[HorseMD](https://horsemd.yangsir.net/)
+- 笔记：[Obsidian](https://obsidian.md/)、[Markpad](https://markpad.sftwr.dev/)、[Moraya](https://moraya.app/zh/)、[HorseMD](https://horsemd.yangsir.net/)
+- 文档排版：[Quarkdown](https://quarkdown.com/)（Markdown 超集，可输出分页文档、笔记站点、文档站与幻灯片）
 
 ### 3. 网络与代理
 

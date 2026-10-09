@@ -3,7 +3,7 @@ title: CCG 多模型协作
 weight: 10
 bookToc: false
 noTocArea: true
-bookHidden: false
+bookHidden: true
 ---
 
 ## CCG - Claude + Codex + Gemini Multi-Model Collaboration

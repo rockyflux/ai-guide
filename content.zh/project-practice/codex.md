@@ -38,7 +38,7 @@ brew install --cask codex
 
 如果你主要在 **VS Code** 里使用，推荐直接安装官方扩展：[ChatGPT - OpenAI](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt)。
 
-环境准备（Node、Git、终端基础）可参考：[开发环境：一站式准备]({{< relref "setup/dev-start" >}})。
+环境准备（Node、Git、终端基础）可参考：[开发环境准备]({{< relref "ai-programming/dev-start" >}})。
 
 #### 前置：`ripgrep`（`rg`）——CLI 强依赖，建议先装
 
@@ -52,7 +52,7 @@ Codex CLI 依赖系统 PATH 里的 [`rg`](https://github.com/BurntSushi/ripgrep)
 
 #### 配套工具：AiMaMi（Codex 伴侣）
 
-不想手改 `~/.codex` 下的 TOML/JSON 时，可用社区桌面伴侣 **[AiMaMi](https://github.com/borawong/AiMaMi)**：账号切换与配额、智能路由与中转、会话清理、MCP/Skills、插件与 `AGENTS.md` 自定义指令；支持 macOS / Windows（Linux 尽力支持）。更多同类增强见：[环境增强工具集]({{< relref "setup/env-and-tools" >}})。
+不想手改 `~/.codex` 下的 TOML/JSON 时，可用社区桌面伴侣 **[AiMaMi](https://github.com/borawong/AiMaMi)**：账号切换与配额、智能路由与中转、会话清理、MCP/Skills、插件与 `AGENTS.md` 自定义指令；支持 macOS / Windows（Linux 尽力支持）。更多同类增强见：[环境增强工具集]({{< relref "ai-programming/env-and-tools" >}})。
 
 #### Windows 桌面端补丁恢复（codex-windows-fast-patch Skill）
 
@@ -150,7 +150,7 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 在 Codex 侧配置 **MCP 服务器** 后，代理可以调用外部工具（浏览器、文档、数据库等）。配置入口通常在用户级 `~/.codex/config.toml`（含 `[mcp_servers]` 等段落）；与认证相关的文件勿提交到 Git。
 
 - 概念与选型思路：[AI 智能体 · MCP]({{< relref "agent/mcp" >}})。
-- 和 Claude Code 统一的增强工具列表：[环境增强工具集]({{< relref "setup/env-and-tools" >}})。
+- 和 Claude Code 统一的增强工具列表：[环境增强工具集]({{< relref "ai-programming/env-and-tools" >}})。
 
 ---
 

@@ -63,7 +63,7 @@ AI应用-->用户：北京今天晴天，5度，北风3级
 
 ## 常用 MCP 示例
 
-以下 20 个示例选自本站 [Awesome MCP Servers]({{< ref "Agent/awesome-mcp-servers" >}}) 列表，覆盖文件、数据库、协作、搜索与开发等常见场景。
+以下 20 个示例选自 [Awesome MCP Servers（中文）](https://github.com/punkpeye/awesome-mcp-servers/blob/main/README-zh.md)，覆盖文件、数据库、协作、搜索与开发等常见场景。
 
 | MCP 名称 | 功能 | 适用场景 |
 | --- | --- | --- |
@@ -88,7 +88,7 @@ AI应用-->用户：北京今天晴天，5度，北风3级
 | LeetCode | 题目、题解与进度 | 刷题、面试 |
 | OpenAPI / Swagger | 将 REST API 转为 MCP 工具 | 接口调试、集成 |
 
-更多服务器（按类别整理的完整列表）见 [Awesome MCP Servers]({{< ref "Agent/awesome-mcp-servers" >}})。
+更多服务器（按类别整理的完整列表）见 [Awesome MCP Servers（中文）](https://github.com/punkpeye/awesome-mcp-servers/blob/main/README-zh.md)。
 
 ## MCP 配置示例
 

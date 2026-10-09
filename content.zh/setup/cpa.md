@@ -5,7 +5,7 @@ title: CLI 代理 API（CPA）
 weight: 24
 bookToc: true
 noTocArea: false
-bookHidden: false
+bookHidden: true
 ---
 
 ## 简介

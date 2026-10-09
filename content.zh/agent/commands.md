@@ -2,7 +2,7 @@
 title: Commands
 weight: 5
 date: 2026-02-09T23:34:00+08:00
-bookHidden: false
+bookHidden: true
 ---
 
 ### Claude Commands（斜杠命令）

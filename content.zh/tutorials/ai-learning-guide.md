@@ -7,6 +7,7 @@ bookHidden: false
 
 # 🎓 系统学习 AI 知识资源指南
 精选各大 AI 公司和顶尖机构的**官方学习资源**，帮助你从入门到精通系统掌握 AI 知识。
+课程和仓库适合系统啃；日常跟新、踩坑、工具口碑，更多人泡在 [X](https://x.com) 和 [LINUX DO](https://linux.do)。
 
 ---
 
@@ -125,6 +126,7 @@ bookHidden: false
 
 | 中文名 | 原名 & 链接 | Stars | 说明 |
 | --- | --- | --- | --- |
+| AI 工程从零开始 | [ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 64k+ | 20 阶段 / 523 课：线性代数到 Agent 与生产落地，每课产出可复用工件 |
 | 深入理解 AI Agent | [ai-agent-book](https://github.com/bojieli/ai-agent-book) | 40k+ | 李博杰著：Agent 原理到工程实战（10 章 + 103 实验，含 PDF/多语言） |
 | LLM 课程 | [LLM Course](https://github.com/mlabonne/llm-course) | 40k+ | 从入门到微调完整路线 |
 | AI 专家路线图 | [AI Expert Roadmap](https://github.com/AMAI-GmbH/AI-Expert-Roadmap) | 29k+ | 可视化学习路径 |
@@ -141,6 +143,7 @@ bookHidden: false
 
 | 中文名 | 链接 | 说明 |
 | --- | --- | --- |
+| Learn Harness Engineering | [中文站](https://walkinglabs.github.io/learn-harness-engineering/zh/) | WalkingLab：给 Codex / Claude Code 做环境、状态、验证与控制，让 Agent 能可靠跑完真实工程任务 |
 | 深入理解 AI Agent（开源书） | [ai-agent-book](https://github.com/bojieli/ai-agent-book) | 李博杰：上下文工程 / MCP / Coding Agent / 评估与后训练，正文+实验全开源 |
 | 动手学深度学习（中文版） | [zh.d2l.ai](https://zh.d2l.ai/) | 李沐团队官方中文版 |
 | 南瓜书 | [PumpkinBook](https://datawhalechina.github.io/pumpkin-book/) | 西瓜书公式推导 |
@@ -176,8 +179,10 @@ bookHidden: false
 1. [OpenAI] Cookbook + API 文档
 2. [DeepLearning.AI] LangChain 短课程
 3. [DeepLearning.AI] RAG 检索增强
-4. [GitHub] ai-agent-book — Agent 原理到工程（选章跑实验）
-5. [GitHub] 选择一个开源项目贡献
+4. [GitHub] ai-engineering-from-scratch — 按阶段从原理做到可交付工件
+5. [GitHub] ai-agent-book — Agent 原理到工程（选章跑实验）
+6. [WalkingLab] Learn Harness Engineering — 给 Coding Agent 做规则、验证与跨会话交接
+7. [GitHub] 选择一个开源项目贡献
 ```
 
 ---
@@ -188,7 +193,9 @@ bookHidden: false
 | --- | --- |
 | AI 入门小白 | 微软 Generative AI for Beginners → 吴恩达 ML 课程 |
 | 快速上手 LLM 开发 | OpenAI Cookbook → LangChain 短课程 |
+| 系统学 AI 工程 | [ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch)（20 阶段 / 523 课） |
 | 系统学 AI Agent | [ai-agent-book](https://github.com/bojieli/ai-agent-book)（原理 + 103 实验）→ DeepLearning.AI Agent 短课 |
+| Coding Agent 工程化 | [Learn Harness Engineering](https://walkinglabs.github.io/learn-harness-engineering/zh/)（讲义 + 项目 + 模板） |
 | 深入理解原理 | d2l.ai → CS229 → CS224n |
 | 企业级部署 | Azure OpenAI → AWS Bedrock |
 | Prompt 高手 | Anthropic 教程 → DAIR Prompt 指南 |

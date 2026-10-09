@@ -1,6 +1,6 @@
 ---
 title: 📦 AI 应用选型
-weight: 15
+weight: 90
 bookToc: false
 noTocArea: true
 bookCollapseSection: false
@@ -9,7 +9,7 @@ bookFlatSection: true
 
 ## AI 应用选型：按场景比较
 
-面向**办公 Agent、对话聊天、智能体、绘图视频、OpenClaw 系、开发周边与站外导航**的产品速览。编程 IDE、CLI、Coding Plan 仍在 **[模型与工具选型]({{< relref "ai-programming/_index" >}})**。
+面向**办公 Agent、对话聊天、智能体、绘图视频、OpenClaw 系、开发周边与站外导航**的产品速览。编程 IDE、CLI、Coding Plan 仍在 **[AI 编程选型]({{< relref "ai-programming/_index" >}})**。
 
 ### 办公桌面端
 
@@ -39,4 +39,4 @@ bookFlatSection: true
 
 ### 编程工具
 
-编程 IDE、CLI 与 Coding Plan 统一放在 **[模型与工具选型]({{< relref "ai-programming/_index" >}})**，避免和本栏的通用 AI 应用重复。
+编程 IDE、CLI 与 Coding Plan 统一放在 **[AI 编程选型]({{< relref "ai-programming/_index" >}})**，避免和本栏的通用 AI 应用重复。

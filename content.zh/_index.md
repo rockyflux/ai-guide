@@ -13,9 +13,7 @@ noTocArea: true
 面向有经验开发者的任务向指南：把 AI 从「会聊天」推进到「能稳定交付」。
 
 <ol class="home-path" aria-label="推荐阅读路径">
-<li><a href="/ai-programming/">选型</a></li>
-<li><a href="/setup/">环境</a></li>
-<li><a href="/workflow/">工作流</a></li>
+<li><a href="/ai-programming/">选型与环境</a></li>
 <li><a href="/agent/">Agent</a></li>
 <li><a href="/project-practice/">实践闭环</a></li>
 </ol>
@@ -27,24 +25,16 @@ noTocArea: true
 <figcaption>总览：选型与控成本 → 环境搭建与增强 → 协作与交付</figcaption>
 </figure>
 
-## 七条主线
+## 五条主线
 
-<nav class="home-tracks" aria-label="七条主线">
+<nav class="home-tracks" aria-label="五条主线">
 <a class="home-track-card" href="/ai-programming/">
-<span class="home-track-title">模型与工具选型</span>
-<span class="home-track-desc">选模型、选工具 / 套餐、控成本。</span>
+<span class="home-track-title">AI 编程选型</span>
+<span class="home-track-desc">选模型、选工具 / 套餐、配环境与增强、控成本。</span>
 </a>
 <a class="home-track-card" href="/ai-products/">
 <span class="home-track-title">AI 应用选型</span>
 <span class="home-track-desc">办公桌面 Agent、对话、智能体、绘图视频与开发周边。</span>
-</a>
-<a class="home-track-card" href="/setup/">
-<span class="home-track-title">环境配置</span>
-<span class="home-track-desc">开发环境、WSL、供应商切换与增强工具，一次配到位。</span>
-</a>
-<a class="home-track-card" href="/workflow/">
-<span class="home-track-title">工作流与编排</span>
-<span class="home-track-desc">CCG、GSD、Superpowers、Trellis、oh-my-claudecode 等。</span>
 </a>
 <a class="home-track-card" href="/agent/">
 <span class="home-track-title">Agent 构建</span>
@@ -64,10 +54,11 @@ noTocArea: true
 
 | 目标 | 入口 |
 |------|------|
-| 选模型 / 控成本 | [榜单与基准]({{< relref "ai-programming/Leaderboard" >}}) · [价格]({{< relref "ai-programming/model-price" >}}) · [Coding Plan]({{< relref "ai-programming/coding-plan" >}}) |
-| 一次配好环境 | [开发环境准备]({{< relref "setup/dev-start" >}}) · [增强工具集]({{< relref "setup/env-and-tools" >}}) · [CPA]({{< relref "setup/cpa" >}}) |
+| 先看懂全流程 | [全流程总览]({{< relref "ai-programming/full-pipeline" >}}) |
+| 选模型 / 控成本 | [评测基准与榜单]({{< relref "ai-programming/Leaderboard" >}}) · [价格]({{< relref "ai-programming/model-price" >}}) · [Coding Plan]({{< relref "ai-programming/coding-plan" >}}) |
+| 一次配好环境 | [开发环境准备]({{< relref "ai-programming/dev-start" >}}) · [环境增强工具集]({{< relref "ai-programming/env-and-tools" >}}) · [CPA]({{< relref "setup/cpa" >}}) |
 | 10 分钟开工 | [Cursor]({{< relref "project-practice/cursor" >}}) · [Codex]({{< relref "project-practice/codex" >}}) · [Kiro]({{< relref "project-practice/kiro-practice" >}}) |
-| 多模型协作交付 | [工作流栏目]({{< relref "workflow/_index" >}}) · [CCG]({{< relref "workflow/ccg" >}}) · [GSD]({{< relref "workflow/gsd" >}}) |
+| 多模型协作交付 | [协作工作流选型]({{< relref "ai-programming/ccg-workflow" >}}) · [CCG]({{< relref "workflow/ccg" >}}) · [GSD]({{< relref "workflow/gsd" >}}) |
 | 工程化 Agent | [Rules]({{< relref "agent/rules" >}}) · [Skills]({{< relref "agent/skills" >}}) · [MCP]({{< relref "agent/mcp" >}}) |
 | 看完整清单 | [全站地图]({{< relref "site-map" >}}) |
 

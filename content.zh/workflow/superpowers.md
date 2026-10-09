@@ -3,7 +3,7 @@ title: Superpowers
 weight: 12
 bookToc: false
 noTocArea: true
-bookHidden: false
+bookHidden: true
 ---
 
 ## Superpowers 是什么？
@@ -72,4 +72,4 @@ bookHidden: false
 - **市场**：[superpowers-marketplace](https://github.com/obra/superpowers-marketplace)  
 - **文章**：[Superpowers for Claude Code](https://blog.fsck.com/2025/10/09/superpowers/)  
 - **社区**：[Discord](https://discord.gg/Jd8Vphy9jq)  
-- 中文导读可参考站内 [多 Agent 协作工作流实践]({{< relref "workflow/ccg-workflow" >}}) 中的 Superpowers 小节与外部导读链接  
+- 横向对比见站内 [协作工作流选型]({{< relref "ai-programming/ccg-workflow" >}}) 的「Skills / SOP 方法论」  

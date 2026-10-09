@@ -11,10 +11,9 @@ bookHidden: false
 
 ### 一、Agent Skills 出现的背景
 
-{{% hint info %}}
-**一句话理解**  
-大模型智能体向专业化、高效化发展时，Agent Skills 作为一套规范、轻便的能力扩展方案，已成为解决工具调用混乱、上下文冗余等核心问题的关键——让智能体从「泛泛回应」升级为「精准帮忙」。
-{{% /hint %}}
+> [!NOTE]
+> **一句话理解**  
+> 大模型智能体向专业化、高效化发展时，Agent Skills 作为一套规范、轻便的能力扩展方案，已成为解决工具调用混乱、上下文冗余等核心问题的关键——让智能体从「泛泛回应」升级为「精准帮忙」。
 
 **定义**：Agent Skills 是用于扩展智能体能力的规范方案，本质是可复用、可自由组合的**最小能力模块**。通过统一文件结构，智能体可按需加载、灵活调用，精准适配特定场景。
 
@@ -71,10 +70,9 @@ Anthropic 推出 Agent Skills 时，核心理念是“写一次，到处使用�
 这意味着开发者要在多个平台使用同一套 Skills，就得在不同目录间复制文件、创建符号链接，或者写同步工具。原本承诺的“写一次”，变成了维护多份配置、管理一堆软链接。GitHub Issue #15 里有人说得很直接：“我们在技术层面（工具、通信）实现了标准化，但在语义层面（指令、上下文）没做到。这是个问题。”
 
 
-{{% hint success %}}
-**从倡议到落地，只用了一周**  
-2026 年 2 月 3 日，OpenAI 的 Alexander Embiricos 在推特上发起倡议：所有 Agent 统一读取 .agents/skills 目录，用户不用再为每个 Agent 管理独立文件夹。推文写道：“今天我们为 Codex 启用了 .agents/skills。目标是逐步废弃 .codex/skills。"主要平台的响应速度很快：Anomaly 的 dax 直接回复“done”，附上 OpenCode 的 PR 链接；微软 Copilot CLI 在 0.401 版本支持自动加载；谷歌 Gemini CLI 提交代码变更；Cursor 也表示在下个版本跟进。从提议到主流平台响应，不到一周。
-{{% /hint %}}
+> [!TIP]
+> **从倡议到落地，只用了一周**  
+> 2026 年 2 月 3 日，OpenAI 的 Alexander Embiricos 在推特上发起倡议：所有 Agent 统一读取 .agents/skills 目录，用户不用再为每个 Agent 管理独立文件夹。推文写道：“今天我们为 Codex 启用了 .agents/skills。目标是逐步废弃 .codex/skills。"主要平台的响应速度很快：Anomaly 的 dax 直接回复“done”，附上 OpenCode 的 PR 链接；微软 Copilot CLI 在 0.401 版本支持自动加载；谷歌 Gemini CLI 提交代码变更；Cursor 也表示在下个版本跟进。从提议到主流平台响应，不到一周。
 
 #### 工具层的过渡方案
 Vercel 团队推出的 [skills.sh](http://skills.sh "skills.sh") 提供了一个过渡期的解决方案：
@@ -93,16 +91,14 @@ npm install -g teamai-cli
 # Install the teamai skill: https://github.com/Tencent/teamai-cli/tree/main/skills/teamai
 ```
 
-{{% hint info %}}
-**怎么选**  
-本机多工具装同一套 Skill → [skills.sh](https://skills.sh/)；多人共享团队 AI 资产并持续同步 → [TeamAI](https://github.com/Tencent/teamai-cli)。
-{{% /hint %}}
+> [!NOTE]
+> **怎么选**  
+> 本机多工具装同一套 Skill → [skills.sh](https://skills.sh/)；多人共享团队 AI 资产并持续同步 → [TeamAI](https://github.com/Tencent/teamai-cli)。
 
 ### 四、Agent Skills 规范说明
 
-{{% hint info %}}
-**核心规范**：每个技能对应一个独立文件夹，文件夹内必须包含一个 `SKILL.md` 文件。该文件是技能的核心，包含 **YAML 前置信息（元数据）** 和 **Markdown 指令** 两部分，共同明确技能的功能、触发条件和执行步骤，二者缺一不可。这也是实现「三层渐进式披露」和按需加载的基础。
-{{% /hint %}}
+> [!NOTE]
+> **核心规范**：每个技能对应一个独立文件夹，文件夹内必须包含一个 `SKILL.md` 文件。该文件是技能的核心，包含 **YAML 前置信息（元数据）** 和 **Markdown 指令** 两部分，共同明确技能的功能、触发条件和执行步骤，二者缺一不可。这也是实现「三层渐进式披露」和按需加载的基础。
 
 ```
 skill/employees/
@@ -126,13 +122,21 @@ skill/employees/
 - [Waza](https://github.com/tw93/Waza)：把常见工程习惯收成 8 个可链式调用的 Skill（`/think` 决策规划、`/ui` 前端审美、`/check` 合并前审查、`/hunt` 根因调试、`/write` 中英润色、`/learn` 调研写作、`/read` URL/PDF、`/health` Agent 健康审计）；比 Superpowers / gstack 更轻量；`npx skills add tw93/Waza -a claude-code codex cursor antigravity-cli -g -y`
 - [Birdview](https://github.com/Qiuner/birdview)：改代码前先出架构与约束地图（模块关系、适用规则、拟改范围、证据与验证），确认后再动手，输出可浏览器打开的独立 HTML；`npx skills add Qiuner/birdview --skill birdview`
 - [`mcp-builder`](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)：连接外部工具的 MCP 构建器
-- [Matt Pocock / skills](https://github.com/mattpocock/skills)：工程交付工作流（`grill-with-docs`、`to-prd`、`to-issues`、`tdd`、`diagnose`）；`npx skills add mattpocock/skills`
+- [Matt Pocock / skills](https://www.aihero.dev/skills)：工程交付工作流（`grill-with-docs`、`to-prd`、`to-issues`、`tdd`、`diagnose`）；`npx skills add mattpocock/skills`
 - [HumanLayer Skills](https://github.com/humanlayer/skills)：工程可视化与 Agent 控制环（`show-me` 图解、`visual-pr` 可视化 PR、`improve-claude-md`、`design-control-loop` 等）；`npx skills add humanlayer/skills --skill show-me`
 - [Anthropic Skills](https://github.com/anthropics/skills)：官方技能实现与 `skill-creator` / `mcp-builder`
 - [Vercel Skills](https://github.com/vercel-labs/skills)：含 `find-skills` 等示例
 - [MiniMax Skills](https://github.com/MiniMax-AI/skills)：官方开发技能库（Beta）
 - [Antfu Skills](https://github.com/antfu/skills)：高质量个人工程实践
 - [Claude Code Stock Deep Research Agent](https://github.com/liangdabiao/Claude-Code-Stock-Deep-Research-Agent)：实战案例
+
+#### 调研 / 互联网
+
+- [Agent Reach](https://github.com/Panniantong/Agent-Reach)：给 Agent 装上读网能力（网页 / YouTube 字幕 / GitHub / RSS / B站搜索 / 全网语义搜索等零配置；Twitter、Reddit、小红书、Facebook、Instagram、LinkedIn、Boss 直聘等配登录态后解锁）。它是选型 + 安装 + 体检的能力层，读取仍走上游工具；`agent-reach doctor` 看每个平台当前走哪条后端。复制给 Agent：`帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md`（不要从 PyPI 装同名包）
+
+> [!NOTE]
+> **边界**  
+> Agent Reach 负责从网上**取内容**（读、搜、字幕），不负责写报告 / 发帖。登录态平台用**专用小号**；默认 `install` 只体检不改系统，真正装依赖要显式 `--system`。
 
 #### 前端 / 设计
 
@@ -148,13 +152,13 @@ skill/employees/
 - [`vercel-deploy-claimable`](https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-deploy-claimable)（Vercel）：快速部署预览、缩短反馈闭环
 - [taste-skill](https://github.com/Leonxlnx/taste-skill)：Anti-slop 前端审美；默认 `design-taste-frontend`（v2）；`npx skills add https://github.com/Leonxlnx/taste-skill`
 - [Impeccable](https://impeccable.style/)：`frontend-design` 增强（/polish、/audit、/distill）；`npx skills add pbakaus/impeccable`
+- [emilkowalski / skills](https://github.com/emilkowalski/skills/tree/main)：动效与界面品味（`animate`、`review-animations`、`apple-design`、`mobile-native`、`break-ui`、`pick-ui-library` 等）；`npx skills add emilkowalski/skills`
 - [OpenAI Skills](https://github.com/openai/skills)：策展含 `frontend-skill`、`playwright`、`figma-implement-design` 等
 - [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)：`web-design-guidelines`、`react-best-practices` 等
 
-{{% hint info %}}
-**社区增强 · 前端审美**  
-官方偏「做出好看的页面」；要压住 AI 通用 slop（紫渐变、卡片堆砌），优先用 [taste-skill](https://github.com/Leonxlnx/taste-skill) 或 [Impeccable](https://impeccable.style/)。
-{{% /hint %}}
+> [!NOTE]
+> **社区增强 · 前端审美**  
+> 官方偏「做出好看的页面」；要压住 AI 通用 slop（紫渐变、卡片堆砌），优先用 [taste-skill](https://github.com/Leonxlnx/taste-skill) 或 [Impeccable](https://impeccable.style/)。动效曲线、时长与「该不该动」用 [emilkowalski / skills](https://github.com/emilkowalski/skills/tree/main)。
 
 #### 通用办公
 
@@ -170,10 +174,9 @@ skill/employees/
 - [`screenshot`](https://github.com/openai/skills/tree/main/skills/.curated/screenshot)（OpenAI）：截图留痕、操作说明
 - [`theme-factory`](https://github.com/anthropics/skills/tree/main/skills/theme-factory)（Anthropic）：统一文档 / 演示视觉主题
 
-{{% hint info %}}
-**边界说明**  
-官方 `pptx` / `docx` / `pdf` 偏「读写与精修办公文档」。若要把本地 Word/PPT/Excel/PDF **转成给 Agent 读的 Markdown**，用 [anydoc](https://anydoc.wiki/)。若要「浏览器里快速出完整 deck、改字换图再导出 PPTX」，请看 [**PPT / 演示文稿**](#ppt--演示文稿)（[dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)）。
-{{% /hint %}}
+> [!NOTE]
+> **边界说明**  
+> 官方 `pptx` / `docx` / `pdf` 偏「读写与精修办公文档」。若要把本地 Word/PPT/Excel/PDF **转成给 Agent 读的 Markdown**，用 [anydoc](https://anydoc.wiki/)。若要「浏览器里快速出完整 deck、改字换图再导出 PPTX」，请看 [**PPT / 演示文稿**](#ppt--演示文稿)（[dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)）。
 
 #### 公众号 / 内容创作
 
@@ -231,10 +234,9 @@ skill/employees/
 - [Awesome Agent Skills](https://github.com/JackyST0/awesome-agent-skills)：社区优质技能索引。
 - [Ultimate Agent Skills Collection](https://github.com/ZhanlinCui/Ultimate-Agent-Skills-Collection)：多来源总目录，适合深挖扫货。
 
-{{% hint info %}}
-**延伸阅读 · Agent Skills 终极指南**  
-想要系统了解推荐技能、最新资讯和实战案例，可查看专题页：  
-《Agent Skills 终极指南：快速入门、推荐技能、最新资讯与实战案例 ｜ The Definitive Guide to Agent Skills: Quick Start, Recommended Skills, Latest News, and Practical Case Studies》
-
-👉 [点击跳转到 Awesome Agent Skills]({{< ref "Agent/awesome-agent-skills" >}})
-{{% /hint %}}
+> [!NOTE]
+> **延伸阅读 · Agent Skills 终极指南**  
+> 想要系统了解推荐技能、最新资讯和实战案例，可查看专题页：  
+> 《Agent Skills 终极指南：快速入门、推荐技能、最新资讯与实战案例 ｜ The Definitive Guide to Agent Skills: Quick Start, Recommended Skills, Latest News, and Practical Case Studies》
+>
+> 👉 [点击跳转到 Awesome Agent Skills]({{< ref "Agent/awesome-agent-skills" >}})

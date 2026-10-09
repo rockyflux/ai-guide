@@ -6,13 +6,17 @@ bookToc: true
 translationKey: site-map
 ---
 
-按阶段直达站内主要页面。日常入口仍建议从 [首页]({{< relref "/" >}}) 的七条主线进入。
+按阶段直达站内主要页面。日常入口仍建议从 [首页]({{< relref "/" >}}) 的五条主线进入。
+
+## 0) 全流程总览（先串线，再钻细节）
+
+- [全流程总览]({{< relref "ai-programming/full-pipeline" >}})：选型 → 买 API → 网关 → cc-switch → Agent → 上下文与多轮工具调用（核心）。
 
 ## 1) 选模型 / 选引擎（能力 × 成本 × 适配任务）
 
 - [大模型价格]({{< relref "ai-programming/model-price" >}})：用 Token 口径做成本估算与预算。
 - [LiveBench AI 排行榜]({{< relref "ai-programming/model-comparison" >}})：参考推理/编程/数学等维度的对比。
-- [LLM 评测基准与榜单汇总]({{< relref "ai-programming/Leaderboard" >}})：理解榜单来源与正确用法。
+- [评测基准与榜单]({{< relref "ai-programming/Leaderboard" >}})：理解榜单来源与正确用法。
 
 ## 2) 选工具与订阅（IDE / CLI / 套餐 / 办公 Agent）
 
@@ -21,31 +25,25 @@ translationKey: site-map
 - [AI 智能体平台]({{< relref "ai-products/ai-super-agent" >}})：Manus、AutoGLM、Genspark、天工等。
 - [AI 绘图工具]({{< relref "ai-products/ai-image-tools" >}})：即梦、豆包、Midjourney、FLUX 等。
 - [AI 视频工具]({{< relref "ai-products/ai-video-tools" >}})：可灵、即梦、海螺、Sora、Runway 等。
-- [AI 编程工具汇总]({{< relref "ai-programming/vb-code-tool" >}})：IDE/插件/Agent 工具怎么选。
-- [AI CLI 工具横评]({{< relref "ai-programming/code-cli" >}})：Claude Code / Codex CLI / Gemini CLI 等适用场景对比。
-- [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}})：套餐怎么选更划算。
+- [编程工具对比]({{< relref "ai-programming/vb-code-tool" >}})：IDE/插件/Agent 工具怎么选。
+- [编程 Agent 横评]({{< relref "ai-programming/code-cli" >}})：Claude Code / Codex CLI / Gemini CLI 等适用场景对比。
+- [Coding Plan 与渠道]({{< relref "ai-programming/coding-plan" >}})：套餐怎么选更划算。
 - [AI 大模型 API 聚合平台]({{< relref "ai-programming/api-aggregation-platforms" >}})：第三方代理 / 聚合怎么选。
-- [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}})：同样做事、尽量少耗 Token。
+- [省钱与 Token 治理]({{< relref "ai-programming/ai-coding-save-money" >}})：同样做事、尽量少耗 Token。
 - 选完即上手：[Cursor]({{< relref "project-practice/cursor" >}}) · [Codex]({{< relref "project-practice/codex" >}}) · [Kiro]({{< relref "project-practice/kiro-practice" >}})
 
-## 3) 搭环境 & 接模型（尽量一次配置到位）
+## 3) 搭环境 & 接模型（已并入 AI 编程选型）
 
-- [开发环境准备]({{< relref "setup/dev-start" >}})：PowerShell 7、VS Code、Node/Python/Git 等一站式准备。
-- [AI 编程环境配置与增强工具集]({{< relref "setup/env-and-tools" >}})：环境变量、供应商切换、常用增强工具。
-- [ZCF 零配置 Claude Code]({{< relref "setup/zcf" >}})：少折腾配置的「快速上手」通道。
-- [CC-Switch 可视化配置]({{< relref "setup/cc-switch" >}})：用 UI 管理 MCP/Skills/Prompts 与多供应商配置。
-- [CLI 代理 API（CPA）]({{< relref "setup/cpa" >}})：把订阅统一为 API，多端复用（IDE/CLI）。
+- [开发环境准备]({{< relref "ai-programming/dev-start" >}})：PowerShell 7、VS Code、Node/Python/Git 等一站式准备。
+- [环境增强工具集]({{< relref "ai-programming/env-and-tools" >}})：环境变量、供应商切换、常用增强工具。
+- [卸载与清理]({{< relref "ai-programming/cleanup-uninstall" >}})：缓存、开发产物与卸载工具。
+- [WSL 开发环境]({{< relref "project-practice/wsl" >}})：Windows 下 Linux + Claude Code（在项目实践栏）。
+- 以下专页侧栏隐藏，可经增强工具集或直链访问：[ZCF]({{< relref "setup/zcf" >}}) · [CC-Switch]({{< relref "setup/cc-switch" >}}) · [CPA]({{< relref "setup/cpa" >}})。
 
-## 4) 把「对话」变成「可交付」（工作流 + Agent 编排）
+## 4) 工作流选型（已并入 AI 编程选型）
 
-- [工作流与编排（栏目入口）]({{< relref "workflow/_index" >}})：多模型协作、规格驱动与工具链编排的一站式索引。
-- [工作流项目集]({{< relref "workflow/ccg-workflow" >}})：围绕 Claude Code / Codex / Gemini CLI 等构建的协作类项目列表与选型提示。
-- [CCG 多模型协作开发]({{< relref "workflow/ccg" >}})：Claude + Codex + Gemini 路由与命令集。
-- [GSD（Get Shit Done）]({{< relref "workflow/gsd" >}})：元提示、上下文工程与规格驱动。
-- [Superpowers]({{< relref "workflow/superpowers" >}})：基于可组合 Skills 的完整软件开发工作流。
-- [oh-my-claudecode（OMC）]({{< relref "workflow/oh-my-claudecode" >}})：面向 Claude Code 的多智能体编排与预设工作流。
-- [Trellis]({{< relref "workflow/trellis" >}})：跨客户端的统一规范与生成式接入。
-- [项目内 Agent 编排]({{< relref "agent/workflow" >}})：把规则、工具、子 Agent 在项目内编排成可执行流程。
+- [协作工作流选型]({{< relref "ai-programming/ccg-workflow" >}})：多 Agent / SDD / Skills 协作范式选型（主入口）。
+- 以下专页侧栏隐藏，可经协作工作流选型或直链访问：[CCG]({{< relref "workflow/ccg" >}}) · [GSD]({{< relref "workflow/gsd" >}}) · [Superpowers]({{< relref "workflow/superpowers" >}}) · [OMC]({{< relref "workflow/oh-my-claudecode" >}}) · [Trellis]({{< relref "workflow/trellis" >}})。
 
 ## 5) 智能体工程化（把能力模块化、可复用、可守卫）
 

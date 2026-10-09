@@ -1,6 +1,6 @@
 ---
 title: Vibe Coding 指南
-weight: 22
+weight: 23
 bookHidden: true
 ---
 

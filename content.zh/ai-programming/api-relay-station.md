@@ -1,20 +1,19 @@
 ---
-title: 什么是 API 中转站
-weight: 25
+title: API 中转站
+weight: 31
 bookToc: false
 noTocArea: true
 bookHidden: false
 ---
 
-## 什么是 API 中转站
+## API 中转站
 
 「中转站」在 AI API 圈子里已经存在很久了。很多人听过这个词，但因为技术门槛、部署成本或其他原因，并没有真正自己部署过，所以对运行方式、成本结构和渠道风险并不清楚。
 
-这页从 **程序结构 → 网络部署 → 成本与倍率 → 渠道来源 → 风险判断** 讲起，帮你读懂中转站报价背后的逻辑。选购具体服务可参考 [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) 中的第三方渠道表。
+这页从 **程序结构 → 网络部署 → 成本与倍率 → 渠道来源 → 风险判断** 讲起，帮你读懂中转站报价背后的逻辑。选购具体服务可参考 [Coding Plan 与渠道]({{< relref "ai-programming/coding-plan" >}}) 中的第三方渠道表。
 
-{{% hint info %}}
-看中转价格时，不能只看「官方 API 标价额度」，还要看三件事：**订阅真实成本**、**按 API 标价折算出来的额度**、**卖给用户时的倍率**。三层分清楚，才能理解为什么有些站倍率能做到 0.1、0.2，也能看懂为什么过低价格往往意味着更高渠道风险。
-{{% /hint %}}
+> [!NOTE]
+> 看中转价格时，不能只看「官方 API 标价额度」，还要看三件事：**订阅真实成本**、**按 API 标价折算出来的额度**、**卖给用户时的倍率**。三层分清楚，才能理解为什么有些站倍率能做到 0.1、0.2，也能看懂为什么过低价格往往意味着更高渠道风险。
 
 ![看中转价格要分三层](/images/api-relay-station/01-framework-three-price-layers.png)
 
@@ -46,7 +45,7 @@ bookHidden: false
 
 **CPA** 与 Sub2API 一样从订阅拿号，但更侧重从 **CLI 终端程序** 获得订阅能力。分发属性较低，更像自用的订阅中转，一般不带计费，常见于拼车。
 
-**gpt-load**、**axonhub** 不直接做「卖额度」那套业务模型，更偏运维与网关：前者管多 Key 轮询与容错，后者管流量入口与多租户权限。完整项目索引见 [环境配置 · 路由代理与 API 网关]({{< relref "setup/env-and-tools" >}})。
+**gpt-load**、**axonhub** 不直接做「卖额度」那套业务模型，更偏运维与网关：前者管多 Key 轮询与容错，后者管流量入口与多租户权限。完整项目索引见 [环境配置 · 路由代理与 API 网关]({{< relref "ai-programming/env-and-tools" >}})。
 
 ## 网络与服务器
 
@@ -171,13 +170,12 @@ OpenAI 会给不同地区用户 **首月优惠**，只需提供支付方式即�
 
 ![评估与避坑清单](/images/api-relay-station/04-framework-risk-checklist.png)
 
-{{% hint warning %}}
-部分私有渠道可能违反平台服务条款，存在封号、额度缩水、跑路等风险。本文仅作技术结构与成本口径说明，不构成对任何第三方服务的推荐或担保。
-{{% /hint %}}
+> [!WARNING]
+> 部分私有渠道可能违反平台服务条款，存在封号、额度缩水、跑路等风险。本文仅作技术结构与成本口径说明，不构成对任何第三方服务的推荐或担保。
 
 ## 延伸阅读
 
-- [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}}) — 第三方中转渠道与服务对照表
+- [Coding Plan 与渠道]({{< relref "ai-programming/coding-plan" >}}) — 第三方中转渠道与服务对照表
 - [CLI 代理 API（CPA）]({{< relref "setup/cpa" >}}) — 订阅转 API 的网关方案
-- [环境配置 · 路由代理与 API 网关]({{< relref "setup/env-and-tools" >}}) — New API、Sub2API、gpt-load、axonhub、metapi 等项目索引
-- [AI 编程省钱之道]({{< relref "ai-programming/ai-coding-save-money" >}}) — 同样做事、尽量少耗 Token
+- [环境配置 · 路由代理与 API 网关]({{< relref "ai-programming/env-and-tools" >}}) — New API、Sub2API、gpt-load、axonhub、metapi 等项目索引
+- [省钱与 Token 治理]({{< relref "ai-programming/ai-coding-save-money" >}}) — 同样做事、尽量少耗 Token

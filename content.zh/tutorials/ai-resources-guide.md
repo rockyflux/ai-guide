@@ -26,6 +26,7 @@ bookHidden: false
 - [从零开始构建智能体](https://datawhalechina.github.io/hello-agents/) — 智能体入门与实战
 - [检索增强生成 (RAG) 技术全栈指南](https://datawhalechina.github.io/all-in-rag) — RAG 全栈学习路径
 - [大模型应用开发：上下文工程与运行空间实践指南](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering) — 上下文工程（与 RAG、提示词工程的关系）、Harness Engineering（Agent 运行空间）；[在线阅读](https://wakeup-jin.github.io/Practical-Guide-to-Context-Engineering/)
+- [Learn Harness Engineering](https://walkinglabs.github.io/learn-harness-engineering/) — Harness Engineering 学习指南
 - [AI 原生应用架构白皮书](https://developer.aliyun.com/ebook/8479/read) — 阿里云：AI 原生应用 DevOps 全生命周期（架构、选型、工程实践到运维优化）；[在线手册](https://ai-native.alistatic.com/app/ainativeinfra/ai-native-handbook-web/index)
 - [AI Agent Handbook](https://github.com/aliyun/ai-agent-handbook) — 阿里云开源企业级 Agent 白皮书：按架构、构建、运行、治理、调优覆盖全生命周期（前作《AI 原生应用架构白皮书》的续作）
 

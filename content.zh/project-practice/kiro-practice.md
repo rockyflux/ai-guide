@@ -34,7 +34,7 @@ Kiro 会自动分析项目并生成三个核心文件：
 - [mcp-feedback-enhanced](https://www.mcpworld.com/zh/detail/5b391a834829050d83b1c24703c2bdd2) - 交互式反馈 - 网页版
 - [Sequential Thinking](https://www.modelscope.cn/mcp/servers/@modelcontextprotocol/sequentialthinking) - 思维链推理 - 处理复杂问题
 
-更多见：[MCP Servers 详细配置]({{< relref "ai-programming/kiro-quick-start#mcp-servers扩展-agent-能力" >}}) 和 [Awesome MCP Servers]({{< relref "agent/mcp" >}})
+更多见：[MCP Servers 详细配置]({{< relref "ai-programming/kiro-quick-start#mcp-servers扩展-agent-能力" >}}) 和 [MCP]({{< relref "agent/mcp" >}})
 
 
 ### 4. 配置 Skills

@@ -39,6 +39,8 @@ bookHidden: false
 
 - [awesome-gpt-image-2-API-and-Prompts（EvoLinkAI）](https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts)：GPT-Image-2 API 说明与海量提示词案例（含多语言 README）
 - [Banana Prompt Quicker](https://github.com/glidea/banana-prompt-quicker)：Chrome 扩展 + 在线画廊，一键插入 Gemini / AI Studio 等场景的提示词
+- [无限画布 · 提示词](https://canvas.best/prompts)：canvas.best 内置提示词库
+- [水仙的 AI 提示词花园](https://prompt.qqsrc.com/)：精选提示词，按主题分类逛画廊
 - <https://github.com/YouMind-OpenLab/awesome-gpt-image-2>
 - <https://youmind.com/zh-CN/gpt-image-2-prompts>
 
@@ -48,54 +50,41 @@ bookHidden: false
 - 微信教程 2：<https://mp.weixin.qq.com/s/vdWVO6QyWJM4G_fEh7ZhdA>
 - 微信教程 3：<https://mp.weixin.qq.com/s/sqRcFTtuCdwvc5JrpGTEPA>
 
-## 可用网站
+## 文章配图 Skills：baoyu-article-illustrator
 
-### oaichat image
+给长文自动找插图位置、统一视觉语言出图，用 [baoyu-article-illustrator](https://github.com/JimLiu/baoyu-skills#baoyu-article-illustrator)（[JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills)）。核心是 **Type × Style × Palette** 三维组合，可自由拼，也可走预设，[README.zh.md](https://github.com/JimLiu/baoyu-skills/blob/main/README.zh.md)。
 
-- <https://image.oaichat.cc/>
-- 免费，每天 30 张
+```bash
+npx skills add https://github.com/jimliu/baoyu-skills --skill baoyu-article-illustrator
+```
 
+## 开源工具与画布
 
-### sharedchat
+| 项目 | 链接 | 说明 |
+| --- | --- | --- |
+| 无限画布（infinite-canvas） | [GitHub](https://github.com/basketikun/infinite-canvas) · [canvas.best](https://canvas.best/) | 开源无限画布工作台：生图、参考图编辑、视频、Agent、画布编排、提示词库与素材管理；兼容 OpenAI 接口生态 |
+| GPT Image Playground | [GitHub](https://github.com/CookSleep/gpt_image_playground) · [在线体验](https://gpt-image-playground.cooksleep.dev) | 基于 OpenAI gpt-image-2.5 API 的图片生成与编辑工具（React / Vite） |
 
-- <https://chat.sharedchat.cc/>
-- 免费，但是有些号无使用次数，需要持续换号尝试
+## 中转站和价格
 
-### jiaotuai
+按 image2 大致单价从低到高排列（免费站靠前；价格以各站公示为准，可能变动）。
 
-- <https://www.jiaotuai.cn/>
-- 选择 `Image2 Pro`
-- 费用大概 1 到 2 毛一张
+| 中转站 | 链接 | image2 价格 / 说明 |
+| --- | --- | --- |
+| oaichat image | <https://image.oaichat.cc/> | 免费，每天 30 张左右 |
+| arena.ai | <https://arena.ai/> | 免费；选 `Direct`、`gpt-image-2` |
+| ChatGPT 官网 | ChatGPT | 免费约每天 4–5 张；注册需科学上网 |
+| kuaipao | <https://kuaipao.ai/pricing> | 低至 **0.05 元 / 次** |
+| foxcode | <https://foxcode.rjj.cc/model-square> | `gpt-image-2` 约 0.05–0.07 元 / 张 |
+| rolldek | <https://api-cn.rolldek.com/> | gpt-image-2 低至 **0.05 元 / 张**（见下表） |
+| hezubus | <https://hezubus.cc/p/pricing> | 低至 **0.06 元 / 次** |
+| axis.yoga | <https://axis.yoga/> | 低至 **0.08 元 / 次** |
+| jiaotuai | <https://www.jiaotuai.cn/> | 选 `Image2 Pro`，约 0.1–0.2 元 / 张 |
+| toapis | <https://toapis.com/pricing> | 整体调用低至约 0.1 元 / 次（含多模型） |
+| aixj | <https://aixj.vip/> | 低至 **0.1 元 / 次** |
+| pucoding | <https://draw.pucoding.com/> | 约 0.125 元 / 张 |
 
-### arena.ai
-
-- <https://arena.ai/>
-- 免费，选择 `Direct`、`gpt-image-2`
-
-### canvas.best
-
-- <https://canvas.best/>
-- GPT-Image 在线生成与画布式编辑项目，可作为产品形态参考
-
-### kuaipao
-
-- <https://kuaipao.ai/pricing>
-- image2 低至 0.05 元 / 次
-
-### foxcode
-
-- <https://foxcode.rjj.cc/model-square>
-- `gpt-image-2` 接口，折算 0.05 - 0.07 一张
-
-### hezubus
-
-- <https://hezubus.cc/p/pricing>
-- image2 低至 0.06 元 / 次
-
-### rolldek
-
-- <https://rolldek.com/>
-- 多模型出图接口，按模型计价：
+### rolldek 分模型计价
 
 | 模型 | 参数 | 价格 |
 | --- | --- | --- |
@@ -104,28 +93,3 @@ bookHidden: false
 | gpt-image-2-official | 官渠满血全参透明底 | 0.15¥ / 张 |
 | gemini-3.1-flash-image-preview | 1-4k | 0.06¥ / 张 |
 | gemini-3-pro-image-preview | 1-4k | 0.07¥ / 张 |
-
-### axis.yoga
-
-- <https://axis.yoga/>
-- image2 低至 0.08 元 / 次
-
-### toapis
-
-- <https://toapis.com/pricing>
-- 整体调用低至 0.1 元 / 次，含多款视频、图像模型计费方案
-
-### aixj
-
-- <https://aixj.vip/>
-- image2 低至 0.1 元 / 次
-
-### pucoding
-- <https://draw.pucoding.com/>
-- 0.125 元 / 张
-
-
-### ChatGPT 官网
-
-- ChatGPT 官网可以免费使用（每天4-5张）
-- 现在注册账号有点难度，需科学上网

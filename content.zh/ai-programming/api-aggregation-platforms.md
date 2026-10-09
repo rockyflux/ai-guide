@@ -2,7 +2,7 @@
 aliases:
   - /setup/api-aggregation-platforms/
 title: AI 大模型 API 聚合平台
-weight: 23
+weight: 33
 bookToc: false
 noTocArea: true
 bookHidden: true

@@ -1,6 +1,6 @@
 ---
 title: Kiro 详细使用指南
-weight: 32
+weight: 90
 bookToc: true
 bookHidden: true
 ---

@@ -4,7 +4,7 @@ weight: 2
 date: 2026-02-09T23:34:00+08:00
 noTocArea: true
 bookToc: false
-bookHidden: false
+bookHidden: true
 ---
 
 ## Rules（系统级指令 / 全局约束层）

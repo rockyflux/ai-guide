@@ -46,6 +46,6 @@ bookHidden: false
 ## 使用建议
 
 - **入门扫盲**：先看 [AI（人工智能）](https://www.runoob.com/ai/ai-tutorial.html) 与 [AI 数学基础](https://www.runoob.com/ai-math/ai-math-tutorial.html)，再按方向选 Agent 或 ML 框架。
-- **AI 编程落地**：Codex / Claude Code / OpenCode / Vibe Coding 四篇可对照阅读；本站主线见 [入门与选型]({{< relref "ai-programming/_index" >}}) 与 [Agent 工程]({{< relref "agent/_index" >}})。
-- **本地跑模型**：Ollama 教程适合配合 [环境与工具]({{< relref "setup/_index" >}}) 章节搭建本地环境。
+- **AI 编程落地**：Codex / Claude Code / OpenCode / Vibe Coding 四篇可对照阅读；本站主线见 [AI 编程选型]({{< relref "ai-programming/_index" >}}) 与 [Agent 工程]({{< relref "agent/_index" >}})。
+- **本地跑模型**：Ollama 教程适合配合 [开发环境准备]({{< relref "ai-programming/dev-start" >}}) / [环境增强工具集]({{< relref "ai-programming/env-and-tools" >}}) 搭建本地环境。
 - **构建 LLM 应用**：LangChain 教程可与 [Agent 工程 — MCP / Skills]({{< relref "agent/skills" >}}) 等页面交叉参考。

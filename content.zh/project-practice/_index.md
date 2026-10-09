@@ -16,16 +16,16 @@ noTocArea: true
 - **开工包**：选定工具后，10 分钟级跑通 Cursor / Codex / Kiro  
 - **交付闭环**：路线图 → 案例练手 → 最佳实践 / 配置集 → 需求到原型  
 
-选型与套餐请回 **[模型与工具选型]({{< relref "ai-programming/_index" >}})**；环境卡壳回 **[环境配置]({{< relref "setup/_index" >}})**。
+选型、套餐与开发环境请回 **[AI 编程选型]({{< relref "ai-programming/_index" >}})**（含 [开发环境准备]({{< relref "ai-programming/dev-start" >}}) / [环境增强工具集]({{< relref "ai-programming/env-and-tools" >}})）。
 
 ## 先从哪里开始？（按目标直达）
 
 ### 1) 开工包：先把工具跑起来
 
-- [Cursor 实战上手指南（10分钟）]({{< relref "project-practice/cursor" >}})
-- [Cursor Skills 实战]({{< relref "project-practice/cursor-skills-practice" >}}) — 用 Skills 交付 PPT / 公众号 / 动画 / 原型（持续更新）
+- [Cursor 实战上手指南（10分钟）]({{< relref "project-practice/cursor" >}}) — 含 Skills 交付 PPT / 公众号 / 动画 / 原型
 - [Codex 实战上手指南]({{< relref "project-practice/codex" >}})
 - [Kiro 实战：旧项目改 bug / 新项目新需求]({{< relref "project-practice/kiro-practice" >}})
+- [WSL 开发环境]({{< relref "project-practice/wsl" >}}) — Windows 下更顺手的 Linux + Claude Code
 
 ### 2) 交付闭环：尽快做完第一个项目
 

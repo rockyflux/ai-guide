@@ -3,7 +3,7 @@ title: GSD 规格驱动
 weight: 11
 bookToc: false
 noTocArea: true
-bookHidden: false
+bookHidden: true
 ---
 
 ## GSD 是什么？

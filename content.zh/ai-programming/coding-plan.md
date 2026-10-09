@@ -1,6 +1,6 @@
 ---
-title: AI 编程套餐与模型渠道指南
-weight: 22
+title: Coding Plan 与渠道
+weight: 30
 bookToc: true
 noTocArea: false
 bookHidden: false
@@ -12,7 +12,7 @@ bookHidden: false
 
 比价前先记住三点：
 
-1. **按量计费通常看三项**：输入、输出和缓存。只报输入价、不说明输出价和缓存规则，不能直接比较。中转站还可能在官方价格上加倍率，见[什么是 API 中转站]({{< relref "ai-programming/api-relay-station" >}})。
+1. **按量计费通常看三项**：输入、输出和缓存。只报输入价、不说明输出价和缓存规则，不能直接比较。中转站还可能在官方价格上加倍率，见[API 中转站]({{< relref "ai-programming/api-relay-station" >}})。
 2. **能力、价格、速度通常不能同时拉满**。包月套餐看似便宜，实际还要看日额度、可用模型和高峰限速。先确定自己最看重能力、成本还是速度。
 3. **Agent 不要只看单价**。多轮工具调用更依赖首字速度，长会话则受缓存命中率影响。对比中转时，还要确认写缓存是否收费、能否跨会话命中，并参考文末 [Kan LLM](#中转检测与选型工具) 的延迟数据。
 
@@ -29,13 +29,12 @@ bookHidden: false
 
 ### 中转服务分类
 
-先按**用途**分类，再比较价格。订阅型中转、按量网关和电商代充的计费方式与风险不同。倍率和平台币换算见[什么是 API 中转站]({{< relref "ai-programming/api-relay-station" >}})，检测工具见文末[检测工具与补充资源](#检测工具与补充资源)。
+先按**用途**分类，再比较价格。订阅型中转、按量网关和电商代充的计费方式与风险不同。倍率和平台币换算见[API 中转站]({{< relref "ai-programming/api-relay-station" >}})，检测工具见文末[检测工具与补充资源](#检测工具与补充资源)。
 
 ![中转渠道三类与风险](/images/coding-plan/02-comparison-relay-channels.png)
 
-{{% hint info %}}
-下表为约 2026-09 公开页可见标价，中转站调价较快。「登录后见价」表示首页没有稳定公开套餐。重点核对：**人民币实付**、**额度口径**（美元额度、积分或日重置）、**倍率和缓存规则**。
-{{% /hint %}}
+> [!NOTE]
+> 下表为约 2026-09 公开页可见标价，中转站调价较快。「登录后见价」表示首页没有稳定公开套餐。重点核对：**人民币实付**、**额度口径**（美元额度、积分或日重置）、**倍率和缓存规则**。
 
 #### 1. Coding 订阅 / 月付型中转（偏 Claude Code、Codex、Gemini CLI）
 
@@ -74,6 +73,7 @@ bookHidden: false
 | **GateAI** | 登录后见价 | 单 Key 多模型，支持智能路由 | https://gateai.cc/ |
 | **FastAIToken** | 登录后见价 | OpenAI 兼容中转，提供统一鉴权和路由 | https://www.fastaitoken.com/ |
 | **露娜（freeapi）** | 登录后见价，按量 | AI API Gateway，多模型聚合接入 | https://freeapi.site/register?aff=F22JVN2537PW |
+| **Wokey** | 按量，宣称相对官价约 1/10；USDT 充值 | OpenRouter 类聚合，兼容 OpenAI / Anthropic；每条响应带 TEE 证明，可离线核官方上游 | https://wokey.ai/ |
 
 #### 3. 电商与非官方店铺（代充、拼车、账号）
 
@@ -88,6 +88,7 @@ bookHidden: false
 | **ldxp 小店（xcursor）** | 店铺标价 | 偏 Cursor | https://pay.ldxp.cn/shop/xcursor |
 | **ldxp 小店（AEUQ8PP3）** | 店铺标价 | 非官方店铺 | https://pay.ldxp.cn/shop/AEUQ8PP3 |
 | **wzyp 小店（2VWX76A4）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/2VWX76A4 |
+| **wzyp 小店（A8KYS0FY）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/A8KYS0FY |
 | **wafase** | 店铺标价 | 非官方店铺 | https://wafase.com/ |
 | **Acc-OTAOR** | 店铺标价 | Google、ChatGPT 等账号采购 | https://acc.otaor.com/ |
 
@@ -95,9 +96,8 @@ bookHidden: false
 
 已有 ChatGPT Web session 时，可用 [GPTSession2CPAandSub2API](https://github.com/gtxx3600/GPTSession2CPAandSub2API) 在浏览器本地转换为 CPA 或 Sub2API JSON，面向 Plus，与上表中转套餐无关。
 
-{{% hint warning %}}
-上表服务适合补接入能力或短期试用，不适合高敏感、强稳定性或长期不可中断的生产流程。部分私有渠道可能违反平台服务条款，链接仅供参考，不构成推荐或担保。重要项目优先选择官方订阅或企业采购。
-{{% /hint %}}
+> [!WARNING]
+> 上表服务适合补接入能力或短期试用，不适合高敏感、强稳定性或长期不可中断的生产流程。部分私有渠道可能违反平台服务条款，链接仅供参考，不构成推荐或担保。重要项目优先选择官方订阅或企业采购。
 
 ## 企业团队采购
 
@@ -140,9 +140,8 @@ bookHidden: false
 
 适合明确偏好某家模型、希望使用原生能力的开发者。
 
-{{% hint info %}}
-价格和额度调整较快。下表为约 2026-09 的公开标价，连续包月、包季和包年折扣也可能变化，下单前以平台页面为准。
-{{% /hint %}}
+> [!NOTE]
+> 价格和额度调整较快。下表为约 2026-09 的公开标价，连续包月、包季和包年折扣也可能变化，下单前以平台页面为准。
 
 | 平台 | 套餐 | 价格（月付标价） | 适合人群 | 核心亮点 | 官方链接 |
 |---|---|---|---|---|---|
@@ -224,7 +223,7 @@ bookHidden: false
 
 ### 中转检测与选型工具
 
-中转接入前，可以按“延迟与可用率 → 可信度排行 → 模型指纹检测”的顺序检查。
+中转接入前，可以按“延迟与可用率 → 可信度排行 → 模型指纹检测”的顺序检查。若渠道宣称走官方上游，还可对照 TEE 远程证明（见下表 Proof of Observation），不必只信运营方口头保证。
 
 | 服务 | 价格口径 | 简述 | 链接 |
 |---|---|---|---|
@@ -232,9 +231,11 @@ bookHidden: false
 | **真测 Ztest** | 免费排行 | 测试模型真实性、响应质量和可用性，提供可信度评分 | https://ztest.ai/ |
 | **PriceAI 中转检测** | 需登录，按检测强度消耗临时 Key | 检测协议外观、能力指纹、线路和计费口径，主站不保存 Key | https://priceai.cc/api-transit/detector |
 | **meow 模型检测** | 自费，使用自己的 API 账户 | 通过模型指纹比对申报模型和实际线路 | https://meowllm.top/ |
+| **ModelTrace** | 免费，浏览器本地计算 | 三次长整数挑战提取输出指纹，对照统一指纹库判断模型家族与版本，适合中转降智 / 路由验真 | https://xqy2006.github.io/ModelTrace/ |
 | **禾维 AI** | 免费检测 / 榜单 | 对比中转实测排名、真假、价格和在线率，域名亦见 [hvoyai.com](https://www.hvoyai.com/) | https://hvoy.ai/ |
 | **HLWY AI Checker** | 开源工具 | 检查第三方 AI API 是否掺假以及渠道一致｜基于 LLM 指纹的 AI 模型识别 | https://github.com/hanlinwenyuan/hlwy-ai-checker |
 | **APIs.you** | 目录导航 | API 和中转目录聚合入口 | https://apis.you/catalog |
+| **Proof of Observation** | 免费演示 | TEE 远程证明 + 响应签名：核 PCR0、验签、链到 AWS Nitro，用来自证中转没有偷换模型或改响应 | https://focuxdot.github.io/proof-of-observation/tee-attestation-demo.html |
 
 ### IDE 配额补充
 
@@ -246,8 +247,10 @@ bookHidden: false
 
 ### 延伸阅读与开源项目
 
-- [什么是 API 中转站]({{< relref "ai-programming/api-relay-station" >}})：程序结构、成本倍率和渠道风险
+- [API 中转站]({{< relref "ai-programming/api-relay-station" >}})：程序结构、成本倍率和渠道风险
 - [公益站导航](https://ldoh.105117.xyz/)：第三方资源导航
 - [LDOH 仓库](https://github.com/JoJoJotarou/LDOH)：对应开源仓库
 - [all-api-hub](https://github.com/qixing-jk/all-api-hub)：管理中转站账号、余额、用量和密钥分发
 - [awesome-claude-api](https://github.com/peter123023/awesome-claude-api)：Claude API 资源与项目汇总
+- [Proof of Observation](https://focuxdot.github.io/proof-of-observation/tee-attestation-demo.html)：TEE 远程证明如何自证中转未偷换
+- [Wokey](https://wokey.ai/)：按量聚合，响应可离线核官方上游

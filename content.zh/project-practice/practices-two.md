@@ -19,7 +19,7 @@ bookHidden: false
 ### 路线 A｜今天就要开工
 
 - **先把环境跑起来**：只看这篇  
-  - [开发环境准备]({{< relref "setup/dev-start" >}})
+  - [开发环境准备]({{< relref "ai-programming/dev-start" >}})
 - **然后做一次小练手（需求 → 任务 → 开发）**  
   - [AI 编程案例]({{< relref "project-practice/practices-one" >}})
 
@@ -36,17 +36,19 @@ bookHidden: false
 ### 路线 C｜准备长期用（进阶）
 
 - **多模型/多 Agent 协作（把任务拆批次、角色化）**  
-  - [Coding Agent 协作实践]({{< relref "workflow/ccg-workflow" >}})
+  - [协作工作流选型]({{< relref "ai-programming/ccg-workflow" >}})
 - **把配置与方法论体系化（适合长期维护）**  
   - [Everything Claude Code 总览]({{< relref "project-practice/everything-claude-code" >}})
 
 ### 可选扩展（需要时再点开）
 
+- **先串整条链路（选型 → API → Agent → 上下文）**  
+  - [全流程总览]({{< relref "ai-programming/full-pipeline" >}})
 - **选模型**：你纠结“该用哪个模型/套餐”时再看  
-  - [LLM 评测基准与榜单汇总]({{< relref "ai-programming/Leaderboard" >}})
-  - [AI Coding Plan 订阅选型]({{< relref "ai-programming/coding-plan" >}})
+  - [评测基准与榜单]({{< relref "ai-programming/Leaderboard" >}})
+  - [Coding Plan 与渠道]({{< relref "ai-programming/coding-plan" >}})
 - **环境增强/接入更多端**：你已经能跑通，但想更省事、更统一时再看  
-  - [AI 编程环境配置与增强工具集]({{< relref "setup/env-and-tools" >}})
+  - [环境增强工具集]({{< relref "ai-programming/env-and-tools" >}})
   - [CC-Switch 可视化配置]({{< relref "setup/cc-switch" >}})
   - [CLI 代理 API（CPA）]({{< relref "setup/cpa" >}})
 
