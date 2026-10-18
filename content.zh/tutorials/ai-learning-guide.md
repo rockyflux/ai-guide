@@ -80,6 +80,7 @@ bookHidden: false
 | CS231n 计算机视觉 | [CS231n: CNN for Visual Recognition](http://cs231n.stanford.edu/) | ⭐⭐⭐ | 李飞飞经典课程 |
 | CS224n 自然语言处理 | [CS224n: NLP with Deep Learning](http://web.stanford.edu/class/cs224n/) | ⭐⭐⭐ | 深度学习 NLP |
 | CS25 Transformers | [CS25: Transformers United](https://web.stanford.edu/class/cs25/) | ⭐⭐⭐⭐ | 顶尖嘉宾 Transformer 研讨 |
+| CS336 从零构建语言模型 | [CS336: Language Modeling from Scratch](https://cs336.stanford.edu/spring2025/) | ⭐⭐⭐⭐ | 斯坦福公开课：模型实现、训练与数据处理，配编程作业，适合进阶 |
 
 ### MIT
 
@@ -128,6 +129,15 @@ bookHidden: false
 | --- | --- | --- | --- |
 | AI 工程从零开始 | [ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 64k+ | 20 阶段 / 523 课：线性代数到 Agent 与生产落地，每课产出可复用工件 |
 | 深入理解 AI Agent | [ai-agent-book](https://github.com/bojieli/ai-agent-book) | 40k+ | 李博杰著：Agent 原理到工程实战（10 章 + 103 实验，含 PDF/多语言） |
+| Agentic Design Patterns（中文版） | [agentic-design-patterns](https://github.com/xindoo/agentic-design-patterns) | 8k+ | 谷歌《Agentic Design Patterns》中文翻译：21 个 Agent 设计模式，含在线阅读 / PDF |
+| Hands-On Modern RL | [hands-on-modern-rl](https://github.com/walkinglabs/hands-on-modern-rl) | 4.6k+ | 从经典 RL 到 LLM 对齐、RLVR 与 Agentic 系统的动手课程 |
+| 强化学习的数学原理 | [Book-Mathematical-Foundation-of-Reinforcement-Learning](https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning) | 18k+ | 赵世钰：强化学习基础概念、经典问题与算法的数学友好导论 |
+| 神经网络与深度学习 | [nndl](https://github.com/nndl/nndl) | 19k+ | 邱锡鹏「蒲公英书」：第二版与通识版电子书、目录与勘误（站点 [nndl.github.io](https://nndl.github.io/)） |
+| 动手学深度学习习题解答 | [d2l-ai-solutions-manual](https://github.com/datawhalechina/d2l-ai-solutions-manual) | 600+ | Datawhale：《动手学深度学习》课后习题解答 |
+| 神经网络 Zero to Hero | [nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero) | 24k+ | Karpathy：从神经网络基础讲起，手写语言模型、GPT 与分词器 |
+| 从零实现 LLM | [LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | 106k+ | Sebastian Raschka：用 PyTorch 从零实现 GPT，覆盖注意力、预训练与微调 |
+| Happy-LLM | [happy-llm](https://github.com/datawhalechina/happy-llm) | 34k+ | Datawhale：中文讲解 Transformer、大模型原理与训练，结合代码从零构建 |
+| nanoGPT | [nanoGPT](https://github.com/karpathy/nanoGPT) | 63k+ | Karpathy：精简 GPT 训练代码，适合学完基础后读源码、跑一个小模型 |
 | LLM 课程 | [LLM Course](https://github.com/mlabonne/llm-course) | 40k+ | 从入门到微调完整路线 |
 | AI 专家路线图 | [AI Expert Roadmap](https://github.com/AMAI-GmbH/AI-Expert-Roadmap) | 29k+ | 可视化学习路径 |
 | LLM / RL 原理图解 | [LLM-RL-Visualized](https://github.com/changyeyu/LLM-RL-Visualized) | 3.6k+ | 100+ 原创大模型 / 强化学习原理图与技术图谱 |
@@ -145,10 +155,16 @@ bookHidden: false
 | --- | --- | --- |
 | Learn Harness Engineering | [中文站](https://walkinglabs.github.io/learn-harness-engineering/zh/) | WalkingLab：给 Codex / Claude Code 做环境、状态、验证与控制，让 Agent 能可靠跑完真实工程任务 |
 | 深入理解 AI Agent（开源书） | [ai-agent-book](https://github.com/bojieli/ai-agent-book) | 李博杰：上下文工程 / MCP / Coding Agent / 评估与后训练，正文+实验全开源 |
+| Agentic Design Patterns（中文版） | [agentic-design-patterns](https://github.com/xindoo/agentic-design-patterns) | 谷歌 Agent 设计模式中文翻译：21 个核心模式，含在线阅读 |
+| Hands-On Modern RL | [hands-on-modern-rl](https://github.com/walkinglabs/hands-on-modern-rl) | 经典 RL → LLM 对齐 / RLVR / Agentic 的动手课程（中英） |
+| 神经网络与深度学习（蒲公英书） | [nndl.github.io](https://nndl.github.io/) | 邱锡鹏：第二版系统理论 + 通识版入门，另有案例与实践篇 |
 | 动手学深度学习（中文版） | [zh.d2l.ai](https://zh.d2l.ai/) | 李沐团队官方中文版 |
+| 动手学深度学习习题解答 | [d2l-ai-solutions-manual](https://github.com/datawhalechina/d2l-ai-solutions-manual) | Datawhale：d2l 课后习题解答 |
 | 南瓜书 | [PumpkinBook](https://datawhalechina.github.io/pumpkin-book/) | 西瓜书公式推导 |
+| 强化学习的数学原理 | [Mathematical Foundation of RL](https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning) | 赵世钰：RL 数学友好导论（概念、问题与经典算法） |
 | AI 学习笔记 | [AI-For-Beginners 中文](https://microsoft.github.io/AI-For-Beginners/zh/) | 微软课程中文版 |
 | LLM 应用开发 | [LLM-Cookbook](https://datawhalechina.github.io/llm-cookbook/) | Datawhale 社区 |
+| Happy-LLM | [happy-llm](https://github.com/datawhalechina/happy-llm) | Datawhale：中文讲解 Transformer、大模型原理与训练，结合代码从零构建 |
 
 ---
 
@@ -168,9 +184,11 @@ bookHidden: false
 ```
 1. [Coursera] 吴恩达 Machine Learning Specialization
 2. [d2l.ai] 动手学深度学习
-3. [Stanford] CS224n 自然语言处理
-4. [DeepLearning.AI] Deep Learning Specialization
-5. [GitHub] LLM Course - 大模型专项
+3. [Karpathy] nn-zero-to-hero → nanoGPT（手写到精简训练代码）
+4. [rasbt / Datawhale] LLMs-from-scratch 或 Happy-LLM（从零实现 GPT）
+5. [Stanford] CS224n 自然语言处理；进阶可选 CS336
+6. [DeepLearning.AI] Deep Learning Specialization
+7. [GitHub] LLM Course - 大模型专项
 ```
 
 ### 🎯工程实战路径（1-2 个月）
@@ -194,9 +212,10 @@ bookHidden: false
 | AI 入门小白 | 微软 Generative AI for Beginners → 吴恩达 ML 课程 |
 | 快速上手 LLM 开发 | OpenAI Cookbook → LangChain 短课程 |
 | 系统学 AI 工程 | [ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch)（20 阶段 / 523 课） |
-| 系统学 AI Agent | [ai-agent-book](https://github.com/bojieli/ai-agent-book)（原理 + 103 实验）→ DeepLearning.AI Agent 短课 |
+| 系统学 AI Agent | [ai-agent-book](https://github.com/bojieli/ai-agent-book)（原理 + 103 实验）→ [Agentic Design Patterns 中文版](https://github.com/xindoo/agentic-design-patterns) → DeepLearning.AI Agent 短课 |
 | Coding Agent 工程化 | [Learn Harness Engineering](https://walkinglabs.github.io/learn-harness-engineering/zh/)（讲义 + 项目 + 模板） |
-| 深入理解原理 | d2l.ai → CS229 → CS224n |
+| 深入理解原理 | 蒲公英书 / d2l.ai → Karpathy Zero to Hero → LLMs-from-scratch / Happy-LLM → nanoGPT → CS224n / CS336 |
+| 强化学习 | [强化学习的数学原理](https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning) → [Hands-On Modern RL](https://github.com/walkinglabs/hands-on-modern-rl) |
 | 企业级部署 | Azure OpenAI → AWS Bedrock |
 | Prompt 高手 | Anthropic 教程 → DAIR Prompt 指南 |
 | 开源玩家 | Llama 文档 → r/LocalLLaMA |

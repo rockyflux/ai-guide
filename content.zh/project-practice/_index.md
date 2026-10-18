@@ -38,3 +38,4 @@ noTocArea: true
 
 - [Claude Code 最佳实践]({{< relref "project-practice/best-practices" >}}) — 验证标准、Plan Mode、探索/规划/实现分层
 - [Everything Claude Code]({{< relref "project-practice/everything-claude-code" >}}) — 生产级配置集合（rules/skills/hooks/agents/mcp）
+- [AI 开发心得]({{< relref "project-practice/ai-dev-notes" >}}) — Skill / Prompt、日常工作流、Agent 友好 E2E 与 Review

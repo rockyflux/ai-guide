@@ -62,6 +62,7 @@ translationKey: site-map
 - [从一个具体案例开始]({{< relref "project-practice/practices-one" >}})：用小项目练拆解、验证与协作闭环。
 - [Claude Code 最佳实践]({{< relref "project-practice/best-practices" >}})：Plan Mode、验证标准、上下文管理等。
 - [Everything Claude Code 总览]({{< relref "project-practice/everything-claude-code" >}})：生产级配置集合。
+- [AI 开发心得]({{< relref "project-practice/ai-dev-notes" >}})：Skill / Prompt、日常工作流、Agent 友好 E2E 与 Review。
 - [从需求到设计原型]({{< relref "project-practice/requirements-to-design-prototype" >}})：从模糊构思到高保真原型。
 - [Kiro 实战]({{< relref "project-practice/kiro-practice" >}})：Spec-Driven Agent IDE 两套可照做流程。
 

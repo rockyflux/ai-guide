@@ -24,6 +24,7 @@ bookHidden: false
 - [Datawhale](https://www.datawhale.cn/) — 开源学习社区
 - [AI System 全栈课程](https://infrasys-ai.github.io/aisystem-docs/) — 围绕英伟达 / 昇腾等芯片，从硬件体系、编译器、推理引擎到大模型与智能体的 AI 系统全栈课程大纲
 - [从零开始构建智能体](https://datawhalechina.github.io/hello-agents/) — 智能体入门与实战
+- [dg-ai-notes](https://github.com/buchidonggua/dg-ai-notes) — Pi-Agent 源码解读与二次开发实战（TypeScript + Python 双轨；含实战案例与 dg-piagent skill）；[在线阅读](https://dg-ai-notes.pages.dev)
 - [检索增强生成 (RAG) 技术全栈指南](https://datawhalechina.github.io/all-in-rag) — RAG 全栈学习路径
 - [大模型应用开发：上下文工程与运行空间实践指南](https://github.com/WakeUp-Jin/Practical-Guide-to-Context-Engineering) — 上下文工程（与 RAG、提示词工程的关系）、Harness Engineering（Agent 运行空间）；[在线阅读](https://wakeup-jin.github.io/Practical-Guide-to-Context-Engineering/)
 - [Learn Harness Engineering](https://walkinglabs.github.io/learn-harness-engineering/) — Harness Engineering 学习指南

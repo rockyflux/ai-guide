@@ -38,6 +38,7 @@ bookHidden: false
 ## 提示词库
 
 - [awesome-gpt-image-2-API-and-Prompts（EvoLinkAI）](https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts)：GPT-Image-2 API 说明与海量提示词案例（含多语言 README）
+- [GPT-Image2-Skill](https://github.com/wuyoscar/GPT-Image2-Skill/)：GPT Image 2/2.5 提示词画廊与模板库，附 agent skill（Claude Code / Codex）与 OpenAI 生图/编辑 CLI（[中文 README](https://github.com/wuyoscar/GPT-Image2-Skill/blob/main/README.zh.md)）
 - [Banana Prompt Quicker](https://github.com/glidea/banana-prompt-quicker)：Chrome 扩展 + 在线画廊，一键插入 Gemini / AI Studio 等场景的提示词
 - [无限画布 · 提示词](https://canvas.best/prompts)：canvas.best 内置提示词库
 - [水仙的 AI 提示词花园](https://prompt.qqsrc.com/)：精选提示词，按主题分类逛画廊

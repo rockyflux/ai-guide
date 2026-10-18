@@ -8,6 +8,10 @@ noTocArea: true
 
 # 编程工具对比
 
+> **先读再比工具**：选型前务必先过这两本——
+> 1. [《深入理解 AI Agent — 从原理到实践》](https://bojieli.github.io/ai-agent-book/astro/)（李博杰等）：Agent 循环、上下文、工具到 Coding Agent / 多 Agent，把「工具在干什么」想清楚。
+> 2. [《Learn Harness Engineering》](https://walkinglabs.github.io/learn-harness-engineering/zh/)：规则、边界、验证与跨会话交接，把 Codex / Claude Code 等真正跑稳。
+> 原理 + 工程化 harness 都过一遍，再看下面的对照表会省很多弯路。
 
 > Agent ≈ LLM（推理大脑） + Skills（任务编排 / 提示词策略） + Tools（动作能力）
 > Tools 可通过自定义函数调用（Function Calling）、MCP 等多种通信方式接入。[万字长文解读LLM Agent：总体框架、经典论文与实践](https://zhuanlan.zhihu.com/p/2000210358820946463)

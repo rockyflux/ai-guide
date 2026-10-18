@@ -182,7 +182,7 @@ winget install JesseDuffield.lazygit
 
 使用Google或ChatGPT等需要科学上网工具。
 
-- 客户端 [Clash Verge](https://www.clashverge.dev/install.html) 、 [Clash Party](https://clashparty.org/)、[FlClash](https://flclash.cc/download.html)
+- 客户端 [Clash Verge](https://www.clashverge.dev/install.html) 、 [Clash Party](https://clashparty.org/)、[FlClash](https://flclash.cc/download.html)、[覆写脚本](https://github.com/dahaha-365/YaNet/tree/main/Mihomo)、[订阅转换](https://github.com/SubBoost/subboost)
 - [NoMoreWalls 免费公开节点](https://github.com/peasoft/NoMoreWalls) 、[低价机场推荐](https://github.com/DiningFactory/panda-vpn-pro) 、 [便宜好用评测](https://www.ermao.net/posts/vpn/)、 [最优的科学上网方案](https://github.com/githubvpn007/v2rayNvpn)
 
 注意：网络访问与代理工具的使用受所在地法律法规约束，请自行确认合规后再使用。

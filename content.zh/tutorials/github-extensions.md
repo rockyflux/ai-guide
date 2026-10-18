@@ -14,6 +14,7 @@ bookHidden: false
 
 | 你想做什么 | 工具 | 一句话用途 | 入口 / 打开方式 |
 | --- | --- | --- | --- |
+| 在终端里操作 GitHub | [GitHub CLI](https://cli.github.com/) | 在命令行管理 Issue、PR、Checks、Release 等，少切网页 | [安装说明](https://cli.github.com/)：Windows `winget install --id GitHub.cli`，macOS `brew install gh`；装好后 `gh auth login` |
 | 在线编辑仓库 | [GitHub.dev](https://github.dev/) | 浏览器里改文件、提交变更、提 PR | 仓库页按 `.`（英文句号），或把 `github.com/OWNER/REPO` 改成 `github.dev/OWNER/REPO` |
 | 在线阅读代码 | [GitHub1s](https://github1s.com/) | 像 VS Code 一样浏览/搜索/跳转 | 把 `github.com/OWNER/REPO` 改成 `github1s.com/OWNER/REPO` |
 | 读中文项目知识库 | [zread.ai](https://zread.ai) | 阅读整理好的中文项目说明（介绍、安装步骤等） | 把 `github.com/OWNER/REPO` 改成 `zread.ai/OWNER/REPO` |

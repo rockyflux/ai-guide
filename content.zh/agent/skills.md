@@ -121,6 +121,7 @@ skill/employees/
 - [`using-superpowers`](https://github.com/obra/superpowers) / [`brainstorming`](https://github.com/obra/superpowers)：工作流元能力与需求澄清；`npx skills add https://github.com/obra/superpowers --skill using-superpowers`
 - [Waza](https://github.com/tw93/Waza)：把常见工程习惯收成 8 个可链式调用的 Skill（`/think` 决策规划、`/ui` 前端审美、`/check` 合并前审查、`/hunt` 根因调试、`/write` 中英润色、`/learn` 调研写作、`/read` URL/PDF、`/health` Agent 健康审计）；比 Superpowers / gstack 更轻量；`npx skills add tw93/Waza -a claude-code codex cursor antigravity-cli -g -y`
 - [Birdview](https://github.com/Qiuner/birdview)：改代码前先出架构与约束地图（模块关系、适用规则、拟改范围、证据与验证），确认后再动手，输出可浏览器打开的独立 HTML；`npx skills add Qiuner/birdview --skill birdview`
+- [Answer me with HTML](https://github.com/QingYunA/answer-me-with-html)：复杂问题用一页可读 HTML 回答（时序/流程图、对比表、时间线等），模型只写 Markdown 草稿、CLI 出页面（约 1/8 token、更快）；亦支持 3b1b 风格讲解视频；`npx skills add QingYunA/answer-me-with-html`（或让 Agent 读 [INSTALL.md](https://raw.githubusercontent.com/QingYunA/answer-me-with-html/main/INSTALL.md) 自装）
 - [`mcp-builder`](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)：连接外部工具的 MCP 构建器
 - [Matt Pocock / skills](https://www.aihero.dev/skills)：工程交付工作流（`grill-with-docs`、`to-prd`、`to-issues`、`tdd`、`diagnose`）；`npx skills add mattpocock/skills`
 - [HumanLayer Skills](https://github.com/humanlayer/skills)：工程可视化与 Agent 控制环（`show-me` 图解、`visual-pr` 可视化 PR、`improve-claude-md`、`design-control-loop` 等）；`npx skills add humanlayer/skills --skill show-me`
@@ -153,12 +154,13 @@ skill/employees/
 - [taste-skill](https://github.com/Leonxlnx/taste-skill)：Anti-slop 前端审美；默认 `design-taste-frontend`（v2）；`npx skills add https://github.com/Leonxlnx/taste-skill`
 - [Impeccable](https://impeccable.style/)：`frontend-design` 增强（/polish、/audit、/distill）；`npx skills add pbakaus/impeccable`
 - [emilkowalski / skills](https://github.com/emilkowalski/skills/tree/main)：动效与界面品味（`animate`、`review-animations`、`apple-design`、`mobile-native`、`break-ui`、`pick-ui-library` 等）；`npx skills add emilkowalski/skills`
+- [jakubkrehel / skills](https://github.com/jakubkrehel/skills)：界面工程合集（Interfaces / [skills.sh](https://skills.sh/jakubkrehel/skills)）：`better-interface` 一次审 a11y / 布局 / 文案 / 排版 / 色彩 / UI；另有 `better-ui`、`better-typography`、`better-colors`、`better-accessibility`、`better-layout`、`better-writing`，以及 `interface-review`（分支/PR 回归）、`build-design`（Figma/设计图落地）、`break` / `state-machine` / `variant`；`npx skills add jakubkrehel/skills`（Claude Code：`/plugin marketplace add jakubkrehel/skills` → `/plugin install interfaces@interfaces`）
 - [OpenAI Skills](https://github.com/openai/skills)：策展含 `frontend-skill`、`playwright`、`figma-implement-design` 等
 - [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)：`web-design-guidelines`、`react-best-practices` 等
 
 > [!NOTE]
 > **社区增强 · 前端审美**  
-> 官方偏「做出好看的页面」；要压住 AI 通用 slop（紫渐变、卡片堆砌），优先用 [taste-skill](https://github.com/Leonxlnx/taste-skill) 或 [Impeccable](https://impeccable.style/)。动效曲线、时长与「该不该动」用 [emilkowalski / skills](https://github.com/emilkowalski/skills/tree/main)。
+> 官方偏「做出好看的页面」；要压住 AI 通用 slop（紫渐变、卡片堆砌），优先用 [taste-skill](https://github.com/Leonxlnx/taste-skill) 或 [Impeccable](https://impeccable.style/)。动效曲线、时长与「该不该动」用 [emilkowalski / skills](https://github.com/emilkowalski/skills/tree/main)。要按维度系统审界面（无障碍、排版、色彩、布局、产品文案）或审 PR 引入的界面回归，用 [jakubkrehel / skills](https://github.com/jakubkrehel/skills)。
 
 #### 通用办公
 

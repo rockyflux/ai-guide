@@ -76,6 +76,12 @@ Word / PPT / Excel / PDF 等先转成 Markdown，再放进该目录：
 
 **技能管理客户端**：[Skills Manager](https://skillsmanager.dev/zh)（开源桌面端 + CLI）。技能只装一次，可分发给 Cursor、Claude Code、Codex 等；支持从 Git / zip / [skills.sh](https://skills.sh) 安装，全局与项目工作区同步。装好后技能落在 `~/.cursor/skills`，Cursor 无需额外配置。
 
+**推荐先装**：[Waza](https://github.com/tw93/Waza)（think / write / read / learn 等工程习惯技能，一次分发到 Claude Code、Codex、Cursor）：
+
+```bash
+npx skills add tw93/Waza -a claude-code codex cursor -g -y
+```
+
 | Skill | 交付物 | 安装 |
 | --- | --- | --- |
 | [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill) | 演示文稿 / 可编辑 PPTX | `npx dashi-ppt-skill@latest` |

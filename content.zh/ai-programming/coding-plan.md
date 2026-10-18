@@ -2,7 +2,7 @@
 title: Coding Plan 与渠道
 weight: 30
 bookToc: true
-noTocArea: false
+noTocArea: true
 bookHidden: false
 ---
 
@@ -91,6 +91,14 @@ bookHidden: false
 | **wzyp 小店（A8KYS0FY）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/A8KYS0FY |
 | **wafase** | 店铺标价 | 非官方店铺 | https://wafase.com/ |
 | **Acc-OTAOR** | 店铺标价 | Google、ChatGPT 等账号采购 | https://acc.otaor.com/ |
+| **catfk（agiclaude）** | 店铺标价 | 偏 Claude，非官方店铺 | https://catfk.com/shop/agiclaude |
+| **catfk（agi）** | 店铺标价 | 非官方店铺 | https://catfk.com/shop/agi |
+| **红鱼小店** | 店铺标价 | AI 会员与订阅类代充、成品号 | https://hongyu888.vip/ |
+| **985 Store** | 店铺标价 | ChatGPT、Claude、Gemini、Grok 会员卡充，充到自有账号 | https://nb985.com/ |
+| **宫园熏的订阅铺** | 店铺标价 | AI 会员与订阅类代充 | https://ai-melody.store/ |
+| **出海酷** | 店铺标价 | AI 会员、成品号及接码等数字商品 | https://q.chuhai.cool/ |
+| **ZyNexus** | 店铺标价 | ChatGPT 会员 CDK 代充 | https://shop.zynexus.top/products |
+| **暗语 Anyu Hub** | 免费查阅 | 闲鱼、转转、小红书上的 AI 订阅与二手暗语对照，用来辨认拼车、代充话术 | https://anyu.luckhub.cc/ |
 
 ### 配套工具
 
@@ -132,7 +140,6 @@ bookHidden: false
 | **无问芯穹** | Lite | 19.9 元/月 | 预算有限、需要 IDE / CLI 接入 | 轻量多模型，支持 IDE 和 CLI | https://cloud.infini-ai.com/genstudio/code |
 |  | Pro | 49.9 元/月 | 小团队长期协作 | 团队功能更完整 | https://docs.infini-ai.com/gen-studio/coding-plan/ |
 | **华为云码道** | 公测版 | 免费 | 想体验行业方案、华为生态用户 | 华为自研模型，公测期间全功能免费 | https://www.huaweicloud.com/product/codearts/ai.html |
-| **OpenCode Go** | Go | $10/月，可按需充值 | 想低成本使用开源编程模型 | 官方订阅，覆盖主流开源 Coding 模型 | https://opencode.ai/zh/go |
 
 ---
 
@@ -187,6 +194,22 @@ bookHidden: false
 | **Windsurf** | Free | $0 | 轻量日 / 周配额，可试用 Agent | https://windsurf.com/pricing |
 |  | Pro | $20/月 | 标准配额，含 Cascade 和云会话 | 同上 |
 |  | Max | $200/月 | 重度 Agent 和前沿模型用户 | 同上 |
+
+### 开源模型向 Coding 订阅
+
+偏开源权重模型、低价入门或本地 + 云额度组合；与 Cursor / Claude 等闭源原厂订阅互补。
+
+| 产品 | 套餐 | 价格 | 特点 | 官方链接 |
+|---|---|---|---|---|
+| **ClinePass** | Pass | 约 $9.99/月（首月常见更低） | Cline 内置开源权重模型订阅，无需自备 Key | https://cline.bot/cline-pass |
+| **Ollama** | Free | $0 | 本地无限跑模型；云端含起步额度，可按量加购 | https://ollama.com/pricing |
+|  | Pro | $20/月（年付约 $16.67） | 每月约 $60 云额度；更大模型与多模型并发 | 同上 |
+|  | Max | $100/月 | 每月约 $300 云额度；约 10 并发；优先新模型 | 同上 |
+| **OpenCode Go** | Go | $10/月，可按需充值 | 官方订阅，覆盖主流开源 Coding 模型 | https://opencode.ai/zh/go |
+| **Command Code** | Go | $1/月 | 约 $10 额度；偏开源模型入门 | https://commandcode.ai/zh/pricing |
+|  | GOAT | $10/月 | 约 $70–80 额度；开源模型重度用量 | 同上 |
+|  | Pro | $20/月 | 约 $80 额度；共享池含高级模型 | 同上 |
+|  | Max 10× / 20× | $100 / $200/月 | 约 $150 / $300 额度；高频 Agent | 同上 |
 
 ### 模型厂商编程订阅
 

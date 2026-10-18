@@ -19,14 +19,14 @@ bookHidden: false
 - 换供应商 / 管 MCP·Skills → [CC Switch]({{< relref "setup/cc-switch" >}}) 或 CLI 版 `cc-switch-cli`；一键初始化看 [ZCF]({{< relref "setup/zcf" >}})
 - 多账号 / 配额监控 → Cockpit Tools、quotio、Antigravity Manager
 - 订阅转兼容 API / 多模型路由 → [LiteLLM](https://github.com/BerriAI/litellm)、[CPA]({{< relref "setup/cpa" >}})、[New API](https://github.com/QuantumNous/new-api)、Sub2API、Claude Code Router、opencodex、[Bifrost](https://github.com/maximhq/bifrost)、[magpie](https://github.com/yetone/magpie)；白嫖多家免费档 → FreeLLMAPI
-- 多 Agent 并行工作区 → Orca、[Multica](https://github.com/multica-ai/multica)、[Buzz](https://github.com/block/buzz)、[T3 Code](https://github.com/pingdotgg/t3code)、OpenChamber、Nezha、Desktop CC GUI、CLI-Manager、[diri](https://github.com/cristicretu/diri)
+- 多 Agent 并行工作区 → Orca、[Multica](https://github.com/multica-ai/multica)、[Buzz](https://github.com/block/buzz)、[T3 Code](https://github.com/pingdotgg/t3code)、OpenChamber、[PilotDeck](https://github.com/OpenBMB/PilotDeck)、Nezha、Desktop CC GUI、CLI-Manager、[diri](https://github.com/cristicretu/diri)
 - 终端里写代码 / 状态栏 → Pi、oh-my-pi、Warp、Pebrel、Claude HUD、[tty7](https://github.com/l0ng-ai/tty7)
-- 网站 / 已登录 Chrome 变成 CLI，给 Agent 操作网页 → [OpenCLI](https://github.com/jackwener/opencli)
+- 网站 / 已登录态给 Agent 操作网页 → [OpenCLI](https://github.com/jackwener/opencli)（网站变 CLI）；[ego lite](https://github.com/citrolabs/ego-lite)（专用浏览器 + 隔离 Space，共用登录态）；[BrowserSkill](https://github.com/Tencent/BrowserSkill)（`bsk` CLI + 扩展，接真实登录态 Chrome/Edge，不打断本机浏览）；无头浏览器（AI/自动化，非 Chromium）→ [Lightpanda](https://github.com/lightpanda-io/browser)
 - 团队共享 Skills / Rules / MCP → TeamAI
 - Windows 一键装环境 → Claude Code Quickstart (CCQ)
 - 远程盯会话 → hapi；云端 Agent（ChatGPT/Claude）接本机仓库与工具链 → [WebCodex](https://github.com/yyjeqhc/webcodex)；任务完成提醒 → AI CLI Complete Notify
 - Agent 友好的 Git（并行/堆叠分支、`but` CLI、Agent hooks/skills）→ [GitButler](https://github.com/gitbutlerapp/gitbutler)
-- 跨会话 / 跨 Agent 长期记忆与交接 → [ai-memory](https://github.com/akitaonrails/ai-memory)、[TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory)；进模型前压 tool 输出 / 上下文沙箱 → [headroom](https://github.com/headroomlabs-ai/headroom)、[context-mode](https://github.com/mksglu/context-mode)；代码库检索 / 调用图 → [Codegraph](https://github.com/colbymchenry/codegraph)、[Zvec](https://zvec.org/zh/)、[RepoWise](https://github.com/repowise-dev/repowise)；内容搜 / 找文件 → [ripgrep](https://github.com/BurntSushi/ripgrep)（`rg`）、[fd](https://github.com/sharkdp/fd)（现代 `find`）
+- 跨会话 / 跨 Agent 长期记忆与交接 → [Hindsight](https://github.com/vectorize-io/hindsight)、[OpenViking](https://github.com/volcengine/OpenViking)、[ai-memory](https://github.com/akitaonrails/ai-memory)、[TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory)；进模型前压 tool 输出 / 上下文沙箱、缩短 Agent 回复 → [headroom](https://github.com/headroomlabs-ai/headroom)、[context-mode](https://github.com/mksglu/context-mode)、[caveman](https://github.com/JuliusBrussee/caveman)；DeepSeek Harness 上下文透视 → [dsh-context](https://github.com/bowenliang123/dsh-context)；代码库检索 / 调用图 → [Codegraph](https://github.com/colbymchenry/codegraph)、[Zvec](https://zvec.org/zh/)、[RepoWise](https://github.com/repowise-dev/repowise)；架构图 / Mermaid 文档 → [oh-my-mermaid](https://github.com/oh-my-mermaid/oh-my-mermaid)；内容搜 / 找文件 → [ripgrep](https://github.com/BurntSushi/ripgrep)（`rg`）、[fd](https://github.com/sharkdp/fd)（现代 `find`）
 
 ### 桌面：配置 · 账号 · 配额
 
@@ -62,6 +62,7 @@ bookHidden: false
 |[Terax](https://github.com/crynta/terax-ai)|9.2k|约 7MB 的 Terminal-first 工作区（Tauri2）：WebGL 多标签终端、Agent 侧栏、CodeMirror、Git 图谱；无遥测|[Zread](https://zread.ai/crynta/terax-ai)|
 |[PI-Desktop](https://github.com/vastsa/pi-desktop)|5.3k|基于 [Pi](https://github.com/earendil-works/pi) 的 Local-first 桌面工作区：Agent/Plan/Goal、Subagent 编排、插件市场；可导入多端会话|[GitHub](https://github.com/vastsa/pi-desktop)|
 |[Octop](https://github.com/TencentCloud/Octop)|4.7k|腾讯云开源自托管多用户多 Agent：Web/CLI/桌面；IM 通道；ACP 对接 OpenCode / Claude Code / Codex|[GitHub](https://github.com/TencentCloud/Octop)|
+|[PilotDeck](https://github.com/OpenBMB/PilotDeck)|4.3k|清华 THUNLP / OpenBMB 等开源任务向 Agent 生产力平台：WorkSpace 隔离文件/记忆/Skills；白盒可追溯记忆、智能路由省 token、Always-on 后台执行；Web/CLI/IM，原生 MCP；AGPL|[官网](https://pilotdeck.openbmb.cn)|
 |[Desktop CC GUI](https://github.com/zhukunpenglinyutong/desktop-cc-gui)|4.3k|开源 VibeCoding 桌面端：Claude Code / Codex / OpenCode；终端、Git、看板、MCP/Skills、多 Agent 并行|[Zread](https://zread.ai/zhukunpenglinyutong/desktop-cc-gui)|
 |[codeg](https://github.com/xintaofei/codeg)|3.7k|聚合 Claude Code / Codex / Gemini CLI 等会话的工作台；桌面或自托管 Docker|[GitHub](https://github.com/xintaofei/codeg)|
 |[LiveAgent](https://github.com/Stack-Cairn/LiveAgent)|2.2k|Local-first Agent 桌面端：多模型路由、子 Agent/worktree、MCP/Skills、可选 Gateway WebUI|[Zread](https://zread.ai/Stack-Cairn/LiveAgent)|
@@ -113,18 +114,21 @@ bookHidden: false
 
 ### 终端增强与 CLI Agent
 
-AI 原生终端、Coding Agent Harness、网站转 CLI / 登录态浏览器自动化，以及终端内状态栏 / 多 Agent 协作。
+AI 原生终端、Coding Agent Harness、网站转 CLI / 登录态与无头浏览器自动化，以及终端内状态栏 / 多 Agent 协作。
 
 |工具名称|star 数|项目介绍|解读|
 |---|---|---|---|
 |[🔥Pi](https://github.com/earendil-works/pi)|109k|可自扩展的极简终端 Coding Agent：多厂商 LLM、工具运行时、差分 TUI；用 Extensions/Skills 扩展而非 fork 内核|[Zread](https://zread.ai/earendil-works/pi)|
 |[Warp](https://github.com/warpdotdev/warp)|65k|AI 原生终端：命令补全、命令块、工作流与团队协作|[Zread](https://zread.ai/warpdotdev/warp)|
+|[Lightpanda](https://github.com/lightpanda-io/browser)|36.7k|为 AI Agent 与自动化从零写的无头浏览器（Zig，非 Chromium/WebKit）：比 Headless Chrome 约省 16× 内存、快 9×；CDP / WebDriver BiDi，可接 Puppeteer / Playwright；`lightpanda agent` 用自然语言操作网页并导出可回放脚本；原生 MCP；Linux/macOS 与 Docker，Windows 走 WSL2；AGPL|[官网](https://lightpanda.io)|
 |[DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix)|36k|DeepSeek 原生终端 Agent（[reasonix.io](https://reasonix.io/)）：prefix-cache 友好、长时自主；终端/桌面/浏览器/ACP；`reasonix.toml` 驱动 MCP/Plan/沙箱|[GitHub](https://github.com/esengine/DeepSeek-Reasonix)|
 |[oh-my-pi (omp)](https://github.com/can1357/oh-my-pi)|33k|[Pi](https://github.com/earendil-works/pi) fork（[omp.sh](https://omp.sh)）：内置 LSP/DAP、子 Agent、Hashline 编辑；Rust 核心；跨平台|[GitHub](https://github.com/can1357/oh-my-pi)|
 |[OpenCLI](https://github.com/jackwener/opencli)|30k|网站 / 已登录 Chrome / Electron 应用变成确定性 CLI：内置 B站/知乎/小红书等 100+ 适配；Agent 经 `opencli browser` 操作登录态浏览器；可选 OpenCLIApp|[Zread](https://zread.ai/jackwener/OpenCLI)|
 |[Claude HUD](https://github.com/jarrodwatts/claude-hud)|28k|Claude Code statusline HUD：上下文占用、工具/Agent/Todo、可选 Git 与用量|[Zread](https://zread.ai/jarrodwatts/claude-hud)|
 |[cmux](https://cmux.com/zh-CN)|27k|基于 libghostty 的原生 macOS 终端：垂直标签、Agent 通知环、分屏、可编程浏览器；适合 CLI Agent|[GitHub](https://github.com/manaflow-ai/cmux)|
 |[jcode](https://github.com/1jehuang/jcode)|20k|轻量命令行开发辅助，作 Claude Code 周边补充|[Zread](https://zread.ai/1jehuang/jcode)|
+|[ego lite](https://github.com/citrolabs/ego-lite)|17.3k|给人与 AI Agent 并行共用的本机浏览器：Agent 在隔离 Space 跑网页自动化，可继承 Chrome 登录态；经 `ego-browser` Skill 接 Claude Code / Codex / Cursor；代码驱动（非 CLI 循环），零配置；当前 macOS，Win 内测中|[官网](https://lite.ego.app)|
+|[BrowserSkill](https://github.com/Tencent/BrowserSkill)|9.1k|腾讯开源：Agent 用本机已登录 Chrome/Edge（独立 Agent Window，可借还标签）；`bsk` CLI + 扩展，Skill 接 Cursor / Claude Code / Codex 等；另有 DeepSeek Harness 插件；MIT|[GitHub](https://github.com/Tencent/BrowserSkill)|
 |[Kaku](https://github.com/tw93/Kaku)|6.0k|WezTerm 深度定制终端（仅 macOS）：零配置、内置 AI 助手与 lazygit/yazi；可接 Claude Code / Codex / Gemini CLI|[GitHub](https://github.com/tw93/Kaku)|
 |[claude_code_bridge (ccb)](https://github.com/bfly123/claude_code_bridge)|3.5k|分屏终端联动 Claude / Codex / Gemini / OpenCode；Windows 用 WezTerm，Linux/macOS/WSL 用 tmux|[Zread](https://zread.ai/bfly123/claude_code_bridge)|
 |[CCometixLine](https://github.com/Haleclipse/CCometixLine)|3.5k|Rust 写的 Claude Code 状态栏与 TUI：Git、用量、交互配置|[Zread](https://zread.ai/Haleclipse/CCometixLine)|
@@ -134,19 +138,24 @@ AI 原生终端、Coding Agent Harness、网站转 CLI / 登录态浏览器自�
 
 ### 记忆、检索与跨 Agent 交接
 
-换 CLI、换机器、换会话时，把「做到哪、试过什么、还开着什么问题」带过去，而不是只靠各家自带的 `MEMORY.md`。进模型前压 tool 输出、本机代码库索引 / 混合检索（经 MCP 或 CLI 喂给 Agent），以及底层内容搜（`rg`）与找文件（`fd` / `find`）也放这里。`rg` / `fd` 安装见 [开发环境准备]({{< relref "ai-programming/dev-start" >}})。
+换 CLI、换机器、换会话时，把「做到哪、试过什么、还开着什么问题」带过去，而不是只靠各家自带的 `MEMORY.md`。进模型前压 tool 输出、缩短 Agent 回复、本机代码库索引 / 混合检索（经 MCP 或 CLI 喂给 Agent），以及底层内容搜（`rg`）与找文件（`fd` / `find`）也放这里。`rg` / `fd` 安装见 [开发环境准备]({{< relref "ai-programming/dev-start" >}})。
 
 |工具名称|star 数|项目介绍|解读|
 |---|---|---|---|
+|[caveman](https://github.com/JuliusBrussee/caveman)|113k|给 Coding Agent 省 token 的 Skill + 本机代理：短回复（代码、路径、报错原文保留），进模型前压缩日志 / JSON / 测试输出；可选 Auto 选模型与力度、Blocks 复用脚本；覆盖 Claude Code / Codex / Gemini CLI 等 30+；Apache-2.0|[文档](https://docs.caveman.so/caveman)|
 |[headroom](https://github.com/headroomlabs-ai/headroom)|74k|进 LLM 前压缩 tool 输出 / 日志 / 文件 / RAG：编码 Agent 约少 20% token，JSON 可少 60–95%；库、本地代理、MCP；可 `wrap` Claude Code / Codex / Cursor|[GitHub](https://github.com/headroomlabs-ai/headroom)|
 |[Codegraph](https://github.com/colbymchenry/codegraph)|73.6k|预索引本地代码知识图谱（SQLite + tree-sitter），文件变更自动同步；经 MCP 提供 explore/search/callers/callees/impact，减少 Explore 子代理的 grep/Read；100% 本地，覆盖 Claude Code / Codex / Cursor 等|[GitHub](https://github.com/colbymchenry/codegraph)|
 |[ripgrep](https://github.com/BurntSushi/ripgrep)|68.9k|递归正则内容搜索（`rg`）：尊重 `.gitignore`、快；多数 Coding Agent / CLI 的仓库扫描强依赖，缺则常见 `spawn rg ENOENT`|[GitHub](https://github.com/BurntSushi/ripgrep)|
+|[Hindsight](https://github.com/vectorize-io/hindsight)|49.9k|可学习的 Agent 记忆（非仅召回对话）：retain/recall/reflect、观察与 mental model；MCP + Claude Code / Codex / Cursor 等；Docker/自托管或 Cloud；MIT|[官网](https://hindsight.vectorize.io/)|
 |[fd](https://github.com/sharkdp/fd)|44.7k|现代 `find`：按文件名 / 路径模式快速找文件；与 `rg` 互补（`fd` 找路径，`rg` 搜内容）；Agent 提示里也常直接写 `fd`|[GitHub](https://github.com/sharkdp/fd)|
+|[OpenViking](https://github.com/volcengine/OpenViking)|39.6k|火山引擎开源 Agent 上下文库：用 `viking://` 虚拟文件系统统一知识 / 记忆 / Skills；目录级语义检索与 L0/L1/L2 分层加载；`ov` CLI + Hooks/MCP 接 Claude Code / Codex / Cursor 等；可自托管或火山云托管；AGPL|[官网](https://openviking.ai)|
 |[TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory)|28k|腾讯云团队级 Agent 记忆中枢：对话 / 文档 / 代码沉淀为 Chat Memory、Skill、LLM-Wiki、Code-Graph，跨 Agent 治理与共享|[GitHub](https://github.com/TencentCloud/TencentDB-Agent-Memory)|
 |[context-mode](https://github.com/mksglu/context-mode)|25.7k|编码 Agent 上下文优化（MCP + hooks）：沙箱 tool 输出约省 98%、SQLite 会话记忆、强制「用代码分析」路由；覆盖 Claude Code / Codex / Cursor 等 17 端|[官网](https://context-mode.com)|
 |[Zvec](https://zvec.org/zh/)|16k|本地优先检索：嵌入式向量库（[alibaba/zvec](https://github.com/alibaba/zvec)）+ 工作区混合检索 [Zvec-Grep](https://github.com/zvec-ai/zvec-grep)（`zg` CLI / MCP）；精确 / BM25 / 向量 / 混合，证据带路径·符号·行号；接 Claude Code / Codex / Cursor 等|[官网](https://zvec.org/zh/)|
 |[ai-memory](https://github.com/akitaonrails/ai-memory)|8.8k|编码 Agent 长期记忆：Hooks 静默捕获、git 版 Markdown wiki 为真源、默认零 LLM；Claude Code / Codex / Cursor 等 20+ harness 共享，可跨机器与按项目团队检索；Linux/macOS 正式，Windows 建议 WSL2|[GitHub](https://github.com/akitaonrails/ai-memory)|
 |[RepoWise](https://github.com/repowise-dev/repowise)|7.2k|本机代码库智能：调用图 / git 分析 / 健康分 / 死代码 / 决策沉淀；经 MCP 给 Claude Code / Codex / Cursor 等；本地 dashboard，图与健康分零 LLM；AGPL|[官网](https://repowise.dev/)|
+|[oh-my-mermaid (omm)](https://github.com/oh-my-mermaid/oh-my-mermaid)|2.7k|AI 生成可导航架构文档：Skill `/omm-scan` 分析仓库 → 多视角 Mermaid（结构/数据流/集成等）写入 `.omm/`；`omm view` 交互查看，可推云端；`omm setup` 覆盖 Claude Code / Codex / Cursor 等；MIT|[GitHub](https://github.com/oh-my-mermaid/oh-my-mermaid)|
+|[dsh-context](https://github.com/bowenliang123/dsh-context)|2.2k|[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 上下文可视化插件：Context 面板 / 浏览器 / 侧栏与 `/context`；透视组成、演进、压缩与多 Agent 编队；Apache-2.0|[GitHub](https://github.com/bowenliang123/dsh-context)|
 
 ### 配置脚本与编辑器插件
 
