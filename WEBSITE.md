@@ -31,7 +31,7 @@ npm run preview
 1. 在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。这一步需要有权修改仓库设置的维护者操作。
 2. 将网站分支合入 `main`。
 3. 在 Actions 中查看 **Build and publish reading site**。检查和浏览器测试通过后，会自动部署。
-4. 访问 <https://rockyflux.github.io/ai-guide/>。
+4. 访问 <https://ai-guide.180813.xyz/>（仓库已配置自定义域名；`github.io` 项目路径仅作备用入口）。
 
 后续推送到 `main` 自动更新网站。Pull Request 只执行构建和测试；在其他分支手动运行也只执行验证。`github-pages` 环境如配置了审批规则，发布会等待该环境的审批。
 

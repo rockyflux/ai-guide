@@ -19,8 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      SITE_BASE: /ai-guide/
-      SITE_URL: https://rockyflux.github.io/ai-guide/
+      # Custom domain serves at site root (not /ai-guide/ project-pages path).
+      SITE_BASE: /
+      SITE_URL: https://ai-guide.180813.xyz/
     steps:
       - uses: actions/checkout@v5
         with:
