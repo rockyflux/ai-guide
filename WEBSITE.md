@@ -53,15 +53,22 @@ npm run preview
 
 ## 自定义域名或仓库名
 
-默认 `SITE_BASE=/ai-guide/`。若部署在独立域名根目录，构建时设置：
+本地预览默认 `SITE_BASE=/ai-guide/`。线上自定义域名挂在站点根路径，工作流已设为：
+
+```yaml
+SITE_BASE: /
+SITE_URL: https://ai-guide.180813.xyz/
+```
+
+本地按根路径验证时可手动设置：
 
 ```sh
-SITE_BASE=/ SITE_URL=https://book.example.com/ npm run build
+SITE_BASE=/ SITE_URL=https://ai-guide.180813.xyz/ npm run build
 SITE_BASE=/ npm run check:build
 SITE_BASE=/ npm run preview
 ```
 
-同时在工作流的 build job 中设置这两个环境变量；如运行浏览器测试，`SITE_BASE` 也要传入 `npm test`。`SITE_URL` 用于 sitemap，应包含最终部署子路径。为 GitHub Pages 自定义域名时，还需完成仓库域名设置与 DNS 配置。
+`SITE_URL` 用于 sitemap，应与最终访问域名一致（含末尾 `/`）。更换域名或改回 GitHub 项目页路径时，同步改工作流里的这两个变量。
 
 框架升级优先跟随稳定版。依赖使用公共 npm 源与锁文件，CI 使用 `npm ci` 以保持构建可复现。VitePress 1.6 的上游依赖仍是 Vite 5，`package.json` 显式覆盖为 Vite 6.4.4，并将 esbuild、KaTeX 固定到安全修复版本。本项目通过构建、开发预览和浏览器测试验证这个组合；升级 VitePress 或 Mermaid 时应重新检查这些覆盖配置，并重新执行验证。
 
