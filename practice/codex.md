@@ -1,0 +1,169 @@
+# Codex 实战上手指南
+
+
+## Codex 实战上手指南（10～15 分钟）
+
+OpenAI **Codex** 是面向「读仓库、改代码、跑命令」的编码代理：有 **CLI（终端）**、**IDE 扩展**（VS Code / Cursor / Windsurf 等）、**桌面端** 与 **网页版**（[chatgpt.com/codex](https://chatgpt.com/codex)）多种形式，底层能力与开源仓库 [openai/codex](https://github.com/openai/codex) 一脉相承。
+
+---
+
+### 1. 安装：你更适合哪一种形态？
+
+
+| 形态            | 适合谁                         | 说明                                            |
+| ------------- | --------------------------- | --------------------------------------------- |
+| **Codex CLI** | 习惯终端、SSH 远程、要和任意编辑器组合       | 全局安装后在项目目录执行 `codex`，对仓库的读写与命令执行最直观。          |
+| **IDE 扩展**    | 日常主要在 VS Code / Cursor 里写代码 | 侧边栏对话、diff 审阅、与当前工作区绑定；扩展通常围绕 Codex CLI 能力封装。 |
+| **桌面 / Web**  | 不想配本地环境，或临时处理任务             | Web 入口见上；具体权益以当前 OpenAI 产品说明为准。               |
+
+
+**CLI 常见安装方式**（择一即可，以官方文档为准）：
+
+```bash
+npm install -g @openai/codex
+```
+
+macOS 也可用 Homebrew Cask（若官方仍提供该路径）：
+
+```bash
+brew install --cask codex
+```
+
+**Windows**：除上述方式外，也可从 [Microsoft Store 的 Codex 应用页](https://apps.microsoft.com/detail/9plm9xgg6vks?hl=zh-cn&gl=CN&ocid=pdpshare) 安装；部分用户会在 **WSL** 里跑 CLI 以获得与文档一致的 Linux/macOS 体验（扩展侧也曾提示 Windows 为实验性时优先 WSL，以你当前版本说明为准）。
+
+如果你主要在 **VS Code** 里使用，推荐直接安装官方扩展：[ChatGPT - OpenAI](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt)。
+
+环境准备（Node、Git、终端基础）可参考：[开发环境准备](/programming/dev-start.html)。
+
+#### 前置：`ripgrep`（`rg`）——CLI 强依赖，建议先装
+
+Codex CLI 依赖系统 PATH 里的 [`rg`](https://github.com/BurntSushi/ripgrep) 搜仓库（缺则常见 `Error: spawn rg ENOENT`）。Windows：`winget install BurntSushi.ripgrep.MSVC`（装完新开终端）；macOS/Linux：`brew install ripgrep`。装好后用 `rg --version` 验证。
+
+#### Codex++：桌面端外部增强（可选）
+
+桌面端想补会话删除/导出、插件入口、Provider 同步等：社区 **[Codex++](https://github.com/BigPizzaV3/CodexPlusPlus)**（CDP 注入外部启动器，不改 `app.asar`）。
+
+想给 Codex 桌面端换背景皮肤：社区 **[Codex Dream Skin](https://github.com/Fei-Away/Codex-Dream-Skin)**（本机 CDP 注入，不改官方安装包）。
+
+#### 配套工具：AiMaMi（Codex 伴侣）
+
+不想手改 `~/.codex` 下的 TOML/JSON 时，可用社区桌面伴侣 **[AiMaMi](https://github.com/borawong/AiMaMi)**：账号切换与配额、智能路由与中转、会话清理、MCP/Skills、插件与 `AGENTS.md` 自定义指令；支持 macOS / Windows（Linux 尽力支持）。更多同类增强见：[环境增强工具集](/programming/env-and-tools.html)。
+
+#### Windows 桌面端补丁恢复（codex-windows-fast-patch Skill）
+
+Microsoft Store 版 Codex 升级后若 Fast Mode、中文界面、插件市场、Browser / Computer Use、远程连接等被门控关掉，可用社区 Skill **[codex-windows-fast-patch-skill](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill)**（Windows MSIX / ASAR 补丁与 `config.toml` 修复；走 CPA 时还需上游强制 `service_tier = priority`，见 [CPA](https://github.com/router-for-me/CLIProxyAPI)）。
+
+---
+
+### 2. 登录、计费与 API
+
+- **ChatGPT 账号**：Plus / Pro / Team / Edu / Enterprise 等计划是否包含 Codex、额度如何计算，以 [OpenAI 官方定价与产品页](https://openai.com/) 为准。
+- **用量查询**：在 [Codex Usage](https://chatgpt.com/codex/settings/usage) 查看当前周期的使用情况与消耗进度。
+- **API Key**：部分场景可用 API 方式接入（适合已有 OpenAI API 预算、要做自动化或网关的团队）。
+- 海鲜市场：[https://search-sharp.com/?q=codex](https://search-sharp.com/?q=codex)
+
+如果你使用的是 **OpenAI 官方账号 / 官方 API**，而本机访问 OpenAI 需要代理出网，那么通常要先开启代理的 **TUN 模式**；否则即使本地能科学上网，Codex 也可能出现网络不通、登录失败或 API 无法调用的问题。
+
+一种简单做法是创建文件 `.codex/.env` 写入代理环境变量，例如 Windows 下可放在 `C:\Users\用户名\.codex`：
+
+```bash
+HTTP_PROXY="http://127.0.0.1:7897"
+HTTPS_PROXY="http://127.0.0.1:7897"
+NO_PROXY="localhost,127.0.0.1"
+```
+
+其中 `7897` 替换为你自己的代理端口即可。等价写法就是：
+
+```bash
+HTTP_PROXY="http://127.0.0.1:<代理端口>"
+HTTPS_PROXY="http://127.0.0.1:<代理端口>"
+NO_PROXY="localhost,127.0.0.1"
+```
+
+这组变量的含义很直接：
+
+- `HTTP_PROXY` / `HTTPS_PROXY`：让 Codex 相关请求走本地代理。
+- `NO_PROXY`：让本机回环地址直连，避免代理把本地服务也接管走。
+需要把 **Claude Code 与 Codex** 一起做「供应商 / 代理 / MCP」初始化时，可用站内介绍的零配置工具：[ZCF 零配置 Claude Code](/programming/zcf.html)。  
+更通用的 **Claude / Codex / Gemini CLI** 配置桌面端管理，见：[CC Switch](/programming/cc-switch.html)。
+
+---
+
+### 3. SSH 远程连接（remote_connections）
+
+如果你希望在本地 Codex App 里连远程机器开发，关键是三步：**满足前提、打开开关、重启生效**。
+
+**前提条件**：
+
+- **本地**：Codex App 升到最新版（需支持远程连接）。
+- **远程服务器**：安装 Codex CLI `>= 0.121.0`，并完成 `codex login`。
+- **连接方式**：本地到远程可通过 SSH 直连，优先密钥免密，减少反复输密码。
+
+**开启配置**：
+
+1. 编辑配置文件
+  - macOS / Linux：`~/.codex/config.toml`  
+  - Windows：`%USERPROFILE%\.codex\config.toml`
+2. 添加功能开关：
+
+```toml
+[features]
+remote_connections = true
+```
+
+保存后**完全退出并重启 Codex App**，设置中会出现 `Connections / 连接`。
+
+若已手动开启但仍看不到入口，或进入 **连接** 页后只有 SSH 卡片、没有远程控制区块，多半是 Store 版 feature / Statsig 门控未解除；可参见上文 **Windows 桌面端补丁恢复（codex-windows-fast-patch Skill）** 做 MSIX 补丁与第二层 section gate 修复。
+
+---
+
+### 4. 第一次进项目：建议做的事
+
+1. 确认本机已安装 **ripgrep（`rg`）** 且 `rg --version` 正常（见上文「安装」中的前置说明）；否则 CLI 可能无法可靠扫描仓库。
+2. 在**仓库根目录**打开终端（或 IDE 内置终端），执行 `codex` 进入交互（具体子命令以 `codex --help` 为准）。
+3. 让 Codex **扫一遍项目结构**，生成或补全面向代理的说明文件（常见名称是 `AGENTS.md`，也可能配合仓库内 `.codex/` 下的约定；以你本机 Codex 版本提示为准）。
+4. 把 **如何构建、如何测试、分支约定、禁止自动执行的操作** 写清楚——和用 Cursor / Claude Code 一样，**边界写清楚 = 少翻车**。
+5. `AGENTS.md` 示例参考：[codecopy.cn/embed/w7wlhs](https://www.codecopy.cn/embed/w7wlhs)
+
+多模型协作（例如用别的工具做规划、用 Codex 做实现/评审）可参考：[CCG](https://github.com/fengshao1227/ccg-workflow)，选型见 [协作工作流选型](/programming/ccg-workflow.html)。
+
+---
+
+### 5. Skills：放哪、怎么用
+
+Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理按需加载）。路径约定与生态在演进中：
+
+- 常见位置包括项目内 `.codex/skills/` 与用户级目录（如 `~/.codex/skills/`）。
+- 业界在推 `~/.agents/skills` 等统一目录，减少「每个工具一套文件夹」；细节见站内：[AI 智能体 · Skills](/agent/skills.html) 与 [Awesome Agent Skills](/agent/awesome-agent-skills.html)。
+
+**实操建议**：以官方 [Codex Skills](https://developers.openai.com/codex/skills) 为准；同一套 Skill 文档若可被多个工具读取，优先放在团队约定的**单一目录**并做好同步。
+
+---
+
+### 6. MCP 与其他集成
+
+在 Codex 侧配置 **MCP 服务器** 后，代理可以调用外部工具（浏览器、文档、数据库等）。配置入口通常在用户级 `~/.codex/config.toml`（含 `[mcp_servers]` 等段落）；与认证相关的文件勿提交到 Git。
+
+- 概念与选型思路：[AI 智能体 · MCP](/agent/mcp.html)。
+- 和 Claude Code 统一的增强工具列表：[环境增强工具集](/programming/env-and-tools.html)。
+
+---
+
+### 7. 平台差异与安全习惯
+
+- **Linux**：与 macOS/Windows 相比，沙箱与安全策略可能有差异；以 [openai/codex](https://github.com/openai/codex) 发行说明为准。数据目录默认多在 `~/.codex`，可通过环境变量 `CODEX_HOME` 调整（便于备份与多账号隔离）。
+- **高危标志**：社区与站内 Vibe Coding 类文章会提到类似 `codex --yolo` 的「跳过确认」开关——**会显著放大误删文件、乱执行命令的风险**，仅建议在隔离环境或完全清楚后果时使用。
+
+---
+
+### 8. 官方与参考链接
+
+- 开源仓库：[github.com/openai/codex](https://github.com/openai/codex)
+- 桌面端增强（社区）：[github.com/BigPizzaV3/CodexPlusPlus](https://github.com/BigPizzaV3/CodexPlusPlus)（Codex++）
+- 桌面端换肤（社区）：[github.com/Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin)（Codex Dream Skin）
+- Codex 伴侣（社区）：[github.com/borawong/AiMaMi](https://github.com/borawong/AiMaMi)（AiMaMi）
+- Windows 桌面端补丁恢复 Skill（社区）：[github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill](https://github.com/chen0416ccc-cpu/codex-windows-fast-patch-skill)
+- Skills 文档：[developers.openai.com/codex/skills](https://developers.openai.com/codex/skills)
+- ripgrep（`rg`）：[github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+- Codex CLI 起步（Help Center）：[OpenAI Codex CLI – Getting Started](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)
+

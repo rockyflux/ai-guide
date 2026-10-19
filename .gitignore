@@ -1,8 +1,3 @@
-# Hugo
-/public
-/resources
-.hugo_build.lock
-
 # macOS
 .DS_Store
 
@@ -10,14 +5,40 @@
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+CONOUT$
 
-# IDE
+# IDE / local tooling
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+.cursor
+.kiro
+.spec-workflow
+issues
+.birdview
+.baoyu-skills
+.codeartsdoer
+.codegraph
+.tmp-handbook/
+motion/cursor-guide
 
 # Environment
 .env
 .env.local
+
+# OpenMemory / local agent files
+.cursor\rules\openmemory.mdc
+CLAUDE.md
+AGENTS.md
+openmemory.md
+_task_instruction.md
+mcp_info.json
+
+# Node / VitePress
+node_modules/
+.vitepress/cache/
+.vitepress/dist/
+test-results/
+playwright-report/

@@ -6,7 +6,7 @@
 
 ### 前置要求
 
-- **Hugo Extended**：0.148.0 或更高（需要 Extended 才能支持 Dart Sass）
+- **Node.js**：22 或更高（见 `.nvmrc`）
 - **Git**：2.0 或更高
 
 ### 启动
@@ -14,15 +14,24 @@
 ```bash
 git clone https://github.com/rockyflux/ai-guide.git
 cd ai-guide
-git submodule update --init --recursive
-hugo server
+npm ci
+npm run dev
 ```
 
-然后访问 `http://localhost:1313`。
+然后访问终端输出的地址，默认路径前缀为 `/ai-guide/`。更多说明见 [WEBSITE.md](WEBSITE.md)。
 
 ## 内容位置
 
-- 主要内容在 `content.zh/`（Markdown）。
+- 篇章正文在 `preface/`、`programming/`、`agent/`、`practice/`、`resources/`、`products/`（Markdown，GitHub 可直接阅读；侧栏顺序以 `.vitepress/book.mjs` 为准）
+- 站专用页在 `website/`
+- 导航与稳定网址在 `.vitepress/book.mjs`
+- 插图在 `assets/images/`
+
+新增或调整章节后，请同步更新 `.vitepress/book.mjs`，并运行：
+
+```bash
+npm run check
+```
 
 ## 建议贡献流程
 
@@ -35,12 +44,13 @@ hugo server
 ## 内容规范（建议）
 
 - 尽量保持「任务导向」的写法：先给目标与使用场景，再给步骤与验证方式。
-- 链接尽量使用站内相对链接（站点内页面优先用站点链接，不要贴本地路径）。
-- 图片请放在 `static/images/` 下，并在正文中使用相对路径引用。
+- 站内链接优先用相对 Markdown 路径，构建时会转成稳定网址。
+- 图片请放在 `assets/images/` 下，并在正文中使用相对路径引用。
 
 ## 提交前自检
 
-- 页面能正常渲染（本地 `hugo server` 无明显报错）
+- `npm run check` 通过
+- `npm run build` 与 `npm run check:build` 通过（改动较大时）
 - 链接可访问（外链尽量避免 404）
 - 文案清晰、段落结构合理
 
