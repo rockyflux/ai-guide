@@ -56,8 +56,9 @@
 
 ### 4. 系统学习与站外资源
 
-- [AI 知识资源指南](https://ai-guide.180813.xyz/resources/ai-learning-guide.html) — 官方课程、公开课与开源书
-- [AI 资源与工具指南](https://ai-guide.180813.xyz/resources/ai-resources-guide.html) — 站内精选与社区 / 资讯入口
+- [AI 课程与学习路径](https://ai-guide.180813.xyz/resources/ai-learning-guide.html) — 大厂官方课、名校公开课与学习路径
+- [开源学习资源](https://ai-guide.180813.xyz/resources/open-source-learning.html) — GitHub 精选仓库与中文开源书
+- [AI 社区与资讯导航](https://ai-guide.180813.xyz/resources/ai-resources-guide.html) — 社区、编程工具站、资讯与周刊
 - [菜鸟教程 AI / 智能开发](https://ai-guide.180813.xyz/resources/runoob-online-tutorials.html) — RUNOOB 中文 AI 教程速查
 - [GitHub 周边工具速查](https://ai-guide.180813.xyz/resources/github-extensions.html) — 加速、仓库阅读与效率工具
 

@@ -16,7 +16,7 @@
 | 多模型协作交付 | [协作工作流选型](/programming/ccg-workflow.html) |
 | 工程化 Agent | [Prompt](/agent/prompt.html) → [Skills](/agent/skills.html) → [MCP](/agent/mcp.html) → [Hooks](/agent/hooks.html) → [Subagents](/agent/subagents.html) |
 | 照着案例交付 | [Claude Code 最佳实践](/practice/best-practices.html) · [从需求到设计原型](/practice/requirements-to-design-prototype.html) |
-| 补基础 / 找资源 | [AI 知识资源指南](/resources/ai-learning-guide.html) → [AI 资源与工具指南](/resources/ai-resources-guide.html) |
+| 补基础 / 找资源 | [AI 课程与学习路径](/resources/ai-learning-guide.html) → [AI开源学习资源](/resources/open-source-learning.html) → [AI 社区与资讯导航](/resources/ai-resources-guide.html) |
 | 按场景选应用 | [AI 办公桌面端](/products/ai-office-desktop.html) · [AI 对话工具](/products/ai-chat-tools.html) · [Claw 生态](/products/awesome-openclaw.html) |
 | 看开发者现状 | [2026 Agent 开发者调研报告](/survey.html) |
 

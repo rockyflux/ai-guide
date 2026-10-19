@@ -46,7 +46,7 @@ flowchart LR
 模型定了，下一步是拿到可调用的 API（或等价订阅额度）：
 
 - **官方**：合规、文档全、规则透明；门槛可能是支付、账号与区域。
-- **中转 / 聚合**：降低支付与接入摩擦，但要分清倍率、额度口径与渠道风险。具体平台可先看 [OpenRouter](https://openrouter.ai/)、[DMXAPI](https://dmxapi.com/)、[小马算力](https://www.tokenpony.cn/) 等，对照见 [API 聚合平台](/programming/api-aggregation-platforms.html)。
+- **中转 / 聚合**：降低支付与接入摩擦，但要分清倍率、额度口径与渠道风险。
 
 链路怎么读、风险怎么判，见 [API 中转站](/programming/api-relay-station.html)；订阅型 / 按量型对照见 [Coding Plan](/programming/coding-plan.html)。
 

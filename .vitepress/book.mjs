@@ -86,6 +86,7 @@ export const parts = [
     description: "系统学习路线、社区资源与 Awesome 合集。",
     chapters: [
       { slug: "ai-learning-guide", legacy: 55 },
+      { slug: "open-source-learning", legacy: 59 },
       { slug: "ai-resources-guide", legacy: 56 },
       { slug: "runoob-online-tutorials", legacy: 57 },
       { slug: "github-extensions", legacy: 58 },

@@ -19,8 +19,6 @@
 | 让 AI “绑定”某个仓库问答 | [GitMCP](https://gitmcp.io/) | 把仓库映射成 MCP Server（更定向、更少跑题） | `https://gitmcp.io/OWNER/REPO` |
 | 看 GitHub 今日/本周/本月热门 | [GitHub Trending](https://github.com/trending) | 发现当下最火的开源项目与话题 | 打开页面后用 Language / Date range 筛选 |
 | 看实时上升中的热门仓库 | [Trendshift](https://trendshift.io/) | 捕捉正在上升、尚未见顶的仓库动向（GitHub Trending 的替代视角） | 打开站点按 Daily / Weekly / Monthly / Yearly 切换时间范围 |
-| 发现精选项目 | [HelloGitHub](https://hellogithub.com/) | 精选项目与趋势 | 直接浏览分类/期刊 |
-| 看热门 Star 榜单 | [GhubStar](https://ghubstar.com/) | 快速了解大家都在关注什么 | 打开榜单筛选语言/时间 |
 | 给 GitHub 账号打分 / 发现开发者 | [ghfind](https://ghfind.com/) | 基于公开数据给账号打 0–100 分，带锐评、排行榜与宝藏项目发现 | 打开站点搜索用户名，或浏览趋势/评分/热度榜 |
 
 
