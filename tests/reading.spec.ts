@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { pages, readSource } from "../.vitepress/book.mjs";
+import { pages, parts, readSource } from "../.vitepress/book.mjs";
 
 test("home, contents, stable deep links and source edit link", async ({
   page,
@@ -7,12 +7,12 @@ test("home, contents, stable deep links and source edit link", async ({
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("./");
-  await expect(page.getByRole("heading", { name: /AI/ })).toBeVisible();
+  await expect(page.locator("#book-title")).toBeVisible();
   await page.getByRole("link", { name: "浏览全书目录" }).click();
-  await expect(page.locator(".contents-part")).toHaveCount(5);
+  await expect(page.locator(".contents-part")).toHaveCount(parts.length);
   await page
     .locator(".contents-part")
-    .filter({ hasText: "编程选型篇" })
+    .filter({ hasText: "AI 编程篇" })
     .getByRole("link", { name: /全流程总览/ })
     .first()
     .click();
