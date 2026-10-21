@@ -15,7 +15,7 @@ export const parts = [
     dir: "programming",
     title: "AI 编程篇",
     english: "AI Coding",
-    range: "模型 · 工具 · 套餐 · 环境",
+    range: "总览 · 模型 · 工具 · 套餐 · 环境 · 协作",
     description: "选模型与工具、买套餐与渠道、配环境、控成本，再定协作工作流。",
     chapters: [
       "full-pipeline",
@@ -35,28 +35,29 @@ export const parts = [
   {
     id: "agent-tools",
     dir: "agent-tools",
-    title: "AI Agent 工具篇",
+    title: "Agent 工具篇",
     english: "Agent Tools",
-    range: "账号 · 工作区 · 终端 · 浏览器 · 网关 · 记忆",
+    range: "账号 · 安装 · 工作区 · 终端 · 浏览器 · 网关 · 记忆",
     description:
-      "Coding Agent 周边：账号切换、多 Agent 工作区、终端、浏览器操控、路由网关、记忆检索与安装脚本。",
+      "Coding Agent 周边：账号切换、安装脚本、多 Agent 工作区、终端、浏览器操控、路由网关与记忆检索。",
     chapters: [
       "account-switch",
+      "bootstrap-ide",
       "agent-workspace",
       "terminal-cli",
       "browser-desktop",
       "routing-gateway",
       "memory-retrieval",
-      "bootstrap-ide",
     ],
   },
   {
     id: "agent",
     dir: "agent",
-    title: "Agent 自定义篇",
-    english: "Agent",
-    range: "Rules · Skills · MCP",
-    description: "Rules / Skills / MCP / Hooks / Subagents，让 AI 持续干活。",
+    title: "Agent 工程篇",
+    english: "Agent Engineering",
+    range: "Prompt · Rules · Skills · MCP · Hooks · Subagents",
+    description:
+      "Prompt / Rules / Skills / MCP / Hooks / Subagents，让 AI 持续干活。",
     chapters: [
       "prompt",
       { slug: "rules", hidden: true },
@@ -75,7 +76,7 @@ export const parts = [
     dir: "practice",
     title: "编程实战篇",
     english: "Coding Practice",
-    range: "Cursor · Codex · WSL · SOP",
+    range: "Cursor · Codex · Kiro · WSL · Claude Code",
     description: "Coding Agent 上手包与可复用 SOP，把「会用工具」变成「能交付代码」。",
     chapters: [
       "cursor",
@@ -107,8 +108,8 @@ export const parts = [
     dir: "resources",
     title: "学习资源篇",
     english: "Resources",
-    range: "路线 · 资料 · 工具",
-    description: "系统学习路线、社区资源与 Awesome 合集。",
+    range: "路线 · 开源 · 社区 · 教程 · 速查",
+    description: "系统学习路线、开源与社区资源、教程速查与日常实践笔记。",
     chapters: [
       "ai-learning-guide",
       "agent-engineer-roadmap",
@@ -124,9 +125,10 @@ export const parts = [
     dir: "products",
     title: "应用选型篇",
     english: "Products",
-    range: "办公 · 对话 · 创作",
-    description: "办公桌面 Agent、对话、智能体、绘图视频与开发周边。",
+    range: "办公 · 对话 · 智能体 · 创作 · 生态 · 开发周边",
+    description: "产品导航总览，以及办公桌面 Agent、对话、智能体、绘图视频与开发周边。",
     chapters: [
+      "ai-product",
       "ai-office-desktop",
       "ai-chat-tools",
       "ai-super-agent",
@@ -134,7 +136,6 @@ export const parts = [
       "ai-video-tools",
       "awesome-openclaw",
       "ai-software",
-      "ai-product",
     ],
   },
 ];
@@ -229,8 +230,8 @@ export const sidebar = [
   {
     text: "开始阅读",
     items: [
-      { text: "阅读指南", link: "/reading-guide.html" },
       ...readingOrder.slice(0, 1).map((p) => ({ text: p.title, link: p.href })),
+      { text: "阅读指南", link: "/reading-guide.html" },
     ],
   },
   ...parts.map((part) => ({
@@ -293,6 +294,6 @@ export function publicBookData() {
       pages: visible(p.pages).map(publicPage),
     })),
     chapterCount: parts.reduce((n, p) => n + visible(p.pages).length, 0),
-    caseCount: 0,
+    pageCount: pages.length,
   };
 }

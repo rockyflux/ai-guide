@@ -129,7 +129,7 @@ Agent 发起一轮请求时，并不是只把你刚打的字发出去，而是�
 | **MCP / 工具** | 可调用能力；调用后结果回流 | [MCP](/agent/mcp.html) |
 | **工具往返产物** | 检索命中、文件内容、命令输出 | 随轮次累积，常是体积大头 |
 
-机制拆解见 [Agent 自定义栏目](/agent/prompt.html)。
+机制拆解见 [Agent 工程篇](/agent/prompt.html)。
 
 ---
 
@@ -214,8 +214,8 @@ Agent 很少「想一次就交卷」。接到任务后，典型是多轮循环�
 | 阶段 | 去哪 |
 |------|------|
 | 选模型 / 控成本 | [全流程总览](/programming/full-pipeline.html) |
-| 配环境 / 网关 / 切换 | [开发环境准备](/programming/dev-start.html) · [AI Agent 工具篇](/agent-tools/account-switch.html) |
-| Rules / Skills / MCP | [Agent 自定义](/agent/prompt.html) |
+| 配环境 / 网关 / 切换 | [开发环境准备](/programming/dev-start.html) · [Agent 工具篇](/agent-tools/account-switch.html) |
+| Rules / Skills / MCP | [Agent 工程](/agent/prompt.html) |
 | 多 Agent 编排 | [多 Agent 协作工作流](/programming/ccg-workflow.html) |
 | 跑通第一个项目 | [编程实战](/practice/cursor.html) · [从需求到设计原型](/scenarios/requirements-to-design-prototype.html) |
 

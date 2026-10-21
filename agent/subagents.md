@@ -211,6 +211,10 @@ Agent 会根据任务复杂度、自定义子智能体的 `description`、当前
 
 ---
 
+## 延伸阅读
+
+- [Agent Workflow](/agent/workflow.html) — 用闭环与控制面把 Skills / Hooks / Subagents 串成可持续交付的工作流。
+
 ## 参考链接
 
 - [Cursor 子智能体](https://cursor.com/cn/docs/subagents)

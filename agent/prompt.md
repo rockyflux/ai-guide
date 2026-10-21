@@ -74,3 +74,7 @@ Prompt 通常只描述**本次对话**要达成的目标与约束，不适合承
 | Aura：AI着陆页生成器，可导出HTML与Figma | [https://www.aura.build/](https://www.aura.build/) |
 | UI UX Pro Max Skill：57种UI风格/配色与UX指南（面向AI助手） | [https://ui-ux-pro-max-skill.com/#styles](https://ui-ux-pro-max-skill.com/#styles) / [https://github.com/nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | UI Inspiration（Notion）：UI灵感集合/工作区 | [https://uxchi.notion.site/UI-Inspiration-881b4c0179a74935a3f607ad3521cdb5](https://uxchi.notion.site/UI-Inspiration-881b4c0179a74935a3f607ad3521cdb5) |
+
+## 延伸阅读
+
+- [输出样式](/agent/output-styles.html) — 把 Claude Code 从默认软件工程提示改成教学、学习或其他代理形态，同时保留读写文件与跑命令等核心能力。

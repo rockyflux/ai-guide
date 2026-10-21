@@ -13,12 +13,12 @@
 | 篇章 | 解决什么 |
 |------|----------|
 | [AI 编程](/programming/full-pipeline.html) | 选模型与工具、买套餐与渠道、配环境、控成本，再定协作工作流 |
-| [AI Agent 工具](/agent-tools/account-switch.html) | 账号切换、多 Agent 工作区、终端 / 浏览器、路由网关、记忆检索 |
-| [Agent 自定义](/agent/prompt.html) | Prompt → Skills → MCP → Hooks → Subagents |
+| [Agent 工具](/agent-tools/account-switch.html) | 账号切换、安装脚本、多 Agent 工作区、终端 / 浏览器、路由网关、记忆检索 |
+| [Agent 工程](/agent/prompt.html) | Prompt → Skills → MCP → Hooks → Subagents |
 | [编程实战](/practice/cursor.html) | Cursor / Codex / Kiro 上手包，以及 Claude Code 实践 |
 | [场景实战](/scenarios/workbuddy-doubao-work.html) | 桌面 Agent、办公 CLI、需求到原型、AI 绘图与设计到代码 |
 | [学习资源](/resources/ai-learning-guide.html) | 学习路线、社区资源与教程速查（按需查阅） |
-| [应用选型](/products/ai-office-desktop.html) | 办公、对话、智能体、绘图视频与 OpenClaw 生态 |
+| [应用选型](/products/ai-product.html) | 产品导航，以及办公、对话、智能体、绘图视频与 OpenClaw 生态 |
 
 ## 怎么读
 

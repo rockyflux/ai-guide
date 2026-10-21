@@ -82,5 +82,5 @@ aside: false
 6. **国内云厂商 / 企业私有化**：通义灵码、CodeBuddy、文心快码、Qoder、Tabnine、Amazon Q、IBM Bob。
 7. **垂直场景**：Android → Firebender；Snowflake 数据栈 → Cortex Code；开源模型优先 → Command Code；Kimi 订阅 → Kimi Code CLI。
 
-账号切换、CPA 路由、Skills 管理等**增强工具**不在本表展开，请到 [AI Agent 工具篇](/agent-tools/account-switch.html)。
+账号切换、CPA 路由、Skills 管理等**增强工具**不在本表展开，请到 [Agent 工具篇](/agent-tools/account-switch.html)。
 子智能体分工与并行写法见 [Subagents](/agent/subagents.html)。

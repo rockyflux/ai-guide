@@ -80,5 +80,5 @@ if (errors.length) {
 }
 const book = publicBookData();
 console.log(
-  `Book checked: ${pages.length} pages, ${book.chapterCount} chapters, ${book.caseCount} cases, ${images} image references, ${diagrams} Mermaid diagrams.`,
+  `Book checked: ${pages.length} pages, ${book.chapterCount} chapters, ${book.pageCount} public pages, ${images} image references, ${diagrams} Mermaid diagrams.`,
 );

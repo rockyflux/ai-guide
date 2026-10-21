@@ -2,7 +2,7 @@
 
 **面向有经验开发者的任务导向中文指南**
 
-AI 编程 → AI Agent 工具 → Agent 自定义 → 编程实战 → 场景实战 → 学习资源 → 应用选型
+AI 编程 → Agent 工具 → Agent 工程 → 编程实战 → 场景实战 → 学习资源 → 应用选型
 
 ![在线阅读](https://img.shields.io/badge/在线阅读-ai--guide.180813.xyz-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -24,12 +24,12 @@ AI 编程 → AI Agent 工具 → Agent 自定义 → 编程实战 → 场景实
 | 主线 | 解决什么问题 |
 |------|----------------|
 | [AI 编程](https://ai-guide.180813.xyz/programming/full-pipeline.html) | 全流程、模型评测、IDE / Coding Agent、套餐与渠道、省钱、环境、协作工作流 |
-| [AI Agent 工具](https://ai-guide.180813.xyz/agent-tools/account-switch.html) | 账号切换、多 Agent 工作区、终端、浏览器操控、路由网关、记忆检索 |
-| [Agent 自定义](https://ai-guide.180813.xyz/agent/prompt.html) | Prompt / Skills / MCP / Hooks / Subagents |
+| [Agent 工具](https://ai-guide.180813.xyz/agent-tools/account-switch.html) | 账号切换、安装脚本、多 Agent 工作区、终端、浏览器操控、路由网关、记忆检索 |
+| [Agent 工程](https://ai-guide.180813.xyz/agent/prompt.html) | Prompt / Skills / MCP / Hooks / Subagents |
 | [编程实战](https://ai-guide.180813.xyz/practice/cursor.html) | Coding Agent 上手包与 SOP（含 [WSL](https://ai-guide.180813.xyz/practice/wsl.html)） |
 | [场景实战](https://ai-guide.180813.xyz/scenarios/workbuddy-doubao-work.html) | 桌面 Agent、办公 CLI、设计原型、绘图与设计到代码 |
 | [学习资源](https://ai-guide.180813.xyz/resources/ai-learning-guide.html) | 系统学习、社区资源与教程速查 |
-| [应用选型](https://ai-guide.180813.xyz/products/ai-office-desktop.html) | 办公 Agent、对话、智能体、绘图视频与 OpenClaw 生态 |
+| [应用选型](https://ai-guide.180813.xyz/products/ai-product.html) | 产品导航，以及办公 Agent、对话、智能体、绘图视频与 OpenClaw 生态 |
 
 ### 1. 选模型、选工具、配环境、控成本
 
@@ -43,11 +43,10 @@ AI 编程 → AI Agent 工具 → Agent 自定义 → 编程实战 → 场景实
 - [多 Agent 协作工作流](https://ai-guide.180813.xyz/programming/ccg-workflow.html) — 多 Agent / SDD / Skills 协作范式
 - [卸载与清理](https://ai-guide.180813.xyz/programming/cleanup-uninstall.html) — 换工具时清干净
 
-### 2. AI Agent 周边工具
+### 2. Agent 周边工具
 
-- [账号与供应商切换](https://ai-guide.180813.xyz/agent-tools/account-switch.html) · [多 Agent 工作区](https://ai-guide.180813.xyz/agent-tools/agent-workspace.html) · [终端与 CLI Agent](https://ai-guide.180813.xyz/agent-tools/terminal-cli.html)
+- [账号与供应商切换](https://ai-guide.180813.xyz/agent-tools/account-switch.html) · [安装脚本与 IDE 插件](https://ai-guide.180813.xyz/agent-tools/bootstrap-ide.html) · [多 Agent 工作区](https://ai-guide.180813.xyz/agent-tools/agent-workspace.html) · [终端与 CLI Agent](https://ai-guide.180813.xyz/agent-tools/terminal-cli.html)
 - [浏览器与桌面操控](https://ai-guide.180813.xyz/agent-tools/browser-desktop.html) · [路由与本地网关](https://ai-guide.180813.xyz/agent-tools/routing-gateway.html) · [记忆 · 上下文 · 检索](https://ai-guide.180813.xyz/agent-tools/memory-retrieval.html)
-- [安装脚本与 IDE 插件](https://ai-guide.180813.xyz/agent-tools/bootstrap-ide.html)
 
 ### 3. 搭可长期复用的 Agent 体系
 
@@ -64,7 +63,7 @@ AI 编程 → AI Agent 工具 → Agent 自定义 → 编程实战 → 场景实
 ### 5. 场景实战：办公、设计与绘图
 
 - [WorkBuddy 与豆包工作](https://ai-guide.180813.xyz/scenarios/workbuddy-doubao-work.html) · [桌面 Agent 接入办公 CLI](https://ai-guide.180813.xyz/scenarios/ai-office-practice.html) · [从需求到设计原型](https://ai-guide.180813.xyz/scenarios/requirements-to-design-prototype.html)
-- [豆包 AI 绘图练习](https://ai-guide.180813.xyz/scenarios/ai-drawing-practice.html) · [GPT-Image-2](https://ai-guide.180813.xyz/scenarios/gpt-image.html)
+- [GPT-Image-2](https://ai-guide.180813.xyz/scenarios/gpt-image.html) · [豆包 AI 绘图练习](https://ai-guide.180813.xyz/scenarios/ai-drawing-practice.html)
 - [Stitch × Figma × MCP](https://ai-guide.180813.xyz/scenarios/google-stitch-figma-mcp.html)
 
 ### 6. 系统学习与站外资源
@@ -79,12 +78,13 @@ AI 编程 → AI Agent 工具 → Agent 自定义 → 编程实战 → 场景实
 
 ### 7. 按场景选 AI 应用
 
+- [AI 产品导航](https://ai-guide.180813.xyz/products/ai-product.html) — 站外导航与榜单入口
 - [AI 办公桌面端](https://ai-guide.180813.xyz/products/ai-office-desktop.html) — WorkBuddy、DuMate、千问办公等
 - [AI 对话工具](https://ai-guide.180813.xyz/products/ai-chat-tools.html) — ChatGPT、豆包、Kimi、DeepSeek 等
 - [AI 智能体平台](https://ai-guide.180813.xyz/products/ai-super-agent.html) — Manus、AutoGLM、Genspark、天工等
 - [AI 绘图工具](https://ai-guide.180813.xyz/products/ai-image-tools.html) · [AI 视频工具](https://ai-guide.180813.xyz/products/ai-video-tools.html)
 - [Claw 生态](https://ai-guide.180813.xyz/products/awesome-openclaw.html) — OpenClaw 生态速览
-- [AI 开发软件](https://ai-guide.180813.xyz/products/ai-software.html) · [AI 产品导航](https://ai-guide.180813.xyz/products/ai-product.html)
+- [AI 开发软件](https://ai-guide.180813.xyz/products/ai-software.html)
 
 站内另有 [2026 Agent 开发者调研报告](https://ai-guide.180813.xyz/survey.html)。按任务跳读见 [阅读指南](https://ai-guide.180813.xyz/reading-guide.html)，背景见 [前言](https://ai-guide.180813.xyz/preface.html)。
 

@@ -22,7 +22,7 @@ onMounted(() => {
         <h1 id="book-title">AI<br /><em>Guide</em></h1>
         <p class="hero-subtitle">把 AI 从「会聊天」推进到「能稳定交付」</p>
         <p class="hero-description">
-          面向有经验开发者的任务向指南。沿着选型、Agent 工具、工作流、Agent 自定义、编程实战与场景实战，跑通从工具到交付的闭环。
+          面向有经验开发者的任务向指南。沿着选型、Agent 工具、工作流、Agent 工程、编程实战与场景实战，跑通从工具到交付的闭环。
         </p>
         <div class="hero-actions">
           <a class="book-button primary" :href="withBase('/preface.html')"
@@ -67,8 +67,8 @@ onMounted(() => {
         ><span>个篇章，循序建立认知</span>
       </div>
       <div>
-        <strong>{{ book.parts.length }}</strong
-        ><span>条主线，对应真实任务</span>
+        <strong>{{ book.pageCount }}</strong
+        ><span>个页面，含目录与指南</span>
       </div>
       <a :href="withBase('/reading-guide.html')"
         >找到适合你的阅读路径 <span>↗</span></a
@@ -100,7 +100,9 @@ onMounted(() => {
             {{ part.title }} <small>{{ part.english }}</small>
           </h3>
           <p>{{ part.description }}</p>
-          <span class="part-range">第 {{ part.range }} 章</span>
+          <span class="part-range"
+            >{{ part.pages.length }} 章 · {{ part.range }}</span
+          >
         </a>
         <a class="part-card survey-card" :href="withBase('/survey.html')"
           ><div class="part-topline">

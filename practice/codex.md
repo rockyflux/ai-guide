@@ -145,7 +145,7 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 在 Codex 侧配置 **MCP 服务器** 后，代理可以调用外部工具（浏览器、文档、数据库等）。配置入口通常在用户级 `~/.codex/config.toml`（含 `[mcp_servers]` 等段落）；与认证相关的文件勿提交到 Git。
 
 - 概念与选型思路：[AI 智能体 · MCP](/agent/mcp.html)。
-- 和 Claude Code 统一的增强工具列表：[AI Agent 工具篇](/agent-tools/account-switch.html)。
+- 和 Claude Code 统一的增强工具列表：[Agent 工具篇](/agent-tools/account-switch.html)。
 
 ---
 
