@@ -9,7 +9,7 @@
 
 生产级代理、技能、钩子、命令、规则和 MCP 配置，经过 10 多个月构建真实产品的密集日常使用而演化。
 
-[https://github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/blob/main/README.zh-CN.md)
+[https://github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/ECC/blob/main/README.zh-CN.md)
 
 ---
 

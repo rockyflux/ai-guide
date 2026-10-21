@@ -110,8 +110,6 @@
 - 采购 Claude Code Max、OpenRouter 等可统一分发的上游能力。
 - 采购国内聚合平台，统一下发 Key 和接入规范。
 
-可参考：[AI 大模型 API 聚合平台](/programming/api-aggregation-platforms.html)，了解 OpenRouter、小马算力、DMXAPI 等平台。
-
 ## 国内官方 Coding Plan
 
 以下用于快速横向比较，价格和套餐以平台页面为准。
@@ -268,6 +266,7 @@
 - [API 中转站](/programming/api-relay-station.html)：程序结构、成本倍率和渠道风险
 - [公益站导航](https://ldoh.105117.xyz/)：第三方资源导航
 - [LDOH 仓库](https://github.com/JoJoJotarou/LDOH)：对应开源仓库
+- [ai-coding-welfare](https://github.com/panxunying/ai-coding-welfare)：Claude Code / Codex 免费额度中转与公益站合集，含额度、模型、价格自动更新与一键配置脚本
 - [all-api-hub](https://github.com/qixing-jk/all-api-hub)：管理中转站账号、余额、用量和密钥分发
 - [awesome-claude-api](https://github.com/peter123023/awesome-claude-api)：Claude API 资源与项目汇总
 - [Proof of Observation](https://focuxdot.github.io/proof-of-observation/tee-attestation-demo.html)：TEE 远程证明如何自证中转未偷换

@@ -3,7 +3,7 @@
 
 ## 省钱与 Token 治理：预算内把活干完
 
-> **买油**看 [Coding Plan 与渠道](/programming/coding-plan.html)；**少踩油门、按预算跑完全程**看本文。工具清单见 [编程工具对比](/programming/vb-code-tool.html)。
+> **买油**看 [Coding Plan 与渠道](/programming/coding-plan.html)；**少踩油门、按预算跑完全程**看本文。工具清单见 [IDE 与编程工具](/programming/vb-code-tool.html)。
 
 ### 真正难的不是「会用 AI」，是预算内做完
 
@@ -240,7 +240,7 @@ Agent 陷入重复失败时：**打断**，说明已失败证据，换思路或�
 |----------------|------|
 | 套餐怎么买更划算 | [Coding Plan 与渠道](/programming/coding-plan.html) |
 | 单价与计费口径 | [Coding Plan 与渠道](/programming/coding-plan.html) |
-| 用哪个 IDE / CLI | [编程工具对比](/programming/vb-code-tool.html) / [编程 Agent 横评](/programming/code-cli.html) |
+| 用哪个 IDE / CLI | [IDE 与编程工具](/programming/vb-code-tool.html) / [Coding Agent 横评](/programming/code-cli.html) |
 | 中转倍率与风险 | [API 中转站](/programming/api-relay-station.html) |
 | Rules / Skills / MCP 工程化 | [Agent 工程](/agent/prompt.html) |
 

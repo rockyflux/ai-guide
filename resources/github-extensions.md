@@ -1,4 +1,8 @@
 
+---
+aside: false
+---
+
 # GitHub 周边工具速查
 
 把仓库地址里的 `github.com` 换成下表对应域名，即可切到中文知识库、代码问答、架构图或可喂给大模型的文本视图（例如 `https://github.com/OWNER/REPO` → `https://zread.ai/OWNER/REPO`）。

@@ -1,7 +1,7 @@
 
 # AI 课程与学习路径
 
-精选大厂官方课程、名校公开课与在线平台课，并附可执行的学习路径。开源仓库与中文教材见 [开源学习资源](/resources/open-source-learning.html)；日常跟新、踩坑与工具口碑，更多人泡在 [X](https://x.com) 和 [LINUX DO](https://linux.do)。
+精选大厂官方课程、名校公开课与在线平台课，并附可执行的学习路径。偏工程落地的 Agent 路线见 [Agent 工程师入门学习路线](/resources/agent-engineer-roadmap.html)；开源仓库与中文教材见 [开源学习资源](/resources/open-source-learning.html)；日常跟新、踩坑与工具口碑，更多人泡在 [X](https://x.com) 和 [LINUX DO](https://linux.do)。
 
 ---
 
@@ -29,7 +29,7 @@
 
 | 中文名 | 原名 & 链接 | 难度 | 说明 |
 | --- | --- | --- | --- |
-| 生成式 AI 入门 | [Generative AI for Beginners](https://microsoft.github.io/generative-ai-for-beginners/) | ⭐⭐ | 18 课时免费课程，中文友好 |
+| 生成式 AI 入门 | [Generative AI for Beginners](https://microsoft.github.io/generative-ai-for-beginners/#/translations/zh-CN/README) | ⭐⭐ | 18 课时免费课程，中文友好 |
 | AI 基础课程 | [AI Fundamentals](https://learn.microsoft.com/en-us/training/paths/get-started-with-artificial-intelligence-on-azure/) | ⭐ | Azure AI 入门 |
 | ML 入门课程 | [ML for Beginners](https://microsoft.github.io/ML-For-Beginners/) | ⭐⭐ | 26 课时经典 ML 课程 |
 | 数据科学入门 | [Data Science for Beginners](https://microsoft.github.io/Data-Science-For-Beginners/) | ⭐ | 10 周数据科学课程 |

@@ -2,7 +2,7 @@
 
 **面向有经验开发者的任务导向中文指南**
 
-编程选型 → Agent 构建 → 项目实践 → 学习资源 → 应用选型
+AI 编程 → AI Agent 工具 → Agent 自定义 → 编程实战 → 场景实战 → 学习资源 → 应用选型
 
 ![在线阅读](https://img.shields.io/badge/在线阅读-ai--guide.180813.xyz-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -19,50 +19,65 @@
 
 ![AI Guide](assets/images/index/flow.png)
 
-## 五条主线
+## 七条主线
 
 | 主线 | 解决什么问题 |
 |------|----------------|
-| [编程选型](https://ai-guide.180813.xyz/programming/full-pipeline.html) | 全流程、评测、工具与 Agent 横评、协作工作流、套餐与渠道、省钱、环境 |
-| [Agent 构建](https://ai-guide.180813.xyz/agent/prompt.html) | Prompt / Skills / MCP / Hooks / Subagents |
-| [项目实践](https://ai-guide.180813.xyz/practice/cursor.html) | 从案例到 SOP，把 AI 用进真实交付（含 [WSL](https://ai-guide.180813.xyz/practice/wsl.html)） |
+| [AI 编程](https://ai-guide.180813.xyz/programming/full-pipeline.html) | 全流程、模型评测、IDE / Coding Agent、套餐与渠道、省钱、环境、协作工作流 |
+| [AI Agent 工具](https://ai-guide.180813.xyz/agent-tools/account-switch.html) | 账号切换、多 Agent 工作区、终端、浏览器操控、路由网关、记忆检索 |
+| [Agent 自定义](https://ai-guide.180813.xyz/agent/prompt.html) | Prompt / Skills / MCP / Hooks / Subagents |
+| [编程实战](https://ai-guide.180813.xyz/practice/cursor.html) | Coding Agent 上手包与 SOP（含 [WSL](https://ai-guide.180813.xyz/practice/wsl.html)） |
+| [场景实战](https://ai-guide.180813.xyz/scenarios/workbuddy-doubao-work.html) | 桌面 Agent、办公 CLI、设计原型、绘图与设计到代码 |
 | [学习资源](https://ai-guide.180813.xyz/resources/ai-learning-guide.html) | 系统学习、社区资源与教程速查 |
 | [应用选型](https://ai-guide.180813.xyz/products/ai-office-desktop.html) | 办公 Agent、对话、智能体、绘图视频与 OpenClaw 生态 |
 
 ### 1. 选模型、选工具、配环境、控成本
 
 - [全流程总览](https://ai-guide.180813.xyz/programming/full-pipeline.html) — 把选型、接入、Agent 与上下文串成一条线
-- [评测基准与榜单](https://ai-guide.180813.xyz/programming/leaderboard.html) — 先看能力，再定档
-- [编程工具对比](https://ai-guide.180813.xyz/programming/vb-code-tool.html) — IDE / 插件 / Agent 工具
-- [编程 Agent 横评](https://ai-guide.180813.xyz/programming/code-cli.html) — Claude Code / Codex / Gemini CLI 等
-- [协作工作流选型](https://ai-guide.180813.xyz/programming/ccg-workflow.html) — 多 Agent / SDD / Skills 协作范式
-- [Coding Plan 与渠道](https://ai-guide.180813.xyz/programming/coding-plan.html) · [API 中转站](https://ai-guide.180813.xyz/programming/api-relay-station.html) · [API 聚合平台](https://ai-guide.180813.xyz/programming/api-aggregation-platforms.html) — 套餐与接入
+- [模型评测与榜单](https://ai-guide.180813.xyz/programming/leaderboard.html) — 先看能力，再定档
+- [IDE 与编程工具](https://ai-guide.180813.xyz/programming/vb-code-tool.html) — IDE / 插件 / Agent 工具
+- [Coding Agent 横评](https://ai-guide.180813.xyz/programming/code-cli.html) — Claude Code / Codex / Gemini CLI 等
+- [Coding Plan 与渠道](https://ai-guide.180813.xyz/programming/coding-plan.html) · [API 中转站](https://ai-guide.180813.xyz/programming/api-relay-station.html) — 套餐与接入
 - [省钱与 Token 治理](https://ai-guide.180813.xyz/programming/ai-coding-save-money.html) — 免费额度、Token 与多端复用
-- [开发环境准备](https://ai-guide.180813.xyz/programming/dev-start.html) · [环境增强工具集](https://ai-guide.180813.xyz/programming/env-and-tools.html) · [卸载与清理](https://ai-guide.180813.xyz/programming/cleanup-uninstall.html)
+- [开发环境准备](https://ai-guide.180813.xyz/programming/dev-start.html) — Node / Git / 终端底座
+- [多 Agent 协作工作流](https://ai-guide.180813.xyz/programming/ccg-workflow.html) — 多 Agent / SDD / Skills 协作范式
+- [卸载与清理](https://ai-guide.180813.xyz/programming/cleanup-uninstall.html) — 换工具时清干净
 
-### 2. 搭可长期复用的 Agent 体系
+### 2. AI Agent 周边工具
+
+- [账号与供应商切换](https://ai-guide.180813.xyz/agent-tools/account-switch.html) · [多 Agent 工作区](https://ai-guide.180813.xyz/agent-tools/agent-workspace.html) · [终端与 CLI Agent](https://ai-guide.180813.xyz/agent-tools/terminal-cli.html)
+- [浏览器与桌面操控](https://ai-guide.180813.xyz/agent-tools/browser-desktop.html) · [路由与本地网关](https://ai-guide.180813.xyz/agent-tools/routing-gateway.html) · [记忆 · 上下文 · 检索](https://ai-guide.180813.xyz/agent-tools/memory-retrieval.html)
+- [安装脚本与 IDE 插件](https://ai-guide.180813.xyz/agent-tools/bootstrap-ide.html)
+
+### 3. 搭可长期复用的 Agent 体系
 
 侧栏顺序：
 
 - [Prompt](https://ai-guide.180813.xyz/agent/prompt.html) → [Skills](https://ai-guide.180813.xyz/agent/skills.html) → [MCP](https://ai-guide.180813.xyz/agent/mcp.html) → [Hooks](https://ai-guide.180813.xyz/agent/hooks.html) → [Subagents](https://ai-guide.180813.xyz/agent/subagents.html)
 
-### 3. 照着案例跑通完整项目
+### 4. 编程实战：照着案例跑通 Coding Agent
 
 - [Cursor](https://ai-guide.180813.xyz/practice/cursor.html) · [Codex](https://ai-guide.180813.xyz/practice/codex.html) · [Kiro](https://ai-guide.180813.xyz/practice/kiro-practice.html)
 - [WSL 开发环境](https://ai-guide.180813.xyz/practice/wsl.html) — Windows 下的 Linux 开发环境
-- [AI 办公实战](https://ai-guide.180813.xyz/practice/ai-office-practice.html) · [从需求到设计原型](https://ai-guide.180813.xyz/practice/requirements-to-design-prototype.html)
-- [Claude Code 最佳实践](https://ai-guide.180813.xyz/practice/best-practices.html) · [Everything Claude Code](https://ai-guide.180813.xyz/practice/everything-claude-code.html) · [AI 开发心得](https://ai-guide.180813.xyz/practice/ai-dev-notes.html)
-- [Stitch × Figma × MCP](https://ai-guide.180813.xyz/practice/google-stitch-figma-mcp.html)
+- [Claude Code 最佳实践](https://ai-guide.180813.xyz/practice/best-practices.html) · [Everything Claude Code](https://ai-guide.180813.xyz/practice/everything-claude-code.html)
 
-### 4. 系统学习与站外资源
+### 5. 场景实战：办公、设计与绘图
+
+- [WorkBuddy 与豆包工作](https://ai-guide.180813.xyz/scenarios/workbuddy-doubao-work.html) · [桌面 Agent 接入办公 CLI](https://ai-guide.180813.xyz/scenarios/ai-office-practice.html) · [从需求到设计原型](https://ai-guide.180813.xyz/scenarios/requirements-to-design-prototype.html)
+- [豆包 AI 绘图练习](https://ai-guide.180813.xyz/scenarios/ai-drawing-practice.html) · [GPT-Image-2](https://ai-guide.180813.xyz/scenarios/gpt-image.html)
+- [Stitch × Figma × MCP](https://ai-guide.180813.xyz/scenarios/google-stitch-figma-mcp.html)
+
+### 6. 系统学习与站外资源
 
 - [AI 课程与学习路径](https://ai-guide.180813.xyz/resources/ai-learning-guide.html) — 大厂官方课、名校公开课与学习路径
+- [Agent 工程师入门学习路线](https://ai-guide.180813.xyz/resources/agent-engineer-roadmap.html) — 检索、工具、上下文与业务系统接起来
 - [开源学习资源](https://ai-guide.180813.xyz/resources/open-source-learning.html) — GitHub 精选仓库与中文开源书
 - [AI 社区与资讯导航](https://ai-guide.180813.xyz/resources/ai-resources-guide.html) — 社区、编程工具站、资讯与周刊
 - [菜鸟教程 AI / 智能开发](https://ai-guide.180813.xyz/resources/runoob-online-tutorials.html) — RUNOOB 中文 AI 教程速查
 - [GitHub 周边工具速查](https://ai-guide.180813.xyz/resources/github-extensions.html) — 加速、仓库阅读与效率工具
+- [Agent 日常开发实践](https://ai-guide.180813.xyz/resources/ai-dev-notes.html) — Skill / 工作流 / 端到端测试与 Review
 
-### 5. 按场景选 AI 应用
+### 7. 按场景选 AI 应用
 
 - [AI 办公桌面端](https://ai-guide.180813.xyz/products/ai-office-desktop.html) — WorkBuddy、DuMate、千问办公等
 - [AI 对话工具](https://ai-guide.180813.xyz/products/ai-chat-tools.html) — ChatGPT、豆包、Kimi、DeepSeek 等
@@ -77,7 +92,7 @@
 
 ```text
 ai-guide/
-├── preface/ programming/ agent/ practice/ resources/ products/  # 篇章正文（顺序见 .vitepress/book.mjs）
+├── preface/ programming/ agent-tools/ agent/ practice/ scenarios/ resources/ products/  # 篇章正文（顺序见 .vitepress/book.mjs）
 ├── website/                     # 首页、目录、阅读指南
 ├── .vitepress/                  # VitePress 配置与阅读主题
 ├── assets/                      # 插图

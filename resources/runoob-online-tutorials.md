@@ -1,4 +1,8 @@
 
+---
+aside: false
+---
+
 # 菜鸟教程 AI / 智能开发
 
 [菜鸟教程（RUNOOB）](https://www.runoob.com/) 是国内常用的中文在线技术教程站，内容以「概念 + 示例 + 可运行代码」为主，适合快速入门与查漏补缺。其 **AI / 智能开发** 栏目覆盖 Agent、AI 编程工具、本地模型、机器学习框架与 NLP 等主题。
@@ -38,6 +42,6 @@
 ## 使用建议
 
 - **入门扫盲**：先看 [AI（人工智能）](https://www.runoob.com/ai/ai-tutorial.html) 与 [AI 数学基础](https://www.runoob.com/ai-math/ai-math-tutorial.html)，再按方向选 Agent 或 ML 框架。
-- **AI 编程落地**：Codex / Claude Code / OpenCode / Vibe Coding 四篇可对照阅读；本站主线见 [AI 编程选型](/programming/full-pipeline.html) 与 [Agent 工程](/agent/prompt.html)。
-- **本地跑模型**：Ollama 教程适合配合 [开发环境准备](/programming/dev-start.html) / [环境增强工具集](/programming/env-and-tools.html) 搭建本地环境。
+- **AI 编程落地**：Codex / Claude Code / OpenCode / Vibe Coding 四篇可对照阅读；本站主线见 [全流程总览](/programming/full-pipeline.html) 与 [Agent 工程](/agent/prompt.html)。
+- **本地跑模型**：Ollama 教程适合配合 [开发环境准备](/programming/dev-start.html) / [AI Agent 工具篇](/agent-tools/account-switch.html) 搭建本地环境。
 - **构建 LLM 应用**：LangChain 教程可与 [Agent 工程 — MCP / Skills](/agent/skills.html) 等页面交叉参考。

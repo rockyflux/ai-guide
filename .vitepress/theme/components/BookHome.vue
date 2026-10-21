@@ -22,7 +22,7 @@ onMounted(() => {
         <h1 id="book-title">AI<br /><em>Guide</em></h1>
         <p class="hero-subtitle">把 AI 从「会聊天」推进到「能稳定交付」</p>
         <p class="hero-description">
-          面向有经验开发者的任务向指南。沿着选型、环境、工作流、Agent 构建与项目实践，跑通从工具到交付的闭环。
+          面向有经验开发者的任务向指南。沿着选型、Agent 工具、工作流、Agent 自定义、编程实战与场景实战，跑通从工具到交付的闭环。
         </p>
         <div class="hero-actions">
           <a class="book-button primary" :href="withBase('/preface.html')"
@@ -67,7 +67,7 @@ onMounted(() => {
         ><span>个篇章，循序建立认知</span>
       </div>
       <div>
-        <strong>5</strong
+        <strong>{{ book.parts.length }}</strong
         ><span>条主线，对应真实任务</span>
       </div>
       <a :href="withBase('/reading-guide.html')"

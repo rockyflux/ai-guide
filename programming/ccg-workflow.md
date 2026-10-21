@@ -1,4 +1,4 @@
-# 协作工作流选型
+# 多 Agent 协作工作流
 
 ## 规格驱动 / SDD
 
@@ -62,4 +62,4 @@ Claude Code **原生**多队友并行见 [Agent Teams（蜂群）](https://code.
 | [ai-dev-tasks](https://github.com/snarktank/ai-dev-tasks) | 7.8k | 简洁的 AI 开发智能体任务管理 | [Zread](https://zread.ai/snarktank/ai-dev-tasks) |
 | [cc-wf-studio](https://github.com/breaking-brake/cc-wf-studio) | 5.4k | 可视化工作流编辑：自然语言编辑、导出并运行 | [Zread](https://zread.ai/breaking-brake/cc-wf-studio) |
 
-多 Agent **桌面工作区**（Orca、Multica、Buzz 等）属环境增强，见 [桌面：多 Agent 工作区](/programming/env-and-tools.html)。
+多 Agent **桌面工作区**（Orca、Multica、Buzz 等）见 [多 Agent 工作区](/agent-tools/agent-workspace.html)。

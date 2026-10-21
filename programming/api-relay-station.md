@@ -40,7 +40,7 @@
 
 **CPA** 与 Sub2API 一样从订阅拿号，但更侧重从 **CLI 终端程序** 获得订阅能力。分发属性较低，更像自用的订阅中转，一般不带计费，常见于拼车。
 
-**gpt-load**、**axonhub** 不直接做「卖额度」那套业务模型，更偏运维与网关：前者管多 Key 轮询与容错，后者管流量入口与多租户权限。完整项目索引见 [环境配置 · 路由代理与 API 网关](/programming/env-and-tools.html)。
+**gpt-load**、**axonhub** 不直接做「卖额度」那套业务模型，更偏运维与网关：前者管多 Key 轮询与容错，后者管流量入口与多租户权限。完整项目索引见 [路由与本地网关](/agent-tools/routing-gateway.html)。
 
 ## 网络与服务器
 
@@ -172,5 +172,5 @@ OpenAI 会给不同地区用户 **首月优惠**，只需提供支付方式即�
 
 - [Coding Plan 与渠道](/programming/coding-plan.html) — 第三方中转渠道与服务对照表
 - [CLIProxyAPI（CPA）](https://github.com/router-for-me/CLIProxyAPI) — 订阅转 API 的网关方案
-- [环境配置 · 路由代理与 API 网关](/programming/env-and-tools.html) — New API、Sub2API、gpt-load、axonhub、metapi 等项目索引
+- [路由与本地网关](/agent-tools/routing-gateway.html) — New API、Sub2API、gpt-load、axonhub、metapi 等项目索引
 - [省钱与 Token 治理](/programming/ai-coding-save-money.html) — 同样做事、尽量少耗 Token

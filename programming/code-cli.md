@@ -1,4 +1,8 @@
-# 编程 Agent 横评
+---
+aside: false
+---
+
+# Coding Agent 横评
 
 |工具|核心特点|适合谁|
 |---|---|---|

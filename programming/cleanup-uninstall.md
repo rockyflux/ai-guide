@@ -2,7 +2,7 @@
 
 ## 卸载与清理 
 
-按 [环境增强工具集](/programming/env-and-tools.html) 试用、测评各类 Agent 工具时，往往会装上一堆软件；每个都会留下缓存与配置目录，磁盘很快被占满。因此定期卸载与清理很有必要。
+按 [AI Agent 工具篇](/agent-tools/account-switch.html) 试用、测评各类 Agent 工具时，往往会装上一堆软件；每个都会留下缓存与配置目录，磁盘很快被占满。因此定期卸载与清理很有必要。
 
 ## 先判断：该删什么
 
@@ -67,4 +67,4 @@ mo analyze          # 查看磁盘占用
 
 每月检查一次磁盘占用，按“缓存 → 闲置项目产物 → 卸载残留”的顺序清理；换工具时再检查旧工具目录。动安装目录或配置文件之前，先确认用途并备份需要保留的内容。
 
-装环境见 [开发环境准备](/programming/dev-start.html)；日常工具见 [环境增强工具集](/programming/env-and-tools.html)。
+装环境见 [开发环境准备](/programming/dev-start.html)；日常工具见 [AI Agent 工具篇](/agent-tools/account-switch.html)。

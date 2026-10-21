@@ -1,7 +1,7 @@
 
-# AI 开发心得
+# Agent 日常开发实践
 
-这篇文章结合这几个月的实践，分享一些目前比较有效的做法，聊聊怎样更好地使用各类 Agent，提高日常开发效率。站内相关入口也可对照：[Skills](/agent/skills.html)、[协作工作流选型](/programming/ccg-workflow.html)、[Claude Code 最佳实践](/practice/best-practices.html)。
+这篇文章结合这几个月的实践，分享一些目前比较有效的做法，聊聊怎样更好地使用各类 Agent，提高日常开发效率。站内相关入口也可对照：[Skills](/agent/skills.html)、[多 Agent 协作工作流](/programming/ccg-workflow.html)、[Claude Code 最佳实践](/practice/best-practices.html)。
 
 ## 一、常用的 Skill 和 Prompt
 

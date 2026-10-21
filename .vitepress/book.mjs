@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
@@ -8,73 +8,98 @@ export const repository = "https://github.com/rockyflux/ai-guide";
 /**
  * chapters: content slugs (filename without .md).
  * Array order = sidebar / reading order (source of truth).
- * legacy: old chapter-NN URL number for redirects.
  */
 export const parts = [
   {
     id: "programming",
     dir: "programming",
-    title: "编程选型篇",
-    english: "Programming",
-    range: "选型 · 工具 · 环境 · 工作流",
-    description: "选模型、选工具 / 套餐、配环境与增强、控成本；含协作工作流选型。",
+    title: "AI 编程篇",
+    english: "AI Coding",
+    range: "模型 · 工具 · 套餐 · 环境",
+    description: "选模型与工具、买套餐与渠道、配环境、控成本，再定协作工作流。",
     chapters: [
-      { slug: "full-pipeline", legacy: 1 },
-      { slug: "leaderboard", legacy: 2 },
-      { slug: "vb-code-tool", legacy: 5 },
-      { slug: "code-cli", legacy: 6 },
-      { slug: "ccg-workflow", legacy: 25 },
-      { slug: "coding-plan", legacy: 7 },
-      { slug: "api-relay-station", legacy: 8 },
-      { slug: "api-aggregation-platforms", legacy: 9 },
-      { slug: "ai-coding-save-money", legacy: 10 },
-      { slug: "dev-start", legacy: 11 },
-      { slug: "env-and-tools", legacy: 12 },
-      { slug: "zcf", legacy: 13, hidden: true },
-      { slug: "cc-switch", legacy: 14, hidden: true },
-      { slug: "cleanup-uninstall", legacy: 16 },
+      "full-pipeline",
+      "leaderboard",
+      "vb-code-tool",
+      "code-cli",
+      "coding-plan",
+      "api-relay-station",
+      "ai-coding-save-money",
+      "dev-start",
+      "ccg-workflow",
+      "cleanup-uninstall",
+      { slug: "zcf", hidden: true },
+      { slug: "cc-switch", hidden: true },
+    ],
+  },
+  {
+    id: "agent-tools",
+    dir: "agent-tools",
+    title: "AI Agent 工具篇",
+    english: "Agent Tools",
+    range: "账号 · 工作区 · 终端 · 浏览器 · 网关 · 记忆",
+    description:
+      "Coding Agent 周边：账号切换、多 Agent 工作区、终端、浏览器操控、路由网关、记忆检索与安装脚本。",
+    chapters: [
+      "account-switch",
+      "agent-workspace",
+      "terminal-cli",
+      "browser-desktop",
+      "routing-gateway",
+      "memory-retrieval",
+      "bootstrap-ide",
     ],
   },
   {
     id: "agent",
     dir: "agent",
-    title: "Agent 构建篇",
+    title: "Agent 自定义篇",
     english: "Agent",
     range: "Rules · Skills · MCP",
     description: "Rules / Skills / MCP / Hooks / Subagents，让 AI 持续干活。",
     chapters: [
-      { slug: "prompt", legacy: 33 },
-      { slug: "rules", legacy: 34, hidden: true },
-      { slug: "skills", legacy: 35 },
-      { slug: "mcp", legacy: 36 },
-      { slug: "commands", legacy: 37, hidden: true },
-      { slug: "hooks", legacy: 38 },
-      { slug: "subagents", legacy: 39 },
-      { slug: "output-styles", legacy: 40, hidden: true },
-      { slug: "workflow", legacy: 41, hidden: true },
-      { slug: "awesome-agent-skills", legacy: 42, hidden: true },
+      "prompt",
+      { slug: "rules", hidden: true },
+      "skills",
+      "mcp",
+      { slug: "commands", hidden: true },
+      "hooks",
+      "subagents",
+      { slug: "output-styles", hidden: true },
+      { slug: "workflow", hidden: true },
+      { slug: "awesome-agent-skills", hidden: true },
     ],
   },
   {
     id: "practice",
     dir: "practice",
-    title: "项目实践篇",
-    english: "Practice",
-    range: "上手 · 案例 · SOP",
-    description: "真实案例与可复用 SOP，把「会用工具」变成「能交付」。",
+    title: "编程实战篇",
+    english: "Coding Practice",
+    range: "Cursor · Codex · WSL · SOP",
+    description: "Coding Agent 上手包与可复用 SOP，把「会用工具」变成「能交付代码」。",
     chapters: [
-      { slug: "cursor", legacy: 43 },
-      { slug: "codex", legacy: 44 },
-      { slug: "kiro-practice", legacy: 45 },
-      { slug: "wsl", legacy: 46 },
-      { slug: "ai-office-practice", legacy: 48 },
-      { slug: "requirements-to-design-prototype", legacy: 49 },
-      { slug: "best-practices", legacy: 50 },
-      { slug: "everything-claude-code", legacy: 51 },
-      { slug: "ai-dev-notes", legacy: 52 },
-      { slug: "gpt-image", legacy: 53 },
-      { slug: "ai-drawing-practice", legacy: 65 },
-      { slug: "google-stitch-figma-mcp", legacy: 66 },
+      "cursor",
+      "codex",
+      "kiro-practice",
+      "wsl",
+      "best-practices",
+      "everything-claude-code",
+    ],
+  },
+  {
+    id: "scenarios",
+    dir: "scenarios",
+    title: "场景实战篇",
+    english: "Scenarios",
+    range: "桌面 Agent · 办公 CLI · 设计 · 绘图",
+    description: "桌面端 Agent、接入办公 CLI、需求到原型、AI 绘图与设计到代码，把 AI 用进非纯编码场景。",
+    chapters: [
+      "workbuddy-doubao-work",
+      "ai-office-practice",
+      "requirements-to-design-prototype",
+      "gpt-image",
+      "ai-drawing-practice",
+      "google-stitch-figma-mcp",
     ],
   },
   {
@@ -85,11 +110,13 @@ export const parts = [
     range: "路线 · 资料 · 工具",
     description: "系统学习路线、社区资源与 Awesome 合集。",
     chapters: [
-      { slug: "ai-learning-guide", legacy: 55 },
-      { slug: "open-source-learning", legacy: 59 },
-      { slug: "ai-resources-guide", legacy: 56 },
-      { slug: "runoob-online-tutorials", legacy: 57 },
-      { slug: "github-extensions", legacy: 58 },
+      "ai-learning-guide",
+      "agent-engineer-roadmap",
+      "open-source-learning",
+      "ai-resources-guide",
+      "runoob-online-tutorials",
+      "github-extensions",
+      "ai-dev-notes",
     ],
   },
   {
@@ -100,14 +127,14 @@ export const parts = [
     range: "办公 · 对话 · 创作",
     description: "办公桌面 Agent、对话、智能体、绘图视频与开发周边。",
     chapters: [
-      { slug: "ai-office-desktop", legacy: 17 },
-      { slug: "ai-chat-tools", legacy: 18 },
-      { slug: "ai-super-agent", legacy: 19 },
-      { slug: "ai-image-tools", legacy: 20 },
-      { slug: "ai-video-tools", legacy: 21 },
-      { slug: "awesome-openclaw", legacy: 22 },
-      { slug: "ai-software", legacy: 23 },
-      { slug: "ai-product", legacy: 24 },
+      "ai-office-desktop",
+      "ai-chat-tools",
+      "ai-super-agent",
+      "ai-image-tools",
+      "ai-video-tools",
+      "awesome-openclaw",
+      "ai-software",
+      "ai-product",
     ],
   },
 ];
@@ -150,15 +177,11 @@ export const readingOrder = [
 /** All chapter pages including sidebar-hidden ones (for routes / link resolution). */
 export const chapterPages = [];
 
-/** Old /{part}/chapter-NN.html → new href (for redirects + link checks). */
-export const legacyRedirects = [];
-
 for (const part of parts) {
   const files = readdirSync(path.join(root, part.dir));
   part.pages = [];
   for (const entry of part.chapters) {
     const slug = typeof entry === "string" ? entry : entry.slug;
-    const legacy = typeof entry === "string" ? undefined : entry.legacy;
     const hidden = typeof entry === "string" ? false : !!entry.hidden;
     const file = exactlyOne(
       files.filter((f) => f === `${slug}.md`),
@@ -167,18 +190,11 @@ for (const part of parts) {
     const chapter = page(`${part.dir}/${file}`, `${part.id}/${slug}`, {
       slug,
       part: part.title,
-      legacy,
       hidden,
     });
     part.pages.push(chapter);
     chapterPages.push(chapter);
     if (!hidden) readingOrder.push(chapter);
-    if (legacy != null) {
-      legacyRedirects.push({
-        from: `${part.id}/chapter-${String(legacy).padStart(2, "0")}`,
-        to: chapter.href,
-      });
-    }
   }
   part.href = (part.pages.find((p) => !p.hidden) || part.pages[0]).href;
 }
@@ -219,7 +235,7 @@ export const sidebar = [
   },
   ...parts.map((part) => ({
     text: part.title,
-    collapsed: part.id !== "programming",
+    collapsed: false,
     items: part.pages
       .filter((p) => !p.hidden)
       .map((p) => ({
@@ -279,17 +295,4 @@ export function publicBookData() {
     chapterCount: parts.reduce((n, p) => n + visible(p.pages).length, 0),
     caseCount: 0,
   };
-}
-
-/** Write meta-refresh HTML for old chapter-NN URLs into a VitePress dist root. */
-export function writeLegacyRedirects(outDir) {
-  for (const { from, to } of legacyRedirects) {
-    const file = path.join(outDir, from + ".html");
-    mkdirSync(path.dirname(file), { recursive: true });
-    const dest = path.posix.basename(to.startsWith("/") ? to.slice(1) : to);
-    writeFileSync(
-      file,
-      `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${dest}"><link rel="canonical" href="${dest}"><title>Redirect</title><a href="${dest}">Moved</a>\n`,
-    );
-  }
 }

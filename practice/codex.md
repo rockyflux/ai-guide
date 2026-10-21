@@ -47,7 +47,7 @@ Codex CLI 依赖系统 PATH 里的 [`rg`](https://github.com/BurntSushi/ripgrep)
 
 #### 配套工具：AiMaMi（Codex 伴侣）
 
-不想手改 `~/.codex` 下的 TOML/JSON 时，可用社区桌面伴侣 **[AiMaMi](https://github.com/borawong/AiMaMi)**：账号切换与配额、智能路由与中转、会话清理、MCP/Skills、插件与 `AGENTS.md` 自定义指令；支持 macOS / Windows（Linux 尽力支持）。更多同类增强见：[环境增强工具集](/programming/env-and-tools.html)。
+不想手改 `~/.codex` 下的 TOML/JSON 时，可用社区桌面伴侣 **[AiMaMi](https://github.com/borawong/AiMaMi)**：账号切换与配额、智能路由与中转、会话清理、MCP/Skills、插件与 `AGENTS.md` 自定义指令；支持 macOS / Windows（Linux 尽力支持）。更多同类增强见：[账号与供应商切换](/agent-tools/account-switch.html)。
 
 #### Windows 桌面端补丁恢复（codex-windows-fast-patch Skill）
 
@@ -125,7 +125,7 @@ remote_connections = true
 4. 把 **如何构建、如何测试、分支约定、禁止自动执行的操作** 写清楚——和用 Cursor / Claude Code 一样，**边界写清楚 = 少翻车**。
 5. `AGENTS.md` 示例参考：[codecopy.cn/embed/w7wlhs](https://www.codecopy.cn/embed/w7wlhs)
 
-多模型协作（例如用别的工具做规划、用 Codex 做实现/评审）可参考：[CCG](https://github.com/fengshao1227/ccg-workflow)，选型见 [协作工作流选型](/programming/ccg-workflow.html)。
+多模型协作（例如用别的工具做规划、用 Codex 做实现/评审）可参考：[CCG](https://github.com/fengshao1227/ccg-workflow)，详见 [多 Agent 协作工作流](/programming/ccg-workflow.html)。
 
 ---
 
@@ -145,7 +145,7 @@ Codex 支持 **Skills**（把可复用流程写成 Markdown 说明，供代理�
 在 Codex 侧配置 **MCP 服务器** 后，代理可以调用外部工具（浏览器、文档、数据库等）。配置入口通常在用户级 `~/.codex/config.toml`（含 `[mcp_servers]` 等段落）；与认证相关的文件勿提交到 Git。
 
 - 概念与选型思路：[AI 智能体 · MCP](/agent/mcp.html)。
-- 和 Claude Code 统一的增强工具列表：[环境增强工具集](/programming/env-and-tools.html)。
+- 和 Claude Code 统一的增强工具列表：[AI Agent 工具篇](/agent-tools/account-switch.html)。
 
 ---
 

@@ -1,5 +1,8 @@
+---
+aside: false
+---
 
-# 编程工具对比
+# IDE 与编程工具
 
 > **先读再比工具**：选型前务必先过这两本——
 > 1. [《深入理解 AI Agent — 从原理到实践》](https://bojieli.github.io/ai-agent-book/astro/)（李博杰等）：Agent 循环、上下文、工具到 Coding Agent / 多 Agent，把「工具在干什么」想清楚。
@@ -79,5 +82,5 @@
 6. **国内云厂商 / 企业私有化**：通义灵码、CodeBuddy、文心快码、Qoder、Tabnine、Amazon Q、IBM Bob。
 7. **垂直场景**：Android → Firebender；Snowflake 数据栈 → Cortex Code；开源模型优先 → Command Code；Kimi 订阅 → Kimi Code CLI。
 
-账号切换、CPA 路由、Skills 管理等**增强工具**不在本表展开，请到 [环境增强工具集](/programming/env-and-tools.html)。
+账号切换、CPA 路由、Skills 管理等**增强工具**不在本表展开，请到 [AI Agent 工具篇](/agent-tools/account-switch.html)。
 子智能体分工与并行写法见 [Subagents](/agent/subagents.html)。

@@ -39,7 +39,7 @@ npm run preview
 
 ## 内容与导航
 
-- `preface/`、`programming/`、`agent/`、`practice/`、`resources/`、`products/`：篇章正文，继续在原文件编辑。篇章阅读顺序以 `.vitepress/book.mjs` 的 `parts` 为准，不以目录名为序。
+- `preface/`、`programming/`、`agent-tools/`、`agent/`、`practice/`、`scenarios/`、`resources/`、`products/`：篇章正文，继续在原文件编辑。篇章阅读顺序以 `.vitepress/book.mjs` 的 `parts` 为准，不以目录名为序。
 - `website/2026-agent-survey-report.md`：开发者调研，公开地址仍为 `/survey.html`。
 - `assets/`：现有插图。继续使用 Markdown 相对路径，构建时自动复制并生成资源地址。
 - `.vitepress/book.mjs`：全书顺序、篇章、稳定网址与案例对应关系。普通章节标题直接读取正文；新增章节或案例时在这里登记，`npm run check` 会阻止遗漏正文。
@@ -47,7 +47,7 @@ npm run preview
 - `.vitepress/theme/`：阅读界面。章节不依赖自定义组件，仍可直接在 GitHub 阅读。
 - `README.md`：关于本书。
 
-章节文件使用内容 slug（对齐历史文件名），公开地址与文件名一致，例如 `programming/leaderboard.md` → `/programming/leaderboard.html`。侧栏标题读取正文 `#` 一级标题；排序与注册见 `.vitepress/book.mjs` 的 `parts` / `chapters` 数组。旧的 `/programming/chapter-NN.html` 在构建时写入跳转页。相对章节链接和目录链接由 Markdown 插件转换；正文中的 `{{input}}` 等模板示例会按字面显示。Mermaid 图在进入视野时加载，源码始终可展开查看。
+章节文件使用内容 slug（对齐历史文件名），公开地址与文件名一致，例如 `programming/leaderboard.md` → `/programming/leaderboard.html`。侧栏标题读取正文 `#` 一级标题；排序与注册见 `.vitepress/book.mjs` 的 `parts` / `chapters` 数组。相对章节链接和目录链接由 Markdown 插件转换；正文中的 `{{input}}` 等模板示例会按字面显示。Mermaid 图在进入视野时加载，源码始终可展开查看。
 
 阅读位置和字号只保存在读者自己的浏览器，无需登录。搜索索引随站点构建，不依赖外部搜索服务。章节按打开时加载，关闭目录链接的自动预取；Mermaid 使用 Dagre 布局，避免首次阅读额外下载大型 ELK 模块。打印功能导出当前章节；全书 PDF/EPUB 不在当前构建范围内。
 

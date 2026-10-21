@@ -1,3 +1,7 @@
+---
+aside: false
+---
+
 # AI 视频工具
 
 
@@ -22,9 +26,22 @@
 | 腾讯智影 | 腾讯 | 数字人播报、模板化短视频剪辑 | [zenvideo.qq.com](https://zenvideo.qq.com) |
 | 闪剪 | 闪剪 | 数字人口播、图文转视频 | [shanjian.tv](https://shanjian.tv) |
 
+## 开源项目
+
+本地部署、自动化流水线与 Agent 制片方案，与上文 SaaS 文生视频产品互补。站内相关条目见 [Skills · 视频制作](/agent/skills.html)、[Cursor 实践 · Skills](/practice/cursor.html)。
+
+| 项目 | 核心定位 | 链接 |
+| --- | --- | --- |
+| MoneyPrinterTurbo | 主题 / 关键词一键生成高清短视频（脚本、素材、字幕、配乐、成片） | [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) |
+| OpenMontage | Agent 全流程视频制片（pipeline + 700+ 技能 / 知识文件） | [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) |
+| jacky-motion | 口播稿 + SRT → 可录屏的 16:9 自动播放 HTML | [Jackywxsz/jacky-motion](https://github.com/Jackywxsz/jacky-motion) |
+| remotion-video-toolkit | Agent Skill：生成 16:9 MP4 教程视频 | [shreefentsar/remotion-video-toolkit](https://github.com/shreefentsar/remotion-video-toolkit) |
+| remotion-dev/skills | Remotion 官方 Skills：用代码创作视频内容 | [remotion-dev/skills](https://github.com/remotion-dev/skills) |
+
 ## 选型建议
 
 1. **国内日常创作**：可灵、即梦、海螺 — 中文提示与短视频场景覆盖广，上手成本低。
 2. **图生视频 / 一致性**：Vidu、通义万相 — 适合产品展示、分镜延续与参考图驱动。
 3. **国际高质量 / 电影感**：Sora、Runway、Veo — 镜头语言与物理表现更强，通常需订阅或 API。
 4. **数字人 / 口播**：腾讯智影、闪剪 — 模板化口播与营销短视频，不等同于生成式文生视频。
+5. **开源自建 / 自动化**：MoneyPrinterTurbo（一键短视频流水线）、OpenMontage（Agent 制片）；讲解动画可看 jacky-motion / Remotion Skills。

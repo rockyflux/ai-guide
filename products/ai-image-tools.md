@@ -1,3 +1,7 @@
+---
+aside: false
+---
+
 # AI 绘图工具
 
 
@@ -41,4 +45,4 @@
 3. **真实感 / 海报文字**：FLUX、Ideogram — 人像写实与带字排版更稳。
 4. **工作流 / 模型社区**：LiblibAI、Stable Diffusion — 需要 ComfyUI、LoRA 与批量生产时优先。
 
-站内练习：[豆包 AI 绘图闭环小练习](/practice/ai-drawing-practice.html)
+站内练习：[豆包 AI 绘图闭环小练习](/scenarios/ai-drawing-practice.html)

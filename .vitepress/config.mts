@@ -6,7 +6,6 @@ import {
   sidebar,
   readSource,
   repository,
-  writeLegacyRedirects,
 } from "./book.mjs";
 import { bookMarkdown } from "./markdown.mjs";
 
@@ -18,7 +17,7 @@ export default defineConfig({
   title: "AI Guide",
   titleTemplate: ":title · AI Guide",
   description:
-    "面向有经验开发者的任务向指南：选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用项目实践跑通闭环。",
+    "面向有经验开发者的任务向指南：选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用编程与场景实战跑通闭环。",
   lang: "zh-CN",
   base,
   cleanUrls: false,
@@ -177,8 +176,5 @@ export default defineConfig({
   },
   vite: {
     build: { assetsInlineLimit: 0, chunkSizeWarningLimit: 1500 },
-  },
-  async buildEnd(siteConfig) {
-    writeLegacyRedirects(siteConfig.outDir);
   },
 });

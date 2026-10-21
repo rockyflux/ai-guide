@@ -119,7 +119,7 @@ ClaudeCode workflow 可以理解为一种 **可组合、可复用、带流程控
 
 更进一步的多模型协作与工程化实践，可以参考站内汇总：
 
-- [协作工作流选型](/programming/ccg-workflow.html)
+- [多 Agent 协作工作流](/programming/ccg-workflow.html)
 
 ---
 

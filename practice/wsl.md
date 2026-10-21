@@ -7,7 +7,7 @@
 - WezTerm：跨平台终端，Windows 上更稳 - [wezterm.org](https://wezterm.org/install/windows.html)
 - [CLI-Manager](https://github.com/dark-hxx/CLI-Manager)：Windows 侧 AI CLI 工作台，内置终端可直接开 WSL；Hook 通知、会话 Diff、用量看板、多项目 Worktree，对接 Claude Code / Codex
 
-只想换终端用不想用 Rust 方案就选 WezTerm；要桌面工作台管 Claude Code / Codex（含 WSL 终端）再看 CLI-Manager。更完整的工具合集见 [环境增强工具集](/programming/env-and-tools.html)。
+只想换终端用不想用 Rust 方案就选 WezTerm；要桌面工作台管 Claude Code / Codex（含 WSL 终端）再看 CLI-Manager。同类桌面工作台见 [多 Agent 工作区](/agent-tools/agent-workspace.html)。
 
 ## 启用 WSL
 

@@ -33,7 +33,7 @@ flowchart LR
 
 | 看什么 | 为什么 | 站内入口 |
 |--------|--------|----------|
-| **能力** | 编程 / 推理 / 长上下文是否够用 | [评测基准与榜单](/programming/leaderboard.html) |
+| **能力** | 编程 / 推理 / 长上下文是否够用 | [模型评测与榜单](/programming/leaderboard.html) |
 | **价格** | Token 单价决定 Agent 多轮能不能撑住 | [Coding Plan 与渠道](/programming/coding-plan.html) · [省钱与 Token 治理](/programming/ai-coding-save-money.html) |
 | **厂家与渠道** | 官方稳定性、区域可用性、是否接受第三方 | [Coding Plan / 渠道](/programming/coding-plan.html) |
 
@@ -62,7 +62,7 @@ flowchart LR
 - 统一鉴权、轮询、故障转移、多端复用
 - 把订阅能力转成兼容 API，给 Cursor / Claude Code / Codex 等一起用
 
-站内可关注 [CLIProxyAPI（CPA）](https://github.com/router-for-me/CLIProxyAPI)。同类还可看 [LiteLLM](https://github.com/BerriAI/litellm)、[Claude Code Router](https://github.com/musistudio/claude-code-router)、[Sub2API](https://github.com/Wei-Shaw/sub2api)、[New API](https://github.com/QuantumNous/new-api)、[magpie](https://github.com/yetone/magpie)。环境侧总览见 [环境增强工具集](/programming/env-and-tools.html)。
+站内可关注 [CLIProxyAPI（CPA）](https://github.com/router-for-me/CLIProxyAPI)。同类还可看 [LiteLLM](https://github.com/BerriAI/litellm)、[Claude Code Router](https://github.com/musistudio/claude-code-router)、[Sub2API](https://github.com/Wei-Shaw/sub2api)、[New API](https://github.com/QuantumNous/new-api)、[magpie](https://github.com/yetone/magpie)。环境侧总览见 [路由与本地网关](/agent-tools/routing-gateway.html)。
 
 ```text
 厂家 / 中转站  →  本地或自建网关（CPA 等）  →  各个 Agent 工具
@@ -90,10 +90,10 @@ API 和网关配好后，日常痛点变成：Claude Code / Codex / Gemini CLI �
 
 | 产品 | 一句话 | 深读 |
 |------|--------|------|
-| [Claude Code](https://claude.com/product/claude-code) | 整库理解、批量改文件、MCP / 子 Agent，专业向 | [编程 Agent 横评](/programming/code-cli.html) |
+| [Claude Code](https://claude.com/product/claude-code) | 整库理解、批量改文件、MCP / 子 Agent，专业向 | [Coding Agent 横评](/programming/code-cli.html) |
 | [Codex](https://developers.openai.com/codex) | ChatGPT 原生登录，开箱快；额度消耗大 | [Codex 实践](/practice/codex.html) |
 | [Cursor](https://cursor.com/) | IDE 内 Agent，适合边写边改 | [Cursor 实践](/practice/cursor.html) |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) / [Grok CLI](https://x.ai/news/grok-build-cli) | 终端优先、绑定各自生态 | [编程工具对比](/programming/vb-code-tool.html) |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) / [Grok CLI](https://x.ai/news/grok-build-cli) | 终端优先、绑定各自生态 | [IDE 与编程工具](/programming/vb-code-tool.html) |
 | [Kiro](/practice/kiro-practice.html) / [Pi](https://github.com/earendil-works/pi) | 规格驱动上手包 / 可自扩展终端 Agent | 见右栏链接 |
 
 每个 Agent 都要完成同一件事：**指向你的 API 入口（官方 / 中转 / CPA），选好默认模型**。环境底座见 [开发环境准备](/programming/dev-start.html)；想少折腾配置可看 [ZCF](/programming/zcf.html)。
@@ -129,7 +129,7 @@ Agent 发起一轮请求时，并不是只把你刚打的字发出去，而是�
 | **MCP / 工具** | 可调用能力；调用后结果回流 | [MCP](/agent/mcp.html) |
 | **工具往返产物** | 检索命中、文件内容、命令输出 | 随轮次累积，常是体积大头 |
 
-机制拆解见 [Agent 构建栏目](/agent/prompt.html)。
+机制拆解见 [Agent 自定义栏目](/agent/prompt.html)。
 
 ---
 
@@ -150,7 +150,7 @@ Agent 很少「想一次就交卷」。接到任务后，典型是多轮循环�
 | **内置工具** | 搜仓库、读文件、编辑、跑终端 | Agent 产品自带 |
 | **外部工具** | 查文档、浏览器、工单、数据库等 | 多半经 [MCP](/agent/mcp.html) 接入 |
 
-代码侧常配：本地混合检索用 [Zvec](https://zvec.org/zh/)，调用图 / 影响面用 [Codegraph](https://github.com/colbymchenry/codegraph)，内容搜用 [ripgrep](https://github.com/BurntSushi/ripgrep)。更多见 [环境增强工具集](/programming/env-and-tools.html)。
+代码侧常配：本地混合检索用 [Zvec](https://zvec.org/zh/)，调用图 / 影响面用 [Codegraph](https://github.com/colbymchenry/codegraph)，内容搜用 [ripgrep](https://github.com/BurntSushi/ripgrep)。更多见 [记忆 · 上下文 · 检索](/agent-tools/memory-retrieval.html)。
 
 工具一返回，内容就会叠进上下文；后面每一轮往往还带着前面读过的文件、搜过的结果、跑过的日志。账单大头经常不是你打的那几句字，而是**试错轮次 × 越积越长的上下文**（见 [省钱之道](/programming/ai-coding-save-money.html)）。
 
@@ -180,7 +180,7 @@ Agent 很少「想一次就交卷」。接到任务后，典型是多轮循环�
 - 一事一会话，做完就收；别把无关大改塞进同一条长线程
 - Rules 保持短、硬；细则放进按需 Skills，而不是全写进永远加载的说明
 - MCP 按项目 / 按任务启用，不把全家桶常驻
-- 上下文撑满了就压缩：用 [headroom](https://github.com/headroomlabs-ai/headroom) / [context-mode](https://github.com/mksglu/context-mode) 压 tool 输出（详见 [环境增强工具集](/programming/env-and-tools.html)）
+- 上下文撑满了就压缩：用 [headroom](https://github.com/headroomlabs-ai/headroom) / [context-mode](https://github.com/mksglu/context-mode) 压 tool 输出（详见 [记忆 · 上下文 · 检索](/agent-tools/memory-retrieval.html)）
 - 强模型留给架构抉择和反复失败的坑；日常改动用性价比档
 
 装 / 写之前先问两句：**没有它，Agent 会不会多绕几圈？有了它，会不会在错误时机进上下文或被误调？** 选型时优先看：
@@ -192,7 +192,7 @@ Agent 很少「想一次就交卷」。接到任务后，典型是多轮循环�
 | **Skills** | 流程错、边界糊 | 是否匹配任务、是否可按需加载 |
 | **MCP** | 该有没有就瞎猜；不该有常驻就噪声大 | 是否挡住关键一步；描述是否干净 |
 
-精选入口：[Awesome Agent Skills](/agent/awesome-agent-skills.html)；多 Agent 编排见 [协作工作流选型](/programming/ccg-workflow.html)。
+精选入口：[Awesome Agent Skills](/agent/awesome-agent-skills.html)；多 Agent 编排见 [多 Agent 协作工作流](/programming/ccg-workflow.html)。
 
 把前面收成一句：
 
@@ -213,10 +213,10 @@ Agent 很少「想一次就交卷」。接到任务后，典型是多轮循环�
 
 | 阶段 | 去哪 |
 |------|------|
-| 选模型 / 控成本 | [AI 编程选型](/programming/full-pipeline.html) |
-| 配环境 / 网关 / 切换 | [开发环境准备](/programming/dev-start.html) · [环境增强工具集](/programming/env-and-tools.html) |
-| Rules / Skills / MCP | [Agent 构建](/agent/prompt.html) |
-| 多 Agent 编排 | [协作工作流选型](/programming/ccg-workflow.html) |
-| 跑通第一个项目 | [项目实践](/practice/cursor.html) · [从需求到设计原型](/practice/requirements-to-design-prototype.html) |
+| 选模型 / 控成本 | [全流程总览](/programming/full-pipeline.html) |
+| 配环境 / 网关 / 切换 | [开发环境准备](/programming/dev-start.html) · [AI Agent 工具篇](/agent-tools/account-switch.html) |
+| Rules / Skills / MCP | [Agent 自定义](/agent/prompt.html) |
+| 多 Agent 编排 | [多 Agent 协作工作流](/programming/ccg-workflow.html) |
+| 跑通第一个项目 | [编程实战](/practice/cursor.html) · [从需求到设计原型](/scenarios/requirements-to-design-prototype.html) |
 
 先把这条线在脑子里走通，再往各栏目钻细节，会少很多「装了一堆却不知道钱花在哪、效果差在哪」的空转。
