@@ -31,7 +31,7 @@ npm run preview
 1. 在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。这一步需要有权修改仓库设置的维护者操作。
 2. 将网站分支合入 `main`。
 3. 在 Actions 中查看 **Build and publish reading site**。检查和浏览器测试通过后，会自动部署。
-4. 访问 <https://ai-guide.180813.xyz/>（仓库已配置自定义域名；`github.io` 项目路径仅作备用入口）。
+4. 访问 <https://rockyflux.github.io/ai-guide/>。
 
 后续推送到 `main` 自动更新网站。Pull Request 只执行构建和测试；在其他分支手动运行也只执行验证。`github-pages` 环境如配置了审批规则，发布会等待该环境的审批。
 
@@ -53,22 +53,22 @@ npm run preview
 
 ## 自定义域名或仓库名
 
-本地预览默认 `SITE_BASE=/ai-guide/`。线上自定义域名挂在站点根路径，工作流已设为：
+本地与 GitHub Pages 项目路径默认一致：
 
 ```yaml
-SITE_BASE: /
-SITE_URL: https://ai-guide.180813.xyz/
+SITE_BASE: /ai-guide/
+SITE_URL: https://rockyflux.github.io/ai-guide/
 ```
 
-本地按根路径验证时可手动设置：
+资源地址会带上 `/ai-guide/` 前缀（例如 `/ai-guide/assets/style.*.css`）。若误设为 `SITE_BASE=/`，在 `github.io/ai-guide/` 下访问时会出现 CSS/JS 404（请求落到 `rockyflux.github.io/` 根路径）。
 
-```sh
-SITE_BASE=/ SITE_URL=https://ai-guide.180813.xyz/ npm run build
-SITE_BASE=/ npm run check:build
-SITE_BASE=/ npm run preview
-```
+若改用自定义域名挂在站点根路径，需同时：
 
-`SITE_URL` 用于 sitemap，应与最终访问域名一致（含末尾 `/`）。更换域名或改回 GitHub 项目页路径时，同步改工作流里的这两个变量。
+1. 在 `public/CNAME` 写入域名
+2. 工作流改为 `SITE_BASE: /` 与对应的 `SITE_URL`
+3. 在仓库 Settings → Pages 确认自定义域名
+
+`SITE_URL` 用于 sitemap，应与最终访问地址一致（含末尾 `/`）。更换域名或仓库名时，同步改工作流里的这两个变量。
 
 框架升级优先跟随稳定版。依赖使用公共 npm 源与锁文件，CI 使用 `npm ci` 以保持构建可复现。VitePress 1.6 的上游依赖仍是 Vite 5，`package.json` 显式覆盖为 Vite 6.4.4，并将 esbuild、KaTeX 固定到安全修复版本。本项目通过构建、开发预览和浏览器测试验证这个组合；升级 VitePress 或 Mermaid 时应重新检查这些覆盖配置，并重新执行验证。
 
