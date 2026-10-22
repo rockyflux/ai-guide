@@ -23,7 +23,7 @@ body:
     id: page
     attributes:
       label: 相关页面 URL（如有）
-      placeholder: https://ai-guide.180813.xyz/...
+      placeholder: https://rockyflux.github.io/ai-guide/...
 
   - type: textarea
     id: what
