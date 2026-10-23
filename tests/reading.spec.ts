@@ -107,7 +107,7 @@ const mermaidPages = pages.filter((p) =>
   /```mermaid/.test(readSource(p.source)),
 );
 
-for (const chapter of mermaidPages.slice(0, 5)) {
+for (const chapter of mermaidPages) {
   test(`render Mermaid: ${chapter.href}`, async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", (error) => errors.push(error.message));

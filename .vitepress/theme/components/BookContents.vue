@@ -25,11 +25,6 @@ import { data as book } from "../../book.data";
       <ol>
         <li v-for="page in part.pages" :key="page.href">
           <a :href="withBase(page.href)">{{ page.title }}</a>
-          <ul v-if="page.children">
-            <li v-for="child in page.children" :key="child.href">
-              <a :href="withBase(child.href)">{{ child.title }}</a>
-            </li>
-          </ul>
         </li>
       </ol>
     </section>

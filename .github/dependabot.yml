@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+    groups:
+      reading-site:
+        patterns:
+          - "vitepress"
+          - "vue"
+          - "mermaid"
+          - "@playwright/test"
+          - "cheerio"
+          - "markdown-it"
+    ignore:
+      # 由 package.json overrides 钉死；升级时需连同 assert:overrides 一起改
+      - dependency-name: vite
+      - dependency-name: esbuild
+      - dependency-name: katex
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies

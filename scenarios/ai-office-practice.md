@@ -103,6 +103,7 @@
 
 | 项目 | 企微 `wecom-cli` | 钉钉 `dws` | 飞书 `lark-cli` |
 | --- | --- | --- | --- |
+| 官网 | [企业微信 AI CLI](https://work.weixin.qq.com/nl/index/aicli) | [钉钉 CLI](https://open.dingtalk.com/document/development/dingtalk-cli-performing-tasks-within) | [飞书 CLI](https://www.feishu.cn/feishu-cli) |
 | 仓库 | [WecomTeam/wecom-cli](https://github.com/WecomTeam/wecom-cli) | [DingTalk-Real-AI/dingtalk-workspace-cli](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli) | [larksuite/cli](https://github.com/larksuite/cli) |
 | 协议 / 语言 | MIT / Rust | Apache-2.0 / Go | MIT / Go |
 | npm | `@wecom/cli` | `dingtalk-workspace-cli` | `@larksuite/cli` |
@@ -132,7 +133,7 @@ lark-cli auth login --recommend
 lark-cli calendar +agenda
 ```
 
-文档：[飞书 CLI](https://open.feishu.cn/feishu-cli) · [Lark CLI](https://open.larksuite.com/document/mcp_open_tools/feishu-cli-let-ai-actually-do-your-work-in-feishu)
+官网：[飞书 CLI](https://www.feishu.cn/feishu-cli) · 文档：[开放平台](https://open.feishu.cn/feishu-cli) · [Lark CLI](https://open.larksuite.com/document/mcp_open_tools/feishu-cli-let-ai-actually-do-your-work-in-feishu)
 
 **钉钉**
 
@@ -144,7 +145,7 @@ dws auth login
 dws calendar list-today
 ```
 
-入口：[钉钉 CLI 2.0](https://open.dingtalk.com/dingtalk-cli)（Skill 安装以仓库 README 为准）
+官网：[钉钉 CLI](https://open.dingtalk.com/document/development/dingtalk-cli-performing-tasks-within) · 安装入口：[钉钉 CLI 2.0](https://open.dingtalk.com/dingtalk-cli)（Skill 安装以仓库 README 为准）
 
 **企微**
 
@@ -155,7 +156,7 @@ wecom-cli init
 wecom-cli contact get_userlist '{}'
 ```
 
-说明：[企业微信 CLI 开源说明](https://open.work.weixin.qq.com/help2/pc/21676)
+官网：[企业微信 AI CLI](https://work.weixin.qq.com/nl/index/aicli) · 说明：[企业微信 CLI 开源说明](https://open.work.weixin.qq.com/help2/pc/21676)
 
 ### 关键概念
 

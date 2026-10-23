@@ -38,6 +38,7 @@
 - [Claude 中文网](https://www.claude-cn.org/) — Claude 资讯与交流
 - [easy-vibe](https://datawhalechina.github.io/easy-vibe/zh-cn/) — Datawhale：编程软件 / Vibe Coding 学习资源
 - [Vibe Vibe](https://www.vibevibe.cn/) — Vibe Coding / AI 创造教程：从零基础作品到全栈上线
+- [tradecatlabs](https://tradecatlabs.com/) — 开放研究与工程实验室：Vibe Coding 方法论与可复现研究产出登记
 - [OpenCode 中文实战课](https://learnopencode.com/) — OpenCode 实战课程
 - [OpenClaw 真正能做事的 AI](https://clawd.org.cn/) — OpenClaw 社区站
 - [Book of Kiro 入门](https://kiro-community.github.io/book-of-kiro/kiro-intro/) — Kiro 入门指南

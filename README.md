@@ -108,7 +108,7 @@ npm ci
 npm run dev
 ```
 
-默认地址由终端输出，路径前缀为 `/ai-guide/`。发布与检查见 [WEBSITE.md](https://github.com/rockyflux/ai-guide/blob/main/WEBSITE.md)。
+默认地址由终端输出，路径前缀为 `/ai-guide/`。完整校验（`npm run verify`）、浏览器测试与发布说明见 [WEBSITE.md](https://github.com/rockyflux/ai-guide/blob/main/WEBSITE.md)。
 
 ## 参与贡献
 

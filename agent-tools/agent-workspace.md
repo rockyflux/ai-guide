@@ -13,6 +13,7 @@ aside: false
 |[Multica](https://github.com/multica-ai/multica)|53.1k|人与 AI Agent 同看板协作：把 Issue 派给 Claude Code / Codex / Cursor 等 26+ CLI；本机 daemon 跑代码、执行日志与 Review 门禁；可自托管（Docker/Helm），Web/桌面/移动端|[官网](https://multica.ai)|
 |[Buzz](https://github.com/block/buzz)|36.1k|Block 开源：人与 Agent 同房间协作的可自托管工作区（Nostr relay）；频道/补丁/CI/审批同一事件流；桌面（Tauri）+ `buzz-cli`（JSON I/O）+ ACP（Goose/Codex/Claude Code）；Apache-2.0|[GitHub](https://github.com/block/buzz)|
 |[AionUi](https://github.com/iOfficeAI/AionUi)|33.6k|跨平台 AI 编程桌面客户端：CoWork 协作、多引擎集成|[Zread](https://zread.ai/iOfficeAI/AionUi)|
+|[DSH Desktop](https://github.com/anywhere-labs/dsh-desktop)|32.5k|基于 DeepSeek Harness 的开源桌面端（Win/macOS）：Harness 本地 Web UI + Host + 插件；桌面壳本身也是插件；内置插件市场与手机远程控制；MIT|[官网](https://dshdesktop.cn)|
 |[T3 Code](https://github.com/pingdotgg/t3code)|28.4k|Agent harness 控制面：用本机已登录的 Claude Code / Codex / Cursor / Grok Build / OpenCode / Antigravity；Electron 桌面 + Web + iOS/Android；远程从手机/另一台机器操控；开源 MIT|[官网](https://t3.codes)|
 |[happy](https://github.com/slopus/happy)|24.2k|Claude Code / Codex 端到端加密客户端，覆盖桌面、移动与 Web|[Zread](https://zread.ai/slopus/happy)|
 |[GitButler](https://github.com/gitbutlerapp/gitbutler)|21.8k|面向 AI/Agent 的 Git 客户端（GUI + `but` CLI，Tauri/Rust/Svelte）：并行/堆叠分支、易改 commit、无限撤销、冲突可延后；内置 AI 写 commit/PR；可装 hooks/skills 给各 Agent 管 Git|[官网](https://gitbutler.com)|
@@ -26,6 +27,7 @@ aside: false
 |[codeg](https://github.com/xintaofei/codeg)|4.0k|聚合 Claude Code / Codex / Gemini CLI 等会话的工作台；桌面或自托管 Docker|[GitHub](https://github.com/xintaofei/codeg)|
 |[LiveAgent](https://github.com/Stack-Cairn/LiveAgent)|2.2k|Local-first Agent 桌面端：多模型路由、子 Agent/worktree、MCP/Skills、可选 Gateway WebUI|[Zread](https://zread.ai/Stack-Cairn/LiveAgent)|
 |[Nezha](https://github.com/hanshuaikang/nezha)|1.9k|Agent-First 桌面 IDE：并行多 Claude Code / Codex；会话回放、轻量编辑器、Token 统计（约 7MB）|[Zread](https://zread.ai/hanshuaikang/nezha)|
+|[Lody](https://github.com/LodyAI/Lody/)|1.5k|团队共享 Coding Agent 工作区：ACP 接入 Claude Code / Codex / Kimi / OpenCode；本机 daemon 连机器，桌面/移动/Web/CLI 派活；共享会话、worktree 并行、diff/预览批注；Apache-2.0|[官网](https://lody.ai)|
 |[ProxyCast](https://github.com/aiclientproxy/proxycast)|1.5k|创作者向 Agent 工作台（写作/出图/改稿）；非纯 Coding IDE|[Zread](https://zread.ai/aiclientproxy/proxycast)|
 |[Any Code](https://github.com/anyme123/Any-code)|1.3k|多引擎 AI 代码助手 GUI：Claude Code / Codex / Gemini CLI 切换；成本追踪、MCP、Hooks|[Zread](https://zread.ai/anyme123/Any-code)|
 |[CLI-Manager](https://github.com/dark-hxx/CLI-Manager)|0.8k|跨平台 AI CLI 工作台（Tauri）：本地/SSH 终端、多项目与 Worktree、Claude Code/Codex 深度集成（Hook 通知、会话 Diff、用量看板）；cc-switch 项目级供应商切换；Telegram/飞书手机对话|[GitHub](https://github.com/dark-hxx/CLI-Manager)|

@@ -18,20 +18,22 @@ npm ci
 npm run dev
 ```
 
-然后访问终端输出的地址，默认路径前缀为 `/ai-guide/`。更多说明见 [WEBSITE.md](WEBSITE.md)。
+然后访问终端输出的地址，默认路径前缀为 `/ai-guide/`。校验、构建与发布细节见 [WEBSITE.md](WEBSITE.md)（以该文件为命令真源）。
 
 ## 内容位置
 
 - 篇章正文在 `preface/`、`programming/`、`agent-tools/`、`agent/`、`practice/`、`scenarios/`、`resources/`、`products/`（Markdown，GitHub 可直接阅读；侧栏顺序以 `.vitepress/book.mjs` 为准）
 - 站专用页在 `website/`
 - 导航与稳定网址在 `.vitepress/book.mjs`
-- 插图在 `assets/images/`
+- 插图优先放 `assets/images/`；部分存量章节仍用外链图床
 
 新增或调整章节后，请同步更新 `.vitepress/book.mjs`，并运行：
 
 ```bash
 npm run check
 ```
+
+改动较大时，用 `npm run verify`（见 WEBSITE.md）做完整校验。
 
 ## 建议贡献流程
 
@@ -45,12 +47,11 @@ npm run check
 
 - 尽量保持「任务导向」的写法：先给目标与使用场景，再给步骤与验证方式。
 - 站内链接优先用相对 Markdown 路径，构建时会转成稳定网址。
-- 图片请放在 `assets/images/` 下，并在正文中使用相对路径引用。
+- 新增插图优先放在 `assets/images/` 下并用相对路径引用；保留外链时请确认可访问。
 
 ## 提交前自检
 
-- `npm run check` 通过
-- `npm run build` 与 `npm run check:build` 通过（改动较大时）
+- `npm run check` 通过；改动较大时再跑 `npm run verify`
 - 链接可访问（外链尽量避免 404）
 - 文案清晰、段落结构合理
 

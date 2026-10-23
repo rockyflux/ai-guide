@@ -11,17 +11,18 @@ permissions:
   contents: read
 
 concurrency:
-  group: pages-${{ github.ref }}
-  cancel-in-progress: false
+  group: pages-${{ github.workflow }}-${{ github.ref }}
+  # PR 连续推送取消旧 run；main 保持跑完，避免部署半截
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+  SITE_BASE: /ai-guide/
+  SITE_URL: https://rockyflux.github.io/ai-guide/
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    env:
-      # Project Pages path: https://rockyflux.github.io/ai-guide/
-      SITE_BASE: /ai-guide/
-      SITE_URL: https://rockyflux.github.io/ai-guide/
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
         with:
@@ -31,20 +32,59 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      - run: npm run assert:overrides
+      - run: npm audit --audit-level=high
       - run: npm run check
       - run: npm run build
       - run: npm run check:build
-      - run: npx playwright install --with-deps chromium
-      - run: npm test
-      - name: Upload site
+      - name: Upload dist for e2e
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: .vitepress/dist
+          retention-days: 1
+      - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
 
+  e2e:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Download dist
+        uses: actions/download-artifact@v4
+        with:
+          name: site-dist
+          path: .vitepress/dist
+      - name: Resolve Playwright version
+        id: playwright
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright.outputs.version }}-chromium
+      - name: Install Playwright Chromium
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+      - name: Install Playwright OS deps
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+      - run: npm test
+
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: build
+    needs: [build, e2e]
     runs-on: ubuntu-latest
     permissions:
       pages: write

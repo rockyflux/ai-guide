@@ -1,4 +1,3 @@
-
 ---
 aside: false
 ---
@@ -18,6 +17,7 @@ aside: false
 | 看项目架构图 | [GitDiagram](https://gitdiagram.com/) | 快速生成可视化架构图，理清模块及其相互关系 | 把 `github.com/OWNER/REPO` 改成 `gitdiagram.com/OWNER/REPO` |
 | 提升 GitHub 下载速度 | [Github 增强 - 高速下载](https://greasyfork.org/zh-CN/scripts/412245-github-enhancement-high-speed-download) | 为 Clone / Release / Raw / Code(ZIP) 等入口添加多种加速源按钮 | 浏览器先安装 Tampermonkey，再打开脚本页面点击“安装脚本” |
 | 代理镜像加速下载 / 克隆 | [GitHub ProxyUI](https://git.mxg.pub/) | 通过镜像节点加速 Archive、Release、Raw、Gist 等资源下载与 `git clone` | 打开站点，粘贴 GitHub 链接后选择 `git clone` / `wget` / `curl` / `url` 生成加速命令 |
+| 代理镜像加速下载 / 克隆 | [GH-Proxy](https://gh-proxy.com/) | 加速 Release、Raw、Archive、Gist 与 `git clone`，粘贴链接即可生成加速地址 | 打开站点，粘贴 GitHub 链接后选择 Git Clone / wget / cURL 等生成加速命令 |
 | GitHub / Docker Hub / NPM 加速 | [Watt Toolkit](https://steampp.net/) | 一键加速 GitHub 等开发常用站点访问与下载 | 微软商店搜索安装后，选择 GitHub 加速选项（也支持 Docker Hub、NPM 等） |
 | GitHub 界面中文化 | [github-chinese](https://github.com/maboloshi/github-chinese) | 将 GitHub 界面元素中文化（用户脚本） | 安装 Tampermonkey/Violentmonkey 后，按仓库 README 的安装指南启用 |
 | 让 AI “绑定”某个仓库问答 | [GitMCP](https://gitmcp.io/) | 把仓库映射成 MCP Server（更定向、更少跑题） | `https://gitmcp.io/OWNER/REPO` |

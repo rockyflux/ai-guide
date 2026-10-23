@@ -31,7 +31,6 @@ motion/cursor-guide
 # OpenMemory / local agent files
 .cursor\rules\openmemory.mdc
 CLAUDE.md
-AGENTS.md
 openmemory.md
 _task_instruction.md
 mcp_info.json

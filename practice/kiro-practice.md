@@ -35,7 +35,7 @@ Kiro 会自动分析项目并生成三个核心文件：
 
 按需导入常用 Skills（如代码审查、测试、发布、文档生成等），让 Kiro 的“能力菜单”更贴近你的工作流。
 
-参考：[按用途推荐 Skills](/agent/skills.html#五、按用途推荐-skills)
+参考：[按用途推荐 Skills](/agent/skills.html#按用途推荐)
 
 ### 5. 创建 Hooks
 

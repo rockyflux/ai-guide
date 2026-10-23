@@ -11,6 +11,8 @@
     "preview": "vitepress preview --host 127.0.0.1",
     "check": "node scripts/check-book.mjs",
     "check:build": "node scripts/check-build.mjs",
+    "assert:overrides": "node scripts/assert-overrides.mjs",
+    "verify": "npm run assert:overrides && npm run check && npm run build && npm run check:build",
     "test": "playwright test"
   },
   "overrides": {
@@ -21,7 +23,7 @@
   "devDependencies": {
     "@playwright/test": "1.64.0",
     "cheerio": "1.1.2",
-    "markdown-it": "14.3.2",
+    "markdown-it": "14.3.3",
     "mermaid": "12.1.0",
     "vitepress": "1.6.4",
     "vue": "3.5.43"

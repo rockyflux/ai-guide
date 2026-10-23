@@ -223,8 +223,6 @@ for (const part of parts) {
   directoryPages.set(part.id, first);
 }
 directoryPages.set("preface", readingOrder[0]);
-for (const p of readingOrder)
-  if (p.sourceDirectory) directoryPages.set(p.sourceDirectory, p);
 
 export const sidebar = [
   {
@@ -276,12 +274,7 @@ export function resolveBookLink(url, source) {
 }
 
 export function publicBookData() {
-  const publicPage = ({ title, href, slug, children }) => ({
-    title,
-    href,
-    slug,
-    ...(children ? { children: children.map(publicPage) } : {}),
-  });
+  const publicPage = ({ title, href, slug }) => ({ title, href, slug });
   const visible = (pages) => pages.filter((p) => !p.hidden);
   return {
     parts: parts.map((p) => ({

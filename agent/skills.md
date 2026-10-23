@@ -1,58 +1,77 @@
-
-
 # Agent Skills
-
-
-### 一、Agent Skills 出现的背景
 
 > [!NOTE]
 > **一句话理解**  
-> 大模型智能体向专业化、高效化发展时，Agent Skills 作为一套规范、轻便的能力扩展方案，已成为解决工具调用混乱、上下文冗余等核心问题的关键——让智能体从「泛泛回应」升级为「精准帮忙」。
+> Agent Skills 是可复用、可组合的最小能力模块：统一文件结构、按需加载，让智能体从「泛泛回应」变成「精准帮忙」——用来解决传统工具调用的上下文冗余与判断负担。
 
-**定义**：Agent Skills 是用于扩展智能体能力的规范方案，本质是可复用、可自由组合的**最小能力模块**。通过统一文件结构，智能体可按需加载、灵活调用，精准适配特定场景。
+## 是什么
 
-**由来**：由开发 Claude 的 Anthropic 率先研发。2025 年 10 月以实验功能上线，同年 12 月成为跨平台开放标准并开源，随后被 Cursor、VS Code Copilot 等平台采用，逐步形成行业生态。
+**定义**：扩展智能体能力的规范方案。每个 Skill 是可单独使用、也可自由组合的最小能力模块；智能体按需加载、灵活调用，适配具体场景。
 
-**核心痛点**（传统工具调用常见问题）：
+**由来**：Anthropic（Claude）率先提出。2025 年 10 月以实验功能上线，同年 12 月成为跨平台开放标准并开源；随后被 Cursor、VS Code Copilot 等采用，形成行业生态。
+
+**传统工具调用的痛点**：
 
 - 上下文冗余、判断负担重
-- 工具无法复用、缺乏统一标准
+- 工具难以复用、缺少统一标准
 
 **核心特点**：
 
 | 特点 | 说明 |
 |------|------|
 | **原子化** | 每个技能是最小能力模块，可单独使用、自由组合 |
-| **规范化** | 所有技能遵循统一文件格式，保证兼容复用 |
-| **按需加载** | 仅在需要时加载技能完整信息，不浪费上下文——与传统工具调用的核心区别 |
+| **规范化** | 统一文件格式，保证兼容与复用 |
+| **按需加载** | 需要时才加载完整信息，不浪费上下文——与传统工具调用的核心区别 |
 
+---
 
-### 二、相比传统工具的优势
+## 相对传统工具的优势
 
-与传统方式相比，Agent Skills 有两大优势：**节省 token 资源**、**减轻智能体判断负担**。
+两大收益：**省 token**、**减轻判断负担**。
 
+### 三层渐进式披露（省 token）
 
-1. ## 三层渐进式披露（节省 token）
-   Claude Code 官方明确的核心功能：将技能信息分为三层，按需逐步加载，既不遗漏关键步骤，也不浪费上下文。
-   - **第一层 · 元数据**：YAML 前置信息，仅技能名称、用途等摘要；智能体启动时只加载这部分，几乎不占资源。
-   - **第二层 · 技能主体**：完整 SKILL.md，仅在判断与当前任务相关时加载详细步骤和规则。
-   - **第三层 · 附加文件**：如 .py 工具、参考文档，仅在做复杂操作（如执行 SQL、处理数据）时才加载或运行。
-2. ## 减轻判断负担
-   传统方式中，智能体要面对功能杂乱、可能重复的工具集合，执行时还要费力筛选。Agent Skills 将能力拆成独立小技能，每个只负责单一功能，无重复冗余；执行时只需精准调用对应技能，上下文更清晰，任务更准、更快。
+Claude Code 官方明确的核心机制：技能信息分三层，按需逐步加载。
 
+| 层级 | 内容 | 加载时机 |
+|------|------|----------|
+| **第一层 · 元数据** | YAML 前置：名称、用途等摘要 | 启动时始终加载，几乎不占资源 |
+| **第二层 · 技能主体** | 完整 `SKILL.md`（步骤与规则） | 判断与当前任务相关时 |
+| **第三层 · 附加文件** | 脚本、参考文档等 | 执行复杂操作时（如跑 SQL、处理数据） |
 
-**传统方式 vs Agent Skills**：
+### 减轻判断负担
+
+传统方式下，智能体面对功能杂乱、可能重复的工具集，执行时还要费力筛选。Skills 把能力拆成独立小技能，每个只负责单一功能；执行时精准调用对应技能，上下文更清晰，任务更准、更快。
+
+### 对比一览
 
 | 对比项 | 传统方式 | Agent Skills |
 |--------|----------|--------------|
-| 加载时机 | 无论是否有用，提前加载全部完整信息 | 按需分层加载（元数据 → 主体 → 附加） |
+| 加载时机 | 无论是否有用，提前加载全部完整信息 | 按需分层（元数据 → 主体 → 附加） |
 | Token | 易浪费、拖慢响应 | 按需加载，减少重复与冗余 |
 | 工具形态 | 功能杂乱、可能重复 | 原子化小技能，单一职责 |
-| 判断负担 | 需费力筛选合适工具 | 精准调用对应技能，负担小 |
+| 判断负担 | 需费力筛选合适工具 | 精准调用对应技能 |
 
-### 三、配置地狱
+---
 
-Anthropic 推出 Agent Skills 时，核心理念是“写一次，到处使用”，开发者编写一次技能配置，就能在不同 Agent 平台上复用。但现实是，各家平台的目录规范各不相同：
+## 文件规范
+
+> [!NOTE]
+> **核心约定**：每个技能对应一个独立文件夹，内必须有 `SKILL.md`。文件含 **YAML 前置（元数据）** 与 **Markdown 指令** 两部分，缺一不可——这是「三层渐进式披露」和按需加载的基础。
+
+```text
+skill/employees/
+├── SKILL.md          # 元数据 + 详细指令
+└── scripts/          # 第三层：附加脚本
+    ├── execute_sql.py
+    └── __pycache__/  # 自动生成，无需手建
+```
+
+---
+
+## 目录统一：从配置地狱到 `.agents/skills`
+
+Anthropic 的理念是「写一次，到处使用」。现实是各平台目录并不统一：
 
 | 平台 | Skills 目录 |
 |------|-------------|
@@ -60,24 +79,25 @@ Anthropic 推出 Agent Skills 时，核心理念是“写一次，到处使用�
 | Claude | `.claude/skills` |
 | Gemini | `.gemini/skills` |
 
-
-这意味着开发者要在多个平台使用同一套 Skills，就得在不同目录间复制文件、创建符号链接，或者写同步工具。原本承诺的“写一次”，变成了维护多份配置、管理一堆软链接。GitHub Issue #15 里有人说得很直接：“我们在技术层面（工具、通信）实现了标准化，但在语义层面（指令、上下文）没做到。这是个问题。”
-
+要在多平台用同一套 Skills，只能复制文件、建符号链接，或写同步工具——「写一次」变成维护多份配置。GitHub Issue #15 里有人说得很直接：工具与通信层标准化了，指令与上下文的语义层还没有。
 
 > [!TIP]
-> **从倡议到落地，只用了一周**  
-> 2026 年 2 月 3 日，OpenAI 的 Alexander Embiricos 在推特上发起倡议：所有 Agent 统一读取 .agents/skills 目录，用户不用再为每个 Agent 管理独立文件夹。推文写道：“今天我们为 Codex 启用了 .agents/skills。目标是逐步废弃 .codex/skills。"主要平台的响应速度很快：Anomaly 的 dax 直接回复“done”，附上 OpenCode 的 PR 链接；微软 Copilot CLI 在 0.401 版本支持自动加载；谷歌 Gemini CLI 提交代码变更；Cursor 也表示在下个版本跟进。从提议到主流平台响应，不到一周。
+> **从倡议到落地，约一周**  
+> 2026 年 2 月 3 日，OpenAI 的 Alexander Embiricos 倡议：各 Agent 统一读 `.agents/skills`，逐步废弃各自私有目录（Codex 已启用 `.agents/skills`）。随后 OpenCode、微软 Copilot CLI（0.401）、Gemini CLI、Cursor 等迅速跟进。主流平台响应不到一周。
 
-#### 工具层的过渡方案
-Vercel 团队推出的 [skills.sh](http://skills.sh "skills.sh") 提供了一个过渡期的解决方案：
+### 本机多工具：skills.sh
+
+[skills.sh](https://skills.sh/) 解决「一个人、多工具」的目录同步：
+
 ```shell
 npx skills add vercel-labs/agent-skills
 ```
-原理很直接：将 Skill 下载到 .agents/skills/，检测系统中的 AI 工具（Claude、Cursor、Windsurf 等），在各工具的 Skills 目录创建指向 .agents/skills/ 的软链接。开发者只需维护一份源文件，所有工具实时同步。这也是小编之前写过的《为什么我劝你使用 skills.sh 管理 skills》，对于它的使用可以转战这篇文章。随着平台原生支持 .agents/skills，软链接这种过渡方案会逐渐退出，但 skills.sh 的方案默认就是在 .agents 目录下，所以软链接方案会被淘汰，但 skills.sh 仍然好用。将来，你可以直接把 Skills 放在 .agents/skills 下，让所有平台自动识别，也可以继续使用 skills.sh。
 
-#### 团队层的共享方案
+Skill 下载到 `.agents/skills/`，检测本机已装的 AI 工具（Claude、Cursor、Windsurf 等），在各自 Skills 目录创建指向 `.agents/skills/` 的软链接。维护一份源文件即可。平台原生支持 `.agents/skills` 后，软链接会逐渐退出；skills.sh 默认落在 `.agents` 下，仍可继续用来发现与安装。
 
-[skills.sh](https://skills.sh/) 解决的是「一个人、多工具」的目录同步；团队要把 Skills / Rules / MCP / Agents 等资产统一给所有人用，可以用腾讯开源的 [TeamAI](https://github.com/Tencent/teamai-cli)：以 Git 仓库为共享底座，成员 `teamai init` 后自动拉取最新资产，覆盖 Claude Code、Codex、Cursor、CodeBuddy 等主流 Agent。
+### 团队共享：TeamAI
+
+多人要把 Skills / Rules / MCP / Agents 等资产统一分发，可用腾讯开源的 [TeamAI](https://github.com/Tencent/teamai-cli)：以 Git 仓库为底座，成员 `teamai init` 后自动拉取最新资产，覆盖 Claude Code、Codex、Cursor、CodeBuddy 等。
 
 ```shell
 npm install -g teamai-cli
@@ -89,150 +109,167 @@ npm install -g teamai-cli
 > **怎么选**  
 > 本机多工具装同一套 Skill → [skills.sh](https://skills.sh/)；多人共享团队 AI 资产并持续同步 → [TeamAI](https://github.com/Tencent/teamai-cli)。
 
-### 四、Agent Skills 规范说明
+---
 
-> [!NOTE]
-> **核心规范**：每个技能对应一个独立文件夹，文件夹内必须包含一个 `SKILL.md` 文件。该文件是技能的核心，包含 **YAML 前置信息（元数据）** 和 **Markdown 指令** 两部分，共同明确技能的功能、触发条件和执行步骤，二者缺一不可。这也是实现「三层渐进式披露」和按需加载的基础。
+## 按用途推荐
 
-```
-skill/employees/
-├── SKILL.md  # 技能核心文件（包含元数据+详细指令）
-└── scripts/  # 附加脚本文件夹（三层结构的第三层）
-    ├── execute_sql.py  # SQL执行脚本（复杂操作时调用）
-    └── __pycache__/  # 脚本缓存（自动生成，无需手动创建）
+先定场景，再选 Skill。安装统一：
+
+```shell
+npx skills add <仓库> [--skill <名称>]
 ```
 
+跨类别市场与文档见 [参考链接](#参考链接)。更多未覆盖场景可逛 [SkillsMP · development](https://skillsmp.com/zh/categories/development)。
 
-### 五、按用途推荐 Skills
+### 底座 / 工程工作流
 
-本节按任务场景归类推荐。先定用途，再选对应 Skill 或仓库；安装统一用 `npx skills add <仓库> [--skill <名称>]`，跨类别资源见第六节。
+| Skill / 仓库 | 用途 | 安装 |
+|--------------|------|------|
+| [`find-skills`](https://github.com/vercel-labs/skills) | 技能搜索与发现 | `npx skills add https://github.com/vercel-labs/skills --skill find-skills` |
+| [`skill-creator`](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | 封装自己的 Skill | `npx skills add https://github.com/anthropics/skills --skill skill-creator` |
+| [`mcp-builder`](https://github.com/anthropics/skills/tree/main/skills/mcp-builder) | 连接外部工具的 MCP 构建器 | 见 [Anthropic Skills](https://github.com/anthropics/skills) |
+| [`agent-tools`](https://github.com/toolshell/skills) | Agent 常用小工具 | `npx skills add https://github.com/toolshell/skills --skill agent-tools` |
+| [`using-superpowers`](https://github.com/obra/superpowers) / [`brainstorming`](https://github.com/obra/superpowers) | 工作流元能力与需求澄清 | `npx skills add https://github.com/obra/superpowers --skill using-superpowers` |
+| [Waza](https://github.com/tw93/Waza) | 8 个可链式工程习惯（`/think`、`/ui`、`/check`、`/hunt`、`/write`、`/learn`、`/read`、`/health`）；比 Superpowers / gstack 更轻 | `npx skills add tw93/Waza -a claude-code codex cursor antigravity-cli -g -y` |
+| [Birdview](https://github.com/Qiuner/birdview) | 改代码前先出架构与约束地图（HTML 可打开） | `npx skills add Qiuner/birdview --skill birdview` |
+| [Answer me with HTML](https://github.com/QingYunA/answer-me-with-html) | 复杂问题用一页 HTML 回答（图、表、时间线）；亦可出 3b1b 风格讲解视频 | `npx skills add QingYunA/answer-me-with-html` |
+| [diagram-design](https://github.com/cathrynlavery/diagram-design) | 架构 / 流程 / 时序等图（45 种），输出自包含 HTML + SVG | `npx skills add cathrynlavery/diagram-design` |
+| [Matt Pocock / skills](https://www.aihero.dev/skills) | 工程交付（`grill-with-docs`、`to-prd`、`to-issues`、`tdd`、`diagnose`） | `npx skills add mattpocock/skills` |
+| [HumanLayer Skills](https://github.com/humanlayer/skills) | 工程可视化与控制环（`show-me`、`visual-pr`、`design-control-loop` 等） | `npx skills add humanlayer/skills --skill show-me` |
 
-#### 底座 / 工程工作流
+**合集仓库**（一次装一批，再按需选 skill）：
 
-- [`find-skills`](https://github.com/vercel-labs/skills)：技能搜索与发现；`npx skills add https://github.com/vercel-labs/skills --skill find-skills`
-- [`skill-creator`](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：封装自己的 Skill；`npx skills add https://github.com/anthropics/skills --skill skill-creator`
-- [`agent-tools`](https://github.com/toolshell/skills)：Agent 常用小工具；`npx skills add https://github.com/toolshell/skills --skill agent-tools`
-- [`using-superpowers`](https://github.com/obra/superpowers) / [`brainstorming`](https://github.com/obra/superpowers)：工作流元能力与需求澄清；`npx skills add https://github.com/obra/superpowers --skill using-superpowers`
-- [Waza](https://github.com/tw93/Waza)：把常见工程习惯收成 8 个可链式调用的 Skill（`/think` 决策规划、`/ui` 前端审美、`/check` 合并前审查、`/hunt` 根因调试、`/write` 中英润色、`/learn` 调研写作、`/read` URL/PDF、`/health` Agent 健康审计）；比 Superpowers / gstack 更轻量；`npx skills add tw93/Waza -a claude-code codex cursor antigravity-cli -g -y`
-- [Birdview](https://github.com/Qiuner/birdview)：改代码前先出架构与约束地图（模块关系、适用规则、拟改范围、证据与验证），确认后再动手，输出可浏览器打开的独立 HTML；`npx skills add Qiuner/birdview --skill birdview`
-- [Answer me with HTML](https://github.com/QingYunA/answer-me-with-html)：复杂问题用一页可读 HTML 回答（时序/流程图、对比表、时间线等），模型只写 Markdown 草稿、CLI 出页面（约 1/8 token、更快）；亦支持 3b1b 风格讲解视频；`npx skills add QingYunA/answer-me-with-html`（或让 Agent 读 [INSTALL.md](https://raw.githubusercontent.com/QingYunA/answer-me-with-html/main/INSTALL.md) 自装）
-- [`mcp-builder`](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)：连接外部工具的 MCP 构建器
-- [Matt Pocock / skills](https://www.aihero.dev/skills)：工程交付工作流（`grill-with-docs`、`to-prd`、`to-issues`、`tdd`、`diagnose`）；`npx skills add mattpocock/skills`
-- [HumanLayer Skills](https://github.com/humanlayer/skills)：工程可视化与 Agent 控制环（`show-me` 图解、`visual-pr` 可视化 PR、`improve-claude-md`、`design-control-loop` 等）；`npx skills add humanlayer/skills --skill show-me`
-- [Anthropic Skills](https://github.com/anthropics/skills)：官方技能实现与 `skill-creator` / `mcp-builder`
-- [Vercel Skills](https://github.com/vercel-labs/skills)：含 `find-skills` 等示例
-- [MiniMax Skills](https://github.com/MiniMax-AI/skills)：官方开发技能库（Beta）
-- [Antfu Skills](https://github.com/antfu/skills)：高质量个人工程实践
-- [Claude Code Stock Deep Research Agent](https://github.com/liangdabiao/Claude-Code-Stock-Deep-Research-Agent)：实战案例
+| 仓库 | 说明 |
+|------|------|
+| [Anthropic Skills](https://github.com/anthropics/skills) | 官方实现，含 `skill-creator` / `mcp-builder` |
+| [Vercel Skills](https://github.com/vercel-labs/skills) | 含 `find-skills` 等示例 |
+| [MiniMax Skills](https://github.com/MiniMax-AI/skills) | 官方开发技能库（Beta） |
+| [Antfu Skills](https://github.com/antfu/skills) | 高质量个人工程实践 |
+| [Claude Code Stock Deep Research Agent](https://github.com/liangdabiao/Claude-Code-Stock-Deep-Research-Agent) | 实战案例 |
 
-#### 调研 / 互联网
+### 调研 / 互联网
 
-- [Agent Reach](https://github.com/Panniantong/Agent-Reach)：给 Agent 装上读网能力（网页 / YouTube 字幕 / GitHub / RSS / B站搜索 / 全网语义搜索等零配置；Twitter、Reddit、小红书、Facebook、Instagram、LinkedIn、Boss 直聘等配登录态后解锁）。它是选型 + 安装 + 体检的能力层，读取仍走上游工具；`agent-reach doctor` 看每个平台当前走哪条后端。复制给 Agent：`帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md`（不要从 PyPI 装同名包）
+| Skill | 用途 | 安装 |
+|-------|------|------|
+| [Agent Reach](https://github.com/Panniantong/Agent-Reach) | 读网能力层：网页 / YouTube 字幕 / GitHub / RSS / B 站 / 语义搜索等；部分平台需登录态。选型 + 安装 + 体检，读取走上游工具；`agent-reach doctor` 看当前后端 | 复制给 Agent：`帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md`（不要从 PyPI 装同名包） |
 
 > [!NOTE]
 > **边界**  
 > Agent Reach 负责从网上**取内容**（读、搜、字幕），不负责写报告 / 发帖。登录态平台用**专用小号**；默认 `install` 只体检不改系统，真正装依赖要显式 `--system`。
 
-#### 前端 / 设计
+### 前端 / 设计
 
-- [`frontend-skill`](https://github.com/openai/skills/tree/main/skills/.curated/frontend-skill)（OpenAI）：landing / 品牌 / demo；视觉论点、内容节奏、首屏
-- [`frontend-design`](https://github.com/anthropics/skills/tree/main/skills/frontend-design)（Anthropic）：高完成度、强风格；页面更有辨识度
-- [`figma-implement-design`](https://github.com/openai/skills/tree/main/skills/.curated/figma-implement-design)（OpenAI）：设计稿到代码；产设研协作常用
-- [`web-design-guidelines`](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines)（Vercel）：UI 审查（a11y、表单、动效、排版、交互补漏）
-- [`react-best-practices`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices)（Vercel）：React / Next.js 实现与性能质量
-- [`playwright`](https://github.com/openai/skills/tree/main/skills/.curated/playwright)（OpenAI）：真实浏览器验证；UI 调试与回归
-- [`webapp-testing`](https://github.com/anthropics/skills/tree/main/skills/webapp-testing)（Anthropic）：本地应用验证；行为、截图、日志、交互回归
-- [`canvas-design`](https://github.com/anthropics/skills/tree/main/skills/canvas-design)（Anthropic）：画布式视觉探索、展示页、概念设计
-- [`brand-guidelines`](https://github.com/anthropics/skills/tree/main/skills/brand-guidelines)（Anthropic）：官网 / 营销 / 设计系统 / 品牌一致性
-- [`vercel-deploy-claimable`](https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-deploy-claimable)（Vercel）：快速部署预览、缩短反馈闭环
-- [taste-skill](https://github.com/Leonxlnx/taste-skill)：Anti-slop 前端审美；默认 `design-taste-frontend`（v2）；`npx skills add https://github.com/Leonxlnx/taste-skill`
-- [Impeccable](https://impeccable.style/)：`frontend-design` 增强（/polish、/audit、/distill）；`npx skills add pbakaus/impeccable`
-- [emilkowalski / skills](https://github.com/emilkowalski/skills/tree/main)：动效与界面品味（`animate`、`review-animations`、`apple-design`、`mobile-native`、`break-ui`、`pick-ui-library` 等）；`npx skills add emilkowalski/skills`
-- [jakubkrehel / skills](https://github.com/jakubkrehel/skills)：界面工程合集（Interfaces / [skills.sh](https://skills.sh/jakubkrehel/skills)）：`better-interface` 一次审 a11y / 布局 / 文案 / 排版 / 色彩 / UI；另有 `better-ui`、`better-typography`、`better-colors`、`better-accessibility`、`better-layout`、`better-writing`，以及 `interface-review`（分支/PR 回归）、`build-design`（Figma/设计图落地）、`break` / `state-machine` / `variant`；`npx skills add jakubkrehel/skills`（Claude Code：`/plugin marketplace add jakubkrehel/skills` → `/plugin install interfaces@interfaces`）
-- [OpenAI Skills](https://github.com/openai/skills)：策展含 `frontend-skill`、`playwright`、`figma-implement-design` 等
-- [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)：`web-design-guidelines`、`react-best-practices` 等
+| Skill | 来源 | 用途 |
+|-------|------|------|
+| [`frontend-skill`](https://github.com/openai/skills/tree/main/skills/.curated/frontend-skill) | OpenAI | landing / 品牌 / demo；视觉论点、内容节奏、首屏 |
+| [`frontend-design`](https://github.com/anthropics/skills/tree/main/skills/frontend-design) | Anthropic | 高完成度、强风格；页面更有辨识度 |
+| [`figma-implement-design`](https://github.com/openai/skills/tree/main/skills/.curated/figma-implement-design) | OpenAI | 设计稿到代码 |
+| [`web-design-guidelines`](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines) | Vercel | UI 审查（a11y、表单、动效、排版、交互） |
+| [`react-best-practices`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices) | Vercel | React / Next.js 实现与性能 |
+| [`playwright`](https://github.com/openai/skills/tree/main/skills/.curated/playwright) | OpenAI | 真实浏览器验证；UI 调试与回归 |
+| [`webapp-testing`](https://github.com/anthropics/skills/tree/main/skills/webapp-testing) | Anthropic | 本地应用验证（行为、截图、日志） |
+| [`canvas-design`](https://github.com/anthropics/skills/tree/main/skills/canvas-design) | Anthropic | 画布式视觉探索、展示页、概念设计 |
+| [`brand-guidelines`](https://github.com/anthropics/skills/tree/main/skills/brand-guidelines) | Anthropic | 官网 / 营销 / 设计系统 / 品牌一致性 |
+| [`vercel-deploy-claimable`](https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-deploy-claimable) | Vercel | 快速部署预览、缩短反馈闭环 |
 
-> [!NOTE]
-> **社区增强 · 前端审美**  
-> 官方偏「做出好看的页面」；要压住 AI 通用 slop（紫渐变、卡片堆砌），优先用 [taste-skill](https://github.com/Leonxlnx/taste-skill) 或 [Impeccable](https://impeccable.style/)。动效曲线、时长与「该不该动」用 [emilkowalski / skills](https://github.com/emilkowalski/skills/tree/main)。要按维度系统审界面（无障碍、排版、色彩、布局、产品文案）或审 PR 引入的界面回归，用 [jakubkrehel / skills](https://github.com/jakubkrehel/skills)。
+**社区增强**（审美、动效、系统审界面）：
 
-#### 通用办公
+| Skill | 用途 | 安装 |
+|-------|------|------|
+| [taste-skill](https://github.com/Leonxlnx/taste-skill) | Anti-slop 前端审美；默认 `design-taste-frontend`（v2） | `npx skills add https://github.com/Leonxlnx/taste-skill` |
+| [Impeccable](https://impeccable.style/) | `frontend-design` 增强（`/polish`、`/audit`、`/distill`） | `npx skills add pbakaus/impeccable` |
+| [emilkowalski / skills](https://github.com/emilkowalski/skills/tree/main) | 动效与界面品味（`animate`、`apple-design`、`break-ui` 等） | `npx skills add emilkowalski/skills` |
+| [jakubkrehel / skills](https://github.com/jakubkrehel/skills) | 按维度审界面（a11y / 布局 / 文案 / 排版 / 色彩）；含 PR 回归与设计落地 | `npx skills add jakubkrehel/skills`；Claude Code：`/plugin marketplace add jakubkrehel/skills` → `/plugin install interfaces@interfaces` |
 
-- [`pptx`](https://github.com/anthropics/skills/tree/main/skills/pptx)（Anthropic）：做汇报、改汇报、读 PPT、按模板生成 deck
-- [`pdf`](https://github.com/anthropics/skills/tree/main/skills/pdf)（Anthropic）：提取、合并、OCR、表单处理、拆分 PDF
-- [`docx`](https://github.com/anthropics/skills/tree/main/skills/docx)（Anthropic）：正式报告、方案、备忘录、函件
-- [`xlsx`](https://github.com/anthropics/skills/tree/main/skills/xlsx)（Anthropic）：表格、公式、格式化、图表
-- [anydoc](https://anydoc.wiki/)（[Firecrawl](https://github.com/firecrawl/anydoc)）：Word / PPT / Excel / PDF 等 14 种办公文档 → 干净 GFM Markdown；纯本地毫秒级，可作 Agent Skill；`npx @firecrawl/anydoc`
-- [`transcribe`](https://github.com/openai/skills/tree/main/skills/.curated/transcribe)（OpenAI）：会议录音、访谈转文字
-- [`internal-comms`](https://github.com/anthropics/skills/tree/main/skills/internal-comms)（Anthropic）：周报、项目更新、公告
-- [`doc-coauthoring`](https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring)（Anthropic）：协作写作，整理成正式文档
-- [`notion-knowledge-capture`](https://github.com/openai/skills/tree/main/skills/.curated/notion-knowledge-capture)（OpenAI）：会议与决策沉淀进 Notion
-- [`screenshot`](https://github.com/openai/skills/tree/main/skills/.curated/screenshot)（OpenAI）：截图留痕、操作说明
-- [`theme-factory`](https://github.com/anthropics/skills/tree/main/skills/theme-factory)（Anthropic）：统一文档 / 演示视觉主题
+合集入口：[OpenAI Skills](https://github.com/openai/skills)、[Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)。
 
 > [!NOTE]
-> **边界说明**  
-> 官方 `pptx` / `docx` / `pdf` 偏「读写与精修办公文档」。若要把本地 Word/PPT/Excel/PDF **转成给 Agent 读的 Markdown**，用 [anydoc](https://anydoc.wiki/)。若要「浏览器里快速出完整 deck、改字换图再导出 PPTX」，请看 [**PPT / 演示文稿**](#ppt-演示文稿)（[dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)）。
+> **怎么选 · 前端审美**  
+> 官方偏「做出好看的页面」；要压住 AI 通用 slop（紫渐变、卡片堆砌），优先 [taste-skill](https://github.com/Leonxlnx/taste-skill) 或 [Impeccable](https://impeccable.style/)。动效与「该不该动」用 [emilkowalski / skills](https://github.com/emilkowalski/skills/tree/main)。按维度系统审界面或审 PR 界面回归，用 [jakubkrehel / skills](https://github.com/jakubkrehel/skills)。
 
-#### 公众号 / 内容创作
+### 通用办公
 
-- [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)：Markdown → 可粘贴进公众号编辑器的 HTML（6 套主题 + 主题生成器）；`npx skills add https://github.com/isjiamu/gzh-design-skill`
-- [Humanizer-zh](https://github.com/op7418/Humanizer-zh)：中文文本润色，去掉空话、套话和 AI 痕迹，保留事实与作者声音；`npx skills add https://github.com/op7418/Humanizer-zh.git`
-- [baoyu-skills](https://github.com/jimliu/baoyu-skills)：文配图 / 插画生成
-
-#### PPT / 演示文稿
-
-- [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)：网页可编辑 PPT → 导出 HTML / PDF / 可编辑 PPTX（12 主题、1020 版式）；`npx dashi-ppt-skill@latest`（需 Node.js 20+，导出 PPTX/PDF 需本机 Chrome / Chromium / Edge）
-- [`pptx`](https://github.com/anthropics/skills/tree/main/skills/pptx)（Anthropic）：按模板读写 / 精修现有 PPT
-- [`theme-factory`](https://github.com/anthropics/skills/tree/main/skills/theme-factory)（Anthropic）：统一演示视觉主题
-
-#### 视频制作
-
-- [jacky-motion](https://github.com/Jackywxsz/jacky-motion)：口播稿 + SRT → 可录屏的 16:9 自动播放 HTML（不直接出 MP4）；`npx skills add https://github.com/Jackywxsz/jacky-motion`
-- [OpenMontage](https://github.com/calesthio/OpenMontage)：Agent 全流程视频制片（pipeline + 700+ 技能/知识文件）；`git clone` + `make setup`（需 Python 3.10+、FFmpeg、Node.js 18+）
-
-更多未覆盖场景可浏览：[SkillsMP · development](https://skillsmp.com/zh/categories/development)
-
-### 六、参考链接与第三方网站
-
-本节只放**跨类别**资源（文档、安装工具、市场、Awesome）。按用途的推荐已写在第五节，此处不再重复。
-
-#### 文档与规范
-
-- [Claude 官方 Skills 文档](https://code.claude.com/docs/zh-CN/skills)：最权威的 Agent Skills 规范与功能说明。
-- [Agent Skills（claudecn）](https://claudecn.com/docs/agent-skills/)：面向中文用户的解读与示例。
-- [Agent Skills（agentskills.io）](https://agentskills.io/)：社区导航站，按场景浏览和搜索技能。
-- [SkillsHunt](https://skillshunt.io/)：标签与热度筛选的技能发现平台。
-- [YouMind Skills](https://youmind.com/zh-CN/skills)：学习与创作向技能导航。
-
-#### 安装与管理工具
-
-- [Skills.sh](https://skills.sh/)：CLI 安装 / 更新 Skills；[热门技能页](https://skills.sh) 可看趋势。
-- [TeamAI](https://github.com/Tencent/teamai-cli)：团队级 Skills / Rules / MCP / Agents 共享与同步（Git 底座 + `teamai init`）；`npm install -g teamai-cli`。
-- [Skill Creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：Anthropic 官方技能模板与创建向导。
-- [MCPMarket Skills Leaderboard](https://mcpmarket.com/zh/tools/skills/leaderboard)：第三方技能榜单与工具导航。
-- [ClawHub Skills](https://clawhub.ai/skills)：ClawHub 平台技能市场。
-
-#### 市场与合集网站
-
-- [agent-skills.md](https://agent-skills.md)：6000+ 高频技能，开箱即用。
-- [Skills Directory](https://www.skillsdirectory.com)：Reddit 社区口碑向整理。
-- [SkillsMP](https://skillsmp.com/zh)：聚合 GitHub 上大量开源技能，适合全网搜与溯源。
-- [Agent Skills Me](https://agentskills.me)：人工精选的小而精集合。
-- [SkillStore](https://skillstore.io/zh-hans)：中文友好，强调安全审查。
-- [SkillHub（腾讯）](https://skillhub.tencent.com/)：按模型 / 场景筛选，与自家工具生态集成。
-- [Linux.do Awesome Skills](https://github.com/jochne/linuxdo-awesome-skills)：社区导航（能做什么、前置、标签、Star）；[在线浏览](https://linuxdo-awesome-skills.tencents.ltd/)。
-- [CocoLoop Skill 商店](https://hub.cocoloop.cn/)：聚合大量 Skills、多平台、国内镜像加速，含 OpenClaw 专题。
-
-#### Awesome / 索引清单
-
-- [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills)：Claude.ai / Claude Code / API 场景索引。
-- [Awesome Agent Skills](https://github.com/JackyST0/awesome-agent-skills)：社区优质技能索引。
-- [Ultimate Agent Skills Collection](https://github.com/ZhanlinCui/Ultimate-Agent-Skills-Collection)：多来源总目录，适合深挖扫货。
+| Skill | 来源 | 用途 |
+|-------|------|------|
+| [`pptx`](https://github.com/anthropics/skills/tree/main/skills/pptx) | Anthropic | 做 / 改 / 读 PPT，按模板生成 deck |
+| [`pdf`](https://github.com/anthropics/skills/tree/main/skills/pdf) | Anthropic | 提取、合并、OCR、表单、拆分 |
+| [`docx`](https://github.com/anthropics/skills/tree/main/skills/docx) | Anthropic | 正式报告、方案、备忘录、函件 |
+| [`xlsx`](https://github.com/anthropics/skills/tree/main/skills/xlsx) | Anthropic | 表格、公式、格式化、图表 |
+| [anydoc](https://anydoc.wiki/)（[Firecrawl](https://github.com/firecrawl/anydoc)） | Firecrawl | 14 种办公文档 → 干净 GFM Markdown（本地毫秒级）；`npx @firecrawl/anydoc` |
+| [`transcribe`](https://github.com/openai/skills/tree/main/skills/.curated/transcribe) | OpenAI | 会议录音、访谈转文字 |
+| [`internal-comms`](https://github.com/anthropics/skills/tree/main/skills/internal-comms) | Anthropic | 周报、项目更新、公告 |
+| [`doc-coauthoring`](https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring) | Anthropic | 协作写作，整理成正式文档 |
+| [`notion-knowledge-capture`](https://github.com/openai/skills/tree/main/skills/.curated/notion-knowledge-capture) | OpenAI | 会议与决策沉淀进 Notion |
+| [`screenshot`](https://github.com/openai/skills/tree/main/skills/.curated/screenshot) | OpenAI | 截图留痕、操作说明 |
+| [`theme-factory`](https://github.com/anthropics/skills/tree/main/skills/theme-factory) | Anthropic | 统一文档 / 演示视觉主题 |
 
 > [!NOTE]
-> **延伸阅读 · Agent Skills 终极指南**  
-> 想要系统了解推荐技能、最新资讯和实战案例，可查看专题页：  
-> 《Agent Skills 终极指南：快速入门、推荐技能、最新资讯与实战案例 ｜ The Definitive Guide to Agent Skills: Quick Start, Recommended Skills, Latest News, and Practical Case Studies》
->
-> 👉 [点击跳转到 Awesome Agent Skills](/agent/awesome-agent-skills.html)
+> **边界**  
+> 官方 `pptx` / `docx` / `pdf` 偏「读写与精修办公文档」。本地文档**转成给 Agent 读的 Markdown** → [anydoc](https://anydoc.wiki/)。浏览器里快速出完整 deck、改字换图再导出 PPTX → [PPT / 演示文稿](#ppt-演示文稿)（[dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)）。
+
+### 公众号 / 内容创作
+
+| Skill | 用途 | 安装 |
+|-------|------|------|
+| [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill) | Markdown → 可粘贴进公众号编辑器的 HTML（6 套主题 + 主题生成器） | `npx skills add https://github.com/isjiamu/gzh-design-skill` |
+| [Humanizer-zh](https://github.com/op7418/Humanizer-zh) | 中文润色：去空话、套话与 AI 痕迹，保留事实与作者声音 | `npx skills add https://github.com/op7418/Humanizer-zh.git` |
+| [baoyu-skills](https://github.com/jimliu/baoyu-skills) | 文配图 / 插画生成 | 见仓库说明 |
+
+### PPT / 演示文稿
+
+| Skill | 用途 | 安装 / 入口 |
+|-------|------|-------------|
+| [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill) | 网页可编辑 PPT → 导出 HTML / PDF / 可编辑 PPTX（12 主题、1020 版式；需 Node 20+；导出需本机 Chrome / Chromium / Edge） | `npx dashi-ppt-skill@latest` |
+| [`pptx`](https://github.com/anthropics/skills/tree/main/skills/pptx) | 按模板读写 / 精修现有 PPT | [Anthropic Skills](https://github.com/anthropics/skills) |
+| [`theme-factory`](https://github.com/anthropics/skills/tree/main/skills/theme-factory) | 统一演示视觉主题 | 同上 |
+
+### 视频制作
+
+| Skill | 用途 | 安装 |
+|-------|------|------|
+| [jacky-motion](https://github.com/Jackywxsz/jacky-motion) | 口播稿 + SRT → 可录屏的 16:9 自动播放 HTML（不直接出 MP4） | `npx skills add https://github.com/Jackywxsz/jacky-motion` |
+| [OpenMontage](https://github.com/calesthio/OpenMontage) | Agent 全流程视频制片（pipeline + 700+ 技能/知识文件；需 Python 3.10+、FFmpeg、Node 18+） | `git clone` + `make setup` |
+
+---
+
+## 参考链接
+
+只放**跨类别**资源（文档、安装工具、市场、Awesome）。按用途的推荐见上一节，此处不重复。
+
+### 文档与规范
+
+- [Claude 官方 Skills 文档](https://code.claude.com/docs/zh-CN/skills) — 最权威的规范与功能说明
+- [Agent Skills（claudecn）](https://claudecn.com/docs/agent-skills/) — 中文解读与示例
+- [Agent Skills（agentskills.io）](https://agentskills.io/) — 社区导航，按场景浏览
+- [SkillsHunt](https://skillshunt.io/) — 标签与热度筛选
+- [YouMind Skills](https://youmind.com/zh-CN/skills) — 学习与创作向导航
+
+### 安装与管理
+
+- [Skills.sh](https://skills.sh/) — CLI 安装 / 更新；[热门技能页](https://skills.sh) 看趋势
+- [TeamAI](https://github.com/Tencent/teamai-cli) — 团队级 Skills / Rules / MCP / Agents 共享（`npm install -g teamai-cli`）
+- [Skill Creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) — Anthropic 官方模板与创建向导
+- [MCPMarket Skills Leaderboard](https://mcpmarket.com/zh/tools/skills/leaderboard) — 第三方榜单与导航
+- [ClawHub Skills](https://clawhub.ai/skills) — ClawHub 平台技能市场
+
+### 市场与合集
+
+- [agent-skills.md](https://agent-skills.md) — 6000+ 高频技能
+- [Skills Directory](https://www.skillsdirectory.com) — Reddit 社区口碑向整理
+- [SkillsMP](https://skillsmp.com/zh) — 聚合 GitHub 开源技能，适合全网搜与溯源
+- [Agent Skills Me](https://agentskills.me) — 人工精选、小而精
+- [SkillStore](https://skillstore.io/zh-hans) — 中文友好，强调安全审查
+- [SkillHub（腾讯）](https://skillhub.tencent.com/) — 按模型 / 场景筛选
+- [Linux.do Awesome Skills](https://github.com/jochne/linuxdo-awesome-skills) — 社区导航（[在线浏览](https://linuxdo-awesome-skills.tencents.ltd/)）
+- [CocoLoop Skill 商店](https://hub.cocoloop.cn/) — 聚合 Skills、国内镜像、OpenClaw 专题
+
+### Awesome / 索引
+
+- [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills) — Claude.ai / Claude Code / API 场景
+- [Awesome Agent Skills](https://github.com/JackyST0/awesome-agent-skills) — 社区优质技能索引
+- [Ultimate Agent Skills Collection](https://github.com/ZhanlinCui/Ultimate-Agent-Skills-Collection) — 多来源总目录
+
+> [!NOTE]
+> **延伸阅读**  
+> 推荐技能、资讯与实战案例的专题汇总：  
+> [Agent Skills 终极指南](/agent/awesome-agent-skills.html)

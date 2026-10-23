@@ -50,9 +50,6 @@ AI应用-->用户：北京今天晴天，5度，北风3级
 
 - [GitMCP](https://gitmcp.io/) — 将任意 GitHub 仓库转为远程 MCP 服务器，便于 AI 理解代码与文档
 
-### mcp2cli：把 MCP / OpenAPI / GraphQL 变成 CLI
-
-[mcp2cli](https://github.com/knowsuchagency/mcp2cli) 是 GitHub 上较受关注的 Python 项目（MIT）：**在运行时**把 **MCP 服务**、**OpenAPI 规范**或 **GraphQL 端点**接成统一命令行界面，**不做代码生成**；子命令与参数随 spec / 工具列表动态生成。安装可用 `uvx mcp2cli --help` 或 `uv tool install mcp2cli`。项目还提供可安装的 Agent Skill（`npx skills add knowsuchagency/mcp2cli --skill mcp2cli`），便于在 Claude Code、Cursor、Codex 等环境里被模型调用。
 
 
 ---
@@ -85,80 +82,5 @@ AI应用-->用户：北京今天晴天，5度，北风3级
 | OpenAPI / Swagger | 将 REST API 转为 MCP 工具 | 接口调试、集成 |
 
 更多服务器（按类别整理的完整列表）见 [Awesome MCP Servers（中文）](https://github.com/punkpeye/awesome-mcp-servers/blob/main/README-zh.md)。
-
-## MCP 配置示例
-
-```text
-{
-  "mcpServers": [
-    {
-      // 服务名称（自定义，用于 IDE 中识别）
-      "name": "Local MCP Server",
-      // 服务类型：process 表示本地进程
-      "type": "process",
-      // 可执行文件路径（必填，如 Python/Node 脚本、二进制文件）
-      "command": "/usr/bin/python3",
-      // 启动参数（数组形式，按实际需要填写）
-      "args": [
-        "/path/to/your/mcp/server.py",
-        "--port", "8888",
-        "--model", "your-model-name"
-      ],
-      // 工作目录（可选，默认为当前目录）
-      "cwd": "/path/to/working/directory",
-      // 环境变量（可选，按需添加）
-      "env": {
-        "PYTHONPATH": "/your/python/path",
-        "API_KEY": "your-secret-key"
-      },
-      // 日志级别（可选：debug/info/warn/error）
-      "logLevel": "info"
-    }
-  ]
-}
-```
-
-```text
-{
-  "mcpServers": [
-    {
-      // 服务名称（自定义）
-      "name": "Remote MCP Server",
-      // 服务类型：http 表示远程 HTTP 服务
-      "type": "http",
-      // MCP 服务的基础 URL（必填）
-      "url": "https://your-mcp-server.com:8080/mcp",
-      // 请求头（可选，如认证、Content-Type 等）
-      "headers": {
-        "Authorization": "Bearer your-token-here",
-        "Content-Type": "application/json"
-      },
-      // 超时时间（可选，单位毫秒，默认 30000）
-      "timeout": 60000,
-      // 是否启用 HTTPS 证书验证（可选，默认 true）
-      "rejectUnauthorized": true
-    }
-  ]
-}
-```
-
-## 主流软件 MCP 配置路径一览表
-| 软件/IDE | 系统 | 配置文件路径 |
-| :--- | :--- | :--- |
-| Claude Desktop | macOS | ~/Library/Application Support/Claude/claude_desktop_config.json |
-| | Windows | %APPDATA%\Claude\claude_desktop_config.json |
-| | Linux | ~/.config/Claude/claude_desktop_config.json |
-| Cursor（全局） | macOS/Linux | ~/.cursor/mcp.json |
-| | Windows | %USERPROFILE%\.cursor\mcp.json |
-| Cursor（项目） | 全平台 | 项目根目录/.cursor/mcp.json |
-| VS Code | macOS | ~/Library/Application Support/Code/User/settings.json |
-| | Windows | %APPDATA%\Code\User\settings.json |
-| | Linux | ~/.config/Code/User/settings.json |
-| JetBrains 系列 | macOS | ~/Library/Application Support/JetBrains/&lt;IDE>/options/mcp.xml |
-| | Windows | %APPDATA%\JetBrains\&lt;IDE>\options\mcp.xml |
-| | Linux | ~/.config/JetBrains/&lt;IDE>/options/mcp.xml |
-| OpenCode | macOS/Linux | ~/.opencode/mcp.json |
-| | Windows | %USERPROFILE%\.opencode\mcp.json |
-| Cherry Studio | 全平台 | 应用内「MCP 服务器管理」界面配置 |
 
 
