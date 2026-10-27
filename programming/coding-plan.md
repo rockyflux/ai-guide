@@ -251,6 +251,7 @@
 | **禾维 AI** | 免费检测 / 榜单 | 对比中转实测排名、真假、价格和在线率，域名亦见 [hvoyai.com](https://www.hvoyai.com/) | https://hvoy.ai/ |
 | **HLWY AI Checker** | 开源工具 | 检查第三方 AI API 是否掺假以及渠道一致｜基于 LLM 指纹的 AI 模型识别 | https://github.com/hanlinwenyuan/hlwy-ai-checker |
 | **APIs.you** | 目录导航 | API 和中转目录聚合入口 | https://apis.you/catalog |
+| **巨浪 AI** | 免费查询 | 查询模型公开报价、分组、计费单位与原始来源，报价采集不等于调用检测 | https://jvlangai.com/models |
 | **Proof of Observation** | 免费演示 | TEE 远程证明 + 响应签名：核 PCR0、验签、链到 AWS Nitro，用来自证中转没有偷换模型或改响应 | https://focuxdot.github.io/proof-of-observation/tee-attestation-demo.html |
 
 ### IDE 配额补充
