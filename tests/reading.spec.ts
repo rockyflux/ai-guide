@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { pages, parts, readSource } from "../.vitepress/book.mjs";
+import { parts } from "../.vitepress/book.mjs";
 
 test("home, contents, stable deep links and source edit link", async ({
   page,
@@ -102,25 +102,3 @@ test("desktop and dark reading previews", async ({ page }) => {
   await page.getByRole("switch", { name: "切换深色主题" }).click();
   await expect(page.locator("html")).toHaveClass(/dark/);
 });
-
-const mermaidPages = pages.filter((p) =>
-  /```mermaid/.test(readSource(p.source)),
-);
-
-for (const chapter of mermaidPages) {
-  test(`render Mermaid: ${chapter.href}`, async ({ page }) => {
-    const errors: string[] = [];
-    page.on("pageerror", (error) => errors.push(error.message));
-    await page.goto(chapter.href.slice(1));
-    const diagrams = page.locator(".mermaid-diagram");
-    const expected = (readSource(chapter.source).match(/```mermaid/g) || [])
-      .length;
-    await expect(diagrams).toHaveCount(expected);
-    for (const diagram of await diagrams.all()) {
-      await diagram.scrollIntoViewIfNeeded();
-      await expect(diagram).toHaveAttribute("data-rendered", "true");
-      await expect(diagram.locator(".diagram-error")).toHaveCount(0);
-    }
-    expect(errors).toEqual([]);
-  });
-}

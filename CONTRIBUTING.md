@@ -47,7 +47,7 @@ npm run check
 
 - 尽量保持「任务导向」的写法：先给目标与使用场景，再给步骤与验证方式。
 - 站内链接优先用相对 Markdown 路径，构建时会转成稳定网址。
-- 新增插图优先放在 `assets/images/` 下并用相对路径引用；保留外链时请确认可访问。
+- 新增插图优先放在 `assets/images/` 下并用相对路径引用；保留外链时请确认可访问（构建会为外链插图补上 `loading="lazy"` 与 `referrerpolicy="no-referrer"`）。
 
 ## 提交前自检
 

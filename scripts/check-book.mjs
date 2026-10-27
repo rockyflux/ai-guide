@@ -37,12 +37,10 @@ function checkDirectory(directory) {
 }
 for (const dir of ["preface", ...parts.map((p) => p.dir)])
   checkDirectory(dir);
-let images = 0,
-  diagrams = 0;
+let images = 0;
 for (const page of pages) {
   function visit(tokens) {
     for (const token of tokens) {
-      if (token.type === "fence" && token.info.trim() === "mermaid") diagrams++;
       if (token.type === "image") images++;
       const attr =
         token.type === "image"
@@ -80,5 +78,5 @@ if (errors.length) {
 }
 const book = publicBookData();
 console.log(
-  `Book checked: ${pages.length} pages, ${book.chapterCount} chapters, ${book.pageCount} public pages, ${images} image references, ${diagrams} Mermaid diagrams.`,
+  `Book checked: ${pages.length} pages, ${book.chapterCount} chapters, ${book.pageCount} public pages, ${images} image references.`,
 );

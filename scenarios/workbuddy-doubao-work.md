@@ -60,7 +60,7 @@ WorkBuddy 只是桌面办公里的一个选项：目前免费额度与功能较�
 | **HTML** | 需要版式、可交互预览、对内分享的页面 |
 | Word / PPT | 对方强制要 `.docx` / `.pptx` 时再导出；或交给 Agent 按模板灌内容 |
 
-原则：**先让 AI 用它最擅长的格式把内容做对，再按对方要求转换**，而不是一上来就在复杂排版里硬扭。
+原则：**先让 AI 用它最擅长的格式把内容做对，再按对方要求转换**，而不是一上来就在复杂排版里硬扭。Claude Code 团队的实践也倾向这种分工：Markdown 适合当轻量底稿，HTML 更适合给人读、给人点（规格、PR 说明、原型、交互报告等）——详见 [HTML is the new Markdown：来自 Claude Code 团队的实践](https://developer.aliyun.com/article/1733857)。
 
 ---
 

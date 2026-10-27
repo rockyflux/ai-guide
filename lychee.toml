@@ -1,0 +1,47 @@
+# 外链检查配置（由 .github/workflows/links.yml 每周调用）
+# 对齐 lychee-action 默认版本（v0.24.x）。站内链接由 npm run check / check:build 负责。
+# CI 须额外传入 --root-dir（绝对路径），否则 Markdown 里的 /foo.html 会报错。
+
+verbose = "warn"
+no_progress = true
+
+cache = true
+max_cache_age = "6d"
+
+max_retries = 3
+retry_wait_time = 2
+max_concurrency = 14
+timeout = 20
+
+scheme = ["https", "http"]
+method = "get"
+include_mail = false
+include_verbatim = false
+
+# 只查外链；配合 --root-dir 后，站内 /foo.html 会变成 file:// 并被此处排除
+include = ["^https?://"]
+
+# 403：x.com / zread.ai 等易拦爬虫（当前版本不支持按 host 覆盖 accept）
+# 429：限流不等于链接已死；真 404 / 5xx 仍会失败
+accept = ["200..=299", "403", "429"]
+
+exclude_path = [
+  "(^|/)node_modules/",
+  "(^|/)\\.vitepress/",
+  "(^|/)\\.git/",
+  "(^|/)\\.github/",
+  "(^|/)\\.cursor/",
+  "(^|/)tests/",
+  "(^|/)scripts/",
+  "(^|/)lychee/",
+  "(^|/)public/",
+]
+
+# GitHub：配合 Actions 的 GITHUB_TOKEN；压低并发，减少限流
+[hosts."github.com"]
+concurrency = 4
+request_interval = "100ms"
+
+[hosts."api.github.com"]
+concurrency = 2
+request_interval = "200ms"

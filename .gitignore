@@ -41,3 +41,7 @@ node_modules/
 .vitepress/dist/
 test-results/
 playwright-report/
+
+# lychee（外链检查缓存与 CI 报告）
+.lycheecache
+lychee/

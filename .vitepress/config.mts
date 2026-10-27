@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+import { defineConfig, type HeadConfig } from "vitepress";
 import {
   pages,
   readingOrder,
@@ -8,6 +8,13 @@ import {
   repository,
 } from "./book.mjs";
 import { bookMarkdown } from "./markdown.mjs";
+import {
+  ogImageUrl,
+  pageUrl,
+  resolveDescription,
+  siteDescription,
+  siteUrl,
+} from "./seo.mjs";
 
 const base = process.env.SITE_BASE || "/ai-guide/";
 if (!base.startsWith("/") || !base.endsWith("/"))
@@ -16,8 +23,7 @@ if (!base.startsWith("/") || !base.endsWith("/"))
 export default defineConfig({
   title: "AI Guide",
   titleTemplate: ":title · AI Guide",
-  description:
-    "面向有经验开发者的任务向指南：选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用编程与场景实战跑通闭环。",
+  description: siteDescription,
   lang: "zh-CN",
   base,
   cleanUrls: false,
@@ -54,9 +60,12 @@ export default defineConfig({
     ["meta", { name: "theme-color", content: "#f8f7f3" }],
     ["meta", { property: "og:type", content: "book" }],
     ["meta", { property: "og:site_name", content: "AI Guide" }],
+    ["meta", { property: "og:image", content: ogImageUrl }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:image", content: ogImageUrl }],
   ],
   sitemap: {
-    hostname: process.env.SITE_URL || "https://rockyflux.github.io/ai-guide/",
+    hostname: siteUrl,
   },
   markdown: {
     lineNumbers: false,
@@ -76,8 +85,29 @@ export default defineConfig({
     const cjk = (prose.match(/[\u3400-\u9fff]/g) || []).length;
     const words = (prose.match(/[a-zA-Z]+/g) || []).length;
     pageData.title = page.title;
+    const description = resolveDescription(
+      page.source,
+      pageData.frontmatter.description,
+    );
+    pageData.description = description;
+    const isHome = pageData.frontmatter.layout === "home";
+    const ogTitle = isHome ? "AI Guide" : `${page.title} · AI Guide`;
+    const canonical = pageUrl(page.href);
+    const head = (pageData.frontmatter.head ??= []) as HeadConfig[];
+    // Prefer head entry for description: VitePress's default meta description
+    // interpolation does not escape quotes; head attrs go through escapeHtml.
+    head.push(
+      ["meta", { name: "description", content: description }],
+      ["meta", { property: "og:title", content: ogTitle }],
+      ["meta", { property: "og:description", content: description }],
+      ["meta", { property: "og:url", content: canonical }],
+      ["meta", { name: "twitter:title", content: ogTitle }],
+      ["meta", { name: "twitter:description", content: description }],
+      ["link", { rel: "canonical", href: canonical }],
+    );
     Object.assign(pageData.frontmatter, {
       title: page.title,
+      description,
       bookSource: page.source,
       bookPart: page.part,
       bookSlug: page.slug,

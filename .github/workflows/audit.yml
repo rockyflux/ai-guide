@@ -1,0 +1,30 @@
+name: Dependency audit
+
+# 依赖漏洞审计独立于 Pages 部署链路：每周例行跑一次，也可手动触发。
+# 审计失败只让本工作流变红（Actions 列表可见），不阻塞内容更新部署；
+# 修复随 Dependabot 的依赖升级 PR 进行。
+on:
+  schedule:
+    - cron: "30 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audit-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: npm audit (high and above)
+        run: npm audit --audit-level=high

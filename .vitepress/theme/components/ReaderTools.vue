@@ -10,7 +10,7 @@ const viewer = ref(null);
 const media = ref({ src: "", alt: "" });
 const printing = ref(false);
 let timer;
-let objectUrl;
+let raf = 0;
 function setSize(value) {
   size.value = value;
   document.documentElement.dataset.readingSize = value;
@@ -18,13 +18,15 @@ function setSize(value) {
     localStorage.setItem("aiguide:size", value);
   } catch {}
 }
-function saveProgress() {
-  const doc = document.querySelector(".vp-doc");
-  if (!doc) return;
+function updateProgress() {
   const range = document.documentElement.scrollHeight - innerHeight;
   progress.value =
     range > 0 ? Math.min(100, Math.round((scrollY / range) * 100)) : 100;
+}
+function persistProgress() {
   if (!frontmatter.value.bookPart) return;
+  const doc = document.querySelector(".vp-doc");
+  if (!doc) return;
   const headings = [...doc.querySelectorAll("h2[id], h3[id]")];
   const current = headings
     .filter((h) => h.getBoundingClientRect().top < 150)
@@ -39,15 +41,20 @@ function saveProgress() {
   } catch {}
 }
 function onScroll() {
+  if (!raf)
+    raf = requestAnimationFrame(() => {
+      raf = 0;
+      updateProgress();
+    });
   clearTimeout(timer);
-  timer = setTimeout(saveProgress, 150);
+  timer = setTimeout(persistProgress, 300);
 }
 function openImage(src, alt) {
   media.value = { src, alt };
   viewer.value?.showModal();
 }
 function imageClick(event) {
-  const img = event.target.closest?.(".vp-doc img:not(.mermaid-diagram img)");
+  const img = event.target.closest?.(".vp-doc img");
   if (img && !img.closest("a"))
     openImage(img.currentSrc || img.src, img.alt || "正文插图");
 }
@@ -59,36 +66,32 @@ function imageKey(event) {
     }
   }
 }
-function diagramOpen(event) {
-  if (objectUrl) URL.revokeObjectURL(objectUrl);
-  objectUrl = URL.createObjectURL(
-    new Blob([event.detail.svg], { type: "image/svg+xml" }),
-  );
-  openImage(objectUrl, "Mermaid 图表");
-}
 async function preparePage() {
+  clearTimeout(timer);
+  if (raf) {
+    cancelAnimationFrame(raf);
+    raf = 0;
+  }
   await nextTick();
   document.querySelectorAll(".vp-doc img").forEach((img) => {
-    if (!img.closest("a, .mermaid-diagram")) {
+    if (!img.closest("a")) {
       img.tabIndex = 0;
       img.setAttribute("role", "button");
       img.setAttribute("aria-label", `放大：${img.alt || "正文插图"}`);
     }
   });
-  saveProgress();
+  updateProgress();
+  persistProgress();
 }
 async function printPage() {
   printing.value = true;
   try {
-    const pending = [];
-    window.dispatchEvent(
-      new CustomEvent("book:prepare-print", { detail: pending }),
+    await Promise.all(
+      [...document.querySelectorAll(".vp-doc img")].map((img) => {
+        img.loading = "eager";
+        return img.decode().catch(() => {});
+      }),
     );
-    document.querySelectorAll(".vp-doc img").forEach((img) => {
-      img.loading = "eager";
-      pending.push(img.decode().catch(() => {}));
-    });
-    await Promise.all(pending);
     await nextTick();
     window.print();
   } finally {
@@ -102,16 +105,17 @@ onMounted(() => {
   } catch {}
   preparePage();
   window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("book:diagram", diagramOpen);
   document.addEventListener("click", imageClick);
   document.addEventListener("keydown", imageKey);
 });
 watch(() => route.path, preparePage, { flush: "post" });
 onBeforeUnmount(() => {
   clearTimeout(timer);
-  if (objectUrl) URL.revokeObjectURL(objectUrl);
+  if (raf) {
+    cancelAnimationFrame(raf);
+    raf = 0;
+  }
   window.removeEventListener("scroll", onScroll);
-  window.removeEventListener("book:diagram", diagramOpen);
   document.removeEventListener("click", imageClick);
   document.removeEventListener("keydown", imageKey);
 });

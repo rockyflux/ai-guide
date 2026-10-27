@@ -205,7 +205,7 @@ npx skills add <仓库> [--skill <名称>]
 
 > [!NOTE]
 > **边界**  
-> 官方 `pptx` / `docx` / `pdf` 偏「读写与精修办公文档」。本地文档**转成给 Agent 读的 Markdown** → [anydoc](https://anydoc.wiki/)。浏览器里快速出完整 deck、改字换图再导出 PPTX → [PPT / 演示文稿](#ppt-演示文稿)（[dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)）。
+> 官方 `pptx` / `docx` / `pdf` 偏「读写与精修办公文档」。本地文档**转成给 Agent 读的 Markdown** → [anydoc](https://anydoc.wiki/)。浏览器里快速出完整 deck、改字换图再导出 PPTX → [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)；本地桌面端完整工作流（导入 PPTX / 风格库 / 对话改页 / 导出）→ [oh-my-ppt](https://github.com/arcsin1/oh-my-ppt)。详见 [PPT / 演示文稿](#ppt-演示文稿)。
 
 ### 公众号 / 内容创作
 
@@ -219,6 +219,7 @@ npx skills add <仓库> [--skill <名称>]
 
 | Skill | 用途 | 安装 / 入口 |
 |-------|------|-------------|
+| [oh-my-ppt](https://github.com/arcsin1/oh-my-ppt) | 本地优先桌面端：描述主题 → AI 生成可编辑 HTML 幻灯片；导入/导出可编辑 PPTX、90+ 风格、对话改页、生图配图（自配模型 / 可接 Ollama） | [官网](https://www.ohmyppt.cc) / [Releases](https://github.com/arcsin1/oh-my-ppt/releases) |
 | [dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill) | 网页可编辑 PPT → 导出 HTML / PDF / 可编辑 PPTX（12 主题、1020 版式；需 Node 20+；导出需本机 Chrome / Chromium / Edge） | `npx dashi-ppt-skill@latest` |
 | [`pptx`](https://github.com/anthropics/skills/tree/main/skills/pptx) | 按模板读写 / 精修现有 PPT | [Anthropic Skills](https://github.com/anthropics/skills) |
 | [`theme-factory`](https://github.com/anthropics/skills/tree/main/skills/theme-factory) | 统一演示视觉主题 | 同上 |

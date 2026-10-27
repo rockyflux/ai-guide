@@ -547,56 +547,6 @@ html[data-reading-size="large"] {
   margin: 12px 0 0;
   text-align: center;
 }
-.mermaid-diagram {
-  margin: 24px 0;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 6px;
-  padding: 20px 16px 8px;
-  background: var(--vp-c-bg-elv);
-}
-.diagram-svg {
-  overflow: auto;
-  text-align: center;
-}
-.diagram-svg > svg {
-  margin: auto;
-  max-width: 100%;
-  height: auto;
-}
-.mermaid-diagram figcaption {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 20px;
-  font-size: 11px;
-  color: var(--vp-c-text-2);
-  border-top: 1px solid var(--vp-c-divider);
-  margin-top: 16px;
-  padding-top: 8px;
-}
-.mermaid-diagram figcaption > button {
-  white-space: nowrap;
-}
-.mermaid-diagram details {
-  min-width: 0;
-  flex: 1;
-}
-.mermaid-diagram summary {
-  cursor: pointer;
-}
-.mermaid-diagram pre {
-  font-size: 11px;
-  overflow: auto;
-  max-height: 300px;
-  white-space: pre;
-}
-.diagram-error {
-  color: var(--vp-c-danger-1);
-}
-.diagram-status {
-  font-size: 13px;
-  color: var(--vp-c-text-2);
-}
 .contents-intro {
   display: flex;
   gap: 24px;
@@ -769,8 +719,7 @@ html[data-reading-size="large"] {
   .reading-progress,
   .book-feedback,
   .image-viewer,
-  .VPSkipLink,
-  .mermaid-diagram figcaption {
+  .VPSkipLink {
     display: none !important;
   }
   .VPContent,
@@ -789,8 +738,7 @@ html[data-reading-size="large"] {
   .VPDoc .vp-doc h3 {
     break-after: avoid;
   }
-  .VPDoc .vp-doc img,
-  .mermaid-diagram {
+  .VPDoc .vp-doc img {
     break-inside: avoid;
   }
   .VPDoc .vp-doc a {

@@ -1,0 +1,69 @@
+name: External link check
+
+# 正文外链巡检独立于 Pages 部署：每周例行跑一次，也可手动触发。
+# 失败只让本工作流变红（Actions 列表可见），不阻塞内容更新部署。
+# 配置见仓库根目录 lychee.toml（缓存、重试、易拦截站点 403/429）。
+on:
+  schedule:
+    # 周一 03:00 UTC（紧随 Dependency audit 的 02:30）
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: links-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Restore lychee cache
+        id: restore-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .lycheecache
+          key: lychee-${{ github.run_id }}
+          restore-keys: lychee-
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # GITHUB_TOKEN 提高 GitHub 链接限额；默认即 github.token，显式写出便于审阅
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail: true
+          jobSummary: true
+          args: >-
+            --config lychee.toml
+            --root-dir "${{ github.workspace }}"
+            --cache
+            --max-cache-age 6d
+            --verbose
+            --no-progress
+            'preface/**/*.md'
+            'programming/**/*.md'
+            'agent-tools/**/*.md'
+            'agent/**/*.md'
+            'practice/**/*.md'
+            'scenarios/**/*.md'
+            'resources/**/*.md'
+            'products/**/*.md'
+            'website/**/*.md'
+            'README.md'
+            'CONTRIBUTING.md'
+            'WEBSITE.md'
+            'AGENTS.md'
+            'SECURITY.md'
+            'CODE_OF_CONDUCT.md'
+
+      - name: Save lychee cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .lycheecache
+          key: ${{ steps.restore-cache.outputs.cache-primary-key }}

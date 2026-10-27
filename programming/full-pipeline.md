@@ -12,17 +12,6 @@
 
 下面按顺序串完整条主线。每一步只给判断要点、具体工具入口和站内深读；细节页负责「怎么配」。
 
-```mermaid
-flowchart LR
-  A[选模型] --> B[买 API]
-  B --> C[网关二次中转]
-  C --> D[cc-switch 切换供应商]
-  D --> E[装 Agent 并配 API]
-  E --> F[会话：拼上下文]
-  F --> G[多轮：调工具干活]
-  G --> H[优化：少而准]
-```
-
 ![全流程主线：从选模型到少而准](../assets/images/full-pipeline/01-flowchart-pipeline-overview.jpg)
 
 ---
