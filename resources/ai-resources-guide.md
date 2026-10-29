@@ -49,6 +49,8 @@
 - [AI Hub Today](https://hex2077.dev/docs/) — AI 资讯聚合
 - [今日热榜 - AI](https://tophub.today/c/ai) — 热门 AI 话题
 - [Best Blogs Dev](https://www.bestblogs.dev/articles) — 开发者博客精选
+- [读见](https://dujian.net/) — BestBlogs 出品：值得长期读的专栏（AI 每日早报 / 精选周刊等）
+- [QMReader](https://rss.qiaomu.ai/) — 向阳乔木的 RSS / 播客阅读器：中译、改写、划线点评与 AI 对话
 - [TrendRadar](https://github.com/sansan0/TrendRadar) — 开源趋势与资讯
 - [机器之心 AI 新闻](https://news.aibase.com/zh/news) — 中文 AI 新闻
 - [ReadHub - AI](https://readhub.cn/news/ai) — ReadHub AI 新闻
@@ -56,6 +58,7 @@
 
 ## 分享与周刊
 
+- [向阳乔木](https://www.qiaomu.ai/) — AI 实践笔记、工具与开源项目、Next Token 播客与乔木 AI 资讯
 - [A姐分享（ahhhhfs）](https://www.ahhhhfs.com/) — AI 工具、开源项目与效率软件评测 / 导航
 - [大橘和朋友们的周刊](https://rrorangeandfriends.de/) — 技术与 AI 相关周刊 / 分享
 - [在 AI 时代，我是如何深入学习一个技术领域的](https://tw93.fun/2026-04-06/learn.html) — 「收集 → 筛选 → 大纲 → 写作 → AI 收紧 → 自读发布」把输入变成输出

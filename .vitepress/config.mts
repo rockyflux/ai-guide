@@ -63,6 +63,14 @@ export default defineConfig({
     ["meta", { property: "og:image", content: ogImageUrl }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:image", content: ogImageUrl }],
+    [
+      "script",
+      {
+        defer: "",
+        src: "https://cloud.umami.is/script.js",
+        "data-website-id": "e3e53936-8aca-4261-b915-1eb2df784fb6",
+      },
+    ],
   ],
   sitemap: {
     hostname: siteUrl,

@@ -17,3 +17,4 @@ aside: false
 |[GPTSession2CPAandSub2API](https://github.com/gtxx3600/GPTSession2CPAandSub2API)|1.8k|纯前端：ChatGPT Web session → CPA / Sub2API 等可导入 JSON；本地解析不上传 token|[GitHub](https://github.com/gtxx3600/GPTSession2CPAandSub2API)|
 |[Claudix](https://github.com/Haleclipse/Claudix)|1.1k|VS Code 的 Claude Code 增强扩展|[GitHub](https://github.com/Haleclipse/Claudix)|
 |[Claude Code Quickstart (CCQ)](https://github.com/MrNine-666/claude-code-quickstart)|0.2k|Windows PowerShell 一键安装器：依赖、供应商与 MCP 初始化|[Zread](https://zread.ai/MrNine-666/claude-code-quickstart)|
+|[dsh-plugin-index](https://github.com/polang233/dsh-plugin-index)|0.1k|[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 社区开放插件市场与索引：数百插件；可作发现源或装 `dsh-open-market`|[官网](https://dshopen.org)|

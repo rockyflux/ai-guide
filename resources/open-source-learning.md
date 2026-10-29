@@ -33,6 +33,8 @@ GitHub 精选仓库与中文开源教材 / 讲义，适合系统啃原理、跟�
 
 | 中文名 | 链接 | 说明 |
 | --- | --- | --- |
+| 花叔工作台 | [huasheng.ai](https://www.huasheng.ai/) | 花叔 / Alchain：橙皮书、开源 Skill / 工作流与实战专栏；从具体任务带走可复用工作流 |
+| BookAI｜花叔的 AI 学习指南 | [bookai.top](https://bookai.top/) | ChatGPT / Cursor / Claude Code / DeepSeek 四条路径教程，边读边做，衔接橙皮书与开源 Skill |
 | Learn Harness Engineering | [中文站](https://walkinglabs.github.io/learn-harness-engineering/zh/) | WalkingLab：给 Codex / Claude Code 做环境、状态、验证与控制，让 Agent 能可靠跑完真实工程任务 |
 | 深入理解 AI Agent（开源书） | [ai-agent-book](https://github.com/bojieli/ai-agent-book) | 李博杰：上下文工程 / MCP / Coding Agent / 评估与后训练，正文+实验全开源 |
 | AI Agent Handbook | [在线阅读](https://aliyun.github.io/ai-agent-handbook) | 阿里云 × 社区：从模型能力到可靠 Agent 系统（架构、构建、运行、治理、调优）；仓库 [aliyun/ai-agent-handbook](https://github.com/aliyun/ai-agent-handbook) |
