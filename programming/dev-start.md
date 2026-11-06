@@ -190,16 +190,19 @@ winget install JesseDuffield.lazygit
 
 ### 5. Google 邮箱（账号）
 
-目前注册 Google 账号非常复杂甚至不可能，可考虑通过第三方购买现成账号。
+目前注册 Google 账号非常复杂甚至不可能，可考虑通过第三方购买现成账号；渠道多、价格波动大，建议先看聚合比价再下单。
 
+- 价格对比：[PriceAI · Gmail / Google 邮箱](https://priceai.cc/products/gmail-account)（聚合各卡网有货报价；不参与交易，以原平台为准）
 - 购买入口 1：[https://wzyp.cn/shop/2VWX76A4](https://wzyp.cn/shop/2VWX76A4)
 - 购买入口 2：[https://pay.ldxp.cn/shop/AEUQ8PP3](https://pay.ldxp.cn/shop/AEUQ8PP3)
 
 
 ### 6. ChatGPT 账号
 
-- 第三方镜像 / 共享入口（非官方，可用性与安全性自负）： [EasyChat 免费账号](https://easychat.top/chatgpt/free)、[AI 镜像](https://go.github.cn.com) 、 [车队列表](https://share.github.cn.com/list)  、 [GE Chat 地址发布页](https://home.gege.chat/)
+ChatGPT 普号 / Free 号注册门槛高，也可考虑第三方成品账号；渠道多、价格波动大，建议先看聚合比价再下单。
 
+- 价格对比：[PriceAI · ChatGPT 普号](https://priceai.cc/products/chatgpt-free-account)（聚合各卡网有货报价，含半价/试用资格号；不参与交易，以原平台为准）
+- 第三方镜像 / 共享入口（非官方，可用性与安全性自负）： [EasyChat 免费账号](https://easychat.top/chatgpt/free)、[AI 镜像](https://go.github.cn.com) 、 [车队列表](https://share.github.cn.com/list)  、 [GE Chat 地址发布页](https://home.gege.chat/)
 - 购买入口：[pay.ldxp.cn/shop/xcursor](https://pay.ldxp.cn/shop/xcursor)、[wafase.com](https://wafase.com/)
 
 

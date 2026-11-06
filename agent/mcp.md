@@ -49,6 +49,7 @@ AI应用-->用户：北京今天晴天，5度，北风3级
 ### 开发与集成
 
 - [GitMCP](https://gitmcp.io/) — 将任意 GitHub 仓库转为远程 MCP 服务器，便于 AI 理解代码与文档
+- [Arthas MCP Server](https://arthas.aliyun.com/doc/mcp-server.html) — 基于 MCP 暴露 Arthas 诊断能力，供 AI 助手调用 JVM 监控、类加载、方法追踪等工具
 
 
 

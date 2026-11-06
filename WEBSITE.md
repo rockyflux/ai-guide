@@ -37,7 +37,15 @@ npm run preview
 | `npm run check` | 章节覆盖、地址唯一性、正文链接与图片引用 |
 | `npm run build` | 生成 `.vitepress/dist/` |
 | `npm run check:build` | 检查生成站点的每个页面、站内链接、锚点和资源 |
+| `npm run update:stars` | 用 `gh` 刷新 `agent-tools/` 表格 GitHub star，并按 star 降序重排（需已 `gh auth login`） |
 | `npm test` | Playwright：中文搜索、深层页面刷新、移动目录、阅读设置、图片放大 |
+
+刷新其他目录或只预览不写盘：
+
+```sh
+npm run update:stars -- --dir programming
+npm run update:stars -- --dry-run
+```
 
 ## GitHub Pages 首次启用
 

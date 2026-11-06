@@ -46,6 +46,7 @@
 
 ## 资讯与热榜
 
+- [AIHOT](https://aihot.news/) — AI 行业动态聚合：每日精选、热点榜与 AI 日报
 - [AI Hub Today](https://hex2077.dev/docs/) — AI 资讯聚合
 - [今日热榜 - AI](https://tophub.today/c/ai) — 热门 AI 话题
 - [Best Blogs Dev](https://www.bestblogs.dev/articles) — 开发者博客精选
@@ -58,6 +59,7 @@
 
 ## 分享与周刊
 
+- [Next Token｜词元之外](https://nexttoken.tv/) — 中文世界一手经验出发的 AI 视频播客：技术、产品、创业与创作；旗舰周播 Next Token Weekly
 - [向阳乔木](https://www.qiaomu.ai/) — AI 实践笔记、工具与开源项目、Next Token 播客与乔木 AI 资讯
 - [A姐分享（ahhhhfs）](https://www.ahhhhfs.com/) — AI 工具、开源项目与效率软件评测 / 导航
 - [大橘和朋友们的周刊](https://rrorangeandfriends.de/) — 技术与 AI 相关周刊 / 分享

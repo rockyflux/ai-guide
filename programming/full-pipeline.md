@@ -22,11 +22,20 @@
 
 | 看什么 | 为什么 | 站内入口 |
 |--------|--------|----------|
-| **能力** | 编程 / 推理 / 长上下文是否够用 | [模型评测与榜单](/programming/leaderboard.html) |
-| **价格** | Token 单价决定 Agent 多轮能不能撑住 | [Coding Plan 与渠道](/programming/coding-plan.html) · [省钱与 Token 治理](/programming/ai-coding-save-money.html) |
+| **能力** | 编程 / 推理 / 长上下文是否够用；工具调用是否稳 | [模型评测与榜单](/programming/leaderboard.html) |
+| **价格** | 别只看「多少钱 / 百万 token」；Agent 多轮要把账单与体感拆开看 | [Coding Plan 与渠道](/programming/coding-plan.html) · [省钱与 Token 治理](/programming/ai-coding-save-money.html) |
 | **厂家与渠道** | 官方稳定性、区域可用性、是否接受第三方 | [Coding Plan / 渠道](/programming/coding-plan.html) |
 
-常见候选：Claude、GPT、Gemini、DeepSeek、Kimi、Qwen 等，先看榜单维度再定档。Agent 场景更吃工具调用是否稳、延迟是否扛得住多轮、缓存规则是否友好。预算紧就先定月预算，再倒推能用哪档，见 [省钱与 Token 治理](/programming/ai-coding-save-money.html)。
+价格与体感，落到四个量上比才有用：
+
+| 要素 | 看什么 |
+|------|--------|
+| **输入** | 系统提示、Rules、读入文件、历史对话等进模型一侧；多轮体积大头常在这，单价通常低于输出 |
+| **输出** | 模型回复与工具调用决策；单价常更高，推理 / thinking 档还可能另计 |
+| **缓存命中率** | 长会话里重复前缀能否命中提示词缓存；命中高，输入侧账单会明显下来；还要确认写缓存是否收费、能否跨会话命中 |
+| **首字速度** | 首 token 延迟（TTFT）；工具多轮每一跳都在等它，体感卡不卡主要看这 |
+
+常见候选：Claude、GPT、Gemini、DeepSeek、Kimi、Qwen 等，先看榜单维度再定档。Agent 场景往往是「输入体积大 + 输出不短 + 轮次多」：单价、缓存规则、首字速度一起看，比单看标价靠谱。预算紧就先定月预算，再倒推能用哪档，见 [省钱与 Token 治理](/programming/ai-coding-save-money.html)。
 
 ---
 
@@ -45,27 +54,37 @@
 
 ## 3. 网关再中转一层（可选但常见）
 
-很多人不会把「买来的 Key」直接写进每一个 Agent，中间再挂一层网关，常见动机是：
+很多人不会把「买来的 Key」直接写进每一个 Agent，中间再挂一层网关。个人场景省心，团队场景几乎刚需。常见动机是：
 
-- 多个上游（官方 + 中转 + 订阅转 API）合成一个本地入口
-- 统一鉴权、轮询、故障转移、多端复用
-- 把订阅能力转成兼容 API，给 Cursor / Claude Code / Codex 等一起用
-
-站内可关注 [CLIProxyAPI（CPA）](https://github.com/router-for-me/CLIProxyAPI)。同类还可看 [LiteLLM](https://github.com/BerriAI/litellm)、[Claude Code Router](https://github.com/musistudio/claude-code-router)、[Sub2API](https://github.com/Wei-Shaw/sub2api)、[New API](https://github.com/QuantumNous/new-api)、[magpie](https://github.com/yetone/magpie)。环境侧总览见 [路由与本地网关](/agent-tools/routing-gateway.html)。
+- **多供应商接入**：官方 + 中转 + 订阅转 API 合成一个入口；统一鉴权、轮询、故障转移、协议互转
+- **订阅变 API**：把 Claude / ChatGPT / Copilot 等订阅能力转成兼容接口，给 Cursor / Claude Code / Codex 等一起用
+- **团队 Token 分配**：按人 / 组发子 Key、设额度与倍率，谁用多少可回收、可限流，而不是共用一把总钥匙
+- **人员用量分析**：按账号、模型、时间看 token / 缓存命中 / 花费，定位「谁在烧、哪类任务在烧」
 
 ```text
-厂家 / 中转站  →  本地或自建网关（CPA 等）  →  各个 Agent 工具
+厂家 / 中转站（多供应商）  →  网关（鉴权 · 配额 · 路由 · 用量）  →  个人 / 团队 Agent
 ```
 
-没有网关也能用；一旦同时玩多家供应商、多台机器、多种 CLI，网关会明显省心。
+选型可粗分两路：
+
+| 侧重 | 典型工具 | 适合 |
+|------|----------|------|
+| 本机 / 个人 | [CLIProxyAPI（CPA）](https://github.com/router-for-me/CLIProxyAPI)、[magpie](https://github.com/yetone/magpie)、[Claude Code Router](https://github.com/musistudio/claude-code-router) | 自己多 Agent、多账号故障转移、本机一处切换 |
+| 团队 / 自建分发 | [New API](https://github.com/QuantumNous/new-api)、[Sub2API](https://github.com/Wei-Shaw/sub2api)、[LiteLLM](https://github.com/BerriAI/litellm) | 多渠道接入、子 Key 配额、计费与用量看板 |
+
+环境侧总览见 [路由与本地网关](/agent-tools/routing-gateway.html)；中转站分工与倍率见 [API 中转站](/programming/api-relay-station.html)。
+
+没有网关也能用；一旦多家供应商、多人共用额度、或多台机器 / 多种 CLI，网关会明显省心。
 
 ---
 
-## 4. 用 cc-switch 切换不同 API 服务商
+## 4. 用 magpie 切换不同 API 服务商
 
 API 和网关配好后，日常痛点变成：Claude Code / Codex / Gemini CLI 等各自一套配置，换供应商很烦。
 
-[CC-Switch](/programming/cc-switch.html) 做可视化管理：供应商、MCP、Skills、Prompts 集中改，一键切到另一家。适合「主力一家、备用一家、临时试新模型」。同类桌面还可看 [Cockpit Tools](https://github.com/jlcodes99/cockpit-tools)、[AI Toolbox](https://github.com/coulsontl/ai-toolbox)。
+[magpie](https://github.com/yetone/magpie) 做可视化管理：任意 Agent 接任意模型，本机网关 + 多账号故障转移，菜单栏一处切换。适合「主力一家、备用一家、临时试新模型」。同类桌面还可看 [Cockpit Tools](https://github.com/jlcodes99/cockpit-tools)、[AI Toolbox](https://github.com/coulsontl/ai-toolbox)。
+
+magpie 可代替此前常用的 [CC-Switch](/programming/cc-switch.html)，并支持从 CC Switch 导入配置。更多切换类工具见 [账号与供应商切换](/agent-tools/account-switch.html)。
 
 这一步解决的是**接入面的可切换性**，还不等于效果变好。效果要看后面装了什么、每次会话塞进上下文的是什么。
 
@@ -83,9 +102,10 @@ API 和网关配好后，日常痛点变成：Claude Code / Codex / Gemini CLI �
 | [Codex](https://developers.openai.com/codex) | ChatGPT 原生登录，开箱快；额度消耗大 | [Codex 实践](/practice/codex.html) |
 | [Cursor](https://cursor.com/) | IDE 内 Agent，适合边写边改 | [Cursor 实践](/practice/cursor.html) |
 | [Gemini CLI](https://github.com/google-gemini/gemini-cli) / [Grok CLI](https://x.ai/news/grok-build-cli) | 终端优先、绑定各自生态 | [IDE 与编程工具](/programming/vb-code-tool.html) |
+| [DeepSeek Harness](https://www.deepseek.com/harness/) | 开源 harness，一切皆插件；日常办公 + 写代码，桌面 / Web 开箱即用 | [Agent 工作区](/agent-tools/agent-workspace.html) |
 | [Kiro](/practice/kiro-practice.html) / [Pi](https://github.com/earendil-works/pi) | 规格驱动上手包 / 可自扩展终端 Agent | 见右栏链接 |
 
-每个 Agent 都要完成同一件事：**指向你的 API 入口（官方 / 中转 / CPA），选好默认模型**。环境底座见 [开发环境准备](/programming/dev-start.html)；想少折腾配置可看 [ZCF](/programming/zcf.html)。
+每个 Agent 都要完成同一件事：**指向你的 API 入口（官方 / 中转 / CPA），选好默认模型**。环境底座见 [开发环境准备](/programming/dev-start.html)；
 
 装完只是「油箱和车钥匙就位」。真正决定每一次任务成败的，是引擎每次点火时读到的那份上下文。
 
@@ -118,7 +138,7 @@ Agent 发起一轮请求时，并不是只把你刚打的字发出去，而是�
 | **MCP / 工具** | 可调用能力；调用后结果回流 | [MCP](/agent/mcp.html) |
 | **工具往返产物** | 检索命中、文件内容、命令输出 | 随轮次累积，常是体积大头 |
 
-机制拆解见 [Agent 工程篇](/agent/prompt.html)。
+想看清「这一轮到底塞了什么」：走 [magpie](https://usemagpie.ai/zh/) 本机网关后，打开**路由**页可盯每次请求的路由决策与上下文窗口；**用量 → 上下文**里还能按系统提示、工具 / MCP、Skills、读入文件、工具输出、对话分段看各占窗口多少。
 
 ---
 

@@ -6,7 +6,7 @@
 
 ## 1. 安装 Cursor 并开通账号
 
-- **第三方渠道**：可在 [闲鱼搜索](https://www.goofish.com/search?q=cursor) 购买月卡/额度卡（Auto模型，自行甄别风险与售后）。
+- **第三方渠道**：可在 [闲鱼搜索](https://www.goofish.com/search?q=cursor) 购买月卡/额度卡（Auto模型，自行甄别风险与售后）。建议先看 [PriceAI · Cursor 账号](https://priceai.cc/products/cursor-account) 聚合比价（不参与交易，以原平台为准），再按需下单：
    [月卡1](https://pay.ldxp.cn/shop/W6IZFM8B) 、
    [月卡2](https://wzyp.cn/shop/xxdlzs) 、
    [月卡3](https://wzyp.cn/shop/9NW8O5U5) 

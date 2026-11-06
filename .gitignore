@@ -45,3 +45,4 @@ playwright-report/
 # lychee（外链检查缓存与 CI 报告）
 .lycheecache
 lychee/
+.dsh-plugins/oa-workbench

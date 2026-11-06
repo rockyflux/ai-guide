@@ -7,7 +7,11 @@
 
 ## GPT-Image-2.5（2026-09-08）
 
-[ChatGPT Images 2.5](https://openai.com/index/introducing-chatgpt-images-2-5/) 已推送至 ChatGPT / Work / Codex；相对 Images 2，细节更锐、编辑更稳，延迟最高约降 50%。API 提供两档：`Flare`（更快）与 `Sunburst`（更高质量）。
+[ChatGPT Images 2.5](https://openai.com/index/introducing-chatgpt-images-2-5/) 已推送至 ChatGPT / Work / Codex；相对 Images 2，细节更锐、编辑更稳，延迟最高约降 50%。
+
+## GPT-Image-2.6（2026-11-05）
+
+全量上线：整体生成约再快 50%（低画质最快约 6 秒），原生直出 GIF 动图与 SVG 矢量。API 首次分出两档：`Flare` 偏速度与排版（海报 / 电商图），`Sunburst` 偏中高画质细节，并稳住多轮改图时人物与商品的一致性。
 
 ## 为什么 GPT-Image-2 很强
 

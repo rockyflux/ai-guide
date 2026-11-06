@@ -37,6 +37,7 @@ aside: false
 | jacky-motion | 口播稿 + SRT → 可录屏的 16:9 自动播放 HTML | [Jackywxsz/jacky-motion](https://github.com/Jackywxsz/jacky-motion) |
 | remotion-video-toolkit | Agent Skill：生成 16:9 MP4 教程视频 | [shreefentsar/remotion-video-toolkit](https://github.com/shreefentsar/remotion-video-toolkit) |
 | remotion-dev/skills | Remotion 官方 Skills：用代码创作视频内容 | [remotion-dev/skills](https://github.com/remotion-dev/skills) |
+| Motion | React / JS / Vue 动画库（原 Framer Motion），附 Agent Skill 与 MCP 文档检索 | [motiondivision/motion](https://github.com/motiondivision/motion) |
 
 ## 选型建议
 

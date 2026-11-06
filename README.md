@@ -4,10 +4,10 @@
 
 AI 编程 → Agent 工具 → Agent 工程 → 编程实战 → 场景实战 → 学习资源 → 应用选型
 
-![在线阅读](https://img.shields.io/badge/在线阅读-rockyflux.github.io%2Fai-guide-blue?style=for-the-badge)
+[![在线阅读](https://img.shields.io/static/v1?label=%E5%9C%A8%E7%BA%BF%E9%98%85%E8%AF%BB&message=rockyflux.github.io%2Fai-guide&color=blue&style=for-the-badge)](https://rockyflux.github.io/ai-guide/)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![VitePress](https://img.shields.io/badge/VitePress-1.6-42b883)
-![GitHub stars](https://img.shields.io/github/stars/rockyflux/ai-guide?style=social)
+[![GitHub stars](https://img.shields.io/github/stars/rockyflux/ai-guide?style=flat&logo=github)](https://github.com/rockyflux/ai-guide/stargazers)
 
 ---
 

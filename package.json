@@ -12,6 +12,7 @@
     "check": "node scripts/check-book.mjs",
     "check:build": "node scripts/check-build.mjs",
     "assert:overrides": "node scripts/assert-overrides.mjs",
+    "update:stars": "node scripts/update-stars.mjs",
     "verify": "npm run assert:overrides && npm run check && npm run build && npm run check:build",
     "test": "playwright test"
   },

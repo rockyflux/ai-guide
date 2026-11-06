@@ -152,10 +152,12 @@ npx skills add <仓库> [--skill <名称>]
 | Skill | 用途 | 安装 |
 |-------|------|------|
 | [Agent Reach](https://github.com/Panniantong/Agent-Reach) | 读网能力层：网页 / YouTube 字幕 / GitHub / RSS / B 站 / 语义搜索等；部分平台需登录态。选型 + 安装 + 体检，读取走上游工具；`agent-reach doctor` 看当前后端 | 复制给 Agent：`帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md`（不要从 PyPI 装同名包） |
+| [ego-browser](https://lite.ego.app/document/zh/docs/windows/skills) | 经 [ego(lite)](https://lite.ego.app) 在隔离 Space 打开页面、读 Snapshot、驱动浏览器；可继承 Chrome 登录态；接 Claude Code / Codex / Cursor 等 | 先装 ego(lite)，或 `npx skills add citrolabs/ego-lite`；用法见 [Skills 文档](https://lite.ego.app/document/zh/docs/windows/skills) |
 
 > [!NOTE]
 > **边界**  
-> Agent Reach 负责从网上**取内容**（读、搜、字幕），不负责写报告 / 发帖。登录态平台用**专用小号**；默认 `install` 只体检不改系统，真正装依赖要显式 `--system`。
+> Agent Reach 负责从网上**取内容**（读、搜、字幕），不负责写报告 / 发帖。登录态平台用**专用小号**；默认 `install` 只体检不改系统，真正装依赖要显式 `--system`。  
+> ego-browser 是真实网页交互：留意权限提示；登录、验证码、付款与最终提交由人处理。产品对比见 [浏览器与桌面操控](/agent-tools/browser-desktop.html)。
 
 ### 前端 / 设计
 

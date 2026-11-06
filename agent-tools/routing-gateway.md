@@ -9,17 +9,17 @@ aside: false
 
 |工具名称|star 数|项目介绍|解读|
 |---|---|---|---|
-|[LiteLLM](https://github.com/BerriAI/litellm)|61.5k|开源 AI 网关（Python SDK + Proxy）：100+ LLM 以 OpenAI/原生格式统一调用；成本追踪、护栏、负载均衡与日志；Bedrock/Azure/Anthropic/Vertex/vLLM 等|[GitHub](https://github.com/BerriAI/litellm)|
-|[🔥CLIProxyAPI (CPA)](https://github.com/router-for-me/CLIProxyAPI)|55.6k|将多种 CLI 封装为 OpenAI/Gemini/Claude/Codex 兼容 API：多账户轮询与故障转移；流式/非流式、多模态、函数调用|[Zread](https://zread.ai/router-for-me/CLIProxyAPI)|
-|[New API](https://github.com/QuantumNous/new-api)|50.2k|统一模型聚合与分发网关：OpenAI / Claude / Gemini 协议互转；额度、倍率、渠道管理（个人与企业）|[GitHub](https://github.com/QuantumNous/new-api)|
-|[Sub2API](https://github.com/Wei-Shaw/sub2api)|44.3k|开源 API 网关：Claude / OpenAI / Gemini / Antigravity 等订阅转兼容 API；Key 分发、计费、调度、限流与拼车|[Zread](https://zread.ai/Wei-Shaw/sub2api)|
-|[🔥Claude Code Router](https://github.com/musistudio/claude-code-router)|37.7k|Claude Code 请求路由到任意模型；自定义分发逻辑；无需 Anthropic 账号；支持 DeepSeek/Gemini/Groq 等|[Zread](https://zread.ai/musistudio/claude-code-router)|
-|[FreeLLMAPI](https://github.com/tashfeenahmed/freellmapi)|37.1k|本机一个 `/v1` 聚合 30+ 家免费档 LLM（及自备 OpenAI 兼容端点）：智能路由、故障转移、密钥加密；仅个人实验|[GitHub](https://github.com/tashfeenahmed/freellmapi)|
-|[opencodex](https://github.com/lidge-jun/opencodex)|17.6k|Codex / Claude Code 通用 Provider 代理：任意 LLM（Claude、Gemini、Grok、DeepSeek、Ollama 等）接 Codex CLI/App/SDK 与 Claude Code|[GitHub](https://github.com/lidge-jun/opencodex)|
-|[magpie](https://github.com/yetone/magpie)|16.2k|本机网关：任意 Agent（Claude Code / Codex / Gemini CLI 等）接任意模型；OpenAI / Anthropic / Gemini 协议互转；Claude/ChatGPT/Copilot 订阅共享；智能路由与故障转移；菜单栏 + CLI/TUI；MIT|[官网](https://usemagpie.ai/zh/)|
-|[claude-relay-service (crs)](https://github.com/Wei-Shaw/claude-relay-service)|12.7k|Claude Code 镜像中转与拼车，多用户共享转发|[Zread](https://zread.ai/Wei-Shaw/claude-relay-service)|
-|[Bifrost](https://github.com/maximhq/bifrost)|8.9k|企业向高性能 AI 网关：OpenAI 兼容统一接入 23+ 供应商；故障转移、负载均衡、语义缓存、护栏与 MCP；零配置 `npx`/Docker 起；Web UI 监控；Apache-2.0|[官网](https://www.getmaxim.ai/bifrost)|
-|[gpt-load](https://github.com/tbphp/gpt-load)|7.1k|多通道 API Key 轮询与负载均衡，自动容错|[Zread](https://zread.ai/tbphp/gpt-load)|
+|[LiteLLM](https://github.com/BerriAI/litellm)|62.8k|开源 AI 网关（Python SDK + Proxy）：100+ LLM 以 OpenAI/原生格式统一调用；成本追踪、护栏、负载均衡与日志；Bedrock/Azure/Anthropic/Vertex/vLLM 等|[GitHub](https://github.com/BerriAI/litellm)|
+|[🔥CLIProxyAPI (CPA)](https://github.com/router-for-me/CLIProxyAPI)|57.7k|将多种 CLI 封装为 OpenAI/Gemini/Claude/Codex 兼容 API：多账户轮询与故障转移；流式/非流式、多模态、函数调用|[Zread](https://zread.ai/router-for-me/CLIProxyAPI)|
+|[New API](https://github.com/QuantumNous/new-api)|51.5k|统一模型聚合与分发网关：OpenAI / Claude / Gemini 协议互转；额度、倍率、渠道管理（个人与企业）|[GitHub](https://github.com/QuantumNous/new-api)|
+|[FreeLLMAPI](https://github.com/tashfeenahmed/freellmapi)|48k|本机一个 `/v1` 聚合 30+ 家免费档 LLM（及自备 OpenAI 兼容端点）：智能路由、故障转移、密钥加密；仅个人实验|[GitHub](https://github.com/tashfeenahmed/freellmapi)|
+|[Sub2API](https://github.com/Wei-Shaw/sub2api)|45.5k|开源 API 网关：Claude / OpenAI / Gemini / Antigravity 等订阅转兼容 API；Key 分发、计费、调度、限流与拼车|[Zread](https://zread.ai/Wei-Shaw/sub2api)|
+|[🔥Claude Code Router](https://github.com/musistudio/claude-code-router)|38k|Claude Code 请求路由到任意模型；自定义分发逻辑；无需 Anthropic 账号；支持 DeepSeek/Gemini/Groq 等|[Zread](https://zread.ai/musistudio/claude-code-router)|
+|[magpie](https://github.com/yetone/magpie)|30.6k|本机网关：任意 Agent（Claude Code / Codex / Gemini CLI 等）接任意模型；OpenAI / Anthropic / Gemini 协议互转；Claude/ChatGPT/Copilot 订阅共享；智能路由与故障转移；菜单栏 + CLI/TUI；MIT|[官网](https://usemagpie.ai/zh/)|
+|[opencodex](https://github.com/lidge-jun/opencodex)|18.2k|Codex / Claude Code 通用 Provider 代理：任意 LLM（Claude、Gemini、Grok、DeepSeek、Ollama 等）接 Codex CLI/App/SDK 与 Claude Code|[GitHub](https://github.com/lidge-jun/opencodex)|
+|[claude-relay-service (crs)](https://github.com/Wei-Shaw/claude-relay-service)|12.8k|Claude Code 镜像中转与拼车，多用户共享转发|[Zread](https://zread.ai/Wei-Shaw/claude-relay-service)|
+|[Bifrost](https://github.com/maximhq/bifrost)|9.4k|企业向高性能 AI 网关：OpenAI 兼容统一接入 23+ 供应商；故障转移、负载均衡、语义缓存、护栏与 MCP；零配置 `npx`/Docker 起；Web UI 监控；Apache-2.0|[官网](https://www.getmaxim.ai/bifrost)|
+|[gpt-load](https://github.com/tbphp/gpt-load)|7.2k|多通道 API Key 轮询与负载均衡，自动容错|[Zread](https://zread.ai/tbphp/gpt-load)|
 |[axonhub](https://github.com/looplj/axonhub)|5.4k|AI 流量网关 + RBAC / 多租户权限|[Zread](https://zread.ai/looplj/axonhub)|
 |[ccx](https://github.com/BenedictKing/ccx)|4.0k|个人向极简 API 网关，快速配置、轻量使用|[Zread](https://zread.ai/BenedictKing/ccx)|
 |[metapi](https://github.com/cita-777/metapi)|3.3k|聚合 New API / One API / Sub2API 等中转站为单一入口与密钥|[Zread](https://zread.ai/cita-777/metapi)|

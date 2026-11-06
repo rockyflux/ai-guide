@@ -13,6 +13,14 @@
 
 ![购买前比价三点清单](../assets/images/coding-plan/01-infographic-pricing-checklist.png)
 
+## 不知道怎么选时
+
+选择困难时，可以先按下面三条走，不必一开始就啃完整比价表：
+
+1. **优先 Cursor Auto**：不限 Token，月预算约 ¥30，适合先把日常编码跑起来。
+2. **入门套餐首选 Command Code**：低门槛试用开源 Coding 模型与额度，见下文 [开源模型向 Coding 订阅](#开源模型向-coding-订阅)。
+3. **要更全面的订阅与比价**：直接看 [PriceAI](https://priceai.cc/)，把官方订阅、卡网、官方 API 和中转 API 放在同一入口比较。
+
 ## 第三方中转与接入渠道
 
 主要风险：
@@ -69,6 +77,7 @@
 | **FastAIToken** | 登录后见价 | OpenAI 兼容中转，提供统一鉴权和路由 | https://www.fastaitoken.com/ |
 | **露娜（freeapi）** | 登录后见价，按量 | AI API Gateway，多模型聚合接入 | https://freeapi.site/register?aff=F22JVN2537PW |
 | **Wokey** | 按量，宣称相对官价约 1/10；USDT 充值 | OpenRouter 类聚合，兼容 OpenAI / Anthropic；每条响应带 TEE 证明，可离线核官方上游 | https://wokey.ai/ |
+| **CUN.ai** | 登录后见价，按量 | AI Gateway，统一 API 接入 GPT、Claude、Gemini、GLM、Kimi 等，OpenAI 兼容 | https://cun.ai/ |
 
 #### 3. 电商与非官方店铺（代充、拼车、账号）
 
@@ -84,6 +93,7 @@
 | **ldxp 小店（AEUQ8PP3）** | 店铺标价 | 非官方店铺 | https://pay.ldxp.cn/shop/AEUQ8PP3 |
 | **wzyp 小店（2VWX76A4）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/2VWX76A4 |
 | **wzyp 小店（A8KYS0FY）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/A8KYS0FY |
+| **wzyp 小店（M18V0XVF）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/M18V0XVF |
 | **wafase** | 店铺标价 | 非官方店铺 | https://wafase.com/ |
 | **Acc-OTAOR** | 店铺标价 | Google、ChatGPT 等账号采购 | https://acc.otaor.com/ |
 | **catfk（agiclaude）** | 店铺标价 | 偏 Claude，非官方店铺 | https://catfk.com/shop/agiclaude |
@@ -171,23 +181,6 @@
 
 支付、网络和账号环境稳定时，海外原厂订阅通常接入更直接，产品更新也更快。
 
-### IDE 集成工具
-
-| 产品 | 套餐 | 价格 | 特点 | 官方链接 |
-|---|---|---|---|---|
-| **GitHub Copilot** | Free | $0 | 轻量试用 | https://github.com/features/copilot/plans |
-|  | Pro | $10/月 | 补全和聊天，含基础 AI credits | 同上 |
-|  | Pro+ | $39/月 | 更高高级模型和 credits 额度 | 同上 |
-|  | Max | $100/月 | 个人最高用量档 | 同上 |
-|  | Business | $19/用户/月 | 团队管理和安全审计 | 同上 |
-| **Cursor** | Hobby | $0 | 体验基础 Agent / Composer | https://cursor.com/pricing |
-|  | Pro | $20/月 | 主流个人开发档 | 同上 |
-|  | Pro+ | $60/月 | 约 3× Pro Agent 额度 | 同上 |
-|  | Ultra | $200/月 | 约 20× Pro Agent 额度，优先新功能 | 同上 |
-| **Windsurf** | Free | $0 | 轻量日 / 周配额，可试用 Agent | https://windsurf.com/pricing |
-|  | Pro | $20/月 | 标准配额，含 Cascade 和云会话 | 同上 |
-|  | Max | $200/月 | 重度 Agent 和前沿模型用户 | 同上 |
-
 ### 开源模型向 Coding 订阅
 
 偏开源权重模型、低价入门或本地 + 云额度组合；与 Cursor / Claude 等闭源原厂订阅互补。
@@ -245,7 +238,7 @@
 |---|---|---|---|
 | **Kan LLM** | 免费监测 | 对比首 Token 延迟、TPS、可用率和稳定性 | https://www.kanllm.com/ |
 | **真测 Ztest** | 免费排行 | 测试模型真实性、响应质量和可用性，提供可信度评分 | https://ztest.ai/ |
-| **PriceAI 中转检测** | 需登录，按检测强度消耗临时 Key | 检测协议外观、能力指纹、线路和计费口径，主站不保存 Key | https://priceai.cc/api-transit/detector |
+| **PriceAI** | 免费比价；中转检测需登录 | 卡网订阅、官方订阅、官方 API 与中转 API 比价雷达；另有[中转检测](https://priceai.cc/api-transit/detector)（按检测强度消耗临时 Key，主站不保存 Key） | https://priceai.cc/ |
 | **meow 模型检测** | 自费，使用自己的 API 账户 | 通过模型指纹比对申报模型和实际线路 | https://meowllm.top/ |
 | **ModelTrace** | 免费，浏览器本地计算 | 三次长整数挑战提取输出指纹，对照统一指纹库判断模型家族与版本，适合中转降智 / 路由验真 | https://xqy2006.github.io/ModelTrace/ |
 | **禾维 AI** | 免费检测 / 榜单 | 对比中转实测排名、真假、价格和在线率，域名亦见 [hvoyai.com](https://www.hvoyai.com/) | https://hvoy.ai/ |
@@ -264,6 +257,7 @@
 
 ### 延伸阅读与开源项目
 
+- [PriceAI](https://priceai.cc/)：AI 低价卡网订阅与中转 API 比价雷达
 - [API 中转站](/programming/api-relay-station.html)：程序结构、成本倍率和渠道风险
 - [公益站导航](https://ldoh.105117.xyz/)：第三方资源导航
 - [LDOH 仓库](https://github.com/JoJoJotarou/LDOH)：对应开源仓库
