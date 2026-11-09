@@ -1,6 +1,8 @@
-# AI 编程指南
+# AI Guide
 
-**面向有经验开发者的任务导向中文指南**
+**把 AI 从「会聊天」推进到「能稳定交付」**
+
+面向有经验开发者：选型 → Agent → 实战 → 交付
 
 AI 编程 → Agent 工具 → Agent 工程 → 编程实战 → 场景实战 → 学习资源 → 应用选型
 
@@ -13,7 +15,7 @@ AI 编程 → Agent 工具 → Agent 工程 → 编程实战 → 场景实战 �
 
 ## 这是什么
 
-把 AI 从「会聊天」推进到「能稳定交付」的中文实践指南。内容按任务组织。
+中文实践指南，内容按任务组织：选模型与工具、搭 Agent 体系、用编程与场景实战跑通闭环。
 
 适合已有开发经验、想把 AI 编程、多 Agent 协作和项目级 SOP 落到真实仓库里的人。
 
@@ -27,7 +29,7 @@ AI 编程 → Agent 工具 → Agent 工程 → 编程实战 → 场景实战 �
 | [Agent 工具](https://rockyflux.github.io/ai-guide/agent-tools/account-switch.html) | 账号切换、安装脚本、多 Agent 工作区、终端、浏览器操控、路由网关、记忆检索 |
 | [Agent 工程](https://rockyflux.github.io/ai-guide/agent/prompt.html) | Prompt / Skills / MCP / Hooks / Subagents |
 | [编程实战](https://rockyflux.github.io/ai-guide/practice/cursor.html) | Coding Agent 上手包与 SOP（含 [WSL](https://rockyflux.github.io/ai-guide/practice/wsl.html)） |
-| [场景实战](https://rockyflux.github.io/ai-guide/scenarios/workbuddy-doubao-work.html) | 桌面 Agent、办公 CLI、设计原型、绘图与设计到代码 |
+| [场景实战](https://rockyflux.github.io/ai-guide/scenarios/chatgpt-guide.html) | ChatGPT、ESP32、桌面 Agent、办公 CLI、设计原型、绘图与设计到代码 |
 | [学习资源](https://rockyflux.github.io/ai-guide/resources/ai-learning-guide.html) | 系统学习、社区资源与教程速查 |
 | [应用选型](https://rockyflux.github.io/ai-guide/products/ai-product.html) | 产品导航，以及办公 Agent、对话、智能体、绘图视频与 OpenClaw 生态 |
 
@@ -52,7 +54,7 @@ AI 编程 → Agent 工具 → Agent 工程 → 编程实战 → 场景实战 �
 
 侧栏顺序：
 
-- [Prompt](https://rockyflux.github.io/ai-guide/agent/prompt.html) → [Skills](https://rockyflux.github.io/ai-guide/agent/skills.html) → [MCP](https://rockyflux.github.io/ai-guide/agent/mcp.html) → [Hooks](https://rockyflux.github.io/ai-guide/agent/hooks.html) → [Subagents](https://rockyflux.github.io/ai-guide/agent/subagents.html)
+- [Prompt](https://rockyflux.github.io/ai-guide/agent/prompt.html) → [Agent Skills](https://rockyflux.github.io/ai-guide/agent/skills.html) → [MCP](https://rockyflux.github.io/ai-guide/agent/mcp.html) → [Hooks](https://rockyflux.github.io/ai-guide/agent/hooks.html) → [Subagents](https://rockyflux.github.io/ai-guide/agent/subagents.html)
 
 ### 4. 编程实战：照着案例跑通 Coding Agent
 
@@ -60,17 +62,17 @@ AI 编程 → Agent 工具 → Agent 工程 → 编程实战 → 场景实战 �
 - [WSL 开发环境](https://rockyflux.github.io/ai-guide/practice/wsl.html) — Windows 下的 Linux 开发环境
 - [Claude Code 最佳实践](https://rockyflux.github.io/ai-guide/practice/best-practices.html) · [Everything Claude Code](https://rockyflux.github.io/ai-guide/practice/everything-claude-code.html)
 
-### 5. 场景实战：办公、设计与绘图
+### 5. 场景实战：ChatGPT、硬件、办公与设计
 
+- [ChatGPT 上手指南](https://rockyflux.github.io/ai-guide/scenarios/chatgpt-guide.html) · [ESP32 + AI 编程](https://rockyflux.github.io/ai-guide/scenarios/esp32.html)
 - [WorkBuddy 与豆包工作](https://rockyflux.github.io/ai-guide/scenarios/workbuddy-doubao-work.html) · [桌面 Agent 接入办公 CLI](https://rockyflux.github.io/ai-guide/scenarios/ai-office-practice.html) · [从需求到设计原型](https://rockyflux.github.io/ai-guide/scenarios/requirements-to-design-prototype.html)
-- [GPT-Image-2](https://rockyflux.github.io/ai-guide/scenarios/gpt-image.html) · [豆包 AI 绘图练习](https://rockyflux.github.io/ai-guide/scenarios/ai-drawing-practice.html)
-- [Stitch × Figma × MCP](https://rockyflux.github.io/ai-guide/scenarios/google-stitch-figma-mcp.html)
+- [GPT-Image-2](https://rockyflux.github.io/ai-guide/scenarios/gpt-image.html) · [豆包 AI 绘图](https://rockyflux.github.io/ai-guide/scenarios/ai-drawing-practice.html) · [从设计到代码](https://rockyflux.github.io/ai-guide/scenarios/google-stitch-figma-mcp.html)
 
 ### 6. 系统学习与站外资源
 
 - [AI 课程与学习路径](https://rockyflux.github.io/ai-guide/resources/ai-learning-guide.html) — 大厂官方课、名校公开课与学习路径
 - [Agent 工程师入门学习路线](https://rockyflux.github.io/ai-guide/resources/agent-engineer-roadmap.html) — 检索、工具、上下文与业务系统接起来
-- [开源学习资源](https://rockyflux.github.io/ai-guide/resources/open-source-learning.html) — GitHub 精选仓库与中文开源书
+- [AI 开源学习资源](https://rockyflux.github.io/ai-guide/resources/open-source-learning.html) — GitHub 精选仓库与中文开源书
 - [AI 社区与资讯导航](https://rockyflux.github.io/ai-guide/resources/ai-resources-guide.html) — 社区、编程工具站、资讯与周刊
 - [菜鸟教程 AI / 智能开发](https://rockyflux.github.io/ai-guide/resources/runoob-online-tutorials.html) — RUNOOB 中文 AI 教程速查
 - [GitHub 周边工具速查](https://rockyflux.github.io/ai-guide/resources/github-extensions.html) — 加速、仓库阅读与效率工具
@@ -86,7 +88,7 @@ AI 编程 → Agent 工具 → Agent 工程 → 编程实战 → 场景实战 �
 - [Claw 生态](https://rockyflux.github.io/ai-guide/products/awesome-openclaw.html) — OpenClaw 生态速览
 - [AI 开发软件](https://rockyflux.github.io/ai-guide/products/ai-software.html)
 
-站内另有 [2026 Agent 开发者调研报告](https://rockyflux.github.io/ai-guide/survey.html)。按任务跳读见 [阅读指南](https://rockyflux.github.io/ai-guide/reading-guide.html)，背景见 [前言](https://rockyflux.github.io/ai-guide/preface.html)。
+按任务跳读见 [阅读指南](https://rockyflux.github.io/ai-guide/reading-guide.html)，背景见 [前言](https://rockyflux.github.io/ai-guide/preface.html)。
 
 ## 仓库结构
 

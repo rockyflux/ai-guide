@@ -5,8 +5,7 @@ import { data as book } from "../../book.data";
 <template>
   <div class="book-contents">
     <div class="contents-intro">
-      <a :href="withBase('/preface.html')">前言 →</a
-      ><a :href="withBase('/survey.html')">2026 年 Agent 开发者调研 →</a>
+      <a :href="withBase('/preface.html')">前言 →</a>
     </div>
     <section
       v-for="(part, index) in book.parts"

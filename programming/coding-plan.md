@@ -1,5 +1,7 @@
 # Coding Plan 与渠道
 
+> [!IMPORTANT]
+> 按《[生成式人工智能服务管理暂行办法](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm)》，境外生成式 AI 未合规向境内提供服务的，可被技术措施处置（常见表现是无法直接访问）。本页下方多数产品链接若打不开或不能用，请使用网络代理工具；代理使用请自行确认合规。国内可直连方案见 [国内官方 Coding Plan](#国内官方-coding-plan)。
 
 ## AI 编程套餐与模型渠道
 
@@ -85,18 +87,15 @@
 
 | 渠道 | 价格口径 | 简述 | 链接 |
 |---|---|---|---|
-| **淘宝** | 卖家自标 | 搜索不同卖家套餐 | [淘宝搜索](https://s.taobao.com/search?q=claude+code) |
-| **闲鱼** | 卖家自标 | 常见拼车、代购和转售 | [闲鱼搜索](https://www.goofish.com/search?q=claude+code) / [team 拼车](https://www.goofish.com/search?q=team拼车) |
-| **AtlasAI 店铺** | 店铺标价 | Atlas 聚合中转卡密和充值 | https://shop.aixoras.com/ |
-| **ldxp 小店（xxdlzs）** | 店铺标价 | IDE 额度、代充 | https://pay.ldxp.cn/shop/xxdlzs |
-| **ldxp 小店（xcursor）** | 店铺标价 | 偏 Cursor | https://pay.ldxp.cn/shop/xcursor |
-| **ldxp 小店（AEUQ8PP3）** | 店铺标价 | 非官方店铺 | https://pay.ldxp.cn/shop/AEUQ8PP3 |
-| **wzyp 小店（2VWX76A4）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/2VWX76A4 |
-| **wzyp 小店（A8KYS0FY）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/A8KYS0FY |
-| **wzyp 小店（M18V0XVF）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/M18V0XVF |
-| **wafase** | 店铺标价 | 非官方店铺 | https://wafase.com/ |
-| **Acc-OTAOR** | 店铺标价 | Google、ChatGPT 等账号采购 | https://acc.otaor.com/ |
-| **catfk（agiclaude）** | 店铺标价 | 偏 Claude，非官方店铺 | https://catfk.com/shop/agiclaude |
+| **淘宝** **闲鱼** | 卖家自标 | 搜索不同卖家套餐 | [淘宝搜索](https://s.taobao.com/search?q=claude+code) / [Claude code](https://www.goofish.com/search?q=claude+code) |
+| **ldxp 小店（Cursor）** | 店铺标价 | Cursor Auto月卡 | https://pay.ldxp.cn/shop/xxdlzs |
+| **ldxp 小店（ai教父）** | 店铺标价 | 官方直冲plus，pro5x ，pro20x，Max20x | https://pay.ldxp.cn/shop/AEUQ8PP3 |
+| **wzyp 小店（牟利ai）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/2VWX76A4 |
+| **wzyp 小店（源头AI）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/A8KYS0FY |
+| **wzyp 小店（陆柒科技）** | 店铺标价 | 非官方店铺 | https://wzyp.cn/shop/M18V0XVF |
+| **wafase** | 店铺标价 | 老牌店，ChatGPT，Cursor充值 | https://wafase.com/ |
+| **Acc-OTAOR** | 店铺标价 | Google、ChatGPT 等账号采购 | https://shop.qaoqo.com/products/ |
+| **catfk（agiclaude）** | 店铺标价 | 偏 Claude，非官方店铺 | https://catfk.com/shop/asi |
 | **catfk（agi）** | 店铺标价 | 非官方店铺 | https://catfk.com/shop/agi |
 | **红鱼小店** | 店铺标价 | AI 会员与订阅类代充、成品号 | https://hongyu888.vip/ |
 | **985 Store** | 店铺标价 | ChatGPT、Claude、Gemini、Grok 会员卡充，充到自有账号 | https://nb985.com/ |
@@ -140,9 +139,7 @@
 |  | Pro | 49.9 元 / 100 元 / 200 元/月 | 高配额和企业开发 | 高额度、稳定性较强 | https://www.volcengine.com/product/ark |
 | **百度千帆** | Lite | 9.9 元 / 20 元 / 40 元/月 | 文心用户、需要控制台切换模型 | 多模型支持，控制台切换，无需改代码 | https://cloud.baidu.com/product/codingplan.html |
 |  | Pro | 49.9 元 / 100 元 / 200 元/月 | 高频开发、企业用户 | 高额度、企业支持、百度云生态 | https://cloud.baidu.com/product/qianfan |
-| **无问芯穹** | Lite | 19.9 元/月 | 预算有限、需要 IDE / CLI 接入 | 轻量多模型，支持 IDE 和 CLI | https://cloud.infini-ai.com/genstudio/code |
-|  | Pro | 49.9 元/月 | 小团队长期协作 | 团队功能更完整 | https://docs.infini-ai.com/gen-studio/coding-plan/ |
-| **华为云码道** | 公测版 | 免费 | 想体验行业方案、华为生态用户 | 华为自研模型，公测期间全功能免费 | https://www.huaweicloud.com/product/codearts/ai.html |
+| **华为云码道** | 标准版 | 98元/月 | 想体验行业方案、华为生态用户 | 华为自研模型，内置国内主流模型 | https://codearts.huaweicloud.com |
 
 ---
 

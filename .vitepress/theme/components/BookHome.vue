@@ -22,7 +22,7 @@ onMounted(() => {
         <h1 id="book-title">AI<br /><em>Guide</em></h1>
         <p class="hero-subtitle">把 AI 从「会聊天」推进到「能稳定交付」</p>
         <p class="hero-description">
-          面向有经验开发者的任务向指南。沿着选型、Agent 工具、工作流、Agent 工程、编程实战与场景实战，跑通从工具到交付的闭环。
+          面向有经验开发者。沿着选型、Agent 工具、工作流、Agent 工程、编程实战与场景实战，跑通从工具到交付的闭环。
         </p>
         <div class="hero-actions">
           <a class="book-button primary" :href="withBase('/preface.html')"
@@ -41,7 +41,7 @@ onMounted(() => {
           <span>社区维护</span><span>2026 EDITION</span>
         </div>
         <div class="cover-title">
-          AI GUIDE<br /><span>工具与编程实践指南</span>
+          AI GUIDE<br /><span>从会聊天到能交付</span>
         </div>
         <div class="cover-orbit">
           <div class="orbit one" />
@@ -52,7 +52,7 @@ onMounted(() => {
           ><span class="orbit-label bottom">SHIP</span>
         </div>
         <div class="cover-bottom">
-          从选型到交付<br /><span>A PRACTICAL GUIDE TO AI CODING</span>
+          从选型到交付<br /><span>A PRACTICAL GUIDE TO AI DELIVERY</span>
         </div>
       </div>
     </section>
@@ -104,14 +104,6 @@ onMounted(() => {
             >{{ part.pages.length }} 章 · {{ part.range }}</span
           >
         </a>
-        <a class="part-card survey-card" :href="withBase('/survey.html')"
-          ><div class="part-topline">
-            <span>COMMUNITY INSIGHTS</span><span>↗</span>
-          </div>
-          <h3>从开发者的现实出发</h3>
-          <p>阅读 2026 年 Agent 开发者调研，了解工程落地的共同挑战。</p>
-          <span class="part-range">阅读调研报告 →</span></a
-        >
       </div>
     </section>
     <section class="book-invitation">

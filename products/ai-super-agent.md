@@ -21,7 +21,6 @@ aside: false
 | Skywork | Skywork | 深度研究、多模态内容与播客 / 网页生成 | [skywork.ai](https://skywork.ai) |
 | ChatGPT Agent | OpenAI | ChatGPT 内置自主浏览与多步任务 | [chatgpt.com](https://chatgpt.com) |
 | 扣子 Coze | 字节 | 职场 Agent、可操作电脑与手机交付结果 | [coze.cn](https://www.coze.cn) |
-| Coze 空间 | 字节 | 智能体空间、Bot 编排与自动化 | [space.coze.cn](https://space.coze.cn) |
 | AutoClaw | 智谱 | 飞书 IM + 本地 Agent、OpenClaw 系执行 | [autoglm.zhipuai.cn/autoclaw](https://autoglm.zhipuai.cn/autoclaw/) |
 
 ## 选型建议

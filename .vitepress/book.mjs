@@ -92,9 +92,12 @@ export const parts = [
     dir: "scenarios",
     title: "场景实战篇",
     english: "Scenarios",
-    range: "桌面 Agent · 办公 CLI · 设计 · 绘图",
-    description: "桌面端 Agent、接入办公 CLI、需求到原型、AI 绘图与设计到代码，把 AI 用进非纯编码场景。",
+    range: "ChatGPT · ESP32 · 桌面 Agent · 办公 CLI · 设计 · 绘图",
+    description:
+      "ChatGPT 上手、ESP32 创意硬件、桌面端 Agent、接入办公 CLI、需求到原型、AI 绘图与设计到代码，把 AI 用进非纯编码场景。",
     chapters: [
+      "chatgpt-guide",
+      "esp32",
       "workbuddy-doubao-work",
       "ai-office-practice",
       "requirements-to-design-prototype",

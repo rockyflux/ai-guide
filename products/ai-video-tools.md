@@ -24,6 +24,8 @@ aside: false
 | Google Veo | Google | 高写实视频、DeepMind 视频模型 | [labs.google/veo](https://labs.google/veo) |
 | Pika | Pika | 轻量创意、特效与风格化短片 | [pika.art](https://pika.art) |
 | 腾讯智影 | 腾讯 | 数字人播报、模板化短视频剪辑 | [zenvideo.qq.com](https://zenvideo.qq.com) |
+| WorkRally | 腾讯 | 漫剧视频创作全流程（脚本 → 分镜 → 成片） | [workrally.qq.com](https://workrally.qq.com/) |
+| VibeKnow | 石榴 AI | 文档 / PPT / 网页一键成知识视频（脚本、分镜、配音） | [vibeknow.com](https://vibeknow.com/) |
 | 闪剪 | 闪剪 | 数字人口播、图文转视频 | [shanjian.tv](https://shanjian.tv) |
 
 ## 开源项目
@@ -34,6 +36,8 @@ aside: false
 | --- | --- | --- |
 | MoneyPrinterTurbo | 主题 / 关键词一键生成高清短视频（脚本、素材、字幕、配乐、成片） | [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) |
 | OpenMontage | Agent 全流程视频制片（pipeline + 700+ 技能 / 知识文件） | [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) |
+| video-talkcraft | Agent Skill：口播稿 + 配音 → Remotion 动效解说成片（字级同步、动效配方卡） | [Vincentwei1021/video-talkcraft](https://github.com/Vincentwei1021/video-talkcraft) |
+| html-explainer | Agent Skill：主题 → HTML 画面 + 配音字幕 → 本地确定性 MP4（无需文生视频模型） | [OneMoh/html-explainer](https://github.com/OneMoh/html-explainer) |
 | jacky-motion | 口播稿 + SRT → 可录屏的 16:9 自动播放 HTML | [Jackywxsz/jacky-motion](https://github.com/Jackywxsz/jacky-motion) |
 | remotion-video-toolkit | Agent Skill：生成 16:9 MP4 教程视频 | [shreefentsar/remotion-video-toolkit](https://github.com/shreefentsar/remotion-video-toolkit) |
 | remotion-dev/skills | Remotion 官方 Skills：用代码创作视频内容 | [remotion-dev/skills](https://github.com/remotion-dev/skills) |
@@ -44,5 +48,5 @@ aside: false
 1. **国内日常创作**：可灵、即梦、海螺 — 中文提示与短视频场景覆盖广，上手成本低。
 2. **图生视频 / 一致性**：Vidu、通义万相 — 适合产品展示、分镜延续与参考图驱动。
 3. **国际高质量 / 电影感**：Sora、Runway、Veo — 镜头语言与物理表现更强，通常需订阅或 API。
-4. **数字人 / 口播**：腾讯智影、闪剪 — 模板化口播与营销短视频，不等同于生成式文生视频。
-5. **开源自建 / 自动化**：MoneyPrinterTurbo（一键短视频流水线）、OpenMontage（Agent 制片）；讲解动画可看 jacky-motion / Remotion Skills。
+4. **数字人 / 口播 / 知识视频 / 漫剧**：腾讯智影、闪剪（模板化口播）；VibeKnow（文档 / PPT / 网页转知识视频）；WorkRally（漫剧全流程）— 不等同于生成式文生视频。
+5. **开源自建 / 自动化**：MoneyPrinterTurbo（一键短视频流水线）、OpenMontage（Agent 制片）；口播动效看 video-talkcraft，主题讲解 HTML→MP4 看 html-explainer / jacky-motion / Remotion Skills。

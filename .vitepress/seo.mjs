@@ -5,7 +5,7 @@ export const siteUrl = (
 ).replace(/\/*$/, "/");
 
 export const siteDescription =
-  "面向有经验开发者的任务向指南：选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用编程与场景实战跑通闭环。";
+  "把 AI 从「会聊天」推进到「能稳定交付」。面向有经验开发者：选模型与工具 → 搭环境接模型 → 建立协作工作流 → 用编程与场景实战跑通闭环。";
 
 export const ogImageUrl = new URL("og.jpg", siteUrl).href;
 

@@ -16,6 +16,7 @@
 | 多 Agent 协作 | [多 Agent 协作工作流](/programming/ccg-workflow.html) |
 | 工程化 Agent | [Prompt](/agent/prompt.html) → [Agent Skills](/agent/skills.html) → [MCP](/agent/mcp.html) → [Hooks](/agent/hooks.html) → [Subagents](/agent/subagents.html) |
 | Claude Code 实践 | [WSL 开发环境](/practice/wsl.html) · [Claude Code 最佳实践](/practice/best-practices.html) · [Everything Claude Code](/practice/everything-claude-code.html) |
+| ChatGPT / 创意硬件 | [ChatGPT 上手指南](/scenarios/chatgpt-guide.html) · [ESP32 + AI 编程](/scenarios/esp32.html) |
 | 办公与桌面 Agent | [WorkBuddy 与豆包工作](/scenarios/workbuddy-doubao-work.html) · [桌面 Agent 接入办公 CLI](/scenarios/ai-office-practice.html) |
 | 设计与绘图 | [从需求到设计原型](/scenarios/requirements-to-design-prototype.html) · [GPT-Image-2](/scenarios/gpt-image.html) · [豆包 AI 绘图](/scenarios/ai-drawing-practice.html) · [从设计到代码](/scenarios/google-stitch-figma-mcp.html) |
 | 补基础 / 找资源 | [AI 课程与学习路径](/resources/ai-learning-guide.html) · [Agent 工程师入门学习路线](/resources/agent-engineer-roadmap.html) · [AI 开源学习资源](/resources/open-source-learning.html) · [AI 社区与资讯导航](/resources/ai-resources-guide.html) · [Agent 日常开发实践](/resources/ai-dev-notes.html) |
@@ -30,5 +31,5 @@
 2. **Agent 工具**：账号切换 → 安装脚本 → 工作区 → 终端 → 浏览器 → 网关 → 记忆检索
 3. **Agent 工程**：Prompt → Skills → MCP → Hooks → Subagents
 4. **编程实战**：Cursor / Codex / Kiro → WSL → Claude Code 最佳实践 → Everything Claude Code
-5. **场景实战**：WorkBuddy → 办公 CLI → 需求到原型 → GPT-Image → 豆包绘图 → 设计到代码
+5. **场景实战**：ChatGPT → ESP32 → WorkBuddy → 办公 CLI → 需求到原型 → GPT-Image → 豆包绘图 → 设计到代码
 6. **学习资源**、**应用选型**：按需查阅，不必通读

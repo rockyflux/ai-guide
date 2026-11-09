@@ -65,7 +65,6 @@ npm run update:stars -- --dry-run
 ## 内容与导航
 
 - `preface/`、`programming/`、`agent-tools/`、`agent/`、`practice/`、`scenarios/`、`resources/`、`products/`：篇章正文，继续在原文件编辑。篇章阅读顺序以 `.vitepress/book.mjs` 的 `parts` 为准，不以目录名为序。
-- `website/2026-agent-survey-report.md`：开发者调研，公开地址仍为 `/survey.html`。
 - `assets/images/`：站内插图优先放这里，正文用相对路径引用。部分存量章节仍使用外链图床（如 `img.remit.ee`）；新增插图优先入库，外链需保证可访问。保留外链时，Markdown 插件会为外链 `<img>` / `![](url)` 补上 `loading="lazy"` 与 `referrerpolicy="no-referrer"`。
 - `.vitepress/book.mjs`：全书顺序、篇章与稳定网址。普通章节标题直接读取正文；新增或调整章节时在这里登记，`npm run check` 会阻止遗漏正文。
 - `website/`：网站首页、全书目录与阅读指南。

@@ -135,7 +135,6 @@ export default defineConfig({
     nav: [
       { text: "全书目录", link: "/contents.html", activeMatch: "/contents" },
       { text: "阅读指南", link: "/reading-guide.html" },
-      { text: "开发者调研", link: "/survey.html" },
       { text: "关于本站", link: "/about.html" },
     ],
     sidebar,
@@ -208,7 +207,7 @@ export default defineConfig({
       },
     },
     footer: {
-      message: "面向有经验开发者的 AI 工具与编程实践指南",
+      message: "把 AI 从「会聊天」推进到「能稳定交付」",
       copyright: "MIT · 社区共同维护",
     },
   },
