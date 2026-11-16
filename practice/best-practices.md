@@ -42,7 +42,7 @@ claude --version
 
 ## 3. 配置 MCP（按需）
 
-概念：[MCP](/agent/mcp.html)。和 Cursor 共用的「先装这些」见 [Cursor 实战 · 配置 MCP](/practice/cursor.html#2-配置-mcp)；Claude Code 用用户级 / 项目级 MCP 接入即可。
+概念：[MCP](/agent/mcp.html)。和 Cursor 共用的「先装这些」见 [Cursor 实战 · 配置 MCP](/practice/cursor.html#_2-配置-mcp)；Claude Code 用用户级 / 项目级 MCP 接入即可。
 
 | 优先级 | 工具 | 场景 |
 | --- | --- | --- |
