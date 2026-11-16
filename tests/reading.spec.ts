@@ -1,11 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { parts } from "../.vitepress/book.mjs";
 
-// 微信悬浮球会注入大 iframe；CI 里偶发挡住阅读控件点击，测试不依赖它。
-test.beforeEach(async ({ page }) => {
-  await page.route(/chatbot\.weixin\.qq\.com/, (route) => route.abort());
-});
-
 test("home, contents, stable deep links and source edit link", async ({
   page,
 }) => {
@@ -93,10 +88,14 @@ test("mobile navigation and readable width", async ({ page }) => {
   await page.getByRole("link", { name: "开始阅读", exact: false }).click();
   await page.getByRole("button", { name: "全书目录" }).click();
   await expect(page.locator(".VPSidebar")).toBeVisible();
-  await page
+  const guide = page
     .locator(".VPSidebar")
-    .getByRole("link", { name: "阅读指南", exact: true })
-    .click();
+    .getByRole("link", { name: "阅读指南", exact: true });
+  // 侧栏可滚动；篇章变多后链接常在视口外，需滚到侧栏容器内再点。
+  await guide.evaluate((el) => {
+    el.scrollIntoView({ block: "center", inline: "nearest" });
+  });
+  await guide.click();
   await expect(page.locator(".vp-doc h1")).toHaveText("阅读指南");
 });
 
