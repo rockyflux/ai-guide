@@ -1,6 +1,11 @@
 import { test, expect } from "@playwright/test";
 import { parts } from "../.vitepress/book.mjs";
 
+// 微信悬浮球会注入大 iframe；CI 里偶发挡住阅读控件点击，测试不依赖它。
+test.beforeEach(async ({ page }) => {
+  await page.route(/chatbot\.weixin\.qq\.com/, (route) => route.abort());
+});
+
 test("home, contents, stable deep links and source edit link", async ({
   page,
 }) => {

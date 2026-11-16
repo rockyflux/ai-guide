@@ -88,7 +88,7 @@ export default defineConfig({
   mode: "bubble",
   position: "bottom-right",
   offset: 24,
-  defaultOpen: true,
+  defaultOpen: false,
 });`,
     ],
   ],
