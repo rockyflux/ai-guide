@@ -71,6 +71,26 @@ export default defineConfig({
         "data-website-id": "e3e53936-8aca-4261-b915-1eb2df784fb6",
       },
     ],
+    // 微信智能对话：站点悬浮球接入知识库
+    [
+      "script",
+      {
+        src: "https://chatbot.weixin.qq.com/mmspraiweb_node/dist/static/script/H5_SDK_ACCESS.js",
+      },
+    ],
+    [
+      "script",
+      {},
+      `WxChat.init({
+  appId: "GIPMDZqabBq1WS8nvwqLAMIkQPFaBd",
+  openId: "o9U-85qx_Ib73ZqCdoJetQMJwkIE",
+  robotName: "AI Guide",
+  mode: "bubble",
+  position: "bottom-right",
+  offset: 24,
+  defaultOpen: true,
+});`,
+    ],
   ],
   sitemap: {
     hostname: siteUrl,

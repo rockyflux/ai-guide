@@ -262,7 +262,7 @@ npx skills add <仓库> [--skill <名称>]
 - [SkillsMP](https://skillsmp.com/zh) — 聚合 GitHub 开源技能，适合全网搜与溯源
 - [Agent Skills Me](https://agentskills.me) — 人工精选、小而精
 - [SkillStore](https://skillstore.io/zh-hans) — 中文友好，强调安全审查
-- [SkillHub（腾讯）](https://skillhub.tencent.com/) — 按模型 / 场景筛选
+- [SkillHub（腾讯）](https://skillhub.cn/) — 按模型 / 场景筛选
 - [Linux.do Awesome Skills](https://github.com/jochne/linuxdo-awesome-skills) — 社区导航（[在线浏览](https://linuxdo-awesome-skills.tencents.ltd/)）
 - [CocoLoop Skill 商店](https://hub.cocoloop.cn/) — 聚合 Skills、国内镜像、OpenClaw 专题
 

@@ -52,7 +52,7 @@ aside: false
 ### 使用 `clawhub` 搜索并安装 OpenClaw Skills
 
 - **官方 Skills（ClawHub）**：[clawhub.ai](https://clawhub.ai/)
-- **国内优化的 Skills 社区（Skillhub）**：[skillhub.tencent.com](https://skillhub.tencent.com/)
+- **国内优化的 Skills 社区（Skillhub）**：[skillhub.tencent.com](https://skillhub.cn/)
 
 可直接复制的示例（对话式指令）：
 

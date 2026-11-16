@@ -1,6 +1,5 @@
 # 开发环境准备
 
-
 ## 概述
 
 在进入 AI 编程工具配置之前，需要先搭建基础开发环境。本文列出常用软件及安装顺序，可按需选用。
@@ -35,7 +34,7 @@ winget install Microsoft.WindowsTerminal
 
 #### 必装层
 
-**1. ripgrep（`rg`）** — Agent 与工具链里最常用的「快搜」之一。
+**1. ripgrep（**`rg`**）** — Agent 与工具链里最常用的「快搜」之一。
 
 ```powershell
 winget install BurntSushi.ripgrep.MSVC
@@ -81,8 +80,8 @@ winget install sharkdp.fd
 
 补充：`rg`（ripgrep）和 `fd` 经常被一起提到，职责完全不同，属于「工具链互补」而不是「互相替代」。**不是同一个作者，很多人会搞混这点**：
 
-- **`rg` (ripgrep)**：作者是 Andrew Gallant，网名 [BurntSushi](https://github.com/BurntSushi)
-- **`fd` (fd-find)**：作者是 David Peter，网名 [sharkdp](https://github.com/sharkdp)（同时也是 `bat`、`hyperfine` 这些知名 Rust CLI 工具的作者）
+- `rg` **(ripgrep)**：作者是 Andrew Gallant，网名 [BurntSushi](https://github.com/BurntSushi)
+- `fd` **(fd-find)**：作者是 David Peter，网名 [sharkdp](https://github.com/sharkdp)（同时也是 `bat`、`hyperfine` 这些知名 Rust CLI 工具的作者）
 
 | 工具 | 本质 | 主要替代 |
 | --- | --- | --- |
@@ -123,7 +122,7 @@ winget install astral-sh.uv
 
 #### 终端与 Shell
 
-**9. PowerShell 7** — Windows 自带的 Windows PowerShell 5.x 偏旧；Agent 在 **PowerShell 7（`pwsh`）** 下通常更稳。
+**9. PowerShell 7** — Windows 自带的 Windows PowerShell 5.x 偏旧；Agent 在 **PowerShell 7（**`pwsh`**）** 下通常更稳。
 
 ```powershell
 winget install --id Microsoft.PowerShell --source winget
@@ -164,7 +163,6 @@ winget install JesseDuffield.lazygit
 - 官网：[code.visualstudio.com](https://code.visualstudio.com/)
 - 可选：JetBrains IDE、Vim/Neovim、[Zed](https://zed.dev/) | [Zed-ZH](https://github.com/x6nux/zed-globalization/releases) 等
 
-
 ### 2. Markdown
 
 个人知识库与笔记工具，适合整理 AI 编程笔记、提示词和项目文档。
@@ -179,9 +177,12 @@ winget install JesseDuffield.lazygit
 - 客户端 [Clash Verge](https://www.clashverge.dev/install.html) 、 [Clash Party](https://clashparty.org/)、[FlClash](https://flclash.cc/download.html)、[覆写脚本](https://github.com/dahaha-365/YaNet/tree/main/Mihomo)、[订阅转换](https://github.com/SubBoost/subboost)
 - [NoMoreWalls 免费公开节点](https://github.com/peasoft/NoMoreWalls) 、[低价机场推荐](https://github.com/DiningFactory/panda-vpn-pro) 、 [便宜好用评测](https://www.ermao.net/posts/vpn/)、 [最优的科学上网方案](https://github.com/githubvpn007/v2rayNvpn)
 
+国内不少网站也会拦截代理流量。想同时访问国内外站点，把对应域名加进直连白名单即可。以 Clash Verge 为例：配置目录 → `profiles/Script.js`（全局脚本）→ `customRules.direct.domainSuffix` 写入域名 → 重启软件。
+
 注意：网络访问与代理工具的使用受所在地法律法规约束，请自行确认合规后再使用。
 
 ### 4. AI 客户端（调测）
+
 在接入 Cursor、Claude Code 等「编程向」工具之前，用独立客户端先完成 **API 配置、模型连通性、提示词试跑与流式输出观察**，能快速区分是网络/密钥问题还是 IDE 插件问题。
 
 - Cherry-AI：[cherry-ai.com](https://cherry-ai.com/)
@@ -196,27 +197,21 @@ winget install JesseDuffield.lazygit
 - 购买入口 1：[https://wzyp.cn/shop/2VWX76A4](https://wzyp.cn/shop/2VWX76A4)
 - 购买入口 2：[https://pay.ldxp.cn/shop/AEUQ8PP3](https://pay.ldxp.cn/shop/AEUQ8PP3)
 
-
 ### 6. ChatGPT 账号
 
 ChatGPT 普号 / Free 号注册门槛高，也可考虑第三方成品账号；渠道多、价格波动大，建议先看聚合比价再下单。
 
-- 价格对比：[PriceAI · ChatGPT 普号](https://priceai.cc/products/chatgpt-free-account)（聚合各卡网有货报价，含半价/试用资格号；不参与交易，以原平台为准）
-- 第三方镜像 / 共享入口（非官方，可用性与安全性自负）： [EasyChat 免费账号](https://easychat.top/chatgpt/free)、[AI 镜像](https://go.github.cn.com) 、 [车队列表](https://share.github.cn.com/list)  、 [GE Chat 地址发布页](https://home.gege.chat/)
-- 购买入口：[pay.ldxp.cn/shop/xcursor](https://pay.ldxp.cn/shop/xcursor)、[wafase.com](https://wafase.com/)
-
+- 价格对比：[PriceAI · ChatGPT 普号](https://priceai.cc/products/chatgpt-free-account)（聚合各卡网有货报价，含半价/试用资格号；）
+- 购买入口：[wafase.com](https://wafase.com/)
 
 ### 7. 其他
 
 - 临时邮箱：[Temp Mail](https://temp-mail.org/zh/)
 、 [TempInbox](https://tempmail.easya.work/zh-CN/)
 、[Cloudflare 临时邮件](https://mail.awsl.uk/)
-
 - 指纹浏览器： [ixBrowser](https://ixbrowser.com/zh)、 [adspower](https://www.adspower.net/download/)
-
 - 信用卡 / 支付： Bybit、Fiat24、Roogoo、[goofish](https://www.goofish.com/search?q=虚拟卡) 等
-
 - 短信接收： [火狐狸接码平台](https://web.firefox.fun/) 
 、 [HeroSMS](https://hero-sms.com/cn) 
 、 [5SIM](https://5sim.net/zh) 
-、 [国内免费接码平台推荐](https://topstip.com/nice-patchwork-platform/) 
+、 [国内免费接码平台推荐](https://topstip.com/nice-patchwork-platform/)

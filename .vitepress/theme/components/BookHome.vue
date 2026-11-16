@@ -22,7 +22,7 @@ onMounted(() => {
         <h1 id="book-title">AI<br /><em>Guide</em></h1>
         <p class="hero-subtitle">把 AI 从「会聊天」推进到「能稳定交付」</p>
         <p class="hero-description">
-          面向有经验开发者。沿着选型、Agent 工具、工作流、Agent 工程、编程实战与场景实战，跑通从工具到交付的闭环。
+          面向有经验开发者。沿着选型、Agent 工具、工作流、Agent 工程、编程实战、VB Coding 与场景实战，跑通从工具到交付的闭环。
         </p>
         <div class="hero-actions">
           <a class="book-button primary" :href="withBase('/preface.html')"

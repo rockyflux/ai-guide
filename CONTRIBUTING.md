@@ -22,7 +22,7 @@ npm run dev
 
 ## 内容位置
 
-- 篇章正文在 `preface/`、`programming/`、`agent-tools/`、`agent/`、`practice/`、`scenarios/`、`resources/`、`products/`（Markdown，GitHub 可直接阅读；侧栏顺序以 `.vitepress/book.mjs` 为准）
+- 篇章正文在 `preface/`、`programming/`、`agent-tools/`、`agent/`、`practice/`、`vb-coding/`、`scenarios/`、`resources/`、`products/`（Markdown，GitHub 可直接阅读；侧栏顺序以 `.vitepress/book.mjs` 为准）
 - 站专用页在 `website/`
 - 导航与稳定网址在 `.vitepress/book.mjs`
 - 插图优先放 `assets/images/`；部分存量章节仍用外链图床

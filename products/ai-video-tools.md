@@ -25,6 +25,7 @@ aside: false
 | Pika | Pika | 轻量创意、特效与风格化短片 | [pika.art](https://pika.art) |
 | 腾讯智影 | 腾讯 | 数字人播报、模板化短视频剪辑 | [zenvideo.qq.com](https://zenvideo.qq.com) |
 | WorkRally | 腾讯 | 漫剧视频创作全流程（脚本 → 分镜 → 成片） | [workrally.qq.com](https://workrally.qq.com/) |
+| 火山短剧 | 火山引擎 | AIGC 短剧一站式创作（剧本 → 资产设定 → 分镜 → 成片） | [volcengine.com/product/dramart](https://www.volcengine.com/product/dramart) |
 | VibeKnow | 石榴 AI | 文档 / PPT / 网页一键成知识视频（脚本、分镜、配音） | [vibeknow.com](https://vibeknow.com/) |
 | 闪剪 | 闪剪 | 数字人口播、图文转视频 | [shanjian.tv](https://shanjian.tv) |
 
@@ -48,5 +49,5 @@ aside: false
 1. **国内日常创作**：可灵、即梦、海螺 — 中文提示与短视频场景覆盖广，上手成本低。
 2. **图生视频 / 一致性**：Vidu、通义万相 — 适合产品展示、分镜延续与参考图驱动。
 3. **国际高质量 / 电影感**：Sora、Runway、Veo — 镜头语言与物理表现更强，通常需订阅或 API。
-4. **数字人 / 口播 / 知识视频 / 漫剧**：腾讯智影、闪剪（模板化口播）；VibeKnow（文档 / PPT / 网页转知识视频）；WorkRally（漫剧全流程）— 不等同于生成式文生视频。
+4. **数字人 / 口播 / 知识视频 / 漫剧 / 短剧**：腾讯智影、闪剪（模板化口播）；VibeKnow（文档 / PPT / 网页转知识视频）；WorkRally（漫剧全流程）；火山短剧（企业级短剧全流程，Seedance）— 不等同于生成式文生视频。
 5. **开源自建 / 自动化**：MoneyPrinterTurbo（一键短视频流水线）、OpenMontage（Agent 制片）；口播动效看 video-talkcraft，主题讲解 HTML→MP4 看 html-explainer / jacky-motion / Remotion Skills。

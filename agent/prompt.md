@@ -41,12 +41,30 @@ Prompt 通常只描述**本次对话**要达成的目标与约束，不适合承
 - 附带相关文件上下文（@file）
 - 描述具体功能需求
 
-## 三、相关链接
+## 三、Claude Code 提示词模式
+
+官方 [提示词库](https://code.claude.com/docs/zh-CN/prompt-library) 的提示词可复制进 Claude Code，按任务和角色试不同工作方式；它们是起点，不是脚本。下面六种模式来自该库的「为什么这样做有效」——认出来后，可按同一套路改写成自己的提示词。更多说明见官方 [最佳实践](https://code.claude.com/docs/zh-CN/best-practices)。
+
+| 模式 | 要点 | 示例 |
+| --- | --- | --- |
+| 描述结果，不写步骤 | 说清要什么，让 Claude 自己找文件；不必点名路径 | `add rate limiting to the public API and make sure existing tests still pass` |
+| 给它自检方式 | 同一提示里要求跑、测、对比或验证，逼它迭代而不是一试就停；成品对运行中应用可用 `/verify` | `write the migration, run it against the dev database, and confirm the schema matches` |
+| 指向参考 | 点名已有页面、测试或模式，让新代码跟现有风格一致 | `add a settings page that follows the same layout as the profile page` |
+| 可测量目标 | 性能、体积、覆盖率等给指标和阈值，完成标准才清晰 | `get the bundle size under 200KB and show me what you removed` |
+| 给它工件 | 直接贴错误、日志、截图、计划输出，或用 `@` 引用文件；读源比读你的转述靠谱 | `why is the build failing? @build.log` |
+| 说清答案形态 | 指定格式、长度或受众；要默认成某种形态可设 [输出样式](/agent/output-styles.html) | `explain how the payment retry logic works as an HTML page with a diagram, then open it in my browser` |
+
+跑通某个提示词后，下一步是可重复：收成 [Skills](/agent/skills.html)（团队用 `/command`），约定写进 `CLAUDE.md` / [Rules](/agent/rules.html)；大改或高风险先用 Plan Mode 看文件列表再动刀。
+
+来源与扩展：[常见工作流](https://code.claude.com/docs/zh-CN/common-workflows) · [Anthropic 团队如何用 Claude Code](https://claude.com/blog/how-anthropic-teams-use-claude-code) · [扩展代理编码指南（PDF）](https://resources.anthropic.com/hubfs/Scaling%20agentic%20coding%20across%20your%20organization.pdf) · [Claude Code in Action](https://academy.claude.com/courses/claude-code-in-action)
+
+## 四、相关链接
 
 以下是学习和使用 Prompt 的相关资源链接：
 
 | 描述 | 链接 |
 | --- | --- |
+| Claude Code 提示词库（官方，可复制） | [https://code.claude.com/docs/zh-CN/prompt-library](https://code.claude.com/docs/zh-CN/prompt-library) |
 | Prompts.chat - 新建提示词 | [https://prompts.chat/prompts/new](https://prompts.chat/prompts/new) |
 | AI Gist - 本地提示词管理工具软件 | [https://getaigist.com/](https://getaigist.com/) |
 | 提示词优化器（评估与优化） | [https://n8n.keyi.ma/webhook/better-prompt](https://n8n.keyi.ma/webhook/better-prompt) |

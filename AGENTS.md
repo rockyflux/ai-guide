@@ -7,7 +7,7 @@
 
 - **站点配置**：`.vitepress/config.mts`、`.vitepress/book.mjs`
 - **仓库入口**：`README.md`；**命令与发布真源**：`WEBSITE.md`；**贡献流程**：`CONTRIBUTING.md`
-- **篇章正文**：`preface/`、`programming/`、`agent-tools/`、`agent/`、`practice/`、`scenarios/`、`resources/`、`products/`（阅读顺序以 `.vitepress/book.mjs` 的 `parts` 为准）
+- **篇章正文**：`preface/`、`programming/`、`agent-tools/`、`agent/`、`practice/`、`vb-coding/`、`scenarios/`、`resources/`、`products/`（阅读顺序以 `.vitepress/book.mjs` 的 `parts` 为准）
 - **站专用页**：`website/`
 - **插图**：新增优先 `assets/images/`；部分存量章节仍用外链图床
 
@@ -34,6 +34,7 @@ npm run verify   # assert:overrides + check + build + check:build
 | `agent-tools` | Agent 工具篇 |
 | `agent` | Agent 工程篇 |
 | `practice` | 编程实战篇 |
+| `vb-coding` | VB Coding 篇 |
 | `scenarios` | 场景实战篇 |
 | `resources` | 学习资源篇 |
 | `products` | 应用选型篇 |

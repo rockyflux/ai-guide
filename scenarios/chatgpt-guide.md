@@ -8,7 +8,9 @@
 
 其他 AI 并不是不好，只是如果你想认真学习并长期使用一个 AI 工具，ChatGPT 值得优先考虑。产品横向对比见 [AI 对话工具](/products/ai-chat-tools.html)。
 
-这篇文章从注册、网络环境、账号套餐到实际使用，带你快速上手。
+至于 Claude：能力很强，但国内常见网络环境下出口 IP 更容易被判定为高风险，账号更容易触发风控甚至封号，所以这篇不把它当作主力推荐。若你已经在用或准备注册，可先打开 [Claude AI IP 风险检测](https://ip.net.coffee/claude/) 看当前出口 IP 的纯净度与信任评分，再决定要不要继续。
+
+这篇文章从注册、网络环境、账号套餐到实际使用，带你快速上手；文末还有一条用 ChatGPT 把想法推进到 AI 编程落地的完整流程。
 
 ## 一、如何使用 ChatGPT？
 
@@ -24,15 +26,12 @@ ChatGPT 官方服务在国内通常无法直接打开，需要先准备可用的
 
 注意：网络访问与代理工具的使用受所在地法律法规约束，请自行确认合规后再使用。
 
-
 ### 2. 账号注册
 
 能打开官网后，用邮箱注册或登录即可。如果注册不上，可以考虑第三方成品账号。
 
 - ChatGPT 账号价格对比：[PriceAI · ChatGPT 普号](https://priceai.cc/products/chatgpt-free-account)（聚合各卡网有货报价）
 - 购买入口：[https://wzyp.cn/shop/AEUQ8PP3](https://wzyp.cn/shop/AEUQ8PP3)、[wafase.com](https://wafase.com/)
-
-
 
 ## 二、ChatGPT 为什么值得长期使用？
 
@@ -54,7 +53,9 @@ ChatGPT 官方服务在国内通常无法直接打开，需要先准备可用的
 价格因地区、税费和渠道会有差异，以 [官方定价](https://chatgpt.com/pricing/) 为准；别把第三方人民币标价当成官方统一定价。
 
 **建议：免费 → 不够再 Go → 还要更强再 Plus。**
+
 > ChatGPT 获取方式大体可以分成三类：官方订阅、第三方渠道、API/CDK。你要先判断自己想要的是长期稳定使用、便宜试用，还是把模型接进 Codex、Cursor、OpenCode 这类工具。不要先看最低价。
+
 订阅优惠购买地址：[PriceAI · ChatGPT 官方地区价](https://priceai.cc/official-prices?platform=chatgpt) 、[常见问题](https://priceai.cc/guides/chatgpt-subscription-options)
 
 ## 四、提问说清楚就行
@@ -65,7 +66,7 @@ ChatGPT 官方服务在国内通常无法直接打开，需要先准备可用的
 
 公式记一句：**谁来做 + 做什么 + 给谁看 + 有什么限制**。
 
-不满意就接着改：「短一点」「加个例子」「按这个提纲重写」。不用每次重开话题。更多写法见 [Prompt](/agent/prompt.html)。
+不满意就接着改：「短一点」「加个例子」「按这个提纲重写」。不用每次重开话题。更多写法见 [提示](/agent/prompt.html)。
 
 ## 五、装几个插件，ChatGPT 才能真正干活
 
@@ -107,3 +108,12 @@ ChatGPT 官方服务在国内通常无法直接打开，需要先准备可用的
 2. **设置 → 个性化 → 记忆**打开；长期主题建 Projects。
 3. 装 Desktop Commander，再按需加 GitHub / Notion（或 Drive）。
 4. 额度不够再升 Go / Plus，别一上来买 Pro。
+
+## 八、用 ChatGPT + AI 编程，从想法到产品落地
+
+上手之后，下一步往往不是「再学一个功能」，而是把一个想法真正做成产品。不必一次性写完整需求，也不用先准备专业 PRD——按阶段和 ChatGPT 多轮对话，让它引导你把产品想清楚、设计清楚、任务拆清楚，再交给 Codex、Cursor 等工具逐步开发。
+
+完整教程原文：[使用 ChatGPT + AI 编程，从想法到产品落地](https://plainraw.com/raw/chatgpt)。若目标更偏「PRD → 高保真原型 → 技术栈代码」，可对照 [从需求到设计原型](/scenarios/requirements-to-design-prototype.html)。
+
+![ChatGPT+AI编程产品开发流程图](https://img.remit.ee/i/fCwD3GnmnVOX)
+

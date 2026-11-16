@@ -13,10 +13,11 @@
 | 一次配好环境 | [开发环境准备](/programming/dev-start.html) → [账号与供应商切换](/agent-tools/account-switch.html) → [安装脚本与 IDE 插件](/agent-tools/bootstrap-ide.html) |
 | 找 Agent 周边工具 | [账号与供应商切换](/agent-tools/account-switch.html) · [安装脚本与 IDE 插件](/agent-tools/bootstrap-ide.html) · [多 Agent 工作区](/agent-tools/agent-workspace.html) · [终端与 CLI Agent](/agent-tools/terminal-cli.html) · [浏览器与桌面操控](/agent-tools/browser-desktop.html) · [路由与本地网关](/agent-tools/routing-gateway.html) · [记忆 · 上下文 · 检索](/agent-tools/memory-retrieval.html) |
 | 马上开工 | [Cursor 实战上手指南](/practice/cursor.html) · [Codex 实战上手指南](/practice/codex.html) · [Kiro 10 分钟项目实战](/practice/kiro-practice.html) |
+| 按端落地 VB Coding | [开工准备](/vb-coding/prep.html) · [浏览器插件](/vb-coding/browser-extension.html) · [桌面应用](/vb-coding/desktop-app.html) · [小程序](/vb-coding/mini-program.html) · [移动 App](/vb-coding/mobile-app.html) · [Web 应用](/vb-coding/web-app.html) · [智能硬件（ESP32）](/vb-coding/esp32.html) |
 | 多 Agent 协作 | [多 Agent 协作工作流](/programming/ccg-workflow.html) |
 | 工程化 Agent | [Prompt](/agent/prompt.html) → [Agent Skills](/agent/skills.html) → [MCP](/agent/mcp.html) → [Hooks](/agent/hooks.html) → [Subagents](/agent/subagents.html) |
-| Claude Code 实践 | [WSL 开发环境](/practice/wsl.html) · [Claude Code 最佳实践](/practice/best-practices.html) · [Everything Claude Code](/practice/everything-claude-code.html) |
-| ChatGPT / 创意硬件 | [ChatGPT 上手指南](/scenarios/chatgpt-guide.html) · [ESP32 + AI 编程](/scenarios/esp32.html) |
+| Claude Code 实践 | [WSL 开发环境](/practice/wsl.html) · [Claude Code 实战上手](/practice/best-practices.html) |
+| ChatGPT 上手 | [ChatGPT 上手指南](/scenarios/chatgpt-guide.html) |
 | 办公与桌面 Agent | [WorkBuddy 与豆包工作](/scenarios/workbuddy-doubao-work.html) · [桌面 Agent 接入办公 CLI](/scenarios/ai-office-practice.html) |
 | 设计与绘图 | [从需求到设计原型](/scenarios/requirements-to-design-prototype.html) · [GPT-Image-2](/scenarios/gpt-image.html) · [豆包 AI 绘图](/scenarios/ai-drawing-practice.html) · [从设计到代码](/scenarios/google-stitch-figma-mcp.html) |
 | 补基础 / 找资源 | [AI 课程与学习路径](/resources/ai-learning-guide.html) · [Agent 工程师入门学习路线](/resources/agent-engineer-roadmap.html) · [AI 开源学习资源](/resources/open-source-learning.html) · [AI 社区与资讯导航](/resources/ai-resources-guide.html) · [Agent 日常开发实践](/resources/ai-dev-notes.html) |
@@ -30,6 +31,7 @@
 1. **AI 编程**：全流程总览 → 模型评测 → IDE / Coding Agent → Coding Plan / 中转 → 省钱 → 环境 → 多 Agent 协作 → 卸载清理
 2. **Agent 工具**：账号切换 → 安装脚本 → 工作区 → 终端 → 浏览器 → 网关 → 记忆检索
 3. **Agent 工程**：Prompt → Skills → MCP → Hooks → Subagents
-4. **编程实战**：Cursor / Codex / Kiro → WSL → Claude Code 最佳实践 → Everything Claude Code
-5. **场景实战**：ChatGPT → ESP32 → WorkBuddy → 办公 CLI → 需求到原型 → GPT-Image → 豆包绘图 → 设计到代码
-6. **学习资源**、**应用选型**：按需查阅，不必通读
+4. **编程实战**：Cursor / Codex / Kiro → WSL → Claude Code 实战上手
+5. **VB Coding**：开工准备 → 浏览器插件 → 桌面应用 → 小程序 → 移动 App → Web 应用 → 智能硬件（ESP32）
+6. **场景实战**：ChatGPT → WorkBuddy → 办公 CLI → 需求到原型 → GPT-Image → 豆包绘图 → 设计到代码
+7. **学习资源**、**应用选型**：按需查阅，不必通读
