@@ -239,6 +239,7 @@
 | **meow 模型检测** | 自费，使用自己的 API 账户 | 通过模型指纹比对申报模型和实际线路 | https://meowllm.top/ |
 | **ModelTrace** | 免费，浏览器本地计算 | 三次长整数挑战提取输出指纹，对照统一指纹库判断模型家族与版本，适合中转降智 / 路由验真 | https://xqy2006.github.io/ModelTrace/ |
 | **禾维 AI** | 免费检测 / 榜单 | 对比中转实测排名、真假、价格和在线率，域名亦见 [hvoyai.com](https://www.hvoyai.com/) | https://hvoy.ai/ |
+| **Folkbench** | 免费查看 / 榜单 | 按模型对比中转站的近 24 小时可用率、首字延迟、价格和数据安全等级，另有降智监控页（身份探针一致率、Token 与模型指纹）；排序规则（含合作档位）见方法页 | https://folkbench.com/?utm_source=github&utm_medium=awesome&utm_campaign=ai-guide |
 | **HLWY AI Checker** | 开源工具 | 检查第三方 AI API 是否掺假以及渠道一致｜基于 LLM 指纹的 AI 模型识别 | https://github.com/hanlinwenyuan/hlwy-ai-checker |
 | **APIs.you** | 目录导航 | API 和中转目录聚合入口 | https://apis.you/catalog |
 | **巨浪 AI** | 免费查询 | 查询模型公开报价、分组、计费单位与原始来源，报价采集不等于调用检测 | https://jvlangai.com/models |
